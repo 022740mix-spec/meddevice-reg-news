@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>MedDevice Reg News</title>
+  <subtitle>医療機器の法規制・ガイダンス・規格の最新ニュースを日本語で</subtitle>
+  <link rel="alternate" type="text/html" href="./"/>
+  <link rel="self" type="application/atom+xml" href="./feed.xml"/>
+  <id>tag:meddevice-reg-news,2026:feed</id>
+  <updated>2026-03-31T15:00:00Z</updated>
+  <generator>meddevice-reg-news-generate-feed</generator>
+  <entry>
+    <title>FDA、AI/ML 搭載 SaMD の市販前審査に関する最終ガイダンスを公開 — PCCP の正式要件が確定</title>
+    <link rel="alternate" type="text/html" href="?a=fda-ai-samd-guidance-final-2026"/>
+    <id>tag:meddevice-reg-news,2026:fda-ai-samd-guidance-final-2026</id>
+    <published>2026-03-28T15:00:00Z</published>
+    <updated>2026-03-28T15:00:00Z</updated>
+    <summary>FDA が AI/ML ベースの SaMD（Software as a Medical Device）に対する市販前審査の最終ガイダンスを発行。事前変更管理計画（PCCP）の正式要件が明確化され、継続学習型 AI の510(k)申請の道筋が整った。</summary>
+  </entry>
+  <entry>
+    <title>PMDA、医療機器サイバーセキュリティガイダンス改訂版を公開 — SBOM 提出が実質義務化</title>
+    <link rel="alternate" type="text/html" href="?a=pmda-cybersecurity-guidance-2026"/>
+    <id>tag:meddevice-reg-news,2026:pmda-cybersecurity-guidance-2026</id>
+    <published>2026-03-27T15:00:00Z</published>
+    <updated>2026-03-27T15:00:00Z</updated>
+    <summary>PMDA が医療機器のサイバーセキュリティに関するガイダンス改訂版を公開。SBOM（ソフトウェア部品表）の承認申請時の提出が実質義務化され、市販後のセキュリティ監視計画も要求事項に追加された。</summary>
+  </entry>
+  <entry>
+    <title>IEC 62304 Amendment 2 が発行 — AI/ML ソフトウェアのライフサイクル管理と継続的検証が追加</title>
+    <link rel="alternate" type="text/html" href="?a=iec-62304-amd2-2026"/>
+    <id>tag:meddevice-reg-news,2026:iec-62304-amd2-2026</id>
+    <published>2026-03-25T15:00:00Z</published>
+    <updated>2026-03-25T15:00:00Z</updated>
+    <summary>医療機器ソフトウェアのライフサイクル規格 IEC 62304 に Amendment 2 が追加。AI/ML を用いたソフトウェアの開発・保守プロセスと、市販後の継続的な性能検証要件が新たに規定された。</summary>
+  </entry>
+</feed>
