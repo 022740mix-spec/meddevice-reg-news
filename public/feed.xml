@@ -8,6 +8,54 @@
   <updated>2026-04-01T15:00:00Z</updated>
   <generator>meddevice-reg-news-generate-feed</generator>
   <entry>
+    <title>【国別プロファイル】米国 — FDA CDRH の医療機器規制体系</title>
+    <link rel="alternate" type="text/html" href="?a=country-profile-usa"/>
+    <id>tag:meddevice-reg-news,2026:country-profile-usa</id>
+    <published>2026-04-01T15:00:00Z</published>
+    <updated>2026-04-01T15:00:00Z</updated>
+    <summary>米国の医療機器規制の全体像。FDA CDRH による Class I〜III の分類体系、510(k)・De Novo・PMA の3つの申請経路、21 CFR に基づく品質システム規制（QMSR）を解説。</summary>
+  </entry>
+  <entry>
+    <title>【国別プロファイル】EU — MDR/IVDR による医療機器規制体系</title>
+    <link rel="alternate" type="text/html" href="?a=country-profile-eu"/>
+    <id>tag:meddevice-reg-news,2026:country-profile-eu</id>
+    <published>2026-04-01T15:00:00Z</published>
+    <updated>2026-04-01T15:00:00Z</updated>
+    <summary>EU の医療機器規制の全体像。MDR 2017/745 と IVDR 2017/746 の枠組み、Notified Body による適合性評価、CE マーキング、EUDAMED データベースを解説。</summary>
+  </entry>
+  <entry>
+    <title>【国別プロファイル】日本 — 薬機法・PMDA による医療機器規制体系</title>
+    <link rel="alternate" type="text/html" href="?a=country-profile-japan"/>
+    <id>tag:meddevice-reg-news,2026:country-profile-japan</id>
+    <published>2026-04-01T15:00:00Z</published>
+    <updated>2026-04-01T15:00:00Z</updated>
+    <summary>日本の医療機器規制の全体像。薬機法に基づく4クラス分類、PMDA による承認審査、QMS 省令（ISO 13485 整合）、プログラム医療機器（SaMD）の規制を解説。</summary>
+  </entry>
+  <entry>
+    <title>【国別プロファイル】中国 — NMPA の医療機器規制体系</title>
+    <link rel="alternate" type="text/html" href="?a=country-profile-china"/>
+    <id>tag:meddevice-reg-news,2026:country-profile-china</id>
+    <published>2026-04-01T15:00:00Z</published>
+    <updated>2026-04-01T15:00:00Z</updated>
+    <summary>中国の医療機器規制の全体像。NMPA（国家薬品監督管理局）による3クラス分類、登録・届出制度、CMDE による技術審査、中国代理人制度を解説。</summary>
+  </entry>
+  <entry>
+    <title>【国別プロファイル】韓国 — MFDS の医療機器規制体系</title>
+    <link rel="alternate" type="text/html" href="?a=country-profile-korea"/>
+    <id>tag:meddevice-reg-news,2026:country-profile-korea</id>
+    <published>2026-04-01T15:00:00Z</published>
+    <updated>2026-04-01T15:00:00Z</updated>
+    <summary>韓国の医療機器規制の全体像。MFDS（食品医薬品安全処）による4クラス分類、KGMP（ISO 13485 整合）、デジタル医療製品法、MDSAP 参加を解説。</summary>
+  </entry>
+  <entry>
+    <title>【国別プロファイル】オーストラリア — TGA の医療機器規制体系</title>
+    <link rel="alternate" type="text/html" href="?a=country-profile-australia"/>
+    <id>tag:meddevice-reg-news,2026:country-profile-australia</id>
+    <published>2026-04-01T15:00:00Z</published>
+    <updated>2026-04-01T15:00:00Z</updated>
+    <summary>オーストラリアの医療機器規制の全体像。TGA による EU 類似の分類体系、ARTG 登録、Essential Principles、MDSAP 参加を解説。</summary>
+  </entry>
+  <entry>
     <title>FDA、AI/ML 搭載 SaMD の市販前審査に関する最終ガイダンスを公開 — PCCP の正式要件が確定</title>
     <link rel="alternate" type="text/html" href="?a=fda-ai-samd-guidance-final-2026"/>
     <id>tag:meddevice-reg-news,2026:fda-ai-samd-guidance-final-2026</id>
