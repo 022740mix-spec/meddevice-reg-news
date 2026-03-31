@@ -1803,7 +1803,6 @@ function ReviewComparisonTable({ articles, category, onSelect }) {
 
 function ReviewTabBar({ reviewTab, onSelect }) {
   const tabs = [
-    { id: "models", label: "モデル" },
     ...REVIEW_CATEGORIES.map((c) => ({ id: c.id, label: c.label })),
   ];
   return (
