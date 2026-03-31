@@ -1825,7 +1825,6 @@ function ReviewTabBar({ reviewTab, onSelect }) {
 }
 
 function CompanyCard({ company }) {
-  const st = company.stock;
   return (
     <article id={`company-${company.id}`} className="company-card">
       <div className="company-card__head">
@@ -1851,35 +1850,16 @@ function CompanyCard({ company }) {
           </span>
         </a>
       </div>
-      {company.legalName ? (
-        <p className="company-card__legal">{company.legalName}</p>
-      ) : null}
       <dl className="company-dl">
         <dt>国・地域</dt>
         <dd>{company.country}</dd>
-        <dt>本社・拠点</dt>
+        <dt>拠点</dt>
         <dd>{company.hq}</dd>
-        <dt>設立</dt>
-        <dd>{company.foundedYear}年</dd>
-        <dt>従業員規模</dt>
-        <dd>{company.employees}</dd>
-        <dt>売上・事業規模</dt>
-        <dd>{company.revenue}</dd>
-        <dt>株式・資本市場</dt>
-        <dd>
-          {st.listed && st.tickers?.length ? (
-            <ul className="company-ticker-list">
-              {st.tickers.map((t) => (
-                <li key={t.symbol}>
-                  <strong>{t.exchange}</strong> {t.symbol}
-                  {t.name ? `（${t.name}）` : ""}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-          <span className="company-stock-note">{st.detail}</span>
-        </dd>
-        <dt>主要プロダクト</dt>
+        {company.classSystem ? (<><dt>クラス分類</dt><dd>{company.classSystem}</dd></>) : null}
+        {company.keyLaw ? (<><dt>主要法規</dt><dd>{company.keyLaw}</dd></>) : null}
+        {company.mdsap ? (<><dt>MDSAP</dt><dd>{company.mdsap}</dd></>) : null}
+        {company.foundedYear ? (<><dt>設立</dt><dd>{company.foundedYear}年</dd></>) : null}
+        <dt>主な役割</dt>
         <dd>{company.products.join("、")}</dd>
       </dl>
       {company.notes?.length ? (
@@ -3285,7 +3265,8 @@ const [showFab, setShowFab] = useState(false);
           c.country.includes(q) ||
           (c.hq || "").toLowerCase().includes(q) ||
           c.products.some((p) => p.toLowerCase().includes(q)) ||
-          (c.stock?.detail || "").toLowerCase().includes(q)
+          (c.classSystem || "").toLowerCase().includes(q) ||
+          (c.keyLaw || "").toLowerCase().includes(q)
       );
     }
     return list;
