@@ -270,17 +270,17 @@ const GUIDE_SEO = {
   setup: {
     titleSuffix: "ガイド：セットアップ",
     description:
-      "バイブコーディングの概要と環境セットアップ手順。IDE・AI・CLI の初期設定をステップで解説。",
+      "医療機器規制の基礎知識。各国の規制枠組み・クラス分類・申請経路の概要を解説。",
   },
   rules: {
     titleSuffix: "ガイド：基本ルール",
     description:
-      "バイブコーディングの基本ルールとハマりやすいポイント。Git・プロンプト・セキュリティの注意点。",
+      "規制対応の基本ルールとよくある落とし穴。クラス分類・Predicate Device・設計管理の注意点。",
   },
   practical: {
     titleSuffix: "ガイド：実践テクニック",
     description:
-      "実務で使えるバイブコーディングのテクニック。スラッシュコマンド・スキル配置・ワークフロー。",
+      "実務で使える申請経路の選び方。510(k)・De Novo・PMA の違いと判断基準。",
   },
   media: {
     titleSuffix: "ガイド：メディア生成ツール早見",
@@ -290,12 +290,12 @@ const GUIDE_SEO = {
   glossary: {
     titleSuffix: "ガイド：用語集",
     description:
-      "AI・RAG のパターン・Git・ターミナル・データレイクなど、記事で出る用語を短文で解説。バイブコーディング・開発ニュースの辞書代わり。",
+      "SaMD・PCCP・UDI・QMS・MDR など、医療機器規制で頻出する用語を短文で解説。規制ニュースの辞書代わり。",
   },
 };
 
 const COMPANIES_SEO = {
-  titleSuffix: "AI企業",
+  titleSuffix: "規制当局",
   description:
     "主要 AI・開発ツール企業の所在地・設立・規模・市場の骨子（公開情報ベース）。",
 };
@@ -308,7 +308,7 @@ function syncDocumentSeo(ctx) {
 
   let title = DEFAULT_DOC_TITLE;
   let descRaw = SITE_DESCRIPTION;
-  let ogTitle = `${SITE_NAME} | AI開発ツール最新情報`;
+  let ogTitle = `${SITE_NAME} | 医療機器規制の最新情報`;
 
   if (selectedArticle) {
     descRaw = stripMarkdownBoldMarkers(selectedArticle.excerpt);
@@ -568,10 +568,10 @@ function HamburgerMenu({ isOpen, onClose, onSection, currentSection, searchRef, 
   const menuItems = [
     { id: "home", label: "ホーム" },
     { id: "articles", label: "ニュース" },
-    { id: "reviews", label: "レビュー" },
+    { id: "reviews", label: "国別プロファイル" },
     { id: "guide", label: "ガイド" },
-    { id: "tools", label: "ツール別" },
-    { id: "companies", label: "AI企業" },
+    { id: "tools", label: "規制領域別" },
+    { id: "companies", label: "規制当局" },
   ];
 
   if (!isOpen) return null;
@@ -874,46 +874,47 @@ function HomePage({ articles, onSelect, onSection }) {
             <button className="home-nav-card" onClick={() => onSection("articles")}>
               <span className="home-nav-card__icon">📰</span>
               <span className="home-nav-card__label">ニュース</span>
-              <span className="home-nav-card__desc">AI開発ツールの最新ニュース</span>
+              <span className="home-nav-card__desc">法規制・ガイダンスの最新動向</span>
             </button>
             <button className="home-nav-card" onClick={() => onSection("reviews")}>
-              <span className="home-nav-card__icon">⭐</span>
-              <span className="home-nav-card__label">レビュー</span>
-              <span className="home-nav-card__desc">ツール比較と評価</span>
+              <span className="home-nav-card__icon">🌍</span>
+              <span className="home-nav-card__label">国別プロファイル</span>
+              <span className="home-nav-card__desc">各国の規制体系と申請経路</span>
             </button>
             <button className="home-nav-card" onClick={() => onSection("guide")}>
               <span className="home-nav-card__icon">📖</span>
               <span className="home-nav-card__label">ガイド</span>
-              <span className="home-nav-card__desc">セットアップと実践テクニック</span>
+              <span className="home-nav-card__desc">規制の基礎知識と用語集</span>
             </button>
             <button className="home-nav-card" onClick={() => onSection("tools")}>
-              <span className="home-nav-card__icon">🔧</span>
-              <span className="home-nav-card__label">ツール別</span>
-              <span className="home-nav-card__desc">Claude Code / Cursor / Codex / Copilot</span>
+              <span className="home-nav-card__icon">📋</span>
+              <span className="home-nav-card__label">規制領域別</span>
+              <span className="home-nav-card__desc">医療機器法 / AI・SaMD / サイバーセキュリティ</span>
             </button>
             <button className="home-nav-card" onClick={() => onSection("companies")}>
-              <span className="home-nav-card__icon">🏢</span>
-              <span className="home-nav-card__label">AI企業</span>
-              <span className="home-nav-card__desc">AI企業のプロファイル</span>
+              <span className="home-nav-card__icon">🏛️</span>
+              <span className="home-nav-card__label">規制当局</span>
+              <span className="home-nav-card__desc">FDA / PMDA / EMA / NMPA 等</span>
             </button>
           </div>
         </section>
 
         <section className="home-section">
-          <h2 className="home-section__title">おすすめポッドキャスト</h2>
-          <p className="home-section__desc">AI 業界のトップリーダーが語る、公式発表では聞けない本音と未来予測。</p>
+          <h2 className="home-section__title">主要な規制情報ソース</h2>
+          <p className="home-section__desc">各国規制当局の公式サイト。法規制・ガイダンスの一次情報はここで確認。</p>
           <div className="home-podcast-links">
             {[
-              { name: "Dwarkesh Podcast", desc: "AI CEO の深掘りインタビュー", url: "https://open.spotify.com/show/4JH4tybY1zX6e5hjCwU6gF" },
-              { name: "Lex Fridman Podcast", desc: "研究者・エンジニア視点の技術対談", url: "https://open.spotify.com/show/2MAi0BvDc6GTFvKFPXnkCL" },
-              { name: "TBPN", desc: "シリコンバレーのライブ感速報", url: "https://open.spotify.com/show/2L6WMqY3GUPCGBD0dX6p00" },
+              { name: "FDA CDRH", desc: "米国 医療機器・放射線保健センター", url: "https://www.fda.gov/medical-devices" },
+              { name: "PMDA", desc: "日本 医薬品医療機器総合機構", url: "https://www.pmda.go.jp/english/" },
+              { name: "EU MDR / MDCG", desc: "欧州 医療機器規制・ガイダンス", url: "https://health.ec.europa.eu/medical-devices-sector_en" },
+              { name: "IMDRF", desc: "国際医療機器規制当局フォーラム", url: "https://www.imdrf.org/documents" },
             ].map((p) => (
               <a key={p.name} className="home-podcast-card" href={p.url} target="_blank" rel="noopener noreferrer">
                 <div className="home-podcast-card__body">
                   <span className="home-podcast-card__name">{p.name}</span>
                   <span className="home-podcast-card__desc">{p.desc}</span>
                 </div>
-                <span className="home-podcast-card__badge">Spotify</span>
+                <span className="home-podcast-card__badge">公式</span>
               </a>
             ))}
           </div>
@@ -960,7 +961,7 @@ function SiteSectionNav({ section, onSection }) {
           className={`section-site-tab${section === "companies" ? " is-active" : ""}`}
           onClick={() => onSection("companies")}
         >
-          AI企業
+          規制当局
         </button>
       </div>
     </nav>
@@ -1107,7 +1108,7 @@ function GuideSidebar({ guideTab }) {
         <p className="sidebar-panel-hint">見出しへジャンプします。</p>
         {guideTab === "setup" ? (
           <>
-            <SidebarJump id="vibe-intro">バイブコーディングとは</SidebarJump>
+            <SidebarJump id="vibe-intro">医療機器規制の基礎</SidebarJump>
             <SidebarJump id="vibe-setup">{VIBE_SETUP_GUIDE.title}</SidebarJump>
             {VIBE_SETUP_GUIDE.sections.map((s) => (
               <SidebarJump key={s.id} id={s.id} nested>
@@ -1242,7 +1243,7 @@ function GuideSetupPanel() {
   return (
     <div className="companies-guide-rail companies-guide-rail--full-tab" aria-label="セットアップ">
       <section id="vibe-intro" className="guide-section guide-section--vibe">
-        <h2 className="guide-section__title">バイブコーディングとは</h2>
+        <h2 className="guide-section__title">医療機器規制の基礎</h2>
         <p className="guide-section__lead">
           {richInlineLine(VIBE_CODING_DEFINITION, mkKey)}
         </p>
@@ -2982,10 +2983,10 @@ function EditorialStatement({ isOpen, onClose }) {
         <h2 style={{ margin: "0 0 1rem", fontSize: "1.25rem" }}>運営方針・編集ステートメント</h2>
 
         <h3>このサイトについて</h3>
-        <p>AI 開発ツールの最新情報を日本語で体系的に整理し、無料で公開しているニュース・ガイドサイトです。</p>
+        <p>医療機器の法規制・ガイダンス・規格の最新情報を日本語で体系的に整理し、公開しているニュース・ガイドサイトです。</p>
 
         <h3>AI による記事制作</h3>
-        <p>本サイトの記事は主に <strong>AI（Claude Code を中心とした AI コーディングツール）</strong> を活用して制作しています。AI が下書き・構成・コード生成を担い、人間の編集者が事実確認・方針判断・最終承認を行う体制です。AI を活用していることを隠さず、透明に開示します。</p>
+        <p>本サイトの記事は AI（Claude Code）を活用して制作しています。AI が下書き・構成・データ収集を担い、人間の編集者が事実確認・方針判断・最終承認を行う体制です。</p>
 
         <h3>情報源と検証</h3>
         <ul>
@@ -3637,7 +3638,7 @@ const [showFab, setShowFab] = useState(false);
               ) : siteSection === "companies" ? (
                 <>
                   <div className="section-feed companies-page-intro">
-                    <h2 className="section-feed__title">AI企業</h2>
+                    <h2 className="section-feed__title">規制当局</h2>
                     <p className="section-feed__meta">
                       主要プレイヤーの所在地・設立・規模・市場の骨子（公開情報ベース）
                     </p>
