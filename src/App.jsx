@@ -1533,8 +1533,10 @@ const RATING_EXPLAINER = {
   },
 };
 
+/* AI モデル比較セクションは医療機器規制サイトでは不要のため削除済み */
+const MODEL_COMPARISON_REMOVED = true; // placeholder
 const MODEL_COMPARISON = [
-  // スコアは各社の公式発表値のみ。null = 公式データなし（チャートに非表示）
+  // 空 — 将来的に規制比較データに置き換え可能
   { name: "Claude Opus 4.6", rating: 4.5, summary: "Anthropic 最上位。1Mコンテキスト、高度な推論とコード生成に強い。$15/$75 per 1M tokens", swe: 81, aime: null, arc: 69, hle: null, mmmu: null },
   { name: "Claude Sonnet 4.6", rating: 4.0, summary: "Anthropic 中核。1Mコンテキスト、速度と品質のバランス型。日常のコーディングに最適。$3/$15", swe: 80, aime: null, arc: 58, hle: null, mmmu: 75 },
   { name: "Claude Haiku 4.5", rating: 3.5, summary: "Anthropic 軽量。200Kコンテキスト、最速・低コスト。大量処理やチャット向け。$0.80/$4", swe: null, aime: null, arc: null, hle: null, mmmu: null },
@@ -3094,7 +3096,7 @@ export default function App() {
   const [siteSection, setSiteSection] = useState(initialRoute.siteSection);
   const [guideTab, setGuideTab] = useState(initialRoute.guideTab);
   const [toolTab, setToolTab] = useState(initialRoute.toolTab ?? "claude-code");
-  const [reviewTab, setReviewTab] = useState("models");
+  const [reviewTab, setReviewTab] = useState("medtech");
   const [theme, setTheme] = useState(() => localStorage.getItem(STORAGE_THEME) || "light");
 const [showFab, setShowFab] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -3292,7 +3294,7 @@ const [showFab, setShowFab] = useState(false);
     if (siteSection === "reviews") {
       list = list.filter((a) => a.type === "review");
       if (reviewTab !== "all") {
-        const tab = reviewTab === "models" ? "model" : reviewTab;
+        const tab = reviewTab;
         const cat = REVIEW_CATEGORIES.find((c) => c.id === tab);
         const subIds = cat?.subCategories?.map((s) => s.id);
         list = list.filter((a) => subIds ? subIds.includes(a.reviewCategory) : a.reviewCategory === tab);
@@ -3512,9 +3514,7 @@ const [showFab, setShowFab] = useState(false);
                 <>
                   {siteSection === "reviews" && !query ? (
                     <div className="review-comparisons">
-                      {reviewTab === "models" ? (
-                        <ModelComparisonSection />
-                      ) : null}
+                      {/* モデル比較セクション削除済み */}
                       {REVIEW_CATEGORIES
                         .filter((cat) => reviewTab === cat.id)
                         .map((cat) => cat.subCategories ? (
@@ -3667,7 +3667,7 @@ const [showFab, setShowFab] = useState(false);
                 <div className="sidebar-panel">
                   <h3>レビューカテゴリ</h3>
                   <p className="sidebar-panel-hint">カテゴリを切り替えます。</p>
-                  {[{ id: "models", label: "モデル比較" }, ...REVIEW_CATEGORIES.map((c) => ({ id: c.id, label: c.label }))].map((t) => (
+                  {[...REVIEW_CATEGORIES.map((c) => ({ id: c.id, label: c.label }))].map((t) => (
                     <button
                       key={t.id}
                       className={`sidebar-anchor${reviewTab === t.id ? " sidebar-anchor--active" : ""}`}
