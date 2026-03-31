@@ -283,7 +283,7 @@ const GUIDE_SEO = {
       "実務で使える申請経路の選び方。510(k)・De Novo・PMA の違いと判断基準。",
   },
   media: {
-    titleSuffix: "ガイド：メディア生成ツール早見",
+    titleSuffix: "ガイド：規制カテゴリ一覧",
     description:
       "画像・動画・音楽・音声合成の代表ツール早見。著作権・料金は各公式で確認。",
   },
@@ -380,13 +380,15 @@ function GuideLinkifiedP({ text, className }) {
 const FILTERS = [
   { id: "all", label: "すべて" },
   { id: "special", label: "特集" },
-  { id: "model", label: "モデル・API" },
-  { id: "cli", label: "CLI・エージェント" },
-  { id: "editor", label: "エディタ" },
-  { id: "data", label: "データ・RAG" },
-  { id: "product", label: "プロダクト" },
-  { id: "media", label: "メディア生成" },
-  { id: "regulation", label: "社会・規制" },
+  { id: "medtech", label: "医療機器法" },
+  { id: "guidance", label: "ガイダンス" },
+  { id: "standard", label: "規格" },
+  { id: "ai", label: "AI・SaMD" },
+  { id: "cybersecurity", label: "サイバーセキュリティ" },
+  { id: "environment", label: "環境・廃棄物" },
+  { id: "privacy", label: "データプライバシー" },
+  { id: "chemical", label: "化学物質・材料" },
+  { id: "packaging", label: "包装" },
 ];
 
 const SORTS = [
@@ -775,10 +777,10 @@ function FilterBar({ active, setActive }) {
 
 function GuideTabBar({ guideTab, onSelect }) {
   const tabs = [
-    { id: "setup", label: "セットアップ" },
+    { id: "setup", label: "情報の入手" },
     { id: "rules", label: "基本ルール" },
-    { id: "practical", label: "実践テクニック" },
-    { id: "media", label: "メディア生成" },
+    { id: "practical", label: "申請経路" },
+    { id: "media", label: "規制カテゴリ" },
     { id: "glossary", label: "用語集" },
   ];
   return (
@@ -1097,7 +1099,7 @@ function GuideSidebar({ guideTab }) {
     setup: "セットアップの目次",
     rules: "基本ルールの目次",
     practical: "実践テクニックの目次",
-    media: "メディア生成ガイドの目次",
+    media: "規制カテゴリガイドの目次",
     glossary: "用語集の目次",
   };
   const sidebarLabel = labelMap[guideTab] || labelMap.setup;
@@ -1332,10 +1334,10 @@ function MediaToolsGuidePanel({ mediaTaxonomy }) {
   return (
     <div
       className="companies-guide-rail companies-guide-rail--full-tab"
-      aria-label="メディア生成ツール早見"
+      aria-label="規制カテゴリ一覧"
     >
       <section id="media-guide-intro" className="guide-section guide-section--vibe">
-        <h2 className="guide-section__title">メディア生成ツール早見</h2>
+        <h2 className="guide-section__title">規制カテゴリ一覧</h2>
         <p className="guide-section__lead">
           {richInlineLine(MEDIA_GUIDE_INTRO, mkKey)}
         </p>
@@ -1431,18 +1433,11 @@ function GlossaryGuidePanel({ glossaryGenres }) {
 
 /** レビュータブ冒頭のカテゴリ別比較表 */
 const REVIEW_CATEGORIES = [
-  { id: "cli", label: "CLI ツール", description: "ターミナルから AI にコードを書かせる CLI ツール" },
-  { id: "editor", label: "エディタ", description: "AI 統合エディタ・IDE" },
-  { id: "media", label: "メディア生成", description: "画像・動画・音楽の AI 生成ツール", subCategories: [
-    { id: "image", label: "画像生成", description: "AI 画像生成ツール" },
-    { id: "video", label: "動画生成", description: "AI 動画生成ツール" },
-    { id: "music", label: "音楽生成", description: "AI 音楽生成ツール" },
-  ]},
-  { id: "product", label: "プロダクト", description: "AIエージェント・AI検索などの製品", subCategories: [
-    { id: "agent", label: "AIエージェント", description: "自律的にタスクを遂行する AI エージェント" },
-    { id: "search", label: "AI検索", description: "AI 搭載の検索・リサーチツール" },
-  ]},
-  { id: "other", label: "その他ツール", description: "音声入力・ターミナル等" },
+  { id: "medtech", label: "医療機器法", description: "各国の医療機器法・規制体系のプロファイル" },
+  { id: "guidance", label: "ガイダンス", description: "FDA / PMDA / MDCG 等のガイダンス解説" },
+  { id: "standard", label: "規格", description: "ISO 13485 / IEC 62304 / ISO 14971 等" },
+  { id: "cybersecurity", label: "サイバーセキュリティ", description: "医療機器のセキュリティ要件・SBOM" },
+  { id: "ai", label: "AI・SaMD", description: "AI/ML 搭載医療機器の規制動向" },
 ];
 
 const RATING_EXPLAINER = {
@@ -2594,7 +2589,7 @@ function Sidebar({ articles, onSelect, onTagClick, weekRoundups }) {
       <div className="sidebar-panel">
         <h3>よく使うタグ</h3>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-          {["MCP", "動画生成", "スキル", "Markdown", "RAG", "音声", "CLI", "Anthropic"].map((t) => (
+          {["FDA", "PMDA", "MDR", "SaMD", "510(k)", "ISO 13485", "UDI", "SBOM"].map((t) => (
             <button
               key={t}
               type="button"
