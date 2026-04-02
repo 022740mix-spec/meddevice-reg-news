@@ -17328,6 +17328,549 @@ export const COUNTRY_PROFILES = [
     lastUpdated: "2026-04-02",
     verified: null,
   },
+
+  // =========================================================================
+  // --- Czech Republic (CZE) ---
+  // =========================================================================
+  {
+    code: "CZE",
+    country: "チェコ",
+    countryEn: "Czech Republic",
+    region: "Europe",
+    flag: "🇨🇿",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description:
+        "チェコはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Act No. 375/2022 Sb. on Medical Devices（Zákon o zdravotnických prostředcích）が制定されている。SÚKL（チェコ国立医薬品管理局 / State Institute for Drug Control）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
+      keyCharacteristics: [
+        "EU MDR/IVDR が直接適用",
+        "SÚKL がNCAとして市場監視・ビジランスを担当",
+        "Act No. 375/2022 Sb. による国内補完",
+        "ラベリング・使用説明書はチェコ語必須",
+        "SÚKL が医療機器登録データベース（RZPRO）を運営",
+        "VZP（公的保険基金）等による保険償還制度",
+      ],
+    },
+
+    authorities: [
+      { name: "SÚKL", fullName: "State Institute for Drug Control", localName: "Státní ústav pro kontrolu léčiv", role: "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理", url: "https://www.sukl.cz/", isPrimary: true },
+      { name: "VZP ČR", fullName: "General Health Insurance Company of the Czech Republic", localName: "Všeobecná zdravotní pojišťovna ČR", role: "公的医療保険・医療機器償還管理", url: "https://www.vzp.cz/", isPrimary: false },
+      { name: "MZ ČR", fullName: "Ministry of Health of the Czech Republic", localName: "Ministerstvo zdravotnictví ČR", role: "医療政策・法制度策定", url: "https://www.mzcr.cz/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR Notified Body 制度（チェコ国内に指定NB）",
+      description: "EZÚ（Elektrotechnický zkušební ústav, NB 1014）がMDR/IVDR指定Notified Bodyとして活動。",
+      bodies: [
+        { nb: "1014", name: "EZÚ (Elektrotechnický zkušební ústav)", url: "https://www.ezu.cz/", mdr: true, ivdr: true },
+      ],
+    },
+
+    deviceDefinition: {
+      legalDefinition: "EU MDR Article 2(1) の定義がそのまま適用。",
+      scope: "IVD は IVDR で別途規定。SaMD・AI/ML 搭載機器も対象。美容目的製品（Annex XVI）も適用。",
+      notes: "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。",
+    },
+
+    primaryLaw: {
+      title: "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)",
+      originalTitle: null,
+      enacted: "2017（EU採択）/ 2021年5月26日適用",
+      lastAmended: "2025（Regulation (EU) 2025/2457）",
+      url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
+      description: "EU MDR がチェコに直接適用。Act No. 375/2022 Sb. が国内補完法。",
+    },
+
+    implementingRegulations: [
+      { title: "Act No. 375/2022 Sb. on Medical Devices (Zákon o zdravotnických prostředcích)", date: "2022-12-01", url: "https://www.sukl.cz/", description: "MDR/IVDR 国内補完法。NCA権限・罰則・言語要件・登録義務・臨床試験手続。", category: "国内補完法" },
+      { title: "Decree No. 377/2022 Sb.", date: "2022-12-01", url: "https://www.sukl.cz/", description: "Act No. 375/2022 Sb. の施行細則。登録手続の具体的規定。", category: "施行細則" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR (Regulation (EU) 2016/679)", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。Act No. 110/2019 Sb.（個人情報保護法）も併存。" },
+      { title: "AI Act — Regulation (EU) 2024/1689", category: "人工知能", enacted: "2024", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689", relevance: "AI搭載医療機器はHigh-Risk AI System。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制（Class I / IIa / IIb / III）",
+      basis: "EU MDR Annex VIII の22分類規則がそのまま適用。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "低リスク。自己宣言（Im/Is/Ir除く）。", examples: ["弾性包帯", "聴診器", "車椅子"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "中低リスク。NB関与。", examples: ["補聴器", "超音波装置", "コンタクトレンズ"], approvalPath: "Notified Body審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "中高リスク。NB詳細審査。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "Notified Body審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最高リスク。", examples: ["人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "NB審査 + Expert Panel相談" },
+      ],
+      rules: ["EU MDR Annex VIII の22分類規則を直接適用"],
+      totalProductCodes: "EU CND コード",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR に基づく適合性評価がそのまま適用。国内追加の市販前審査なし。SÚKL への事業者・機器登録（RZPRO）が必要。",
+      routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "EU MDR Annex IX〜XI。詳細はEUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "Notified Body により異なる", url: "https://www.sukl.cz/" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED + SÚKL RZPRO", url: "https://www.sukl.cz/", description: "EUDAMED + SÚKL 国内登録データベース（RZPRO）。EUDAMED 4モジュール義務化: 2026年5月28日。", mandatory: true },
+    udi: { required: true, system: "EU UDI System — EUDAMED", description: "EU MDR Article 27-29 UDI 要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance System — SÚKL", mandatory: true, url: "https://www.sukl.cz/", description: "重篤有害事象をSÚKLに報告義務。MDR Article 87-92。" },
+      recalls: { authority: "SÚKL", description: "FSCA/FSNはSÚKLに通知。", url: "https://www.sukl.cz/" },
+      surveillance: "EU MDR PMS/PSUR/PMCF要件がそのまま適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "SÚKL", name: "Certificate of Free Sale (CFS)", description: "SÚKL がCFSを発行。", processingTime: "要確認", url: "https://www.sukl.cz/" },
+
+    reimbursement: {
+      system: "公的健康保険制度（法定保険）",
+      authority: "MZ ČR / SÚKL / VZP ČR 他保険基金",
+      description: "チェコは法定健康保険制度。VZP ČR を含む7つの健康保険基金が運営。医療機器の償還カテゴリーはSÚKL が管理し、保険適用の可否・上限額を決定。高額医療機器（特に病院用）は別途予算配分。",
+      codingSystems: ["SÚKL 償還カテゴリーコード", "CZ-DRG"],
+      url: "https://www.sukl.cz/",
+    },
+
+    marketingRules: {
+      authority: "SÚKL",
+      description: "MDR Article 7 虚偽広告禁止。Act No. 375/2022 Sb. に基づく広告規制。",
+      keyRules: ["チェコ語ラベリング・IFU必須", "MDR Article 7 虚偽広告禁止", "登録済み機器のみ販売可"],
+    },
+
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "EU MDR QMS要件に基づき実質必須。EN ISO 13485:2016。" },
+      iso14971: { accepted: true, notes: "EN ISO 14971:2019 + A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006 + A1:2015。" },
+      iec60601: { accepted: true, notes: "EN IEC 60601 シリーズ。" },
+      others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2022", title: "Act No. 375/2022 Sb. 施行", description: "MDR/IVDR の国内補完法として新法を施行。従来の Act No. 268/2014 Sb. を置換。" },
+      { date: "2024", title: "EUDAMED義務化準備", description: "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。" },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Hungary (HUN) ---
+  // =========================================================================
+  {
+    code: "HUN",
+    country: "ハンガリー",
+    countryEn: "Hungary",
+    region: "Europe",
+    flag: "🇭🇺",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description:
+        "ハンガリーはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Government Decree 4/2009 (III.17.) EüM（医療機器に関する保健大臣令）が改正適用されている。OGYÉI（国立薬学・食品衛生研究所 / National Institute of Pharmacy and Nutrition）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
+      keyCharacteristics: [
+        "EU MDR/IVDR が直接適用",
+        "OGYÉI がNCAとして市場監視・ビジランスを担当",
+        "Government Decree 4/2009 (III.17.) EüM 改正による国内補完",
+        "ラベリング・使用説明書はハンガリー語必須",
+        "NEAK（国民健康保険基金管理局）が保険償還を管理",
+        "中東欧での医療機器ハブとしての地位",
+      ],
+    },
+
+    authorities: [
+      { name: "OGYÉI", fullName: "National Institute of Pharmacy and Nutrition", localName: "Országos Gyógyszerészeti és Élelmezés-egészségügyi Intézet", role: "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理", url: "https://www.ogyei.gov.hu/", isPrimary: true },
+      { name: "NEAK", fullName: "National Health Insurance Fund Management", localName: "Nemzeti Egészségbiztosítási Alapkezelő", role: "医療機器の保険償還管理", url: "https://www.neak.gov.hu/", isPrimary: false },
+      { name: "EMMI / BM", fullName: "Ministry of Interior (Health policy)", localName: "Belügyminisztérium（Egészségügyért felelős）", role: "医療政策・法制度策定", url: "https://www.kormany.hu/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR Notified Body 制度（ハンガリー国内に指定NB無し — 他EU加盟国のNBを利用）",
+      description: "2026年4月時点でハンガリー国内にMDR/IVDR指定のNotified Bodyは無い。製造業者は他EU加盟国のNBを利用。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition: "EU MDR Article 2(1) の定義がそのまま適用。",
+      scope: "IVD は IVDR で別途規定。SaMD・AI/ML 搭載機器も対象。美容目的製品（Annex XVI）も適用。",
+      notes: "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。",
+    },
+
+    primaryLaw: {
+      title: "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)",
+      originalTitle: null,
+      enacted: "2017（EU採択）/ 2021年5月26日適用",
+      lastAmended: "2025（Regulation (EU) 2025/2457）",
+      url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
+      description: "EU MDR がハンガリーに直接適用。Government Decree 4/2009 (III.17.) EüM 改正が国内補完法。",
+    },
+
+    implementingRegulations: [
+      { title: "Government Decree 4/2009 (III.17.) EüM on Medical Devices（改正版）", date: "2009（原版）/ 2021改正", url: "https://www.ogyei.gov.hu/", description: "MDR/IVDR 国内補完法令。NCA権限・言語要件・登録義務・罰則を規定。", category: "国内補完法令" },
+      { title: "Act CLIV of 1997 on Health（改正版）", date: "1997（原版）/ 随時改正", url: "https://www.kormany.hu/", description: "保健法。医療機器の使用に関する一般的枠組み。", category: "保健法" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR (Regulation (EU) 2016/679)", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。Act CXII of 2011（情報自己決定法）も併存。" },
+      { title: "AI Act — Regulation (EU) 2024/1689", category: "人工知能", enacted: "2024", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689", relevance: "AI搭載医療機器はHigh-Risk AI System。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制（Class I / IIa / IIb / III）",
+      basis: "EU MDR Annex VIII の22分類規則がそのまま適用。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "低リスク。自己宣言（Im/Is/Ir除く）。", examples: ["弾性包帯", "聴診器", "車椅子"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "中低リスク。NB関与。", examples: ["補聴器", "超音波装置", "コンタクトレンズ"], approvalPath: "Notified Body審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "中高リスク。NB詳細審査。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "Notified Body審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最高リスク。", examples: ["人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "NB審査 + Expert Panel相談" },
+      ],
+      rules: ["EU MDR Annex VIII の22分類規則を直接適用"],
+      totalProductCodes: "EU CND コード",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR に基づく適合性評価がそのまま適用。国内追加の市販前審査なし。OGYÉI への事業者・機器登録が必要。",
+      routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "EU MDR Annex IX〜XI。詳細はEUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "Notified Body により異なる", url: "https://www.ogyei.gov.hu/" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED + OGYÉI 国内登録", url: "https://www.ogyei.gov.hu/", description: "EUDAMED + OGYÉI 国内登録。EUDAMED 4モジュール義務化: 2026年5月28日。", mandatory: true },
+    udi: { required: true, system: "EU UDI System — EUDAMED", description: "EU MDR Article 27-29 UDI 要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance System — OGYÉI", mandatory: true, url: "https://www.ogyei.gov.hu/", description: "重篤有害事象をOGYÉIに報告義務。MDR Article 87-92。" },
+      recalls: { authority: "OGYÉI", description: "FSCA/FSNはOGYÉIに通知。", url: "https://www.ogyei.gov.hu/" },
+      surveillance: "EU MDR PMS/PSUR/PMCF要件がそのまま適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "OGYÉI", name: "Certificate of Free Sale (CFS)", description: "OGYÉI がCFSを発行。", processingTime: "要確認", url: "https://www.ogyei.gov.hu/" },
+
+    reimbursement: {
+      system: "国民健康保険基金（単一支払者制度）",
+      authority: "NEAK / OGYÉI",
+      description: "ハンガリーは単一支払者型の国民健康保険制度（NEAK）。医療機器は「gyógyászati segédeszköz」（治療補助器具）カテゴリーで償還管理。NEAK が償還カテゴリー・患者自己負担率を決定。高額病院用機器は別途調達。",
+      codingSystems: ["NEAK 償還コード", "HUN-DRG (HBCS)"],
+      url: "https://www.neak.gov.hu/",
+    },
+
+    marketingRules: {
+      authority: "OGYÉI",
+      description: "MDR Article 7 虚偽広告禁止。国内広告規制法が併存。",
+      keyRules: ["ハンガリー語ラベリング・IFU必須", "MDR Article 7 虚偽広告禁止", "登録済み機器のみ販売可"],
+    },
+
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "EU MDR QMS要件に基づき実質必須。EN ISO 13485:2016。" },
+      iso14971: { accepted: true, notes: "EN ISO 14971:2019 + A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006 + A1:2015。" },
+      iec60601: { accepted: true, notes: "EN IEC 60601 シリーズ。" },
+      others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2021", title: "MDR 適用開始", description: "2021年5月26日よりEU MDRが適用開始。OGYÉI が準備を完了。" },
+      { date: "2024", title: "EUDAMED義務化準備", description: "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。" },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Portugal (PRT) ---
+  // =========================================================================
+  {
+    code: "PRT",
+    country: "ポルトガル",
+    countryEn: "Portugal",
+    region: "Europe",
+    flag: "🇵🇹",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description:
+        "ポルトガルはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Decree-Law No. 145/2009（改正版）が適用されている。Infarmed（国立医薬品・医療製品局 / National Authority of Medicines and Health Products）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
+      keyCharacteristics: [
+        "EU MDR/IVDR が直接適用",
+        "Infarmed がNCAとして市場監視・ビジランスを担当",
+        "Decree-Law No. 145/2009（改正版）による国内補完",
+        "ラベリング・使用説明書はポルトガル語必須",
+        "SNS（国民保健サービス）が公的医療を提供",
+        "INFARMED が医療機器の価格・償還決定にも関与",
+      ],
+    },
+
+    authorities: [
+      { name: "Infarmed", fullName: "National Authority of Medicines and Health Products", localName: "Autoridade Nacional do Medicamento e Produtos de Saúde, I.P.", role: "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理", url: "https://www.infarmed.pt/", isPrimary: true },
+      { name: "ACSS", fullName: "Central Administration of the Health System", localName: "Administração Central do Sistema de Saúde", role: "SNS管理・病院への医療機器調達", url: "https://www.acss.min-saude.pt/", isPrimary: false },
+      { name: "MS", fullName: "Ministry of Health", localName: "Ministério da Saúde", role: "医療政策・法制度策定", url: "https://www.sns.gov.pt/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR Notified Body 制度（ポルトガル国内に指定NB無し — 他EU加盟国のNBを利用）",
+      description: "2026年4月時点でポルトガル国内にMDR/IVDR指定のNotified Bodyは無い。製造業者は他EU加盟国のNBを利用。",
+      bodies: [],
+    },
+
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1) の定義がそのまま適用。", scope: "IVD は IVDR で別途規定。SaMD・AI/ML 搭載機器も対象。美容目的製品（Annex XVI）も適用。", notes: "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。" },
+
+    primaryLaw: { title: "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)", originalTitle: null, enacted: "2017（EU採択）/ 2021年5月26日適用", lastAmended: "2025（Regulation (EU) 2025/2457）", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745", description: "EU MDR がポルトガルに直接適用。Decree-Law No. 145/2009（改正版）が国内補完法。" },
+
+    implementingRegulations: [
+      { title: "Decree-Law No. 145/2009（改正版）", date: "2009（原版）/ 2021改正", url: "https://www.infarmed.pt/", description: "MDR/IVDR 国内補完法令。NCA権限・言語要件・登録義務・罰則を規定。", category: "国内補完法令" },
+      { title: "Portaria No. 342/2021", date: "2021", url: "https://www.infarmed.pt/", description: "医療機器登録手数料規則。", category: "手数料規則" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR (Regulation (EU) 2016/679)", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。Lei No. 58/2019（GDPR国内実施法）も併存。" },
+      { title: "AI Act — Regulation (EU) 2024/1689", category: "人工知能", enacted: "2024", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689", relevance: "AI搭載医療機器はHigh-Risk AI System。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制（Class I / IIa / IIb / III）",
+      basis: "EU MDR Annex VIII の22分類規則がそのまま適用。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "低リスク。自己宣言（Im/Is/Ir除く）。", examples: ["弾性包帯", "聴診器", "車椅子"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "中低リスク。NB関与。", examples: ["補聴器", "超音波装置", "コンタクトレンズ"], approvalPath: "Notified Body審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "中高リスク。NB詳細審査。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "Notified Body審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最高リスク。", examples: ["人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "NB審査 + Expert Panel相談" },
+      ],
+      rules: ["EU MDR Annex VIII の22分類規則を直接適用"],
+      totalProductCodes: "EU CND コード",
+    },
+
+    conformityAssessment: { overview: "EU MDR に基づく適合性評価がそのまま適用。国内追加の市販前審査なし。Infarmed への事業者・機器登録が必要。", routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "EU MDR Annex IX〜XI。詳細はEUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "Notified Body により異なる", url: "https://www.infarmed.pt/" }] },
+    electronicSubmission: { system: "EUDAMED + Infarmed 国内登録", url: "https://www.infarmed.pt/", description: "EUDAMED + Infarmed 国内登録システム。EUDAMED 4モジュール義務化: 2026年5月28日。", mandatory: true },
+    udi: { required: true, system: "EU UDI System — EUDAMED", description: "EU MDR Article 27-29 UDI 要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+    postMarket: { adverseEventReporting: { system: "EU Vigilance System — Infarmed", mandatory: true, url: "https://www.infarmed.pt/", description: "重篤有害事象をInfarmedに報告義務。MDR Article 87-92。" }, recalls: { authority: "Infarmed", description: "FSCA/FSNはInfarmedに通知。", url: "https://www.infarmed.pt/" }, surveillance: "EU MDR PMS/PSUR/PMCF要件がそのまま適用。" },
+    certificateOfFreeSale: { available: true, issuingAuthority: "Infarmed", name: "Certificate of Free Sale (CFS)", description: "Infarmed がCFSを発行。", processingTime: "要確認", url: "https://www.infarmed.pt/" },
+    reimbursement: { system: "SNS（国民保健サービス）— 税財源", authority: "Infarmed / ACSS / MS", description: "ポルトガルはSNS（Serviço Nacional de Saúde）による税財源の公的医療制度。Infarmed が医療機器の価格設定・償還に関与。病院用機器はSPMS（Serviços Partilhados do Ministério da Saúde）による集中調達。", codingSystems: ["GDH (Grupos de Diagnóstico Homogéneos / PT-DRG)"], url: "https://www.infarmed.pt/" },
+    marketingRules: { authority: "Infarmed", description: "MDR Article 7 虚偽広告禁止。国内広告規制法が併存。", keyRules: ["ポルトガル語ラベリング・IFU必須", "MDR Article 7 虚偽広告禁止", "登録済み機器のみ販売可"] },
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+    internationalStandards: { iso13485: { accepted: true, notes: "EU MDR QMS要件に基づき実質必須。EN ISO 13485:2016。" }, iso14971: { accepted: true, notes: "EN ISO 14971:2019 + A11:2021。" }, iec62304: { accepted: true, notes: "EN IEC 62304:2006 + A1:2015。" }, iec60601: { accepted: true, notes: "EN IEC 60601 シリーズ。" }, others: [] },
+    recentDevelopments: [
+      { date: "2021", title: "MDR 適用開始", description: "2021年5月26日よりEU MDRが適用開始。" },
+      { date: "2024", title: "EUDAMED義務化準備", description: "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Greece (GRC) ---
+  // =========================================================================
+  {
+    code: "GRC",
+    country: "ギリシャ",
+    countryEn: "Greece",
+    region: "Europe",
+    flag: "🇬🇷",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description:
+        "ギリシャはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Law 4600/2019（改正版）が適用されている。EOF（国立医薬品機構 / National Organisation for Medicines）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
+      keyCharacteristics: [
+        "EU MDR/IVDR が直接適用",
+        "EOF がNCAとして市場監視・ビジランスを担当",
+        "Law 4600/2019（改正版）による国内補完",
+        "ラベリング・使用説明書はギリシャ語必須",
+        "EOPYY（国立医療サービス提供機構）が保険償還を管理",
+        "Ministerial Decisions による詳細規定",
+      ],
+    },
+
+    authorities: [
+      { name: "EOF", fullName: "National Organisation for Medicines", localName: "Εθνικός Οργανισμός Φαρμάκων (ΕΟΦ)", role: "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理", url: "https://www.eof.gr/", isPrimary: true },
+      { name: "EOPYY", fullName: "National Organization for the Provision of Healthcare Services", localName: "Εθνικός Οργανισμός Παροχής Υπηρεσιών Υγείας", role: "医療機器の保険償還管理", url: "https://www.eopyy.gov.gr/", isPrimary: false },
+      { name: "MY", fullName: "Ministry of Health", localName: "Υπουργείο Υγείας", role: "医療政策・法制度策定", url: "https://www.moh.gov.gr/", isPrimary: false },
+    ],
+
+    notifiedBodies: { system: "EU MDR Notified Body 制度（ギリシャ国内に指定NB無し — 他EU加盟国のNBを利用）", description: "2026年4月時点でギリシャ国内にMDR/IVDR指定のNotified Bodyは無い。製造業者は他EU加盟国のNBを利用。", bodies: [] },
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1) の定義がそのまま適用。", scope: "IVD は IVDR で別途規定。SaMD・AI/ML 搭載機器も対象。美容目的製品（Annex XVI）も適用。", notes: "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。" },
+    primaryLaw: { title: "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)", originalTitle: null, enacted: "2017（EU採択）/ 2021年5月26日適用", lastAmended: "2025（Regulation (EU) 2025/2457）", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745", description: "EU MDR がギリシャに直接適用。Law 4600/2019（改正版）が国内補完法。" },
+    implementingRegulations: [
+      { title: "Law 4600/2019（改正版）", date: "2019（原版）/ 2021改正", url: "https://www.eof.gr/", description: "MDR/IVDR 国内補完法。NCA権限・言語要件・登録義務・罰則を規定。", category: "国内補完法" },
+      { title: "Ministerial Decision DY8d/Γ.Π.οικ.130648/2009（改正版）", date: "2009（原版）/ 随時改正", url: "https://www.eof.gr/", description: "医療機器の市場監視・ビジランス手続の詳細規定。", category: "省令" },
+    ],
+    relatedLaws: [
+      { title: "GDPR (Regulation (EU) 2016/679)", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。Law 4624/2019（GDPR国内実施法）も併存。" },
+      { title: "AI Act — Regulation (EU) 2024/1689", category: "人工知能", enacted: "2024", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689", relevance: "AI搭載医療機器はHigh-Risk AI System。" },
+    ],
+    classification: {
+      system: "EU MDR 4クラス制（Class I / IIa / IIb / III）",
+      basis: "EU MDR Annex VIII の22分類規則がそのまま適用。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "低リスク。自己宣言（Im/Is/Ir除く）。", examples: ["弾性包帯", "聴診器", "車椅子"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "中低リスク。NB関与。", examples: ["補聴器", "超音波装置", "コンタクトレンズ"], approvalPath: "Notified Body審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "中高リスク。NB詳細審査。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "Notified Body審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最高リスク。", examples: ["人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "NB審査 + Expert Panel相談" },
+      ],
+      rules: ["EU MDR Annex VIII の22分類規則を直接適用"],
+      totalProductCodes: "EU CND コード",
+    },
+    conformityAssessment: { overview: "EU MDR に基づく適合性評価がそのまま適用。国内追加の市販前審査なし。EOF への事業者・機器登録が必要。", routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "EU MDR Annex IX〜XI。詳細はEUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "Notified Body により異なる", url: "https://www.eof.gr/" }] },
+    electronicSubmission: { system: "EUDAMED + EOF 国内登録", url: "https://www.eof.gr/", description: "EUDAMED + EOF 国内登録システム。EUDAMED 4モジュール義務化: 2026年5月28日。", mandatory: true },
+    udi: { required: true, system: "EU UDI System — EUDAMED", description: "EU MDR Article 27-29 UDI 要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+    postMarket: { adverseEventReporting: { system: "EU Vigilance System — EOF", mandatory: true, url: "https://www.eof.gr/", description: "重篤有害事象をEOFに報告義務。MDR Article 87-92。" }, recalls: { authority: "EOF", description: "FSCA/FSNはEOFに通知。", url: "https://www.eof.gr/" }, surveillance: "EU MDR PMS/PSUR/PMCF要件がそのまま適用。" },
+    certificateOfFreeSale: { available: true, issuingAuthority: "EOF", name: "Certificate of Free Sale (CFS)", description: "EOF がCFSを発行。", processingTime: "要確認", url: "https://www.eof.gr/" },
+    reimbursement: { system: "EOPYY（国民健康保険）— 社会保険制度", authority: "EOPYY / MY", description: "ギリシャはEOPYY を中核とする社会保険型の公的医療制度。医療機器の償還はEOPYY が管理し、償還リスト（陽性リスト）に基づく。患者自己負担は機器カテゴリーにより異なる。病院用高額機器は別途公的調達。", codingSystems: ["EOPYY 償還コード", "KEN-DRG"], url: "https://www.eopyy.gov.gr/" },
+    marketingRules: { authority: "EOF", description: "MDR Article 7 虚偽広告禁止。国内広告規制法が併存。", keyRules: ["ギリシャ語ラベリング・IFU必須", "MDR Article 7 虚偽広告禁止", "登録済み機器のみ販売可"] },
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+    internationalStandards: { iso13485: { accepted: true, notes: "EU MDR QMS要件に基づき実質必須。EN ISO 13485:2016。" }, iso14971: { accepted: true, notes: "EN ISO 14971:2019 + A11:2021。" }, iec62304: { accepted: true, notes: "EN IEC 62304:2006 + A1:2015。" }, iec60601: { accepted: true, notes: "EN IEC 60601 シリーズ。" }, others: [] },
+    recentDevelopments: [
+      { date: "2021", title: "MDR 適用開始", description: "2021年5月26日よりEU MDRが適用開始。" },
+      { date: "2024", title: "EUDAMED義務化準備", description: "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Ukraine (UKR) ---
+  // =========================================================================
+  {
+    code: "UKR",
+    country: "ウクライナ",
+    countryEn: "Ukraine",
+    region: "Europe",
+    flag: "🇺🇦",
+
+    legalSystemOverview: {
+      type: "独自制度（EU MDR への段階的整合化を推進中）",
+      description:
+        "ウクライナは独自の医療機器規制制度を有するが、EU加盟を目指し、EU MDR/IVDR への整合化（approximation）を段階的に進めている。2024年の Technical Regulation on Medical Devices（Cabinet of Ministers Resolution No. 927）により、EU MDR に大幅に整合した新規制が導入された。保健省（MOH）が政策策定、Derzhliktehnoservis（国立医療技術サービス）等が技術評価を担う。",
+      keyCharacteristics: [
+        "EU MDR への段階的整合化（approximation）を推進",
+        "Technical Regulation on Medical Devices (2024) で新枠組み導入",
+        "保健省（MOH）が規制政策を管轄",
+        "市販前の国家登録（State Registration）が必要",
+        "ラベリング・使用説明書はウクライナ語必須",
+        "戦時下の特別措置（輸入・登録の簡素化）が一部適用",
+      ],
+    },
+
+    authorities: [
+      { name: "MOH", fullName: "Ministry of Health of Ukraine", localName: "Міністерство охорони здоров'я України", role: "医療機器規制政策の策定・国家登録の承認", url: "https://moz.gov.ua/", isPrimary: true },
+      { name: "Derzhliktehnoservis", fullName: "State Service on Medicines and Drug Control", localName: "Державна служба з лікарських засобів та контролю за наркотиками", role: "市場監視・品質管理・査察", url: "https://www.dls.gov.ua/", isPrimary: true },
+      { name: "SEC", fullName: "State Expert Center of the MOH", localName: "Державний експертний центр МОЗ", role: "医療機器の技術評価・国家登録の専門評価", url: "https://www.dec.gov.ua/", isPrimary: false },
+      { name: "NHSU", fullName: "National Health Service of Ukraine", localName: "Національна служба здоров'я України", role: "公的医療保険（PMG）の管理・医療機器の償還", url: "https://nszu.gov.ua/", isPrimary: false },
+    ],
+
+    notifiedBodies: { system: "国家登録制度（Notified Body制度はまだ導入途上）", description: "ウクライナでは現在、EU型のNotified Body制度は完全には導入されていない。Technical Regulation (2024) に基づき、適合性評価機関（CAB）の認定・指定の枠組みが整備中。現在は国家登録（State Registration）が主要な市場参入手続。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Technical Regulation on Medical Devices (2024) に基づく定義。EU MDR Article 2(1) に大幅に整合。人体への診断・治療・予防等を目的とする器具・装置・ソフトウェア等。", scope: "IVD は別途のTechnical Regulationで規定。SaMD も対象。", notes: "2024年の新Technical Regulationにより、EU MDR の定義に大幅に近づいた。" },
+    primaryLaw: { title: "Law of Ukraine 'On Medical Devices' (No. 2042-VIII)", originalTitle: "Закон України «Про медичні вироби»", enacted: "2017", lastAmended: "2024", url: "https://zakon.rada.gov.ua/", description: "ウクライナの医療機器規制の基本法。Technical Regulations がこの法律に基づき制定される。" },
+    implementingRegulations: [
+      { title: "Technical Regulation on Medical Devices (CMU Resolution No. 927)", date: "2024", url: "https://www.kmu.gov.ua/", description: "EU MDR に整合した新しい技術規則。分類・適合性評価・ラベリング等を規定。", category: "技術規則" },
+      { title: "Procedure for State Registration of Medical Devices (CMU Resolution No. 1370)", date: "2019（改正2024）", url: "https://www.kmu.gov.ua/", description: "医療機器の国家登録手続。", category: "登録手続" },
+      { title: "Wartime Simplification Measures", date: "2022-", url: "https://moz.gov.ua/", description: "戦時下の医療機器輸入・登録簡素化措置。緊急時の迅速供給を可能にする。", category: "特別措置" },
+    ],
+    relatedLaws: [
+      { title: "Law of Ukraine 'On Personal Data Protection' (No. 2297-VI)", category: "データ保護", enacted: "2010", url: "https://zakon.rada.gov.ua/", relevance: "健康データに適用。GDPR整合化も進行中。" },
+      { title: "Ukraine-EU Association Agreement", category: "国際協定", enacted: "2014", url: "https://trade.ec.europa.eu/", relevance: "EU規制への整合化の法的基盤。Annex III に技術規則整合化スケジュール。" },
+    ],
+    classification: {
+      system: "4クラス制（Class I / IIa / IIb / III）— EU MDR 整合",
+      basis: "Technical Regulation (2024) に基づき、EU MDR Annex VIII に整合した分類規則を適用。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "低リスク。", examples: ["弾性包帯", "聴診器", "車椅子"], approvalPath: "自己適合宣言 + 国家登録" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "中低リスク。", examples: ["補聴器", "超音波装置", "コンタクトレンズ"], approvalPath: "適合性評価 + 国家登録" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "中高リスク。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "適合性評価 + 国家登録" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最高リスク。", examples: ["人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "適合性評価 + 国家登録" },
+      ],
+      rules: ["EU MDR Annex VIII に整合した分類規則（Technical Regulation 2024）"],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: { overview: "国家登録（State Registration）が市場参入の主要手続。Technical Regulation (2024) に基づき EU MDR 整合の適合性評価経路を段階的に導入中。CE マーキング製品に対する簡素化経路も存在。", routes: [{ name: "State Registration", nameJa: "国家登録", applicableClasses: ["全クラス"], description: "MOH/SEC による技術文書審査・国家登録。CE マーキング取得済み製品は書類審査の簡素化あり。", subtypes: [{ name: "簡素化登録（CE マーキング製品）", description: "EU で CE マーキングを取得した製品は、追加臨床データ無しの書類審査で登録可能。" }], avgReviewTime: "90〜180日（通常）/ 30〜60日（簡素化）", fee: "要確認", url: "https://moz.gov.ua/" }] },
+    electronicSubmission: { system: "MOH/SEC オンライン提出", url: "https://www.dec.gov.ua/", description: "電子申請システムが整備中。一部書類は物理提出が必要な場合あり。", mandatory: false },
+    udi: { required: false, system: "導入準備中（EU UDI に整合予定）", description: "Technical Regulation (2024) にUDI要件が含まれるが、完全義務化は段階的。", url: null, timeline: "EU MDR 整合化の進捗に連動" },
+    postMarket: { adverseEventReporting: { system: "Derzhliktehnoservis ビジランスシステム", mandatory: true, url: "https://www.dls.gov.ua/", description: "医療機器関連の有害事象をDerzhliktehnoservisに報告義務。EU Vigilance に整合化を推進。" }, recalls: { authority: "Derzhliktehnoservis / MOH", description: "市場からの回収・是正措置はDerzhliktehnoservis/MOHが監督。", url: "https://www.dls.gov.ua/" }, surveillance: "市販後監視制度はEU PMS要件に整合化を推進中。戦時下で実施に制約あり。" },
+    certificateOfFreeSale: { available: true, issuingAuthority: "MOH", name: "Certificate of Free Sale / State Registration Certificate", description: "MOH が国家登録証を発行。輸出用のCFSも申請可能。", processingTime: "要確認", url: "https://moz.gov.ua/" },
+    reimbursement: { system: "PMG（Program of Medical Guarantees）— NHSU", authority: "NHSU / MOH", description: "ウクライナは2018年にNHSUを設立し、PMG（医療保証プログラム）による公的医療を提供。医療機器の償還はPMGパッケージに含まれる範囲内。病院への機器供給は公的調達（ProZorro）を通じて実施。戦時下で国際ドナー支援による機器供給も大きな役割。", codingSystems: ["NHSU サービスパッケージコード"], url: "https://nszu.gov.ua/" },
+    marketingRules: { authority: "MOH / Derzhliktehnoservis", description: "登録済み機器のみ販売可。広告規制は Law on Advertising に基づく。", keyRules: ["ウクライナ語ラベリング・IFU必須", "国家登録済み機器のみ販売可", "虚偽広告の禁止"] },
+    mdsap: { status: "非参加", description: "ウクライナはMDSAPプログラムに参加していない。" },
+    internationalStandards: { iso13485: { accepted: true, notes: "ISO 13485 認証はQMS適合の証拠として認められる。DSTU EN ISO 13485（国家規格として採用）。" }, iso14971: { accepted: true, notes: "DSTU EN ISO 14971 として採用。" }, iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" }, iec60601: { accepted: true, notes: "DSTU EN IEC 60601 シリーズとして採用。" }, others: [{ name: "DSTU（ウクライナ国家規格）", notes: "EN規格をDSTU EN として大量に採用（EU整合化の一環）。" }] },
+    recentDevelopments: [
+      { date: "2024", title: "Technical Regulation on Medical Devices 施行", description: "CMU Resolution No. 927 により EU MDR に大幅に整合した新技術規則を導入。分類・適合性評価・ラベリング等を刷新。" },
+      { date: "2022-", title: "戦時下の特別措置", description: "ロシアの侵攻に伴い、医療機器の輸入・登録簡素化措置を実施。国際ドナー支援による機器供給体制も構築。" },
+      { date: "2024", title: "EU加盟候補国としての整合化加速", description: "2022年6月にEU加盟候補国の地位を獲得。医療機器規制を含む技術規則のEU整合化を加速。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Hong Kong (HKG) ---
+  // =========================================================================
+  {
+    code: "HKG",
+    country: "香港",
+    countryEn: "Hong Kong SAR",
+    region: "ASPAC",
+    flag: "🇭🇰",
+
+    legalSystemOverview: {
+      type: "独自制度（自主的登録制度 → 法定制度への移行中）",
+      description:
+        "香港の医療機器規制は長年、自主的な医療機器行政管理制度（MDACS: Medical Device Administrative Control System）に基づいていたが、法定規制への移行を段階的に進めている。2025年3月に Medical Devices Bill が立法会（LegCo）に提出され、法定登録制度の導入を目指している。衛生署（DOH / Department of Health）の医療機器管理課（MDCO / Medical Device Control Office）が規制を担当。",
+      keyCharacteristics: [
+        "MDACS（自主的登録制度）から法定制度への移行中",
+        "Medical Devices Bill (2025) で法定登録制度導入を目指す",
+        "MDCO/DOH が規制を担当",
+        "参照規制当局（Reference Regulators）からの承認に依拠",
+        "ラベリングは中国語（繁体字）・英語",
+        "香港は独自の規制体制を維持（中国NMPAとは別制度）",
+      ],
+    },
+
+    authorities: [
+      { name: "MDCO/DOH", fullName: "Medical Device Control Office, Department of Health", localName: "衞生署醫療儀器管制辦公室", role: "医療機器の登録・市場監視・ビジランス・リコール管理", url: "https://www.mdco.gov.hk/", isPrimary: true },
+      { name: "HA", fullName: "Hospital Authority", localName: "醫院管理局", role: "公立病院での医療機器調達・使用管理", url: "https://www.ha.org.hk/", isPrimary: false },
+      { name: "FHB", fullName: "Food and Health Bureau (now Health Bureau)", localName: "醫務衞生局", role: "医療政策・法制度策定", url: "https://www.healthbureau.gov.hk/", isPrimary: false },
+    ],
+
+    notifiedBodies: { system: "参照規制当局制度（Reference Regulators）", description: "香港はNotified Body制度を持たず、参照規制当局（USFDA, EU/NB, Health Canada, TGA, PMDA 等）の承認・認証に依拠する。MDACS Phase II リスティングでは参照規制当局からの承認証拠が必要。", bodies: [] },
+    deviceDefinition: { legalDefinition: "MDACS における定義: 人体の疾病の診断・予防・監視・治療・緩和、負傷の診断・監視・治療・緩和・補償、解剖学的・生理学的過程の調査・置換・変更・支援を目的とする器具・装置・実装体・機械・用具・インプラント・試薬・材料（薬物的・免疫学的・代謝的手段を主たる作用機序としないもの）。", scope: "IVD を含む。SaMD も対象。", notes: "Medical Devices Bill (2025) で法的定義が正式に法定化される予定。GHTF/IMDRF の定義に整合。" },
+    primaryLaw: { title: "Medical Device Administrative Control System (MDACS)", originalTitle: null, enacted: "2004（Phase I）/ 2015（Phase II リスティング開始）", lastAmended: "2025（Medical Devices Bill 提出）", url: "https://www.mdco.gov.hk/english/mdacs/mdacs.html", description: "現行は自主的な行政管理制度。Medical Devices Bill (2025) により法定制度への移行を目指す。" },
+    implementingRegulations: [
+      { title: "Medical Devices Bill (2025)", date: "2025-03（LegCo提出）", url: "https://www.mdco.gov.hk/", description: "法定の医療機器登録制度を導入するための法案。立法会で審議中。", category: "法案（審議中）" },
+      { title: "MDACS Phase I — Adverse Event Reporting", date: "2004", url: "https://www.mdco.gov.hk/english/mdacs/mdacs_aer.html", description: "自主的な有害事象報告制度。", category: "自主的制度" },
+      { title: "MDACS Phase II — Medical Device Listing", date: "2015", url: "https://www.mdco.gov.hk/english/mdacs/mdacs_mdl.html", description: "自主的な医療機器リスティング制度。Class II〜IV が対象。", category: "自主的制度" },
+    ],
+    relatedLaws: [
+      { title: "Personal Data (Privacy) Ordinance (Cap. 486)", category: "データ保護", enacted: "1996", url: "https://www.pcpd.org.hk/", relevance: "健康データに適用。" },
+      { title: "Consumer Goods Safety Ordinance (Cap. 456)", category: "消費者安全", enacted: "1994", url: "https://www.elegislation.gov.hk/", relevance: "医療機器が消費者製品に該当する場合の一般的安全要件。" },
+    ],
+    classification: {
+      system: "4クラス制（Class I / II / III / IV）— GHTF/IMDRF 整合",
+      basis: "GHTF（現IMDRF）の推奨分類体系に準拠。リスクベースの4クラス。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "低リスク。", examples: ["聴診器", "弾性包帯", "車椅子"], approvalPath: "リスティング不要（現行MDACS）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中低", description: "中低リスク。", examples: ["補聴器", "超音波装置", "コンタクトレンズ"], approvalPath: "MDACS リスティング" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "中高", description: "中高リスク。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "MDACS リスティング" },
+        { name: "Class IV", nameJa: "クラスIV", riskLevel: "高", description: "最高リスク。", examples: ["人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "MDACS リスティング" },
+      ],
+      rules: ["GHTF/IMDRF 分類規則に準拠"],
+      totalProductCodes: "GMDN コード使用",
+    },
+    conformityAssessment: { overview: "現行のMDACSは自主的なリスティング制度。Class II〜IV の機器は参照規制当局からの承認/認証を証拠として提出しリスティングを取得。Medical Devices Bill 成立後は法定登録に移行予定。", routes: [{ name: "MDACS Phase II Listing", nameJa: "MDACS Phase II リスティング", applicableClasses: ["Class II / III / IV"], description: "参照規制当局（USFDA, EU/NB, Health Canada, TGA, PMDA）からの承認・認証に基づきリスティング。製造元のISO 13485認証、参照当局の承認証拠、ラベリング情報等を提出。", subtypes: [{ name: "参照規制当局ルート", description: "FDA 510(k)/PMA、CE マーキング、TGA registration 等の承認を基にリスティング。" }], avgReviewTime: "60〜120日", fee: "リスティング料: HKD 1,520〜4,560（クラスによる）", url: "https://www.mdco.gov.hk/english/mdacs/mdacs_mdl.html" }] },
+    electronicSubmission: { system: "MDCO Online Listing System", url: "https://www.mdco.gov.hk/", description: "MDCO のオンラインシステムでリスティング申請。", mandatory: true },
+    udi: { required: false, system: "IMDRF UDI に整合予定", description: "現行MDACSではUDI義務なし。Medical Devices Bill ではUDI要件導入予定。IMDRF UDI Guidance に整合。", url: "https://www.mdco.gov.hk/", timeline: "Medical Devices Bill 成立後に段階的導入予定" },
+    postMarket: { adverseEventReporting: { system: "MDACS Phase I — Adverse Event Reporting", mandatory: false, url: "https://www.mdco.gov.hk/english/mdacs/mdacs_aer.html", description: "現行は自主的な有害事象報告制度（MDACS Phase I）。登録保有者・医療機関に報告を推奨。Medical Devices Bill で法定義務化予定。" }, recalls: { authority: "MDCO/DOH", description: "MDCOがリコール情報を収集・公開。Safety Alerts を発出。", url: "https://www.mdco.gov.hk/english/safety/safety.html" }, surveillance: "MDCO が市販後安全情報をモニタリング。Safety Alerts、Field Safety Corrective Actions 情報を公開。Medical Devices Bill で法定PMS制度を導入予定。" },
+    certificateOfFreeSale: { available: false, issuingAuthority: "N/A", name: "N/A", description: "香港は現時点でCFSの発行制度を正式に運用していない。Medical Devices Bill 後に検討される可能性。", processingTime: "N/A", url: null },
+    reimbursement: { system: "Hospital Authority（公立病院）+ 民間保険", authority: "HA / FHB", description: "香港の公的医療はHospital Authority（HA）が運営する公立病院・クリニックが中心。HA は一般税財源で運営され、医療機器は HA の集中調達（Central Tender）を通じて購入。民間病院・クリニックは独自に調達。民間医療保険の普及率も高い。薬物・機器の個別償還リストではなく、HA の診療サービスに包括。", codingSystems: ["HA 調達カテゴリーコード"], url: "https://www.ha.org.hk/" },
+    marketingRules: { authority: "MDCO/DOH", description: "Undesirable Medical Advertisements Ordinance (Cap. 231) が医療関連広告を規制。一般消費者向け医療機器広告に制限あり。", keyRules: ["中国語（繁体字）・英語ラベリング", "リスティング済み機器の販売を推奨", "Undesirable Medical Advertisements Ordinance による広告規制", "Medical Devices Bill 成立後は法定表示要件導入予定"] },
+    mdsap: { status: "非参加", description: "香港はMDSAPプログラムに参加していない。" },
+    internationalStandards: { iso13485: { accepted: true, notes: "ISO 13485 認証はリスティングの要件。製造業者のQMS適合証拠として必須。" }, iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" }, iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" }, iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。IEC 60601 テストレポートの提出を求める場合あり。" }, others: [] },
+    recentDevelopments: [
+      { date: "2025-03", title: "Medical Devices Bill 立法会提出", description: "法定の医療機器登録制度を導入するための法案を立法会（LegCo）に提出。法定登録・ビジランス・罰則等を規定。成立すれば香港の医療機器規制の大転換点。" },
+      { date: "2024", title: "MDACS リスティング対象拡大", description: "MDACS Phase II のリスティング対象機器カテゴリーの拡大を継続。" },
+      { date: "2023", title: "IMDRF 参加", description: "香港は IMDRF の Associate Member として参加し、国際規制整合化に貢献。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
 ];
 
 // ===========================================================================
