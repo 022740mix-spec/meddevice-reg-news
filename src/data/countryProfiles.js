@@ -16016,6 +16016,580 @@ export const COUNTRY_PROFILES = [
     verified: null,
   },
 
+
+  // =========================================================================
+  // --- TUN（チュニジア） ---
+  // =========================================================================
+  {
+    code: "TUN",
+    country: "チュニジア",
+    countryEn: "Republic of Tunisia",
+    region: "Middle East & Africa",
+    flag: "🇹🇳",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "チュニジアの医療機器規制は薬事・医療機器局（DPM: Direction de la Pharmacie et du Médicament）が管轄する。DPM は保健省傘下の機関であり、医薬品および医療機器の市場参入を規制する。2014年制定の Loi n° 2014-19（医療機器に関する法律）が医療機器規制の根幹法で、リスクベースの4クラス分類を採用。EU MDDの影響を強く受けた制度設計となっている。",
+      keyCharacteristics: [
+        "DPM（薬事・医療機器局）による一元的な規制体制",
+        "Loi n° 2014-19 に基づく医療機器固有の法規制",
+        "EU MDD に準拠した4クラス分類（Class I / IIa / IIb / III）",
+        "CE マーク取得機器は登録が簡素化される",
+        "ローカル代理人（mandataire local）の指定が必須",
+        "CFS（自由販売証明書）の提出が要求される",
+      ],
+    },
+    authorities: [
+      { name: "DPM", fullName: "Direction de la Pharmacie et du Médicament", localName: "الإدارة العامة للصيدلية والدواء", role: "医療機器の登録・市販後監視・輸入許可・施設許可", url: "http://www.santetunisie.rns.tn/", isPrimary: true },
+      { name: "MOH Tunisia", fullName: "Ministère de la Santé", localName: "وزارة الصحة", role: "保健政策全般・公立病院の管理", url: "http://www.santetunisie.rns.tn/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（DPM が直接審査。EU の NB 証明書を参照）",
+      description: "チュニジアには欧州型の Notified Body 制度は存在しない。DPM が申請書類を直接審査し、CE 証明書を主たるエビデンスとして登録判断を行う。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "Loi n° 2014-19 に基づき、人体に対して使用される器具・装置・機器・ソフトウェア・材料等で、疾病の診断・予防・監視・治療・軽減等を目的とし、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は EU MDD/GHTF の定義に準拠。",
+    },
+    primaryLaw: {
+      title: "Loi n° 2014-19 du 20 mars 2014 relative aux dispositifs médicaux",
+      originalTitle: "القانون عدد 19 لسنة 2014 المتعلق بالأجهزة الطبية",
+      enacted: "2014",
+      lastAmended: "随時改正",
+      url: "http://www.santetunisie.rns.tn/",
+      description: "チュニジアにおける医療機器規制の根幹法。医療機器の定義、分類、市場参入要件、市販後監視、違反時の罰則等を規定。",
+    },
+    implementingRegulations: [
+      { title: "Décret gouvernemental relatif aux dispositifs médicaux（医療機器に関する政令）", date: "2014以降", url: "http://www.santetunisie.rns.tn/", description: "Loi n° 2014-19 の施行細則。登録手続き、分類規則、技術文書要件等を規定。", category: "包括規制" },
+      { title: "Arrêté du Ministre de la Santé（保健大臣令）", date: "各種", url: "http://www.santetunisie.rns.tn/", description: "医療機器の輸入許可・施設許可・ラベリング要件等に関する省令。", category: "輸入管理" },
+    ],
+    relatedLaws: [
+      { title: "Loi n° 73-55 du 3 août 1973（薬事法）", category: "薬事法", enacted: "1973", url: "http://www.santetunisie.rns.tn/", relevance: "チュニジアの薬事制度の基本法。2014年法以前は医療機器もこの法律の枠組みで規制されていた。" },
+    ],
+    classification: {
+      system: "EU MDD 準拠4クラス分類（Class I / IIa / IIb / III）",
+      basis: "リスクベース（EU MDD 分類規則を参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。一般的制御で安全性を確保。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "自己宣言 + 登録届出" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低リスク", description: "中低リスク医療機器。CE マークまたは同等の適合性証明が必要。", examples: ["超音波診断装置", "手術用手袋", "歯科用充填材"], approvalPath: "DPM 登録（CE 証明書ベース）" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高リスク", description: "中高リスク医療機器。より詳細な技術文書の提出が必要。", examples: ["人工呼吸器", "血液透析装置", "放射線治療装置"], approvalPath: "DPM 登録（詳細審査）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。CE マーク（EC Full QA + Design Examination）等のフル適合性評価が必要。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型除細動器"], approvalPath: "DPM 詳細審査" },
+      ],
+      rules: [
+        { id: "EU MDD 分類規則参照", description: "DPM は EU MDD（93/42/EEC）の分類規則を参照して機器のクラスを決定する。", url: "http://www.santetunisie.rns.tn/" },
+      ],
+      totalProductCodes: "要確認（DPM 独自のコード体系の公開情報なし）",
+    },
+    conformityAssessment: {
+      overview: "DPM は CE マークを持つ機器に対し、書類審査ベースの登録を実施。CE マークのない機器については、同等の適合性証明を求める。",
+      routes: [
+        { name: "DPM Medical Device Registration", nameJa: "DPM 医療機器登録", applicableClasses: ["全クラス"], description: "CE 証明書、Free Sale Certificate、技術文書、ラベリング情報等を提出して登録。Class III はより詳細な審査。", subtypes: [], avgReviewTime: "3〜12ヶ月（クラスにより異なる）", fee: "要確認（DPM 料金表は随時改定）", url: "http://www.santetunisie.rns.tn/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認（DPM の電子申請システムの整備状況は限定的情報）", url: "http://www.santetunisie.rns.tn/", description: "DPM への申請は紙ベースが主流だが、電子化の取り組みが進行中。最新の申請方法は DPM に直接確認が必要。", mandatory: false },
+    udi: { required: false, system: "要確認（UDI 制度の導入状況は未確認）", description: "チュニジアでは現時点で IMDRF 型の UDI 制度が法的に義務化されているとの確認情報はない。CE マーク機器は EU UDI 要件を満たしている場合がある。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "DPM マテリオビジランス（matériovigilance）制度", mandatory: true, url: "http://www.santetunisie.rns.tn/", description: "医療機器に関連する有害事象は DPM に報告義務がある。Loi n° 2014-19 に基づくマテリオビジランス体制。" },
+      recalls: { authority: "DPM", description: "DPM はリコール・Field Safety Corrective Action（FSCA）を管理。製造業者・輸入業者はリコール実施時に DPM に通知義務。", url: "http://www.santetunisie.rns.tn/" },
+      surveillance: "DPM による市販後監視。マテリオビジランスに基づく報告・調査体制。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "DPM", name: "Certificat de Libre Vente", description: "登録済み医療機器について DPM が発行する自由販売証明書。登録申請時には原産国の CFS 提出が必要。", processingTime: "要確認", url: "http://www.santetunisie.rns.tn/" },
+    reimbursement: { system: "公的医療保険（CNAM）+ 民間保険", authority: "CNAM / MOH Tunisia", description: "チュニジアの医療保険は CNAM（Caisse Nationale d'Assurance Maladie）が管轄する公的保険制度が中心。医療機器の償還は主に公立病院の調達予算および CNAM の給付リストを通じて行われる。", codingSystems: ["要確認"], url: "http://www.cnam.nat.tn/" },
+    marketingRules: { authority: "DPM", description: "医療機器の広告・販促は DPM の規制下にある。承認された適応のみの広告が原則。", keyRules: ["登録済み機器のみ広告可", "ラベリングはフランス語で記載（アラビア語追加を推奨）", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "チュニジアは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は CE マーク取得の前提として間接的に要求される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "Loi n° 2014-19 の施行細則の整備推進", description: "DPM は2014年法の施行細則の整備を継続。分類規則の明確化と電子申請システムの導入に注力中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- DZA（アルジェリア） ---
+  // =========================================================================
+  {
+    code: "DZA",
+    country: "アルジェリア",
+    countryEn: "People's Democratic Republic of Algeria",
+    region: "Middle East & Africa",
+    flag: "🇩🇿",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "アルジェリアの医療機器規制は保健省（MOH）および国立医薬品管理研究所（LNCPP: Laboratoire National de Contrôle des Produits Pharmaceutiques）が管轄する。Loi n° 18-11 du 2 juillet 2018（衛生法）および関連規則が法的根拠。医療機器は homologation（型式認証）手続きが必要で、LNCPP が技術評価を担当する。EU CE マークの影響を受けた制度だが、独自の登録プロセスを有する。",
+      keyCharacteristics: [
+        "LNCPP と MOH による二元的な規制体制",
+        "Homologation（型式認証）制度",
+        "EU の分類モデルを参照した4クラス分類",
+        "CE マーク取得機器は審査で考慮されるが、自動承認ではない",
+        "ローカル代理人の指定が必須",
+        "CFS および品質認証書（ISO 13485）の提出が要求される",
+      ],
+    },
+    authorities: [
+      { name: "LNCPP", fullName: "Laboratoire National de Contrôle des Produits Pharmaceutiques", localName: "المخبر الوطني لمراقبة المنتجات الصيدلانية", role: "医療機器の技術評価・試験・品質管理", url: "https://www.lncpp.dz/", isPrimary: true },
+      { name: "MOH Algeria", fullName: "Ministère de la Santé", localName: "وزارة الصحة", role: "医療機器の登録許可・保健政策・市販後監視", url: "https://www.sante.gov.dz/", isPrimary: true },
+    ],
+    notifiedBodies: {
+      system: "なし（LNCPP/MOH が直接審査）",
+      description: "アルジェリアには Notified Body 制度は存在しない。LNCPP が技術評価を行い、MOH が最終的な登録許可を付与する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "衛生法および関連規則に基づき、人体に対して使用される器具・装置・機器・ソフトウェア・材料等で、疾病の診断・予防・監視・治療・軽減等を目的とし、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は GHTF/IMDRF の定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Loi n° 18-11 du 2 juillet 2018 relative à la santé",
+      originalTitle: "القانون رقم 18-11 المتعلق بالصحة",
+      enacted: "2018",
+      lastAmended: "随時改正",
+      url: "https://www.sante.gov.dz/",
+      description: "アルジェリアの衛生法。医薬品・医療機器を含む衛生製品の規制の法的根拠を提供。医療機器の homologation 要件を規定。",
+    },
+    implementingRegulations: [
+      { title: "Décret exécutif relatif à l'homologation des dispositifs médicaux（医療機器型式認証に関する施行令）", date: "各種", url: "https://www.sante.gov.dz/", description: "医療機器の homologation 手続き、必要書類、技術要件等を規定。", category: "登録" },
+      { title: "Arrêté relatif à l'importation des dispositifs médicaux（医療機器輸入に関する省令）", date: "各種", url: "https://www.sante.gov.dz/", description: "医療機器の輸入許可・要件を規定。", category: "輸入管理" },
+    ],
+    relatedLaws: [
+      { title: "Loi n° 85-05 du 16 février 1985（旧衛生法）", category: "衛生法", enacted: "1985", url: "https://www.sante.gov.dz/", relevance: "2018年法以前のアルジェリアの衛生法。" },
+    ],
+    classification: {
+      system: "EU 参照4クラス分類（Class I / IIa / IIb / III）",
+      basis: "リスクベース（EU 分類モデルを参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "簡易 homologation" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["超音波診断装置", "手術用手袋", "歯科用充填材"], approvalPath: "標準 homologation" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高リスク", description: "中高リスク医療機器。", examples: ["人工呼吸器", "血液透析装置", "放射線治療装置"], approvalPath: "詳細 homologation" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。最も厳格な審査が適用される。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型除細動器"], approvalPath: "フル homologation（技術文書 + 臨床データ）" },
+      ],
+      rules: [
+        { id: "EU 参照分類規則", description: "LNCPP/MOH は EU の分類規則を参照して機器のクラスを決定する。", url: "https://www.sante.gov.dz/" },
+      ],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "LNCPP が技術評価を行い、MOH が homologation（型式認証）を付与する。CE マーク取得機器は審査で考慮されるが、別途アルジェリア固有の手続きが必要。",
+      routes: [
+        { name: "Homologation des dispositifs médicaux", nameJa: "医療機器型式認証", applicableClasses: ["全クラス"], description: "CE 証明書、ISO 13485 認証、CFS、技術文書、臨床データ等を提出。LNCPP が技術評価を実施し、MOH が最終認可。", subtypes: [], avgReviewTime: "6〜18ヶ月（クラス・製品による）", fee: "要確認", url: "https://www.sante.gov.dz/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: "https://www.sante.gov.dz/", description: "アルジェリアの医療機器登録申請は紙ベースが主流。電子化の進捗は限定的情報。", mandatory: false },
+    udi: { required: false, system: "要確認", description: "アルジェリアでは UDI 制度の法的義務化は確認されていない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "MOH / LNCPP マテリオビジランス制度", mandatory: true, url: "https://www.sante.gov.dz/", description: "医療機器に関連する有害事象は MOH/LNCPP に報告義務がある。" },
+      recalls: { authority: "MOH / LNCPP", description: "MOH/LNCPP がリコールを管理。製造業者・輸入業者はリコール実施時に通知義務。", url: "https://www.sante.gov.dz/" },
+      surveillance: "MOH/LNCPP による市販後監視。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "MOH Algeria", name: "Certificat de Libre Vente", description: "登録済み医療機器について MOH が発行する自由販売証明書。申請時には原産国の CFS 提出が要求される。", processingTime: "要確認", url: "https://www.sante.gov.dz/" },
+    reimbursement: { system: "公的医療保険（CNAS / CASNOS）+ 公立病院", authority: "MOH Algeria / CNAS", description: "アルジェリアの医療保険は CNAS（社会保険基金）が管轄。医療機器の償還は主に公立病院の調達予算を通じて行われる。", codingSystems: ["要確認"], url: "https://www.sante.gov.dz/" },
+    marketingRules: { authority: "MOH Algeria", description: "医療機器の広告・販促は MOH の規制下にある。", keyRules: ["登録済み機器のみ広告可", "ラベリングはフランス語またはアラビア語で記載", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "アルジェリアは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は homologation 申請時に要求される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "医療機器規制の近代化推進", description: "MOH/LNCPP は Loi n° 18-11 に基づく医療機器規制の施行細則の整備を継続。現地製造の促進と輸入依存の軽減が政策課題。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- IRQ（イラク） ---
+  // =========================================================================
+  {
+    code: "IRQ",
+    country: "イラク",
+    countryEn: "Republic of Iraq",
+    region: "Middle East & Africa",
+    flag: "🇮🇶",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "イラクの医療機器規制は保健省（MOH）傘下の KIMADIA（国立医薬品・医療機器公社: State Company for Marketing Drugs and Medical Appliances）が管轄する。KIMADIA は公的部門における医薬品・医療機器の調達・流通を担う国営企業で、輸入許可と品質管理を行う。民間部門の輸入は MOH の許可制。体系的な医療機器登録制度は発展途上であり、主に CFS と CE マークまたは FDA 認可に依拠する。",
+      keyCharacteristics: [
+        "KIMADIA が公的部門の医療機器調達・輸入を管理",
+        "MOH が民間輸入を許可制で規制",
+        "体系的な医療機器登録制度は発展途上",
+        "CE マークまたは FDA 認可が事実上の市場参入要件",
+        "CFS の提出が必須",
+        "ローカル代理人（輸入業者）の指定が必須",
+      ],
+    },
+    authorities: [
+      { name: "KIMADIA", fullName: "State Company for Marketing Drugs and Medical Appliances", localName: "الشركة العامة لتسويق الأدوية والمستلزمات الطبية", role: "公的部門の医療機器調達・輸入・品質管理", url: "https://www.kimadia.iq/", isPrimary: true },
+      { name: "MOH Iraq", fullName: "Ministry of Health — Iraq", localName: "وزارة الصحة العراقية", role: "保健政策・民間輸入許可・規制監督", url: "https://moh.gov.iq/", isPrimary: true },
+    ],
+    notifiedBodies: {
+      system: "なし（KIMADIA/MOH が直接審査。CE/FDA 承認に依拠）",
+      description: "イラクには Notified Body 制度は存在しない。KIMADIA/MOH が輸入申請を審査し、CE 証明書または FDA 認可文書を主たるエビデンスとして判断する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "MOH の規則に基づき、疾病の診断・治療・予防・監視等を目的とする器具・装置・機器等で、薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "体系的な医療機器の法的定義文書の公開は限定的。実務上は国際的な定義が参照される。",
+    },
+    primaryLaw: {
+      title: "Public Health Law No. 89 of 1981（改正あり）",
+      originalTitle: "قانون الصحة العامة رقم 89 لسنة 1981",
+      enacted: "1981",
+      lastAmended: "随時改正",
+      url: "https://moh.gov.iq/",
+      description: "イラクの公衆衛生法。医薬品・医療機器の規制の法的根拠を提供。KIMADIA の役割を含む。",
+    },
+    implementingRegulations: [
+      { title: "KIMADIA Import Regulations（KIMADIA 輸入規則）", date: "各種", url: "https://www.kimadia.iq/", description: "公的部門向けの医療機器輸入手続き、必要書類、品質要件を規定。", category: "輸入管理" },
+      { title: "MOH Private Sector Import Instructions（民間輸入指示）", date: "各種", url: "https://moh.gov.iq/", description: "民間部門の医療機器輸入に関する許可手続きと要件。", category: "輸入管理" },
+    ],
+    relatedLaws: [
+      { title: "KIMADIA 設立法", category: "組織法", enacted: "1964", url: "https://www.kimadia.iq/", relevance: "KIMADIA の設立と権限を規定。" },
+    ],
+    classification: {
+      system: "国際分類参照（CE/FDA 分類を事実上採用）",
+      basis: "リスクベース（CE/FDA の分類を参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "輸入許可（CFS + CE/FDA 証明）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中リスク", description: "中リスク医療機器。", examples: ["超音波診断装置", "輸液ポンプ", "電動車椅子"], approvalPath: "輸入許可（CFS + CE/FDA 証明）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。追加的な技術文書が要求される場合がある。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "輸入許可（詳細審査）" },
+      ],
+      rules: [
+        { id: "国際分類参照", description: "KIMADIA/MOH は CE または FDA の分類を参照。イラク独自の分類規則は体系的に公開されていない。", url: "https://moh.gov.iq/" },
+      ],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "KIMADIA/MOH は CE マークまたは FDA 認可を持つ機器に対し、輸入許可を付与する。独自の適合性評価制度は発展途上。",
+      routes: [
+        { name: "KIMADIA/MOH Import Authorization", nameJa: "KIMADIA/MOH 輸入許可", applicableClasses: ["全クラス"], description: "CE 証明書または FDA 認可文書、CFS、品質証明書（ISO 13485）、技術仕様書等を提出して輸入許可を取得。公的部門は KIMADIA 入札、民間は MOH 許可制。", subtypes: [], avgReviewTime: "3〜12ヶ月（調達プロセスにより大幅に異なる）", fee: "要確認", url: "https://www.kimadia.iq/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認（KIMADIA のオンラインシステムの整備状況は限定的）", url: "https://www.kimadia.iq/", description: "KIMADIA/MOH への申請は紙ベースが主流。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "イラクでは UDI 制度は導入されていない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "MOH 有害事象報告", mandatory: true, url: "https://moh.gov.iq/", description: "医療機器に関連する有害事象は MOH に報告義務がある。ただし、体系的な報告制度は発展途上。" },
+      recalls: { authority: "MOH Iraq / KIMADIA", description: "MOH/KIMADIA がリコールを管理。国際的なリコール情報に基づく対応。", url: "https://moh.gov.iq/" },
+      surveillance: "MOH による市販後監視。体系的な PMS 制度は発展途上。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "MOH Iraq", name: "Free Sale Certificate", description: "登録・許可済み医療機器について MOH が発行。輸入申請時には原産国の CFS 提出が必須。", processingTime: "要確認", url: "https://moh.gov.iq/" },
+    reimbursement: { system: "公的医療制度（MOH 管轄の公立病院）", authority: "MOH Iraq", description: "イラクの医療は主に公立病院を通じた公的医療制度で提供される。医療機器の調達は KIMADIA の入札プロセスを通じて行われる。民間医療も拡大中。", codingSystems: ["要確認"], url: "https://moh.gov.iq/" },
+    marketingRules: { authority: "MOH Iraq", description: "医療機器の広告・販促は MOH の規制下にある。", keyRules: ["許可済み機器のみ広告可", "ラベリングは英語で記載（アラビア語追加を推奨）", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "イラクは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は輸入許可申請時に要求される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "医療機器規制の体系化に向けた取り組み", description: "MOH/KIMADIA は WHO の支援を受けて医療機器規制の体系化を推進中。独立した登録制度の構築が課題。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- LBN（レバノン） ---
+  // =========================================================================
+  {
+    code: "LBN",
+    country: "レバノン",
+    countryEn: "Lebanese Republic",
+    region: "Middle East & Africa",
+    flag: "🇱🇧",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "レバノンの医療機器規制は公衆衛生省（MOPH）および薬事監査局（IFP: Inspection Pharmaceutique）が管轄する。MOPH の医療機器部門が主管し、輸入許可・登録を行う。レバノンは WHO のグローバルモデルを参照した規制枠組みの構築を進めているが、経済危機等の影響で制度の整備は遅延している。CE マークまたは FDA 認可を持つ機器に対する輸入許可ベースの規制が主流。",
+      keyCharacteristics: [
+        "MOPH が医療機器の輸入許可・登録を管理",
+        "IFP（薬事監査局）が品質監査を担当",
+        "CE マークまたは FDA 認可が事実上の市場参入要件",
+        "体系的な医療機器登録制度は発展途上",
+        "CFS の提出が要求される",
+        "ローカル代理人（輸入業者）の指定が必須",
+        "経済危機の影響で規制体制の強化が遅延",
+      ],
+    },
+    authorities: [
+      { name: "MOPH", fullName: "Ministry of Public Health — Lebanon", localName: "وزارة الصحة العامة", role: "医療機器の輸入許可・登録・市販後監視", url: "https://www.moph.gov.lb/", isPrimary: true },
+      { name: "IFP", fullName: "Inspection Pharmaceutique", localName: "التفتيش الصيدلاني", role: "薬事監査・品質管理・施設検査", url: "https://www.moph.gov.lb/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（MOPH が直接審査。CE/FDA 承認に依拠）",
+      description: "レバノンには Notified Body 制度は存在しない。MOPH が輸入許可申請を審査し、CE 証明書または FDA 認可文書を主たるエビデンスとして判断する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "MOPH の規則に基づき、疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "体系的な法的定義文書の公開は限定的。国際的な定義が参照される。",
+    },
+    primaryLaw: {
+      title: "Law on Exercise of Pharmacy（薬事法）および関連規則",
+      originalTitle: "قانون ممارسة مهنة الصيدلة",
+      enacted: "1983（改正あり）",
+      lastAmended: "随時改正",
+      url: "https://www.moph.gov.lb/",
+      description: "レバノンの薬事法。医療機器も薬事法の枠組みで規制される。独立した医療機器法の制定が検討されている。",
+    },
+    implementingRegulations: [
+      { title: "MOPH Medical Device Import Circular（医療機器輸入通達）", date: "各種", url: "https://www.moph.gov.lb/", description: "医療機器の輸入許可手続き、必要書類を規定する MOPH 発出の通達。", category: "輸入管理" },
+      { title: "MOPH Medical Device Registration Guidelines", date: "各種", url: "https://www.moph.gov.lb/", description: "医療機器の登録ガイドライン（整備中）。", category: "登録" },
+    ],
+    relatedLaws: [
+      { title: "Code de la Santé（衛生法典）", category: "衛生法", enacted: "各種", url: "https://www.moph.gov.lb/", relevance: "レバノンの公衆衛生に関する法規の集成。" },
+    ],
+    classification: {
+      system: "国際分類参照（CE/FDA 分類を事実上採用）",
+      basis: "リスクベース（CE/FDA の分類を参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "輸入許可" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中リスク", description: "中リスク医療機器。", examples: ["超音波診断装置", "輸液ポンプ", "電動車椅子"], approvalPath: "輸入許可（CE/FDA 証明書ベース）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "輸入許可（詳細審査）" },
+      ],
+      rules: [
+        { id: "国際分類参照", description: "MOPH は CE または FDA の分類を参照。レバノン独自の分類規則は体系的に公開されていない。", url: "https://www.moph.gov.lb/" },
+      ],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "MOPH は CE マークまたは FDA 認可を持つ機器に対し、輸入許可を付与する。独自の適合性評価制度は発展途上。",
+      routes: [
+        { name: "MOPH Import Authorization", nameJa: "MOPH 輸入許可", applicableClasses: ["全クラス"], description: "CE 証明書または FDA 認可文書、CFS、ISO 13485 認証、技術仕様書等を提出。MOPH が書類審査を行い輸入許可を付与。", subtypes: [], avgReviewTime: "2〜6ヶ月（状況により大幅に変動）", fee: "要確認", url: "https://www.moph.gov.lb/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: "https://www.moph.gov.lb/", description: "MOPH への申請は紙ベースが主流。電子化の進捗は限定的。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "レバノンでは UDI 制度は導入されていない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "MOPH 有害事象報告", mandatory: true, url: "https://www.moph.gov.lb/", description: "医療機器に関連する有害事象は MOPH に報告義務がある。体系的な報告制度は発展途上。" },
+      recalls: { authority: "MOPH", description: "MOPH がリコールを管理。国際的なリコール情報に基づく対応。", url: "https://www.moph.gov.lb/" },
+      surveillance: "MOPH による市販後監視。体系的な PMS 制度は発展途上。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "MOPH", name: "Free Sale Certificate", description: "輸入許可済み医療機器について MOPH が発行。申請時には原産国の CFS 提出が要求される。", processingTime: "要確認", url: "https://www.moph.gov.lb/" },
+    reimbursement: { system: "公的医療保険（NSSF）+ 民間保険", authority: "NSSF / MOPH", description: "レバノンの医療保険は NSSF（国家社会保障基金）と民間保険の混合体制。経済危機により公的医療制度は深刻な資金不足に直面。医療機器の償還は主に病院の調達予算を通じて行われる。", codingSystems: ["要確認"], url: "https://www.moph.gov.lb/" },
+    marketingRules: { authority: "MOPH", description: "医療機器の広告・販促は MOPH の規制下にある。", keyRules: ["許可済み機器のみ広告可", "ラベリングは英語またはフランス語で記載（アラビア語追加を推奨）", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "レバノンは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は輸入許可申請時に参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "医療機器規制の体系化に向けた取り組み", description: "MOPH は WHO/世界銀行の支援を受けて医療機器規制の体系化を推進中。経済危機からの回復と規制体制の再構築が課題。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- NPL（ネパール） ---
+  // =========================================================================
+  {
+    code: "NPL",
+    country: "ネパール",
+    countryEn: "Federal Democratic Republic of Nepal",
+    region: "ASPAC",
+    flag: "🇳🇵",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ネパールの医療機器規制は薬物管理局（DDA: Department of Drug Administration）が管轄する。DDA は保健人口省（MoHP）傘下の機関で、Drug Act 1978 およびその規則に基づき医薬品・医療機器を規制する。医療機器に特化した法律はなく、薬事法の枠組みで規制されている。WHO のグローバルモデルを参照した医療機器規制の体系化が進行中。CE マークまたは FDA 認可を持つ機器に対する輸入許可ベースの規制が主流。",
+      keyCharacteristics: [
+        "DDA（薬物管理局）による一元的な規制体制",
+        "Drug Act 1978 に基づく薬事法の枠組みで規制",
+        "医療機器に特化した法律は制定中",
+        "CE マークまたは FDA 認可が事実上の市場参入要件",
+        "CFS の提出が要求される",
+        "ローカル代理人（輸入業者）の指定が必須",
+      ],
+    },
+    authorities: [
+      { name: "DDA", fullName: "Department of Drug Administration", localName: "औषधि व्यवस्था विभाग", role: "医療機器の輸入許可・登録・品質管理・市販後監視", url: "https://www.dda.gov.np/", isPrimary: true },
+      { name: "MoHP", fullName: "Ministry of Health and Population", localName: "स्वास्थ्य तथा जनसंख्या मन्त्रालय", role: "保健政策全般・規制監督", url: "https://www.mohp.gov.np/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（DDA が直接審査。CE/FDA 承認に依拠）",
+      description: "ネパールには Notified Body 制度は存在しない。DDA が輸入許可申請を審査し、CE 証明書または FDA 認可文書を主たるエビデンスとして判断する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "DDA の規則に基づき、疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "医療機器の法的定義は Drug Act の枠組みで間接的に規定。独立した医療機器法の制定が検討されている。",
+    },
+    primaryLaw: {
+      title: "Drug Act 2035 (1978)",
+      originalTitle: "औषधि ऐन, २०३५",
+      enacted: "1978",
+      lastAmended: "随時改正",
+      url: "https://www.dda.gov.np/",
+      description: "ネパールの薬事法。医薬品・医療機器の製造・輸入・販売・流通を規制する根幹法。医療機器に特化した規定は限定的で、独立した医療機器法の制定が進行中。",
+    },
+    implementingRegulations: [
+      { title: "Drug Rules 2043 (1986)", date: "1986", url: "https://www.dda.gov.np/", description: "Drug Act の施行規則。医薬品・医療機器の登録・輸入・品質管理の詳細を規定。", category: "包括規制" },
+      { title: "DDA Medical Device Import Guidelines", date: "各種", url: "https://www.dda.gov.np/", description: "医療機器の輸入許可手続き、必要書類を規定する DDA 発出のガイドライン。", category: "輸入管理" },
+    ],
+    relatedLaws: [
+      { title: "Medical Device Bill（医療機器法案）", category: "法案", enacted: "検討中", url: "https://www.dda.gov.np/", relevance: "医療機器に特化した独立法の制定が検討されている。" },
+    ],
+    classification: {
+      system: "国際分類参照（WHO/IMDRF ガイドラインを参照）",
+      basis: "リスクベース（WHO/IMDRF の分類を参照）",
+      classes: [
+        { name: "Class A", nameJa: "クラスA", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "DDA 輸入許可" },
+        { name: "Class B", nameJa: "クラスB", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["超音波診断装置", "手術用手袋", "歯科用充填材"], approvalPath: "DDA 輸入許可" },
+        { name: "Class C", nameJa: "クラスC", riskLevel: "中高リスク", description: "中高リスク医療機器。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "DDA 輸入許可（詳細審査）" },
+        { name: "Class D", nameJa: "クラスD", riskLevel: "高リスク", description: "高リスク医療機器。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "DDA 輸入許可（詳細審査）" },
+      ],
+      rules: [
+        { id: "国際分類参照", description: "DDA は WHO/IMDRF の分類ガイドラインを参照。独自の分類規則の体系的な公開は進行中。", url: "https://www.dda.gov.np/" },
+      ],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "DDA は CE マークまたは FDA 認可を持つ機器に対し、輸入許可を付与する。独自の適合性評価制度は発展途上。",
+      routes: [
+        { name: "DDA Import Authorization", nameJa: "DDA 輸入許可", applicableClasses: ["全クラス"], description: "CE 証明書または FDA 認可文書、CFS、ISO 13485 認証、技術仕様書等を提出。DDA が書類審査を行い輸入許可を付与。", subtypes: [], avgReviewTime: "2〜6ヶ月", fee: "要確認", url: "https://www.dda.gov.np/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認（DDA のオンラインシステムの整備が進行中）", url: "https://www.dda.gov.np/", description: "DDA への申請は紙ベースが主流だが、電子化の取り組みが進行中。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "ネパールでは UDI 制度は導入されていない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "DDA 有害事象報告制度", mandatory: true, url: "https://www.dda.gov.np/", description: "医療機器に関連する有害事象は DDA に報告義務がある。ファーマコビジランス体制の一環として医療機器の監視も行われる。" },
+      recalls: { authority: "DDA", description: "DDA がリコールを管理。国際的なリコール情報に基づく対応。", url: "https://www.dda.gov.np/" },
+      surveillance: "DDA による市販後監視。体系的な PMS 制度の構築が進行中。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "DDA", name: "Free Sale Certificate", description: "輸入許可済み医療機器について DDA が発行。申請時には原産国の CFS 提出が要求される。", processingTime: "要確認", url: "https://www.dda.gov.np/" },
+    reimbursement: { system: "公的医療保険（社会保険制度整備中）+ 自己負担", authority: "MoHP / Health Insurance Board", description: "ネパールの医療保険制度は Health Insurance Board が管轄する社会健康保険の拡大を推進中。医療機器の償還は主に公立病院の調達予算を通じて行われる。自己負担比率が高い。", codingSystems: ["要確認"], url: "https://www.dda.gov.np/" },
+    marketingRules: { authority: "DDA", description: "医療機器の広告・販促は DDA の規制下にある。", keyRules: ["許可済み機器のみ広告可", "ラベリングは英語で記載（ネパール語追加を推奨）", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "ネパールは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は輸入許可申請時に参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "医療機器法の制定に向けた取り組み", description: "DDA/MoHP は WHO の支援を受けて医療機器に特化した法律の制定を推進中。Drug Act の枠組みからの独立と、IMDRF ガイドラインに基づく規制体系の構築が目標。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- IRN（イラン） ---
+  // =========================================================================
+  {
+    code: "IRN",
+    country: "イラン",
+    countryEn: "Islamic Republic of Iran",
+    region: "Middle East & Africa",
+    flag: "🇮🇷",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "イランの医療機器規制はイラン医療機器局（IMED: Iranian Medical Equipment Directorate）および食品医薬品庁（IFDA: Iran Food and Drug Administration）が管轄する。IMED は保健省傘下の専門機関で、医療機器の登録・市場監視を担当。IFDA は医薬品・食品・化粧品を含む包括的な規制機関。イランは独自の医療機器規制制度を有し、WHO のグローバルモデルや EU の MDR に触発された制度改革を推進中。国内製造の促進が重要な政策課題。",
+      keyCharacteristics: [
+        "IMED（医療機器局）による専門的な規制体制",
+        "IFDA との連携による包括的な規制",
+        "リスクベースの4クラス分類（Class A / B / C / D）",
+        "独自の登録制度（IRC: Iran Registration Certificate）",
+        "国内製造促進政策が規制に影響",
+        "ローカル代理人の指定が必須",
+        "CFS と ISO 13485 認証の提出が必要",
+      ],
+    },
+    authorities: [
+      { name: "IMED", fullName: "Iranian Medical Equipment Directorate", localName: "اداره کل تجهیزات پزشکی", role: "医療機器の登録・技術評価・市場監視・施設許可", url: "https://imed.ir/", isPrimary: true },
+      { name: "IFDA", fullName: "Iran Food and Drug Administration", localName: "سازمان غذا و دارو", role: "医薬品・食品・化粧品を含む包括的規制・IMED の上位機関", url: "https://www.fda.gov.ir/", isPrimary: true },
+      { name: "MoHME", fullName: "Ministry of Health and Medical Education", localName: "وزارت بهداشت، درمان و آموزش پزشکی", role: "保健政策全般・規制監督", url: "https://behdasht.gov.ir/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（IMED が直接審査）",
+      description: "イランには欧州型の Notified Body 制度は存在しない。IMED が申請書類を直接審査し、登録証（IRC）を発行する。CE 証明書や FDA 認可は審査で参照されるが、IMED の独自審査が必要。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "IMED/IFDA の規則に基づき、人体に対して使用される器具・装置・機器・ソフトウェア・材料等で、疾病の診断・予防・監視・治療・軽減等を目的とし、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。IMED が管轄。",
+      notes: "定義は GHTF/IMDRF の定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Food, Drug, and Cosmetics Act（食品・医薬品・化粧品法）",
+      originalTitle: "قانون مواد خوراکی، آشامیدنی، آرایشی و بهداشتی",
+      enacted: "1967（改正あり）",
+      lastAmended: "随時改正",
+      url: "https://www.fda.gov.ir/",
+      description: "イランにおける医薬品・食品・化粧品・医療機器規制の根幹法。IFDA/IMED の権限の法的根拠を提供。",
+    },
+    implementingRegulations: [
+      { title: "IMED Medical Device Registration Regulation", date: "各種", url: "https://imed.ir/", description: "医療機器の登録手続き、必要書類、技術要件、分類規則等を規定。", category: "登録" },
+      { title: "IMED Import and Distribution Regulation", date: "各種", url: "https://imed.ir/", description: "医療機器の輸入・流通に関する要件。ローカル代理人の要件を含む。", category: "輸入管理" },
+      { title: "IMED Clinical Investigation Regulation", date: "各種", url: "https://imed.ir/", description: "イランにおける医療機器の臨床試験に関する要件。", category: "臨床試験" },
+    ],
+    relatedLaws: [
+      { title: "IFDA Organization Law", category: "組織法", enacted: "2010", url: "https://www.fda.gov.ir/", relevance: "IFDA の設立、権限、組織構成を規定。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（Class A / B / C / D）",
+      basis: "リスクベース（GHTF/IMDRF の分類ガイドラインを参照）",
+      classes: [
+        { name: "Class A", nameJa: "クラスA", riskLevel: "低リスク", description: "低リスク医療機器。一般的制御で安全性を確保。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "簡易登録（届出）" },
+        { name: "Class B", nameJa: "クラスB", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["超音波診断装置", "手術用手袋", "歯科用充填材"], approvalPath: "標準登録" },
+        { name: "Class C", nameJa: "クラスC", riskLevel: "中高リスク", description: "中高リスク医療機器。より詳細な技術文書の提出が必要。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "詳細登録（技術文書審査）" },
+        { name: "Class D", nameJa: "クラスD", riskLevel: "高リスク", description: "高リスク医療機器。最も厳格な審査が適用される。臨床データの提出が要求される場合がある。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型除細動器"], approvalPath: "フル登録（技術文書 + 臨床データ審査）" },
+      ],
+      rules: [
+        { id: "IMED 分類規則", description: "IMED は GHTF/IMDRF の分類ガイドラインを参照した独自の分類規則を運用。", url: "https://imed.ir/" },
+      ],
+      totalProductCodes: "要確認（IMED 製品コードデータベースは imed.ir で参照可能）",
+    },
+    conformityAssessment: {
+      overview: "IMED は独自の登録審査を実施し、IRC（Iran Registration Certificate）を発行する。CE マークや FDA 認可は審査で参照されるが、IMED の独立審査が必須。国内製造品には優遇措置がある。",
+      routes: [
+        { name: "IMED Device Registration (IRC)", nameJa: "IMED 医療機器登録（IRC）", applicableClasses: ["全クラス"], description: "ISO 13485 認証、CFS、技術文書、ラベリング情報、臨床データ（高リスク機器）等を提出。IMED が技術評価を行い IRC を発行。国内製造品は優先審査。", subtypes: [], avgReviewTime: "3〜12ヶ月（クラスにより異なる）", fee: "要確認（IMED 料金表に依拠）", url: "https://imed.ir/" },
+      ],
+    },
+    electronicSubmission: { system: "IMED オンラインポータル", url: "https://imed.ir/", description: "IMED はオンライン申請ポータルを運用しており、電子申請が可能。登録申請、進捗確認等をオンラインで行える。", mandatory: true },
+    udi: { required: false, system: "検討中", description: "イランでは UDI 制度の導入が検討されている。IMED は段階的な UDI 導入計画を策定中。", url: "https://imed.ir/", timeline: "要確認（段階的導入の計画あり）" },
+    postMarket: {
+      adverseEventReporting: { system: "IMED 有害事象報告制度（マテリオビジランス）", mandatory: true, url: "https://imed.ir/", description: "医療機器に関連する有害事象は IMED に報告義務がある。IMED はマテリオビジランスシステムを運用し、有害事象の収集・分析・対応を行う。" },
+      recalls: { authority: "IMED", description: "IMED がリコール・Field Safety Corrective Action を管理。製造業者・輸入業者はリコール実施時に IMED に通知義務。", url: "https://imed.ir/" },
+      surveillance: "IMED による市販後監視。マテリオビジランスに基づく報告・調査体制。市場サーベイランスも実施。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "IMED", name: "Free Sale Certificate", description: "登録済み医療機器について IMED が発行する自由販売証明書。登録申請時には原産国の CFS 提出が必要。", processingTime: "要確認", url: "https://imed.ir/" },
+    reimbursement: { system: "公的医療保険 + 民間保険", authority: "Iran Health Insurance Organization / MoHME", description: "イランの医療保険は Iran Health Insurance Organization が管轄する公的保険制度が中心。医療機器の償還は主に公立病院の調達予算および保険基金の給付リストを通じて行われる。国内製造品には償還面での優遇措置がある場合がある。", codingSystems: ["要確認"], url: "https://www.fda.gov.ir/" },
+    marketingRules: { authority: "IMED", description: "医療機器の広告・販促は IMED の規制下にある。承認された適応のみの広告が原則。", keyRules: ["登録済み機器（IRC 保有）のみ広告可", "ラベリングはペルシア語で記載（英語併記を推奨）", "虚偽・誇大広告の禁止", "国内製造品の推奨"] },
+    mdsap: { status: "非参加", description: "イランは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は登録申請時に必須。ISIRI（イラン国家標準機構）認定の認証機関による認証も受け入れられる。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。登録申請時にリスク分析報告書の提出が要求される。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。ISIRI の国家規格としても採用。" },
+      others: [
+        { standard: "ISIRI（イラン国家規格）", notes: "イラン国家標準機構（ISIRI）が ISO/IEC 規格のイラン版国家規格を策定・発行。" },
+      ],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "IMED 規制制度の近代化推進", description: "IMED は WHO の基準に準拠した規制制度の近代化を推進中。電子申請の拡充、UDI 導入計画、臨床試験規制の強化、国内製造促進政策の充実に注力。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
 ];
 
 // ===========================================================================
