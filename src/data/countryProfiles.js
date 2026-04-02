@@ -3049,7 +3049,7 @@ export const COUNTRY_PROFILES = [
       lastAmended: "2025-06-01",
       url: "https://www.legislation.gov.uk/ukpga/2021/3/contents",
       description:
-        "Brexit後の英国における医薬品・医療機器規制の根拠法。EU法に依存しない独自の規制権限をMHRAに付与。医療機器に関する情報追跡制度、患者安全制度の強化、規則制定権限の委任等を規定。従来のMedical Devices Regulations 2002の改正権限も本法に基づく。",
+        "Brexit後の英国における医薬品・医療機器の枠組み法・授権法。EU法に依存しない独自の規制権限をMHRAに付与。実務上GB市場で医療機器を直接規律する主法はThe Medical Devices Regulations 2002（SI 2002/618, as amended）。本法は規則制定権限の委任、患者安全制度の強化等を規定。",
     },
 
     implementingRegulations: [
@@ -3115,7 +3115,7 @@ export const COUNTRY_PROFILES = [
     ],
 
     classification: {
-      system: "EU MDR ベースの4クラス分類（移行期間中）",
+      system: "UK MDR 2002（SI 2002/618）に基づく4クラス分類",
       basis: "意図する使用目的、侵襲性、使用期間、能動/非能動等のリスク要因に基づく分類。EU MDR Annex VIII の分類ルールを英国法に移行中。",
       classes: [
         {
@@ -3176,7 +3176,7 @@ export const COUNTRY_PROFILES = [
             "低リスクのクラスI機器について、製造業者が技術文書を作成し自己適合宣言を行いUKCAマークを貼付。MHRAへの機器登録は必須。",
           subtypes: [],
           avgReviewTime: "登録処理: 約10営業日",
-          fee: "MHRAへの登録: 無料（2026年現在）",
+          fee: "MHRAへの登録: 1申請あたり£240",
           url: "https://www.gov.uk/guidance/regulating-medical-devices-in-the-uk",
         },
         {
@@ -3202,7 +3202,7 @@ export const COUNTRY_PROFILES = [
             "移行期間中、EU Notified Body が発行した有効なCE認証に基づき英国（グレートブリテン）市場に上市可能。EU MDR適合機器は2030年6月30日まで、EU MDD適合機器は2028年6月30日まで。さらに2026年2月にMHRAがCEマークの無期限認識を提案するパブリックコンサルテーションを開始（2026年4月10日締切）。",
           subtypes: [],
           avgReviewTime: "MHRAへの登録のみ（CE認証は取得済み前提）",
-          fee: "登録: 無料",
+          fee: "MHRA登録: 1申請あたり£240",
           url: "https://www.gov.uk/government/publications/ce-marking-and-ukca-marking-for-medical-devices",
         },
       ],
@@ -3217,13 +3217,13 @@ export const COUNTRY_PROFILES = [
     },
 
     udi: {
-      required: true,
-      system: "UK UDI制度（段階的導入中）",
+      required: false,
+      system: "UK UDI制度（導入予定・未施行）",
       description:
-        "英国独自のUDI制度を段階的に導入中。GS1/HIBCC/ICCBBA の発行機関コードを使用。IMDRF UDIガイダンスに整合。全ての医療機器にUDI表示とMHRAデータベースへの登録を将来的に義務化予定。",
+        "英国独自のUDI制度は今後のpre-market SIで導入予定。2026年4月時点では現行義務ではない。IMDRF UDIガイダンスに整合する方向で検討中。",
       url: "https://www.gov.uk/government/publications/unique-device-identification-udi-system-for-medical-devices",
       timeline:
-        "クラスIII・埋込み機器: 2028年7月 / クラスIIa・IIb: 2029年7月 / クラスI: 2030年7月（予定）",
+        "未施行。具体的なクラス別スケジュールは今後のpre-market規則で規定予定。",
     },
 
     postMarket: {
@@ -3232,7 +3232,7 @@ export const COUNTRY_PROFILES = [
         mandatory: true,
         url: "https://yellowcard.mhra.gov.uk/",
         description:
-          "製造業者はMHRAへの重篤有害事象報告が義務（重篤な場合は10日以内、その他は30日以内）。医療従事者・患者もYellow Card Schemeを通じて自主的に報告可能。MHRAが全報告を分析しリスク評価を実施。",
+          "製造業者はMHRAへの有害事象報告が義務。報告期限は3区分: serious public health threat 2日以内、death/unanticipated serious deterioration 10日以内、other serious incidents 15日以内。医療従事者・患者もYellow Card Schemeを通じて自主的に報告可能。PSURはMHRAへは要求時3営業日以内に提出、UK Approved Bodyへ定期提出。",
       },
       recalls: {
         authority: "MHRA",
@@ -3330,9 +3330,9 @@ export const COUNTRY_PROFILES = [
       },
       {
         date: "2025-06",
-        title: "Medical Devices (Amendment) (Great Britain) Regulations 2025 施行",
+        title: "The Medical Devices (Post-market Surveillance Requirements) (Amendment) (Great Britain) Regulations 2024 施行",
         description:
-          "市販後監視要件の強化を含む医療機器規則の改正が2025年6月17日に施行。Post-market Surveillance に関する詳細要件を追加。",
+          "2024年制定の医療機器PMS改正規則が2025年6月16日に施行。市販後監視に関する詳細要件（PMS計画、PSUR、安全性報告等）を追加。",
       },
       {
         date: "2025-02",
