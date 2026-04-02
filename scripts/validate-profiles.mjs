@@ -367,7 +367,27 @@ for (const p of COUNTRY_PROFILES) {
     }
   }
 
-  // W4: primaryLaw.enacted / lastAmended の日付フォーマット
+  // W4: MDSAP status の整合性チェック
+  if (p.mdsap?.status) {
+    const VALID_MDSAP = [
+      /参加国.*Regulatory Authority/,
+      /Affiliate Member/,
+      /オブザーバー.*Observer/i,
+      /協力会員.*Affiliate/,
+      /非参加/,
+    ];
+    const statusOk = VALID_MDSAP.some((re) => re.test(p.mdsap.status));
+    if (!statusOk) {
+      warn(code, `mdsap.status "${p.mdsap.status}" が標準的な参加形態表記と一致しません（参加国/Affiliate Member/Observer/非参加）`);
+    }
+  }
+
+  // W5: primaryLaw.title に和文説明が混入していないか
+  if (p.primaryLaw?.title && /（[ぁ-んァ-ヶ一-龠]/.test(p.primaryLaw.title)) {
+    warn(code, `primaryLaw.title に和文説明が含まれています。正式名称のみにし、説明はdescriptionへ: "${p.primaryLaw.title.substring(0, 50)}..."`);
+  }
+
+  // W6: primaryLaw.enacted / lastAmended の日付フォーマット
   for (const field of ["enacted", "lastAmended"]) {
     const val = p.primaryLaw?.[field];
     if (val && typeof val === "string") {
