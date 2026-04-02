@@ -502,7 +502,7 @@ export const COUNTRY_PROFILES = [
       {
         name: "Health Canada — MDD",
         fullName: "Health Canada — Medical Devices Directorate (within Health Products and Food Branch)",
-        localName: "Santé Canada",
+        localName: "Direction des instruments médicaux, Santé Canada",
         role: "医療機器の市販前審査・認可（Medical Device Licence）・市販後監視・リコール",
         url: "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html",
         isPrimary: true,
@@ -548,7 +548,7 @@ export const COUNTRY_PROFILES = [
     },
 
     primaryLaw: {
-      title: "Food and Drugs Act (FDA — カナダ)",
+      title: "Food and Drugs Act",
       originalTitle: "Loi sur les aliments et drogues",
       enacted: "1920",
       lastAmended: "随時改正",
@@ -3806,7 +3806,7 @@ export const COUNTRY_PROFILES = [
     },
 
     primaryLaw: {
-      title: "Lei 6.360/1976（医薬品・医療機器等衛生監視法）",
+      title: "Lei nº 6.360, de 23 de setembro de 1976",
       originalTitle: "Lei nº 6.360, de 23 de setembro de 1976",
       enacted: "1976-09-23",
       lastAmended: "2024-06-01",
