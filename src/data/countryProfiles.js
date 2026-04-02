@@ -2181,10 +2181,10 @@ export const COUNTRY_PROFILES = [
       {
         name: "CMDE",
         fullName: "Center for Medical Device Evaluation",
-        localName: "医疗器械技术审评中心",
-        role: "クラスII/III医療機器の技術審査（安全性・有効性評価）を実施",
+        localName: "国家药品监督管理局医疗器械技术审评中心",
+        role: "クラスII/III医療機器の技術審査（安全性・有効性評価）を実施。NMPAの直属機関。",
         url: "https://www.cmde.org.cn/",
-        isPrimary: true,
+        isPrimary: false,
       },
       {
         name: "省級薬品監督管理局",
@@ -2216,7 +2216,7 @@ export const COUNTRY_PROFILES = [
       title: "医療機器監督管理条例（医疗器械监督管理条例）",
       originalTitle: "医疗器械监督管理条例（国务院令第739号）",
       enacted: "2000-01-04",
-      lastAmended: "2021-06-01",
+      lastAmended: "2021-02-09",
       url: "https://www.gov.cn/zhengce/content/2021-03/19/content_5593739.htm",
       description:
         "中国の医療機器規制の最上位法規（国務院行政法規）。2021年の全面改正で、リスクベース規制の強化、登録人制度（MAH類似）の導入、臨床評価制度の整理、UDI制度の法的根拠整備、罰則強化などを実施。クラスI備案・クラスII/III登録の枠組みを規定。",
@@ -2383,8 +2383,8 @@ export const COUNTRY_PROFILES = [
             "優先審査手続き",
           ],
           avgReviewTime:
-            "クラスII: 40〜60営業日 / クラスIII: 60〜90営業日（創新: 優先処理）",
-          fee: "品目により異なる（NMPA手数料規定に基づく）",
+            "クラスII: 技術審評60工作日 + 登録決定20工作日 / クラスIII: 技術審評90工作日 + 登録決定20工作日（創新医療機器: 優先処理）",
+          fee: "進口第三類首次注册: 30.88万元 / 延続注册: 4.08万元（NMPA手数料規定に基づく）",
           url: "https://www.cmde.org.cn/",
         },
         {
@@ -2392,13 +2392,14 @@ export const COUNTRY_PROFILES = [
           nameJa: "臨床試験（医療機器臨床試験）",
           applicableClasses: ["Class II", "Class III"],
           description:
-            "臨床評価で臨床試験データが必要と判断された場合に実施。2021年改正で臨床試験デフォルト申請制（黙示許可制）を導入。倫理審査委員会の承認が必要。国際多施設共同治験の受入れ枠組みも整備中だが、中国人被験者データが原則必要。",
+            "臨床評価で臨床試験データが必要と判断された場合に実施。一般の臨床試験は備案制（届出制）。高リスク第三類医療機器の臨床試験はNMPA承認が必要（法定審批時限60工作日）。倫理審査委員会の承認が必要。国際多施設共同治験の受入れ枠組みも整備中だが、中国人被験者データが原則必要。",
           subtypes: [
-            "臨床試験備案（届出制）",
+            "臨床試験備案（届出制 — 一般の臨床試験）",
+            "高リスク第三類臨床試験審批（承認制 — NMPA審査）",
             "国際多施設共同臨床試験",
           ],
-          avgReviewTime: "備案後60営業日（黙示許可制）",
-          fee: "なし（備案手数料）",
+          avgReviewTime: "備案制: 即時開始可 / 高リスク第三類審批: 60工作日",
+          fee: "高リスク第三類臨床試験申請: 4.32万元",
           url: "https://www.cmde.org.cn/",
         },
       ],
@@ -2406,7 +2407,7 @@ export const COUNTRY_PROFILES = [
 
     electronicSubmission: {
       system: "eRPS（医療機器登録電子申請システム）",
-      url: "https://www.nmpa.gov.cn/",
+      url: "https://zwfw.nmpa.gov.cn/",
       description:
         "NMPAの電子申請プラットフォームを通じてオンライン提出が可能。登録申請、備案、変更申請等の電子化を段階的に推進中。紙媒体の提出も一部残存。",
       mandatory: false,
@@ -2419,7 +2420,7 @@ export const COUNTRY_PROFILES = [
         "NMPAが推進する医療機器固有識別子制度。GS1、HIBC、ISBT128等の発行機関コードに対応。UDIデータベース（NMPA運営）への登録が必要。2019年から段階的に導入開始。",
       url: "https://udi.nmpa.gov.cn/",
       timeline:
-        "クラスIII: 2022年より義務化 / クラスII: 2024年6月一部義務化、2027年6月全面義務化 / クラスI: 2029年6月目標",
+        "クラスIII: 2022年より義務化（第1〜2批） / クラスII: 2024年6月第3批義務化、全面義務化は2027年6月目標（公式公告で要確認） / クラスI: 2029年6月目標（公式公告で要確認）",
     },
 
     postMarket: {
@@ -2531,10 +2532,10 @@ export const COUNTRY_PROFILES = [
           "第二類医療機器のUDI（唯一標識）実施の第3弾として103品目が義務化。クラスII全面義務化は2027年6月1日、クラスI全面義務化は2029年6月1日が期限。",
       },
       {
-        date: "2024-02",
-        title: "QMSR的改革の検討",
+        date: "2025-11",
+        title: "NMPA新版GMP公布（2026年11月1日施行）",
         description:
-          "NMPAが医療機器の品質管理体系に関する法規更新を検討。国際整合化（ISO 13485との整合強化）の方向性を示す。",
+          "NMPAが医療機器生産品質管理規範（新版GMP、2025年第107号）を公布。2026年11月1日施行。ISO 13485との整合強化、リスクベースのアプローチを導入。",
       },
       {
         date: "2021-06",
