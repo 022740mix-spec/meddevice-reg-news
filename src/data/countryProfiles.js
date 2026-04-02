@@ -20,6 +20,9 @@ export const COUNTRY_FLAG = {
   PER: "🇵🇪", ECU: "🇪🇨", CRI: "🇨🇷",
   BGD: "🇧🇩", LKA: "🇱🇰", KHM: "🇰🇭", MMR: "🇲🇲", LAO: "🇱🇦", MNG: "🇲🇳",
   URY: "🇺🇾", PRY: "🇵🇾", DOM: "🇩🇴", PAN: "🇵🇦", GTM: "🇬🇹", HND: "🇭🇳",
+  TZA: "🇹🇿", ETH: "🇪🇹", UGA: "🇺🇬", RWA: "🇷🇼", SEN: "🇸🇳", GHA: "🇬🇭",
+  CZE: "🇨🇿", HUN: "🇭🇺", PRT: "🇵🇹", GRC: "🇬🇷", UKR: "🇺🇦", HKG: "🇭🇰",
+  TUN: "🇹🇳", DZA: "🇩🇿", IRQ: "🇮🇶", LBN: "🇱🇧", NPL: "🇳🇵", IRN: "🇮🇷",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -14307,6 +14310,477 @@ export const COUNTRY_PROFILES = [
     },
     recentDevelopments: [
       { date: "2025", title: "ARSA の体制強化と中米整合化", description: "ARSA は独立規制機関としての体制強化を継続。RTCA に基づく中米規制整合化の推進と、電子申請システムの整備に注力中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- BGD（バングラデシュ） ---
+  // =========================================================================
+  {
+    code: "BGD",
+    country: "バングラデシュ",
+    countryEn: "People's Republic of Bangladesh",
+    region: "ASPAC",
+    flag: "🇧🇩",
+    legalSystemOverview: {
+      type: "議会制共和制（Parliamentary Republic）",
+      description: "バングラデシュの医療機器規制は医薬品管理局（DGDA: Directorate General of Drug Administration）が所管する。従来は Drugs Act 1940 および Drugs (Control) Ordinance 1982 の下で医薬品と同様に規制されてきたが、医療機器固有の規制枠組みは発展途上段階にある。2023年の Medical Devices Act 2023 により、医療機器の定義・分類・登録・市販後監視を包括的にカバーする法的基盤が整備されつつある。WHOおよびIMDRF枠組みとの整合を目指している。",
+      keyCharacteristics: [
+        "DGDA が医療機器規制を統括",
+        "Medical Devices Act 2023 により包括的枠組みを整備中",
+        "リスクベース4クラス分類（A / B / C / D）を導入予定",
+        "輸入品は DGDA への登録・輸入許可が必要",
+        "規制制度は発展途上、実施規則の整備が進行中",
+        "WHO / IMDRF 枠組みとの整合を推進",
+      ],
+    },
+    authorities: [
+      { name: "DGDA", fullName: "Directorate General of Drug Administration", localName: "ওষুধ প্রশাসন অধিদপ্তর", role: "医療機器の登録・輸入許可・市販後監視・品質管理を統括", url: "https://www.dgda.gov.bd/", isPrimary: true },
+      { name: "MOH&FW", fullName: "Ministry of Health and Family Welfare", localName: "স্বাস্থ্য ও পরিবার কল্যাণ মন্ত্রণালয়", role: "医療政策全般、法令の策定・監督", url: "https://mohfw.gov.bd/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（DGDA 直接審査）", description: "欧州型の Notified Body 制度は存在しない。DGDA が直接登録審査を行う。参照国認可（CE、FDA等）の保有が審査で有利に働く。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Medical Devices Act 2023 に基づく定義（IMDRF定義に準拠）。疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらないもの。", scope: "IVDを含む。SaMDに関する詳細規定は要確認。", notes: "従来は Drugs Act 1940 の「drug」定義に一部の機器が含まれていた。Medical Devices Act 2023 で独立した定義を導入。" },
+    primaryLaw: { title: "Medical Devices Act 2023（医療機器法）", originalTitle: "মেডিকেল ডিভাইস আইন ২০২৩", enacted: "2023", lastAmended: "2023", url: "https://www.dgda.gov.bd/", description: "バングラデシュ初の医療機器専用法。医療機器の定義、分類、登録制度、市販後監視、罰則等を規定。実施規則の策定が進行中。" },
+    implementingRegulations: [
+      { title: "Medical Devices Rules（策定中）", date: "要確認", url: "https://www.dgda.gov.bd/", description: "Medical Devices Act 2023 の実施規則。分類基準、登録手続きの詳細、技術文書要件等を規定予定。策定中。", category: "登録手続き" },
+      { title: "Drugs (Control) Ordinance 1982", date: "1982", url: "https://www.dgda.gov.bd/", description: "従来の医薬品・医療機器規制の法的根拠。医療機器専用法の完全施行まで部分的に適用。", category: "従来規制" },
+    ],
+    relatedLaws: [
+      { title: "Drugs Act 1940", category: "医薬品規制", enacted: "1940", url: "https://www.dgda.gov.bd/", relevance: "医薬品規制の基本法。医療機器の一部が「drug」として規制されてきた歴史的経緯。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（IMDRF整合・導入中）",
+      basis: "Medical Devices Act 2023 に基づくIMDRF準拠の分類。実施規則で詳細を規定予定。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA（低リスク）", riskLevel: "低", description: "低リスク医療機器。", examples: ["ガーゼ", "聴診器", "手術用手袋", "松葉杖"], approvalPath: "登録（簡易審査）— DGDA" },
+        { name: "Class B", nameJa: "クラスB（中低リスク）", riskLevel: "中低", description: "中低リスク医療機器。", examples: ["超音波診断装置", "注射針", "歯科用材料"], approvalPath: "登録 — DGDA" },
+        { name: "Class C", nameJa: "クラスC（中高リスク）", riskLevel: "中高", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "骨接合プレート"], approvalPath: "登録（技術審査）— DGDA" },
+        { name: "Class D", nameJa: "クラスD（高リスク）", riskLevel: "高", description: "高リスク医療機器。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント"], approvalPath: "登録（詳細審査）— DGDA" },
+      ],
+      rules: ["IMDRF分類ルールに基づく（実施規則で詳細規定予定）", "IVDの分類基準は要確認", "従来はDGDAの個別判断で分類"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "全医療機器はDGDAへの登録が必要。Medical Devices Act 2023 の実施規則が完全に整備されるまでは、既存のDGDA登録手続きに基づく。参照国認可（CE、FDA等）の保有が審査で考慮される。外国メーカーはローカル代理人の指定が必要。",
+      routes: [
+        { name: "DGDA Device Registration", nameJa: "DGDA 医療機器登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "DGDAに申請書類一式を提出。技術文書、参照国認可証明、品質管理証明書等が必要。", subtypes: ["新規登録", "変更登録", "更新"], avgReviewTime: "要確認（数ヶ月〜）", fee: "DGDA規定による", url: "https://www.dgda.gov.bd/" },
+      ],
+    },
+    electronicSubmission: { system: "DGDA オンラインポータル（段階的導入中）", url: "https://www.dgda.gov.bd/", description: "DGDAはオンライン申請システムを段階的に導入中。一部の手続きは書面提出が必要。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "独自のUDI制度は2026年時点で未導入。Medical Devices Act 2023 にUDI関連の条項があるが、実施時期は未定。", url: null, timeline: "未定" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（DGDA）", mandatory: true, url: "https://www.dgda.gov.bd/", description: "Medical Devices Act 2023 に基づき有害事象報告が義務化。報告期限・様式等の詳細は実施規則で規定予定。" },
+      recalls: { authority: "DGDA", description: "DGDAの命令または自主リコール。リコール手続きの詳細は実施規則で規定予定。", url: "https://www.dgda.gov.bd/" },
+      surveillance: "DGDAによる市販後監視。制度は発展途上。WHO支援の下で市販後監視体制の強化を推進中。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "バングラデシュからのCFS発行に関する公式制度は要確認。輸入登録時に製造国のCFS提出が求められる。", processingTime: null, url: null },
+    reimbursement: { system: "政府主導型医療制度（公的医療機関 + 民間セクター）", authority: "保健家族福祉省（MOH&FW）", description: "公的医療機関での基本的な医療は無料で提供される。医療機器の個別償還制度は未整備。公共調達を通じた供給が中心。", codingSystems: [], url: "https://mohfw.gov.bd/" },
+    marketingRules: { authority: "DGDA", description: "医療機器広告に関する詳細法規は要確認。虚偽・誇大広告は一般法により禁止。", keyRules: ["虚偽・誇大広告の禁止", "未登録機器の広告禁止"] },
+    mdsap: { status: "非参加", description: "バングラデシュはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証は登録時にQMS証明として参照される。法的義務化の状況は要確認。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: false, notes: "独自の要求は要確認。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2023", title: "Medical Devices Act 2023 制定", description: "バングラデシュ初の医療機器専用法が制定。リスクベース分類、登録制度、市販後監視の法的基盤を整備。" },
+      { date: "2024-2025", title: "実施規則の策定作業", description: "Medical Devices Act 2023 の実施規則をWHO支援の下で策定中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- LKA（スリランカ） ---
+  // =========================================================================
+  {
+    code: "LKA",
+    country: "スリランカ",
+    countryEn: "Democratic Socialist Republic of Sri Lanka",
+    region: "ASPAC",
+    flag: "🇱🇰",
+    legalSystemOverview: {
+      type: "議会制共和制（Parliamentary Republic）",
+      description: "スリランカの医療機器規制は国家医薬品規制庁（NMRA: National Medicines Regulatory Authority）が所管する。NMRA Act No. 5 of 2015 により医療機器が正式に規制対象に含められた。リスクベース分類を導入し、IMDRF枠組みとの整合を推進中。規制制度は近年急速に整備が進んでいるが、実施面では段階的な運用が続いている。",
+      keyCharacteristics: [
+        "NMRA が医療機器規制を統括",
+        "NMRA Act No. 5 of 2015 が法的根拠",
+        "リスクベース4クラス分類（A / B / C / D）を導入",
+        "輸入品は NMRA への登録が必要",
+        "WHO / IMDRF 枠組みとの整合を推進",
+        "参照国認可（CE、FDA等）を審査で考慮",
+      ],
+    },
+    authorities: [
+      { name: "NMRA", fullName: "National Medicines Regulatory Authority", localName: "ජාතික ඖෂධ නියාමන අධිකාරිය", role: "医療機器の登録・輸入許可・市販後監視・品質管理を統括", url: "https://www.nmra.gov.lk/", isPrimary: true },
+      { name: "MOH Sri Lanka", fullName: "Ministry of Health — Sri Lanka", localName: "සෞඛ්‍ය අමාත්‍යාංශය", role: "医療政策全般・法令の策定・監督", url: "https://www.health.gov.lk/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（NMRA 直接審査）", description: "欧州型の Notified Body 制度は存在しない。NMRA が直接登録審査を行う。参照国認可（CE、FDA等）が審査において重要な参考情報となる。", bodies: [] },
+    deviceDefinition: { legalDefinition: "NMRA Act No. 5 of 2015 に基づく定義。疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらないもの（IMDRF定義に準拠）。", scope: "IVDを含む。SaMDに関する詳細規定は要確認。", notes: "NMRA Act により医療機器が医薬品と区別して定義・規制される枠組みが確立。" },
+    primaryLaw: { title: "NMRA Act No. 5 of 2015（国家医薬品規制庁法）", originalTitle: null, enacted: "2015", lastAmended: "要確認", url: "https://www.nmra.gov.lk/", description: "NMRAの設立根拠法。医薬品・医療機器の登録、品質管理、市販後監視に関する包括的な法的枠組みを規定。" },
+    implementingRegulations: [
+      { title: "Medical Devices Regulations（NMRA発出）", date: "要確認", url: "https://www.nmra.gov.lk/", description: "医療機器の分類基準、登録手続き、技術文書要件等を規定する実施規則。", category: "登録手続き" },
+      { title: "NMRA Guidelines for Medical Device Registration", date: "要確認", url: "https://www.nmra.gov.lk/", description: "医療機器登録に必要な書類・手続きの詳細ガイダンス。", category: "ガイダンス" },
+    ],
+    relatedLaws: [
+      { title: "Consumer Affairs Authority Act No. 9 of 2003", category: "消費者保護", enacted: "2003", url: null, relevance: "消費者保護の観点から医療機器の安全性にも関連。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（IMDRF整合）",
+      basis: "NMRA規則に基づくIMDRF準拠のリスクベース分類。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA（低リスク）", riskLevel: "低", description: "低リスク医療機器。", examples: ["ガーゼ", "聴診器", "手術用手袋"], approvalPath: "登録（簡易審査）— NMRA" },
+        { name: "Class B", nameJa: "クラスB（中低リスク）", riskLevel: "中低", description: "中低リスク医療機器。", examples: ["超音波診断装置", "注射針", "歯科用材料"], approvalPath: "登録 — NMRA" },
+        { name: "Class C", nameJa: "クラスC（中高リスク）", riskLevel: "中高", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "骨接合プレート"], approvalPath: "登録（技術審査）— NMRA" },
+        { name: "Class D", nameJa: "クラスD（高リスク）", riskLevel: "高", description: "高リスク医療機器。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント"], approvalPath: "登録（詳細審査）— NMRA" },
+      ],
+      rules: ["IMDRF分類ルールに基づく", "IVDの分類基準はNMRA規則で規定", "参照国での分類を参考"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "全医療機器はNMRAへの登録が必要。参照国認可（CE、FDA等）の保有が審査を円滑化する。外国メーカーはローカル代理人の指定が必要。",
+      routes: [
+        { name: "NMRA Device Registration", nameJa: "NMRA 医療機器登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "NMRAに申請書類一式を提出。技術文書、参照国認可証明、ISO 13485証明書等が必要。", subtypes: ["新規登録", "変更登録", "更新"], avgReviewTime: "要確認（数ヶ月〜）", fee: "NMRA規定による", url: "https://www.nmra.gov.lk/" },
+      ],
+    },
+    electronicSubmission: { system: "NMRA オンラインシステム（段階的導入中）", url: "https://www.nmra.gov.lk/", description: "NMRAはオンライン申請を段階的に導入中。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "独自のUDI制度は2026年時点で未導入。", url: null, timeline: "未定" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（NMRA）", mandatory: true, url: "https://www.nmra.gov.lk/", description: "NMRAへの有害事象報告が義務付けられている。報告様式・期限の詳細は要確認。" },
+      recalls: { authority: "NMRA", description: "NMRAの命令または自主リコール。", url: "https://www.nmra.gov.lk/" },
+      surveillance: "NMRAによる市販後監視。WHO支援の下で体制強化を推進中。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "スリランカからのCFS発行に関する公式制度は要確認。輸入登録時に製造国のCFS提出が求められる。", processingTime: null, url: null },
+    reimbursement: { system: "政府主導型医療制度（公的医療機関 + 民間セクター）", authority: "保健省（MOH）", description: "公的医療機関での医療は基本的に無料。医療機器の個別償還制度は未整備。公共調達が中心。", codingSystems: [], url: "https://www.health.gov.lk/" },
+    marketingRules: { authority: "NMRA", description: "医療機器広告に関する詳細法規は要確認。虚偽・誇大広告は一般法により禁止。", keyRules: ["虚偽・誇大広告の禁止", "未登録機器の広告禁止"] },
+    mdsap: { status: "非参加", description: "スリランカはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証は登録時にQMS証明として重要視される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: false, notes: "独自の要求は要確認。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2015", title: "NMRA Act No. 5 of 2015 制定", description: "NMRAの法的根拠を確立し、医療機器を正式に規制対象に含める法整備。" },
+      { date: "2024-2025", title: "医療機器登録制度の強化", description: "NMRAが医療機器登録制度の運用強化とオンライン化を推進中。WHO技術支援を活用。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- KHM（カンボジア） ---
+  // =========================================================================
+  {
+    code: "KHM",
+    country: "カンボジア",
+    countryEn: "Kingdom of Cambodia",
+    region: "ASPAC",
+    flag: "🇰🇭",
+    legalSystemOverview: {
+      type: "立憲君主制（Constitutional Monarchy）",
+      description: "カンボジアの医療機器規制は保健省（MOH）傘下の薬事食品局（DDF: Department of Drugs and Food）が所管する。Medical Devices Sub-decree（王令）により医療機器の登録制度が導入されている。ASEAN Medical Device Directive（AMDD）との整合を目指しており、ASEAN CSDT（Common Submission Dossier Template）の採用を段階的に進めている。規制制度は発展途上。",
+      keyCharacteristics: [
+        "DDF/MOH が医療機器規制を統括",
+        "Sub-decree（王令）に基づく登録制度",
+        "ASEAN AMDD との整合を推進中",
+        "リスクベース4クラス分類（A / B / C / D）を採用",
+        "輸入品は DDF への登録・輸入許可が必要",
+        "参照国認可（CE、FDA、ASEAN認可等）を審査で考慮",
+      ],
+    },
+    authorities: [
+      { name: "DDF", fullName: "Department of Drugs and Food, Ministry of Health", localName: "នាយកដ្ឋានឱសថ និងចំណីអាហារ", role: "医療機器の登録・輸入許可・市販後監視を統括", url: "https://www.dfrmedical.com/", isPrimary: true },
+      { name: "MOH Cambodia", fullName: "Ministry of Health — Cambodia", localName: "ក្រសួងសុខាភិបាល", role: "医療政策全般・法令の策定・監督", url: "https://www.moh.gov.kh/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（DDF 直接審査）", description: "欧州型の Notified Body 制度は存在しない。DDF が直接登録審査を行う。参照国認可が審査で重要視される。", bodies: [] },
+    deviceDefinition: { legalDefinition: "医療機器に関するSub-decreeに基づく定義（ASEAN AMDD / IMDRF定義に準拠）。疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等。", scope: "IVDを含む。SaMDに関する詳細規定は要確認。", notes: "ASEAN AMDDの定義に整合する方向で制度整備中。" },
+    primaryLaw: { title: "Sub-decree on Management of Medical Devices（医療機器管理に関する王令）", originalTitle: "អនុក្រឹត្យស្តីពីការគ្រប់គ្រងសម្ភារៈពេទ្យ", enacted: "要確認", lastAmended: "要確認", url: "https://www.moh.gov.kh/", description: "医療機器の定義、分類、登録制度、輸入管理、市販後監視等を規定する王令。" },
+    implementingRegulations: [
+      { title: "Prakas（省令）on Medical Device Registration", date: "要確認", url: "https://www.moh.gov.kh/", description: "医療機器登録の手続き、必要書類、分類基準等の詳細を規定する保健省令。", category: "登録手続き" },
+      { title: "ASEAN CSDT（Common Submission Dossier Template）ガイダンス", date: "要確認", url: "https://asean.org/", description: "ASEAN共通の申請書類テンプレート。カンボジアでの採用を段階的に推進中。", category: "ASEAN整合" },
+    ],
+    relatedLaws: [
+      { title: "Law on the Management of Pharmaceuticals（医薬品管理法）", category: "医薬品規制", enacted: "1996", url: "https://www.moh.gov.kh/", relevance: "医薬品規制の基本法。医療機器規制の法的根拠の一部を提供。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（ASEAN AMDD / IMDRF整合）",
+      basis: "ASEAN AMDDの分類ルールに基づくリスクベース分類。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA（低リスク）", riskLevel: "低", description: "低リスク医療機器。", examples: ["ガーゼ", "聴診器", "手術用手袋"], approvalPath: "登録（簡易審査）— DDF" },
+        { name: "Class B", nameJa: "クラスB（中低リスク）", riskLevel: "中低", description: "中低リスク医療機器。", examples: ["超音波診断装置", "注射針", "歯科用材料"], approvalPath: "登録 — DDF" },
+        { name: "Class C", nameJa: "クラスC（中高リスク）", riskLevel: "中高", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "骨接合プレート"], approvalPath: "登録（技術審査）— DDF" },
+        { name: "Class D", nameJa: "クラスD（高リスク）", riskLevel: "高", description: "高リスク医療機器。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント"], approvalPath: "登録（詳細審査）— DDF" },
+      ],
+      rules: ["ASEAN AMDDの分類ルールに準拠", "IVDの分類基準は要確認", "参照国での分類を参考"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "全医療機器はDDFへの登録が必要。参照国認可（CE、FDA、ASEAN認可等）の保有が審査を円滑化する。外国メーカーはローカル代理人（輸入業者）の指定が必要。",
+      routes: [
+        { name: "DDF Device Registration", nameJa: "DDF 医療機器登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "DDFに申請書類一式を提出。ASEAN CSDTに基づく技術文書、参照国認可証明等が必要。", subtypes: ["新規登録", "変更登録", "更新"], avgReviewTime: "要確認（数ヶ月〜）", fee: "MOH規定による", url: "https://www.dfrmedical.com/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: null, description: "電子申請システムの導入状況は要確認。書面提出が主。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "独自のUDI制度は2026年時点で未導入。", url: null, timeline: "未定" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（DDF/MOH）", mandatory: true, url: "https://www.moh.gov.kh/", description: "DDFへの有害事象報告が義務付けられている。報告様式・期限の詳細は要確認。" },
+      recalls: { authority: "DDF / MOH", description: "MOHの命令または自主リコール。", url: "https://www.moh.gov.kh/" },
+      surveillance: "DDF/MOHによる市販後監視。制度は発展途上。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "カンボジアからのCFS発行に関する公式制度は要確認。輸入登録時に製造国のCFS提出が求められる。", processingTime: null, url: null },
+    reimbursement: { system: "政府主導型医療制度（公的医療 + 民間セクター + NGO支援）", authority: "保健省（MOH）", description: "Health Equity Fund等により貧困層への医療アクセスを確保。医療機器の個別償還制度は未整備。公共調達・ドナー支援が中心。", codingSystems: [], url: "https://www.moh.gov.kh/" },
+    marketingRules: { authority: "DDF / MOH", description: "医療機器広告に関する詳細法規は要確認。虚偽広告は一般法により禁止。", keyRules: ["虚偽・誇大広告の禁止", "未登録機器の広告禁止"] },
+    mdsap: { status: "非参加", description: "カンボジアはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証は登録時にQMS証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: false, notes: "独自の要求は要確認。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2024-2025", title: "ASEAN AMDD整合の推進", description: "ASEAN医療機器指令との整合を段階的に推進中。ASEAN CSDTの採用を準備。" },
+      { date: "2025", title: "医療機器登録制度の運用強化", description: "DDF/MOHが登録審査の体制強化を進行中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- MMR（ミャンマー） ---
+  // =========================================================================
+  {
+    code: "MMR",
+    country: "ミャンマー",
+    countryEn: "Republic of the Union of Myanmar",
+    region: "ASPAC",
+    flag: "🇲🇲",
+    legalSystemOverview: {
+      type: "軍事政権下の共和制",
+      description: "ミャンマーの医療機器規制は保健省（MOH）傘下のFDA Myanmar（食品医薬品局）が所管する。National Drug Law 1992 を基盤とし、医療機器に関する規制枠組みの整備を進めてきたが、2021年2月の軍事クーデター以降、政治的不安定により規制制度の発展は大幅に停滞している。ASEAN AMDDとの整合を目指していたが、現在の進捗は不透明。",
+      keyCharacteristics: [
+        "FDA Myanmar が医療機器規制を統括",
+        "National Drug Law 1992 が法的根拠",
+        "ASEAN AMDD との整合を目指していた（現在停滞）",
+        "輸入品は FDA Myanmar への登録・輸入許可が必要",
+        "政治的不安定により規制制度の発展が停滞",
+        "規制の実施・執行状況は要確認",
+      ],
+    },
+    authorities: [
+      { name: "FDA Myanmar", fullName: "Food and Drug Administration — Myanmar", localName: "အစားအသောက်နှင့် ဆေးဝါးကွပ်ကဲရေးဦးစီးဌာန", role: "医療機器の登録・輸入許可・市販後監視を統括", url: "https://www.fdamyanmar.gov.mm/", isPrimary: true },
+      { name: "MOH Myanmar", fullName: "Ministry of Health — Myanmar", localName: "ကျန်းမာရေးဝန်ကြီးဌာန", role: "医療政策全般・法令の策定・監督", url: null, isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（FDA Myanmar 直接審査）", description: "Notified Body 制度は存在しない。FDA Myanmarが直接登録審査を行う。参照国認可が審査で考慮される。", bodies: [] },
+    deviceDefinition: { legalDefinition: "National Drug Law 1992 および関連規則に基づく定義。詳細な法的定義文書の公開は限定的。ASEAN AMDD / IMDRF定義との整合を目指していた。", scope: "IVDを含む。SaMDに関する詳細規定は要確認。", notes: "政治的不安定により、最新の法的定義の確認が困難な状況。" },
+    primaryLaw: { title: "National Drug Law 1992（国家医薬品法）", originalTitle: null, enacted: "1992", lastAmended: "要確認", url: "https://www.fdamyanmar.gov.mm/", description: "医薬品・医療機器規制の法的根拠。医療機器に特化した法令の整備状況は要確認。" },
+    implementingRegulations: [
+      { title: "FDA Myanmar 医療機器登録手続き", date: "要確認", url: "https://www.fdamyanmar.gov.mm/", description: "医療機器の登録に必要な書類・手続きを規定。最新の運用状況は要確認。", category: "登録手続き" },
+    ],
+    relatedLaws: [
+      { title: "Consumer Protection Law 2014", category: "消費者保護", enacted: "2014", url: null, relevance: "消費者保護の観点から医療機器の安全性にも関連。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（ASEAN AMDD整合を目指す）",
+      basis: "ASEAN AMDDの分類ルールに基づく分類を導入予定であったが、現在の運用状況は要確認。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA（低リスク）", riskLevel: "低", description: "低リスク医療機器。", examples: ["ガーゼ", "聴診器", "手術用手袋"], approvalPath: "登録 — FDA Myanmar" },
+        { name: "Class B", nameJa: "クラスB（中低リスク）", riskLevel: "中低", description: "中低リスク医療機器。", examples: ["超音波診断装置", "注射針"], approvalPath: "登録 — FDA Myanmar" },
+        { name: "Class C", nameJa: "クラスC（中高リスク）", riskLevel: "中高", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器"], approvalPath: "登録 — FDA Myanmar" },
+        { name: "Class D", nameJa: "クラスD（高リスク）", riskLevel: "高", description: "高リスク医療機器。", examples: ["心臓ペースメーカー", "人工心臓弁"], approvalPath: "登録 — FDA Myanmar" },
+      ],
+      rules: ["ASEAN AMDD分類ルールを参照", "実際の運用・分類判断の詳細は要確認"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "医療機器はFDA Myanmarへの登録が必要とされるが、政治的不安定により運用状況は流動的。参照国認可（CE、FDA等）の保有が審査で考慮される。外国メーカーはローカル代理人の指定が必要。",
+      routes: [
+        { name: "FDA Myanmar Device Registration", nameJa: "FDA Myanmar 医療機器登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "FDA Myanmarに申請書類一式を提出。参照国認可証明、品質管理証明書等が必要。現在の審査状況は要確認。", subtypes: ["新規登録", "変更登録"], avgReviewTime: "要確認", fee: "要確認", url: "https://www.fdamyanmar.gov.mm/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: null, description: "電子申請システムの導入状況は要確認。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "独自のUDI制度は2026年時点で未導入。", url: null, timeline: "未定" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（FDA Myanmar）", mandatory: true, url: "https://www.fdamyanmar.gov.mm/", description: "FDA Myanmarへの有害事象報告義務がある。現在の運用状況は要確認。" },
+      recalls: { authority: "FDA Myanmar", description: "FDA Myanmarの命令または自主リコール。運用状況は要確認。", url: "https://www.fdamyanmar.gov.mm/" },
+      surveillance: "FDA Myanmarによる市販後監視。政治的不安定により体制の実効性は要確認。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "ミャンマーからのCFS発行に関する公式制度は要確認。", processingTime: null, url: null },
+    reimbursement: { system: "政府主導型医療制度（公的医療 + 民間セクター + NGO支援）", authority: "保健省（MOH）", description: "公的医療機関での基本的な医療を提供。医療機器の個別償還制度は未整備。国際機関・NGO支援が重要な役割を果たす。", codingSystems: [], url: null },
+    marketingRules: { authority: "FDA Myanmar", description: "医療機器広告に関する詳細法規は要確認。", keyRules: ["虚偽・誇大広告の禁止", "未登録機器の広告禁止"] },
+    mdsap: { status: "非参加", description: "ミャンマーはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証は登録時にQMS証明として参照される。法的義務化の状況は要確認。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: false, notes: "独自の要求は要確認。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2021", title: "軍事クーデターによる規制制度への影響", description: "2021年2月の軍事クーデター以降、規制制度の発展が停滞。ASEAN AMDDとの整合作業も遅延。" },
+      { date: "2024-2025", title: "規制運用の現状", description: "FDA Myanmarは基本的な登録・輸入許可業務を継続しているが、制度の拡充・国際整合は停滞中。最新の運用状況は要確認。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- LAO（ラオス） ---
+  // =========================================================================
+  {
+    code: "LAO",
+    country: "ラオス",
+    countryEn: "Lao People's Democratic Republic",
+    region: "ASPAC",
+    flag: "🇱🇦",
+    legalSystemOverview: {
+      type: "人民民主共和制（People's Democratic Republic）",
+      description: "ラオスの医療機器規制は保健省（MOH）傘下の食品薬品局（FDD: Food and Drug Department）が所管する。Drug and Medical Products Law を法的根拠とし、医療機器の輸入管理・登録制度を運用している。ASEAN AMDDとの整合を段階的に推進中であるが、規制制度は発展途上であり、実施面での能力構築が課題。",
+      keyCharacteristics: [
+        "FDD/MOH が医療機器規制を統括",
+        "Drug and Medical Products Law が法的根拠",
+        "ASEAN AMDD との整合を段階的に推進",
+        "リスクベース4クラス分類（A / B / C / D）を採用",
+        "輸入品は FDD への登録・輸入許可が必要",
+        "規制制度は発展途上、WHO/ASEAN支援を活用",
+      ],
+    },
+    authorities: [
+      { name: "FDD", fullName: "Food and Drug Department, Ministry of Health", localName: "ກົมອາຫານ ແລະ ຢາ", role: "医療機器の登録・輸入許可・市販後監視を統括", url: "https://www.fdd.gov.la/", isPrimary: true },
+      { name: "MOH Lao", fullName: "Ministry of Health — Lao PDR", localName: "ກະຊວງສາທາລະນະສຸກ", role: "医療政策全般・法令の策定・監督", url: "https://www.moh.gov.la/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（FDD 直接審査）", description: "Notified Body 制度は存在しない。FDD が直接登録審査を行う。参照国認可が審査で重要視される。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Drug and Medical Products Law に基づく定義。ASEAN AMDD / IMDRF定義との整合を推進中。詳細な法的定義文書の公開は限定的。", scope: "IVDを含む。SaMDに関する詳細規定は要確認。", notes: "ASEAN AMDDの定義に整合する方向で制度整備中。" },
+    primaryLaw: { title: "Drug and Medical Products Law（医薬品・医療製品法）", originalTitle: "ກົດໝາຍວ່າດ້ວຍຢາ ແລະ ຜະລິດຕະພັນການແພດ", enacted: "要確認", lastAmended: "要確認", url: "https://www.fdd.gov.la/", description: "医薬品・医療機器を含む医療製品の規制に関する基本法。FDDの権限・登録制度の法的根拠を規定。" },
+    implementingRegulations: [
+      { title: "FDD 医療機器登録手続きガイダンス", date: "要確認", url: "https://www.fdd.gov.la/", description: "医療機器の登録に必要な書類・手続きの詳細。", category: "登録手続き" },
+      { title: "ASEAN CSDT ガイダンス（段階的採用）", date: "要確認", url: "https://asean.org/", description: "ASEAN共通の申請書類テンプレート。ラオスでの採用を段階的に推進中。", category: "ASEAN整合" },
+    ],
+    relatedLaws: [
+      { title: "Hygiene, Disease Prevention and Health Promotion Law", category: "公衆衛生", enacted: "要確認", url: null, relevance: "公衆衛生全般に関する法律。医療機器の安全性にも関連。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（ASEAN AMDD / IMDRF整合）",
+      basis: "ASEAN AMDDの分類ルールに基づくリスクベース分類。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA（低リスク）", riskLevel: "低", description: "低リスク医療機器。", examples: ["ガーゼ", "聴診器", "手術用手袋"], approvalPath: "登録（簡易審査）— FDD" },
+        { name: "Class B", nameJa: "クラスB（中低リスク）", riskLevel: "中低", description: "中低リスク医療機器。", examples: ["超音波診断装置", "注射針"], approvalPath: "登録 — FDD" },
+        { name: "Class C", nameJa: "クラスC（中高リスク）", riskLevel: "中高", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器"], approvalPath: "登録（技術審査）— FDD" },
+        { name: "Class D", nameJa: "クラスD（高リスク）", riskLevel: "高", description: "高リスク医療機器。", examples: ["心臓ペースメーカー", "人工心臓弁"], approvalPath: "登録（詳細審査）— FDD" },
+      ],
+      rules: ["ASEAN AMDD分類ルールに準拠", "IVDの分類基準は要確認", "参照国での分類を参考"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "医療機器はFDDへの登録が必要。参照国認可（CE、FDA、ASEAN認可等）の保有が審査を円滑化する。外国メーカーはローカル代理人（輸入業者）の指定が必要。",
+      routes: [
+        { name: "FDD Device Registration", nameJa: "FDD 医療機器登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "FDDに申請書類一式を提出。技術文書、参照国認可証明、品質管理証明書等が必要。", subtypes: ["新規登録", "変更登録", "更新"], avgReviewTime: "要確認（数ヶ月〜）", fee: "FDD規定による", url: "https://www.fdd.gov.la/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: null, description: "電子申請システムの導入状況は要確認。書面提出が主。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "独自のUDI制度は2026年時点で未導入。", url: null, timeline: "未定" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（FDD/MOH）", mandatory: true, url: "https://www.fdd.gov.la/", description: "FDDへの有害事象報告が義務付けられている。報告様式・期限の詳細は要確認。" },
+      recalls: { authority: "FDD / MOH", description: "MOHの命令または自主リコール。", url: "https://www.fdd.gov.la/" },
+      surveillance: "FDD/MOHによる市販後監視。制度は発展途上。WHO/ASEAN支援を活用して体制構築中。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "ラオスからのCFS発行に関する公式制度は要確認。輸入登録時に製造国のCFS提出が求められる場合がある。", processingTime: null, url: null },
+    reimbursement: { system: "政府主導型医療制度（公的医療 + 民間セクター + 国際支援）", authority: "保健省（MOH）", description: "National Health Insurance制度を段階的に拡大中。医療機器の個別償還制度は未整備。公共調達・国際機関支援が中心。", codingSystems: [], url: "https://www.moh.gov.la/" },
+    marketingRules: { authority: "FDD / MOH", description: "医療機器広告に関する詳細法規は要確認。虚偽広告は一般法により禁止。", keyRules: ["虚偽・誇大広告の禁止", "未登録機器の広告禁止"] },
+    mdsap: { status: "非参加", description: "ラオスはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証は登録時にQMS証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: false, notes: "独自の要求は要確認。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2024-2025", title: "ASEAN AMDD整合の段階的推進", description: "ASEAN医療機器指令との整合を段階的に推進中。WHO/ASEAN技術支援を活用。" },
+      { date: "2025", title: "医療機器登録制度の運用強化", description: "FDDが登録審査の体制強化を段階的に進行中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- MNG（モンゴル） ---
+  // =========================================================================
+  {
+    code: "MNG",
+    country: "モンゴル",
+    countryEn: "Mongolia",
+    region: "ASPAC",
+    flag: "🇲🇳",
+    legalSystemOverview: {
+      type: "議会制共和制（Parliamentary Republic）",
+      description: "モンゴルの医療機器規制は保健省（MOH）が所管する。Health Law および Medicines and Medical Devices Law に基づき、医療機器の登録・輸入管理・市販後監視を実施。規制制度は発展途上であり、WHOの技術支援を受けながら制度整備を進めている。参照国認可（CE、FDA等）への依存度が高い。",
+      keyCharacteristics: [
+        "保健省（MOH）が医療機器規制を統括",
+        "Medicines and Medical Devices Law が法的根拠",
+        "リスクベース分類を導入（詳細は要確認）",
+        "輸入品は MOH への登録が必要",
+        "参照国認可（CE、FDA等）への依存度が高い",
+        "WHO 支援の下で規制制度を整備中",
+      ],
+    },
+    authorities: [
+      { name: "MOH Mongolia", fullName: "Ministry of Health — Mongolia", localName: "Эрүүл мэндийн яам", role: "医療機器の登録・輸入許可・市販後監視・医療政策全般を統括", url: "https://www.moh.gov.mn/", isPrimary: true },
+      { name: "GASI", fullName: "General Agency for Specialized Inspection", localName: "Мэргэжлийн хяналтын ерөнхий газар", role: "医療機器を含む製品の品質・安全性の検査・監督", url: "https://www.inspection.gov.mn/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（MOH 直接審査）", description: "Notified Body 制度は存在しない。MOH が直接登録審査を行う。参照国認可が審査で重要視される。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Medicines and Medical Devices Law に基づく定義。疾病の診断・治療・予防・監視等を目的とする器具・装置・機器等。詳細な法的定義文書の公開は限定的。", scope: "IVDを含む。SaMDに関する詳細規定は要確認。", notes: "WHO/IMDRF定義との整合を推進中。" },
+    primaryLaw: { title: "Medicines and Medical Devices Law（医薬品・医療機器法）", originalTitle: "Эм, эмнэлгийн хэрэгслийн тухай хууль", enacted: "要確認", lastAmended: "要確認", url: "https://www.moh.gov.mn/", description: "医薬品および医療機器の規制に関する基本法。登録制度、品質管理、市販後監視の法的根拠を規定。" },
+    implementingRegulations: [
+      { title: "MOH 医療機器登録手続き規則", date: "要確認", url: "https://www.moh.gov.mn/", description: "医療機器の登録に必要な書類・手続きの詳細を規定。", category: "登録手続き" },
+    ],
+    relatedLaws: [
+      { title: "Health Law（健康法）", category: "医療全般", enacted: "要確認", url: "https://www.moh.gov.mn/", relevance: "モンゴルの医療制度全般の法的根拠。医療機器の使用・管理にも関連。" },
+    ],
+    classification: {
+      system: "リスクベース分類（詳細は要確認）",
+      basis: "MOH規則に基づく分類。IMDRF枠組みとの整合を検討中。",
+      classes: [
+        { name: "Low Risk", nameJa: "低リスク", riskLevel: "低", description: "低リスク医療機器。", examples: ["ガーゼ", "聴診器", "手術用手袋"], approvalPath: "登録 — MOH" },
+        { name: "Medium Risk", nameJa: "中リスク", riskLevel: "中", description: "中程度のリスクの医療機器。", examples: ["超音波診断装置", "注射針"], approvalPath: "登録 — MOH" },
+        { name: "High Risk", nameJa: "高リスク", riskLevel: "高", description: "高リスク医療機器。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント"], approvalPath: "登録（詳細審査）— MOH" },
+      ],
+      rules: ["MOH規則に基づく分類", "参照国での分類を参考", "分類体系の詳細は要確認（IMDRF整合を検討中）"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "医療機器はMOHへの登録が必要。参照国認可（CE、FDA等）の保有が審査で考慮される。外国メーカーはローカル代理人（輸入業者）の指定が必要。",
+      routes: [
+        { name: "MOH Device Registration", nameJa: "MOH 医療機器登録", applicableClasses: ["Low Risk", "Medium Risk", "High Risk"], description: "MOHに申請書類一式を提出。技術文書、参照国認可証明、品質管理証明書等が必要。", subtypes: ["新規登録", "変更登録", "更新"], avgReviewTime: "要確認（数ヶ月〜）", fee: "MOH規定による", url: "https://www.moh.gov.mn/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: null, description: "電子申請システムの導入状況は要確認。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "独自のUDI制度は2026年時点で未導入。", url: null, timeline: "未定" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（MOH）", mandatory: true, url: "https://www.moh.gov.mn/", description: "MOHへの有害事象報告義務がある。報告様式・期限の詳細は要確認。" },
+      recalls: { authority: "MOH / GASI", description: "MOHの命令または自主リコール。GASIが市場監視を支援。", url: "https://www.moh.gov.mn/" },
+      surveillance: "MOH/GASIによる市販後監視。制度は発展途上。WHO支援の下で体制構築中。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "モンゴルからのCFS発行に関する公式制度は要確認。輸入登録時に製造国のCFS提出が求められる場合がある。", processingTime: null, url: null },
+    reimbursement: { system: "社会保険制度（Health Insurance Fund）", authority: "保健省（MOH）/ 社会保険庁", description: "国民健康保険制度により基本的な医療サービスをカバー。医療機器の個別償還制度は限定的。公共調達が中心。", codingSystems: [], url: "https://www.moh.gov.mn/" },
+    marketingRules: { authority: "MOH", description: "医療機器広告に関する詳細法規は要確認。虚偽広告は一般法により禁止。", keyRules: ["虚偽・誇大広告の禁止", "未登録機器の広告禁止"] },
+    mdsap: { status: "非参加", description: "モンゴルはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証は登録時にQMS証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: false, notes: "独自の要求は要確認。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2024-2025", title: "医療機器規制制度の整備", description: "WHO支援の下で医療機器規制の制度化・能力構築を推進中。" },
+      { date: "2025", title: "保健セクター改革の推進", description: "保健セクター改革の一環として、医療機器の品質管理・規制体制の強化を計画。" },
     ],
     lastUpdated: "2026-04-02",
     verified: null,
