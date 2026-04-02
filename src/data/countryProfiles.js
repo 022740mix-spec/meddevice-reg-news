@@ -18,6 +18,8 @@ export const COUNTRY_FLAG = {
   PAK: "🇵🇰", KEN: "🇰🇪", NGA: "🇳🇬", MAR: "🇲🇦",
   JOR: "🇯🇴", BHR: "🇧🇭", OMN: "🇴🇲",
   PER: "🇵🇪", ECU: "🇪🇨", CRI: "🇨🇷",
+  BGD: "🇧🇩", LKA: "🇱🇰", KHM: "🇰🇭", MMR: "🇲🇲", LAO: "🇱🇦", MNG: "🇲🇳",
+  URY: "🇺🇾", PRY: "🇵🇾", DOM: "🇩🇴", PAN: "🇵🇦", GTM: "🇬🇹", HND: "🇭🇳",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -7381,6 +7383,670 @@ export const COUNTRY_PROFILES = [
         description:
           "2025年1月にMedDO（SR 812.213）およびIvDO（SR 812.219）の改正が施行。移行期限の調整、CH-REP要件の明確化等。",
       },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Sweden ---
+  // =========================================================================
+  {
+    code: "SWE",
+    country: "スウェーデン",
+    countryEn: "Sweden",
+    region: "Europe",
+    flag: "🇸🇪",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description:
+        "スウェーデンはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Act (2021:600) with supplementary provisions to the EU Regulations on medical devices および Ordinance (2021:631) が制定されている。Läkemedelsverket（スウェーデン医薬品庁 / Swedish Medical Products Agency, MPA）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
+      keyCharacteristics: [
+        "EU MDR/IVDR が直接適用",
+        "Läkemedelsverket がNCAとして市場監視・ビジランスを担当",
+        "Act (2021:600) + Ordinance (2021:631) による国内補完",
+        "ラベリング・使用説明書はスウェーデン語必須",
+        "21の県議会（Region）が医療サービス提供・医療機器調達を管轄",
+        "FINOSE/JNHB（北欧HTA協力）への参加",
+      ],
+    },
+
+    authorities: [
+      { name: "Läkemedelsverket (MPA)", fullName: "Swedish Medical Products Agency", localName: "Läkemedelsverket", role: "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理", url: "https://www.lakemedelsverket.se/en/medical-devices", isPrimary: true },
+      { name: "TLV", fullName: "Dental and Pharmaceutical Benefits Agency", localName: "Tandvårds- och läkemedelsförmånsverket", role: "医療機器の償還評価（消耗品）・HTA評価", url: "https://www.tlv.se/in-english.html", isPrimary: false },
+      { name: "IVO", fullName: "Health and Social Care Inspectorate", localName: "Inspektionen för vård och omsorg", role: "医療機関における医療機器使用の監督", url: "https://www.ivo.se/en/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR Notified Body 制度（スウェーデン国内に2機関指定）",
+      description: "Intertek Medical Notified Body AB（NB 2862）およびRISE Medical Notified Body AB（NB 3033）がMDR指定。いずれもIVDR未指定。",
+      bodies: [
+        { nb: "2862", name: "Intertek Medical Notified Body AB", url: "https://www.intertek.se/", mdr: true, ivdr: false },
+        { nb: "3033", name: "RISE Medical Notified Body AB", url: "https://www.ri.se/", mdr: true, ivdr: false },
+      ],
+    },
+
+    deviceDefinition: {
+      legalDefinition: "EU MDR Article 2(1) の定義がそのまま適用。",
+      scope: "IVD は IVDR で別途規定。SaMD・AI/ML 搭載機器も対象。美容目的製品（Annex XVI）も適用。",
+      notes: "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。",
+    },
+
+    primaryLaw: {
+      title: "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)",
+      originalTitle: null,
+      enacted: "2017（EU採択）/ 2021年5月26日適用",
+      lastAmended: "2025（Regulation (EU) 2025/2457）",
+      url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
+      description: "EU MDR がスウェーデンに直接適用。Act (2021:600) が国内補完法。",
+    },
+
+    implementingRegulations: [
+      { title: "Act (2021:600) with supplementary provisions to the EU Regulations on medical devices", date: "2021-05-26", url: "https://www.lakemedelsverket.se/en/medical-devices/regulation", description: "MDR/IVDR 国内補完法。NCA権限・罰則・言語要件・登録義務。", category: "国内補完法" },
+      { title: "Ordinance (2021:631)", date: "2021-05-26", url: "https://www.lakemedelsverket.se/en/medical-devices/regulation", description: "Act (2021:600) の下位法令。", category: "国内補完法令" },
+      { title: "HSLF-FS 2021:32（MPA Regulation）", date: "2021", url: "https://www.lakemedelsverket.se/en/medical-devices/regulation", description: "登録手続・言語要件の具体化。", category: "当局規則" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR (Regulation (EU) 2016/679)", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。Patientdatalagen も併存。" },
+      { title: "AI Act — Regulation (EU) 2024/1689", category: "人工知能", enacted: "2024", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689", relevance: "AI搭載医療機器はHigh-Risk AI System。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制（Class I / IIa / IIb / III）",
+      basis: "EU MDR Annex VIII の22分類規則がそのまま適用。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "低リスク。自己宣言（Im/Is/Ir除く）。", examples: ["弾性包帯", "聴診器", "車椅子"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "中低リスク。NB関与。", examples: ["補聴器", "超音波装置", "コンタクトレンズ"], approvalPath: "Notified Body審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "中高リスク。NB詳細審査。", examples: ["人工呼吸器", "血液透析装置", "輸液ポンプ"], approvalPath: "Notified Body審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最高リスク。", examples: ["人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "NB審査 + Expert Panel相談" },
+      ],
+      rules: ["EU MDR Annex VIII の22分類規則を直接適用"],
+      totalProductCodes: "EU CND コード",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR に基づく適合性評価がそのまま適用。国内追加の市販前審査なし。Läkemedelsverket への事業者登録が必要。",
+      routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "EU MDR Annex IX〜XI。詳細はEUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "Notified Body により異なる", url: "https://www.lakemedelsverket.se/en/medical-devices/sale/market-access" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED + Läkemedelsverket 国内登録", url: "https://www.lakemedelsverket.se/en/medical-devices/manufacture/registration/registration-at-the-swedish-mpa", description: "EUDAMED + 国内事業者登録。EUDAMED 4モジュール義務化: 2026年5月28日。", mandatory: true },
+    udi: { required: true, system: "EU UDI System — EUDAMED", description: "EU MDR Article 27-29 UDI 要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance System — Läkemedelsverket", mandatory: true, url: "https://www.lakemedelsverket.se/en/medical-devices", description: "重篤有害事象をLäkemedelsverketに報告義務。MDR Article 87-92。" },
+      recalls: { authority: "Läkemedelsverket", description: "FSCA/FSNはLäkemedelsverketに通知。", url: "https://www.lakemedelsverket.se/en/medical-devices" },
+      surveillance: "EU MDR PMS/PSUR/PMCF要件がそのまま適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "Läkemedelsverket", name: "Certificate of Free Sale (CFS)", description: "Läkemedelsverket がCFSを発行。", processingTime: "要確認", url: "https://www.lakemedelsverket.se/en/medical-devices" },
+
+    reimbursement: {
+      system: "県議会（Region）ベース + TLV 償還評価",
+      authority: "TLV / 21の県議会（Region）",
+      description: "21の県議会（Region）が医療提供・調達を管轄。TLV は消耗品（ストーマ用品、自己測定機器等）の償還決定・HTA評価。病院用高額機器は各Region独自判断。JNHB（旧FINOSE）参加。",
+      codingSystems: ["TLV 製品グループコード", "NordDRG"],
+      url: "https://www.tlv.se/in-english.html",
+    },
+
+    marketingRules: {
+      authority: "Läkemedelsverket",
+      description: "MDR Article 7 虚偽広告禁止。Act (2021:600) + LVFS 2009:6 に基づく広告規制。",
+      keyRules: ["スウェーデン語ラベリング・IFU必須", "当局提出はスウェーデン語/英語", "MDR Article 7 虚偽広告禁止"],
+    },
+
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "EU MDR QMS要件に基づき実質必須。EN ISO 13485:2016。" },
+      iso14971: { accepted: true, notes: "EN ISO 14971:2019 + A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006 + A1:2015。" },
+      iec60601: { accepted: true, notes: "EN IEC 60601 シリーズ。" },
+      others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2024", title: "JNHB（旧FINOSE）拡大", description: "FINOSEが2023年デンマーク、2024年アイスランド追加でJNHBに改称。" },
+      { date: "2024", title: "EUDAMED義務化準備", description: "EUDAMED 4モジュール2026年5月28日義務化。" },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Denmark ---
+  // =========================================================================
+  {
+    code: "DNK",
+    country: "デンマーク",
+    countryEn: "Denmark",
+    region: "Europe",
+    flag: "🇩🇰",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description: "デンマークはEU加盟国。MDR/IVDR直接適用。DKMA（Lægemiddelstyrelsen）がNCA。Executive Order on Medical Devicesが国内補完法。5地域（Region）が公立病院の機器調達を管轄。",
+      keyCharacteristics: [
+        "EU MDR/IVDR 直接適用",
+        "DKMA がNCA",
+        "デンマーク語ラベリング・IFU原則必須（言語免除あり）",
+        "Behandlingsrådet がHTA評価",
+        "Amgros が5地域の共同調達",
+        "JNHB 2023年参加",
+      ],
+    },
+
+    authorities: [
+      { name: "DKMA", fullName: "Danish Medicines Agency", localName: "Lægemiddelstyrelsen", role: "NCA: 市場監視・ビジランス・臨床試験・登録・言語免除決定", url: "https://laegemiddelstyrelsen.dk/en/devices/", isPrimary: true },
+      { name: "Behandlingsrådet", fullName: "Health Technology Council", localName: "Behandlingsrådet", role: "医療機器・技術のHTA評価・推奨", url: "https://behandlingsraadet.dk/", isPrimary: false },
+      { name: "Amgros", fullName: "Amgros I/S", localName: null, role: "5地域の公立病院向け医薬品・機器の共同調達", url: "https://amgros.dk/medical-devices/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR Notified Body（デンマーク国内1機関）",
+      description: "TÜV SÜD Danmark（NB 2443）がMDR指定。IVDR未指定。",
+      bodies: [{ nb: "2443", name: "TÜV SÜD Danmark", url: "https://www.tuvsud.com/", mdr: true, ivdr: false }],
+    },
+
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1) がそのまま適用。", scope: "IVD は IVDR。SaMD・AI/ML も対象。", notes: "追加定義変更なし。" },
+
+    primaryLaw: { title: "Regulation (EU) 2017/745 — MDR", originalTitle: null, enacted: "2017 / 2021年5月26日適用", lastAmended: "2025", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745", description: "EU MDR 直接適用。Executive Order on Medical Devicesが国内補完法。" },
+
+    implementingRegulations: [
+      { title: "Executive Order on Medical Devices (Bekendtgørelse om medicinsk udstyr)", date: "2021", url: "https://laegemiddelstyrelsen.dk/en/devices/legislation-and-guidance/legislation/", description: "デンマーク語情報提供義務・言語免除手続等。", category: "国内補完法令" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。Databeskyttelsesloven併存。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制",
+      basis: "EU MDR Annex VIII。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "自己宣言。", examples: ["弾性包帯", "聴診器"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "NB関与。", examples: ["補聴器", "超音波装置"], approvalPath: "NB審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "NB詳細審査。", examples: ["人工呼吸器", "輸液ポンプ"], approvalPath: "NB審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最も厳格。", examples: ["人工心臓弁", "冠動脈ステント"], approvalPath: "NB + Expert Panel" },
+      ],
+      rules: ["EU MDR Annex VIII 直接適用"],
+      totalProductCodes: "EU CND",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR 適合性評価がそのまま適用。国内追加審査なし。",
+      routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "Annex IX〜XI。EUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "NBにより異なる", url: "https://laegemiddelstyrelsen.dk/en/devices/" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED + DKMA国内登録", url: "https://laegemiddelstyrelsen.dk/en/devices/registration-and-marketing/", description: "EUDAMED + DKMA国内登録。EUDAMED義務化: 2026年5月。", mandatory: true },
+    udi: { required: true, system: "EU UDI — EUDAMED", description: "MDR UDI要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance — DKMA", mandatory: true, url: "https://laegemiddelstyrelsen.dk/en/devices/", description: "重篤有害事象をDKMAに報告。供給中断・停止の報告義務も。" },
+      recalls: { authority: "DKMA", description: "FSCA/FSNはDKMAに通知。", url: "https://laegemiddelstyrelsen.dk/en/devices/" },
+      surveillance: "EU MDR PMS/PSUR/PMCF適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "DKMA", name: "CFS", description: "DKMAがCFSを発行。", processingTime: "要確認", url: "https://laegemiddelstyrelsen.dk/en/devices/" },
+
+    reimbursement: {
+      system: "5地域 + Amgros共同調達 + 市町村（Kommune）補助",
+      authority: "Behandlingsrådet（HTA）/ Amgros（調達）/ 5地域 / 市町村",
+      description: "病院用機器は5地域がAmgros経由で共同調達。BehandlingsrådetがHTA評価。エンドユーザー向けは市町村が償還。企業申請による一般償還制度はない。JNHB参加。",
+      codingSystems: ["DRG", "ISO補助機器分類"],
+      url: "https://behandlingsraadet.dk/",
+    },
+
+    marketingRules: {
+      authority: "DKMA",
+      description: "デンマーク語ラベリング・IFU原則必須。DKMA申請で言語免除可（専門家向け・英語）。",
+      keyRules: ["デンマーク語ラベリング・IFU原則必須", "DKMA申請で言語免除可", "インプラントカードもデンマーク語"],
+    },
+
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "実質必須。" }, iso14971: { accepted: true, notes: "EN ISO 14971:2019 + A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006 + A1:2015。" }, iec60601: { accepted: true, notes: "EN IEC 60601シリーズ。" }, others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2023", title: "JNHB参加", description: "北欧HTA協力JNHBに参加。" },
+      { date: "2024", title: "Behandlingsrådet運用開始", description: "医療機器HTA評価開始。" },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Norway ---
+  // =========================================================================
+  {
+    code: "NOR",
+    country: "ノルウェー",
+    countryEn: "Norway",
+    region: "Europe",
+    flag: "🇳🇴",
+
+    legalSystemOverview: {
+      type: "EEA加盟国（MDR/IVDR がEEA経由で適用）",
+      description: "ノルウェーはEU非加盟だが、EEA協定を通じてMDR/IVDRが国内法に組み込まれている。Lov om medisinsk utstyr（LOV-2020-06-07-37）で国内実施。DMP（旧NoMA/SLV）がNCA。",
+      keyCharacteristics: [
+        "EEA経由でMDR/IVDR適用",
+        "DMP（旧NoMA/SLV）がNCA",
+        "ノルウェー語ラベリング・IFU必須",
+        "Nye MetoderがHTA評価",
+        "HELFO Blue Prescription制度",
+        "EUDAMEDアクセス制限（EEA調整中）",
+      ],
+    },
+
+    authorities: [
+      { name: "DMP", fullName: "Norwegian Medical Products Agency", localName: "Direktoratet for medisinske produkter（旧SLV）", role: "NCA: 市場監視・ビジランス・臨床試験・HTA", url: "https://www.dmp.no/en/medical-devices", isPrimary: true },
+      { name: "Nye Metoder", fullName: "National System for Managed Introduction of New Health Technologies", localName: "Nye metoder", role: "新技術導入評価", url: "https://www.nyemetoder.no/en/english/", isPrimary: false },
+      { name: "HELFO", fullName: "Norwegian Health Economics Administration", localName: null, role: "Blue Prescription償還管理", url: "https://www.helfo.no/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR Notified Body（ノルウェー国内1機関）",
+      description: "DNV Product Assurance AS（NB 2460）がMDR指定。IVDR未指定。EEA経由NANDO登録。",
+      bodies: [{ nb: "2460", name: "DNV Product Assurance AS", url: "https://www.dnv.com/", mdr: true, ivdr: false }],
+    },
+
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1) がEEA経由で適用。", scope: "IVD は IVDR。SaMD・AI/ML も対象。", notes: "独自追加定義なし。" },
+
+    primaryLaw: { title: "Lov om medisinsk utstyr (Medical Devices Act)", originalTitle: "LOV-2020-06-07-37", enacted: "2020-06-07", lastAmended: "2024", url: "https://www.dmp.no/en/medical-devices/guidance-and-regulations/the-legislation-for-medical-devices", description: "MDR/IVDRをノルウェー法に組み込む国内法。" },
+
+    implementingRegulations: [
+      { title: "Forskrift om medisinsk utstyr", date: "2021", url: "https://www.dmp.no/en/medical-devices/guidance-and-regulations/the-legislation-for-medical-devices", description: "MDR/IVDR国内実施規則。言語要件・登録手続。", category: "国内実施規則" },
+    ],
+
+    relatedLaws: [
+      { title: "Personopplysningsloven + GDPR", category: "データ保護", enacted: "2018", url: "https://lovdata.no/dokument/NL/lov/2018-06-15-38", relevance: "EEA経由GDPR適用。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制（EEA経由）",
+      basis: "EU MDR Annex VIII をEEA経由で適用。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "自己宣言。", examples: ["弾性包帯", "聴診器"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "NB関与。", examples: ["補聴器", "超音波装置"], approvalPath: "NB審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "NB詳細審査。", examples: ["人工呼吸器", "輸液ポンプ"], approvalPath: "NB審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最も厳格。", examples: ["人工心臓弁", "冠動脈ステント"], approvalPath: "NB + Expert Panel" },
+      ],
+      rules: ["EU MDR Annex VIII EEA経由適用"],
+      totalProductCodes: "EU CND",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR 適合性評価がEEA経由で適用。国内追加審査なし。DMP登録必要。",
+      routes: [{ name: "EU MDR Conformity Assessment (EEA)", nameJa: "EU MDR 適合性評価（EEA経由）", applicableClasses: ["全クラス"], description: "Annex IX〜XI。EUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "NBにより異なる", url: "https://www.dmp.no/en/medical-devices" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED（アクセス調整中）+ DMP国内登録", url: "https://www.dmp.no/en/medical-devices", description: "EU非加盟のためEUDAMEDアクセスに制限。DMP国内登録必要。", mandatory: true },
+    udi: { required: true, system: "EU UDI（EEA経由）", description: "MDR UDI要件がEEA経由で適用。", url: "https://www.dmp.no/en/medical-devices", timeline: "EEA調整次第" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance — DMP", mandatory: true, url: "https://www.dmp.no/en/medical-devices", description: "重篤有害事象をDMPに報告。MDR Article 87-92。" },
+      recalls: { authority: "DMP", description: "FSCA/FSNはDMPに通知。", url: "https://www.dmp.no/en/medical-devices" },
+      surveillance: "EU MDR PMS/PSUR/PMCF EEA経由適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "DMP", name: "CFS", description: "DMPがCFSを発行。", processingTime: "要確認", url: "https://www.dmp.no/en/medical-devices" },
+
+    reimbursement: {
+      system: "Nye Metoder（専門医療）+ HELFO Blue Prescription（外来）+ 4地域保健局",
+      authority: "DMP（HTA）/ Nye Metoder / HELFO / 4地域保健局",
+      description: "病院用機器はNye Metoder でHTA導入決定。DMPがSTA実施。外来特定機器はHELFO Blue Prescription（§5品目リスト）。2025年1月EU HTAR参加。JNHB創設メンバー。",
+      codingSystems: ["DRG/NordDRG", "HELFO製品価格リスト"],
+      url: "https://www.nyemetoder.no/en/english/",
+    },
+
+    marketingRules: {
+      authority: "DMP",
+      description: "ノルウェー語ラベリング・IFU必須。当局文書はノルウェー語/英語。適合性評価文書は英語。",
+      keyRules: ["ノルウェー語ラベリング・IFU必須", "当局文書: ノルウェー語/英語", "技術文書は英語"],
+    },
+
+    mdsap: { status: "非参加", description: "MDSAP非参加。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "実質必須。" }, iso14971: { accepted: true, notes: "EN ISO 14971:2019+A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006+A1:2015。" }, iec60601: { accepted: true, notes: "EN IEC 60601シリーズ。" }, others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2025-01", title: "EU HTAR参加", description: "EU HTAR枠組みに参加。JCA貢献開始。" },
+      { date: "2025", title: "EUDAMEDアクセス問題", description: "EU非加盟のためEUDAMED完全アクセス遅延。EEA調整中。" },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Finland ---
+  // =========================================================================
+  {
+    code: "FIN",
+    country: "フィンランド",
+    countryEn: "Finland",
+    region: "Europe",
+    flag: "🇫🇮",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description: "フィンランドはEU加盟国。MDR/IVDR直接適用。Fimea がNCA。Medical Devices Act (719/2021)が国内補完法。NB密度が高い（MDR:2, IVDR:2）。",
+      keyCharacteristics: [
+        "EU MDR/IVDR 直接適用",
+        "Fimea がNCA（NB指定・監督含む）",
+        "安全使用情報はフィンランド語+スウェーデン語必須",
+        "文書はフィンランド語/スウェーデン語/英語で可",
+        "国内3 NB（MDR:2, IVDR:2）",
+        "JNHB創設メンバー",
+      ],
+    },
+
+    authorities: [
+      { name: "Fimea", fullName: "Finnish Medicines Agency", localName: "Lääkealan turvallisuus- ja kehittämiskeskus", role: "NCA: 市場監視・ビジランス・臨床試験・NB指定監督・登録", url: "https://fimea.fi/en/medical-devices", isPrimary: true },
+      { name: "PALKO / COHERE Finland", fullName: "Council for Choices in Health Care in Finland", localName: "Terveydenhuollon palveluvalikoimaneuvosto", role: "HTA評価・推奨", url: "https://palveluvalikoima.fi/", isPrimary: false },
+      { name: "FinCCHTA", fullName: "Finnish Coordinating Center for Health Technology Assessment", localName: null, role: "大学病院HTAネットワーク", url: "https://www.fincchta.fi/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR/IVDR Notified Body（フィンランド国内3機関）",
+      description: "Eurofins (NB 0537, MDR+IVDR)、SGS FIMKO (NB 0598, MDR)、Sertio (NB 3018, IVDR)。",
+      bodies: [
+        { nb: "0537", name: "Eurofins Electric & Electronics Finland Oy", url: "https://www.eurofins.fi/", mdr: true, ivdr: true },
+        { nb: "0598", name: "SGS FIMKO OY", url: "https://www.sgs.fi/", mdr: true, ivdr: false },
+        { nb: "3018", name: "Sertio Oy", url: "https://www.sertio.fi/", mdr: false, ivdr: true },
+      ],
+    },
+
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1) がそのまま適用。", scope: "IVD は IVDR。SaMD・AI/ML も対象。", notes: "Act 719/2021が国内補完法。" },
+
+    primaryLaw: { title: "Regulation (EU) 2017/745 — MDR", originalTitle: null, enacted: "2017 / 2021年5月26日適用", lastAmended: "2025", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745", description: "EU MDR 直接適用。Act 719/2021が国内補完法。" },
+
+    implementingRegulations: [
+      { title: "Medical Devices Act (719/2021)", date: "2021", url: "https://fimea.fi/en/medical-devices/legislation-related-to-medical-devices", description: "MDR/IVDR国内補完法。Fimea権限・罰則・言語・登録・NB指定。", category: "国内補完法" },
+      { title: "Decree 437/2021", date: "2021", url: "https://fimea.fi/en/medical-devices/legislation-related-to-medical-devices", description: "Act下位法令。", category: "省令" },
+      { title: "Fimea Regulation 2/2021", date: "2021", url: "https://fimea.fi/en/medical-devices/registrations", description: "EUDAMED/CERE届出要件。", category: "当局規則" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR + Tietosuojalaki", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制",
+      basis: "EU MDR Annex VIII。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "自己宣言。", examples: ["弾性包帯", "聴診器"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "NB関与。", examples: ["補聴器", "超音波装置"], approvalPath: "NB審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "NB詳細審査。", examples: ["人工呼吸器", "輸液ポンプ"], approvalPath: "NB審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最も厳格。", examples: ["人工心臓弁", "冠動脈ステント"], approvalPath: "NB + Expert Panel" },
+      ],
+      rules: ["EU MDR Annex VIII 直接適用"],
+      totalProductCodes: "EU CND",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR 適合性評価がそのまま適用。EUDAMED早期活用。",
+      routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "Annex IX〜XI。EUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "NBにより異なる", url: "https://fimea.fi/en/medical-devices/placing-a-medical-device-on-the-market/conformity-assessment" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED + CERE（Fimea国内システム）", url: "https://fimea.fi/en/medical-devices/registrations", description: "EUDAMED早期活用。CEREはFimea国内補助。EUDAMED義務化: 2026年5月。", mandatory: true },
+    udi: { required: true, system: "EU UDI — EUDAMED", description: "MDR UDI要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance — Fimea", mandatory: true, url: "https://fimea.fi/en/medical-devices", description: "重篤有害事象をFimeaに報告。" },
+      recalls: { authority: "Fimea", description: "FSCA/FSNはFimeaに通知。", url: "https://fimea.fi/en/medical-devices" },
+      surveillance: "EU MDR PMS/PSUR/PMCF適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "Fimea", name: "CFS", description: "FimeaがCFSを発行。", processingTime: "要確認", url: "https://fimea.fi/en/medical-devices" },
+
+    reimbursement: {
+      system: "公的医療 + PALKO/COHERE HTA + FinCCHTA",
+      authority: "PALKO/COHERE（HTA推奨）/ Hila / FinCCHTA",
+      description: "Hyvinvointialue が医療提供。PALKOが国レベルHTA。FinCCHTAが大学病院mini-HTA。JNHB創設メンバー。",
+      codingSystems: ["NordDRG", "SHM補助機器分類"],
+      url: "https://palveluvalikoima.fi/",
+    },
+
+    marketingRules: {
+      authority: "Fimea",
+      description: "安全使用情報はフィンランド語+スウェーデン語必須。その他はフィンランド語/スウェーデン語/英語。",
+      keyRules: ["ラベル・IFU: フィンランド語+スウェーデン語必須", "その他文書: 3言語で可"],
+    },
+
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "実質必須。" }, iso14971: { accepted: true, notes: "EN ISO 14971:2019+A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006+A1:2015。" }, iec60601: { accepted: true, notes: "EN IEC 60601シリーズ。" }, others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2023", title: "Sertio Oy IVDR NB指定", description: "フィンランド初のIVDR専用NB。" },
+      { date: "2023", title: "Hyvinvointialue制度開始", description: "自治体医療が新制度に移行。" },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Ireland ---
+  // =========================================================================
+  {
+    code: "IRL",
+    country: "アイルランド",
+    countryEn: "Ireland",
+    region: "Europe",
+    flag: "🇮🇪",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description: "アイルランドはEU加盟国。MDR/IVDR直接適用。HPRAがNCA。NSAI (NB 0050) がMDR+IVDR NB。欧州有数の医療機器製造・輸出拠点。英語で対応可能。",
+      keyCharacteristics: [
+        "EU MDR/IVDR 直接適用",
+        "HPRA がNCA",
+        "NSAI がMDR+IVDR NB",
+        "英語で対応可能（言語ハードル最小）",
+        "欧州有数の医療機器拠点",
+        "HIQA がHTA",
+      ],
+    },
+
+    authorities: [
+      { name: "HPRA", fullName: "Health Products Regulatory Authority", localName: null, role: "NCA: 市場監視・ビジランス・臨床試験・NB監督・登録", url: "https://www.hpra.ie/regulation/medical-devices", isPrimary: true },
+      { name: "NSAI", fullName: "National Standards Authority of Ireland", localName: null, role: "MDR/IVDR NB (NB 0050)", url: "https://www.nsai.ie/", isPrimary: false },
+      { name: "HIQA", fullName: "Health Information and Quality Authority", localName: null, role: "HTA評価", url: "https://www.hiqa.ie/areas-we-work/health-technology-assessment", isPrimary: false },
+      { name: "HSE", fullName: "Health Service Executive", localName: null, role: "公的医療・償還決定", url: "https://www.hse.ie/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR/IVDR Notified Body（アイルランド国内1機関）",
+      description: "NSAI (NB 0050) がMDR+IVDR両方指定。MDR指定11番目。",
+      bodies: [{ nb: "0050", name: "National Standards Authority of Ireland (NSAI)", url: "https://www.nsai.ie/", mdr: true, ivdr: true }],
+    },
+
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1) がそのまま適用。", scope: "IVD は IVDR。SaMD・AI/ML も対象。", notes: "追加定義変更なし。" },
+
+    primaryLaw: { title: "Regulation (EU) 2017/745 — MDR", originalTitle: null, enacted: "2017 / 2021年5月26日適用", lastAmended: "2025", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745", description: "EU MDR 直接適用。S.I. 261/2021が国内補完法。" },
+
+    implementingRegulations: [
+      { title: "S.I. No. 261/2021 — Medical Devices Regulations 2021", date: "2021-05-26", url: "https://www.hpra.ie/regulation/medical-devices", description: "HPRA権限（分類・市場監視・臨床試験・執行）。", category: "国内補完法" },
+      { title: "S.I. No. 691/2021 — Medical Devices (Registration) Regulations 2021", date: "2021", url: "https://www.hpra.ie/regulation/medical-devices/registration", description: "アイルランド拠点事業者のHPRA国内登録。", category: "登録規則" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR + Data Protection Act 2018", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データ。DPC監督。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制",
+      basis: "EU MDR Annex VIII。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "自己宣言。", examples: ["弾性包帯", "聴診器"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "NB関与。", examples: ["補聴器", "超音波装置"], approvalPath: "NB審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "NB詳細審査。", examples: ["人工呼吸器", "輸液ポンプ"], approvalPath: "NB審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最も厳格。", examples: ["人工心臓弁", "冠動脈ステント"], approvalPath: "NB + Expert Panel" },
+      ],
+      rules: ["EU MDR Annex VIII 直接適用"],
+      totalProductCodes: "EU CND",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR 適合性評価がそのまま適用。HPRA国内登録（S.I. 691/2021）必要。",
+      routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "Annex IX〜XI。EUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "NBにより異なる", url: "https://www.hpra.ie/regulation/medical-devices/medical-devices-regulation" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED + HPRA国内登録", url: "https://www.hpra.ie/regulation/medical-devices/registration", description: "EUDAMED + S.I. 691/2021 HPRA国内登録。", mandatory: true },
+    udi: { required: true, system: "EU UDI — EUDAMED", description: "MDR UDI要件がそのまま適用。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月28日" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance — HPRA", mandatory: true, url: "https://www.hpra.ie/regulation/medical-devices", description: "重篤有害事象をHPRAに報告。" },
+      recalls: { authority: "HPRA", description: "FSCA/FSNはHPRAに通知。", url: "https://www.hpra.ie/regulation/medical-devices" },
+      surveillance: "EU MDR PMS/PSUR/PMCF適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "HPRA", name: "CFS", description: "HPRAがCFSを発行。", processingTime: "要確認", url: "https://www.hpra.ie/regulation/medical-devices" },
+
+    reimbursement: {
+      system: "HSE公的医療 + HIQA HTA",
+      authority: "HSE（償還）/ HIQA（HTA）/ NCPE（薬事経済）",
+      description: "公的医療はHSE提供。HIQA がHTA（2007年Health Act）。病院機器はHSE調達。",
+      codingSystems: ["DRG", "HSE機器コード"],
+      url: "https://www.hiqa.ie/areas-we-work/health-technology-assessment",
+    },
+
+    marketingRules: {
+      authority: "HPRA",
+      description: "英語で対応可能。アイルランド語は規制上不要。EU加盟国中最も言語ハードルが低い。",
+      keyRules: ["英語ラベリング・IFUで対応可", "アイルランド語は規制上不要"],
+    },
+
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "実質必須。" }, iso14971: { accepted: true, notes: "EN ISO 14971:2019+A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006+A1:2015。" }, iec60601: { accepted: true, notes: "EN IEC 60601シリーズ。" }, others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2020-02", title: "NSAI MDR NB指定", description: "EU全体11番目、アイルランド初のMDR NB。" },
+      { date: "2025-03", title: "HIQA HTAガイドライン改訂", description: "経済評価・BIAガイドライン改訂。" },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Austria ---
+  // =========================================================================
+  {
+    code: "AUT",
+    country: "オーストリア",
+    countryEn: "Austria",
+    region: "Europe",
+    flag: "🇦🇹",
+
+    legalSystemOverview: {
+      type: "EU加盟国（MDR/IVDR 直接適用）",
+      description: "オーストリアはEU加盟国。MDR/IVDR直接適用。BASGがNCA。MPG 2021が国内補完法。ドイツ語ラベリング必須。QMD Services (NB 2962) がMDR+IVDR NB。",
+      keyCharacteristics: [
+        "EU MDR/IVDR 直接適用",
+        "BASG がNCA",
+        "MPG 2021 国内補完法",
+        "ドイツ語ラベリング・IFU必須",
+        "QMD Services (NB 2962) MDR+IVDR NB",
+        "AIHTA がHTA",
+        "Medizinprodukteregister + 年間手数料",
+      ],
+    },
+
+    authorities: [
+      { name: "BASG", fullName: "Federal Office for Safety in Health Care", localName: "Bundesamt für Sicherheit im Gesundheitswesen", role: "NCA: 市場監視・ビジランス・臨床試験・NB監督", url: "https://www.basg.gv.at/en/medical-devices", isPrimary: true },
+      { name: "AGES", fullName: "Austrian Agency for Health and Food Safety", localName: "Agentur für Gesundheit und Ernährungssicherheit", role: "BASG親組織", url: "https://www.ages.at/en/", isPrimary: false },
+      { name: "AIHTA", fullName: "Austrian Institute for Health Technology Assessment", localName: "旧LBI-HTA", role: "HTA評価。病院給付カタログ支援。", url: "https://aihta.at/", isPrimary: false },
+      { name: "Dachverband", fullName: "Federation of Austrian Social Insurance Institutions", localName: "旧HVB", role: "社会保険償還管理", url: "https://www.sozialversicherung.at/", isPrimary: false },
+    ],
+
+    notifiedBodies: {
+      system: "EU MDR/IVDR Notified Body（オーストリア国内1機関）",
+      description: "QMD Services GmbH (NB 2962) がMDR+IVDR両方指定。",
+      bodies: [{ nb: "2962", name: "QMD Services GmbH", url: "https://www.qmd-services.com/", mdr: true, ivdr: true }],
+    },
+
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1) がそのまま適用。", scope: "IVD は IVDR。SaMD・AI/ML も対象。", notes: "MPG 2021が国内補完法。" },
+
+    primaryLaw: { title: "Regulation (EU) 2017/745 — MDR", originalTitle: null, enacted: "2017 / 2021年5月26日適用", lastAmended: "2025", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745", description: "EU MDR 直接適用。MPG 2021が国内補完法。" },
+
+    implementingRegulations: [
+      { title: "Medizinproduktegesetz 2021 (MPG 2021)", date: "2021-07", url: "https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=20011580", description: "BASG権限・罰則・言語・登録・手数料。", category: "国内補完法" },
+      { title: "Medizinprodukte-Betreiber-Verordnung (MPBV)", date: "2021", url: "https://www.basg.gv.at/en/healthcare-professionals/medical-device-operators", description: "医療機器使用者義務（維持管理・安全検査）。", category: "事業者規制" },
+      { title: "Medizinprodukte-Gebührenverordnung", date: "2021", url: "https://medizinprodukteregister.at/FAQs", description: "年間手数料。", category: "手数料" },
+    ],
+
+    relatedLaws: [
+      { title: "GDPR + Datenschutzgesetz", category: "データ保護", enacted: "2018", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679", relevance: "健康データに適用。" },
+    ],
+
+    classification: {
+      system: "EU MDR 4クラス制",
+      basis: "EU MDR Annex VIII。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低", description: "自己宣言。", examples: ["弾性包帯", "聴診器"], approvalPath: "自己宣言" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "中低", description: "NB関与。", examples: ["補聴器", "超音波装置"], approvalPath: "NB審査" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中高", description: "NB詳細審査。", examples: ["人工呼吸器", "輸液ポンプ"], approvalPath: "NB審査" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高", description: "最も厳格。", examples: ["人工心臓弁", "冠動脈ステント"], approvalPath: "NB + Expert Panel" },
+      ],
+      rules: ["EU MDR Annex VIII 直接適用"],
+      totalProductCodes: "EU CND",
+    },
+
+    conformityAssessment: {
+      overview: "EU MDR 適合性評価がそのまま適用。Medizinprodukteregister国内登録+年間手数料必要。",
+      routes: [{ name: "EU MDR Conformity Assessment", nameJa: "EU MDR 適合性評価", applicableClasses: ["全クラス"], description: "Annex IX〜XI。EUプロファイル参照。", subtypes: [], avgReviewTime: "EUプロファイル参照", fee: "NB + BASG年間手数料", url: "https://www.basg.gv.at/en/medical-devices" }],
+    },
+
+    electronicSubmission: { system: "EUDAMED + Medizinprodukteregister", url: "https://medizinprodukteregister.at/", description: "EUDAMED + 国内登録簿。年間手数料あり。", mandatory: true },
+    udi: { required: true, system: "EU UDI — EUDAMED", description: "MDR UDI要件適用。全クラスUDI: 2027年5月。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "EUDAMED義務化: 2026年5月。全クラスUDI: 2027年5月" },
+
+    postMarket: {
+      adverseEventReporting: { system: "EU Vigilance — BASG", mandatory: true, url: "https://www.basg.gv.at/en/medical-devices", description: "重篤有害事象をBASGに報告。FSNはドイツ語必須。" },
+      recalls: { authority: "BASG", description: "FSCA/FSNはBASGに通知。FSNドイツ語。", url: "https://www.basg.gv.at/en/medical-devices" },
+      surveillance: "EU MDR PMS/PSUR/PMCF適用。",
+    },
+
+    certificateOfFreeSale: { available: true, issuingAuthority: "BASG", name: "CFS", description: "BASGがCFSを発行。", processingTime: "要確認", url: "https://www.basg.gv.at/en/medical-devices" },
+
+    reimbursement: {
+      system: "社会保険 + AIHTA HTA + 病院給付カタログ（MEL/LKF）",
+      authority: "Dachverband（旧HVB）/ AIHTA / BMASGK",
+      description: "社会保険制度。病院用機器はMELに包含。AIHTAがエビデンス評価。外来機器はDachverband保険給付カタログ。HTAが償還に統合。",
+      codingSystems: ["LKF/DRG", "MEL", "Heilbehelfe/Hilfsmittel"],
+      url: "https://aihta.at/",
+    },
+
+    marketingRules: {
+      authority: "BASG",
+      description: "ドイツ語ラベリング・IFU必須。専門家向けは英語可の場合あり。FSNドイツ語必須。",
+      keyRules: ["ドイツ語ラベリング・IFU必須", "FSN: ドイツ語", "インプラントカードもドイツ語"],
+    },
+
+    mdsap: { status: "非参加", description: "EU加盟国としてMDSAP非参加。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "実質必須。" }, iso14971: { accepted: true, notes: "EN ISO 14971:2019+A11:2021。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006+A1:2015。" }, iec60601: { accepted: true, notes: "EN IEC 60601シリーズ。" }, others: [],
+    },
+
+    recentDevelopments: [
+      { date: "2021-07", title: "MPG 2021施行", description: "MDR/IVDR国内補完法。BASG権限強化・登録・手数料。" },
+      { date: "2024", title: "EUDAMED義務化準備", description: "2026年5月義務化に向け事業者準備推進。" },
     ],
 
     lastUpdated: "2026-04-02",
