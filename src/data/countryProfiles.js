@@ -12178,6 +12178,321 @@ export const COUNTRY_PROFILES = [
     verified: null,
   },
 
+  /* ================================================================
+   *  ロシア (RUS)
+   * ================================================================ */
+  {
+    code: "RUS",
+    country: "ロシア",
+    countryEn: "Russian Federation",
+    region: "Europe",
+    flag: "🇷🇺",
+    legalSystemOverview: {
+      type: "連邦制・大統領制（Presidential federal republic）",
+      description: "ロシアの医療機器規制は連邦保健省（Ministry of Health）とRoszdravnadzor（連邦保健監督局）が中心となり運営される。2016年以降、ユーラシア経済連合（EAEU）の統一規制枠組みへの移行が進行中であり、2025年12月31日までにEAEU登録への完全移行が予定されている。GOST ISO 13485に基づくQMS適合が高リスク機器で義務化されており、2025年からはData Matrixコード（Honest Sign）による単品レベルのトレーサビリティが全医療機器に拡大された。",
+      keyCharacteristics: [
+        "Roszdravnadzor が市販前登録・市販後監視を統括",
+        "EAEU統一登録制度への段階的移行（2025年末期限）",
+        "4クラスリスク分類（Class I / IIa / IIb / III）",
+        "GOST ISO 13485 に基づくQMS要求",
+        "Honest Sign（Data Matrixコード）による単品トレーサビリティ",
+        "ロシア国内臨床試験が原則必要（Class IIa以上）",
+      ],
+    },
+    authorities: [
+      { name: "Roszdravnadzor", fullName: "Federal Service for Surveillance in Healthcare", localName: "Росздравнадзор", role: "医療機器の登録審査、市販後監視、安全性情報収集、リコール管理、GMP査察を統括", url: "https://roszdravnadzor.gov.ru/", isPrimary: true },
+      { name: "FGBU", fullName: "Federal State Budgetary Institution (VNIIMT / Roszdravnadzor Expert Organizations)", localName: "ФГБУ", role: "技術審査・臨床試験評価等のエキスパート機関。Roszdravnadzorの委託により技術文書の専門評価を実施", url: "https://roszdravnadzor.gov.ru/", isPrimary: false },
+      { name: "Ministry of Health", fullName: "Ministry of Health of the Russian Federation", localName: "Министерство здравоохранения РФ", role: "医療機器規制に関する法令・省令の策定。臨床試験許可の発行", url: "https://minzdrav.gov.ru/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（Roszdravnadzor直接審査 + EAEU検査機関）", description: "欧州型のNotified Body制度は存在しない。Roszdravnadzorが直接登録審査を実施し、技術試験は認定試験機関が行う。EAEU制度ではConformity Assessment Body（CAB）が技術文書審査を実施するが、最終登録判断はRoszdravnadzorが行う。", bodies: [] },
+    deviceDefinition: { legalDefinition: "疾病の予防、診断、治療、リハビリテーションの目的で使用される器具・装置・機器・材料等であって、薬理学的・免疫学的・代謝的手段によらず主たる目的作用を発揮するもの（連邦法No.323-FZ第38条）", scope: "体外診断用医療機器（IVD）、ソフトウェア医療機器（SaMD）、AI搭載医療ソフトウェアを含む。コンビネーション製品は主要な作用機序に基づき分類。", notes: "2025年9月1日から、従来型機器・ソフトウェア・AI搭載ソフトウェアに区分した技術文書要件が導入。サイバーセキュリティ要件がソフトウェア医療機器に義務化。" },
+    primaryLaw: { title: "連邦法 No.323-FZ「ロシア連邦における国民の健康保護の基本に関する法律」", originalTitle: "Федеральный закон № 323-ФЗ", enacted: "2011-11-21", lastAmended: "2025", url: "http://www.consultant.ru/document/cons_doc_LAW_121895/", description: "ロシアにおける医療機器規制の根幹法。医療機器の定義、登録義務、市販後監視の基本原則を規定。政府決定（Постановление）および保健省令（Приказ）により詳細を実施。" },
+    implementingRegulations: [
+      { title: "政府決定 No.1416「医療機器の国家登録手続きに関する規則」", date: "2012-12-27", url: "http://government.ru/docs/all/81568/", description: "医療機器の国家登録手続き、必要書類、審査期間等を規定する主要な実施規則。2025年3月1日から新規則（保健省令 No.181n）に段階的に移行。", category: "登録手続き" },
+      { title: "保健省令 No.181n（2025年4月11日）", date: "2025-04-11", url: "https://minzdrav.gov.ru/", description: "2025年9月1日施行。技術文書要件を大幅改訂。従来型機器・ソフトウェア・AI搭載ソフトウェアへの区分別要件、カラーモックアップ義務、リスクマネジメント強化、サイバーセキュリティ義務を導入。", category: "技術文書" },
+      { title: "EAEU理事会決定 No.46「医療機器の登録及び専門家審査に関する規則」", date: "2016-02-12", url: "https://docs.eaeunion.org/", description: "EAEU統一医療機器登録制度の基本規則。EAEU登録証は加盟5カ国（ロシア、ベラルーシ、カザフスタン、アルメニア、キルギス）で有効。", category: "EAEU規制" },
+      { title: "EAEU理事会決定 No.173「リスクベース分類規則」", date: "2018", url: "https://docs.eaeunion.org/", description: "EAEU統一の医療機器リスク分類規則。Class I / IIa / IIb / III の4クラス分類をIMDRFルールに整合して規定。", category: "分類" },
+      { title: "GOST ISO 13485-2017「医療機器 — 品質マネジメントシステム」", date: "2017", url: "https://www.gost.ru/", description: "ISO 13485:2016のロシア国家標準（GOST）採用版。Class IIa（滅菌）/ IIb / III機器の登録前QMS査察で適合が必要。", category: "QMS" },
+    ],
+    relatedLaws: [
+      { title: "連邦法 No.152-FZ「個人データに関する法律」", category: "データ保護", enacted: "2006-07-27", url: "http://www.consultant.ru/document/cons_doc_LAW_61801/", relevance: "医療機器から取得される患者データの処理に適用。データのロシア国内保存義務（データローカリゼーション）がある。" },
+      { title: "連邦法 No.488-FZ「工業政策に関する法律」", category: "国産化政策", enacted: "2014-12-31", url: "http://www.consultant.ru/document/cons_doc_LAW_173119/", relevance: "医療機器の国産化推進政策。政府調達における国産品優遇措置（第三国制限を含む）の法的根拠。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（EAEU整合）",
+      basis: "EAEU理事会決定No.173に基づくリスクベース分類。IMDRFルールに整合。",
+      classes: [
+        { name: "Class I", nameJa: "クラス1（低リスク）", riskLevel: "低", description: "人体への潜在的リスクが最小限の医療機器。", examples: ["手術用メス", "聴診器", "ガーゼ", "松葉杖"], approvalPath: "登録（簡易審査）— Roszdravnadzor" },
+        { name: "Class IIa", nameJa: "クラス2a（中低リスク）", riskLevel: "中低", description: "中程度のリスクを有する医療機器。", examples: ["超音波診断装置", "歯科用材料", "補聴器", "シリンジポンプ"], approvalPath: "登録（技術審査 + 滅菌品はQMS査察）— Roszdravnadzor" },
+        { name: "Class IIb", nameJa: "クラス2b（中高リスク）", riskLevel: "中高", description: "中〜高程度のリスクを有する医療機器。臨床試験が原則必要。QMS査察必須。", examples: ["人工呼吸器", "透析器", "骨接合プレート", "放射線治療装置"], approvalPath: "登録（技術審査 + 臨床試験 + QMS査察）— Roszdravnadzor" },
+        { name: "Class III", nameJa: "クラス3（高リスク）", riskLevel: "高", description: "人体に重大なリスクを与える高リスク医療機器。厳格な臨床試験とQMS査察が必須。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント", "人工関節"], approvalPath: "登録（技術審査 + 臨床試験 + QMS査察 + 市販後モニタリング計画）— Roszdravnadzor" },
+      ],
+      rules: ["EAEU理事会決定No.173の分類ルールに基づく判定", "IVDは別途分類体系あり", "SaMDは機能・リスクに応じてClass I〜IIIに分類", "分類は製造業者が判断し、Roszdravnadzorが登録時に確認"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "全クラスの医療機器はRoszdravnadzorへの国家登録が必要。Class IIa（滅菌）/ IIb / IIIは登録前のQMS査察（GOST ISO 13485適合）が2024年1月1日から義務化。Class IIa以上は原則としてロシア国内臨床試験が必要（一部免除あり）。外国メーカーはロシア国内のAuthorized Representative（権限受任者）の設置が必須。EAEU登録制度への段階的移行中。",
+      routes: [
+        { name: "National Registration (国家登録)", nameJa: "ロシア国家登録（RZN証明書）", applicableClasses: ["Class I", "Class IIa", "Class IIb", "Class III"], description: "Roszdravnadzorに申請し、技術審査、臨床試験評価（該当する場合）、QMS査察（該当する場合）を経て登録証（RZN）を取得。登録証の有効期限なし。2025年末まで申請可能。", subtypes: ["新規登録", "変更登録", "更新"], avgReviewTime: "6〜12ヶ月（Class III）/ 4〜6ヶ月（Class I/IIa）", fee: "申請区分により異なる（国家手数料規定に基づく）", url: "https://roszdravnadzor.gov.ru/" },
+        { name: "EAEU Registration (EAEU統一登録)", nameJa: "EAEU統一登録証", applicableClasses: ["Class I", "Class IIa", "Class IIb", "Class III"], description: "EAEU加盟国共通の登録制度。EAEU登録証は加盟5カ国で有効。2026年1月1日以降は原則としてEAEU登録のみが有効。", subtypes: ["新規登録", "変更登録"], avgReviewTime: "12〜18ヶ月", fee: "加盟国ごとの手数料規定による", url: "https://docs.eaeunion.org/" },
+      ],
+    },
+    electronicSubmission: { system: "Gosuslugi / Roszdravnadzor電子申請ポータル", url: "https://roszdravnadzor.gov.ru/", description: "2025年9月1日以降、全申請はGosuslugiポータルまたはRoszdravnadzorウェブサイトの電子アカウントを通じた電子提出が必須。書類は電子文書または署名付きスキャンコピーで提出。", mandatory: true },
+    udi: { required: true, system: "Honest Sign（Честный знак）/ Data Matrixコード", description: "2025年9月1日から、全医療機器に対しData Matrixコードによる単品レベルのトレーサビリティが義務化。ロシア国営のHonest Signシステムを通じて製造・流通・販売の全過程を追跡。", url: "https://chestnyznak.ru/", timeline: "2025年9月1日〜: 全医療機器で単品トレーサビリティ（Data Matrix）義務化" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（Roszdravnadzor）", mandatory: true, url: "https://roszdravnadzor.gov.ru/", description: "製造業者・流通業者・医療機関は、医療機器に関連する有害事象を発見から15日以内にRoszdravnadzorに報告する義務がある。Class III / Class IIb植込み型機器は年次安全性報告が必要（2021年1月以降の登録分）。" },
+      recalls: { authority: "Roszdravnadzor", description: "Roszdravnadzorの命令または製造業者の自主判断によるリコール。安全性情報に基づく登録の一時停止・取消権限あり。2025年11月からリスクベース型監督モデルに移行。", url: "https://roszdravnadzor.gov.ru/" },
+      surveillance: "Roszdravnadzorによる定期的GMP査察、市販後臨床モニタリング（Class III / Class IIb植込み型）、安全性情報の収集・分析。2025年11月からリスクベース型監督に移行。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "Roszdravnadzor", name: "自由販売証明書（Certificate of Free Sale）", description: "ロシアで登録済みの医療機器について、Roszdravnadzorが自由販売証明書を発行。ロシアへの登録申請時に外国CFS提出は任意。", processingTime: "2〜4週間", url: "https://roszdravnadzor.gov.ru/" },
+    reimbursement: { system: "強制医療保険制度（OMS: Обязательное медицинское страхование）", authority: "連邦強制医療保険基金（FFOMS）/ 保健省", description: "医療機器の償還は主にOMS（強制医療保険）のDRG類似包括払い（KSG）および高度医療（VMP）予算を通じて行われる。医療機器の個別償還制度は限定的で、主に高度医療技術（ВМП）枠で実施。", codingSystems: ["KSG（臨床統計群）コード", "VMP（高度医療技術）コード"], url: "https://www.ffoms.gov.ru/" },
+    marketingRules: { authority: "Roszdravnadzor / FAS（連邦独占禁止局）", description: "医療機器の広告はロシア連邦広告法（No.38-FZ）により規制。虚偽・誤解を招く広告は禁止。FAS（連邦独占禁止局）が広告規制の主要な執行機関。", keyRules: ["虚偽・誇大広告の禁止", "未登録医療機器の広告禁止", "登録番号の広告への記載義務", "消費者向け広告に関する制限", "FASによる行政処分権限"] },
+    mdsap: { status: "非参加", description: "ロシアはMDSAPに参加していない。ロシア独自のGOST ISO 13485査察が必要。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "GOST ISO 13485-2017としてロシア国家標準化。Class IIa（滅菌）/ IIb / III機器の登録前QMS査察で適合が必須。" },
+      iso14971: { accepted: true, notes: "GOST R ISO 14971としてロシア国家標準化。リスクマネジメント文書の技術審査時の提出が必要。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器の登録でGOST R IEC 62304適合が要求される。2025年9月からSaMD・AI-SaMDで強化。" },
+      iec60601: { accepted: true, notes: "GOST R IEC 60601シリーズとしてロシア国家標準化。医用電気機器の安全性試験で適合が必要。" },
+      others: [
+        { name: "GOST R ISO 15223-1-2023", notes: "医療機器ラベリング記号の標準。2025年からカラーモックアップ義務化。" },
+        { name: "GOST R ISO 10993シリーズ", notes: "生物学的安全性評価。EAEU決定No.38でも要求。" },
+      ],
+    },
+    recentDevelopments: [
+      { date: "2025-09", title: "保健省令No.181n施行（技術文書要件の大幅改訂）", description: "機器種別ごとの区分別要件、カラーモックアップ義務、サイバーセキュリティ要件を導入。" },
+      { date: "2025-09", title: "Honest Sign全医療機器義務化", description: "全医療機器に対し単品レベルのData Matrixコードによるトレーサビリティが義務化。" },
+      { date: "2025-11", title: "リスクベース型監督モデル導入", description: "Roszdravnadzorが予防的訪問制度と遠隔監督を導入。" },
+      { date: "2024-01", title: "QMS査察の義務化拡大", description: "Class IIa（滅菌）/ IIb / III機器の登録前QMS査察が義務化。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  /* ================================================================
+   *  ポーランド (POL)
+   * ================================================================ */
+  {
+    code: "POL",
+    country: "ポーランド",
+    countryEn: "Republic of Poland",
+    region: "Europe",
+    flag: "🇵🇱",
+    legalSystemOverview: {
+      type: "EU加盟国・議会共和制",
+      description: "ポーランドはEU加盟国としてEU MDR（Regulation 2017/745）およびIVDR（Regulation 2017/746）が直接適用される。国内実施法として2022年4月7日医療機器法を制定し、広告規制等のEU規則を補完する事項を規定。URPL が管轄当局として機能する。",
+      keyCharacteristics: ["EU MDR / IVDR が直接適用", "URPL が管轄当局（Competent Authority）", "2022年医療機器法で広告規制等を独自に強化", "EU MDRに基づく4クラス分類（I / IIa / IIb / III）", "CEマーキングが市場投入の前提条件", "EUDAMED登録が順次義務化"],
+    },
+    authorities: [
+      { name: "URPL", fullName: "Office for Registration of Medicinal Products, Medical Devices and Biocidal Products", localName: "Urząd Rejestracji Produktów Leczniczych, Wyrobów Medycznych i Produktów Biobójczych", role: "医療機器の市場監視、臨床試験監督、ビジランス報告管理、EUDAMED連携、広告規制の執行を統括", url: "https://www.urpl.gov.pl/", isPrimary: true },
+      { name: "NFZ", fullName: "National Health Fund", localName: "Narodowy Fundusz Zdrowia", role: "医療機器を含む医療技術の保険償還管理", url: "https://www.nfz.gov.pl/", isPrimary: false },
+      { name: "AOTMiT", fullName: "Agency for Health Technology Assessment and Tariff System", localName: "Agencja Oceny Technologii Medycznych i Taryfikacji", role: "医療技術評価（HTA）の実施。NFZへの償還推奨の提供", url: "https://www.aotmit.gov.pl/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "EU Notified Bodies（EU MDR/IVDR指定認証機関）", description: "EU MDRの枠組み内でNotified Body制度が適用される。Class IIa以上の機器はNotified Bodyによる適合性評価が必要。ポーランド国内NBは限定的だが、他EU加盟国のNB認証も有効。", bodies: [] },
+    deviceDefinition: { legalDefinition: "EU MDR Article 2(1)に定義される医療機器と同一。", scope: "IVDはIVDR適用。SaMD、付属品、美容目的の特定製品（Annex XVI）を含む。", notes: "ポーランド国内法で追加の定義は行わず、EU MDR/IVDRの定義をそのまま適用。" },
+    primaryLaw: { title: "2022年4月7日医療機器法（Ustawa o wyrobach medycznych）", originalTitle: "Ustawa z dnia 7 kwietnia 2022 r. o wyrobach medycznych", enacted: "2022-04-07", lastAmended: "2023-07-01", url: "https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20220000974", description: "EU MDR/IVDRを補完するポーランド国内実施法。広告規制の詳細規定、輸入業者・流通業者の追加義務、URPLの権限・罰則規定を規定。2023年7月1日に広告規制関連条項が完全施行。" },
+    implementingRegulations: [
+      { title: "EU MDR — Regulation (EU) 2017/745", date: "2017-05-05", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0745", description: "EU全域で直接適用される医療機器規則。2021年5月26日から完全適用。", category: "EU規則" },
+      { title: "EU IVDR — Regulation (EU) 2017/746", date: "2017-05-05", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0746", description: "体外診断用医療機器に関するEU規則。2022年5月26日から完全適用。", category: "EU規則（IVD）" },
+      { title: "保健大臣令（2023年4月21日）— 医療機器広告に関する規則", date: "2023-04-21", url: "https://www.urpl.gov.pl/", description: "2022年医療機器法第55条・56条に基づく広告規制の実施細則。2023年7月1日施行。", category: "広告規制" },
+    ],
+    relatedLaws: [
+      { title: "GDPR — Regulation (EU) 2016/679", category: "データ保護", enacted: "2016-04-27", url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679", relevance: "医療機器から取得される健康データの処理に適用。ポーランドではUODOが所管。" },
+      { title: "医薬品法（Prawo farmaceutyczne）", category: "医薬品規制", enacted: "2001-09-06", url: "https://isap.sejm.gov.pl/", relevance: "コンビネーション製品の規制に関連。" },
+    ],
+    classification: {
+      system: "EU MDRリスクベース4クラス分類",
+      basis: "EU MDR Annex VIIIの分類ルールに基づく。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI（低リスク）", riskLevel: "低", description: "低リスクの医療機器。自己宣言による適合性評価。", examples: ["包帯", "車椅子", "手術用メス（非滅菌）", "医療用ベッド"], approvalPath: "自己宣言 → CEマーキング → EUDAMED登録" },
+        { name: "Class IIa", nameJa: "クラスIIa（中低リスク）", riskLevel: "中低", description: "中程度の低リスク。Notified Bodyの関与が必要。", examples: ["超音波診断装置", "歯科用充填材", "補聴器", "吸引器"], approvalPath: "Notified Body審査 → CEマーキング → EUDAMED登録" },
+        { name: "Class IIb", nameJa: "クラスIIb（中高リスク）", riskLevel: "中高", description: "中〜高程度のリスク。", examples: ["人工呼吸器", "血液透析器", "骨接合プレート", "放射線治療装置"], approvalPath: "Notified Body審査（技術文書+QMS） → CEマーキング → EUDAMED登録" },
+        { name: "Class III", nameJa: "クラスIII（高リスク）", riskLevel: "高", description: "最高リスクの医療機器。臨床データに基づく最も厳格な適合性評価。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント", "乳房インプラント"], approvalPath: "Notified Body審査（技術文書+QMS+臨床評価） → CEマーキング → EUDAMED登録" },
+      ],
+      rules: ["EU MDR Annex VIIIの22分類ルールに基づく", "製造業者が分類を判断し、URPLが監視", "分類の相違がある場合はURPLが最終判断", "SaMD: Rule 11に基づき分類"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "EU MDRに基づく適合性評価がそのまま適用。Class Iは自己宣言、Class IIa以上はNotified Bodyの関与が必要。CEマーキング取得によりEU全域で流通可能。ポーランド独自の追加承認手続きはないが、EUDAMED登録とURPLへの通知義務がある。",
+      routes: [
+        { name: "Self-Declaration (Class I)", nameJa: "自己適合宣言（Class I）", applicableClasses: ["Class I"], description: "製造業者が技術文書を整備し、適合宣言書を作成してCEマーキングを貼付。", subtypes: [], avgReviewTime: "N/A（自己宣言）", fee: "N/A", url: "https://www.urpl.gov.pl/" },
+        { name: "Notified Body Assessment (Class IIa/IIb/III)", nameJa: "Notified Body適合性評価", applicableClasses: ["Class IIa", "Class IIb", "Class III"], description: "EU MDR Annex IX〜XIに基づく適合性評価手続き。", subtypes: ["Annex IX（QMS+技術文書審査）", "Annex X + Annex XI"], avgReviewTime: "6〜18ヶ月", fee: "Notified Bodyごとに設定", url: "https://www.urpl.gov.pl/" },
+      ],
+    },
+    electronicSubmission: { system: "EUDAMED + URPLポータル", url: "https://ec.europa.eu/tools/eudamed/", description: "EUDAMED が順次稼働中。ポーランド国内の臨床試験申請等はURPLポータルを通じて提出。", mandatory: true },
+    udi: { required: true, system: "EU UDI制度（EU MDR Article 27）", description: "EU MDRに基づくUDI制度。Basic UDI-DIとUDI-DIのEUDAMEDデータベース登録およびラベルへの表示が義務。", url: "https://ec.europa.eu/tools/eudamed/", timeline: "Class III・植込み型: 義務化済み / Class IIa・IIb: 段階的義務化中 / Class I: EUDAMED全面稼働後" },
+    postMarket: {
+      adverseEventReporting: { system: "EU MDR Article 87 — ビジランスシステム", mandatory: true, url: "https://www.urpl.gov.pl/", description: "製造業者は重大インシデントを発見から15日以内にURPLに報告。ポーランド2022年法で医療従事者・使用者にも報告義務を規定。" },
+      recalls: { authority: "URPL / 製造業者", description: "FSCA はEU MDRに基づき実施。RAPEX/Safety Gate を通じたEU全域通報制度あり。", url: "https://www.urpl.gov.pl/" },
+      surveillance: "URPLによる市場監視。EU MDR Chapter VIIに基づくPMS・PMCFの監督。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "URPL", name: "Certificate of Free Sale", description: "CEマーキング取得済み医療機器について、URPLが自由販売証明書を発行。", processingTime: "約2〜4週間", url: "https://www.urpl.gov.pl/" },
+    reimbursement: { system: "国民健康基金（NFZ）", authority: "NFZ / AOTMiT / 保健省", description: "医療機器の保険償還はNFZ制度を通じて実施。高額医療機器はAOTMiTによるHTA評価を経て償還推奨。JGP（DRG類似）および個別償還カタログが存在。", codingSystems: ["JGP（DRG類似コード）", "NFZ償還カタログコード"], url: "https://www.nfz.gov.pl/" },
+    marketingRules: { authority: "URPL", description: "2022年医療機器法第55条・56条および2023年保健大臣令により詳細規則を規定。EU MDR Article 7を超える独自の厳格な広告規制を導入。", keyRules: ["広告の実施主体は事業者または書面承認者に限定", "虚偽・誤解を招く広告の禁止", "Class IIb/III植込み型の一般消費者向け広告を制限", "URPL所長が是正命令・広告停止命令を発出可能", "違反時の行政罰（最大200万PLN）"] },
+    mdsap: { status: "該当なし（EU加盟国）", description: "ポーランドはEU加盟国としてMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "EN ISO 13485:2016がQMS標準。NB適合性評価で事実上の要件。" },
+      iso14971: { accepted: true, notes: "EN ISO 14971:2019がEU整合規格。技術文書の必須要素。" },
+      iec62304: { accepted: true, notes: "EN IEC 62304:2006+A1:2015がSW整合規格。SaMDで要求。" },
+      iec60601: { accepted: true, notes: "EN IEC 60601シリーズがEU整合規格。" },
+      others: [
+        { name: "EN ISO 10993シリーズ", notes: "生物学的安全性評価のEU整合規格。" },
+        { name: "EN IEC 62443", notes: "サイバーセキュリティ要件。MDCG 2019-16関連。" },
+      ],
+    },
+    recentDevelopments: [
+      { date: "2023-07", title: "医療機器広告規制の完全施行", description: "2022年医療機器法の広告関連条項が完全施行。EU域内で最も厳格な医療機器広告規制の一つ。" },
+      { date: "2022-04", title: "2022年医療機器法の制定", description: "EU MDR/IVDRを補完する国内実施法が制定。" },
+      { date: "2025-12", title: "EU MDR移行期限延長に関するEC提案", description: "MDD/AIMDD認証医療機器の移行期限に関する追加措置を提案。ポーランドを含むEU全域に影響。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  /* ================================================================
+   *  クウェート (KWT)
+   * ================================================================ */
+  {
+    code: "KWT",
+    country: "クウェート",
+    countryEn: "State of Kuwait",
+    region: "Middle East & Africa",
+    flag: "🇰🇼",
+    legalSystemOverview: {
+      type: "立憲君主制（Constitutional Monarchy）",
+      description: "クウェートの医療機器規制は保健省（MOH）のMMPRRA（旧KDFA）が所管する。2025年の省令MD 387/2025により規制枠組みが更新された。GCC標準化機構（GSO）による地域統一規格との整合を推進中。FDA/CE認証等の参照国認可に依拠する部分が大きい。GHTF/IMDRF枠組みに基づく4クラス分類（A/B/C/D）を採用。",
+      keyCharacteristics: ["MOH / MMPRRA が医療機器規制を統括", "参照国認可（FDA、CE Mark、SFDA等）への依拠度が高い", "GCC地域統一規格との整合を推進", "4クラス分類（A / B / C / D）", "Local Authorized Representative（LAR）の設置が必須", "STED ベースの審査"],
+    },
+    authorities: [
+      { name: "MOH / MMPRRA", fullName: "Ministry of Health — Medicine and Medical Products Registration and Regulatory Administration", localName: "وزارة الصحة — إدارة تسجيل ورقابة الأدوية والمنتجات الطبية", role: "医療機器の登録審査、輸入許可、市販後監視を統括", url: "https://www.moh.gov.kw/", isPrimary: true },
+      { name: "KDFA", fullName: "Kuwait Drug and Food Control Administration", localName: "إدارة مراقبة الأغذية والأدوية", role: "食品・医薬品・医療機器の品質管理。MMPRRAと連携した市場監視", url: "https://www.moh.gov.kw/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（MOH直接審査 + 参照国認可依拠）", description: "欧州型のNotified Body制度は存在しない。MOH/MMPRRAが直接審査を行うが、FDA承認、CEマーキング、SFDA登録等の参照国認可に大きく依拠する。", bodies: [] },
+    deviceDefinition: { legalDefinition: "疾病の診断、予防、監視、治療、緩和の目的で使用される器具・装置・機械・ソフトウェア・材料等であって、薬理学的・免疫学的・代謝的手段によらず主たる目的作用を発揮するもの（GCC/IMDRF定義に準拠）。", scope: "IVDを含む。GCC統一規格に基づく定義。", notes: "SaMDに関する独自規定は2026年時点で策定中。" },
+    primaryLaw: { title: "省令 MD 387/2025（医療機器登録・規制に関する省令）", originalTitle: "Ministerial Decree MD 387/2025", enacted: "2025", lastAmended: "2025", url: "https://www.moh.gov.kw/", description: "医療機器の登録・輸入・流通・市販後監視に関する包括的省令。従来の省令No.381等を更新・統合。" },
+    implementingRegulations: [
+      { title: "GCC Technical Regulation for Medical Devices", date: "2015", url: "https://www.gso.org.sa/", description: "GCC加盟国共通の医療機器技術規制。Essential Principles、分類規則、ラベリング要件等を規定。", category: "GCC規制" },
+      { title: "省令 No.381（有害事象報告修正）", date: "2023", url: "https://www.moh.gov.kw/", description: "有害事象報告に関する修正省令。15日以内の報告義務等を規定。", category: "ビジランス" },
+    ],
+    relatedLaws: [
+      { title: "医薬品法（Pharmaceutical Law）", category: "医薬品規制", enacted: "1983", url: "https://www.moh.gov.kw/", relevance: "MOHの包括的な監督権限の法的根拠。" },
+    ],
+    classification: {
+      system: "リスクベース4クラス分類（GCC/GHTF整合）",
+      basis: "GHTF/IMDRF分類ルールに基づくリスクベース分類。GCC統一技術規制に準拠。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA（低リスク）", riskLevel: "低", description: "個人及び公衆衛生への潜在的リスクが最小限。", examples: ["ガーゼ", "聴診器", "手術用手袋", "車椅子"], approvalPath: "登録（簡易審査）— MOH/MMPRRA" },
+        { name: "Class B", nameJa: "クラスB（中低リスク）", riskLevel: "中低", description: "低〜中程度のリスク。", examples: ["超音波診断装置", "注射針", "歯科用充填材", "電動式車椅子"], approvalPath: "登録（STED審査）— MOH/MMPRRA" },
+        { name: "Class C", nameJa: "クラスC（中高リスク）", riskLevel: "中高", description: "中〜高程度のリスク。", examples: ["人工呼吸器", "透析器", "骨接合プレート", "血管カテーテル"], approvalPath: "登録（STED + 臨床データ審査）— MOH/MMPRRA" },
+        { name: "Class D", nameJa: "クラスD（高リスク）", riskLevel: "高", description: "高いリスク。最も厳格な審査。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント", "人工関節"], approvalPath: "登録（STED + 臨床データ + 参照国認可審査）— MOH/MMPRRA" },
+      ],
+      rules: ["GHTF/IMDRF分類ルールに基づく", "参照国（FDA/EU/SFDA等）での分類を参考", "IVDも同じA/B/C/D分類"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "全医療機器はMOH/MMPRRAへの登録が必要。Class B〜DはSTEDに基づく審査。参照国認可（FDA、CE、SFDA等）が事実上の前提条件。外国メーカーはLARの設置が必須。",
+      routes: [
+        { name: "Device Registration", nameJa: "クウェート医療機器登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "MOH/MMPRRAにSTED、参照国認可証明、QMS証明書等を提出。参照国認可の保有が審査を大幅に迅速化。", subtypes: ["新規登録", "変更登録", "更新"], avgReviewTime: "6〜8週間（参照国認可保有の場合）", fee: "申請区分により異なる", url: "https://www.moh.gov.kw/" },
+      ],
+    },
+    electronicSubmission: { system: "MOH電子サービスポータル", url: "https://eservices.moh.gov.kw/", description: "MOHの電子サービスポータルを通じて一部のオンライン提出が可能。完全電子化は段階的に推進中。", mandatory: false },
+    udi: { required: false, system: "GCC UDI制度（策定中）", description: "クウェート独自のUDI制度は2026年時点で未導入。GCC全体でのUDI制度導入が検討中。", url: null, timeline: "未定。GCC全体でのUDI制度導入を検討中" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（MOH）", mandatory: true, url: "https://eservices.moh.gov.kw/SPCMS/DrugReaction.aspx", description: "省令No.381に基づき15日以内にMOH薬事監視チームに報告する義務。自主報告制度も併設。" },
+      recalls: { authority: "MOH / MMPRRA", description: "MOHの命令または自主リコール。GCC加盟国間の安全性情報共有体制あり。", url: "https://www.moh.gov.kw/" },
+      surveillance: "MOH/MMPRRAによる市販後データ収集・分析。GCC全体での市販後監視強化が計画中。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "クウェートからのCFS発行に関する公式制度の情報は未確認。輸入時には製造国のCFS提出が求められる場合がある。", processingTime: null, url: null },
+    reimbursement: { system: "政府主導型医療制度（MOH直轄病院 + 民間保険）", authority: "保健省（MOH）", description: "国民に対し政府病院での無料医療を提供。医療機器の調達はMOH直轄病院の公共調達。個別の医療機器償還制度は未整備。", codingSystems: [], url: "https://www.moh.gov.kw/" },
+    marketingRules: { authority: "MOH", description: "詳細な医療機器広告法規は未整備。虚偽広告は一般消費者保護法等により規制。", keyRules: ["虚偽・誇大広告の禁止", "未登録医療機器の広告禁止", "MOH承認表示内容の遵守"] },
+    mdsap: { status: "非参加", description: "クウェートはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証は登録時に提出を求められるQMS証明の主要形式。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの実施がSTED提出時に要求される。" },
+      iec62304: { accepted: false, notes: "独自の要求は限定的。参照国認可で間接的に要求される場合あり。" },
+      iec60601: { accepted: true, notes: "安全性試験結果がSTED提出時に参照される。" },
+      others: [{ name: "GCC Essential Principles of Safety and Performance", notes: "GCC統一技術規制の基本要件。GHTF/IMDRF準拠。" }],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "省令MD 387/2025の発効", description: "MMPRRA体制の下で規制枠組みを刷新。" },
+      { date: "2025", title: "UDI制度導入の検討", description: "GCC全体でのUDI制度導入が検討開始。" },
+      { date: "2023", title: "有害事象報告制度の改訂", description: "15日以内の報告義務が明確化。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  /* ================================================================
+   *  カタール (QAT)
+   * ================================================================ */
+  {
+    code: "QAT",
+    country: "カタール",
+    countryEn: "State of Qatar",
+    region: "Middle East & Africa",
+    flag: "🇶🇦",
+    legalSystemOverview: {
+      type: "絶対君主制（Absolute Monarchy）",
+      description: "カタールの医療機器規制は公衆衛生省（MOPH）のPharmacy and Drug Control Department（PDCD）が所管する。植込み型医療機器のみが正式登録の対象であり、非植込み型は輸入許可制度で管理される。GHTF創設国による事前認可が市場参入の前提条件。規制制度は発展途上。",
+      keyCharacteristics: ["MOPH / PDCD が規制当局", "植込み型医療機器のみ正式登録が必要", "非植込み型は輸入許可制度で管理", "GHTF創設国の事前認可が前提条件", "Local Authorized Representative（AR）の設置が必須", "規制制度は発展途上・GCC統一化を推進中"],
+    },
+    authorities: [
+      { name: "MOPH / PDCD", fullName: "Ministry of Public Health — Pharmacy and Drug Control Department", localName: "وزارة الصحة العامة — إدارة الصيدلة ومراقبة الأدوية", role: "植込み型医療機器の登録審査、輸入許可の発行、市販後監視を統括", url: "https://www.moph.gov.qa/", isPrimary: true },
+      { name: "MEC", fullName: "Ministry of Economy and Commerce", localName: "وزارة الاقتصاد والتجارة", role: "非植込み型医療機器の市場認可（輸入許可）に関与", url: "https://www.mec.gov.qa/", isPrimary: false },
+    ],
+    notifiedBodies: { system: "該当なし（MOPH直接審査 + 参照国認可依拠）", description: "Notified Body制度は存在しない。GHTF創設国の事前認可に大きく依拠。", bodies: [] },
+    deviceDefinition: { legalDefinition: "GHTF/IMDRF定義に準拠。薬理学的・免疫学的・代謝的手段によらず主たる目的作用を発揮するもの。", scope: "IVDを含む。植込み型は登録対象、非植込み型は輸入許可対象。", notes: "SaMDに関する独自規定は2026年時点で未整備。" },
+    primaryLaw: { title: "公衆衛生省令（医療機器登録・輸入に関する規則）", originalTitle: null, enacted: "要確認（包括的法典なし）", lastAmended: "要確認", url: "https://www.moph.gov.qa/", description: "包括的な単一法典ではなく、MOPHの省令・通達・手続規定等の組み合わせで構成。統一的な医療機器法は2026年時点で未確認。" },
+    implementingRegulations: [
+      { title: "MOPH/PDCD 医療機器登録手続きガイダンス", date: null, url: "https://www.moph.gov.qa/", description: "植込み型医療機器の登録に必要な書類・手続きを規定。", category: "登録手続き" },
+      { title: "GCC Technical Regulation for Medical Devices", date: "2015", url: "https://www.gso.org.sa/", description: "GCC加盟国共通の医療機器技術規制。カタールは段階的に国内実施を推進中。", category: "GCC規制" },
+    ],
+    relatedLaws: [
+      { title: "データプライバシー保護法（Law No. 13 of 2016）", category: "データ保護", enacted: "2016", url: "https://www.moj.gov.qa/", relevance: "医療機器から取得される健康データの処理に適用される可能性がある。" },
+    ],
+    classification: {
+      system: "参照国分類（FDA/EU MDR準拠）",
+      basis: "独自の分類体系は限定的。FDA分類またはEU MDR分類を受入。",
+      classes: [
+        { name: "Class I", nameJa: "クラスI（低リスク）", riskLevel: "低", description: "低リスク。FDA Class IまたはEU Class I相当。", examples: ["包帯", "聴診器", "松葉杖", "医療用手袋"], approvalPath: "輸入許可 — MOPH/PDCD（登録不要）" },
+        { name: "Class IIa / II", nameJa: "クラスIIa / II（中リスク）", riskLevel: "中", description: "中程度のリスク。", examples: ["超音波診断装置", "電動式車椅子", "シリンジポンプ", "コンタクトレンズ"], approvalPath: "輸入許可 — MOPH/PDCD" },
+        { name: "Class III (植込み型)", nameJa: "クラスIII / 植込み型（高リスク）", riskLevel: "高", description: "高リスクの植込み型医療機器。正式登録が必要。", examples: ["心臓ペースメーカー", "人工心臓弁", "冠動脈ステント", "人工関節", "乳房インプラント"], approvalPath: "正式登録 — MOPH/PDCD + 参照国認可必須" },
+      ],
+      rules: ["GHTF創設国の分類を受入", "植込み型は必ず正式登録", "非植込み型は輸入許可制度で管理", "独自分類ルールはGCC統一化の中で検討中"],
+      totalProductCodes: null,
+    },
+    conformityAssessment: {
+      overview: "植込み型のみがMOPH/PDCDへの正式登録を必要とする。非植込み型は輸入許可で管理。GHTF創設国の事前認可が前提条件。外国メーカーはLocal AR設置が必須。",
+      routes: [
+        { name: "Implantable Device Registration", nameJa: "植込み型医療機器登録", applicableClasses: ["Class III (植込み型)"], description: "MOPH/PDCDに登録書類一式を提出。PDCD審査・承認を経て登録証を取得。", subtypes: ["新規登録", "変更登録"], avgReviewTime: "数週間〜数ヶ月", fee: "MOPH規定による", url: "https://www.moph.gov.qa/" },
+        { name: "Import Permit", nameJa: "非植込み型機器 輸入許可", applicableClasses: ["Class I", "Class IIa / II"], description: "非植込み型の輸入にはMOPH/PDCDの輸入許可が必要。", subtypes: [], avgReviewTime: "数日〜数週間", fee: "MOPH規定による", url: "https://www.moph.gov.qa/" },
+      ],
+    },
+    electronicSubmission: { system: "MOPH DHP ポータル", url: "https://dhp.moph.gov.qa/", description: "一部のオンライン手続きが可能。完全電子化は段階的に推進中。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "独自のUDI制度は2026年時点で未導入。GCC統一UDI制度の検討に参加中。", url: null, timeline: "未定。GCC統一UDI制度の導入を検討中" },
+    postMarket: {
+      adverseEventReporting: { system: "有害事象報告制度（MOPH/PDCD）", mandatory: true, url: "https://www.moph.gov.qa/", description: "植込み型登録機器については有害事象報告義務がある。非植込み型の市販後監視は限定的。" },
+      recalls: { authority: "MOPH / PDCD", description: "MOPHの命令または自主リコール。参照国でのリコール情報を監視。", url: "https://www.moph.gov.qa/" },
+      surveillance: "MOPH/PDCDによる市販後安全性監視。植込み型機器を中心に監視。制度は発展途上。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: null, name: null, description: "CFS発行に関する公式制度の情報は未確認。登録時には製造国のCFS提出が求められる場合がある。", processingTime: null, url: null },
+    reimbursement: { system: "政府主導型医療制度（公的医療 + 民間保険）", authority: "MOPH / Hamad Medical Corporation（HMC）", description: "カタール国民はHMC等の公的医療機関で低負担の医療を受けられる。医療機器調達は公共調達中心。個別の償還制度は未整備。", codingSystems: [], url: "https://www.moph.gov.qa/" },
+    marketingRules: { authority: "MOPH", description: "詳細な医療機器広告法規は未整備。虚偽広告は一般法により禁止。", keyRules: ["虚偽・誇大広告の禁止", "未登録・未許可医療機器の広告禁止", "アラビア語・英語での表示義務"] },
+    mdsap: { status: "非参加", description: "カタールはMDSAPに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "植込み型機器の登録時に推奨/要求。参照国認可でISO 13485適合が前提。" },
+      iso14971: { accepted: true, notes: "参照国認可の枠組みで間接的に要求。" },
+      iec62304: { accepted: false, notes: "独自の要求は未整備。参照国認可で確認されている場合に受入。" },
+      iec60601: { accepted: true, notes: "参照国の試験結果を受入。" },
+      others: [{ name: "GCC Essential Principles of Safety and Performance", notes: "GCC統一技術規制。段階的に国内実施を推進中。" }],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "SEHA健康保険制度の段階的導入", description: "国民皆保険に向けたSEHA制度を段階的に導入。医療機器の公的償還環境に影響する可能性。" },
+      { date: "2025", title: "GCC統一医療機器規制への段階的整合", description: "GCC統一技術規制の国内実施を推進中。UDI制度導入、市販後監視強化等がロードマップに含まれる。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
 ];
 
 // ===========================================================================
