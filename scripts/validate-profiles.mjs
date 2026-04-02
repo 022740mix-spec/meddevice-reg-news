@@ -125,6 +125,7 @@ const DOMAIN_ROOT_WHITELIST = new Set([
   "imda.moh.gov.vn",
   "dmec.moh.gov.vn",
   "zwfw.nmpa.gov.cn",
+  "mdma.sfda.gov.sa",
 ]);
 
 /** classification.classes の name から先頭の命名パターンを抽出 */
