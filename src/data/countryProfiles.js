@@ -12493,6 +12493,575 @@ export const COUNTRY_PROFILES = [
     verified: null,
   },
 
+  // =========================================================================
+  // --- JOR（ヨルダン） ---
+  // =========================================================================
+  {
+    code: "JOR",
+    country: "ヨルダン",
+    countryEn: "Hashemite Kingdom of Jordan",
+    region: "Middle East & Africa",
+    flag: "🇯🇴",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ヨルダンの医療機器規制はヨルダン食品医薬品庁（JFDA）が管轄する。2003年に設立されたJFDAは、薬事法（Drug & Pharmacy Law No. 88）に基づき医薬品・食品・医療機器を一元的に規制する。EU および FDA の分類モデルを受容しており、CE マークまたは FDA 認可を持つ機器に対する相互認証的なアプローチを採用。登録は比較的シンプルだが、Class III 機器にはより詳細な技術文書が要求される。",
+      keyCharacteristics: [
+        "JFDA による一元的な規制体制",
+        "EU/FDA 分類モデルの受容",
+        "CE マークまたは FDA 認可の機器は登録が簡素化",
+        "ローカルライセンス保有者（輸入業者）の指定が必須",
+        "登録有効期限なし（ラボ試験不要の場合）または5年",
+      ],
+    },
+    authorities: [
+      { name: "JFDA", fullName: "Jordan Food and Drug Administration", localName: "المؤسسة العامة للغذاء والدواء", role: "医療機器の登録・市販後監視・輸入管理", url: "https://www.jfda.jo/", isPrimary: true },
+      { name: "MOH Jordan", fullName: "Ministry of Health — Jordan", localName: "وزارة الصحة الأردنية", role: "医療政策全般・公立病院の調達管理", url: "https://www.moh.gov.jo/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（JFDA が直接登録を審査。EU/FDA の承認文書に依拠）",
+      description: "ヨルダンには欧州型の Notified Body 制度は存在しない。JFDA が申請書類を直接審査し、CE証明書またはFDA認可文書を主たるエビデンスとして登録判断を行う。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "JFDA の医療機器規制に基づき、疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。JFDA の医療機器部門が管轄。",
+      notes: "定義は GHTF/IMDRF の定義に概ね準拠しているが、ヨルダン固有の法的定義文書の公開は限定的。",
+    },
+    primaryLaw: {
+      title: "Drug & Pharmacy Law No. 88 of 1964（改正あり）",
+      originalTitle: "قانون الصيدلة والأدوية رقم 88",
+      enacted: "1964",
+      lastAmended: "随時改正（JFDA 設立法含む）",
+      url: "https://www.jfda.jo/",
+      description: "ヨルダンにおける医薬品・医療機器規制の根幹法。JFDA の設立根拠を含む。医療機器に関する具体的要件は JFDA が発出する規則・ガイドラインで規定。",
+    },
+    implementingRegulations: [
+      { title: "JFDA Medical Device Registration Instructions", date: null, url: "https://www.jfda.jo/", description: "医療機器の登録手続き、必要書類、審査基準を規定する JFDA 発出の指示文書。", category: "登録" },
+      { title: "JFDA Medical Device Import & Distribution Instructions", date: null, url: "https://www.jfda.jo/", description: "医療機器の輸入・流通に関する要件。ローカルライセンス保有者の要件を含む。", category: "輸入管理" },
+    ],
+    relatedLaws: [
+      { title: "JFDA Law（JFDA 設立法）", category: "組織法", enacted: "2003", url: "https://www.jfda.jo/", relevance: "JFDA の設立、権限、組織構成を規定。医療機器を含む規制対象の管轄範囲を定義。" },
+    ],
+    classification: {
+      system: "EU/FDA 分類モデルの受容（Class I / II / III）",
+      basis: "リスクベース（EU MDDまたはFDA分類を参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。一般的制御で安全性を確保。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "簡易登録" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中リスク", description: "中リスク医療機器。CE マークまたは FDA 認可文書が必要。", examples: ["超音波診断装置", "輸液ポンプ", "電動車椅子"], approvalPath: "標準登録（CE/FDA 証明書ベース）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。CE マーク（EC Full QA + Design Examination）または FDA PMA 承認が必要。より詳細な技術文書の提出が求められる。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "詳細審査（技術文書 + CE/FDA 証明書）" },
+      ],
+      rules: [
+        { id: "EU/FDA 参照分類", description: "JFDA は EU MDD/MDR または FDA の分類を参照して機器のクラスを決定する。ヨルダン独自の分類規則データベースは公開されていない。", url: "https://www.jfda.jo/" },
+      ],
+      totalProductCodes: "要確認（JFDA 独自のコード体系の公開情報なし）",
+    },
+    conformityAssessment: {
+      overview: "JFDA は CE マークまたは FDA 認可を持つ機器に対し、書類審査ベースの登録を実施。独自の臨床データ要求は基本的にない。",
+      routes: [
+        { name: "JFDA Medical Device Registration", nameJa: "JFDA 医療機器登録", applicableClasses: ["全クラス"], description: "CE 証明書または FDA 認可文書と、Free Sale Certificate、技術文書、ラベリング情報等を提出して登録。Class III はより詳細な文書が要求される。ラボ試験が必要な場合は追加期間。", subtypes: [], avgReviewTime: "4〜8ヶ月（ラボ試験不要の場合は短縮の可能性あり）", fee: "要確認（JFDA 料金表は随時改定）", url: "https://www.jfda.jo/" },
+      ],
+    },
+    electronicSubmission: { system: "要確認（JFDA オンラインポータルの有無は未確認）", url: "https://www.jfda.jo/", description: "JFDA への申請手続きの電子化状況は限定的な情報しか公開されていない。最新の申請方法は JFDA に直接確認が必要。", mandatory: false },
+    udi: { required: false, system: "要確認（UDI 制度の導入状況は未確認）", description: "ヨルダンでは現時点で IMDRF/FDA 型の UDI 制度が法的に義務化されているとの確認情報はない。CE マーク機器は EU UDI（EUDAMED）の要件を満たしている場合がある。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "JFDA 有害事象報告制度", mandatory: true, url: "https://www.jfda.jo/", description: "医療機器に関連する有害事象は JFDA に報告義務がある。詳細な報告手順・期限は JFDA のガイドラインに依拠。" },
+      recalls: { authority: "JFDA", description: "JFDA はリコール・Field Safety Corrective Action（FSCA）を管理。製造業者・輸入業者はリコール実施時に JFDA に通知義務。", url: "https://www.jfda.jo/" },
+      surveillance: "JFDA による市販後監視。詳細な PMS 制度の公開情報は限定的。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "JFDA", name: "Free Sale Certificate", description: "登録済み医療機器について JFDA が発行する自由販売証明書。登録申請時には原産国または参照国（スイス・豪州・カナダ・ノルウェー・英国）の CFS 提出が必要。", processingTime: "要確認", url: "https://www.jfda.jo/" },
+    reimbursement: { system: "公的医療保険 + 軍保険 + 民間保険", authority: "MOH Jordan / Royal Medical Services", description: "ヨルダンの医療保険制度は MOH 管轄の公的保険、軍（Royal Medical Services）、UNRWA（難民支援）、民間保険の複合体制。医療機器の償還は主に公立病院の調達予算を通じて行われる。独立した医療機器償還制度の公開情報は限定的。", codingSystems: ["要確認"], url: "https://www.moh.gov.jo/" },
+    marketingRules: { authority: "JFDA", description: "医療機器の広告・販促は JFDA の規制下にある。承認された適応のみの広告が原則。", keyRules: ["登録済み機器のみ広告可", "ラベリングは英語で記載（アラビア語追加を推奨）", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "ヨルダンは MDSAP プログラムに参加していない。ただし MDSAP 認証を保有する製造業者の ISO 13485 適合は間接的に考慮される可能性がある。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は CE マーク取得の前提として間接的に要求される。JFDA がISO 13485 を独自に法的義務として明示しているかは要確認。" },
+      iso14971: { accepted: true, notes: "CE マーク機器の技術文書にリスクマネジメント（ISO 14971）準拠が含まれる。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対し、CE/FDA 経由で間接的に参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として、CE マーク機器の適合要件に含まれる。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2026", title: "医薬品シリアライゼーション義務化（DataMatrix）", description: "JFDA は2026年を期限として医薬品の DataMatrix シリアライゼーションを義務化。医療機器への拡大可能性は要確認。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- BHR（バーレーン） ---
+  // =========================================================================
+  {
+    code: "BHR",
+    country: "バーレーン",
+    countryEn: "Kingdom of Bahrain",
+    region: "Middle East & Africa",
+    flag: "🇧🇭",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "バーレーンの医療機器規制は国家保健規制庁（NHRA）が管轄する。2009年の法律第38号に基づき設立された NHRA は、医薬品・医療機器・医療施設の規制を一元的に担う。分類体系は EU MDR に準拠した Class I / IIa / IIb / III および IVD A-D を採用。米国 FDA、英国 MHRA、豪州 TGA 等の国際的規制機関のガイドラインを参照し、バーレーン市場に合わせてカスタマイズしている。",
+      keyCharacteristics: [
+        "NHRA による一元的な規制体制",
+        "EU MDR ベースの5クラス分類（Class I / IIa / IIb / III / IVD A-D）",
+        "FDA・MHRA・TGA・SFDA 等の承認を参照",
+        "ローカル代理人（Authorized Representative）の指定が必須",
+        "登録有効期限は QAC（品質保証証明書）の有効期限に連動（1〜5年）",
+      ],
+    },
+    authorities: [
+      { name: "NHRA", fullName: "National Health Regulatory Authority", localName: "الهيئة الوطنية لتنظيم المهن والخدمات الصحية", role: "医療機器の登録・市販後監視・施設許可", url: "https://www.nhra.bh/", isPrimary: true },
+      { name: "MOH Bahrain", fullName: "Ministry of Health — Bahrain", localName: "وزارة الصحة", role: "医療政策全般・公立病院管理", url: "https://www.moh.gov.bh/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（NHRA が直接登録を審査。国際的承認文書に依拠）",
+      description: "バーレーンには Notified Body 制度は存在しない。NHRA が直接申請書類を審査する。CE マーク、FDA 認可、SFDA 承認等の国際的承認文書を主たるエビデンスとして使用。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "NHRA ガイドラインに基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。GHTF/IMDRF 定義に準拠。",
+      scope: "体外診断用医薬品（IVD）も規制対象。IVD は Class A〜D の独自分類。",
+      notes: "NHRA Medical Devices Registration Guideline Ver 7.0 が現行の主要ガイドライン文書。",
+    },
+    primaryLaw: {
+      title: "Law No. 38 of 2009（NHRA 設立法）",
+      originalTitle: "قانون رقم 38 لسنة 2009",
+      enacted: "2009",
+      lastAmended: "随時改正",
+      url: "https://www.nhra.bh/",
+      description: "NHRA の設立、権限、組織構成を規定する基本法。医療機器を含む保健関連製品・サービスの規制権限を NHRA に付与。",
+    },
+    implementingRegulations: [
+      { title: "NHRA Medical Devices Registration Guideline (Ver 7.0)", date: null, url: "https://www.nhra.bh/Departments/MDR/MediaHandler/GenericHandler/documents/departments/MDR/guidelines/MDR_Guideline_Medical%20Device%20Registration_Ver%207.0.pdf", description: "医療機器の分類・登録手続き・必要書類・審査基準を包括的に規定する NHRA の主要ガイドライン。", category: "登録" },
+      { title: "NHRA Medical Devices Regulation Guidelines", date: null, url: "https://www.nhra.bh/departments/mdr/", description: "医療機器の市販後監視、ビジランス報告、施設許可等に関するガイドライン群。", category: "市販後・施設" },
+    ],
+    relatedLaws: [],
+    classification: {
+      system: "EU MDR ベースの分類（Class I / IIa / IIb / III / IVD A-D）",
+      basis: "リスクベース（EU MDR 分類規則を参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["弾性包帯", "聴診器", "手動外科器具"], approvalPath: "NHRA 登録（簡易書類）" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "低〜中リスク", description: "低中リスク医療機器。", examples: ["超音波診断装置", "歯科用充填材"], approvalPath: "NHRA 登録（標準書類 + QAC）" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中〜高リスク", description: "中高リスク医療機器。", examples: ["輸液ポンプ", "人工呼吸器", "X線装置"], approvalPath: "NHRA 登録（詳細書類 + QAC）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。最も厳格な審査。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "NHRA 登録（詳細技術文書 + QAC + 臨床データ）" },
+        { name: "IVD A-D", nameJa: "IVD クラスA〜D", riskLevel: "低〜高リスク（IVD専用分類）", description: "体外診断用医療機器。リスクに応じた A〜D のクラス。", examples: ["一般臨床化学検査キット（A）", "血液型検査（D）"], approvalPath: "NHRA IVD 登録" },
+      ],
+      rules: [{ id: "NHRA 分類ガイドライン", description: "NHRA は EU MDR の分類規則を参照しつつ、独自のガイドラインで分類手順を規定。", url: "https://www.nhra.bh/departments/mdr/" }],
+      totalProductCodes: "要確認（NHRA 独自のコード体系は未公開）",
+    },
+    conformityAssessment: {
+      overview: "NHRA は申請書類の審査により登録を行う。CE マーク、FDA 認可、SFDA 承認等の国際的認証を主たるエビデンスとして利用。",
+      routes: [
+        { name: "NHRA Medical Device Registration", nameJa: "NHRA 医療機器登録", applicableClasses: ["全クラス"], description: "登録フォーム、技術文書（取扱説明書・サービスマニュアル・カタログ）、ラベリング、QAC（ISO 13485 証明書、CE 証明書等）を提出。NHRA が6〜8週間で審査。", subtypes: [], avgReviewTime: "6〜8週間", fee: "要確認（NHRA 料金表を参照）", url: "https://www.nhra.bh/departments/mdr/" },
+      ],
+    },
+    electronicSubmission: { system: "NHRA オンラインポータル", url: "https://www.nhra.bh/", description: "NHRA はオンラインでの申請受付を実施。詳細な電子申請システムの仕様は NHRA に直接確認が必要。", mandatory: false },
+    udi: { required: false, system: "要確認（UDI 制度の独自導入は未確認）", description: "バーレーンでは現時点で IMDRF 型の UDI 制度が法的に義務化されているとの確認情報はない。CE マーク機器は EU UDI 要件を満たしている場合がある。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "NHRA ビジランス報告制度", mandatory: true, url: "https://www.nhra.bh/departments/mdr/", description: "有害事象およびフィールドセーフティに関する事項は NHRA に報告義務。過去5年分のフィールドセーフティノーティス記録の提出が登録時に必要。" },
+      recalls: { authority: "NHRA", description: "NHRA がリコール・FSCA を管理。製造業者・代理人はリコール実施時に NHRA に通知義務。", url: "https://www.nhra.bh/" },
+      surveillance: "NHRA による市販後監視。登録済み機器の詳細は2025年末までに NHRA ウェブサイトで公開予定。",
+    },
+    certificateOfFreeSale: { available: false, issuingAuthority: "NHRA", name: "要確認", description: "NHRA が Free Sale Certificate を発行するかは確認が必要。登録時に申請元国の CFS 提出は必要。", processingTime: "要確認", url: "https://www.nhra.bh/" },
+    reimbursement: { system: "公的医療制度（国民に対する無料医療サービス）+ 民間保険", authority: "MOH Bahrain", description: "バーレーン国民は公立病院で無料の医療サービスを受けられる。医療機器の調達は公立病院の調達予算を通じて行われる。独立した医療機器償還制度の公開情報は限定的。", codingSystems: ["要確認"], url: "https://www.moh.gov.bh/" },
+    marketingRules: { authority: "NHRA", description: "医療機器の広告・販促は NHRA の規制下にある。登録済み機器のみの広告が原則。", keyRules: ["NHRA 登録済み機器のみ広告・販促可", "虚偽・誇大広告の禁止", "ラベリングは英語（アラビア語の追加を推奨）"] },
+    mdsap: { status: "非参加", description: "バーレーンは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は QAC（品質保証証明書）として登録申請時に必要。SFDA 発行の QMS 証明書も受容。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して間接的に参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "登録済み医療機器データの NHRA ウェブサイト公開予定", description: "2025年末までに、全ての承認・許可済み医療機器の登録詳細が NHRA ウェブサイトで公開される予定。" },
+      { date: "2018", title: "NHRA 医療機器規制フレームワーク設立", description: "2018年に医療機器規制フレームワークを正式に確立。国際的な規制機関（FDA、MHRA、TGA）のガイドラインをバーレーン市場に適合させた。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- OMN（オマーン） ---
+  // =========================================================================
+  {
+    code: "OMN",
+    country: "オマーン",
+    countryEn: "Sultanate of Oman",
+    region: "Middle East & Africa",
+    flag: "🇴🇲",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "オマーンの医療機器規制は保健省（MOH）傘下の医薬品安全センター（Drug Safety Center / DGPADC: Directorate General of Pharmaceutical Affairs and Drug Control）が管轄する。2020年の大臣令第113号（Ministerial Decree 113/2020）が主たる規制根拠。GHTF/IMDRF の分類原則に準拠した Class A / B / C / D の4クラス分類を採用し、EU MDR のフレームワークとも整合性を持つ。",
+      keyCharacteristics: [
+        "MOH / DGPADC による中央規制体制",
+        "GHTF ベースの4クラス分類（Class A / B / C / D）",
+        "大臣令 113/2020 が主たる規制根拠",
+        "ローカル代理人（Authorized Representative）の指定が必須",
+        "登録有効期限5年",
+      ],
+    },
+    authorities: [
+      { name: "DGPADC / Drug Safety Center", fullName: "Directorate General of Pharmaceutical Affairs and Drug Control — Drug Safety Center", localName: "المديرية العامة للشؤون الصيدلانية والرقابة الدوائية", role: "医療機器の登録・市販後監視・輸入管理・施設許可", url: "https://www.moh.gov.om/en/hospitals-directorates/directorates-and-centers-at-hq/drug-safety-center/", isPrimary: true },
+      { name: "MOH Oman", fullName: "Ministry of Health — Oman", localName: "وزارة الصحة", role: "医療政策全般・上位監督", url: "https://www.moh.gov.om/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（MOH/DGPADC が直接審査）",
+      description: "オマーンには Notified Body 制度は存在しない。DGPADC が直接申請書類を審査し、登録判断を行う。CE 証明書、FDA 認可等の国際的認証文書を参照。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "大臣令 113/2020 に基づき、疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。GHTF/IMDRF 定義に準拠。",
+      scope: "体外診断用医薬品（IVD）も規制対象。IVD は独自の分類規則に従う。",
+      notes: "MOH はガイダンス文書（GD シリーズ）で詳細な定義・適用範囲を規定。GD-22（製造業者登録）、GD-3（Class C/D 登録）、GD-9（低リスク機器登録）等。",
+    },
+    primaryLaw: {
+      title: "Ministerial Decree 113/2020（薬局業務・医薬品企業規制執行令）",
+      originalTitle: "القرار الوزاري رقم 113/2020",
+      enacted: "2020",
+      lastAmended: null,
+      url: "https://decree.om/2020/moh20200113/",
+      description: "薬局業務の実務および医薬品企業を規制する執行令。医療機器の規制根拠を含む。DGPADC の権限を規定。",
+    },
+    implementingRegulations: [
+      { title: "GD-3: Guideline on Requirements of Class C & D Medical Devices Registration", date: null, url: "https://www.moh.gov.om/media/ov3mnntj/guidance-document-gd3-guideline-on-requirements-of-class-c-d-medical-devices-registration.pdf", description: "高リスク（Class C / D）医療機器の登録要件を詳細に規定。技術文書・臨床データ要件を含む。", category: "登録（高リスク）" },
+      { title: "GD-9: Requirements of Low Risk Medical Devices Registration", date: null, url: "https://moh.gov.om/media/peqd3ouo/gd9-requirements-of-low-risk-medical-devices-registration.pdf", description: "低リスク（Class A / B）医療機器の登録要件を規定。", category: "登録（低リスク）" },
+      { title: "GD-22: Guideline on Requirements of Medical Device Manufacturer Registration", date: null, url: "https://www.moh.gov.om/media/ubmn0pgh/guidance-document-gd-22-guideline-on-requirements-of-medical-device-manufacturer-registration-in-sultanate-of-oman.pdf", description: "医療機器製造業者のオマーンでの登録要件。GHTF 2010 ガイダンスを参照。", category: "製造業者登録" },
+      { title: "GD-14: Guideline on Medical Devices Bundling/Grouping Criteria", date: null, url: "https://www.moh.gov.om/media/4vbkgbw2/guidance-document-gd14-guideline-on-medical-devices-bundling-grouping-criteria-1.pdf", description: "医療機器のバンドリング・グルーピング基準を規定。", category: "申請手続き" },
+      { title: "GD-1: Medical Device Listing Guidance", date: null, url: "https://moh.gov.om/media/edhjumre/11plus5-listing-guidance.pdf", description: "医療機器のリスティング（データベース登録）要件を規定。", category: "リスティング" },
+    ],
+    relatedLaws: [],
+    classification: {
+      system: "GHTF ベースの4クラス分類（Class A / B / C / D）",
+      basis: "リスクベース（GHTF/IMDRF 分類原則に準拠）",
+      classes: [
+        { name: "Class A", nameJa: "クラスA", riskLevel: "低リスク", description: "低リスク医療機器。患者への直接的リスクが最小限。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "簡易登録（GD-9）" },
+        { name: "Class B", nameJa: "クラスB", riskLevel: "低〜中リスク", description: "低中リスク医療機器。", examples: ["血圧計", "超音波プローブ", "歯科用充填材"], approvalPath: "標準登録（GD-9）" },
+        { name: "Class C", nameJa: "クラスC", riskLevel: "中〜高リスク", description: "中高リスク医療機器。詳細な技術文書が必要。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "詳細登録（GD-3）" },
+        { name: "Class D", nameJa: "クラスD", riskLevel: "高リスク", description: "最高リスク医療機器。最も厳格な審査。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型除細動器"], approvalPath: "詳細登録（GD-3 — 臨床データ要求あり）" },
+      ],
+      rules: [{ id: "GHTF/IMDRF 分類規則", description: "GHTF SG1 N015:2006 の分類原則を採用。意図する用途・侵襲性・使用期間・エネルギー源等に基づく規則ベースの分類。", url: "https://www.imdrf.org/" }],
+      totalProductCodes: "要確認（オマーン独自のコード体系は未公開）",
+    },
+    conformityAssessment: {
+      overview: "DGPADC がオンラインポータル経由で申請書類を審査。Free Sale Certificate と CE/FDA 認証文書が主たる証拠書類。高リスク機器は到着2ヶ月前に技術ファイル提出が要請される。",
+      routes: [
+        { name: "MOH Medical Device Registration", nameJa: "MOH 医療機器登録", applicableClasses: ["全クラス"], description: "技術ファイル、CE 証明書/FDA 認可文書、ISO 13485 証明書、適合宣言書、Free Sale Certificate、取扱説明書、ラベリング等を提出。クラスに応じて GD-3 または GD-9 の要件に従う。", subtypes: [], avgReviewTime: "3〜4ヶ月（書類の完全性に依存）", fee: "要確認（MOH 料金表を参照）", url: "https://moh.gov.om/en/services/businesses/drug-safety-center/request-for-registration-of-medical-device/" },
+      ],
+    },
+    electronicSubmission: { system: "MOH オンラインポータル", url: "https://moh.gov.om/en/services/businesses/drug-safety-center/request-for-registration-of-medical-device/", description: "MOH はオンラインポータル経由での申請を実施。高リスク機器は出荷到着2ヶ月前にポータル経由で技術ファイルを提出する必要がある。", mandatory: true },
+    udi: { required: false, system: "要確認（UDI 制度の独自導入は未確認）", description: "オマーンでは現時点で IMDRF 型の UDI 制度が法的に義務化されているとの確認情報はない。国際的な UDI 要件（EU MDR、FDA）への対応は製造業者の責任。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "Drug Safety Center — 市販後監視制度", mandatory: true, url: "https://www.moh.gov.om/en/hospitals-directorates/directorates-and-centers-at-hq/drug-safety-center/", description: "Drug Safety Center が市販後監視を実施。有害事象の報告義務あり。能動的かつ体系的な情報収集プロセスを運用。" },
+      recalls: { authority: "MOH / DGPADC", description: "DGPADC がリコール・FSCA を管理。MOH データベースに未登録の機器は輸入・販売・使用禁止。", url: "https://www.moh.gov.om/" },
+      surveillance: "Drug Safety Center による能動的市販後監視。PMS 計画の提出が高リスク機器に要求される。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "MOH Oman", name: "Free Sale Certificate / Certificate of Foreign Government", description: "登録申請時に原産国の規制当局からの CFS/CFG 提出が必要。米国製品は Certificate for Medical Device Not Exporting (CDNE) も受容。", processingTime: "要確認", url: "https://www.moh.gov.om/" },
+    reimbursement: { system: "公的医療制度（国民に対する無料または低額の医療サービス）", authority: "MOH Oman", description: "オマーン国民は公立病院で無料または低額の医療サービスを受けられる。医療機器の調達は公立病院の入札・調達プロセスを通じて行われる。独立した医療機器償還制度に関する公開情報は限定的。", codingSystems: ["要確認"], url: "https://www.moh.gov.om/" },
+    marketingRules: { authority: "MOH / DGPADC", description: "医療機器の広告・販促は MOH の規制下にある。", keyRules: ["MOH データベースに登録済みの機器のみ販売・広告可", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "オマーンは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は医療機器製造業者の登録要件として必須。GD-22 で明示的に要求。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。技術文書に含める必要あり。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "MOH 通達 161/2025", description: "2025年に発出された MOH 通達。医療機器規制に関する追加的な要件・手続きの更新。" },
+      { date: "2020", title: "大臣令 113/2020 発出", description: "薬局業務・医薬品企業規制の執行令。医療機器の規制枠組みの法的根拠を確立。DGPADC の権限を明確化。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- PER（ペルー） ---
+  // =========================================================================
+  {
+    code: "PER",
+    country: "ペルー",
+    countryEn: "Republic of Peru",
+    region: "Latam",
+    flag: "🇵🇪",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ペルーの医療機器規制は保健省（MINSA）傘下の DIGEMID（Dirección General de Medicamentos, Insumos y Drogas）が管轄する。2009年の法律第29459号（Ley de los Productos Farmacéuticos, Dispositivos Médicos y Productos Sanitarios）が主たる規制根拠。EU/GHTF の分類原則を参照した4クラス分類（Class I〜IV）を採用。全ての医療機器は Registro Sanitario（衛生登録）の取得が必要。",
+      keyCharacteristics: [
+        "DIGEMID による一元的な規制体制",
+        "リスクベースの4クラス分類（Class I / II / III / IV）",
+        "Registro Sanitario（衛生登録）が市販の前提条件",
+        "ローカル登録保有者（Titular de Registro Sanitario）の指定が必須",
+        "参照国（18カ国）の CFS/CFG が重要な審査資料",
+        "テクノビジランス（Tecnovigilancia）による市販後監視",
+      ],
+    },
+    authorities: [
+      { name: "DIGEMID", fullName: "Dirección General de Medicamentos, Insumos y Drogas", localName: "Dirección General de Medicamentos, Insumos y Drogas", role: "医療機器の衛生登録・市販後監視・テクノビジランス", url: "https://www.digemid.minsa.gob.pe/", isPrimary: true },
+      { name: "MINSA", fullName: "Ministerio de Salud del Perú", localName: "Ministerio de Salud", role: "医療政策全般・上位監督", url: "https://www.minsa.gob.pe/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（DIGEMID が直接審査）",
+      description: "ペルーには欧州型の Notified Body 制度は存在しない。DIGEMID が直接、衛生登録の申請書類を審査する。参照国の規制当局承認・CFS が重要な審査資料。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "法律第29459号に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。IVD は同一の分類体系（Class I〜IV）に従う。",
+      notes: "GMDN/UMDN コードによる国際命名法（スペイン語表記）の適用が必要。",
+    },
+    primaryLaw: {
+      title: "Ley N° 29459 — Ley de los Productos Farmacéuticos, Dispositivos Médicos y Productos Sanitarios",
+      originalTitle: "Ley N° 29459",
+      enacted: "2009",
+      lastAmended: "随時改正",
+      url: "https://www.digemid.minsa.gob.pe/",
+      description: "ペルーにおける医薬品・医療機器・衛生製品規制の根幹法。DIGEMID の権限、衛生登録制度、分類、市販後監視等を規定。",
+    },
+    implementingRegulations: [
+      { title: "Decreto Supremo N° 016-2011-SA（衛生登録・管理・監視規則）", date: "2011", url: "https://www.digemid.minsa.gob.pe/", description: "医薬品・医療機器・衛生製品の登録・管理・衛生監視に関する規則。分類規則・登録手続き・必要書類を詳細に規定。", category: "包括規制" },
+      { title: "Decreto Supremo N° 014-2011-SA（医薬品施設規則）", date: "2011", url: "https://www.digemid.minsa.gob.pe/", description: "医薬品施設に関する規則。医療機器の流通・保管に関する施設要件を含む。", category: "施設規制" },
+    ],
+    relatedLaws: [
+      { title: "Ley N° 26842 — Ley General de Salud", category: "一般保健法", enacted: "1997", url: "https://www.minsa.gob.pe/", relevance: "ペルーの保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。" },
+    ],
+    classification: {
+      system: "4クラス分類（Class I / II / III / IV）",
+      basis: "リスクベース（EU/GHTF 分類規則を参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。一般的制御で安全性を確保。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "衛生登録（審査目標: 60暦日）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中リスク", description: "中リスク医療機器。製造段階での特別制御が必要。", examples: ["超音波診断装置", "輸液ポンプ", "歯科用充填材"], approvalPath: "衛生登録（審査目標: 90暦日）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。詳細な技術文書・臨床データが必要。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "衛生登録（審査目標: 120暦日）" },
+        { name: "Class IV", nameJa: "クラスIV", riskLevel: "最高リスク（クリティカル）", description: "最高リスク医療機器。最も厳格な審査。生命維持・生命支持機器等。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型除細動器"], approvalPath: "衛生登録（審査目標: 120暦日）" },
+      ],
+      rules: [{ id: "EU/GHTF 参照分類規則", description: "EU MDR および GHTF の分類規則を参照。意図する用途・侵襲性・使用期間・エネルギー源等に基づくルールベースの分類。", url: "https://www.digemid.minsa.gob.pe/" }],
+      totalProductCodes: "GMDN/UMDN コードを使用（スペイン語表記で登録）",
+    },
+    conformityAssessment: {
+      overview: "DIGEMID が申請書類を直接審査。参照国（18カ国）の CFS/CFG、技術文書、臨床データ、製造情報等を評価。クラスに応じて審査期間・要求事項が異なる。",
+      routes: [
+        { name: "Inscripción de Registro Sanitario", nameJa: "衛生登録（新規登録）", applicableClasses: ["全クラス"], description: "技術文書、製品説明書、製造情報、臨床・安全性データ、QMS 文書、参照国の CFS/CFG を提出。DIGEMID が書類審査を実施。", subtypes: [], avgReviewTime: "Class I: 60日 / Class II: 90日 / Class III-IV: 120日（目標値。実績は6〜12ヶ月の場合あり）", fee: "要確認（DIGEMID 料金表を参照）", url: "https://www.digemid.minsa.gob.pe/webDigemid/registro-sanitario/dispositivos-medicos/" },
+        { name: "Reinscripción de Registro Sanitario", nameJa: "衛生登録（更新）", applicableClasses: ["全クラス"], description: "登録有効期限満了前に更新申請。更新時の要件は新規登録に準じるが、市販後データの提出も求められる。", subtypes: [], avgReviewTime: "要確認", fee: "要確認", url: "https://www.digemid.minsa.gob.pe/" },
+      ],
+    },
+    electronicSubmission: { system: "DIGEMID オンラインポータル / VUCE（Ventanilla Única de Comercio Exterior）", url: "https://www.digemid.minsa.gob.pe/", description: "DIGEMID はオンラインでの申請受付を実施。VUCE（外国貿易窓口）との連携もあり。", mandatory: false },
+    udi: { required: false, system: "GMDN/UMDN コードの使用が必要（UDI 制度としては未導入）", description: "ペルーでは IMDRF 型の UDI 制度は法的に義務化されていない。ただし、登録申請時に GMDN/UMDN コード（国際命名法、スペイン語表記）の記載が必要。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "Sistema Peruano de Farmacovigilancia y Tecnovigilancia", mandatory: true, url: "https://www.digemid.minsa.gob.pe/", description: "法律第29459号および DS 016-2011-SA に基づくテクノビジランス制度。登録保有者は重篤な有害事象を DIGEMID に報告する義務がある。" },
+      recalls: { authority: "DIGEMID", description: "DIGEMID がリコール・FSCA を管理。登録保有者はリコール実施時に DIGEMID に通知義務。", url: "https://www.digemid.minsa.gob.pe/" },
+      surveillance: "Sistema Peruano de Tecnovigilancia によるテクノビジランス（市販後監視）。能動的・受動的監視を組み合わせたシステム。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "DIGEMID", name: "Certificado de Libre Venta / Free Sale Certificate", description: "登録申請時に参照国（18カ国: フランス、オランダ、英国、米国、カナダ、日本、スイス、ドイツ、スペイン、豪州、デンマーク、イタリア、ノルウェー、ベルギー、スウェーデン、韓国、ポルトガル、アイルランド）からの CFS/CFG 提出が必要。", processingTime: "要確認", url: "https://www.digemid.minsa.gob.pe/" },
+    reimbursement: { system: "SIS（Seguro Integral de Salud）+ EsSalud + 民間保険", authority: "MINSA / EsSalud", description: "ペルーの公的医療保険は SIS（総合健康保険）と EsSalud（社会保険）の二層構造。医療機器の調達は公立病院の入札プロセスを通じて行われる。", codingSystems: ["要確認"], url: "https://www.minsa.gob.pe/" },
+    marketingRules: { authority: "DIGEMID", description: "医療機器の広告・販促は DIGEMID の規制下にある。衛生登録済み機器のみの広告が原則。", keyRules: ["Registro Sanitario 取得済み機器のみ広告・販促可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "ペルーは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は QMS 証明として登録申請時に参照される。法的義務として明示されているかは要確認。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "DIGEMID — 医療機器登録の観察事項に関する通達", description: "DIGEMID が医療機器の新規登録・更新登録の申請書類に関する観察事項への対応について通達を発出。書類の品質向上を促進。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- ECU（エクアドル） ---
+  // =========================================================================
+  {
+    code: "ECU",
+    country: "エクアドル",
+    countryEn: "Republic of Ecuador",
+    region: "Latam",
+    flag: "🇪🇨",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "エクアドルの医療機器規制は ARCSA（Agencia Nacional de Regulación, Control y Vigilancia Sanitaria）が管轄する。Resolution ARCSA-DE-026-2016-YMIH が医療機器の衛生登録と管理に関する主要な技術衛生規範。GHTF/IMDRF の分類原則に準拠した Class I / IIa / IIb / III の4クラス分類を採用。認知国（米国・カナダ・豪州・日本・韓国・EU）で登録済みの Class I/II 機器には簡易経路あり。",
+      keyCharacteristics: [
+        "ARCSA による一元的な規制体制",
+        "GHTF ベースの4クラス分類（Class I / IIa / IIb / III）",
+        "Resolution ARCSA-DE-026-2016-YMIH が主要な規制根拠",
+        "認知国登録済み機器に対する簡易登録経路",
+        "Registro Sanitario の有効期限10年",
+        "UDI（IMDRF 準拠）のトレーサビリティ要件を導入",
+      ],
+    },
+    authorities: [
+      { name: "ARCSA", fullName: "Agencia Nacional de Regulación, Control y Vigilancia Sanitaria", localName: "Agencia Nacional de Regulación, Control y Vigilancia Sanitaria", role: "医療機器の衛生登録・市販後監視・施設許可・輸入管理", url: "https://www.controlsanitario.gob.ec/", isPrimary: true },
+      { name: "MSP", fullName: "Ministerio de Salud Pública del Ecuador", localName: "Ministerio de Salud Pública", role: "医療政策全般・上位監督", url: "https://www.salud.gob.ec/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（ARCSA が直接審査）",
+      description: "エクアドルには Notified Body 制度は存在しない。ARCSA が直接、衛生登録の申請書類を審査する。認知国の規制当局承認を参照。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "ARCSA の技術衛生規範に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。GHTF/IMDRF 定義に準拠。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "Resolution ARCSA-DE-026-2016-YMIH（2018年に ARCSA-DE-030-2018-JCGO で改正）が詳細な定義・適用範囲を規定。",
+    },
+    primaryLaw: {
+      title: "Ley Orgánica de Salud（組織的保健法）",
+      originalTitle: "Ley Orgánica de Salud",
+      enacted: "2006",
+      lastAmended: "随時改正",
+      url: "https://www.salud.gob.ec/",
+      description: "エクアドルにおける保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。",
+    },
+    implementingRegulations: [
+      { title: "Resolution ARCSA-DE-026-2016-YMIH（医療機器の衛生登録に関する技術衛生規範）", date: "2016", url: "https://www.controlsanitario.gob.ec/documentos-vigentes/", description: "医療機器の衛生登録・管理に関する主要な技術衛生規範。分類規則・登録手続き・必要書類・施設要件を包括的に規定。", category: "包括規制" },
+      { title: "Resolution ARCSA-DE-030-2018-JCGO（2016年規範の改正）", date: "2018", url: "https://www.controlsanitario.gob.ec/documentos-vigentes/", description: "2016年規範の改正。認知国（米国・カナダ・豪州・日本・韓国・EU）で登録済みの Class I/II 機器に対する簡易登録経路を導入。", category: "改正" },
+      { title: "Resolution ARCSA-DE-2023-033-AKRG（2023年改正）", date: "2023", url: "https://www.controlsanitario.gob.ec/wp-content/uploads/downloads/2023/11/Resolucion_ARCSA-DE-2023-033-AKRG_reforma-a-la-Normativa-Tecnica-Sanitaria-para-el-registro-sanitario-de-Dispositivos-medicos-de-uso-humano-y-de-los-establecimientos-en-donde-se-fabrican.pdf", description: "ヒト用医療機器の衛生登録および製造施設に関する技術衛生規範の改正。", category: "改正" },
+    ],
+    relatedLaws: [],
+    classification: {
+      system: "GHTF ベースの4クラス分類（Class I / IIa / IIb / III）",
+      basis: "リスクベース（GHTF/IMDRF 分類規則を参照）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。一般的制御で安全性を確保。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "衛生登録（簡易経路あり: 認知国登録済み）" },
+        { name: "Class IIa", nameJa: "クラスIIa", riskLevel: "低〜中リスク", description: "低中リスク医療機器。", examples: ["超音波診断装置", "歯科用充填材", "血圧計"], approvalPath: "衛生登録（簡易経路あり: 認知国登録済み）" },
+        { name: "Class IIb", nameJa: "クラスIIb", riskLevel: "中〜高リスク", description: "中高リスク医療機器。詳細な技術文書が必要。", examples: ["人工呼吸器", "輸液ポンプ", "X線装置"], approvalPath: "衛生登録（標準経路）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "最高リスク医療機器。最も厳格な審査。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "衛生登録（詳細審査 — 臨床データ要求あり）" },
+      ],
+      rules: [{ id: "GHTF/IMDRF 分類規則", description: "GHTF の分類原則に基づき、意図する用途・侵襲性・使用期間・エネルギー源等でクラスを決定。ARCSA の指示に従い分類。", url: "https://www.controlsanitario.gob.ec/" }],
+      totalProductCodes: "要確認（ARCSA 独自のコード体系は未公開）",
+    },
+    conformityAssessment: {
+      overview: "ARCSA が申請書類を直接審査。CFS、CE 証明書/FDA 認可、技術文書、QMS 文書等を評価。認知国登録済みの Class I/II には簡易経路あり。",
+      routes: [
+        {
+          name: "Inscripción de Registro Sanitario de Dispositivos Médicos", nameJa: "医療機器衛生登録（新規登録）", applicableClasses: ["全クラス"],
+          description: "CFS、CE/FDA 認証文書、技術文書、製品ラベリング、QMS 文書を提出。品質・安全性・有効性の要件を満たすことで登録発行。有効期限10年。",
+          subtypes: [{ name: "簡易登録（認知国登録済み Class I/II）", description: "米国・カナダ・豪州・日本・韓国・EU で登録済みの Class I / II 機器は簡易登録経路を利用可能。必要書類の一部が省略される。" }],
+          avgReviewTime: "要確認（クラスにより異なる。数ヶ月〜）", fee: "要確認（ARCSA 料金表を参照）", url: "https://www.gob.ec/arcsa/tramites/inscripcion-registro-sanitario-dispositivos-medicos-fabricacion-nacional-extranjera",
+        },
+      ],
+    },
+    electronicSubmission: { system: "ARCSA オンラインポータル（gob.ec 経由）", url: "https://www.gob.ec/arcsa/tramites/inscripcion-registro-sanitario-dispositivos-medicos-fabricacion-nacional-extranjera", description: "ARCSA はオンラインでの申請受付を実施。gob.ec プラットフォーム経由で電子申請。", mandatory: true },
+    udi: { required: true, system: "IMDRF 準拠の UDI トレーサビリティ要件", description: "エクアドルは IMDRF のガイドラインに基づく UDI（GTIN コード・ロット番号・有効期限・DI + PI）をトレーサビリティコードとして採用。医療機器のトレーサビリティ管理に UDI を活用。", url: "https://www.controlsanitario.gob.ec/", timeline: "導入済み（段階的実施）" },
+    postMarket: {
+      adverseEventReporting: { system: "ARCSA テクノビジランス制度", mandatory: true, url: "https://www.controlsanitario.gob.ec/", description: "ARCSA が市販後の安全性監視を実施。定期検査・ラボ分析による品質・安全性の検証。有害事象の報告義務あり。" },
+      recalls: { authority: "ARCSA", description: "ARCSA がリコール・FSCA を管理。登録保有者はリコール実施時に ARCSA に通知義務。", url: "https://www.controlsanitario.gob.ec/" },
+      surveillance: "ARCSA による定期検査・ラボ分析を含む市販後監視。強化された市販後監視体制を構築中。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "ARCSA", name: "Certificado de Libre Venta / Free Sale Certificate", description: "登録申請時に原産国の規制当局からの CFS/CFG/Export Certificate の提出が必要。米国 FDA の Certificate of Free Sale も受容。", processingTime: "要確認", url: "https://www.controlsanitario.gob.ec/" },
+    reimbursement: { system: "IESS（Instituto Ecuatoriano de Seguridad Social）+ MSP 公立病院 + 民間保険", authority: "MSP / IESS", description: "エクアドルの公的医療は MSP の公立病院と IESS（社会保険）が中心。医療機器の調達は公立病院の入札プロセスを通じて行われる。", codingSystems: ["要確認"], url: "https://www.salud.gob.ec/" },
+    marketingRules: { authority: "ARCSA", description: "医療機器の広告・販促は ARCSA の規制下にある。衛生登録済み機器のみの販売・広告が原則。", keyRules: ["Registro Sanitario 取得済み機器のみ販売・広告可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "エクアドルは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は QMS 証明として参照される。BPM（Buenas Prácticas de Manufactura）の要件にも関連。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2026-01", title: "Resolution ARCSA-DE-2025-053-DASP — 医療用ガスの GMP", description: "2026年1月に官報公布。医療用ガスの製造適正基準（GMP）を規定。" },
+      { date: "2025", title: "Resolution ARCSA-DE-026-2016-YMIH の代替改正案策定中", description: "ARCSA は医療機器の衛生登録・管理に関する技術衛生規範（2016年規範）の代替改正案（borrador）を策定中。条文の全面的な見直し・更新が予定されている。" },
+      { date: "2023", title: "Resolution ARCSA-DE-2023-033-AKRG — 技術衛生規範の改正", description: "ヒト用医療機器の衛生登録および製造施設に関する技術衛生規範の改正を公布。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- CRI（コスタリカ） ---
+  // =========================================================================
+  {
+    code: "CRI",
+    country: "コスタリカ",
+    countryEn: "Republic of Costa Rica",
+    region: "Latam",
+    flag: "🇨🇷",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "コスタリカの医療機器規制は保健省（Ministerio de Salud）が管轄する。Decreto N° 34482-S（医療機器の登録・分類・輸入・管理に関する規則）が主たる規制根拠。4クラス分類（Class 1〜4）を採用。Class 1 は登録免除、Class 2 は簡易登録、Class 3/4 は詳細な審査が必要だが、US FDA 認可済み機器は簡易経路を利用可能。CONIS（Consejo Nacional de Investigación en Salud）は臨床研究の倫理審査を担当する組織。",
+      keyCharacteristics: [
+        "保健省（Ministerio de Salud）による規制体制",
+        "Decreto 34482-S に基づく4クラス分類（Class 1 / 2 / 3 / 4）",
+        "Class 1 は登録免除",
+        "FDA 認可済み Class 3/4 機器には簡易経路あり",
+        "ローカル登録保有者（Registration Holder）の指定が必須",
+        "二段階審査（法的評価 + 技術評価）",
+      ],
+    },
+    authorities: [
+      { name: "Ministerio de Salud", fullName: "Ministerio de Salud de Costa Rica", localName: "Ministerio de Salud", role: "医療機器の衛生登録・市販後監視・施設許可・輸入管理", url: "https://www.ministeriodesalud.go.cr/", isPrimary: true },
+      { name: "CONIS", fullName: "Consejo Nacional de Investigación en Salud", localName: "Consejo Nacional de Investigación en Salud", role: "臨床研究の倫理審査・承認", url: "https://www.ministeriodesalud.go.cr/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（保健省が直接審査）",
+      description: "コスタリカには Notified Body 制度は存在しない。保健省が直接、衛生登録の申請書類を審査する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "Decreto 34482-S に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は国際的な GHTF/IMDRF の定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Ley General de Salud N° 5395（一般保健法）",
+      originalTitle: "Ley General de Salud N° 5395",
+      enacted: "1973",
+      lastAmended: "随時改正",
+      url: "https://www.ministeriodesalud.go.cr/",
+      description: "コスタリカにおける保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。",
+    },
+    implementingRegulations: [
+      { title: "Decreto N° 34482-S（医療機器の登録・分類・輸入・管理に関する規則）", date: "2008", url: "https://www.ministeriodesalud.go.cr/", description: "医療機器の分類・登録手続き・必要書類・輸入管理を包括的に規定する主要な規則。Reglamento de Inscripción, Clasificación, Importación y Control de Equipo y Material Biomédico。", category: "包括規制" },
+    ],
+    relatedLaws: [
+      { title: "Ley de Protección al Consumidor N° 7472", category: "消費者保護", enacted: "1994", url: "https://www.ministeriodesalud.go.cr/", relevance: "消費者保護の観点から医療機器の安全性・表示要件に関連。" },
+    ],
+    classification: {
+      system: "4クラス分類（Class 1 / 2 / 3 / 4）",
+      basis: "リスクベース",
+      classes: [
+        { name: "Class 1", nameJa: "クラス1", riskLevel: "低リスク", description: "低リスク医療機器。登録免除。", examples: ["弾性包帯", "手動外科器具", "聴診器"], approvalPath: "登録免除（Exento）" },
+        { name: "Class 2", nameJa: "クラス2", riskLevel: "中リスク", description: "中リスク医療機器。簡易登録手続き。", examples: ["超音波診断装置", "歯科用充填材", "血圧計"], approvalPath: "簡易登録（Procedimiento simplificado）" },
+        { name: "Class 3", nameJa: "クラス3", riskLevel: "高リスク", description: "高リスク医療機器。詳細な審査が必要。臨床データの提出が求められる場合あり。FDA 認可済みなら簡易経路可。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "詳細登録（FDA 認可済みなら簡易経路可）" },
+        { name: "Class 4", nameJa: "クラス4", riskLevel: "最高リスク", description: "最高リスク医療機器。最も厳格な審査。FDA 認可済みなら簡易経路可。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "詳細登録（FDA 認可済みなら簡易経路可）" },
+      ],
+      rules: [{ id: "Decreto 34482-S 分類規則", description: "リスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。", url: "https://www.ministeriodesalud.go.cr/" }],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "保健省が二段階審査（法的評価 + 技術評価）を実施。CFS、CE/FDA 認証文書、技術文書等を評価。FDA 認可済み Class 3/4 機器には簡易経路あり。",
+      routes: [
+        {
+          name: "Registro Sanitario de Equipo y Material Biomédico", nameJa: "医療機器衛生登録", applicableClasses: ["Class 2 / 3 / 4（Class 1 は免除）"],
+          description: "Phase A: 法的評価（提出書類の適合性確認） → Phase B: 技術評価（技術文書の審査）の二段階。CFS、技術文書、ラベリング、QMS 文書等を提出。",
+          subtypes: [{ name: "簡易登録（FDA 認可済み Class 3/4）", description: "US FDA で認可済みの Class 3 / 4 機器は Class 2 と同様の簡易登録手続きを利用可能。" }],
+          avgReviewTime: "Phase A: 15日（Class 1/2）〜30日（Class 3/4）、Phase B: 30日", fee: "要確認（保健省料金表を参照）", url: "https://registrelo.go.cr/",
+        },
+      ],
+    },
+    electronicSubmission: { system: "Regístrelo（保健省オンライン登録ポータル）", url: "https://registrelo.go.cr/", description: "保健省は Regístrelo プラットフォームを通じてオンラインでの衛生登録申請を受付。", mandatory: true },
+    udi: { required: false, system: "要確認（UDI 制度の独自導入は未確認）", description: "コスタリカでは現時点で IMDRF 型の UDI 制度が法的に義務化されているとの確認情報はない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "保健省テクノビジランス制度", mandatory: true, url: "https://www.ministeriodesalud.go.cr/", description: "登録保有者は医療機器に関連する有害事象を保健省に報告する義務がある。テクノビジランス（Tecnovigilancia）制度により市販後安全性を監視。" },
+      recalls: { authority: "Ministerio de Salud", description: "保健省がリコール・FSCA を管理。登録保有者はリコール実施時に保健省に通知義務。", url: "https://www.ministeriodesalud.go.cr/" },
+      surveillance: "保健省によるテクノビジランス（市販後監視）。詳細な PMS 制度の公開情報は限定的。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "Ministerio de Salud", name: "Certificado de Libre Venta / Free Sale Certificate", description: "登録申請時に原産国の規制当局からの CFS 提出が必要。コスタリカの保健省も登録済み機器について CFS を発行可能。", processingTime: "要確認", url: "https://www.ministeriodesalud.go.cr/" },
+    reimbursement: { system: "CCSS（Caja Costarricense de Seguro Social）+ 民間保険", authority: "CCSS", description: "コスタリカの公的医療保険は CCSS（コスタリカ社会保険公社）が運営。国民皆保険に近い制度。医療機器の調達は CCSS の入札・調達プロセスを通じて行われる。", codingSystems: ["要確認"], url: "https://www.ccss.sa.cr/" },
+    marketingRules: { authority: "Ministerio de Salud", description: "医療機器の広告・販促は保健省の規制下にある。衛生登録済み機器のみの販売・広告が原則。", keyRules: ["Registro Sanitario 取得済み機器のみ販売・広告可（Class 1 は免除）", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "コスタリカは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は QMS 証明として参照される。法的義務として明示されているかは要確認。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "Regístrelo ポータルの運用拡大", description: "保健省はオンライン登録ポータル Regístrelo の機能を拡大し、医療機器の衛生登録プロセスのデジタル化を推進中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
 ];
 
 // ===========================================================================
