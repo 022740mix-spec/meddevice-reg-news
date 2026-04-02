@@ -4551,7 +4551,7 @@ export const COUNTRY_PROFILES = [
       title: "醫療器材管理法（Medical Devices Act）",
       originalTitle: "醫療器材管理法",
       enacted: "2020-01-15",
-      lastAmended: "2025-01-01",
+      lastAmended: "2020-01-15",
       url: "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030106",
       description:
         "台湾における医療機器規制の専用法。2021年5月1日施行。従来の藥事法から医療機器関連条項を独立させた法律で、製造・輸入・販売の許可制度、3クラス分類、登録（查驗登記）・届出（備查）制度、GMP要件、広告規制、市販後監視、罰則等を包括的に規定。",
@@ -4767,9 +4767,9 @@ export const COUNTRY_PROFILES = [
     },
 
     mdsap: {
-      status: "MDSAP報告書受入れ（非公式参加）",
+      status: "Affiliate Member",
       description:
-        "台湾（TFDA）はMDSAPの公式参加国ではないが、MDSAP監査報告書をGMP適合の参考資料として受入れる方針を示している。MDSAP報告書の提出によりGMP審査プロセスの効率化が可能。",
+        "台湾（TFDA）はMDSAPのAffiliate Memberとして参加。MDSAP監査報告書をGMP適合の参考資料として受入れ、GMP審査プロセスの効率化に活用。",
     },
 
     internationalStandards: {
@@ -4849,12 +4849,12 @@ export const COUNTRY_PROFILES = [
     legalSystemOverview: {
       type: "議院内閣制・一院制（Parliamentary republic）",
       description:
-        "HSA（Health Sciences Authority）が医療機器の規制・審査・市販後監視を一元的に所管する。Health Products Act 2007およびHealth Products (Medical Devices) Regulations 2010に基づき、4クラス分類（A/B/C/D）のリスクベース規制を実施。FDA・EU・Health Canada・TGA・PMDAを参照規制機関（Reference Regulators）として認め、これらの承認を活用した簡略審査経路（Abridged Route）が特徴。PRISMオンラインポータルによる効率的な電子申請システムを運用。",
+        "HSA（Health Sciences Authority）が医療機器の規制・審査・市販後監視を一元的に所管する。Health Products Act 2007およびHealth Products (Medical Devices) Regulations 2010に基づき、4クラス分類（A/B/C/D）のリスクベース規制を実施。FDA・EU・Health Canada・TGA・PMDAを参照規制機関（Reference Regulators）として認め、これらの承認を活用した簡略審査経路（Abridged Route）が特徴。SHAREオンラインポータルによる効率的な電子申請システムを運用。",
       keyCharacteristics: [
         "HSA による一元的規制体制",
         "4クラス分類（A/B/C/D）のリスクベース規制",
         "参照規制機関（Reference Regulators）制度による簡略審査",
-        "PRISMオンラインポータルによる電子申請",
+        "SHAREオンラインポータルによる電子申請",
         "Dealer's License（クラスA）vs Product Registration（クラスB/C/D）",
         "ASEAN医療機器指令（AMDD）への整合",
       ],
@@ -5017,7 +5017,7 @@ export const COUNTRY_PROFILES = [
 
     conformityAssessment: {
       overview:
-        "シンガポールで医療機器を販売するには、クラスに応じた規制要件の遵守が必要。クラスAはDealer's License取得のみ、クラスB/C/DはHSAへの製品登録が必要。登録経路はFull Route（独自審査）、Abridged Route（参照規制機関の承認活用）、Immediate Route（参照規制機関の承認+条件充足で即時登録）の3種。PRISMポータルで電子申請を実施。",
+        "シンガポールで医療機器を販売するには、クラスに応じた規制要件の遵守が必要。クラスAはDealer's License取得のみ、クラスB/C/DはHSAへの製品登録が必要。登録経路はFull Route（独自審査）、Abridged Route（参照規制機関の承認活用）、Immediate Route（参照規制機関の承認+条件充足で即時登録）の3種。SHAREポータルで電子申請を実施。",
       routes: [
         {
           name: "Dealer's License",
@@ -5077,10 +5077,10 @@ export const COUNTRY_PROFILES = [
     },
 
     electronicSubmission: {
-      system: "PRISM (Pharmaceutical Regulatory Information System)",
+      system: "SHARE (Singapore Health Product Access and Regulatory E-System)",
       url: "https://www.hsa.gov.sg/e-services/prism",
       description:
-        "HSAのオンライン統合規制情報システム「PRISM」を通じて、医療機器の製品登録申請、Dealer's License申請、有害事象報告、変更通知等の全ての規制手続を電子的に実施。効率的なオンライン審査プロセスを提供。",
+        "HSAのオンライン統合規制情報システム「SHARE」を通じて、医療機器の製品登録申請、Dealer's License申請、有害事象報告、変更通知等の全ての規制手続を電子的に実施。効率的なオンライン審査プロセスを提供。",
       mandatory: true,
     },
 
@@ -5100,7 +5100,7 @@ export const COUNTRY_PROFILES = [
         mandatory: true,
         url: "https://www.hsa.gov.sg/medical-devices/safety-reporting",
         description:
-          "医療機器のDealer/Registrantは、重篤な有害事象をHSAに報告する義務がある。死亡・重篤な健康被害は10営業日以内、その他のイベントは30営業日以内にPRISMを通じて報告。医療従事者からの自主報告制度も運用。",
+          "医療機器のDealer/Registrantは、重篤な有害事象をHSAに報告する義務がある。死亡・重篤な健康被害は10営業日以内、その他のイベントは30営業日以内にSHAREを通じて報告。医療従事者からの自主報告制度も運用。",
       },
       recalls: {
         authority: "HSA",
@@ -5117,7 +5117,7 @@ export const COUNTRY_PROFILES = [
       issuingAuthority: "HSA",
       name: "Certificate of Free Sale (CFS)",
       description:
-        "シンガポールで登録済みの医療機器について、HSAが自由販売証明書を発行。輸出先国の規制申請に使用。PRISMを通じてオンライン申請が可能。",
+        "シンガポールで登録済みの医療機器について、HSAが自由販売証明書を発行。輸出先国の規制申請に使用。SHAREを通じてオンライン申請が可能。",
       processingTime: "約10〜15営業日",
       url: "https://www.hsa.gov.sg/medical-devices/registration",
     },
