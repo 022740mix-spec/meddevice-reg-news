@@ -1251,9 +1251,9 @@ function GuideSidebar({ guideTab }) {
         ) : guideTab === "media" ? (
           <>
             <SidebarJump id="media-guide-intro">はじめに</SidebarJump>
-            {VIBE_MEDIA_TAXONOMY.map((s) => (
-              <SidebarJump key={s.id} id={s.id} nested>
-                {s.title}
+            {VIBE_MEDIA_TAXONOMY.map((s, i) => (
+              <SidebarJump key={i} id={`media-cat-${i}`} nested>
+                {s.heading}
               </SidebarJump>
             ))}
           </>
@@ -1262,9 +1262,9 @@ function GuideSidebar({ guideTab }) {
             <SidebarJump id="glossary-guide">
               実用用語集（ジャンル別）
             </SidebarJump>
-            {GLOSSARY_BY_GENRE.map((g) => (
-              <SidebarJump key={g.id} id={`glossary-${g.id}`} nested>
-                {g.title}
+            {Object.keys(GLOSSARY_BY_GENRE).map((genre) => (
+              <SidebarJump key={genre} id={`glossary-${genre.replace(/[・\s]/g, "-")}`} nested>
+                {genre}
               </SidebarJump>
             ))}
           </>
@@ -1388,10 +1388,10 @@ function GuideRulesPanel() {
         {VIBE_BASIC_RULES.length > 0 ? (
           <dl className="glossary-dl">
             {VIBE_BASIC_RULES.map((r) => (
-              <Fragment key={r.title}>
-                <dt className="glossary-dl__term">{richInlineLine(r.title, mkKey)}</dt>
+              <Fragment key={r.label}>
+                <dt className="glossary-dl__term">{richInlineLine(r.label, mkKey)}</dt>
                 <dd className="glossary-dl__body">
-                  <GuideLinkifiedP text={r.mean} className="glossary-dl__mean" />
+                  <GuideLinkifiedP text={r.body} className="glossary-dl__mean" />
                 </dd>
               </Fragment>
             ))}
@@ -1405,10 +1405,10 @@ function GuideRulesPanel() {
         {VIBE_GUIDE_PITFALLS.terms.length > 0 ? (
           <dl className="glossary-dl">
             {VIBE_GUIDE_PITFALLS.terms.map((t) => (
-              <Fragment key={t.word}>
-                <dt className="glossary-dl__term">{richInlineLine(t.word, mkKey)}</dt>
+              <Fragment key={t.term}>
+                <dt className="glossary-dl__term">{richInlineLine(t.term, mkKey)}</dt>
                 <dd className="glossary-dl__body">
-                  <GuideLinkifiedP text={t.mean} className="glossary-dl__mean" />
+                  <GuideLinkifiedP text={t.desc} className="glossary-dl__mean" />
                 </dd>
               </Fragment>
             ))}
@@ -1453,51 +1453,20 @@ function MediaToolsGuidePanel({ mediaTaxonomy }) {
       <section id="media-guide-intro" className="guide-section guide-section--vibe">
         <h2 className="guide-section__title">規制カテゴリ一覧</h2>
         <p className="guide-section__lead">
-          {richInlineLine(MEDIA_GUIDE_INTRO, mkKey)}
+          {richInlineLine(MEDIA_GUIDE_INTRO.body, mkKey)}
         </p>
       </section>
       {mediaTaxonomy.length > 0 ? (
         <div className="vibe-media-taxonomy-stack">
-          {mediaTaxonomy.map((block) => {
-            const [c0, c1, c2, c3] = block.columns;
-            return (
-              <div key={block.id} id={block.id} className="vibe-media-block">
-                <h3 className="vibe-media-block__title">{block.title}</h3>
-                <GuideLinkifiedP
-                  text={block.lead}
-                  className="vibe-media-block__lead"
-                />
-                <div className="vibe-tool-table-wrap">
-                  <table className="vibe-tool-table vibe-tool-table--dense">
-                    <caption className="visually-hidden">
-                      {block.title}のツール早見表
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th scope="col">{c0}</th>
-                        <th scope="col">{c1}</th>
-                        <th scope="col">{c2}</th>
-                        <th scope="col">{c3}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {block.rows.map((r) => (
-                        <tr key={`${block.id}-${r.tool}`}>
-                          <th scope="row">{r.tool}</th>
-                          <td>{r.company}</td>
-                          <td>{r.traits}</td>
-                          <td>{r.since}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            );
-          })}
+          {mediaTaxonomy.map((cat, i) => (
+            <div key={i} id={`media-cat-${i}`} className="vibe-media-block">
+              <h3 className="vibe-media-block__title">{cat.heading}</h3>
+              <GuideLinkifiedP text={cat.body} className="vibe-media-block__lead" />
+            </div>
+          ))}
         </div>
       ) : (
-        <div className="empty-state">該当するツール行がありません。検索語を変えてください。</div>
+        <div className="empty-state">該当するカテゴリがありません。</div>
       )}
     </div>
   );
@@ -1517,23 +1486,22 @@ function GlossaryGuidePanel({ glossaryGenres }) {
           専門用語を「業務で使える一言」に圧縮しました。記事を読むときの辞書代わりにどうぞ。公式 URL
           が載っている項目はそのままクリックできます。
         </p>
-        {glossaryGenres.map((g) => (
+        {Object.entries(glossaryGenres).map(([genre, terms]) => (
           <section
-            key={g.id}
-            id={`glossary-${g.id}`}
+            key={genre}
+            id={`glossary-${genre.replace(/[・\s]/g, "-")}`}
             className="glossary-genre"
           >
-            <h3 className="glossary-genre__title">{g.title}</h3>
-            <GuideLinkifiedP
-              text={g.lead}
-              className="glossary-genre__lead"
-            />
+            <h3 className="glossary-genre__title">{genre}</h3>
             <dl className="glossary-dl">
-              {g.terms.map((t) => (
-                <Fragment key={t.word}>
-                  <dt className="glossary-dl__term">{richInlineLine(t.word, mkKey)}</dt>
+              {terms.map((t) => (
+                <Fragment key={t.term}>
+                  <dt className="glossary-dl__term">
+                    {richInlineLine(t.term, mkKey)}
+                    {t.reading && <span className="glossary-dl__reading">（{t.reading}）</span>}
+                  </dt>
                   <dd className="glossary-dl__body">
-                    <GuideLinkifiedP text={t.mean} className="glossary-dl__mean" />
+                    <GuideLinkifiedP text={t.desc} className="glossary-dl__mean" />
                   </dd>
                 </Fragment>
               ))}
