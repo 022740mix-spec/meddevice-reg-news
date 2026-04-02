@@ -1,4 +1,5 @@
 [
+  "ARE|url-reuse|URL \"https://mohap.gov.ae/en/services\" が 5 箇所で使い回されています",
   "AUS|source-avgReviewTime|routes[0].avgReviewTime に具体値がありますが avgReviewTimeSource（出典）がありません",
   "AUS|source-avgReviewTime|routes[1].avgReviewTime に具体値がありますが avgReviewTimeSource（出典）がありません",
   "AUS|source-avgReviewTime|routes[2].avgReviewTime に具体値がありますが avgReviewTimeSource（出典）がありません",
