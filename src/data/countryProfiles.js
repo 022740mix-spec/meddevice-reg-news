@@ -15665,6 +15665,357 @@ export const COUNTRY_PROFILES = [
     verified: null,
   },
 
+  // =========================================================================
+  // --- Tanzania ---
+  // =========================================================================
+  {
+    code: "TZA",
+    country: "タンザニア",
+    countryEn: "United Republic of Tanzania",
+    region: "Middle East & Africa",
+    flag: "🇹🇿",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "タンザニアの医療機器規制はTMDA（Tanzania Medicines and Medical Devices Authority）が管轄する。Tanzania Medicines and Medical Devices Act, 2003（Act No.1 of 2003）を根拠法とし、医薬品・医療機器の規制を一元管理。東アフリカ共同体（EAC）の規制調和ガイドラインとの整合も推進中。",
+      keyCharacteristics: ["TMDAによる一元的な規制体制", "リスクベースの4クラス分類（Class A/B/C/D）", "Tanzania Medicines and Medical Devices Act, 2003が根拠法", "EAC規制調和ガイドラインとの整合を推進", "先行認可国（CE/FDA等）の承認書類を参考にした審査"],
+    },
+    authorities: [{ name: "TMDA", fullName: "Tanzania Medicines and Medical Devices Authority", localName: null, role: "医療機器の登録・市販後監視・査察・リコール管理。主管当局。", url: "https://www.tmda.go.tz/", isPrimary: true }],
+    notifiedBodies: { system: "なし（TMDA が直接審査）", description: "タンザニアではNotified Body制度は存在しない。TMDAが直接、医療機器の登録審査を実施する。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Tanzania Medicines and Medical Devices Act, 2003に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。", scope: "IVD（体外診断用医療機器）も適用対象。医療機器全般を包括的に規制。", notes: "GHTF/IMDRF定義との整合を推進中。" },
+    primaryLaw: { title: "Tanzania Medicines and Medical Devices Act, 2003 (Act No.1 of 2003)", originalTitle: null, enacted: "2003", lastAmended: "要確認", url: "https://www.tmda.go.tz/", description: "TMDAの設立根拠法。医薬品・医療機器の規制権限をTMDAに付与。登録・市販後監視・査察等の権限を規定。" },
+    implementingRegulations: [{ title: "Tanzania Medicines and Medical Devices (Registration of Medical Devices) Regulations", date: "要確認", url: "https://www.tmda.go.tz/", description: "医療機器の登録手続・分類・ラベリング等の詳細を規定する施行規則。", category: "医療機器" }],
+    relatedLaws: [],
+    classification: {
+      system: "4クラス制（Class A/B/C/D）",
+      basis: "リスクベース（GHTF/IMDRF分類ルールに準拠）。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA", riskLevel: "低", description: "低リスク機器。TMDA登録が必要。", examples: ["弾性包帯", "聴診器", "舌圧子"], approvalPath: "TMDA登録" },
+        { name: "Class B", nameJa: "クラスB", riskLevel: "中低", description: "中程度の低リスク機器。TMDA登録が必要。", examples: ["血圧計", "補聴器", "超音波診断装置"], approvalPath: "TMDA登録" },
+        { name: "Class C", nameJa: "クラスC", riskLevel: "中高", description: "中高リスク機器。TMDA登録＋臨床評価が必要。", examples: ["人工関節", "人工呼吸器", "透析装置"], approvalPath: "TMDA登録＋臨床評価" },
+        { name: "Class D", nameJa: "クラスD", riskLevel: "高", description: "最高リスク機器。最も厳格な審査。", examples: ["人工心臓弁", "埋込み型除細動器"], approvalPath: "TMDA登録＋臨床データ" },
+      ],
+      rules: ["GHTF/IMDRFの分類ルールに準拠", "TMDAガイドラインに詳細規定"],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "全クラスの医療機器にTMDA登録が必要。先行認可国（CE/FDA等）の承認書類を参考にした審査を実施。",
+      routes: [{ name: "TMDA Registration", nameJa: "TMDA登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "TMDAに登録申請書類を提出。技術文書・CFS・QMS証明・ラベリング等を審査。", subtypes: [], avgReviewTime: "要確認", avgReviewTimeSource: null, fee: "要確認", feeSource: null, url: "https://www.tmda.go.tz/" }],
+    },
+    electronicSubmission: { system: "TMDA オンラインポータル", url: "https://www.tmda.go.tz/", description: "TMDAはオンラインでの申請受付を推進中。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "タンザニアでは現時点でUDI制度は未導入。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "TMDA有害事象報告制度", mandatory: true, url: "https://www.tmda.go.tz/", description: "製造業者・輸入業者・医療従事者は有害事象をTMDAに報告する義務がある。" },
+      recalls: { authority: "TMDA", description: "TMDAがリコールを監督。安全性問題発見時に市場回収を命令可能。", url: "https://www.tmda.go.tz/" },
+      surveillance: "TMDAによる市販後監視。EAC地域での情報共有も推進中。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "輸出国の規制当局", name: "Certificate of Free Sale (CFS)", description: "登録申請時に原産国の規制当局からのCFS提出が求められる。", processingTime: "要確認", url: "https://www.tmda.go.tz/" },
+    reimbursement: { system: "NHIF（National Health Insurance Fund）+ 民間保険", authority: "NHIF / Ministry of Health", description: "NHIFが公的医療保険を提供。医療機器に特化した体系的な償還制度は限定的。公立病院での調達は政府予算・ドナー資金に基づく。", codingSystems: [], url: null },
+    marketingRules: { authority: "TMDA", description: "TMDAガイドラインに基づき、医療機器の広告・マーケティングを規制。未登録機器の広告は禁止。", keyRules: ["未登録医療機器の広告は禁止", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "タンザニアはMDSAPプログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証の取得が推奨される。登録審査で参照。" },
+      iso14971: { accepted: true, notes: "リスクマネジメント。技術文書のリスク評価に適用。" },
+      iec62304: { accepted: true, notes: "ソフトウェアライフサイクル。SaMD申請に参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全・性能要求。" },
+      others: [],
+    },
+    recentDevelopments: [{ date: "2025", title: "EAC規制調和の推進", description: "東アフリカ共同体（EAC）の医療機器規制調和ガイドラインとの整合を継続的に推進。" }],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Ethiopia ---
+  // =========================================================================
+  {
+    code: "ETH",
+    country: "エチオピア",
+    countryEn: "Ethiopia",
+    region: "Middle East & Africa",
+    flag: "🇪🇹",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "エチオピアの医療機器規制はEFDA（Ethiopian Food and Drug Authority）が管轄する。Food and Medicine Administration Proclamation No. 1112/2019を根拠法とし、食品・医薬品・医療機器の規制を一元的に担う。規制枠組みは発展途上であり、国際的な規制整合を推進中。",
+      keyCharacteristics: ["EFDAによる一元的な規制体制", "Proclamation No. 1112/2019が根拠法", "医療機器の登録制度を整備中", "WHO事前認定（PQ）製品の優先的受入れ", "規制能力の強化を国際支援のもと推進"],
+    },
+    authorities: [{ name: "EFDA", fullName: "Ethiopian Food and Drug Authority", localName: null, role: "医療機器の登録・市販後監視・査察・輸入管理。主管当局。", url: "https://www.efda.gov.et/", isPrimary: true }],
+    notifiedBodies: { system: "なし（EFDA が直接審査）", description: "エチオピアではNotified Body制度は存在しない。EFDAが直接、医療機器の登録審査を実施する。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Proclamation No. 1112/2019および関連規則に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置等。詳細な定義は要確認。", scope: "IVD（体外診断用医療機器）も適用対象。", notes: "定義と適用範囲の国際基準への整合を推進中。" },
+    primaryLaw: { title: "Food and Medicine Administration Proclamation No. 1112/2019", originalTitle: null, enacted: "2019", lastAmended: null, url: "https://www.efda.gov.et/", description: "EFDAの設立根拠法。食品・医薬品・医療機器・化粧品の規制権限をEFDAに付与。" },
+    implementingRegulations: [{ title: "EFDA Medical Device Registration Directive", date: "要確認", url: "https://www.efda.gov.et/", description: "医療機器の登録手続・分類等の詳細を規定する指令。整備中。", category: "医療機器" }],
+    relatedLaws: [],
+    classification: {
+      system: "要確認（4クラス制を検討中）",
+      basis: "リスクベース。GHTF/IMDRF分類ルールへの整合を推進中。詳細は要確認。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA（想定）", riskLevel: "低", description: "低リスク機器。", examples: ["弾性包帯", "聴診器"], approvalPath: "EFDA登録" },
+        { name: "Class B", nameJa: "クラスB（想定）", riskLevel: "中低", description: "中程度の低リスク機器。", examples: ["血圧計", "補聴器"], approvalPath: "EFDA登録" },
+        { name: "Class C", nameJa: "クラスC（想定）", riskLevel: "中高", description: "中高リスク機器。", examples: ["人工呼吸器", "透析装置"], approvalPath: "EFDA登録＋臨床評価" },
+        { name: "Class D", nameJa: "クラスD（想定）", riskLevel: "高", description: "最高リスク機器。", examples: ["人工心臓弁"], approvalPath: "EFDA登録＋臨床データ" },
+      ],
+      rules: ["分類制度の詳細は整備中", "GHTF/IMDRF分類ルールへの整合を目指す"],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "医療機器のEFDA登録が必要。先行認可国（CE/FDA/WHO PQ等）の承認を参考にした審査。規制枠組みは整備中。",
+      routes: [{ name: "EFDA Registration", nameJa: "EFDA登録", applicableClasses: ["全クラス"], description: "EFDAに登録申請書類を提出。CFS・技術文書・QMS証明等を審査。WHO PQ製品は優先処理される場合がある。", subtypes: [], avgReviewTime: "要確認", avgReviewTimeSource: null, fee: "要確認", feeSource: null, url: "https://www.efda.gov.et/" }],
+    },
+    electronicSubmission: { system: "要確認", url: "https://www.efda.gov.et/", description: "電子申請システムの整備状況は要確認。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "エチオピアでは現時点でUDI制度は未導入。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "EFDA有害事象報告制度", mandatory: true, url: "https://www.efda.gov.et/", description: "有害事象のEFDAへの報告義務が規定されている。体制は整備中。" },
+      recalls: { authority: "EFDA", description: "EFDAがリコールを監督。", url: "https://www.efda.gov.et/" },
+      surveillance: "市販後監視体制は整備中。国際支援のもと能力強化を推進。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "輸出国の規制当局", name: "Certificate of Free Sale (CFS)", description: "登録申請時に原産国の規制当局からのCFS提出が求められる。", processingTime: "要確認", url: "https://www.efda.gov.et/" },
+    reimbursement: { system: "CBHI（Community Based Health Insurance）+ 公的医療機関", authority: "Ministry of Health", description: "公的医療機関での調達が中心。CBHIの拡大を推進中。医療機器に特化した償還制度は限定的。", codingSystems: [], url: null },
+    marketingRules: { authority: "EFDA", description: "EFDAが医療機器の広告・マーケティングを規制。未登録機器の販売・広告は禁止。", keyRules: ["未登録医療機器の販売・広告は禁止", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "エチオピアはMDSAPプログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証はQMS証明として参照。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [{ date: "2019", title: "Proclamation No. 1112/2019の制定", description: "EFDAの設立根拠法であるProclamation No. 1112/2019が制定。医療機器を含む包括的な規制枠組みを整備。" }],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Uganda ---
+  // =========================================================================
+  {
+    code: "UGA",
+    country: "ウガンダ",
+    countryEn: "Uganda",
+    region: "Middle East & Africa",
+    flag: "🇺🇬",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ウガンダの医療機器規制はNDA（National Drug Authority）が管轄する。National Drug Policy and Authority Act (Cap 206)を根拠法とし、医薬品・医療機器の規制を担う。東アフリカ共同体（EAC）の規制調和ガイドラインとの整合も推進中。",
+      keyCharacteristics: ["NDAによる一元的な規制体制", "National Drug Policy and Authority Act (Cap 206)が根拠法", "医療機器の登録制度を運用", "EAC規制調和ガイドラインとの整合を推進", "リスクベースの分類体系"],
+    },
+    authorities: [{ name: "NDA", fullName: "National Drug Authority", localName: null, role: "医療機器の登録・市販後監視・査察・輸入管理。主管当局。", url: "https://www.nda.or.ug/", isPrimary: true }],
+    notifiedBodies: { system: "なし（NDA が直接審査）", description: "ウガンダではNotified Body制度は存在しない。NDAが直接、医療機器の登録審査を実施する。", bodies: [] },
+    deviceDefinition: { legalDefinition: "National Drug Policy and Authority Actおよび関連規則に基づく定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器。詳細はNDAガイドラインに規定。", scope: "IVD（体外診断用医療機器）も適用対象。", notes: "EACの医療機器調和ガイドラインとの整合を推進中。" },
+    primaryLaw: { title: "National Drug Policy and Authority Act (Cap 206)", originalTitle: null, enacted: "1993", lastAmended: "要確認", url: "https://www.nda.or.ug/", description: "NDAの設立根拠法。医薬品・医療機器の規制権限をNDAに付与。" },
+    implementingRegulations: [{ title: "NDA Medical Device Registration Guidelines", date: "要確認", url: "https://www.nda.or.ug/", description: "医療機器の登録手続・分類・ラベリング等の詳細を規定するNDAガイドライン。", category: "医療機器" }],
+    relatedLaws: [],
+    classification: {
+      system: "4クラス制（Class A/B/C/D）",
+      basis: "リスクベース（GHTF/IMDRF分類ルールに準拠）。意図する用途・侵襲性・使用期間等に基づく。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA", riskLevel: "低", description: "低リスク機器。NDA登録が必要。", examples: ["弾性包帯", "聴診器", "舌圧子"], approvalPath: "NDA登録" },
+        { name: "Class B", nameJa: "クラスB", riskLevel: "中低", description: "中程度の低リスク機器。NDA登録が必要。", examples: ["血圧計", "補聴器"], approvalPath: "NDA登録" },
+        { name: "Class C", nameJa: "クラスC", riskLevel: "中高", description: "中高リスク機器。NDA登録＋臨床評価が必要。", examples: ["人工関節", "人工呼吸器"], approvalPath: "NDA登録＋臨床評価" },
+        { name: "Class D", nameJa: "クラスD", riskLevel: "高", description: "最高リスク機器。", examples: ["人工心臓弁", "埋込み型除細動器"], approvalPath: "NDA登録＋臨床データ" },
+      ],
+      rules: ["GHTF/IMDRFの分類ルールに準拠", "NDAガイドラインに詳細規定"],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "全クラスの医療機器にNDA登録が必要。先行認可国（CE/FDA等）の承認書類を参考にした審査を実施。",
+      routes: [{ name: "NDA Registration", nameJa: "NDA登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "NDAに登録申請書類を提出。技術文書・CFS・QMS証明・ラベリング等を審査。", subtypes: [], avgReviewTime: "要確認", avgReviewTimeSource: null, fee: "要確認", feeSource: null, url: "https://www.nda.or.ug/" }],
+    },
+    electronicSubmission: { system: "NDA オンラインシステム", url: "https://www.nda.or.ug/", description: "NDAはオンラインでの申請受付を推進中。整備状況は要確認。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "ウガンダでは現時点でUDI制度は未導入。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "NDA有害事象報告制度", mandatory: true, url: "https://www.nda.or.ug/", description: "製造業者・輸入業者・医療従事者は有害事象をNDAに報告する義務がある。" },
+      recalls: { authority: "NDA", description: "NDAがリコールを監督。", url: "https://www.nda.or.ug/" },
+      surveillance: "NDAによる市販後監視。EAC地域での情報共有も推進中。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "輸出国の規制当局", name: "Certificate of Free Sale (CFS)", description: "登録申請時に原産国の規制当局からのCFS提出が求められる。", processingTime: "要確認", url: "https://www.nda.or.ug/" },
+    reimbursement: { system: "公的医療機関 + 民間保険", authority: "Ministry of Health", description: "公的医療機関での調達が中心。国民健康保険制度の整備を推進中。医療機器に特化した償還制度は限定的。", codingSystems: [], url: null },
+    marketingRules: { authority: "NDA", description: "NDAが医療機器の広告・マーケティングを規制。未登録機器の広告は禁止。", keyRules: ["未登録医療機器の広告は禁止", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "ウガンダはMDSAPプログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証はQMS証明として参照。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [{ date: "2025", title: "EAC規制調和の推進", description: "東アフリカ共同体（EAC）の医療機器規制調和ガイドラインとの整合を推進。NDAの規制能力強化も継続中。" }],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Rwanda ---
+  // =========================================================================
+  {
+    code: "RWA",
+    country: "ルワンダ",
+    countryEn: "Rwanda",
+    region: "Middle East & Africa",
+    flag: "🇷🇼",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ルワンダの医療機器規制はRwanda FDA（Rwanda Food and Drugs Authority）が管轄する。Law No. 003/2018 establishing Rwanda FDAを根拠法とし、食品・医薬品・医療機器の規制を一元管理。東アフリカ共同体（EAC）の規制調和ガイドラインとの整合も推進中。",
+      keyCharacteristics: ["Rwanda FDAによる一元的な規制体制", "Law No. 003/2018が設立根拠法", "リスクベースの分類体系", "EAC規制調和ガイドラインとの整合を推進", "比較的新しい規制機関（2018年設立）"],
+    },
+    authorities: [{ name: "Rwanda FDA", fullName: "Rwanda Food and Drugs Authority", localName: null, role: "医療機器の登録・市販後監視・査察・輸入管理。主管当局。", url: "https://www.rwandafda.gov.rw/", isPrimary: true }],
+    notifiedBodies: { system: "なし（Rwanda FDA が直接審査）", description: "ルワンダではNotified Body制度は存在しない。Rwanda FDAが直接、医療機器の登録審査を実施する。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Law No. 003/2018および関連規則に基づく定義。詳細は要確認。GHTF/IMDRF定義との整合を推進中。", scope: "IVD（体外診断用医療機器）も適用対象。", notes: "EACの医療機器調和ガイドラインとの整合を推進中。" },
+    primaryLaw: { title: "Law No. 003/2018 establishing Rwanda Food and Drugs Authority", originalTitle: null, enacted: "2018", lastAmended: null, url: "https://www.rwandafda.gov.rw/", description: "Rwanda FDAの設立根拠法。食品・医薬品・医療機器の規制権限をRwanda FDAに付与。" },
+    implementingRegulations: [{ title: "Rwanda FDA Medical Device Registration Guidelines", date: "要確認", url: "https://www.rwandafda.gov.rw/", description: "医療機器の登録手続・分類等の詳細を規定するガイドライン。", category: "医療機器" }],
+    relatedLaws: [],
+    classification: {
+      system: "4クラス制（Class A/B/C/D）（要確認）",
+      basis: "リスクベース。EAC規制調和ガイドラインに基づく分類を採用（詳細は要確認）。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA", riskLevel: "低", description: "低リスク機器。", examples: ["弾性包帯", "聴診器"], approvalPath: "Rwanda FDA登録" },
+        { name: "Class B", nameJa: "クラスB", riskLevel: "中低", description: "中程度の低リスク機器。", examples: ["血圧計", "補聴器"], approvalPath: "Rwanda FDA登録" },
+        { name: "Class C", nameJa: "クラスC", riskLevel: "中高", description: "中高リスク機器。", examples: ["人工呼吸器", "透析装置"], approvalPath: "Rwanda FDA登録＋臨床評価" },
+        { name: "Class D", nameJa: "クラスD", riskLevel: "高", description: "最高リスク機器。", examples: ["人工心臓弁"], approvalPath: "Rwanda FDA登録＋臨床データ" },
+      ],
+      rules: ["EAC規制調和ガイドラインに準拠", "詳細分類ルールは要確認"],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "医療機器のRwanda FDA登録が必要。先行認可国（CE/FDA等）の承認書類を参考にした審査を実施。",
+      routes: [{ name: "Rwanda FDA Registration", nameJa: "Rwanda FDA登録", applicableClasses: ["全クラス"], description: "Rwanda FDAに登録申請書類を提出。技術文書・CFS・QMS証明等を審査。", subtypes: [], avgReviewTime: "要確認", avgReviewTimeSource: null, fee: "要確認", feeSource: null, url: "https://www.rwandafda.gov.rw/" }],
+    },
+    electronicSubmission: { system: "Rwanda FDA オンラインシステム", url: "https://www.rwandafda.gov.rw/", description: "Rwanda FDAはオンライン申請の整備を推進中。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "ルワンダでは現時点でUDI制度は未導入。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "Rwanda FDA有害事象報告制度", mandatory: true, url: "https://www.rwandafda.gov.rw/", description: "有害事象のRwanda FDAへの報告義務が規定されている。" },
+      recalls: { authority: "Rwanda FDA", description: "Rwanda FDAがリコールを監督。", url: "https://www.rwandafda.gov.rw/" },
+      surveillance: "Rwanda FDAによる市販後監視。EAC地域での情報共有も推進中。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "輸出国の規制当局", name: "Certificate of Free Sale (CFS)", description: "登録申請時に原産国の規制当局からのCFS提出が求められる。", processingTime: "要確認", url: "https://www.rwandafda.gov.rw/" },
+    reimbursement: { system: "CBHI（Mutuelle de Santé）+ RSSB + 民間保険", authority: "Ministry of Health / RSSB", description: "ルワンダは地域社会ベースの健康保険（Mutuelle de Santé）により高い保険加入率を達成。RSSB（Rwanda Social Security Board）が正規雇用者向け保険を運営。医療機器に特化した償還制度は限定的。", codingSystems: [], url: null },
+    marketingRules: { authority: "Rwanda FDA", description: "Rwanda FDAが医療機器の広告・マーケティングを規制。", keyRules: ["未登録医療機器の販売・広告は禁止", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "ルワンダはMDSAPプログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証はQMS証明として参照。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [{ date: "2018", title: "Rwanda FDAの設立", description: "Law No. 003/2018によりRwanda FDAが設立。食品・医薬品・医療機器の一元的な規制体制を構築。" }],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Senegal ---
+  // =========================================================================
+  {
+    code: "SEN",
+    country: "セネガル",
+    countryEn: "Senegal",
+    region: "Middle East & Africa",
+    flag: "🇸🇳",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "セネガルの医療機器規制はDPM（Direction de la Pharmacie et du Médicament）が管轄する。フランス法制度の影響を受けた規制枠組み。西アフリカ経済通貨同盟（UEMOA）および西アフリカ保健機構（OOAS/WAHO）による地域規制調和にも参加。",
+      keyCharacteristics: ["DPMによる一元的な規制体制", "フランス法制度の影響を受けた規制枠組み", "UEMOA / OOAS（WAHO）による地域規制調和に参加", "医療機器規制は発展段階", "先行認可国（CE等）の承認を参考にした審査"],
+    },
+    authorities: [{ name: "DPM", fullName: "Direction de la Pharmacie et du Médicament", localName: "薬事・医薬品局", role: "医療機器の登録・輸入管理・市販後監視。主管当局。", url: "https://www.sante.gouv.sn/", isPrimary: true }],
+    notifiedBodies: { system: "なし（DPM が直接審査）", description: "セネガルではNotified Body制度は存在しない。DPMが直接、医療機器の登録審査を実施する。", bodies: [] },
+    deviceDefinition: { legalDefinition: "DPMの規制に基づく定義。詳細は要確認。フランス法制度の影響を受けた医療機器の定義を採用。", scope: "IVD（体外診断用医療機器）も適用対象（要確認）。", notes: "UEMOA / OOAS地域規制調和との整合を推進中。" },
+    primaryLaw: { title: "要確認（薬事関連法）", originalTitle: null, enacted: "要確認", lastAmended: null, url: "https://www.sante.gouv.sn/", description: "セネガルの薬事規制に関する基本法。DPMの権限の根拠法。医療機器に特化した法律の整備状況は要確認。" },
+    implementingRegulations: [{ title: "DPM 医療機器登録に関する規定", date: "要確認", url: "https://www.sante.gouv.sn/", description: "医療機器の登録手続等を規定。詳細は要確認。", category: "医療機器" }],
+    relatedLaws: [],
+    classification: {
+      system: "要確認",
+      basis: "リスクベースの分類を採用していると推定されるが、詳細は要確認。",
+      classes: [
+        { name: "要確認", nameJa: "要確認", riskLevel: "低〜高", description: "分類体系の詳細は要確認。CE分類を参考にしている可能性。", examples: [], approvalPath: "DPM登録" },
+      ],
+      rules: ["分類制度の詳細は要確認", "UEMOA地域規制調和との整合を推進中"],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "医療機器のDPM登録・輸入許可が必要。先行認可国（CE等）の承認書類を参考にした審査を実施。",
+      routes: [{ name: "DPM Registration / Import Authorization", nameJa: "DPM登録・輸入許可", applicableClasses: ["全クラス"], description: "DPMに登録・輸入許可申請書類を提出。CFS・技術文書・品質証明等を審査。CE認証の提出が有用。", subtypes: [], avgReviewTime: "要確認", avgReviewTimeSource: null, fee: "要確認", feeSource: null, url: "https://www.sante.gouv.sn/" }],
+    },
+    electronicSubmission: { system: "要確認", url: "https://www.sante.gouv.sn/", description: "電子申請システムの整備状況は要確認。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "セネガルでは現時点でUDI制度は未導入。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "DPMファーマコビジランス制度", mandatory: true, url: "https://www.sante.gouv.sn/", description: "有害事象のDPMへの報告義務が規定されている。体制は整備中。" },
+      recalls: { authority: "DPM", description: "DPMがリコールを監督。", url: "https://www.sante.gouv.sn/" },
+      surveillance: "市販後監視体制は整備中。OOAS（WAHO）地域での情報共有にも参加。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "輸出国の規制当局", name: "Certificate of Free Sale (CFS)", description: "登録申請時に原産国の規制当局からのCFS提出が求められる。", processingTime: "要確認", url: "https://www.sante.gouv.sn/" },
+    reimbursement: { system: "CMU（Couverture Maladie Universelle）+ 民間保険", authority: "Ministry of Health", description: "CMU（国民皆保険）の拡大を推進中。公立病院での調達は政府予算に基づく。医療機器に特化した償還制度は限定的。", codingSystems: [], url: null },
+    marketingRules: { authority: "DPM", description: "DPMが医療機器の広告・マーケティングを規制。", keyRules: ["未登録医療機器の販売・広告は禁止", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "セネガルはMDSAPプログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証はQMS証明として参照。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [{ date: "2025", title: "UEMOA / OOAS地域規制調和の推進", description: "西アフリカ地域での医療機器規制調和の取り組みに参加。規制能力の強化を推進中。" }],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Ghana ---
+  // =========================================================================
+  {
+    code: "GHA",
+    country: "ガーナ",
+    countryEn: "Ghana",
+    region: "Middle East & Africa",
+    flag: "🇬🇭",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ガーナの医療機器規制はFDA Ghana（Food and Drugs Authority）が管轄する。Public Health Act, 2012 (Act 851)を根拠法とし、食品・医薬品・医療機器・化粧品の規制を一元的に担う。4クラス分類を採用し、リスクベースの審査を実施。ECOWAS / OOAS（WAHO）による地域規制調和にも参加。",
+      keyCharacteristics: ["FDA Ghanaによる一元的な規制体制", "Public Health Act, 2012 (Act 851)が根拠法", "リスクベースの4クラス分類（Class A/B/C/D）", "ECOWAS / OOAS（WAHO）地域規制調和に参加", "先行認可国（CE/FDA等）の承認を参考にした審査"],
+    },
+    authorities: [{ name: "FDA Ghana", fullName: "Food and Drugs Authority", localName: null, role: "医療機器の登録・市販後監視・査察・輸入管理・広告規制。主管当局。", url: "https://www.fdaghana.gov.gh/", isPrimary: true }],
+    notifiedBodies: { system: "なし（FDA Ghana が直接審査）", description: "ガーナではNotified Body制度は存在しない。FDA Ghanaが直接、医療機器の登録審査を実施する。", bodies: [] },
+    deviceDefinition: { legalDefinition: "Public Health Act, 2012 (Act 851)に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。", scope: "IVD（体外診断用医療機器）も適用対象。医療機器全般を包括的に規制。", notes: "GHTF/IMDRF定義との整合を推進中。" },
+    primaryLaw: { title: "Public Health Act, 2012 (Act 851)", originalTitle: null, enacted: "2012", lastAmended: null, url: "https://www.fdaghana.gov.gh/", description: "ガーナの公衆衛生に関する基本法。FDA Ghanaの設立根拠法。食品・医薬品・医療機器・化粧品の規制権限を付与。" },
+    implementingRegulations: [{ title: "FDA Ghana Medical Device Registration Guidelines", date: "要確認", url: "https://www.fdaghana.gov.gh/", description: "医療機器の登録手続・分類・ラベリング等の詳細を規定するガイドライン。", category: "医療機器" }],
+    relatedLaws: [],
+    classification: {
+      system: "4クラス制（Class A/B/C/D）",
+      basis: "リスクベース（GHTF/IMDRF分類ルールに準拠）。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。",
+      classes: [
+        { name: "Class A", nameJa: "クラスA", riskLevel: "低", description: "低リスク機器。FDA Ghana登録が必要。", examples: ["弾性包帯", "聴診器", "舌圧子"], approvalPath: "FDA Ghana登録" },
+        { name: "Class B", nameJa: "クラスB", riskLevel: "中低", description: "中程度の低リスク機器。FDA Ghana登録が必要。", examples: ["血圧計", "補聴器", "超音波診断装置"], approvalPath: "FDA Ghana登録" },
+        { name: "Class C", nameJa: "クラスC", riskLevel: "中高", description: "中高リスク機器。FDA Ghana登録＋臨床評価が必要。", examples: ["人工関節", "人工呼吸器", "透析装置"], approvalPath: "FDA Ghana登録＋臨床評価" },
+        { name: "Class D", nameJa: "クラスD", riskLevel: "高", description: "最高リスク機器。最も厳格な審査。", examples: ["人工心臓弁", "埋込み型除細動器"], approvalPath: "FDA Ghana登録＋臨床データ" },
+      ],
+      rules: ["GHTF/IMDRFの分類ルールに準拠", "FDA Ghanaガイドラインに詳細規定"],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "全クラスの医療機器にFDA Ghana登録が必要。先行認可国（CE/FDA等）の承認書類を参考にした審査を実施。",
+      routes: [{ name: "FDA Ghana Registration", nameJa: "FDA Ghana登録", applicableClasses: ["Class A", "Class B", "Class C", "Class D"], description: "FDA Ghanaに登録申請書類を提出。技術文書・CFS・QMS証明・ラベリング等を審査。", subtypes: [], avgReviewTime: "要確認", avgReviewTimeSource: null, fee: "要確認", feeSource: null, url: "https://www.fdaghana.gov.gh/" }],
+    },
+    electronicSubmission: { system: "FDA Ghana オンラインポータル", url: "https://www.fdaghana.gov.gh/", description: "FDA Ghanaはオンラインでの申請受付を推進中。", mandatory: false },
+    udi: { required: false, system: "未導入", description: "ガーナでは現時点でUDI制度は未導入。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "FDA Ghana有害事象報告制度", mandatory: true, url: "https://www.fdaghana.gov.gh/", description: "製造業者・輸入業者・医療従事者は有害事象をFDA Ghanaに報告する義務がある。" },
+      recalls: { authority: "FDA Ghana", description: "FDA Ghanaがリコールを監督。安全性問題発見時に市場回収を命令可能。", url: "https://www.fdaghana.gov.gh/" },
+      surveillance: "FDA Ghanaによる市販後監視。ECOWAS / OOAS地域での情報共有にも参加。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "輸出国の規制当局", name: "Certificate of Free Sale (CFS)", description: "登録申請時に原産国の規制当局からのCFS提出が求められる。", processingTime: "要確認", url: "https://www.fdaghana.gov.gh/" },
+    reimbursement: { system: "NHIS（National Health Insurance Scheme）+ 民間保険", authority: "NHIA / Ministry of Health", description: "NHIS（国民健康保険制度）が公的医療保険を提供。医療機器に特化した体系的な償還制度は限定的。公立病院での調達は政府予算に基づく。", codingSystems: [], url: null },
+    marketingRules: { authority: "FDA Ghana", description: "FDA Ghanaが医療機器の広告・マーケティングを規制。未登録機器の広告は禁止。", keyRules: ["未登録医療機器の広告は禁止", "虚偽・誇大広告の禁止"] },
+    mdsap: { status: "非参加", description: "ガーナはMDSAPプログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485認証はQMS証明として参照。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [{ date: "2025", title: "FDA Ghanaの規制能力強化", description: "FDA Ghanaは医療機器規制の能力強化を継続。ECOWAS / OOAS地域での規制調和の推進にも注力。" }],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
 ];
 
 // ===========================================================================
