@@ -13728,6 +13728,590 @@ export const COUNTRY_PROFILES = [
     verified: null,
   },
 
+  // =========================================================================
+  // --- URY（ウルグアイ） ---
+  // =========================================================================
+  {
+    code: "URY",
+    country: "ウルグアイ",
+    countryEn: "Oriental Republic of Uruguay",
+    region: "Latam",
+    flag: "🇺🇾",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ウルグアイの医療機器規制は公衆衛生省（MSP）傘下の保健製品総局（DGSP: Dirección General de Servicios de Salud / División Productos de Salud）が管轄する。Decreto 59/005（医療機器の登録・管理に関する規則）が主要な規制根拠。MERCOSUR の共通規則（GMC 決議）を国内法に取り込んでおり、MERCOSUR 整合化が進んでいる。3クラス分類（Class I / II / III）を採用し、リスクベースの登録制度を運用。",
+      keyCharacteristics: [
+        "MSP/DGSP による中央規制体制",
+        "Decreto 59/005 に基づく3クラス分類（Class I / II / III）",
+        "MERCOSUR GMC 決議の国内法化により地域整合化が進行",
+        "ローカル登録保有者（Titular del Registro）の指定が必須",
+        "CFS（Certificate of Free Sale）の提出が原則必要",
+        "GMP（BPF: Buenas Prácticas de Fabricación）適合が求められる",
+      ],
+    },
+    authorities: [
+      { name: "MSP/DGSP", fullName: "Ministerio de Salud Pública - Dirección General de Servicios de Salud / División Productos de Salud", localName: "Ministerio de Salud Pública", role: "医療機器の登録・市販後監視・施設許可・輸入管理", url: "https://www.gub.uy/ministerio-salud-publica/", isPrimary: true },
+    ],
+    notifiedBodies: {
+      system: "なし（MSP が直接審査）",
+      description: "ウルグアイには Notified Body 制度は存在しない。MSP/DGSP が直接、登録申請書類を審査する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "Decreto 59/005 に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。MERCOSUR の定義に準拠。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は MERCOSUR GMC 決議に基づき、GHTF/IMDRF の定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Decreto 59/005（医療機器の登録・管理に関する規則）",
+      originalTitle: "Decreto 59/005 - Reglamento de Registro de Productos Médicos",
+      enacted: "2005",
+      lastAmended: "随時改正",
+      url: "https://www.gub.uy/ministerio-salud-publica/",
+      description: "ウルグアイにおける医療機器の分類・登録・輸入管理を規定する主要な規則。MERCOSUR GMC 決議を国内法に取り込んだもの。",
+    },
+    implementingRegulations: [
+      { title: "Ordenanza 615/007（医療機器の技術要件）", date: "2007", url: "https://www.gub.uy/ministerio-salud-publica/", description: "医療機器の登録に必要な技術文書・ラベリング要件等を規定。", category: "技術要件" },
+      { title: "MERCOSUR GMC 決議（各種）", date: "各年", url: "https://www.mercosur.int/", description: "MERCOSUR 加盟国間で整合化された医療機器規制。GMP、分類、登録手続き等に関する決議。", category: "地域整合化" },
+    ],
+    relatedLaws: [
+      { title: "Ley 9.202 - Ley Orgánica de Salud Pública", category: "保健基本法", enacted: "1934", url: "https://www.gub.uy/ministerio-salud-publica/", relevance: "公衆衛生制度の基本法。MSP の権限を規定。" },
+    ],
+    classification: {
+      system: "3クラス分類（Class I / II / III）",
+      basis: "リスクベース（MERCOSUR 整合化規則に準拠）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["聴診器", "手動外科器具", "弾性包帯"], approvalPath: "登録（簡易手続き）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中リスク", description: "中リスク医療機器。", examples: ["超音波診断装置", "歯科用充填材", "注射器"], approvalPath: "登録（標準手続き）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "高リスク", description: "高リスク医療機器。詳細な審査が必要。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "登録（詳細審査）" },
+      ],
+      rules: [{ id: "MERCOSUR GMC 分類規則", description: "MERCOSUR で整合化されたリスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。", url: "https://www.mercosur.int/" }],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "MSP/DGSP が登録申請書類を審査。CFS、技術文書、GMP 証明等を評価。MERCOSUR 加盟国での既承認は参照情報として考慮される。",
+      routes: [
+        {
+          name: "Registro de Producto Médico", nameJa: "医療機器登録", applicableClasses: ["Class I / II / III"],
+          description: "MSP/DGSP に登録申請書類を提出。技術文書、CFS、GMP 適合証明、ラベリング等を審査。リスククラスに応じた審査深度。",
+          subtypes: [],
+          avgReviewTime: "60〜180日（クラス・書類の完全性による）", fee: "要確認", url: "https://www.gub.uy/ministerio-salud-publica/",
+        },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: "https://www.gub.uy/ministerio-salud-publica/", description: "MSP は一部手続きのデジタル化を進めているが、完全な電子申請システムの運用状況は要確認。", mandatory: false },
+    udi: { required: false, system: "要確認", description: "ウルグアイでは現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。MERCOSUR レベルでの議論は進行中。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "MSP テクノビジランス制度", mandatory: true, url: "https://www.gub.uy/ministerio-salud-publica/", description: "登録保有者は医療機器に関連する有害事象を MSP に報告する義務がある。テクノビジランス（Tecnovigilancia）制度により市販後安全性を監視。" },
+      recalls: { authority: "MSP/DGSP", description: "MSP がリコール・FSCA を管理。登録保有者はリコール実施時に MSP に通知義務。", url: "https://www.gub.uy/ministerio-salud-publica/" },
+      surveillance: "MSP によるテクノビジランス（市販後監視）。MERCOSUR レベルでの情報共有も行われる。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "MSP", name: "Certificado de Libre Venta", description: "登録申請時に原産国の規制当局からの CFS 提出が必要。MSP も登録済み機器について CFS を発行可能。", processingTime: "要確認", url: "https://www.gub.uy/ministerio-salud-publica/" },
+    reimbursement: { system: "FONASA（Fondo Nacional de Salud）+ 民間保険", authority: "MSP / FONASA", description: "ウルグアイの公的医療保険は FONASA が運営。国民統合健康保険制度（SNIS）を通じて医療サービスを提供。医療機器の調達は公的医療機関の入札プロセスを通じて行われる。", codingSystems: ["要確認"], url: "https://www.gub.uy/ministerio-salud-publica/" },
+    marketingRules: { authority: "MSP", description: "医療機器の広告・販促は MSP の規制下にある。登録済み機器のみの販売・広告が原則。", keyRules: ["登録済み機器のみ販売・広告可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "ウルグアイは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は GMP/QMS 証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "MERCOSUR 規制整合化の継続", description: "MERCOSUR 加盟国間での医療機器規制の整合化が継続的に進められている。GMP 相互承認やテクノビジランスの情報共有が強化されている。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- PRY（パラグアイ） ---
+  // =========================================================================
+  {
+    code: "PRY",
+    country: "パラグアイ",
+    countryEn: "Republic of Paraguay",
+    region: "Latam",
+    flag: "🇵🇾",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "パラグアイの医療機器規制は保健福祉省（MSPBS）傘下の国家衛生監視局（DNVS: Dirección Nacional de Vigilancia Sanitaria）が管轄する。Ley 1119/97（医薬品・医療機器法）および関連する規則が主要な規制根拠。MERCOSUR の共通規則を国内法に取り込んでおり、地域整合化が進行中。4クラス分類（Class I / II / III / IV）を採用。",
+      keyCharacteristics: [
+        "MSPBS/DNVS による中央規制体制",
+        "Ley 1119/97 に基づく4クラス分類（Class I / II / III / IV）",
+        "MERCOSUR GMC 決議の国内法化による地域整合化",
+        "ローカル登録保有者の指定が必須",
+        "CFS（Certificate of Free Sale）の提出が必要",
+        "DNVS による直接審査",
+      ],
+    },
+    authorities: [
+      { name: "DNVS", fullName: "Dirección Nacional de Vigilancia Sanitaria", localName: "Dirección Nacional de Vigilancia Sanitaria", role: "医療機器の登録・市販後監視・施設許可・輸入管理", url: "https://www.dnvs.gov.py/", isPrimary: true },
+      { name: "MSPBS", fullName: "Ministerio de Salud Pública y Bienestar Social", localName: "Ministerio de Salud Pública y Bienestar Social", role: "保健政策の策定・監督", url: "https://www.mspbs.gov.py/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（DNVS が直接審査）",
+      description: "パラグアイには Notified Body 制度は存在しない。DNVS が直接、登録申請書類を審査する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "Ley 1119/97 および関連規則に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。MERCOSUR の定義に準拠。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は MERCOSUR GMC 決議に基づく。",
+    },
+    primaryLaw: {
+      title: "Ley N° 1119/97（医薬品等に関する法律）",
+      originalTitle: "Ley N° 1119/97 - De Productos para la Salud y Otros",
+      enacted: "1997",
+      lastAmended: "随時改正",
+      url: "https://www.dnvs.gov.py/",
+      description: "パラグアイにおける医薬品・医療機器・体外診断薬等の保健製品を規制する基本法。DNVS の権限と規制枠組みを規定。",
+    },
+    implementingRegulations: [
+      { title: "Decreto 7.442/2006（医療機器の登録に関する規則）", date: "2006", url: "https://www.dnvs.gov.py/", description: "医療機器の分類・登録手続き・必要書類を規定する主要な施行規則。", category: "包括規制" },
+      { title: "MERCOSUR GMC 決議（各種）", date: "各年", url: "https://www.mercosur.int/", description: "MERCOSUR 加盟国間で整合化された医療機器規制。", category: "地域整合化" },
+    ],
+    relatedLaws: [
+      { title: "Código Sanitario (Ley 836/80)", category: "衛生法", enacted: "1980", url: "https://www.mspbs.gov.py/", relevance: "保健衛生制度の基本法。" },
+    ],
+    classification: {
+      system: "4クラス分類（Class I / II / III / IV）",
+      basis: "リスクベース（MERCOSUR 整合化規則に準拠）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["聴診器", "弾性包帯", "手動外科器具"], approvalPath: "登録（簡易手続き）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["注射器", "血圧計", "歯科用充填材"], approvalPath: "登録（標準手続き）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "中高リスク", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "登録（詳細審査）" },
+        { name: "Class IV", nameJa: "クラスIV", riskLevel: "高リスク", description: "最高リスク医療機器。最も厳格な審査。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型除細動器"], approvalPath: "登録（最も詳細な審査）" },
+      ],
+      rules: [{ id: "MERCOSUR GMC 分類規則", description: "MERCOSUR で整合化されたリスクベースの分類規則。", url: "https://www.mercosur.int/" }],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "DNVS が登録申請書類を審査。CFS、技術文書、GMP 証明、ラベリング等を評価。",
+      routes: [
+        {
+          name: "Registro Sanitario de Productos Médicos", nameJa: "医療機器衛生登録", applicableClasses: ["Class I / II / III / IV"],
+          description: "DNVS に登録申請書類を提出。技術文書、CFS、GMP 適合証明、ラベリング等を審査。",
+          subtypes: [],
+          avgReviewTime: "60〜180日（クラス・書類の完全性による）", fee: "要確認", url: "https://www.dnvs.gov.py/",
+        },
+      ],
+    },
+    electronicSubmission: { system: "DNVS オンラインシステム", url: "https://www.dnvs.gov.py/", description: "DNVS は電子申請システムの整備を進めている。一部手続きはオンラインで対応可能。", mandatory: false },
+    udi: { required: false, system: "要確認", description: "パラグアイでは現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "DNVS テクノビジランス制度", mandatory: true, url: "https://www.dnvs.gov.py/", description: "登録保有者は医療機器に関連する有害事象を DNVS に報告する義務がある。テクノビジランス制度により市販後安全性を監視。" },
+      recalls: { authority: "DNVS", description: "DNVS がリコール・FSCA を管理。", url: "https://www.dnvs.gov.py/" },
+      surveillance: "DNVS によるテクノビジランス（市販後監視）。MERCOSUR レベルでの情報共有も行われる。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "DNVS", name: "Certificado de Libre Venta", description: "登録申請時に原産国の規制当局からの CFS 提出が必要。DNVS も登録済み機器について CFS を発行可能。", processingTime: "要確認", url: "https://www.dnvs.gov.py/" },
+    reimbursement: { system: "IPS（Instituto de Previsión Social）+ 公的医療機関 + 民間保険", authority: "MSPBS / IPS", description: "パラグアイの公的医療は MSPBS 傘下の公立病院と IPS（社会保険機関）が中心。医療機器の調達は公的入札プロセスを通じて行われる。", codingSystems: ["要確認"], url: "https://www.mspbs.gov.py/" },
+    marketingRules: { authority: "DNVS", description: "医療機器の広告・販促は DNVS の規制下にある。登録済み機器のみの販売・広告が原則。", keyRules: ["登録済み機器のみ販売・広告可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "パラグアイは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は GMP/QMS 証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "DNVS の組織強化と MERCOSUR 整合化", description: "DNVS は医療機器規制の体制強化と MERCOSUR 加盟国間での規制整合化を継続的に推進中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- DOM（ドミニカ共和国） ---
+  // =========================================================================
+  {
+    code: "DOM",
+    country: "ドミニカ共和国",
+    countryEn: "Dominican Republic",
+    region: "Latam",
+    flag: "🇩🇴",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ドミニカ共和国の医療機器規制は公衆衛生省（MSP: Ministerio de Salud Pública）傘下の医薬品・保健製品総局（DIGEMAPS: Dirección General de Medicamentos, Alimentos y Productos Sanitarios）が管轄する。Ley General de Salud 42-01 および関連規則が主要な法的根拠。医療機器は衛生登録（Registro Sanitario）が必要。分類体系は国際的なリスクベース分類を参照。",
+      keyCharacteristics: [
+        "MSP/DIGEMAPS による中央規制体制",
+        "Ley 42-01 に基づく衛生登録制度",
+        "リスクベースの分類体系",
+        "ローカル登録保有者の指定が必須",
+        "CFS の提出が必要",
+        "カリブ海地域の規制当局との連携",
+      ],
+    },
+    authorities: [
+      { name: "DIGEMAPS", fullName: "Dirección General de Medicamentos, Alimentos y Productos Sanitarios", localName: "Dirección General de Medicamentos, Alimentos y Productos Sanitarios", role: "医療機器の登録・市販後監視・施設許可・輸入管理", url: "https://www.msp.gob.do/", isPrimary: true },
+      { name: "MSP", fullName: "Ministerio de Salud Pública", localName: "Ministerio de Salud Pública", role: "保健政策の策定・監督", url: "https://www.msp.gob.do/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（DIGEMAPS が直接審査）",
+      description: "ドミニカ共和国には Notified Body 制度は存在しない。DIGEMAPS が直接、登録申請書類を審査する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "関連規則に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は GHTF/IMDRF の国際的定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Ley General de Salud N° 42-01（一般保健法）",
+      originalTitle: "Ley General de Salud N° 42-01",
+      enacted: "2001",
+      lastAmended: "随時改正",
+      url: "https://www.msp.gob.do/",
+      description: "ドミニカ共和国における保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。",
+    },
+    implementingRegulations: [
+      { title: "医療機器衛生登録に関する規則", date: "各種", url: "https://www.msp.gob.do/", description: "医療機器の分類・登録手続き・必要書類を規定。DIGEMAPS が発行する技術規則・ガイダンス。", category: "包括規制" },
+    ],
+    relatedLaws: [
+      { title: "Ley 42-01 施行規則（各種 Decreto）", category: "施行規則", enacted: "各年", url: "https://www.msp.gob.do/", relevance: "一般保健法の施行に関する詳細規定。" },
+    ],
+    classification: {
+      system: "4クラス分類（Class I / II / III / IV）",
+      basis: "リスクベース",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["聴診器", "弾性包帯", "手動外科器具"], approvalPath: "登録（簡易手続き）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["血圧計", "注射器", "超音波診断装置"], approvalPath: "登録（標準手続き）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "中高リスク", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "登録（詳細審査）" },
+        { name: "Class IV", nameJa: "クラスIV", riskLevel: "高リスク", description: "最高リスク医療機器。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "登録（最も詳細な審査）" },
+      ],
+      rules: [{ id: "DIGEMAPS 分類規則", description: "リスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。", url: "https://www.msp.gob.do/" }],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "DIGEMAPS が登録申請書類を審査。CFS、技術文書、GMP 証明、ラベリング等を評価。US FDA 承認や CE マーキングは参照情報として考慮される場合がある。",
+      routes: [
+        {
+          name: "Registro Sanitario de Dispositivos Médicos", nameJa: "医療機器衛生登録", applicableClasses: ["Class I / II / III / IV"],
+          description: "DIGEMAPS に登録申請書類を提出。技術文書、CFS、GMP 適合証明、ラベリング等を審査。",
+          subtypes: [],
+          avgReviewTime: "90〜180日（クラス・書類の完全性による）", fee: "要確認", url: "https://www.msp.gob.do/",
+        },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: "https://www.msp.gob.do/", description: "DIGEMAPS は手続きのデジタル化を進めているが、完全な電子申請システムの運用状況は要確認。", mandatory: false },
+    udi: { required: false, system: "要確認", description: "ドミニカ共和国では現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "DIGEMAPS ファーマコ・テクノビジランス制度", mandatory: true, url: "https://www.msp.gob.do/", description: "登録保有者は医療機器に関連する有害事象を DIGEMAPS に報告する義務がある。" },
+      recalls: { authority: "DIGEMAPS", description: "DIGEMAPS がリコール・FSCA を管理。", url: "https://www.msp.gob.do/" },
+      surveillance: "DIGEMAPS によるテクノビジランス（市販後監視）。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "DIGEMAPS", name: "Certificado de Libre Venta", description: "登録申請時に原産国の規制当局からの CFS 提出が必要。DIGEMAPS も登録済み機器について CFS を発行可能。", processingTime: "要確認", url: "https://www.msp.gob.do/" },
+    reimbursement: { system: "SENASA（Seguro Nacional de Salud）+ 民間保険", authority: "SENASA / MSP", description: "ドミニカ共和国の公的医療保険は SENASA が運営。社会保障制度（Ley 87-01）に基づく医療保険制度。医療機器の調達は公的医療機関の入札プロセスを通じて行われる。", codingSystems: ["要確認"], url: "https://www.senasa.gob.do/" },
+    marketingRules: { authority: "DIGEMAPS", description: "医療機器の広告・販促は DIGEMAPS の規制下にある。登録済み機器のみの販売・広告が原則。", keyRules: ["登録済み機器のみ販売・広告可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "ドミニカ共和国は MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は GMP/QMS 証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "医療機器規制の近代化", description: "DIGEMAPS は医療機器の衛生登録プロセスの近代化と国際的整合化を推進中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- PAN（パナマ） ---
+  // =========================================================================
+  {
+    code: "PAN",
+    country: "パナマ",
+    countryEn: "Republic of Panama",
+    region: "Latam",
+    flag: "🇵🇦",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "パナマの医療機器規制は保健省（MINSA: Ministerio de Salud）傘下の国家薬事局（DNFD: Dirección Nacional de Farmacia y Drogas）が管轄する。Ley 1 de 2001（医薬品法）および Decreto Ejecutivo N° 178 de 2001（施行規則）が主要な法的根拠。医療機器は衛生登録（Registro Sanitario）が必要。リスクベースの4クラス分類を採用。FDA 承認済み・CE マーキング取得済み機器に対しては一部簡易経路あり。",
+      keyCharacteristics: [
+        "MINSA/DNFD による中央規制体制",
+        "Ley 1 de 2001 に基づく衛生登録制度",
+        "4クラス分類（Class I / II / III / IV）",
+        "ローカル登録保有者の指定が必須",
+        "CFS の提出が必要",
+        "FDA/CE 承認済み機器には簡易経路の可能性あり",
+      ],
+    },
+    authorities: [
+      { name: "DNFD", fullName: "Dirección Nacional de Farmacia y Drogas", localName: "Dirección Nacional de Farmacia y Drogas", role: "医療機器の登録・市販後監視・施設許可・輸入管理", url: "http://www.minsa.gob.pa/", isPrimary: true },
+      { name: "MINSA", fullName: "Ministerio de Salud", localName: "Ministerio de Salud", role: "保健政策の策定・監督", url: "http://www.minsa.gob.pa/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（DNFD が直接審査）",
+      description: "パナマには Notified Body 制度は存在しない。DNFD が直接、登録申請書類を審査する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "Ley 1 de 2001 および関連規則に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は GHTF/IMDRF の国際的定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Ley N° 1 de 2001（医薬品・その他保健製品に関する法律）",
+      originalTitle: "Ley 1 de 10 de enero de 2001 - Sobre Medicamentos y otros Productos para la Salud Humana",
+      enacted: "2001",
+      lastAmended: "随時改正",
+      url: "http://www.minsa.gob.pa/",
+      description: "パナマにおける医薬品・医療機器等の保健製品を規制する基本法。DNFD の権限と規制枠組みを規定。",
+    },
+    implementingRegulations: [
+      { title: "Decreto Ejecutivo N° 178 de 2001（施行規則）", date: "2001", url: "http://www.minsa.gob.pa/", description: "Ley 1 de 2001 の施行規則。医療機器の登録手続き・分類・必要書類を規定。", category: "包括規制" },
+      { title: "Resolución N° 442（医療機器の登録に関する技術規則）", date: "各種", url: "http://www.minsa.gob.pa/", description: "医療機器の登録に関する追加的な技術規則・ガイダンス。", category: "技術要件" },
+    ],
+    relatedLaws: [
+      { title: "Código Sanitario (Ley 66 de 1947)", category: "衛生法", enacted: "1947", url: "http://www.minsa.gob.pa/", relevance: "保健衛生制度の基本法。" },
+    ],
+    classification: {
+      system: "4クラス分類（Class I / II / III / IV）",
+      basis: "リスクベース",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["聴診器", "弾性包帯", "手動外科器具"], approvalPath: "登録（簡易手続き）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["血圧計", "注射器", "超音波診断装置"], approvalPath: "登録（標準手続き）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "中高リスク", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "登録（詳細審査）" },
+        { name: "Class IV", nameJa: "クラスIV", riskLevel: "高リスク", description: "最高リスク医療機器。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "登録（最も詳細な審査）" },
+      ],
+      rules: [{ id: "DNFD 分類規則", description: "リスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。", url: "http://www.minsa.gob.pa/" }],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "DNFD が登録申請書類を審査。CFS、技術文書、GMP 証明、ラベリング等を評価。FDA 承認済みや CE マーキング取得済み機器は審査の参考とされる。",
+      routes: [
+        {
+          name: "Registro Sanitario de Dispositivos Médicos", nameJa: "医療機器衛生登録", applicableClasses: ["Class I / II / III / IV"],
+          description: "DNFD に登録申請書類を提出。技術文書、CFS、GMP 適合証明、ラベリング等を審査。",
+          subtypes: [{ name: "簡易登録（FDA/CE 承認済み機器）", description: "US FDA 承認済みまたは CE マーキング取得済み機器は審査が簡略化される場合がある。" }],
+          avgReviewTime: "60〜180日（クラス・書類の完全性による）", fee: "要確認", url: "http://www.minsa.gob.pa/",
+        },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: "http://www.minsa.gob.pa/", description: "DNFD は手続きのデジタル化を進めているが、完全な電子申請システムの運用状況は要確認。", mandatory: false },
+    udi: { required: false, system: "要確認", description: "パナマでは現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "DNFD テクノビジランス制度", mandatory: true, url: "http://www.minsa.gob.pa/", description: "登録保有者は医療機器に関連する有害事象を DNFD に報告する義務がある。テクノビジランス制度により市販後安全性を監視。" },
+      recalls: { authority: "DNFD", description: "DNFD がリコール・FSCA を管理。", url: "http://www.minsa.gob.pa/" },
+      surveillance: "DNFD によるテクノビジランス（市販後監視）。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "DNFD", name: "Certificado de Libre Venta", description: "登録申請時に原産国の規制当局からの CFS 提出が必要。DNFD も登録済み機器について CFS を発行可能。", processingTime: "要確認", url: "http://www.minsa.gob.pa/" },
+    reimbursement: { system: "CSS（Caja de Seguro Social）+ 公的医療機関 + 民間保険", authority: "MINSA / CSS", description: "パナマの公的医療は MINSA 傘下の公立病院と CSS（社会保険公社）が中心。医療機器の調達は公的入札プロセス（Panamá Compra en Línea）を通じて行われる。", codingSystems: ["要確認"], url: "http://www.css.gob.pa/" },
+    marketingRules: { authority: "DNFD", description: "医療機器の広告・販促は DNFD の規制下にある。登録済み機器のみの販売・広告が原則。", keyRules: ["登録済み機器のみ販売・広告可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "パナマは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は GMP/QMS 証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "医療機器規制の近代化", description: "DNFD は医療機器の衛生登録プロセスの効率化と国際的整合化を推進中。電子申請システムの整備も進行。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- GTM（グアテマラ） ---
+  // =========================================================================
+  {
+    code: "GTM",
+    country: "グアテマラ",
+    countryEn: "Republic of Guatemala",
+    region: "Latam",
+    flag: "🇬🇹",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "グアテマラの医療機器規制は公衆衛生社会福祉省（MSPAS: Ministerio de Salud Pública y Asistencia Social）傘下の薬務・医薬品規制局（DRPF: Departamento de Regulación y Control de Productos Farmacéuticos y Afines）が管轄する。Código de Salud (Decreto 90-97) および関連規則が主要な法的根拠。中米経済統合に伴い RTCA（中米技術規則）も適用。医療機器は衛生登録が必要。",
+      keyCharacteristics: [
+        "MSPAS/DRPF による中央規制体制",
+        "Código de Salud (Decreto 90-97) に基づく衛生登録制度",
+        "RTCA（中米技術規則）の適用による地域整合化",
+        "ローカル登録保有者の指定が必須",
+        "CFS の提出が必要",
+        "FDA/CE 承認は審査の参考情報として考慮",
+      ],
+    },
+    authorities: [
+      { name: "MSPAS/DRPF", fullName: "Ministerio de Salud Pública y Asistencia Social - Departamento de Regulación y Control de Productos Farmacéuticos y Afines", localName: "DRPF", role: "医療機器の登録・市販後監視・施設許可・輸入管理", url: "https://www.mspas.gob.gt/", isPrimary: true },
+    ],
+    notifiedBodies: {
+      system: "なし（DRPF が直接審査）",
+      description: "グアテマラには Notified Body 制度は存在しない。DRPF が直接、登録申請書類を審査する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "関連規則に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。RTCA の定義に準拠。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は RTCA（中米技術規則）に基づき、GHTF/IMDRF の定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Código de Salud (Decreto 90-97)（保健法典）",
+      originalTitle: "Código de Salud - Decreto 90-97",
+      enacted: "1997",
+      lastAmended: "随時改正",
+      url: "https://www.mspas.gob.gt/",
+      description: "グアテマラにおける保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。",
+    },
+    implementingRegulations: [
+      { title: "RTCA 11.03.56:09（医療機器の登録に関する中米技術規則）", date: "2009", url: "https://www.mspas.gob.gt/", description: "中米経済統合の枠組みで策定された医療機器の衛生登録に関する技術規則。中米各国で共通適用。", category: "地域整合化" },
+      { title: "Acuerdo Gubernativo（各種政府令）", date: "各年", url: "https://www.mspas.gob.gt/", description: "医療機器の登録・分類・輸入管理に関する追加的な政府令。", category: "包括規制" },
+    ],
+    relatedLaws: [
+      { title: "Ley del Organismo Ejecutivo", category: "行政組織法", enacted: "1997", url: "https://www.mspas.gob.gt/", relevance: "MSPAS の組織と権限を規定。" },
+    ],
+    classification: {
+      system: "4クラス分類（Class I / II / III / IV）",
+      basis: "リスクベース（RTCA に準拠）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["聴診器", "弾性包帯", "手動外科器具"], approvalPath: "登録（簡易手続き）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["血圧計", "注射器", "超音波診断装置"], approvalPath: "登録（標準手続き）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "中高リスク", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "登録（詳細審査）" },
+        { name: "Class IV", nameJa: "クラスIV", riskLevel: "高リスク", description: "最高リスク医療機器。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "登録（最も詳細な審査）" },
+      ],
+      rules: [{ id: "RTCA 分類規則", description: "RTCA に基づくリスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。", url: "https://www.mspas.gob.gt/" }],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "DRPF が登録申請書類を審査。CFS、技術文書、GMP 証明、ラベリング等を評価。RTCA に基づく中米共通の審査要件が適用される。",
+      routes: [
+        {
+          name: "Registro Sanitario de Dispositivos Médicos", nameJa: "医療機器衛生登録", applicableClasses: ["Class I / II / III / IV"],
+          description: "DRPF に登録申請書類を提出。RTCA に基づく技術文書、CFS、GMP 適合証明、ラベリング等を審査。",
+          subtypes: [{ name: "中米統一登録（Registro Unificado Centroamericano）", description: "RTCA に基づき、1カ国での登録を他の中米諸国で認証する統一登録制度（実施状況は要確認）。" }],
+          avgReviewTime: "60〜180日（クラス・書類の完全性による）", fee: "要確認", url: "https://www.mspas.gob.gt/",
+        },
+      ],
+    },
+    electronicSubmission: { system: "要確認", url: "https://www.mspas.gob.gt/", description: "DRPF は手続きのデジタル化を進めているが、完全な電子申請システムの運用状況は要確認。", mandatory: false },
+    udi: { required: false, system: "要確認", description: "グアテマラでは現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "DRPF テクノビジランス制度", mandatory: true, url: "https://www.mspas.gob.gt/", description: "登録保有者は医療機器に関連する有害事象を DRPF に報告する義務がある。テクノビジランス制度により市販後安全性を監視。" },
+      recalls: { authority: "DRPF", description: "DRPF がリコール・FSCA を管理。", url: "https://www.mspas.gob.gt/" },
+      surveillance: "DRPF によるテクノビジランス（市販後監視）。中米地域での情報共有も進行中。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "DRPF", name: "Certificado de Libre Venta", description: "登録申請時に原産国の規制当局からの CFS 提出が必要。DRPF も登録済み機器について CFS を発行可能。", processingTime: "要確認", url: "https://www.mspas.gob.gt/" },
+    reimbursement: { system: "IGSS（Instituto Guatemalteco de Seguridad Social）+ 公的医療機関 + 民間保険", authority: "MSPAS / IGSS", description: "グアテマラの公的医療は MSPAS 傘下の公立病院と IGSS（社会保険機関）が中心。医療機器の調達は公的入札プロセス（Guatecompras）を通じて行われる。", codingSystems: ["要確認"], url: "https://www.igss.gob.gt/" },
+    marketingRules: { authority: "DRPF", description: "医療機器の広告・販促は DRPF の規制下にある。登録済み機器のみの販売・広告が原則。", keyRules: ["登録済み機器のみ販売・広告可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "グアテマラは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は GMP/QMS 証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "RTCA に基づく中米規制整合化の推進", description: "グアテマラは RTCA（中米技術規則）に基づく医療機器規制の整合化を中米各国と共同で推進中。統一登録制度の実効化に向けた議論が続く。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- HND（ホンジュラス） ---
+  // =========================================================================
+  {
+    code: "HND",
+    country: "ホンジュラス",
+    countryEn: "Republic of Honduras",
+    region: "Latam",
+    flag: "🇭🇳",
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description: "ホンジュラスの医療機器規制は ARSA（Agencia de Regulación Sanitaria）が管轄する。ARSA は2014年に設立された独立規制機関で、旧来の保健省薬事局の機能を引き継いだ。Ley Marco del Sistema de Protección Social および関連規則が法的根拠。RTCA（中米技術規則）も適用。医療機器は衛生登録が必要で、リスクベースの分類を採用。",
+      keyCharacteristics: [
+        "ARSA による独立規制機関としての管理",
+        "RTCA（中米技術規則）の適用による地域整合化",
+        "4クラス分類（Class I / II / III / IV）",
+        "ローカル登録保有者の指定が必須",
+        "CFS の提出が必要",
+        "FDA/CE 承認は審査の参考情報として考慮",
+      ],
+    },
+    authorities: [
+      { name: "ARSA", fullName: "Agencia de Regulación Sanitaria", localName: "Agencia de Regulación Sanitaria", role: "医療機器の登録・市販後監視・施設許可・輸入管理", url: "https://www.arsa.gob.hn/", isPrimary: true },
+      { name: "SESAL", fullName: "Secretaría de Salud", localName: "Secretaría de Salud", role: "保健政策の策定・監督", url: "https://www.salud.gob.hn/", isPrimary: false },
+    ],
+    notifiedBodies: {
+      system: "なし（ARSA が直接審査）",
+      description: "ホンジュラスには Notified Body 制度は存在しない。ARSA が直接、登録申請書類を審査する。",
+      bodies: [],
+    },
+    deviceDefinition: {
+      legalDefinition: "関連規則に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。RTCA の定義に準拠。",
+      scope: "体外診断用医薬品（IVD）も規制対象。",
+      notes: "定義は RTCA（中米技術規則）に基づき、GHTF/IMDRF の定義に概ね準拠。",
+    },
+    primaryLaw: {
+      title: "Ley para la creación de ARSA（ARSA 設立法）",
+      originalTitle: "Decreto Legislativo N° 6-2014 - Ley para la creación de la Agencia de Regulación Sanitaria",
+      enacted: "2014",
+      lastAmended: "随時改正",
+      url: "https://www.arsa.gob.hn/",
+      description: "ARSA を独立規制機関として設立する法律。医薬品・医療機器・食品等の衛生規制に関する権限を ARSA に付与。",
+    },
+    implementingRegulations: [
+      { title: "RTCA 11.03.56:09（医療機器の登録に関する中米技術規則）", date: "2009", url: "https://www.arsa.gob.hn/", description: "中米経済統合の枠組みで策定された医療機器の衛生登録に関する技術規則。中米各国で共通適用。", category: "地域整合化" },
+      { title: "Reglamento de Dispositivos Médicos（医療機器規則）", date: "各種", url: "https://www.arsa.gob.hn/", description: "ARSA が発行する医療機器の登録・分類・輸入管理に関する規則。", category: "包括規制" },
+    ],
+    relatedLaws: [
+      { title: "Código de Salud", category: "保健法典", enacted: "1991", url: "https://www.salud.gob.hn/", relevance: "ホンジュラスの保健制度の基本法。" },
+    ],
+    classification: {
+      system: "4クラス分類（Class I / II / III / IV）",
+      basis: "リスクベース（RTCA に準拠）",
+      classes: [
+        { name: "Class I", nameJa: "クラスI", riskLevel: "低リスク", description: "低リスク医療機器。", examples: ["聴診器", "弾性包帯", "手動外科器具"], approvalPath: "登録（簡易手続き）" },
+        { name: "Class II", nameJa: "クラスII", riskLevel: "中低リスク", description: "中低リスク医療機器。", examples: ["血圧計", "注射器", "超音波診断装置"], approvalPath: "登録（標準手続き）" },
+        { name: "Class III", nameJa: "クラスIII", riskLevel: "中高リスク", description: "中高リスク医療機器。", examples: ["人工呼吸器", "透析器", "整形外科用インプラント"], approvalPath: "登録（詳細審査）" },
+        { name: "Class IV", nameJa: "クラスIV", riskLevel: "高リスク", description: "最高リスク医療機器。", examples: ["人工心臓弁", "冠動脈ステント", "埋込み型デバイス"], approvalPath: "登録（最も詳細な審査）" },
+      ],
+      rules: [{ id: "RTCA 分類規則", description: "RTCA に基づくリスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。", url: "https://www.arsa.gob.hn/" }],
+      totalProductCodes: "要確認",
+    },
+    conformityAssessment: {
+      overview: "ARSA が登録申請書類を審査。CFS、技術文書、GMP 証明、ラベリング等を評価。RTCA に基づく中米共通の審査要件が適用される。",
+      routes: [
+        {
+          name: "Registro Sanitario de Dispositivos Médicos", nameJa: "医療機器衛生登録", applicableClasses: ["Class I / II / III / IV"],
+          description: "ARSA に登録申請書類を提出。RTCA に基づく技術文書、CFS、GMP 適合証明、ラベリング等を審査。",
+          subtypes: [{ name: "中米統一登録（Registro Unificado Centroamericano）", description: "RTCA に基づき、1カ国での登録を他の中米諸国で認証する統一登録制度（実施状況は要確認）。" }],
+          avgReviewTime: "60〜180日（クラス・書類の完全性による）", fee: "要確認", url: "https://www.arsa.gob.hn/",
+        },
+      ],
+    },
+    electronicSubmission: { system: "ARSA オンラインシステム", url: "https://www.arsa.gob.hn/", description: "ARSA はオンラインでの申請受付を一部開始。完全な電子申請システムの整備状況は要確認。", mandatory: false },
+    udi: { required: false, system: "要確認", description: "ホンジュラスでは現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。", url: null, timeline: "要確認" },
+    postMarket: {
+      adverseEventReporting: { system: "ARSA テクノビジランス制度", mandatory: true, url: "https://www.arsa.gob.hn/", description: "登録保有者は医療機器に関連する有害事象を ARSA に報告する義務がある。テクノビジランス制度により市販後安全性を監視。" },
+      recalls: { authority: "ARSA", description: "ARSA がリコール・FSCA を管理。", url: "https://www.arsa.gob.hn/" },
+      surveillance: "ARSA によるテクノビジランス（市販後監視）。中米地域での情報共有も進行中。",
+    },
+    certificateOfFreeSale: { available: true, issuingAuthority: "ARSA", name: "Certificado de Libre Venta", description: "登録申請時に原産国の規制当局からの CFS 提出が必要。ARSA も登録済み機器について CFS を発行可能。", processingTime: "要確認", url: "https://www.arsa.gob.hn/" },
+    reimbursement: { system: "IHSS（Instituto Hondureño de Seguridad Social）+ 公的医療機関 + 民間保険", authority: "SESAL / IHSS", description: "ホンジュラスの公的医療は SESAL 傘下の公立病院と IHSS（社会保険機関）が中心。医療機器の調達は公的入札プロセス（Honducompras）を通じて行われる。", codingSystems: ["要確認"], url: "https://www.ihss.gob.hn/" },
+    marketingRules: { authority: "ARSA", description: "医療機器の広告・販促は ARSA の規制下にある。登録済み機器のみの販売・広告が原則。", keyRules: ["登録済み機器のみ販売・広告可", "虚偽・誇大広告の禁止", "ラベリングはスペイン語で記載"] },
+    mdsap: { status: "非参加", description: "ホンジュラスは MDSAP プログラムに参加していない。" },
+    internationalStandards: {
+      iso13485: { accepted: true, notes: "ISO 13485 認証は GMP/QMS 証明として参照される。" },
+      iso14971: { accepted: true, notes: "リスクマネジメントの国際規格として参照。" },
+      iec62304: { accepted: true, notes: "ソフトウェア医療機器に対して参照。" },
+      iec60601: { accepted: true, notes: "医用電気機器の安全規格として参照。" },
+      others: [],
+    },
+    recentDevelopments: [
+      { date: "2025", title: "ARSA の体制強化と中米整合化", description: "ARSA は独立規制機関としての体制強化を継続。RTCA に基づく中米規制整合化の推進と、電子申請システムの整備に注力中。" },
+    ],
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
 ];
 
 // ===========================================================================
