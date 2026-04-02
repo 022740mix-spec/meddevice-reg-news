@@ -12,7 +12,8 @@ export default defineConfig({
         manualChunks: {
           "data-articles": ["./src/data/articlesData.js"],
           "data-guide": ["./src/data/regulatoryGuide.js"],
-          "data-profiles": ["./src/data/countryProfiles.js"],
+          "data-profiles-meta": ["./src/data/countryProfilesMeta.js"],
+          "data-profiles-full": ["./src/data/countryProfiles.js"],
         },
       },
     },

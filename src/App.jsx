@@ -37,12 +37,24 @@ import {
 } from "./data/regulatoryGuide.js";
 import { BUNDLED_MEDIA_URL } from "./mediaUrls.js";
 import {
-  COUNTRY_PROFILES,
+  COUNTRY_PROFILES_META as COUNTRY_PROFILES,
   COUNTRY_FLAG,
   REGION_ORDER,
-  findProfileByCode,
-  groupProfilesByRegion,
-} from "./data/countryProfiles.js";
+  findMetaByCode,
+  groupMetaByRegion,
+} from "./data/countryProfilesMeta.js";
+// countryProfiles.js (1.2MB) は詳細ページでのみ動的import
+let _profilesCache = null;
+async function loadFullProfiles() {
+  if (_profilesCache) return _profilesCache;
+  const mod = await import("./data/countryProfiles.js");
+  _profilesCache = mod;
+  return mod;
+}
+function findProfileByCode(code) {
+  // 同期的にキャッシュから取得（初回は null を返し、useEffect で再取得）
+  return _profilesCache?.findProfileByCode(code) ?? null;
+}
 
 const STORAGE_THEME = "meddev-reg-theme";
 const STORAGE_ACCENT = "meddev-reg-accent";
@@ -2041,8 +2053,13 @@ function CountryGrid({ query, onSelect }) {
 }
 
 function CountryProfileDetail({ code, onBack }) {
-  const profile = findProfileByCode(code);
-  if (!profile) return <div className="empty-state">国が見つかりません</div>;
+  const [profile, setProfile] = useState(findProfileByCode(code));
+  useEffect(() => {
+    loadFullProfiles().then((mod) => {
+      setProfile(mod.findProfileByCode(code));
+    });
+  }, [code]);
+  if (!profile) return <div className="empty-state" style={{ padding: "2rem", textAlign: "center" }}>プロファイルを読み込み中…</div>;
   const p = profile;
   const primary = p.authorities.find((a) => a.isPrimary) || p.authorities[0];
 
