@@ -3992,6 +3992,73 @@ body {
   margin-top: var(--space-4);
 }
 
+/* ── Domain Comparison (横比較テーブル) ── */
+.domain-comparison-wrap {
+  margin: var(--space-4) 0;
+}
+.domain-comparison-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+.domain-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  min-width: 800px;
+}
+.domain-comparison-table th,
+.domain-comparison-table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.5;
+}
+.domain-comparison-table th {
+  background: var(--surface);
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.domain-comparison-table tr:hover td {
+  background: var(--accent-dim);
+}
+.domain-comparison-country {
+  white-space: nowrap;
+  min-width: 120px;
+  position: sticky;
+  left: 0;
+  background: var(--card-solid);
+  z-index: 1;
+  border-right: 1px solid var(--border);
+}
+.domain-comparison-table tr:hover .domain-comparison-country {
+  background: var(--accent-dim);
+}
+.domain-comparison-country-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+}
+.domain-comparison-country-btn:hover {
+  text-decoration: underline;
+}
+.domain-comparison-flag {
+  font-size: 1.2em;
+}
+
 /* H1セクション折りたたみ */
 .country-profile__section-collapse {
   scroll-margin-top: 5.5rem;

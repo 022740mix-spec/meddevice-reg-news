@@ -65,20 +65,25 @@ export const GLOSSARY_BY_GENRE = {
 /* ── セットアップガイド（規制情報の入手方法） ── */
 export const VIBE_SETUP_GUIDE = {
   title: "規制情報の入手ガイド",
-  steps: [
+  lead: "各国の規制当局が公開する情報源を知り、効率的に最新の法規制・ガイダンスを収集する方法を解説します。",
+  sections: [
     {
+      id: "setup-fda",
       heading: "FDA の情報源",
       body: "FDA のガイダンス文書は fda.gov/regulatory-information/search-fda-guidance-documents で検索可能。Federal Register での最終規則・提案規則も重要。510(k) データベースで過去の承認事例を調査できる。",
     },
     {
+      id: "setup-pmda",
       heading: "PMDA / 厚労省の情報源",
       body: "PMDA の通知・事務連絡は pmda.go.jp で公開。厚生労働省の法令・通知も確認が必要。医療機器の承認情報は PMDA の審査報告書で公開される。",
     },
     {
+      id: "setup-standards",
       heading: "規格の入手",
       body: "ISO・IEC 規格は各団体のウェブストア（iso.org、webstore.iec.ch）で購入可能。JIS 規格は日本規格協会（JSA）のサイトで閲覧・購入できる。",
     },
     {
+      id: "setup-international",
       heading: "国際動向の把握",
       body: "IMDRF の公開文書（imdrf.org）で国際的な規制調和の動向を確認。MDSAP（Medical Device Single Audit Program）参加国の情報も重要。",
     },
@@ -116,9 +121,9 @@ export const VIBE_CODING_PRACTICAL = {
   title: "申請経路の選び方",
   lead: "米国 FDA への申請経路は、機器のクラス分類と前例の有無によって決まります。",
   sections: [
-    { heading: "510(k) — 実質的同等性", body: "Class II 機器の多くが該当。既存の承認済み機器（Predicate Device）との実質的同等性を示す。審査期間は通常90日。" },
-    { heading: "De Novo — 新規分類", body: "前例のない低〜中リスク機器向け。新しい機器分類の作成を伴う。AI/ML 搭載の新規 SaMD でよく利用される。" },
-    { heading: "PMA — 市販前承認", body: "Class III 機器に必要。臨床試験データを含む最も厳格な審査。審査期間は180日以上。" },
+    { id: "practical-510k", heading: "510(k) — 実質的同等性", body: "Class II 機器の多くが該当。既存の承認済み機器（Predicate Device）との実質的同等性を示す。審査期間は通常90日。" },
+    { id: "practical-denovo", heading: "De Novo — 新規分類", body: "前例のない低〜中リスク機器向け。新しい機器分類の作成を伴う。AI/ML 搭載の新規 SaMD でよく利用される。" },
+    { id: "practical-pma", heading: "PMA — 市販前承認", body: "Class III 機器に必要。臨床試験データを含む最も厳格な審査。審査期間は180日以上。" },
   ],
 };
 

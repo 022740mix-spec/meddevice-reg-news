@@ -501,7 +501,7 @@ function syncAppUrl({ articleId, siteSection, tagQuery, guideTab, toolTab, count
     } else if (siteSection === "tools") {
       u.searchParams.set("view", "tools");
       u.searchParams.delete("tag");
-      if (toolTab !== "claude-code") u.searchParams.set("tab", toolTab);
+      if (toolTab !== "law") u.searchParams.set("tab", toolTab);
       else u.searchParams.delete("tab");
     } else if (siteSection === "guide") {
       u.searchParams.set("view", "guide");
@@ -979,11 +979,19 @@ function SiteSectionNav({ section, onSection }) {
   );
 }
 
+const DOMAIN_TABS = [
+  { id: "law",            label: "医療機器法" },
+  { id: "classification", label: "クラス分類" },
+  { id: "pathway",        label: "承認経路" },
+  { id: "ai-samd",        label: "AI・SaMD" },
+  { id: "cybersecurity",  label: "サイバーセキュリティ" },
+];
+
 function ToolTabBar({ toolTab, onSelect }) {
   return (
-    <nav className="filter-nav" aria-label="ツール別リファレンスの切替">
+    <nav className="filter-nav" aria-label="規制領域別比較の切替">
       <div className="filter-nav-inner" role="tablist">
-        {TOOL_REFERENCES.map((t) => (
+        {DOMAIN_TABS.map((t) => (
           <button
             key={t.id}
             id={`tool-subtab-${t.id}`}
@@ -999,6 +1007,103 @@ function ToolTabBar({ toolTab, onSelect }) {
         ))}
       </div>
     </nav>
+  );
+}
+
+/** 規制領域別 横比較テーブル */
+function DomainComparisonTable({ domainId, onCountryClick }) {
+  const profiles = COUNTRY_PROFILES;
+
+  const columns = useMemo(() => {
+    switch (domainId) {
+      case "law":
+        return {
+          headers: ["国", "根拠法", "制定年", "主管当局", "MDSAP"],
+          row: (p) => [
+            p.primaryLaw?.title ?? "—",
+            p.primaryLaw?.enacted ?? "—",
+            p.authorities?.find((a) => a.isPrimary)?.name ?? "—",
+            p.mdsap?.status ?? "—",
+          ],
+        };
+      case "classification":
+        return {
+          headers: ["国", "分類体系", "クラス数", "クラス一覧"],
+          row: (p) => [
+            p.classification?.system ?? "—",
+            String(p.classification?.classes?.length ?? "—"),
+            p.classification?.classes?.map((c) => `${c.name}（${c.riskLevel}）`).join("、") ?? "—",
+          ],
+        };
+      case "pathway":
+        return {
+          headers: ["国", "主要経路", "審査期間", "電子申請"],
+          row: (p) => [
+            p.conformityAssessment?.routes?.map((r) => r.name).join("、") ?? "—",
+            p.conformityAssessment?.routes?.map((r) => r.avgReviewTime ? `${r.name}: ${r.avgReviewTime}` : null).filter(Boolean).join(" / ") || "—",
+            p.electronicSubmission?.system ?? "—",
+          ],
+        };
+      case "ai-samd":
+        return {
+          headers: ["国", "SaMD規制状況", "最新動向"],
+          row: (p) => [
+            p.deviceDefinition?.notes ?? "—",
+            p.recentDevelopments?.filter((rd) => /AI|SaMD|ソフトウェア|software|デジタル|digital/i.test(rd.title + rd.description)).map((rd) => `${rd.date}: ${rd.title}`).join(" / ") || "—",
+          ],
+        };
+      case "cybersecurity":
+        return {
+          headers: ["国", "関連法・ガイダンス", "義務化状況"],
+          row: (p) => {
+            const cyberLaws = p.relatedLaws?.filter((l) => /サイバー|cyber|security|セキュリティ/i.test(l.title + l.category + (l.relevance ?? "")));
+            const cyberDevs = p.recentDevelopments?.filter((rd) => /サイバー|cyber|security|セキュリティ|SBOM/i.test(rd.title + rd.description));
+            return [
+              cyberLaws?.map((l) => l.title).join("、") || "—",
+              cyberDevs?.map((rd) => `${rd.date}: ${rd.title}`).join(" / ") || "—",
+            ];
+          },
+        };
+      default:
+        return { headers: ["国"], row: () => [] };
+    }
+  }, [domainId]);
+
+  return (
+    <div className="domain-comparison-wrap">
+      <div className="domain-comparison-scroll">
+        <table className="domain-comparison-table">
+          <thead>
+            <tr>
+              {columns.headers.map((h, i) => (
+                <th key={i}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {profiles.map((p) => {
+              const cells = columns.row(p);
+              return (
+                <tr key={p.code}>
+                  <td className="domain-comparison-country">
+                    <button
+                      className="domain-comparison-country-btn"
+                      onClick={() => onCountryClick(p.code)}
+                    >
+                      <span className="domain-comparison-flag">{p.flag}</span>
+                      {p.country}
+                    </button>
+                  </td>
+                  {cells.map((cell, j) => (
+                    <td key={j}>{cell}</td>
+                  ))}
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
 }
 
@@ -1256,7 +1361,7 @@ function GuideSetupPanel() {
       <section id="vibe-intro" className="guide-section guide-section--vibe">
         <h2 className="guide-section__title">医療機器規制の基礎</h2>
         <p className="guide-section__lead">
-          {richInlineLine(VIBE_CODING_DEFINITION, mkKey)}
+          {richInlineLine(VIBE_CODING_DEFINITION.summary, mkKey)}
         </p>
       </section>
       <section id="vibe-setup" className="guide-section guide-section--vibe">
@@ -3721,7 +3826,7 @@ function SiteFooter({ onOpenStatement }) {
 /** 初回マウント時の URL（?a= / ?view= / ?tag=）から一覧・詳細状態を復元 */
 function readInitialRouteState() {
   if (typeof window === "undefined") {
-    return { selected: null, siteSection: "home", query: "", guideTab: "setup", toolTab: "claude-code" };
+    return { selected: null, siteSection: "home", query: "", guideTab: "setup", toolTab: "law" };
   }
   // 統合済み記事の旧ID → 新IDリダイレクト
   const REDIRECTS = {
@@ -3737,7 +3842,7 @@ function readInitialRouteState() {
   if (aid) {
     const found = ARTICLES.find((x) => x.id === aid);
     if (found) {
-      return { selected: found, siteSection: "articles", query: "", guideTab: "setup", toolTab: "claude-code" };
+      return { selected: found, siteSection: "articles", query: "", guideTab: "setup", toolTab: "law" };
     }
   }
   const view = u.searchParams.get("view");
@@ -3760,8 +3865,8 @@ function readInitialRouteState() {
       ? tab
       : "setup";
   const toolTab = siteSection === "tools"
-    ? (tab && TOOL_REFERENCES.some(t => t.id === tab) ? tab : "claude-code")
-    : "claude-code";
+    ? (tab && DOMAIN_TABS.some(t => t.id === tab) ? tab : "law")
+    : "law";
   const tag = u.searchParams.get("tag");
   const query =
     siteSection === "articles" && tag && tag.trim()
@@ -4031,7 +4136,7 @@ const [showFab, setShowFab] = useState(false);
     setSelectedCountry(null);
     setPage(1);
     if (next === "guide") setGuideTab("setup");
-    if (next === "tools") setToolTab("claude-code");
+    if (next === "tools") setToolTab("law");
     window.scrollTo(0, 0);
   }, []);
 
@@ -4277,9 +4382,18 @@ const [showFab, setShowFab] = useState(false);
                 </>
               ) : siteSection === "tools" ? (
                 <>
-                  <ToolReferencePanel
-                    referenceData={toolRef.ref}
-                    practical={toolRef.practical}
+                  <div className="section-feed">
+                    <h2 className="section-feed__title">規制領域別比較</h2>
+                    <p className="section-feed__meta">
+                      {COUNTRY_PROFILES.length}カ国・地域の医療機器規制を領域ごとに横比較
+                    </p>
+                  </div>
+                  <DomainComparisonTable
+                    domainId={toolTab}
+                    onCountryClick={(code) => {
+                      setSelectedCountry(code);
+                      switchSection("reviews");
+                    }}
                   />
                 </>
               ) : siteSection === "companies" ? (
