@@ -2618,9 +2618,9 @@ export const COUNTRY_PROFILES = [
 
     primaryLaw: {
       title: "医療機器法（의료기기법）",
-      originalTitle: "의료기기법（法律第6909号）",
+      originalTitle: "의료기기법",
       enacted: "2003-05-29",
-      lastAmended: "2025-06-01",
+      lastAmended: "2025-01-31",
       url: "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=259122",
       description:
         "韓国の医療機器規制の根拠法。製造・輸入・販売業の許可制度、4クラス分類に応じた届出・認証・許可制度、KGMP、市販後安全管理、広告規制等を包括的に規定。デジタル医療製品への対応を含む複数回の改正を経て現在に至る。",
@@ -2660,11 +2660,11 @@ export const COUNTRY_PROFILES = [
         category: "IVD",
       },
       {
-        title: "デジタルヘルス関連法案（検討中）",
-        date: "未確定",
-        url: "https://www.mfds.go.kr/",
+        title: "デジタル医療製品法（디지털의료제품법）",
+        date: "2025-01-24",
+        url: "https://www.law.go.kr/",
         description:
-          "AI/ML SaMD、デジタル治療機器（DTx）等のデジタル医療製品に特化した規制枠組みが検討されている。正式な法律名称・施行日は2026年4月時点で未確認。",
+          "2025年1月24日施行。AI/ML SaMD、デジタル治療機器（DTx）等のデジタル医療製品に特化した規制枠組み。迅速審査制度、変更管理計画、リアルワールドデータ活用を規定。",
         category: "デジタルヘルス",
       },
     ],
@@ -2687,12 +2687,12 @@ export const COUNTRY_PROFILES = [
           "IVDを医療機器法から独立して規制。IVDの分類体系、許認可手続き、性能評価要件を個別に規定。",
       },
       {
-        title: "デジタルヘルス関連法案（検討中）",
+        title: "デジタル医療製品法（디지털의료제품법）",
         category: "デジタルヘルス",
-        enacted: "未確定",
-        url: "https://www.mfds.go.kr/",
+        enacted: "2025-01-24",
+        url: "https://www.law.go.kr/",
         relevance:
-          "AI/ML SaMD、デジタル治療機器（DTx）の迅速審査・変更管理等を規定する法案が検討されているが、2026年4月時点で正式な法律名称・施行日は未確認。",
+          "2025年1月24日施行。AI/ML SaMD、デジタル治療機器（DTx）の迅速審査・変更管理・リアルワールドエビデンス活用を規定する新法。",
       },
       {
         title: "生命倫理及び安全に関する法律（생명윤리및안전에관한법률）",
@@ -2894,9 +2894,9 @@ export const COUNTRY_PROFILES = [
     },
 
     mdsap: {
-      status: "参加（2021年〜）",
+      status: "協力会員（Affiliate Member、2019年10月〜）",
       description:
-        "韓国（MFDS）は2021年からMDSAPに正式参加。MDSAP監査報告書をKGMP査察の代替として受入れ。これにより、MDSAP参加国の製造業者は韓国向けの個別GMP査察を省略できる可能性がある。",
+        "韓国（MFDS）は2019年10月からMDSAPの協力会員（Affiliate Member）として参加。正会員（Regulatory Authority）への移行を推進中。MDSAP監査報告書をKGMP査察の参考情報として活用。",
     },
 
     internationalStandards: {
@@ -2937,9 +2937,9 @@ export const COUNTRY_PROFILES = [
     recentDevelopments: [
       {
         date: "2025-01",
-        title: "デジタルヘルス規制の検討進展",
+        title: "デジタル医療製品法（디지털의료제품법）施行",
         description:
-          "AI/ML SaMD、デジタル治療機器（DTx）に対する専用規制枠組みの検討が進展。法案の正式名称・施行時期は2026年4月時点で未確定。MFDSがデジタルヘルス分野の国際整合化を推進。",
+          "2025年1月24日施行。AI/ML SaMD、デジタル治療機器（DTx）を含むデジタル医療製品の規制枠組みを定める新法。迅速審査制度とリアルワールドデータ活用を法制化。",
       },
       {
         date: "2024-01",
@@ -2954,7 +2954,7 @@ export const COUNTRY_PROFILES = [
           "MFDSがSaMD（ソフトウェア医療機器）の許可・認証審査に関するガイダンスを更新。AI/ML医療機器の変更管理に関する要件を明確化。",
       },
       {
-        date: "2020-04",
+        date: "2020-05",
         title: "医療機器産業育成法施行",
         description:
           "医療機器産業の競争力強化と規制環境の整備を目的とする医療機器産業育成法が施行。革新的医療機器の開発支援と規制合理化を推進。",
