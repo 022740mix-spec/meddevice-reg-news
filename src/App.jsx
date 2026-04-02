@@ -2173,13 +2173,19 @@ function CountryProfileDetail({ code, onBack }) {
       {p.primaryLaw ? (
         <section className="country-profile__section" id="cp-primary-law">
           <h3 className="country-profile__section-title">医療機器法（主法）</h3>
+          <h4 style={{ margin: "0 0 var(--space-2)", fontSize: "var(--text-base)" }}>
+            {p.primaryLaw.url
+              ? <a href={p.primaryLaw.url} target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent)", textDecoration: "none" }}>{p.primaryLaw.title} ↗</a>
+              : p.primaryLaw.title}
+          </h4>
+          {p.primaryLaw.originalTitle && p.primaryLaw.originalTitle !== p.primaryLaw.title && (
+            <p style={{ fontSize: "var(--text-sm)", color: "var(--muted)", margin: "0 0 var(--space-2)" }}>{p.primaryLaw.originalTitle}</p>
+          )}
           <dl className="company-dl">
-            <dt>法律名</dt><dd>{p.primaryLaw.title}{p.primaryLaw.originalTitle ? ` / ${p.primaryLaw.originalTitle}` : ""}</dd>
             <dt>制定</dt><dd>{p.primaryLaw.enacted}</dd>
             <dt>最終改正</dt><dd>{p.primaryLaw.lastAmended}</dd>
           </dl>
           <p className="country-profile__text">{p.primaryLaw.description}</p>
-          {p.primaryLaw.url && <a href={p.primaryLaw.url} target="_blank" rel="noopener noreferrer" className="official-tab">法令原文 <span className="official-tab-ext" aria-hidden>↗</span></a>}
         </section>
       ) : null}
 
@@ -2187,16 +2193,16 @@ function CountryProfileDetail({ code, onBack }) {
       {p.implementingRegulations?.length > 0 && (
         <section className="country-profile__section" id="cp-regulations">
           <h3 className="country-profile__section-title">医療機器関連規則・施行令</h3>
-          <div className="country-profile__reg-list">
+          <div className="country-profile__reg-compact">
             {p.implementingRegulations.map((r, i) => (
-              <div key={i} className="country-profile__reg-item">
-                <div className="country-profile__reg-head">
-                  <strong>{r.title}</strong>
+              <div key={i} className="country-profile__reg-compact-item">
+                <span className="country-profile__reg-compact-title">
+                  {r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer">{r.title} ↗</a> : r.title}
+                </span>
+                <span className="country-profile__reg-compact-meta">
                   {r.category && <span className="country-profile__reg-cat">{r.category}</span>}
-                </div>
-                {r.date && <span className="country-profile__reg-date">{r.date}</span>}
-                <p className="country-profile__text">{r.description}</p>
-                {r.url && <a href={r.url} target="_blank" rel="noopener noreferrer" className="prose-link">原文 ↗</a>}
+                  {r.date && <span>{r.date}</span>}
+                </span>
               </div>
             ))}
           </div>
@@ -2207,16 +2213,16 @@ function CountryProfileDetail({ code, onBack }) {
       {p.relatedLaws?.length > 0 && (
         <section className="country-profile__section" id="cp-related-laws">
           <h3 className="country-profile__section-title">関連法規（医療機器法以外）</h3>
-          <div className="country-profile__reg-list">
+          <div className="country-profile__reg-compact">
             {p.relatedLaws.map((r, i) => (
-              <div key={i} className="country-profile__reg-item">
-                <div className="country-profile__reg-head">
-                  <strong>{r.title}</strong>
+              <div key={i} className="country-profile__reg-compact-item" title={r.relevance}>
+                <span className="country-profile__reg-compact-title">
+                  {r.url ? <a href={r.url} target="_blank" rel="noopener noreferrer">{r.title} ↗</a> : r.title}
+                </span>
+                <span className="country-profile__reg-compact-meta">
                   <span className="country-profile__reg-cat">{r.category}</span>
-                </div>
-                {r.enacted && <span className="country-profile__reg-date">制定: {r.enacted}</span>}
-                <p className="country-profile__text">{r.relevance}</p>
-                {r.url && <a href={r.url} target="_blank" rel="noopener noreferrer" className="prose-link">詳細 ↗</a>}
+                  {r.enacted && <span>{r.enacted}</span>}
+                </span>
               </div>
             ))}
           </div>
@@ -2233,18 +2239,29 @@ function CountryProfileDetail({ code, onBack }) {
             {p.classification.totalProductCodes && <><dt>製品コード数</dt><dd>{p.classification.totalProductCodes}</dd></>}
           </dl>
           {p.classification.classes?.length > 0 && (
-            <div className="country-profile__class-grid">
-              {p.classification.classes.map((c, i) => (
-                <div key={i} className="country-profile__class-card">
-                  <div className="country-profile__class-head">
-                    <strong>{c.name}</strong>
-                    <span className={`reg-level-badge reg-level-badge--${c.riskLevel.includes("低") ? "low" : c.riskLevel.includes("中") ? "moderate" : "high"}`}>{c.riskLevel}</span>
-                  </div>
-                  <p className="country-profile__text">{c.description}</p>
-                  {c.examples?.length > 0 && <p className="country-profile__examples">例: {c.examples.join("、")}</p>}
-                  <p className="country-profile__approval-path"><strong>申請経路:</strong> {c.approvalPath}</p>
-                </div>
-              ))}
+            <div className="domain-comparison-scroll">
+              <table className="country-profile__table">
+                <thead>
+                  <tr>
+                    <th>クラス</th>
+                    <th>リスク</th>
+                    <th>説明</th>
+                    <th>機器例</th>
+                    <th>申請経路</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {p.classification.classes.map((c, i) => (
+                    <tr key={i}>
+                      <td><strong>{c.name}</strong>{c.nameJa && c.nameJa !== c.name ? <br/> : null}{c.nameJa && c.nameJa !== c.name ? <span style={{fontSize:"var(--text-xs)",color:"var(--muted)"}}>{c.nameJa}</span> : null}</td>
+                      <td><span className={`reg-level-badge reg-level-badge--${c.riskLevel.includes("低") ? "low" : c.riskLevel.includes("中") ? "moderate" : "high"}`}>{c.riskLevel}</span></td>
+                      <td>{c.description}</td>
+                      <td style={{fontSize:"var(--text-xs)"}}>{c.examples?.join("、")}</td>
+                      <td style={{fontSize:"var(--text-sm)"}}>{c.approvalPath}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           )}
           {p.classification.rules?.length > 0 && (
