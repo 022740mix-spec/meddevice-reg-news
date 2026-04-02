@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-feed.mjs && vite build",
+    "build": "node scripts/validate-profiles.mjs && node scripts/generate-feed.mjs && vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "node scripts/validate-profiles.mjs && vite build && gh-pages -d dist",
+    "validate:profiles": "node scripts/validate-profiles.mjs",
+    "validate:profiles:update-baseline": "node scripts/validate-profiles.mjs --update-baseline"
   },
   "dependencies": {
     "react": "^19.2.0",

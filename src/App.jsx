@@ -36,6 +36,13 @@ import {
   filterToolReference,
 } from "./data/regulatoryGuide.js";
 import { BUNDLED_MEDIA_URL } from "./mediaUrls.js";
+import {
+  COUNTRY_PROFILES,
+  COUNTRY_FLAG,
+  REGION_ORDER,
+  findProfileByCode,
+  groupProfilesByRegion,
+} from "./data/countryProfiles.js";
 
 const STORAGE_THEME = "meddev-reg-theme";
 const STORAGE_ACCENT = "meddev-reg-accent";
@@ -472,7 +479,7 @@ function formatWeekRoundupPeriodJp(startYmd, endYmd) {
 }
 
 
-function syncAppUrl({ articleId, siteSection, tagQuery, guideTab, toolTab, usePush = false }) {
+function syncAppUrl({ articleId, siteSection, tagQuery, guideTab, toolTab, country, usePush = false }) {
   const u = new URL(window.location.href);
   if (articleId) {
     u.searchParams.set("a", articleId);
@@ -489,6 +496,8 @@ function syncAppUrl({ articleId, siteSection, tagQuery, guideTab, toolTab, usePu
       u.searchParams.set("view", "reviews");
       u.searchParams.delete("tag");
       u.searchParams.delete("tab");
+      if (country) u.searchParams.set("country", country);
+      else u.searchParams.delete("country");
     } else if (siteSection === "tools") {
       u.searchParams.set("view", "tools");
       u.searchParams.delete("tag");
@@ -942,7 +951,7 @@ function SiteSectionNav({ section, onSection }) {
           className={`section-site-tab${section === "reviews" ? " is-active" : ""}`}
           onClick={() => onSection("reviews")}
         >
-          レビュー
+          国別プロファイル
         </button>
         <button
           type="button"
@@ -956,7 +965,7 @@ function SiteSectionNav({ section, onSection }) {
           className={`section-site-tab${section === "tools" ? " is-active" : ""}`}
           onClick={() => onSection("tools")}
         >
-          ツール別
+          規制領域別
         </button>
         <button
           type="button"
@@ -1822,6 +1831,682 @@ function ReviewTabBar({ reviewTab, onSelect }) {
         ))}
       </div>
     </nav>
+  );
+}
+
+function CountryGrid({ query, onSelect }) {
+  const groups = useMemo(() => {
+    let profiles = COUNTRY_PROFILES;
+    if (query) {
+      const q = query.toLowerCase();
+      profiles = profiles.filter((p) =>
+        p.country.toLowerCase().includes(q) ||
+        p.countryEn.toLowerCase().includes(q) ||
+        p.code.toLowerCase().includes(q) ||
+        p.authorities.some((a) => a.name.toLowerCase().includes(q) || (a.fullName || "").toLowerCase().includes(q))
+      );
+    }
+    const map = {};
+    for (const p of profiles) {
+      (map[p.region] ??= []).push(p);
+    }
+    return REGION_ORDER.filter((r) => map[r]).map((r) => ({ region: r, profiles: map[r] }));
+  }, [query]);
+
+  const regionLabel = { "North America": "北米", "Europe": "欧州", "ASPAC": "アジア太平洋", "Latam": "中南米" };
+
+  if (groups.length === 0) return <div className="empty-state">該当する国がありません</div>;
+
+  return (
+    <div className="country-grid-page">
+      <div className="section-feed">
+        <h2 className="section-feed__title">国別プロファイル</h2>
+        <p className="section-feed__meta">各国・地域の医療機器規制体系を詳細に解説。国を選択して規制の全体像を確認できます。</p>
+      </div>
+      {groups.map(({ region, profiles }) => (
+        <section key={region} className="country-region-group" id={`region-${region}`}>
+          <h3 className="country-region-title">{regionLabel[region] || region}</h3>
+          <div className="country-grid">
+            {profiles.map((p) => (
+              <button
+                key={p.code}
+                className="country-card"
+                onClick={() => onSelect(p.code)}
+                type="button"
+              >
+                <span className="country-card__flag-code" aria-hidden="true">{p.code}</span>
+                <div className="country-card__info">
+                  <span className="country-card__name">{p.country}</span>
+                  <span className="country-card__authority">
+                    {p.authorities.find((a) => a.isPrimary)?.name || p.authorities[0]?.name}
+                  </span>
+                </div>
+                {(() => {
+                  const n = p.classification?.classes?.length || 0;
+                  return n > 0 ? (
+                    <span className={`reg-level-badge reg-level-badge--${n <= 3 ? "moderate" : "high"}`}>
+                      {n}クラス制
+                    </span>
+                  ) : null;
+                })()}
+              </button>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  );
+}
+
+function CountryProfileDetail({ code, onBack }) {
+  const profile = findProfileByCode(code);
+  if (!profile) return <div className="empty-state">国が見つかりません</div>;
+  const p = profile;
+  const primary = p.authorities.find((a) => a.isPrimary) || p.authorities[0];
+
+  return (
+    <div className="country-profile">
+      <button className="country-profile__back" onClick={onBack} type="button">
+        ← 国一覧に戻る
+      </button>
+
+      {/* ヘッダー */}
+      <header className="country-profile__header">
+        <span className="country-profile__flag-code">{p.code}</span>
+        <div>
+          <h2 className="country-profile__title">{p.country}</h2>
+          <p className="country-profile__subtitle">{p.countryEn} — {primary?.name}</p>
+        </div>
+      </header>
+
+      {/* 1. 法体系概要 */}
+      {p.legalSystemOverview ? (
+        <section className="country-profile__section" id="cp-legal-system">
+          <h3 className="country-profile__section-title">法体系概要</h3>
+          <dl className="company-dl">
+            <dt>法体系</dt><dd>{p.legalSystemOverview.type}</dd>
+          </dl>
+          <p className="country-profile__text">{p.legalSystemOverview.description}</p>
+          {p.legalSystemOverview.keyCharacteristics?.length > 0 && (
+            <ul className="company-notes">
+              {p.legalSystemOverview.keyCharacteristics.map((c, i) => <li key={i}>{c}</li>)}
+            </ul>
+          )}
+        </section>
+      ) : null}
+
+      {/* 2. 規制当局 */}
+      <section className="country-profile__section" id="cp-authorities">
+        <h3 className="country-profile__section-title">規制当局・関連機関</h3>
+        {p.authorities.map((a, i) => (
+          <div key={i} className="country-profile__authority-card">
+            <div className="country-profile__authority-head">
+              <strong>{a.name}</strong>
+              {a.isPrimary && <span className="reg-level-badge reg-level-badge--high">主管</span>}
+            </div>
+            <p className="country-profile__authority-full">{a.fullName}{a.localName ? ` / ${a.localName}` : ""}</p>
+            <p className="country-profile__text">{a.role}</p>
+            {a.url && <a href={a.url} target="_blank" rel="noopener noreferrer" className="official-tab">公式サイト <span className="official-tab-ext" aria-hidden>↗</span></a>}
+          </div>
+        ))}
+      </section>
+
+      {/* 3. 第三者認証機関 */}
+      {p.notifiedBodies ? (
+        <section className="country-profile__section" id="cp-notified-bodies">
+          <h3 className="country-profile__section-title">第三者認証機関 / Notified Body</h3>
+          <dl className="company-dl">
+            <dt>制度</dt><dd>{p.notifiedBodies.system}</dd>
+          </dl>
+          <p className="country-profile__text">{p.notifiedBodies.description}</p>
+          {p.notifiedBodies.nandoUrl && <a href={p.notifiedBodies.nandoUrl} target="_blank" rel="noopener noreferrer" className="official-tab">NANDO データベース <span className="official-tab-ext" aria-hidden>↗</span></a>}
+          {p.notifiedBodies.totalDesignated && typeof p.notifiedBodies.totalDesignated === "object" ? (
+            <dl className="company-dl" style={{ marginTop: "0.75rem" }}>
+              <dt>MDR 指定</dt><dd>{p.notifiedBodies.totalDesignated.mdr}</dd>
+              <dt>IVDR 指定</dt><dd>{p.notifiedBodies.totalDesignated.ivdr}</dd>
+              <dt>両方指定</dt><dd>{p.notifiedBodies.totalDesignated.both}</dd>
+              <dt>時点</dt><dd>{p.notifiedBodies.totalDesignated.asOf}</dd>
+            </dl>
+          ) : null}
+          {p.notifiedBodies.mdrBodies?.length > 0 && (
+            <details className="country-profile__collapse">
+              <summary className="country-profile__collapse-trigger">
+                MDR (Regulation 2017/745) 指定 — {p.notifiedBodies.mdrBodies.length}機関
+              </summary>
+              <div className="country-profile__reg-list">
+                {p.notifiedBodies.mdrBodies.map((b, i) => (
+                  <div key={i} className="country-profile__reg-item" style={{ padding: "0.5rem 0.75rem" }}>
+                    <div className="country-profile__reg-head">
+                      <strong>NB {b.nb} — {b.name}</strong>
+                      {b.alsoIvdr && <span className="reg-level-badge reg-level-badge--moderate">MDR + IVDR</span>}
+                      {!b.alsoIvdr && <span className="country-profile__reg-cat">MDR</span>}
+                    </div>
+                    <span className="country-profile__reg-date">{b.country}</span>
+                    {b.url && <a href={b.url} target="_blank" rel="noopener noreferrer" className="prose-link" style={{ marginLeft: "0.5rem" }}>公式 ↗</a>}
+                  </div>
+                ))}
+              </div>
+            </details>
+          )}
+          {p.notifiedBodies.ivdrOnlyBodies?.length > 0 && (
+            <details className="country-profile__collapse">
+              <summary className="country-profile__collapse-trigger">
+                IVDR のみ指定（Regulation 2017/746）— {p.notifiedBodies.ivdrOnlyBodies.length}機関
+              </summary>
+              <div className="country-profile__reg-list">
+                {p.notifiedBodies.ivdrOnlyBodies.map((b, i) => (
+                  <div key={i} className="country-profile__reg-item" style={{ padding: "0.5rem 0.75rem" }}>
+                    <div className="country-profile__reg-head">
+                      <strong>NB {b.nb} — {b.name}</strong>
+                      <span className="reg-level-badge reg-level-badge--low">IVDR</span>
+                    </div>
+                    <span className="country-profile__reg-date">{b.country}</span>
+                    {b.url && <a href={b.url} target="_blank" rel="noopener noreferrer" className="prose-link" style={{ marginLeft: "0.5rem" }}>公式 ↗</a>}
+                  </div>
+                ))}
+              </div>
+            </details>
+          )}
+          {p.notifiedBodies.bodies?.length > 0 && (
+            <ul className="company-notes">
+              {p.notifiedBodies.bodies.map((b, i) => <li key={i}>{typeof b === "string" ? b : `${b.name}${b.scope ? ` — ${b.scope}` : ""}${b.notes ? ` — ${b.notes}` : ""}`}</li>)}
+            </ul>
+          )}
+        </section>
+      ) : null}
+
+      {/* 4. 医療機器の定義 */}
+      {p.deviceDefinition ? (
+        <section className="country-profile__section" id="cp-definition">
+          <h3 className="country-profile__section-title">医療機器の定義と範囲</h3>
+          <dl className="company-dl">
+            <dt>法的定義</dt><dd>{p.deviceDefinition.legalDefinition}</dd>
+            <dt>適用範囲</dt><dd>{p.deviceDefinition.scope}</dd>
+          </dl>
+          {p.deviceDefinition.notes && <p className="country-profile__text">{p.deviceDefinition.notes}</p>}
+        </section>
+      ) : null}
+
+      {/* 5. 医療機器法（主法） */}
+      {p.primaryLaw ? (
+        <section className="country-profile__section" id="cp-primary-law">
+          <h3 className="country-profile__section-title">医療機器法（主法）</h3>
+          <dl className="company-dl">
+            <dt>法律名</dt><dd>{p.primaryLaw.title}{p.primaryLaw.originalTitle ? ` / ${p.primaryLaw.originalTitle}` : ""}</dd>
+            <dt>制定</dt><dd>{p.primaryLaw.enacted}</dd>
+            <dt>最終改正</dt><dd>{p.primaryLaw.lastAmended}</dd>
+          </dl>
+          <p className="country-profile__text">{p.primaryLaw.description}</p>
+          {p.primaryLaw.url && <a href={p.primaryLaw.url} target="_blank" rel="noopener noreferrer" className="official-tab">法令原文 <span className="official-tab-ext" aria-hidden>↗</span></a>}
+        </section>
+      ) : null}
+
+      {/* 6. 関連規則 */}
+      {p.implementingRegulations?.length > 0 && (
+        <section className="country-profile__section" id="cp-regulations">
+          <h3 className="country-profile__section-title">医療機器関連規則・施行令</h3>
+          <div className="country-profile__reg-list">
+            {p.implementingRegulations.map((r, i) => (
+              <div key={i} className="country-profile__reg-item">
+                <div className="country-profile__reg-head">
+                  <strong>{r.title}</strong>
+                  {r.category && <span className="country-profile__reg-cat">{r.category}</span>}
+                </div>
+                {r.date && <span className="country-profile__reg-date">{r.date}</span>}
+                <p className="country-profile__text">{r.description}</p>
+                {r.url && <a href={r.url} target="_blank" rel="noopener noreferrer" className="prose-link">原文 ↗</a>}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 7. 関連法規（医療機器法以外） */}
+      {p.relatedLaws?.length > 0 && (
+        <section className="country-profile__section" id="cp-related-laws">
+          <h3 className="country-profile__section-title">関連法規（医療機器法以外）</h3>
+          <div className="country-profile__reg-list">
+            {p.relatedLaws.map((r, i) => (
+              <div key={i} className="country-profile__reg-item">
+                <div className="country-profile__reg-head">
+                  <strong>{r.title}</strong>
+                  <span className="country-profile__reg-cat">{r.category}</span>
+                </div>
+                {r.enacted && <span className="country-profile__reg-date">制定: {r.enacted}</span>}
+                <p className="country-profile__text">{r.relevance}</p>
+                {r.url && <a href={r.url} target="_blank" rel="noopener noreferrer" className="prose-link">詳細 ↗</a>}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 8. クラス分類 */}
+      {p.classification ? (
+        <section className="country-profile__section" id="cp-classification">
+          <h3 className="country-profile__section-title">クラス分類</h3>
+          <dl className="company-dl">
+            <dt>分類体系</dt><dd>{p.classification.system}</dd>
+            <dt>分類根拠</dt><dd>{p.classification.basis}</dd>
+            {p.classification.totalProductCodes && <><dt>製品コード数</dt><dd>{p.classification.totalProductCodes}</dd></>}
+          </dl>
+          {p.classification.classes?.length > 0 && (
+            <div className="country-profile__class-grid">
+              {p.classification.classes.map((c, i) => (
+                <div key={i} className="country-profile__class-card">
+                  <div className="country-profile__class-head">
+                    <strong>{c.name}</strong>
+                    <span className={`reg-level-badge reg-level-badge--${c.riskLevel.includes("低") ? "low" : c.riskLevel.includes("中") ? "moderate" : "high"}`}>{c.riskLevel}</span>
+                  </div>
+                  <p className="country-profile__text">{c.description}</p>
+                  {c.examples?.length > 0 && <p className="country-profile__examples">例: {c.examples.join("、")}</p>}
+                  <p className="country-profile__approval-path"><strong>申請経路:</strong> {c.approvalPath}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {p.classification.rules?.length > 0 && (
+            <div className="country-profile__rules">
+              <h4>分類ルール</h4>
+              {p.classification.rules.map((r, i) => (
+                <div key={i} className="country-profile__rule-item">
+                  <strong>{r.id}</strong>
+                  <p className="country-profile__text">{r.description}</p>
+                  {r.url && <a href={r.url} target="_blank" rel="noopener noreferrer" className="prose-link">詳細 ↗</a>}
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      ) : null}
+
+      {/* 9. 適合性評価 */}
+      {p.conformityAssessment ? (
+        <section className="country-profile__section" id="cp-conformity">
+          <h3 className="country-profile__section-title">適合性評価・承認経路</h3>
+          <p className="country-profile__text">{p.conformityAssessment.overview}</p>
+          {p.conformityAssessment.routes?.map((r, i) => (
+            <div key={i} className="country-profile__route-card">
+              <h4 className="country-profile__route-title">{r.name}</h4>
+              {r.nameJa && r.nameJa !== r.name && <p className="country-profile__route-ja">{r.nameJa}</p>}
+              <dl className="company-dl">
+                <dt>対象クラス</dt><dd>{Array.isArray(r.applicableClasses) ? r.applicableClasses.join("、") : r.applicableClasses}</dd>
+                {r.avgReviewTime && <><dt>審査期間</dt><dd>{r.avgReviewTime}</dd></>}
+                {r.fee && <><dt>手数料</dt><dd>{r.fee}</dd></>}
+              </dl>
+              <p className="country-profile__text">{r.description}</p>
+              {r.subtypes?.length > 0 && (
+                <div className="country-profile__subtypes">
+                  <strong>サブタイプ:</strong>
+                  <ul className="company-notes">
+                    {r.subtypes.map((s, j) => (
+                      <li key={j}>
+                        {typeof s === "string"
+                          ? s
+                          : <><strong>{s.name}</strong> — {s.description}</>}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {/* 申請区分別詳細（categories） */}
+              {r.categories?.length > 0 && (
+                <div>
+                  <h4 style={{ margin: "var(--space-3) 0 var(--space-2)", fontSize: "var(--text-base)", fontWeight: 700 }}>申請区分別詳細</h4>
+                  {r.categories.map((cat, k) => (
+                    <div key={k} className="country-profile__category">
+                      <span className="country-profile__category-title">{cat.name}</span>
+                      {cat.nameEn && <span className="country-profile__category-en">{cat.nameEn}</span>}
+                      <p className="country-profile__text">{cat.description}</p>
+                      {(cat.reviewTime || cat.fee || cat.priorityReview) && (
+                        <table className="country-profile__table">
+                          <tbody>
+                            {cat.reviewTime && <tr><th>審査期間</th><td>{cat.reviewTime}</td></tr>}
+                            {cat.fee && typeof cat.fee === "object" ? (
+                              <tr><th>手数料</th><td>{Object.entries(cat.fee).map(([k2, v]) => <div key={k2}><strong>{k2}:</strong> {v}</div>)}</td></tr>
+                            ) : cat.fee ? <tr><th>手数料</th><td>{cat.fee}</td></tr> : null}
+                            {cat.priorityReview && <tr><th>優先審査</th><td>{cat.priorityReview}</td></tr>}
+                          </tbody>
+                        </table>
+                      )}
+                      {cat.requiredDocuments?.length > 0 && (
+                        <details className="country-profile__collapse" style={{ marginTop: "var(--space-2)" }}>
+                          <summary className="country-profile__collapse-trigger">必要書類 ({cat.requiredDocuments.length}件)</summary>
+                          <ul className="company-notes" style={{ padding: "var(--space-2) var(--space-3) var(--space-3)" }}>
+                            {cat.requiredDocuments.map((doc, m) => <li key={m}>{doc}</li>)}
+                          </ul>
+                        </details>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+              {r.url && <a href={r.url} target="_blank" rel="noopener noreferrer" className="prose-link">詳細 ↗</a>}
+            </div>
+          ))}
+          {/* 相談制度 */}
+          {p.conformityAssessment.consultations?.length > 0 && (
+            <div>
+              <h4 className="country-profile__route-title">相談制度</h4>
+              <div className="country-profile__consultation-list">
+                {p.conformityAssessment.consultations.map((c, i) => (
+                  <div key={i} className="country-profile__consultation-item">
+                    <div>
+                      <span className="country-profile__consultation-name">{c.name}</span>
+                      <span className="country-profile__text" style={{ marginLeft: "var(--space-2)" }}>{c.description}</span>
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "var(--space-2)" }}>
+                      {c.fee && <span className="country-profile__consultation-fee">{c.fee}</span>}
+                      {c.url && <a href={c.url} target="_blank" rel="noopener noreferrer" className="prose-link">↗</a>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          {/* QMS適合性調査 */}
+          {p.conformityAssessment.qmsInspection && (
+            <div className="country-profile__sub-section">
+              <h4>QMS適合性調査</h4>
+              <p className="country-profile__text">{p.conformityAssessment.qmsInspection.overview}</p>
+              <table className="country-profile__table">
+                <thead><tr><th>調査種類</th><th>内容</th></tr></thead>
+                <tbody>
+                  {p.conformityAssessment.qmsInspection.types?.map((t, i) => (
+                    <tr key={i}><td><strong>{t.name}</strong></td><td>{t.description}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+              {p.conformityAssessment.qmsInspection.feeCalculator && (
+                <a href={p.conformityAssessment.qmsInspection.feeCalculator} target="_blank" rel="noopener noreferrer" className="prose-link">手数料計算ツール ↗</a>
+              )}
+            </div>
+          )}
+        </section>
+      ) : null}
+
+      {/* 10. 電子申請 */}
+      {p.electronicSubmission ? (
+        <section className="country-profile__section" id="cp-e-submission">
+          <h3 className="country-profile__section-title">電子申請・ポータル</h3>
+          <dl className="company-dl">
+            <dt>システム</dt><dd>{p.electronicSubmission.system}</dd>
+            <dt>電子申請義務</dt><dd>{p.electronicSubmission.mandatory ? "必須" : "任意"}</dd>
+          </dl>
+          <p className="country-profile__text">{p.electronicSubmission.description}</p>
+          {p.electronicSubmission.url && <a href={p.electronicSubmission.url} target="_blank" rel="noopener noreferrer" className="official-tab">ポータル <span className="official-tab-ext" aria-hidden>↗</span></a>}
+        </section>
+      ) : null}
+
+      {/* 11. UDI */}
+      {p.udi ? (
+        <section className="country-profile__section" id="cp-udi">
+          <h3 className="country-profile__section-title">UDI（機器固有識別）</h3>
+          <dl className="company-dl">
+            <dt>義務</dt><dd>{p.udi.required ? "必須" : "任意 / 未導入"}</dd>
+            <dt>システム</dt><dd>{p.udi.system}</dd>
+            {p.udi.timeline && <><dt>導入時期</dt><dd>{p.udi.timeline}</dd></>}
+          </dl>
+          <p className="country-profile__text">{p.udi.description}</p>
+          {p.udi.url && <a href={p.udi.url} target="_blank" rel="noopener noreferrer" className="prose-link">詳細 ↗</a>}
+        </section>
+      ) : null}
+
+      {/* 12. 市販後監視 */}
+      {p.postMarket ? (
+        <section className="country-profile__section" id="cp-post-market">
+          <h3 className="country-profile__section-title">市販後監視</h3>
+          {p.postMarket.adverseEventReporting && (
+            <div className="country-profile__sub-section">
+              <h4>有害事象報告</h4>
+              <dl className="company-dl">
+                <dt>制度</dt><dd>{p.postMarket.adverseEventReporting.system}</dd>
+                <dt>報告義務</dt><dd>{p.postMarket.adverseEventReporting.mandatory ? "必須" : "任意"}</dd>
+              </dl>
+              <p className="country-profile__text">{p.postMarket.adverseEventReporting.description}</p>
+              {/* 報告区分別詳細 */}
+              {p.postMarket.adverseEventReporting.reportingCategories?.length > 0 && (
+                <table className="country-profile__table">
+                  <thead><tr><th>報告区分</th><th>報告期限</th><th>対象</th></tr></thead>
+                  <tbody>
+                    {p.postMarket.adverseEventReporting.reportingCategories.map((rc, i) => (
+                      <tr key={i}><td><strong>{rc.category}</strong></td><td>{rc.deadline}</td><td>{rc.scope}</td></tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
+            </div>
+          )}
+          {p.postMarket.recalls && (
+            <div className="country-profile__sub-section">
+              <h4>リコール</h4>
+              <p className="country-profile__text">{p.postMarket.recalls.description}</p>
+              {/* 回収クラス別詳細 */}
+              {p.postMarket.recalls.recallClasses?.length > 0 && (
+                <ul className="company-notes" style={{ marginTop: "0.25rem" }}>
+                  {p.postMarket.recalls.recallClasses.map((rc, i) => (
+                    <li key={i}><strong>{rc.class}</strong> — {rc.description}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          )}
+          {p.postMarket.surveillance && (
+            <div className="country-profile__sub-section">
+              <h4>市販後調査</h4>
+              <p className="country-profile__text">{p.postMarket.surveillance}</p>
+            </div>
+          )}
+          {/* 使用成績評価 */}
+          {p.postMarket.useResultsEvaluation && (
+            <div className="country-profile__sub-section">
+              <h4>使用成績評価</h4>
+              <p className="country-profile__text">{p.postMarket.useResultsEvaluation.description}</p>
+              {p.postMarket.useResultsEvaluation.evaluationPeriod && (
+                <dl className="company-dl"><dt>評価期間</dt><dd>{p.postMarket.useResultsEvaluation.evaluationPeriod}</dd></dl>
+              )}
+            </div>
+          )}
+        </section>
+      ) : null}
+
+      {/* 13. CFS */}
+      {p.certificateOfFreeSale ? (
+        <section className="country-profile__section" id="cp-cfs">
+          <h3 className="country-profile__section-title">自由販売証明書（CFS / FSC）</h3>
+          <dl className="company-dl">
+            <dt>発行可否</dt><dd>{p.certificateOfFreeSale.available ? "発行可能" : "なし"}</dd>
+            <dt>発行機関</dt><dd>{p.certificateOfFreeSale.issuingAuthority}</dd>
+            <dt>名称</dt><dd>{p.certificateOfFreeSale.name}</dd>
+            {p.certificateOfFreeSale.processingTime && <><dt>発行期間</dt><dd>{p.certificateOfFreeSale.processingTime}</dd></>}
+          </dl>
+          <p className="country-profile__text">{p.certificateOfFreeSale.description}</p>
+        </section>
+      ) : null}
+
+      {/* 14. 保険・償還 */}
+      {p.reimbursement ? (
+        <section className="country-profile__section" id="cp-reimbursement">
+          <h3 className="country-profile__section-title">保険・償還</h3>
+          <dl className="company-dl">
+            <dt>制度</dt><dd>{p.reimbursement.system}</dd>
+            <dt>所管</dt><dd>{p.reimbursement.authority}</dd>
+            {p.reimbursement.timeline && <><dt>スケジュール</dt><dd>{p.reimbursement.timeline}</dd></>}
+            {p.reimbursement.codingSystems?.length > 0 && <><dt>コード体系</dt><dd>{p.reimbursement.codingSystems.join("、")}</dd></>}
+          </dl>
+          <p className="country-profile__text">{p.reimbursement.description}</p>
+          {/* 保険適用区分テーブル（日本等） */}
+          {p.reimbursement.categories?.length > 0 && (
+            <div>
+              <h4 style={{ margin: "var(--space-3) 0 var(--space-2)" }}>保険適用区分</h4>
+              <table className="country-profile__table">
+                <thead>
+                  <tr><th>区分</th><th>名称</th><th>説明</th></tr>
+                </thead>
+                <tbody>
+                  {p.reimbursement.categories.map((cat, i) => (
+                    <tr key={i}>
+                      <td><strong>{cat.code}</strong></td>
+                      <td>{cat.name}</td>
+                      <td>{cat.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+          {/* 価格算定ルール */}
+          {p.reimbursement.pricingRules && (
+            <div>
+              <h4 style={{ margin: "var(--space-3) 0 var(--space-2)" }}>価格算定</h4>
+              <p className="country-profile__text">{p.reimbursement.pricingRules.method}</p>
+              {p.reimbursement.pricingRules.premiums?.length > 0 && (
+                <table className="country-profile__table">
+                  <thead><tr><th>加算区分</th><th>加算率</th></tr></thead>
+                  <tbody>
+                    {p.reimbursement.pricingRules.premiums.map((pr, i) => (
+                      <tr key={i}><td>{pr.name}</td><td>{pr.range}</td></tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
+            </div>
+          )}
+        </section>
+      ) : null}
+
+      {/* 15. マーケティング */}
+      {p.marketingRules ? (
+        <section className="country-profile__section" id="cp-marketing">
+          <h3 className="country-profile__section-title">マーケティング・広告規制</h3>
+          <dl className="company-dl">
+            <dt>所管</dt><dd>{p.marketingRules.authority}</dd>
+          </dl>
+          <p className="country-profile__text">{p.marketingRules.description}</p>
+          {p.marketingRules.keyRules?.length > 0 && (
+            <ul className="company-notes">
+              {p.marketingRules.keyRules.map((r, i) => <li key={i}>{r}</li>)}
+            </ul>
+          )}
+        </section>
+      ) : null}
+
+      {/* 16. MDSAP */}
+      {p.mdsap ? (
+        <section className="country-profile__section" id="cp-mdsap">
+          <h3 className="country-profile__section-title">MDSAP</h3>
+          <dl className="company-dl">
+            <dt>参加状況</dt><dd>{p.mdsap.status}</dd>
+          </dl>
+          <p className="country-profile__text">{p.mdsap.description}</p>
+        </section>
+      ) : null}
+
+      {/* 17. 国際規格 */}
+      {p.internationalStandards ? (
+        <section className="country-profile__section" id="cp-standards">
+          <h3 className="country-profile__section-title">国際規格の受入れ</h3>
+          <div className="country-profile__standards-grid">
+            {[
+              { key: "iso13485", label: "ISO 13485 (QMS)" },
+              { key: "iso14971", label: "ISO 14971 (リスク管理)" },
+              { key: "iec62304", label: "IEC 62304 (ソフトウェア)" },
+              { key: "iec60601", label: "IEC 60601 (電気安全)" },
+            ].map(({ key, label }) => {
+              const std = p.internationalStandards[key];
+              if (!std) return null;
+              return (
+                <div key={key} className="country-profile__standard-item">
+                  <div className="country-profile__standard-head">
+                    <strong>{label}</strong>
+                    <span className={`reg-level-badge reg-level-badge--${std.accepted ? "high" : "low"}`}>
+                      {std.accepted ? "受入れ" : "非採用"}
+                    </span>
+                  </div>
+                  {std.notes && <p className="country-profile__text">{std.notes}</p>}
+                </div>
+              );
+            })}
+          </div>
+          {p.internationalStandards.others?.length > 0 && (
+            <ul className="company-notes">
+              {p.internationalStandards.others.map((s, i) => (
+                <li key={i}><strong>{s.standard}</strong> — {s.notes}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ) : null}
+
+      {/* 18. 最近の規制動向 */}
+      {p.recentDevelopments?.length > 0 && (
+        <section className="country-profile__section" id="cp-developments">
+          <h3 className="country-profile__section-title">最近の規制動向</h3>
+          <div className="country-profile__timeline">
+            {p.recentDevelopments.map((d, i) => (
+              <div key={i} className="country-profile__timeline-item">
+                <span className="country-profile__timeline-date">{d.date}</span>
+                <div>
+                  <strong>{d.title}</strong>
+                  <p className="country-profile__text">{d.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <p className="country-profile__updated">最終更新: {p.lastUpdated}</p>
+    </div>
+  );
+}
+
+function CountryProfileSidebar({ selectedCountry }) {
+  if (selectedCountry) {
+    const sections = [
+      { id: "cp-legal-system", label: "法体系概要" },
+      { id: "cp-authorities", label: "規制当局" },
+      { id: "cp-notified-bodies", label: "第三者認証" },
+      { id: "cp-definition", label: "医療機器の定義" },
+      { id: "cp-primary-law", label: "主法" },
+      { id: "cp-regulations", label: "関連規則" },
+      { id: "cp-related-laws", label: "関連法規" },
+      { id: "cp-classification", label: "クラス分類" },
+      { id: "cp-conformity", label: "適合性評価" },
+      { id: "cp-e-submission", label: "電子申請" },
+      { id: "cp-udi", label: "UDI" },
+      { id: "cp-post-market", label: "市販後監視" },
+      { id: "cp-cfs", label: "CFS/FSC" },
+      { id: "cp-reimbursement", label: "保険・償還" },
+      { id: "cp-marketing", label: "広告規制" },
+      { id: "cp-mdsap", label: "MDSAP" },
+      { id: "cp-standards", label: "国際規格" },
+      { id: "cp-developments", label: "規制動向" },
+    ];
+    return (
+      <aside className="desktop-sidebar" aria-label="プロファイルの目次">
+        <div className="sidebar-panel">
+          <h3>セクション</h3>
+          <p className="sidebar-panel-hint">クリックで該当セクションへ移動</p>
+          {sections.map((s) => (
+            <SidebarJump key={s.id} id={s.id}>{s.label}</SidebarJump>
+          ))}
+        </div>
+      </aside>
+    );
+  }
+
+  const regionLabel = { "North America": "北米", "Europe": "欧州", "ASPAC": "アジア太平洋", "Latam": "中南米" };
+  return (
+    <aside className="desktop-sidebar" aria-label="国一覧">
+      <div className="sidebar-panel">
+        <h3>地域別</h3>
+        <p className="sidebar-panel-hint">地域を選んでスクロール</p>
+        {REGION_ORDER.map((r) => (
+          <SidebarJump key={r} id={`region-${r}`}>{regionLabel[r] || r}</SidebarJump>
+        ))}
+      </div>
+    </aside>
   );
 }
 
@@ -3082,7 +3767,8 @@ function readInitialRouteState() {
     siteSection === "articles" && tag && tag.trim()
       ? tag.trim()
       : "";
-  return { selected: null, siteSection, query, guideTab, toolTab };
+  const country = siteSection === "reviews" ? (u.searchParams.get("country") || null) : null;
+  return { selected: null, siteSection, query, guideTab, toolTab, country };
 }
 
 export default function App() {
@@ -3096,6 +3782,7 @@ export default function App() {
   const [guideTab, setGuideTab] = useState(initialRoute.guideTab);
   const [toolTab, setToolTab] = useState(initialRoute.toolTab ?? "claude-code");
   const [reviewTab, setReviewTab] = useState("medtech");
+  const [selectedCountry, setSelectedCountry] = useState(initialRoute.country ?? null);
   const [theme, setTheme] = useState(() => localStorage.getItem(STORAGE_THEME) || "light");
 const [showFab, setShowFab] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -3139,8 +3826,9 @@ const [showFab, setShowFab] = useState(false);
       tagQuery: selected ? "" : query,
       guideTab,
       toolTab,
+      country: selectedCountry,
     });
-  }, [selected, siteSection, query, guideTab, toolTab]);
+  }, [selected, siteSection, query, guideTab, toolTab, selectedCountry]);
 
   // selected が変わったらレンダリング後にページ先頭へスクロール
   useEffect(() => {
@@ -3340,6 +4028,7 @@ const [showFab, setShowFab] = useState(false);
   const switchSection = useCallback((next) => {
     setSiteSection(next);
     setSelected(null);
+    setSelectedCountry(null);
     setPage(1);
     if (next === "guide") setGuideTab("setup");
     if (next === "tools") setToolTab("claude-code");
@@ -3391,28 +4080,32 @@ const [showFab, setShowFab] = useState(false);
               filteredCount={
                 siteSection === "companies"
                   ? filteredCompanies.length
-                  : siteSection === "guide"
-                    ? guideMatchCount
-                    : siteSection === "tools"
-                      ? toolRef.matchCount
-                      : articleCount
+                  : siteSection === "reviews"
+                    ? (query ? COUNTRY_PROFILES.filter(p => p.country.includes(query) || p.countryEn.toLowerCase().includes(query.toLowerCase())).length : COUNTRY_PROFILES.length)
+                    : siteSection === "guide"
+                      ? guideMatchCount
+                      : siteSection === "tools"
+                        ? toolRef.matchCount
+                        : articleCount
               }
               totalCount={
                 siteSection === "companies"
                   ? AI_COMPANIES.length
-                  : siteSection === "guide"
-                    ? guideTotal
-                    : siteSection === "tools"
-                      ? toolRef.total
-                      : ARTICLES.length
+                  : siteSection === "reviews"
+                    ? COUNTRY_PROFILES.length
+                    : siteSection === "guide"
+                      ? guideTotal
+                      : siteSection === "tools"
+                        ? toolRef.total
+                        : ARTICLES.length
               }
               searchPlaceholder={
                 siteSection === "companies"
                   ? "企業名・国・本社・製品・証券コードで検索…"
-                  : siteSection === "guide"
-                    ? "ツール・ルール・用語を検索…"
-                    : siteSection === "reviews"
-                      ? "レビューを検索…（ツール名・タグ）"
+                  : siteSection === "reviews"
+                    ? "国名・規制当局で検索…"
+                    : siteSection === "guide"
+                      ? "ツール・ルール・用語を検索…"
                       : siteSection === "tools"
                         ? "コマンド・機能を検索…"
                         : "記事を検索…（タイトル・概要・タグ）"
@@ -3426,8 +4119,8 @@ const [showFab, setShowFab] = useState(false);
                       ? "ツール別検索"
                       : "記事検索"
               }
-              showSort={siteSection === "articles" || siteSection === "reviews"}
-              hideSearch={siteSection === "home"}
+              showSort={siteSection === "articles"}
+              hideSearch={siteSection === "home" || (siteSection === "reviews" && !!selectedCountry)}
               onToggleMenu={toggleMenu}
             />
             <HamburgerMenu
@@ -3448,7 +4141,7 @@ const [showFab, setShowFab] = useState(false);
                   <FilterBar active={filter} setActive={setFilter} />
                   </>
                 ) : siteSection === "reviews" ? (
-                  <ReviewTabBar reviewTab={reviewTab} onSelect={setReviewTab} />
+                  null
                 ) : siteSection === "guide" ? (
                   <GuideTabBar guideTab={guideTab} onSelect={selectGuideTab} />
                 ) : siteSection === "tools" ? (
@@ -3509,35 +4202,14 @@ const [showFab, setShowFab] = useState(false);
             className={`blog-layout${siteSection === "guide" ? " blog-layout--guide" : ""}`}
           >
             <div className="blog-main">
-              {siteSection === "articles" || siteSection === "reviews" ? (
+              {siteSection === "reviews" ? (
+                selectedCountry ? (
+                  <CountryProfileDetail code={selectedCountry} onBack={() => { setSelectedCountry(null); window.scrollTo(0, 0); }} />
+                ) : (
+                  <CountryGrid query={query} onSelect={(code) => { setSelectedCountry(code); window.scrollTo(0, 0); }} />
+                )
+              ) : siteSection === "articles" ? (
                 <>
-                  {siteSection === "reviews" && !query ? (
-                    <div className="review-comparisons">
-                      {/* モデル比較セクション削除済み */}
-                      {REVIEW_CATEGORIES
-                        .filter((cat) => reviewTab === cat.id)
-                        .map((cat) => cat.subCategories ? (
-                          <Fragment key={cat.id}>
-                            {cat.subCategories.map((sub) => (
-                              <ReviewComparisonTable
-                                key={sub.id}
-                                articles={ARTICLES.filter((a) => a.type === "review")}
-                                category={sub}
-                                onSelect={handleSelect}
-                              />
-                            ))}
-                          </Fragment>
-                        ) : (
-                          <ReviewComparisonTable
-                            key={cat.id}
-                            articles={ARTICLES.filter((a) => a.type === "review")}
-                            category={cat}
-                            onSelect={handleSelect}
-                          />
-                        ))}
-                    </div>
-                  ) : null}
-
                   {featured && siteSection === "articles" ? (
                     <HeroToday
                       article={featured}
@@ -3549,10 +4221,10 @@ const [showFab, setShowFab] = useState(false);
                     <>
                       <div className="section-feed">
                         <h2 className="section-feed__title">
-                          {siteSection === "reviews" ? "個別レビュー" : "記事一覧"}
+                          記事一覧
                         </h2>
                         <p className="section-feed__meta">
-                          {siteSection === "reviews" ? "各ツールの詳細レビュー" : "掲載記事"}を
+                          掲載記事を
                           <span title="報道・公式発表など、事実が表に出た日の目安">
                             ニュース日
                           </span>
@@ -3662,22 +4334,7 @@ const [showFab, setShowFab] = useState(false);
                 weekRoundups={weekRoundups}
               />
             ) : siteSection === "reviews" ? (
-              <aside className="desktop-sidebar" aria-label="レビューの目次">
-                <div className="sidebar-panel">
-                  <h3>レビューカテゴリ</h3>
-                  <p className="sidebar-panel-hint">カテゴリを切り替えます。</p>
-                  {[...REVIEW_CATEGORIES.map((c) => ({ id: c.id, label: c.label }))].map((t) => (
-                    <button
-                      key={t.id}
-                      className={`sidebar-anchor${reviewTab === t.id ? " sidebar-anchor--active" : ""}`}
-                      onClick={() => { setReviewTab(t.id); window.scrollTo(0, 0); }}
-                      type="button"
-                    >
-                      {t.label}
-                    </button>
-                  ))}
-                </div>
-              </aside>
+              <CountryProfileSidebar selectedCountry={selectedCountry} />
             ) : siteSection === "tools" ? (
               <ToolSidebar toolTab={toolTab} toolRef={toolRef} />
             ) : siteSection === "companies" ? (
