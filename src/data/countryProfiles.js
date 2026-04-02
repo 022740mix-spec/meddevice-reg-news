@@ -12,6 +12,9 @@ export const COUNTRY_FLAG = {
   MYS: "🇲🇾", SAU: "🇸🇦", ZAF: "🇿🇦", CHE: "🇨🇭", MEX: "🇲🇽",
   NZL: "🇳🇿", PHL: "🇵🇭", ARG: "🇦🇷", TUR: "🇹🇷",
   ARE: "🇦🇪",
+  RUS: "🇷🇺", POL: "🇵🇱", KWT: "🇰🇼", QAT: "🇶🇦",
+  ISR: "🇮🇱", EGY: "🇪🇬", COL: "🇨🇴", CHL: "🇨🇱",
+  PAK: "🇵🇰", KEN: "🇰🇪", NGA: "🇳🇬", MAR: "🇲🇦",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -8001,6 +8004,1050 @@ export const COUNTRY_PROFILES = [
         title: "Federal Decree-Law No. 11/2023（旧法改正）",
         description:
           "Federal Law No. 8 of 2019の一部条項を改正。EDEの設立に伴う経過的措置。その後FDL 38/2024で全面置換。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Pakistan ---
+  // =========================================================================
+  {
+    code: "PAK",
+    country: "パキスタン",
+    countryEn: "Pakistan",
+    region: "ASPAC",
+    flag: "🇵🇰",
+
+    legalSystemOverview: {
+      type: "連邦制（Federal system）",
+      description:
+        "パキスタンの医療機器規制はDRAP（Drug Regulatory Authority of Pakistan）が管轄する。2012年のDRAP Act（Act X of 2012）により設立されたDRAPが、医薬品・医療機器の両方を統括。2017年にMedical Devices Rules 2017が制定され、医療機器の登録・輸入・製造に関する規制枠組みが整備された。GHTF/IMDRFの4クラス分類（Class A/B/C/D）を採用し、リスクベースの規制を実施。",
+      keyCharacteristics: [
+        "DRAPによる一元的な連邦規制体制",
+        "リスクベースの4クラス分類（Class A/B/C/D）",
+        "Medical Devices Rules 2017に基づく登録制度",
+        "3つの適合性評価オプション（Option A/B/C）",
+        "先行認可国（CE/FDA/TGA等）の認証を参考にした審査",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "DRAP",
+        fullName: "Drug Regulatory Authority of Pakistan",
+        localName: null,
+        role: "医療機器の登録・輸入許可・製造許可・市販後監視。主管当局。",
+        url: "https://www.dfrh.org.pk/",
+        isPrimary: true,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（DRAP が直接審査）",
+      description:
+        "パキスタンではNotified Body制度は存在しない。DRAPが直接、医療機器の登録審査を実施する。ただし適合性評価オプションによりISO 13485認証等の第三者認証が事前要件となる。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Medical Devices Rules 2017に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。GHTF定義に準拠。",
+      scope:
+        "IVD（体外診断用医療機器）も適用対象。医療機器全般を包括的に規制。",
+      notes:
+        "GHTF/IMDRFの定義に整合。規制対象の範囲は段階的に拡大中。",
+    },
+
+    primaryLaw: {
+      title: "DRAP Act 2012 (Act X of 2012)",
+      originalTitle: null,
+      enacted: "2012",
+      lastAmended: null,
+      url: "https://www.dfrh.org.pk/",
+      description:
+        "DRAPの設立根拠法。医薬品・医療機器の規制権限をDRAPに付与。医療機器の詳細規制はMedical Devices Rules 2017で規定。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Medical Devices Rules 2017",
+        date: "2017",
+        url: "https://www.dfrh.org.pk/",
+        description:
+          "医療機器の登録・分類・輸入・製造・ラベリング等の詳細を規定する主要な施行規則。",
+        category: "医療機器",
+      },
+    ],
+
+    relatedLaws: [],
+
+    classification: {
+      system: "4クラス制（Class A/B/C/D）",
+      basis: "リスクベース（GHTF/IMDRF分類ルールに準拠）。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。",
+      classes: [
+        {
+          name: "Class A",
+          nameJa: "クラスA",
+          riskLevel: "低",
+          description: "一般的な低リスク機器。登録申請が必要。",
+          examples: ["弾性包帯", "聴診器", "舌圧子", "車椅子"],
+          approvalPath: "DRAP登録（Option A/B/C）",
+        },
+        {
+          name: "Class B",
+          nameJa: "クラスB",
+          riskLevel: "中低",
+          description: "中程度の低リスク機器。登録申請が必要。",
+          examples: ["血圧計", "補聴器", "超音波診断装置", "歯科用材料"],
+          approvalPath: "DRAP登録（Option A/B/C）",
+        },
+        {
+          name: "Class C",
+          nameJa: "クラスC",
+          riskLevel: "中高",
+          description: "中高リスク機器。登録申請＋臨床評価が必要。",
+          examples: ["人工関節", "冠動脈ステント", "人工呼吸器", "透析装置"],
+          approvalPath: "DRAP登録（Option A/B/C）＋臨床評価",
+        },
+        {
+          name: "Class D",
+          nameJa: "クラスD",
+          riskLevel: "高",
+          description: "最高リスク機器。最も厳格な審査。臨床データが必要。",
+          examples: ["人工心臓弁", "埋込み型除細動器", "薬剤溶出ステント"],
+          approvalPath: "DRAP登録（Option A/B/C）＋臨床データ",
+        },
+      ],
+      rules: [
+        "GHTF/IMDRFの分類ルールに準拠",
+        "Medical Devices Rules 2017のScheduleに詳細規定",
+        "IVDは別途分類ルール適用",
+      ],
+      totalProductCodes: "GMDN（Global Medical Device Nomenclature）を参照",
+    },
+
+    conformityAssessment: {
+      overview:
+        "全クラスの医療機器にDRAP登録が必要。3つの適合性評価オプション（Option A/B/C）から選択可能。Option Aは先行認可国の承認に基づく簡略審査、Option BはISO 13485認証に基づく審査、Option CはDRAPの独立審査。",
+      routes: [
+        {
+          name: "Option A — Prior Approval Based",
+          nameJa: "オプションA — 先行認可ベース",
+          applicableClasses: ["Class A", "Class B", "Class C", "Class D"],
+          description:
+            "参照国（CE/FDA/TGA/Health Canada等）の既存承認に基づく簡略審査。先行認可国の承認書類一式を提出。",
+          subtypes: [],
+          avgReviewTime: "要確認",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.dfrh.org.pk/",
+        },
+        {
+          name: "Option B — ISO 13485 Based",
+          nameJa: "オプションB — ISO 13485ベース",
+          applicableClasses: ["Class A", "Class B", "Class C", "Class D"],
+          description:
+            "ISO 13485認証を基盤とした適合性評価。ISO 13485認証書に加え、技術文書・臨床評価等を提出。",
+          subtypes: [],
+          avgReviewTime: "要確認",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.dfrh.org.pk/",
+        },
+        {
+          name: "Option C — DRAP Independent Review",
+          nameJa: "オプションC — DRAP独立審査",
+          applicableClasses: ["Class A", "Class B", "Class C", "Class D"],
+          description:
+            "DRAPによる独立した技術文書評価。先行認可やISO 13485認証がない場合に適用。",
+          subtypes: [],
+          avgReviewTime: "要確認",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.dfrh.org.pk/",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "DRAP オンラインポータル",
+      url: "https://www.dfrh.org.pk/",
+      description:
+        "DRAPのオンラインポータル経由で申請可能。電子申請の整備は進行中。",
+      mandatory: false,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入",
+      description:
+        "パキスタンではUDI制度は現時点で未導入。将来的な導入計画は検討段階。",
+      url: null,
+      timeline: "未定",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "DRAP有害事象報告制度",
+        mandatory: true,
+        url: "https://www.dfrh.org.pk/",
+        description:
+          "製造業者・輸入業者は重大な有害事象をDRAPに報告する義務がある。報告制度は整備途上。",
+      },
+      recalls: {
+        authority: "DRAP",
+        description:
+          "DRAPがリコールを監督。安全性に関する問題が発見された場合、市場からの回収を命令可能。",
+        url: "https://www.dfrh.org.pk/",
+      },
+      surveillance:
+        "市販後監視の要件はMedical Devices Rules 2017に規定。実施体制は発展途上。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "輸出国の規制当局",
+      name: "Certificate of Free Sale (CFS)",
+      description:
+        "DRAP登録申請時に、原産国の規制当局が発行するCFSの提出が求められる場合がある。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.dfrh.org.pk/",
+    },
+
+    reimbursement: {
+      system: "公的医療制度（限定的）",
+      authority: "Ministry of National Health Services, Regulations and Coordination",
+      description:
+        "パキスタンの医療制度は公立病院と民間セクターが混在。医療機器に特化した体系的な償還制度は未整備。公立病院での調達は政府予算に基づく。",
+      codingSystems: [],
+      url: null,
+    },
+
+    marketingRules: {
+      authority: "DRAP",
+      description:
+        "Medical Devices Rules 2017に基づき、医療機器の広告・マーケティングに関する規制が存在。虚偽・誇大広告は禁止。",
+      keyRules: [
+        "未登録医療機器の広告は禁止",
+        "虚偽・誇大な効能表示の禁止",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加（Non-participant）",
+      description:
+        "パキスタンはMDSAPに参加していない。MDSAP監査報告書はDRAPの規制要件を代替しない。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "適合性評価オプションBの基盤。ISO 13485認証の取得が推奨される。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に参照。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2017",
+        title: "Medical Devices Rules 2017の制定",
+        description:
+          "DRAP Act 2012に基づく医療機器の包括的な規制規則が制定。4クラス分類と3つの適合性評価オプションを導入。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Kenya ---
+  // =========================================================================
+  {
+    code: "KEN",
+    country: "ケニア",
+    countryEn: "Kenya",
+    region: "Middle East & Africa",
+    flag: "🇰🇪",
+
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description:
+        "ケニアの医療機器規制はPPB（Pharmacy and Poisons Board）が管轄する。Cap 244（Pharmacy and Poisons Act）を根拠法とし、医薬品・医療機器の両方を規制。4クラス分類（Class A/B/C/D）を採用し、リスクベースの市販前審査を実施。2024年3月にMDSAPアフィリエイトメンバーとなり、国際的な規制整合を推進。",
+      keyCharacteristics: [
+        "PPBによる一元的な規制体制",
+        "リスクベースの4クラス分類（Class A/B/C/D）",
+        "Cap 244（Pharmacy and Poisons Act）が根拠法",
+        "FIFO/Fast Track/Expedited の3つの審査経路",
+        "MDSAPアフィリエイトメンバー（2024年3月加入）",
+        "東アフリカ共同体（EAC）との規制調和を推進",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "PPB",
+        fullName: "Pharmacy and Poisons Board",
+        localName: null,
+        role: "医療機器の登録・市販後監視・査察・リコール管理。主管当局。",
+        url: "https://www.pharmacyboardkenya.org/",
+        isPrimary: true,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（PPB が直接審査）",
+      description:
+        "ケニアではNotified Body制度は存在しない。PPBが直接、医療機器の登録審査を実施する。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Cap 244およびPPBガイダンスに定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。GHTF/IMDRF定義に準拠。",
+      scope:
+        "IVD（体外診断用医療機器）も適用対象。医療機器全般を包括的に規制。",
+      notes:
+        "東アフリカ共同体（EAC）の医療機器調和ガイドラインとの整合を推進中。",
+    },
+
+    primaryLaw: {
+      title: "Pharmacy and Poisons Act (Cap 244)",
+      originalTitle: null,
+      enacted: "1957（複数回改正）",
+      lastAmended: null,
+      url: "https://www.pharmacyboardkenya.org/",
+      description:
+        "薬局・医薬品・毒物の規制に関する基本法。医療機器の規制根拠もこの法律に含まれる。PPBの設立・権限の根拠法。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "PPB Medical Devices Registration Guidelines",
+        date: null,
+        url: "https://www.pharmacyboardkenya.org/",
+        description:
+          "医療機器の登録手続・分類・ラベリング・品質管理等の詳細を規定するPPBガイドライン。",
+        category: "医療機器",
+      },
+    ],
+
+    relatedLaws: [],
+
+    classification: {
+      system: "4クラス制（Class A/B/C/D）",
+      basis: "リスクベース（GHTF/IMDRF分類ルールに準拠）。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。",
+      classes: [
+        {
+          name: "Class A",
+          nameJa: "クラスA",
+          riskLevel: "低",
+          description: "一般的な低リスク機器。PPB登録が必要。",
+          examples: ["弾性包帯", "聴診器", "舌圧子", "車椅子"],
+          approvalPath: "PPB登録",
+        },
+        {
+          name: "Class B",
+          nameJa: "クラスB",
+          riskLevel: "中低",
+          description: "中程度の低リスク機器。PPB登録が必要。",
+          examples: ["血圧計", "補聴器", "超音波診断装置", "歯科用材料"],
+          approvalPath: "PPB登録",
+        },
+        {
+          name: "Class C",
+          nameJa: "クラスC",
+          riskLevel: "中高",
+          description: "中高リスク機器。PPB登録＋臨床評価が必要。",
+          examples: ["人工関節", "冠動脈ステント", "人工呼吸器", "透析装置"],
+          approvalPath: "PPB登録＋臨床評価",
+        },
+        {
+          name: "Class D",
+          nameJa: "クラスD",
+          riskLevel: "高",
+          description: "最高リスク機器。最も厳格な審査。臨床データが必要。",
+          examples: ["人工心臓弁", "埋込み型除細動器", "薬剤溶出ステント"],
+          approvalPath: "PPB登録＋臨床データ",
+        },
+      ],
+      rules: [
+        "GHTF/IMDRFの分類ルールに準拠",
+        "PPBガイドラインに詳細規定",
+        "IVDは別途分類ルール適用",
+      ],
+      totalProductCodes: "GMDN（Global Medical Device Nomenclature）を参照",
+    },
+
+    conformityAssessment: {
+      overview:
+        "全クラスの医療機器にPPB登録が必要。審査経路はFIFO（先着順通常審査）、Fast Track（優先審査）、Expedited（緊急審査）の3つ。先行認可国（CE/FDA等）の承認書類を参考にした審査を実施。",
+      routes: [
+        {
+          name: "FIFO (First In, First Out)",
+          nameJa: "FIFO（先着順通常審査）",
+          applicableClasses: ["Class A", "Class B", "Class C", "Class D"],
+          description:
+            "標準的な審査経路。申請順に審査が行われる。技術文書・臨床評価・品質管理文書を提出。",
+          subtypes: [],
+          avgReviewTime: "要確認",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.pharmacyboardkenya.org/",
+        },
+        {
+          name: "Fast Track",
+          nameJa: "Fast Track（優先審査）",
+          applicableClasses: ["Class A", "Class B", "Class C", "Class D"],
+          description:
+            "特定の条件を満たす医療機器に対する優先審査経路。公衆衛生上の必要性が高い機器等が対象。",
+          subtypes: [],
+          avgReviewTime: "FIFO より短縮",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.pharmacyboardkenya.org/",
+        },
+        {
+          name: "Expedited",
+          nameJa: "Expedited（緊急審査）",
+          applicableClasses: ["Class A", "Class B", "Class C", "Class D"],
+          description:
+            "緊急性の高い医療機器に対する迅速審査経路。パンデミック対応機器や代替品がない機器等が対象。",
+          subtypes: [],
+          avgReviewTime: "最短の審査期間",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.pharmacyboardkenya.org/",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "PPB オンラインポータル",
+      url: "https://www.pharmacyboardkenya.org/",
+      description:
+        "PPBのオンラインポータル経由で申請可能。電子申請の整備を推進中。",
+      mandatory: false,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（検討段階）",
+      description:
+        "ケニアではUDI制度は現時点で未導入。MDSAP参加に伴い、将来的な導入が検討される可能性。",
+      url: null,
+      timeline: "未定",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "PPB有害事象報告制度",
+        mandatory: true,
+        url: "https://www.pharmacyboardkenya.org/",
+        description:
+          "製造業者・輸入業者・医療従事者は有害事象をPPBに報告する義務がある。",
+      },
+      recalls: {
+        authority: "PPB",
+        description:
+          "PPBがリコールを監督。安全性に関する問題が発見された場合、市場からの回収を命令可能。",
+        url: "https://www.pharmacyboardkenya.org/",
+      },
+      surveillance:
+        "市販後監視の要件はPPBガイドラインに規定。MDSAPアフィリエイト参加により体制強化を推進中。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "輸出国の規制当局",
+      name: "Certificate of Free Sale (CFS)",
+      description:
+        "PPB登録申請時に、原産国の規制当局が発行するCFSの提出が求められる場合がある。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.pharmacyboardkenya.org/",
+    },
+
+    reimbursement: {
+      system: "国民健康保険基金（NHIF）+ 民間保険",
+      authority: "NHIF / Ministry of Health",
+      description:
+        "NHIFが公的医療保険を提供。医療機器に特化した体系的な償還制度は限定的。公立病院での調達は政府予算・ドナー資金に基づく。",
+      codingSystems: [],
+      url: null,
+    },
+
+    marketingRules: {
+      authority: "PPB",
+      description:
+        "PPBガイドラインに基づき、医療機器の広告・マーケティングに関する規制が存在。未登録機器の広告は禁止。",
+      keyRules: [
+        "未登録医療機器の広告は禁止",
+        "虚偽・誇大な効能表示の禁止",
+      ],
+    },
+
+    mdsap: {
+      status: "アフィリエイトメンバー（Affiliate Member, 2024年3月加入）",
+      description:
+        "ケニアは2024年3月にMDSAPアフィリエイトメンバーとして加入。MDSAP監査報告書の活用を検討中。正式な参加国への移行を目指している。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "ISO 13485認証の取得が推奨される。登録審査で参照。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に参照。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2024-03",
+        title: "MDSAPアフィリエイトメンバーとして加入",
+        description:
+          "ケニアが2024年3月にMDSAP（Medical Device Single Audit Program）のアフィリエイトメンバーとして正式に加入。国際的な規制整合の推進。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Nigeria ---
+  // =========================================================================
+  {
+    code: "NGA",
+    country: "ナイジェリア",
+    countryEn: "Nigeria",
+    region: "Middle East & Africa",
+    flag: "🇳🇬",
+
+    legalSystemOverview: {
+      type: "連邦制（Federal system）",
+      description:
+        "ナイジェリアの医療機器規制はNAFDAC（National Agency for Food and Drug Administration and Control）が管轄する。2024年に新たなMedical Device Regulations 2024が制定され、規制枠組みが大幅に刷新された。GHTF/IMDRFの4クラス分類（Class A/B/C/D）を採用し、NAPAMS電子申請システムによるオンライン申請を導入。",
+      keyCharacteristics: [
+        "NAFDACによる一元的な連邦規制体制",
+        "リスクベースの4クラス分類（Class A/B/C/D）",
+        "Medical Device Regulations 2024による刷新された規制枠組み",
+        "NAPAMS（NAFDAC Automated Product Administration and Monitoring System）電子申請",
+        "審査期間: 120営業日（標準）",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "NAFDAC",
+        fullName: "National Agency for Food and Drug Administration and Control",
+        localName: null,
+        role: "医療機器の登録・市販後監視・査察・リコール管理・広告規制。主管当局。",
+        url: "https://www.nafdac.gov.ng/",
+        isPrimary: true,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（NAFDAC が直接審査）",
+      description:
+        "ナイジェリアではNotified Body制度は存在しない。NAFDACが直接、医療機器の登録審査を実施する。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Medical Device Regulations 2024に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。GHTF/IMDRF定義に準拠。",
+      scope:
+        "IVD（体外診断用医療機器）も適用対象。医療機器全般を包括的に規制。",
+      notes:
+        "2024年の新規制により、定義と適用範囲が国際基準に整合。",
+    },
+
+    primaryLaw: {
+      title: "NAFDAC Act (CAP N1 LFN 2004)",
+      originalTitle: null,
+      enacted: "1993（2004年改正）",
+      lastAmended: "2004",
+      url: "https://www.nafdac.gov.ng/",
+      description:
+        "NAFDACの設立根拠法。食品・医薬品・化粧品・医療機器・化学物質の規制権限をNAFDACに付与。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Medical Device Regulations 2024",
+        date: "2024",
+        url: "https://www.nafdac.gov.ng/",
+        description:
+          "医療機器の登録・分類・市販後監視・ラベリング等の詳細を規定する主要な施行規則。2024年に制定された最新の規制枠組み。",
+        category: "医療機器",
+      },
+    ],
+
+    relatedLaws: [],
+
+    classification: {
+      system: "4クラス制（Class A/B/C/D）",
+      basis: "リスクベース（GHTF/IMDRF分類ルールに準拠）。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。",
+      classes: [
+        {
+          name: "Class A",
+          nameJa: "クラスA",
+          riskLevel: "低",
+          description: "一般的な低リスク機器。NAFDAC登録が必要。",
+          examples: ["弾性包帯", "聴診器", "舌圧子", "車椅子"],
+          approvalPath: "NAFDAC登録（NAPAMS経由）",
+        },
+        {
+          name: "Class B",
+          nameJa: "クラスB",
+          riskLevel: "中低",
+          description: "中程度の低リスク機器。NAFDAC登録が必要。",
+          examples: ["血圧計", "補聴器", "超音波診断装置", "歯科用材料"],
+          approvalPath: "NAFDAC登録（NAPAMS経由）",
+        },
+        {
+          name: "Class C",
+          nameJa: "クラスC",
+          riskLevel: "中高",
+          description: "中高リスク機器。NAFDAC登録＋臨床評価が必要。",
+          examples: ["人工関節", "冠動脈ステント", "人工呼吸器", "透析装置"],
+          approvalPath: "NAFDAC登録（NAPAMS経由）＋臨床評価",
+        },
+        {
+          name: "Class D",
+          nameJa: "クラスD",
+          riskLevel: "高",
+          description: "最高リスク機器。最も厳格な審査。臨床データが必要。",
+          examples: ["人工心臓弁", "埋込み型除細動器", "薬剤溶出ステント"],
+          approvalPath: "NAFDAC登録（NAPAMS経由）＋臨床データ",
+        },
+      ],
+      rules: [
+        "GHTF/IMDRFの分類ルールに準拠",
+        "Medical Device Regulations 2024に詳細規定",
+        "IVDは別途分類ルール適用",
+      ],
+      totalProductCodes: "GMDN（Global Medical Device Nomenclature）を参照",
+    },
+
+    conformityAssessment: {
+      overview:
+        "全クラスの医療機器にNAFDAC登録が必要。NAPAMS（NAFDAC Automated Product Administration and Monitoring System）電子申請システム経由でオンライン申請。標準審査期間は120営業日。先行認可国（CE/FDA等）の承認書類を参考にした審査を実施。",
+      routes: [
+        {
+          name: "NAFDAC Standard Registration",
+          nameJa: "NAFDAC標準登録",
+          applicableClasses: ["Class A", "Class B", "Class C", "Class D"],
+          description:
+            "NAPAMS経由の標準的な登録審査。技術文書・臨床評価・品質管理文書・CFS等を提出。審査期間は120営業日。",
+          subtypes: [],
+          avgReviewTime: "120営業日",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.nafdac.gov.ng/",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "NAPAMS（NAFDAC Automated Product Administration and Monitoring System）",
+      url: "https://www.nafdac.gov.ng/",
+      description:
+        "NAPAMSは NAFDACの統合電子申請システム。全ての医療機器登録申請はNAPAMS経由でオンライン提出。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（検討段階）",
+      description:
+        "ナイジェリアではUDI制度は現時点で未導入。Medical Device Regulations 2024で将来的な導入の基盤が整備された。",
+      url: null,
+      timeline: "未定",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "NAFDAC有害事象報告制度",
+        mandatory: true,
+        url: "https://www.nafdac.gov.ng/",
+        description:
+          "製造業者・輸入業者・医療従事者は有害事象をNAFDACに報告する義務がある。Medical Device Regulations 2024で報告要件が強化。",
+      },
+      recalls: {
+        authority: "NAFDAC",
+        description:
+          "NAFDACがリコールを監督。安全性に関する問題が発見された場合、市場からの回収を命令可能。",
+        url: "https://www.nafdac.gov.ng/",
+      },
+      surveillance:
+        "Medical Device Regulations 2024に基づく市販後監視要件。PMS報告書の提出義務が規定。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "輸出国の規制当局",
+      name: "Certificate of Free Sale (CFS)",
+      description:
+        "NAFDAC登録申請時に、原産国の規制当局が発行するCFSの提出が必要。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.nafdac.gov.ng/",
+    },
+
+    reimbursement: {
+      system: "国民健康保険制度（NHIS）+ 民間保険",
+      authority: "NHIA（National Health Insurance Authority）",
+      description:
+        "NHIAが公的医療保険を管轄。医療機器に特化した体系的な償還制度は限定的。公立病院での調達は政府予算に基づく。",
+      codingSystems: [],
+      url: null,
+    },
+
+    marketingRules: {
+      authority: "NAFDAC",
+      description:
+        "NAFDACのガイドラインに基づき、医療機器の広告・マーケティングに関する規制が存在。未登録機器の広告は禁止。",
+      keyRules: [
+        "未登録医療機器の広告は禁止",
+        "虚偽・誇大な効能表示の禁止",
+        "広告にはNAFDAC登録番号の記載が必要",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加（Non-participant）",
+      description:
+        "ナイジェリアはMDSAPに参加していない。MDSAP監査報告書はNAFDACの規制要件を代替しない。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "ISO 13485認証の取得が推奨される。登録審査で参照。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に参照。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2024",
+        title: "Medical Device Regulations 2024の制定",
+        description:
+          "NAFDACが新たなMedical Device Regulations 2024を制定。4クラス分類・NAPAMS電子申請・市販後監視の強化等を導入し、規制枠組みを国際基準に整合。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Morocco ---
+  // =========================================================================
+  {
+    code: "MAR",
+    country: "モロッコ",
+    countryEn: "Morocco",
+    region: "Middle East & Africa",
+    flag: "🇲🇦",
+
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description:
+        "モロッコの医療機器規制はDMP（Direction du Médicament et de la Pharmacie）が管轄してきたが、現在AMMPS（Agence Marocaine des Médicaments et des Produits de Santé）への移行が進行中。Loi 84-12（医療機器に関する法律）が根拠法。EU MDD/MDRに準拠した4クラス分類（Class I/IIa/IIb/III）を採用し、CE認証やFDA認証を広く認知・参照する規制アプローチ。",
+      keyCharacteristics: [
+        "DMP → AMMPS への規制当局移行が進行中",
+        "EU MDD準拠のリスクベース4クラス分類（Class I/IIa/IIb/III）",
+        "Loi 84-12が医療機器の基本法",
+        "CE認証・FDA認証を広く認知・参照",
+        "フランス語圏の規制伝統を踏襲",
+        "北アフリカ・フランコフォン圏における規制ハブを目指す",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "DMP",
+        fullName: "Direction du Médicament et de la Pharmacie",
+        localName: "مديرية الأدوية والصيدلة",
+        role: "医療機器の登録・市販後監視・査察。現行の主管当局（AMMPS移行まで）。",
+        url: "https://www.sante.gov.ma/",
+        isPrimary: true,
+      },
+      {
+        name: "AMMPS",
+        fullName: "Agence Marocaine des Médicaments et des Produits de Santé",
+        localName: "الوكالة المغربية للأدوية والمنتجات الصحية",
+        role: "DMPの機能を継承する新規制当局。設立・移行作業中。",
+        url: "https://www.sante.gov.ma/",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（DMP/AMMPS が直接審査。CE認証を広く認知）",
+      description:
+        "モロッコではNotified Body制度は存在しないが、EU認定Notified BodyのCE証明書を広く認知・参照する。DMP/AMMPSが登録審査を実施。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Loi 84-12に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。EU MDDの定義に準拠。",
+      scope:
+        "IVD（体外診断用医療機器）も適用対象。医療機器全般を規制。",
+      notes:
+        "フランス語圏の規制伝統を踏まえ、EU MDDの定義を基盤としている。EU MDRへの移行は検討段階。",
+    },
+
+    primaryLaw: {
+      title: "Loi 84-12 relative aux dispositifs médicaux",
+      originalTitle: "القانون رقم 84-12 المتعلق بالأجهزة الطبية",
+      enacted: "2016",
+      lastAmended: null,
+      url: "https://www.sante.gov.ma/",
+      description:
+        "医療機器に関する基本法。医療機器の定義・分類・登録・市販後監視・広告規制等を規定。施行令・施行規則により詳細が補完される。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Décrets d'application de la Loi 84-12",
+        date: null,
+        url: "https://www.sante.gov.ma/",
+        description:
+          "Loi 84-12の施行令。医療機器の分類・登録手続・品質管理・市販後監視等の詳細を規定。段階的に公布中。",
+        category: "医療機器",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Loi 09-08 relative à la protection des données personnelles",
+        category: "データ保護",
+        enacted: "2009",
+        url: "https://www.cndp.ma/",
+        relevance:
+          "個人データ保護法。コネクテッドデバイス・SaMDが取り扱う個人医療情報のプライバシー要件に適用。",
+      },
+    ],
+
+    classification: {
+      system: "4クラス制（Class I/IIa/IIb/III）— EU MDD準拠",
+      basis: "リスクベース（EU MDD分類ルールに準拠）。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。",
+      classes: [
+        {
+          name: "Class I",
+          nameJa: "クラスI",
+          riskLevel: "低",
+          description: "低リスク機器。DMP/AMMPS登録が必要。",
+          examples: ["弾性包帯", "聴診器", "舌圧子", "車椅子", "歩行補助器具"],
+          approvalPath: "DMP/AMMPS登録",
+        },
+        {
+          name: "Class IIa",
+          nameJa: "クラスIIa",
+          riskLevel: "中低",
+          description: "中低リスク機器。DMP/AMMPS登録が必要。CE認証があれば審査が円滑化。",
+          examples: ["血圧計", "補聴器", "超音波診断装置", "歯科用材料", "輸液セット"],
+          approvalPath: "DMP/AMMPS登録（CE認証参照）",
+        },
+        {
+          name: "Class IIb",
+          nameJa: "クラスIIb",
+          riskLevel: "中高",
+          description: "中高リスク機器。DMP/AMMPS登録＋臨床評価が必要。CE/FDA認証を広く認知。",
+          examples: ["人工呼吸器", "透析装置", "外科用レーザー", "輸液ポンプ", "コンタクトレンズ"],
+          approvalPath: "DMP/AMMPS登録＋臨床評価（CE/FDA認証参照）",
+        },
+        {
+          name: "Class III",
+          nameJa: "クラスIII",
+          riskLevel: "高",
+          description: "最高リスク機器。最も厳格な審査。CE/FDA認証を広く認知。",
+          examples: ["人工心臓弁", "冠動脈ステント", "埋込み型除細動器", "薬剤溶出ステント", "人工関節"],
+          approvalPath: "DMP/AMMPS登録＋臨床データ（CE/FDA認証参照）",
+        },
+      ],
+      rules: [
+        "EU MDD分類ルールに準拠",
+        "Loi 84-12の施行令に詳細規定",
+        "IVDは別途分類ルール適用",
+        "EU MDRへの分類ルール移行は検討段階",
+      ],
+      totalProductCodes: "GMDN（Global Medical Device Nomenclature）を参照",
+    },
+
+    conformityAssessment: {
+      overview:
+        "全クラスの医療機器にDMP/AMMPS登録が必要。CE認証やFDA認証を保有する製品は審査が円滑化される。EU認定Notified Bodyが発行したCE証明書やFDA 510(k)/PMAクリアランスを広く認知・参照。",
+      routes: [
+        {
+          name: "DMP/AMMPS Standard Registration",
+          nameJa: "DMP/AMMPS標準登録",
+          applicableClasses: ["Class I", "Class IIa", "Class IIb", "Class III"],
+          description:
+            "標準的な登録審査。技術文書・臨床評価・品質管理文書・CFS等を提出。CE/FDA認証があれば審査が円滑化される。",
+          subtypes: [],
+          avgReviewTime: "要確認",
+          avgReviewTimeSource: null,
+          fee: "要確認",
+          feeSource: null,
+          url: "https://www.sante.gov.ma/",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "DMP/AMMPS ポータル（整備中）",
+      url: "https://www.sante.gov.ma/",
+      description:
+        "電子申請システムはAMMPS移行に伴い整備中。現行は紙ベースとオンラインの併用。",
+      mandatory: false,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（検討段階）",
+      description:
+        "モロッコではUDI制度は現時点で未導入。EU MDRへの整合に伴い、将来的な導入が検討される可能性。",
+      url: null,
+      timeline: "未定",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "DMP/AMMPS有害事象報告制度（マテリオビジランス）",
+        mandatory: true,
+        url: "https://www.sante.gov.ma/",
+        description:
+          "Loi 84-12に基づくマテリオビジランス制度。製造業者・輸入業者・医療従事者は有害事象をDMP/AMMPSに報告する義務がある。",
+      },
+      recalls: {
+        authority: "DMP/AMMPS",
+        description:
+          "DMP/AMMPSがリコールを監督。安全性に関する問題が発見された場合、市場からの回収を命令可能。",
+        url: "https://www.sante.gov.ma/",
+      },
+      surveillance:
+        "Loi 84-12に基づく市販後監視要件。マテリオビジランス報告の提出義務が規定。AMMPS移行に伴い体制強化を予定。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "輸出国の規制当局",
+      name: "Certificate of Free Sale (CFS)",
+      description:
+        "DMP/AMMPS登録申請時に、原産国の規制当局が発行するCFSの提出が必要。CE認証書も重要な参照書類。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.sante.gov.ma/",
+    },
+
+    reimbursement: {
+      system: "AMO（Assurance Maladie Obligatoire）+ RAMED + 民間保険",
+      authority: "ANAM（Agence Nationale de l'Assurance Maladie）",
+      description:
+        "AMO（強制医療保険）が公的医療保険を提供。RAMED（低所得者向け医療扶助制度）も存在。医療機器に特化した体系的な償還制度は限定的。",
+      codingSystems: [],
+      url: null,
+    },
+
+    marketingRules: {
+      authority: "DMP/AMMPS",
+      description:
+        "Loi 84-12に基づき、医療機器の広告・マーケティングに関する規制が存在。未登録機器の広告は禁止。",
+      keyRules: [
+        "未登録医療機器の広告は禁止",
+        "虚偽・誇大な効能表示の禁止",
+        "広告にはDMP/AMMPSの事前承認が必要な場合がある",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加（Non-participant）",
+      description:
+        "モロッコはMDSAPに参加していない。MDSAP監査報告書はDMP/AMMPSの規制要件を代替しない。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "ISO 13485認証の取得が推奨される。CE認証の前提条件でもあり、登録審査で重視。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に参照。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2024",
+        title: "AMMPS（Agence Marocaine des Médicaments et des Produits de Santé）の設立・移行",
+        description:
+          "DMPからAMMPSへの規制当局移行が進行中。AMMPSはより独立した規制機関として、医薬品・医療機器の規制を一元的に担う予定。",
+      },
+      {
+        date: "2016",
+        title: "Loi 84-12の制定",
+        description:
+          "医療機器に関する包括的な法律であるLoi 84-12が制定。4クラス分類・登録制度・市販後監視等の法的枠組みを確立。",
       },
     ],
 
