@@ -1010,6 +1010,75 @@ function ToolTabBar({ toolTab, onSelect }) {
   );
 }
 
+/** 審査期間 横棒チャート（AI News BenchmarkChart パターン） */
+function ReviewTimeChart({ title }) {
+  const data = useMemo(() => {
+    const rows = [];
+    const regionColors = {
+      "North America": ["#3b82f6", "#60a5fa"],
+      "Europe": ["#6366f1", "#a78bfa"],
+      "ASPAC": ["#10b981", "#34d399"],
+      "Latam": ["#f59e0b", "#fbbf24"],
+      "Middle East & Africa": ["#ef4444", "#f87171"],
+    };
+    for (const p of COUNTRY_PROFILES) {
+      const mainRoute = p.conformityAssessment?.routes?.find(
+        (r) => r.avgReviewTime && !/要確認|即日|N\/A/i.test(r.avgReviewTime)
+      );
+      if (!mainRoute) continue;
+      const m = mainRoute.avgReviewTime.match(/(\d+)/);
+      if (!m) continue;
+      const months = parseInt(m[1], 10);
+      if (months > 36) continue;
+      rows.push({
+        name: `${p.flag} ${p.country}`,
+        months,
+        route: mainRoute.name,
+        colors: regionColors[p.region] || ["#6b7280", "#9ca3af"],
+      });
+    }
+    return rows.sort((a, b) => a.months - b.months);
+  }, []);
+
+  if (data.length === 0) return null;
+  const maxMonths = Math.max(...data.map((d) => d.months), 18);
+
+  return (
+    <div className="benchmark-chart">
+      {title && <h3 className="benchmark-chart__title">{title}</h3>}
+      <div className="benchmark-chart__wrap">
+        <div className="benchmark-chart__grid">
+          {[0, 6, 12, 18].filter(v => v <= maxMonths).map((v) => (
+            <div key={v} className="benchmark-chart__gridline" style={{ left: `${(v / maxMonths) * 100}%` }}>
+              <span className="benchmark-chart__gridlabel">{v}ヶ月</span>
+            </div>
+          ))}
+        </div>
+        <div className="benchmark-chart__bars">
+          {data.map((d, i) => {
+            const pct = (d.months / maxMonths) * 100;
+            return (
+              <div key={d.name} className="bench-row" style={{ animationDelay: `${i * 40}ms` }}>
+                <span className="bench-row__label">{d.name}</span>
+                <div className="bench-row__track">
+                  <div
+                    className="bench-row__bar"
+                    style={{
+                      width: `${pct}%`,
+                      background: `linear-gradient(90deg, ${d.colors[0]}, ${d.colors[1]})`,
+                    }}
+                  />
+                  <span className="bench-row__score">{d.months}ヶ月</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /** 規制領域別 横比較テーブル */
 function DomainComparisonTable({ domainId, onCountryClick }) {
   const profiles = COUNTRY_PROFILES;
@@ -4356,6 +4425,9 @@ const [showFab, setShowFab] = useState(false);
                       {COUNTRY_PROFILES.length}カ国・地域の医療機器規制を領域ごとに横比較
                     </p>
                   </div>
+                  {toolTab === "pathway" && (
+                    <ReviewTimeChart title="主要承認経路の審査期間（最短経路ベース）" />
+                  )}
                   <DomainComparisonTable
                     domainId={toolTab}
                     onCountryClick={(code) => {
