@@ -2256,8 +2256,8 @@ function CountryProfileDetail({ code, onBack }) {
                       <td><strong>{c.name}</strong>{c.nameJa && c.nameJa !== c.name ? <br/> : null}{c.nameJa && c.nameJa !== c.name ? <span style={{fontSize:"var(--text-xs)",color:"var(--muted)"}}>{c.nameJa}</span> : null}</td>
                       <td><span className={`reg-level-badge reg-level-badge--${c.riskLevel.includes("低") ? "low" : c.riskLevel.includes("中") ? "moderate" : "high"}`}>{c.riskLevel}</span></td>
                       <td>{c.description}</td>
-                      <td style={{fontSize:"var(--text-xs)"}}>{c.examples?.join("、")}</td>
-                      <td style={{fontSize:"var(--text-sm)"}}>{c.approvalPath}</td>
+                      <td className="cp-text-xs">{c.examples?.join("、")}</td>
+                      <td className="cp-text-sm">{c.approvalPath}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -2311,7 +2311,7 @@ function CountryProfileDetail({ code, onBack }) {
               {/* 申請区分別詳細（categories） */}
               {r.categories?.length > 0 && (
                 <div>
-                  <h4 style={{ margin: "var(--space-3) 0 var(--space-2)", fontSize: "var(--text-base)", fontWeight: 700 }}>申請区分別詳細</h4>
+                  <h4 className="cp-h4">申請区分別詳細</h4>
                   {r.categories.map((cat, k) => (
                     <div key={k} className="country-profile__category">
                       <span className="country-profile__category-title">{cat.name}</span>
@@ -2497,7 +2497,7 @@ function CountryProfileDetail({ code, onBack }) {
           {/* 保険適用区分テーブル（日本等） */}
           {p.reimbursement.categories?.length > 0 && (
             <div>
-              <h4 style={{ margin: "var(--space-3) 0 var(--space-2)" }}>保険適用区分</h4>
+              <h4 className="cp-h4">保険適用区分</h4>
               <table className="country-profile__table">
                 <thead>
                   <tr><th>区分</th><th>名称</th><th>説明</th></tr>
@@ -2517,7 +2517,7 @@ function CountryProfileDetail({ code, onBack }) {
           {/* 価格算定ルール */}
           {p.reimbursement.pricingRules && (
             <div>
-              <h4 style={{ margin: "var(--space-3) 0 var(--space-2)" }}>価格算定</h4>
+              <h4 className="cp-h4">価格算定</h4>
               <p className="country-profile__text">{p.reimbursement.pricingRules.method}</p>
               {p.reimbursement.pricingRules.premiums?.length > 0 && (
                 <table className="country-profile__table">

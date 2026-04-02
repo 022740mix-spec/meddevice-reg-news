@@ -3992,6 +3992,49 @@ body {
   margin-top: var(--space-4);
 }
 
+/* ── Utility classes for profile sections ── */
+.cp-h4 {
+  margin: var(--space-3) 0 var(--space-2);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text);
+}
+.cp-muted-sm {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: 0 0 var(--space-2);
+}
+.cp-text-xs { font-size: var(--text-xs); }
+.cp-text-sm { font-size: var(--text-sm); }
+
+/* Skip link (accessibility) */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 10000;
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* Read progress bar */
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--accent);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
 /* ── Benchmark Chart (横棒グラフ) ── */
 .benchmark-chart {
   margin: var(--space-4) 0 var(--space-5);
