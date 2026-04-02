@@ -12,9 +12,12 @@ export const COUNTRY_FLAG = {
   MYS: "🇲🇾", SAU: "🇸🇦", ZAF: "🇿🇦", CHE: "🇨🇭", MEX: "🇲🇽",
   NZL: "🇳🇿", PHL: "🇵🇭", ARG: "🇦🇷", TUR: "🇹🇷",
   ARE: "🇦🇪",
+  SWE: "🇸🇪", DNK: "🇩🇰", NOR: "🇳🇴", FIN: "🇫🇮", IRL: "🇮🇪", AUT: "🇦🇹",
   RUS: "🇷🇺", POL: "🇵🇱", KWT: "🇰🇼", QAT: "🇶🇦",
   ISR: "🇮🇱", EGY: "🇪🇬", COL: "🇨🇴", CHL: "🇨🇱",
   PAK: "🇵🇰", KEN: "🇰🇪", NGA: "🇳🇬", MAR: "🇲🇦",
+  JOR: "🇯🇴", BHR: "🇧🇭", OMN: "🇴🇲",
+  PER: "🇵🇪", ECU: "🇪🇨", CRI: "🇨🇷",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -10824,6 +10827,1357 @@ export const COUNTRY_PROFILES = [
     lastUpdated: "2026-04-02",
     verified: null,
   },
+
+  // =========================================================================
+  // --- NZL (ニュージーランド) ---
+  // =========================================================================
+  {
+    code: "NZL",
+    country: "ニュージーランド",
+    countryEn: "New Zealand",
+    region: "ASPAC",
+    flag: "🇳🇿",
+
+    legalSystemOverview: {
+      type: "コモンロー（Common law）— 単一国家体制",
+      description:
+        "ニュージーランドの医療機器規制は現行 Medicines Act 1981 および Medicines (Database of Medical Devices) Regulations 2003 を根拠とする。現行法制は医療機器の市販前承認制度を持たず、WAND（Web Assisted Notification of Devices）データベースへの届出制を採用している。Therapeutic Products Act 2023 が成立したが、政府は Medical Products Bill による置換を決定し、2026年後半に新規制体制への移行を計画中。TGA（オーストラリア）との Trans-Tasman 相互認証や早期警告システムが重要な特徴。",
+      keyCharacteristics: [
+        "WAND データベースへの届出制（市販前承認ではない）",
+        "リスクベースの5クラス分類（GHTF 準拠）",
+        "TGA（オーストラリア）との Trans-Tasman 相互認証・早期警告システム",
+        "Therapeutic Products Act 2023 から Medical Products Bill への移行中",
+        "PHARMAC による公的部門の機器調達・償還管理",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "Medsafe",
+        fullName: "New Zealand Medicines and Medical Devices Safety Authority",
+        localName: null,
+        role: "医療機器のWAND届出管理・市販後安全性監視・有害事象対応",
+        url: "https://www.medsafe.govt.nz/",
+        isPrimary: true,
+      },
+      {
+        name: "PHARMAC",
+        fullName: "Pharmaceutical Management Agency",
+        localName: null,
+        role: "公的医療制度における医療機器の調達・価格交渉・償還管理",
+        url: "https://www.pharmac.govt.nz/",
+        isPrimary: false,
+      },
+      {
+        name: "Ministry of Health",
+        fullName: "Ministry of Health — Manatū Hauora",
+        localName: "Manatū Hauora",
+        role: "医療機器規制の政策立案・Medical Products Bill の策定",
+        url: "https://www.health.govt.nz/",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（WAND届出制、第三者適合性評価なし）",
+      description:
+        "現行法制下ではNotified Body制度は存在しない。WAND への届出は安全性・有効性の評価を伴わない。TGAのオーストラリア登録があれば Trans-Tasman MRA により相互認証の対象となりうる。新法（Medical Products Bill）では適合性評価の導入が検討されている。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Medicines Act 1981 に基づく定義。疾病の診断・予防・モニタリング・治療等を目的とする器具・装置・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらずその主たる目的を達成するもの。",
+      scope:
+        "IVD を含む。Medicines (Database of Medical Devices) Regulations 2003 の Schedule 1 で対象範囲を規定。一部の機器（カスタムメイド、治験用等）は WAND 届出免除。",
+      notes:
+        "SaMD は現行法では明確な規定がなく、新法で対応予定。Therapeutic Products Act 2023 / Medical Products Bill で SaMD の規制枠組みが整備される見込み。",
+    },
+
+    primaryLaw: {
+      title: "Medicines Act 1981",
+      originalTitle: null,
+      enacted: "1981",
+      lastAmended: "2025（2025年11月改正）",
+      url: "https://www.legislation.govt.nz/act/public/1981/0118/latest/DLM53790.html",
+      description:
+        "医療機器規制の現行根拠法。ただし本法は主に医薬品を対象としており、医療機器に関する規定は限定的。Medicines (Database of Medical Devices) Regulations 2003 により WAND データベースを設置。政府は Medical Products Bill による全面的な置換を計画中（2026年後半発効予定）。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Medicines (Database of Medical Devices) Regulations 2003",
+        date: "2003-11-03",
+        url: "https://www.legislation.govt.nz/regulation/public/2003/0325/latest/DLM224223.html",
+        description:
+          "WAND データベースの設置根拠。スポンサーは NZ で供給する医療機器を30暦日以内に WAND に届出する義務。届出は無料。22の分類ルールを規定。",
+        category: "登録",
+      },
+      {
+        title: "Trans-Tasman Mutual Recognition Act 1997",
+        date: "1997",
+        url: "https://www.legislation.govt.nz/act/public/1997/0060/latest/DLM410793.html",
+        description:
+          "オーストラリアとの相互認証。一方の国で合法的に供給される製品は、一定条件下で他方の国でも販売可能。医療機器への適用には条件・制限あり。",
+        category: "相互認証",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Therapeutic Products Act 2023",
+        category: "規制改革",
+        enacted: "2023",
+        url: "https://www.legislation.govt.nz/act/public/2023/0058/latest/whole.html",
+        relevance:
+          "Medicines Act 1981 を置換する新法として成立。しかし政府は Medical Products Bill による再置換を決定。最終発効期限は2026年9月1日。",
+      },
+      {
+        title: "Health and Disability Commissioner Act 1994",
+        category: "患者権利",
+        enacted: "1994",
+        url: "https://www.legislation.govt.nz/act/public/1994/0088/latest/DLM333584.html",
+        relevance:
+          "医療機器の使用に関連する患者の権利保護。消費者の苦情処理制度。",
+      },
+      {
+        title: "Privacy Act 2020",
+        category: "個人情報保護",
+        enacted: "2020",
+        url: "https://www.legislation.govt.nz/act/public/2020/0031/latest/LMS23223.html",
+        relevance:
+          "コネクテッドデバイス・SaMD が取り扱う個人健康情報の保護要件。",
+      },
+    ],
+
+    classification: {
+      system: "5クラス制（Class I / IIa / IIb / III / AIMD）— GHTF準拠",
+      basis: "リスクベース（GHTF分類原則）",
+      classes: [
+        {
+          name: "Class I",
+          nameJa: "クラスI",
+          riskLevel: "低リスク",
+          description: "最低リスク。非侵襲的機器の多くが該当。",
+          examples: ["包帯", "車椅子", "聴診器"],
+          approvalPath: "WAND 届出（自己認証）",
+        },
+        {
+          name: "Class IIa",
+          nameJa: "クラスIIa",
+          riskLevel: "低〜中リスク",
+          description: "低〜中リスクの機器。",
+          examples: ["血圧計", "補聴器", "超音波プローブ"],
+          approvalPath: "WAND 届出",
+        },
+        {
+          name: "Class IIb",
+          nameJa: "クラスIIb",
+          riskLevel: "中〜高リスク",
+          description: "中〜高リスクの機器。",
+          examples: ["人工呼吸器", "血液透析装置", "骨接合プレート"],
+          approvalPath: "WAND 届出",
+        },
+        {
+          name: "Class III",
+          nameJa: "クラスIII",
+          riskLevel: "高リスク",
+          description: "高リスクの機器。長期埋込み型など。",
+          examples: ["人工股関節", "冠動脈ステント", "乳房インプラント"],
+          approvalPath: "WAND 届出",
+        },
+        {
+          name: "AIMD",
+          nameJa: "能動埋込み医療機器",
+          riskLevel: "高リスク",
+          description: "体内に埋め込まれる能動型医療機器。",
+          examples: ["ペースメーカー", "埋込み型除細動器", "人工内耳"],
+          approvalPath: "WAND 届出",
+        },
+      ],
+      rules: [
+        {
+          id: "22分類ルール",
+          description:
+            "Medicines (Database of Medical Devices) Regulations 2003 の Schedule 2 に規定される22の分類ルール。GHTF の分類原則に準拠。",
+          url: "https://www.medsafe.govt.nz/regulatory/devicesnew/2-1Classification.asp",
+        },
+      ],
+      totalProductCodes: "分類ルール22（Product Code 制度は採用していない）",
+    },
+
+    conformityAssessment: {
+      overview:
+        "現行法では市販前承認制度がなく、WAND への届出のみ。適合性評価はスポンサーの自己宣言に依拠。TGA登録がある場合は Trans-Tasman MRA により相互認証の根拠となりうる。新法で適合性評価制度の導入が予定されている。",
+      routes: [
+        {
+          name: "WAND Notification",
+          nameJa: "WAND 届出",
+          applicableClasses: ["全クラス"],
+          description:
+            "スポンサーは NZ で医療機器を供給開始してから30暦日以内に WAND に届出。届出は機器の安全性・有効性を評価・承認するものではなく、市販後監視のための情報収集が目的。",
+          subtypes: [],
+          avgReviewTime: "即時（届出受理）",
+          fee: "無料",
+          url: "https://www.medsafe.govt.nz/regulatory/DevicesNew/3WAND.asp",
+        },
+        {
+          name: "Trans-Tasman MRA",
+          nameJa: "Trans-Tasman 相互認証",
+          applicableClasses: ["TGA登録機器"],
+          description:
+            "オーストラリア TGA に登録された医療機器は、Trans-Tasman Mutual Recognition Arrangement に基づき、一定条件下で NZ でも供給可能。ただしWAND届出は別途必要。",
+          subtypes: [],
+          avgReviewTime: "条件による",
+          fee: "WAND届出は無料",
+          url: "https://www.legislation.govt.nz/act/public/1997/0060/latest/DLM410793.html",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "WAND Online System",
+      url: "https://www.medsafe.govt.nz/regulatory/DevicesNew/3WAND.asp",
+      description:
+        "WAND はオンラインデータベースで、スポンサーがウェブ上で直接機器情報を入力・届出する。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（検討中）",
+      description:
+        "現行法では UDI は義務化されていない。一部の機器についてはトレーサビリティ要件があるが、体系的な UDI 制度は未導入。新法で IMDRF UDI ガイダンスに沿った制度導入が検討されている。",
+      url: null,
+      timeline: "新法（Medical Products Bill）の施行に伴い導入予定",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "Medsafe 有害事象報告制度 — CARM（Centre for Adverse Reactions Monitoring）",
+        mandatory: true,
+        url: "https://www.medsafe.govt.nz/regulatory/devicesnew/9adverseevent.asp",
+        description:
+          "スポンサーは有害事象を Medsafe に報告する義務がある。市場措置を伴うインシデントは10営業日以内に初回報告、最終報告は120暦日以内。医療専門家・患者も CARM 経由で報告可能。",
+      },
+      recalls: {
+        authority: "Medsafe",
+        description:
+          "スポンサー主導のリコール（Field Safety Corrective Action）。Medsafe はリコール公告を発行し、TGA との Trans-Tasman 早期警告システムで情報共有。",
+        url: "https://www.medsafe.govt.nz/hot/recalls/devicesrecalls.asp",
+      },
+      surveillance:
+        "Medsafe による市販後安全性監視。Trans-Tasman Early Warning System により TGA と安全性情報を共有。CARM データベースで有害事象を一元管理。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "Medsafe",
+      name: "Certificate of Free Sale",
+      description:
+        "Medsafe が発行する自由販売証明書。NZ で合法的に供給されている医療機器について、輸出先国の当局が要求する場合に使用。",
+      processingTime: "約2〜4週間",
+      url: "https://www.medsafe.govt.nz/regulatory/reg.asp",
+    },
+
+    reimbursement: {
+      system: "PHARMAC（公的部門の調達・償還）+ ACC（事故補償）",
+      authority: "PHARMAC (Pharmaceutical Management Agency)",
+      description:
+        "PHARMAC は公的医療制度（Te Whatu Ora）で使用される医療機器の調達・価格交渉を管理。医療機器の償還リストを管理し、国家契約を通じて公的病院への供給を取り決める。民間部門は別途保険制度。ACC（Accident Compensation Corporation）は事故関連の医療機器費用をカバー。",
+      codingSystems: [
+        "PHARMAC Devices Schedule",
+        "National Contract（国家調達契約）",
+      ],
+      url: "https://www.pharmac.govt.nz/",
+    },
+
+    marketingRules: {
+      authority: "Medsafe + Commerce Commission",
+      description:
+        "医療機器の広告は Fair Trading Act 1986 および消費者保護法に基づき規制。虚偽・誤解を招く表示は禁止。医療専門家向けと一般消費者向けで異なる基準が適用される場合がある。",
+      keyRules: [
+        "Fair Trading Act 1986 による虚偽・誤解を招く表示の禁止",
+        "WAND 届出情報との整合性が必要",
+        "承認されていない効能・効果の広告禁止",
+        "比較広告は事実に基づくことが必要",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加（関連はあるが MDSAP 正式メンバーではない）",
+      description:
+        "NZ は MDSAP の正式参加国ではない。ただし TGA（オーストラリア）が MDSAP 参加国であるため、Trans-Tasman MRA を通じた間接的な関連がある。新法の下で MDSAP 参加が検討される可能性がある。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes:
+          "現行法では法的義務ではないが、TGA 登録やCE マーキングの前提として実質的に必要。新法で QMS 要件が正式に導入される見込み。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメントの国際標準として広く参照。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル要求として参照。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求として参照。NZ/AS 規格として採用。",
+      },
+      others: [
+        { standard: "ISO 10993 シリーズ", notes: "生体適合性評価の参照規格" },
+        { standard: "AS/NZS 規格群", notes: "オーストラリアとの共通規格（Joint Standards）" },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2026-Q2",
+        title: "Medical Products Bill 策定中",
+        description:
+          "政府は Therapeutic Products Act 2023 を Medical Products Bill で置換する方針を2024年9月に決定。2026年後半に新規制体制への移行を計画。独立規制機関の設立を含む。",
+      },
+      {
+        date: "2023",
+        title: "Therapeutic Products Act 2023 成立",
+        description:
+          "Medicines Act 1981 を置換する新法が成立。しかし新政権が方針転換し、Medical Products Bill による再置換を決定。最終発効期限は2026年9月1日。",
+      },
+      {
+        date: "2024",
+        title: "Trans-Tasman Early Warning System 更新",
+        description:
+          "TGA との医療機器安全性に関する早期警告システムの運用を継続・強化。安全性シグナルの共有体制を改善。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- PHL (フィリピン) ---
+  // =========================================================================
+  {
+    code: "PHL",
+    country: "フィリピン",
+    countryEn: "Republic of the Philippines",
+    region: "ASPAC",
+    flag: "🇵🇭",
+
+    legalSystemOverview: {
+      type: "大統領制共和国（混合法体系 — シビルロー＋コモンロー）",
+      description:
+        "フィリピンの医療機器規制は Republic Act No. 9711（FDA Act of 2009）を根拠とし、FDA Philippines（食品医薬品庁）が一元的に管轄する。ASEAN Medical Device Directive（AMDD）に整合した4クラス分類制度を採用。低リスク機器は Certificate of Medical Device Notification（CMDN）、高リスク機器は Certificate of Medical Device Registration（CMDR）で市場参入する。",
+      keyCharacteristics: [
+        "FDA Philippines による一元的な規制体制",
+        "ASEAN AMDD 整合の4クラス分類（Class A / B / C / D）",
+        "CMDN（届出）と CMDR（登録）の二層構造",
+        "ASEAN 加盟国間の Abridged Pathway（簡略化経路）",
+        "eServices Portal による電子申請の拡大（2025年〜）",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "FDA Philippines",
+        fullName: "Food and Drug Administration Philippines",
+        localName: "Pangasiwaan sa Pagkain at Gamot",
+        role: "医療機器の登録・届出・市販後監視・施設認可",
+        url: "https://www.fda.gov.ph/",
+        isPrimary: true,
+      },
+      {
+        name: "DOH",
+        fullName: "Department of Health",
+        localName: "Kagawaran ng Kalusugan",
+        role: "医療機器規制の政策立案・行政命令の発行",
+        url: "https://www.doh.gov.ph/",
+        isPrimary: false,
+      },
+      {
+        name: "PhilHealth",
+        fullName: "Philippine Health Insurance Corporation",
+        localName: null,
+        role: "国民健康保険による医療機器関連給付の管理",
+        url: "https://www.philhealth.gov.ph/",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（FDA Philippines が直接審査）",
+      description:
+        "フィリピンではNotified Body制度は存在しない。FDA Philippines（CDRRHR: Center for Device Regulation, Radiation Health and Research）が直接、医療機器の登録審査を実施する。ASEAN加盟国のNRAによる承認がある場合は Abridged Pathway（簡略化経路）を利用可能。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Republic Act No. 9711 および ASEAN AMDD に基づく定義。疾病の診断・予防・モニタリング・治療・緩和等を目的とする器具・装置・ソフトウェア・材料等で、薬理学的・免疫学的・代謝的手段によらずその主たる目的を達成するもの。",
+      scope:
+        "IVD を含む。医療機器ソフトウェア（MDSW）に関するドラフトガイドラインを2025年5月に公開。ASEAN AMDD の定義に整合。",
+      notes:
+        "2025年にドラフト FDA Circular で SaMD/MDSW の分類・評価ガイドラインを策定中。ASEAN および国際規制慣行に整合した枠組みを目指している。",
+    },
+
+    primaryLaw: {
+      title: "Republic Act No. 9711 — FDA Act of 2009",
+      originalTitle: null,
+      enacted: "2009",
+      lastAmended: null,
+      url: "https://www.fda.gov.ph/republic-act-no-9711/",
+      description:
+        "FDA Philippines の設立根拠法。医薬品・医療機器・食品・化粧品等の規制を包括的に規定。FDA に医療機器の登録・監視・取締り権限を付与。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Administrative Order No. 2018-0002 — Rules and Regulations on the Regulation of Medical Devices",
+        date: "2018",
+        url: "https://www.fda.gov.ph/",
+        description:
+          "医療機器規制の包括的な実施規則。ASEAN AMDD に整合したクラス分類・登録手続き・市販後監視を規定。",
+        category: "登録",
+      },
+      {
+        title: "Administrative Order No. 2025-0030 — PMAS Requirements (AMDD Annex 5)",
+        date: "2025-03",
+        url: "https://www.fda.gov.ph/",
+        description:
+          "ASEAN AMDD Annex 5 に基づく Post-Marketing Alert System（PMAS）の実施ガイドライン。市販後安全性監視の義務的枠組みを確立。",
+        category: "市販後",
+      },
+      {
+        title: "FDA Circular No. 2025-007 — eServices Portal for CMDN",
+        date: "2025-03",
+        url: "https://www.fda.gov.ph/fda-circular-no-2025-007-guidelines-on-the-use-of-the-food-and-drug-administration-eservices-portal-system-for-the-initial-application-of-a-certificate-of-medical-device-notification-cmdn/",
+        description:
+          "Class A 医療機器の CMDN 初回申請に eServices Portal の使用を義務化。2025年3月10日から全面実施。",
+        category: "電子申請",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Republic Act No. 3720 — Food, Drug and Cosmetic Act",
+        category: "基本法",
+        enacted: "1963",
+        url: null,
+        relevance:
+          "FDA Philippines の前身法。RA 9711 により大幅改正・強化。",
+      },
+      {
+        title: "Data Privacy Act of 2012 (RA 10173)",
+        category: "個人情報保護",
+        enacted: "2012",
+        url: null,
+        relevance:
+          "コネクテッドデバイス・SaMD が取り扱う個人健康情報の保護要件。",
+      },
+    ],
+
+    classification: {
+      system: "4クラス制（Class A / B / C / D）— ASEAN AMDD 整合",
+      basis: "リスクベース（GHTF/ASEAN AMDD 分類原則）",
+      classes: [
+        {
+          name: "Class A",
+          nameJa: "クラスA",
+          riskLevel: "低リスク",
+          description: "最低リスクの機器。CMDN（届出）で市場参入。",
+          examples: ["舌圧子", "再使用可能手術器具", "非滅菌包帯"],
+          approvalPath: "CMDN（Certificate of Medical Device Notification）",
+        },
+        {
+          name: "Class B",
+          nameJa: "クラスB",
+          riskLevel: "低〜中リスク",
+          description: "低〜中リスクの機器。CMDR（登録）が必要。",
+          examples: ["血圧計", "補聴器", "超音波診断装置"],
+          approvalPath: "CMDR（Certificate of Medical Device Registration）",
+        },
+        {
+          name: "Class C",
+          nameJa: "クラスC",
+          riskLevel: "中〜高リスク",
+          description: "中〜高リスクの機器。CMDR（登録）が必要。",
+          examples: ["人工呼吸器", "血液透析装置", "整形外科インプラント"],
+          approvalPath: "CMDR（Certificate of Medical Device Registration）",
+        },
+        {
+          name: "Class D",
+          nameJa: "クラスD",
+          riskLevel: "高リスク",
+          description: "最高リスクの機器。CMDR（登録）が必要。最も厳格な審査。",
+          examples: ["心臓弁", "冠動脈ステント", "埋込み型除細動器"],
+          approvalPath: "CMDR（Certificate of Medical Device Registration）",
+        },
+      ],
+      rules: [
+        {
+          id: "ASEAN AMDD 分類ルール",
+          description:
+            "ASEAN Medical Device Directive に基づくリスク分類ルール。侵襲性・持続時間・能動/非能動等の基準で分類。",
+          url: "https://www.fda.gov.ph/",
+        },
+      ],
+      totalProductCodes: "ASEAN AMDD 分類ルール（GHTF 準拠）",
+    },
+
+    conformityAssessment: {
+      overview:
+        "FDA Philippines が直接審査。Class A は CMDN（届出）、Class B/C/D は CMDR（登録）。ASEAN 加盟国の NRA 承認がある場合は Abridged Pathway を利用可能。",
+      routes: [
+        {
+          name: "CMDN (Certificate of Medical Device Notification)",
+          nameJa: "CMDN 医療機器届出証明書",
+          applicableClasses: ["Class A"],
+          description:
+            "低リスク機器の届出制度。eServices Portal 経由でオンライン申請（2025年3月〜必須）。",
+          subtypes: [],
+          avgReviewTime: "約30営業日",
+          fee: "登録手数料あり（2025年は一時的に旧料金に戻し中）",
+          url: "https://www.fda.gov.ph/",
+        },
+        {
+          name: "CMDR (Certificate of Medical Device Registration)",
+          nameJa: "CMDR 医療機器登録証明書",
+          applicableClasses: ["Class B", "Class C", "Class D"],
+          description:
+            "中〜高リスク機器の登録制度。技術文書・安全性データ・品質管理システムの審査を伴う。",
+          subtypes: [
+            {
+              name: "Full Evaluation",
+              description: "フルの技術審査。初回登録に適用。",
+            },
+            {
+              name: "Abridged Pathway",
+              description:
+                "ASEAN 加盟国の NRA 承認がある場合の簡略化経路。Class B/C/D に適用可能。審査期間短縮。",
+            },
+          ],
+          avgReviewTime: "Full: 約90〜120営業日、Abridged: 約60営業日",
+          fee: "US$736〜US$1,773（クラス・有効期間による。2025年は一時的に旧料金適用中）",
+          url: "https://www.fda.gov.ph/",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "FDA eServices Portal",
+      url: "https://eservices.fda.gov.ph/",
+      description:
+        "2025年3月10日から Class A 機器の CMDN 初回申請は eServices Portal 経由が必須。Class B/C/D の CMDR はメール（cdrrhr-productregistration@fda.gov.ph）による提出が継続中。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（ASEAN AMDD での検討中）",
+      description:
+        "フィリピンでは現時点で UDI は義務化されていない。ASEAN レベルでの UDI 導入議論が進行中。",
+      url: null,
+      timeline: "ASEAN AMDD の進展に連動して導入予定",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "FDA Philippines 有害事象報告制度 — CDRRHR",
+        mandatory: true,
+        url: "https://www.fda.gov.ph/",
+        description:
+          "製造業者・流通業者は重篤な有害事象を FDA Philippines（CDRRHR）に報告義務。AO 2025-0030 により ASEAN AMDD Annex 5 に基づく Post-Marketing Alert System（PMAS）を正式導入。報告は CDRRHR-PRSDD-Form 0.20 を使用。",
+      },
+      recalls: {
+        authority: "FDA Philippines",
+        description:
+          "製造業者・流通業者主導のリコール（Field Safety Corrective Action）。FDA Philippines は安全性アラートを発行し、回収を監督。",
+        url: "https://www.fda.gov.ph/",
+      },
+      surveillance:
+        "AO 2025-0030 に基づく PMAS の運用。スポンサーは Post-Market Surveillance 計画の策定・実施が義務。ASEAN AMDD Annex 5 に整合した市販後監視体制。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "FDA Philippines",
+      name: "Certificate of Free Sale (CFS) / Certificate of Product Registration (CPR)",
+      description:
+        "FDA Philippines が登録済み医療機器について発行する自由販売証明書。輸出先国の当局が要求する場合に使用。",
+      processingTime: "約2〜4週間",
+      url: "https://www.fda.gov.ph/",
+    },
+
+    reimbursement: {
+      system: "PhilHealth（国民健康保険）",
+      authority: "PhilHealth (Philippine Health Insurance Corporation)",
+      description:
+        "PhilHealth は Universal Health Care Act（RA 11223, 2019年）に基づく国民健康保険制度を運営。医療機器関連の給付は主に手技・入院パッケージに含まれる形で償還。個別機器の直接償還リストは限定的。",
+      codingSystems: [
+        "PhilHealth Case Rates（包括支払い）",
+        "ICD-10",
+      ],
+      url: "https://www.philhealth.gov.ph/",
+    },
+
+    marketingRules: {
+      authority: "FDA Philippines",
+      description:
+        "医療機器の広告は FDA Philippines の規制に基づく。Consumer Act of the Philippines（RA 7394）による虚偽・誤解を招く広告の禁止。登録/届出済みの適応のみ広告可。",
+      keyRules: [
+        "FDA 登録/届出されていない機器の広告禁止",
+        "虚偽・誤解を招く効能表示の禁止（RA 7394）",
+        "医療機器広告は FDA の事前承認が必要な場合あり",
+        "オンライン販売・広告に関するガイドラインの強化",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加",
+      description:
+        "フィリピンは MDSAP の参加国ではない。ただし ISO 13485 認証は登録時に有利に作用する。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes:
+          "CMDR 申請時に ISO 13485 認証の提出が推奨・考慮される。ASEAN AMDD の QMS 要件に整合。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメントの参照規格として認知。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "SaMD/MDSW ガイドライン（ドラフト）で参照。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求として参照。",
+      },
+      others: [
+        { standard: "ISO 10993 シリーズ", notes: "生体適合性評価の参照規格" },
+        { standard: "ASEAN AMDD Essential Principles", notes: "ASEAN 共通の安全性・性能の基本原則" },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2025-03",
+        title: "AO 2025-0030: PMAS 実施ガイドライン発行",
+        description:
+          "ASEAN AMDD Annex 5 に基づく Post-Marketing Alert System（PMAS）の実施ガイドラインを発行。市販後安全性監視の義務的枠組みを確立。",
+      },
+      {
+        date: "2025-05",
+        title: "医療機器ソフトウェア（MDSW）ガイドライン ドラフト公開",
+        description:
+          "FDA Philippines が SaMD/MDSW の分類・評価に関するドラフト FDA Circular を公開。パブリックコメント期限は2025年7月20日。",
+      },
+      {
+        date: "2025-03",
+        title: "eServices Portal による CMDN 電子申請の全面実施",
+        description:
+          "Class A 医療機器の CMDN 初回申請が eServices Portal 経由で全面実施。デジタル化の推進。",
+      },
+      {
+        date: "2025",
+        title: "医療機器登録手数料の一時停止",
+        description:
+          "2025年の大幅な手数料引き上げに対し、一時的に旧料金への差し戻し措置を実施（60営業日間）。さらに延長措置あり。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- ARG (アルゼンチン) ---
+  // =========================================================================
+  {
+    code: "ARG",
+    country: "アルゼンチン",
+    countryEn: "Argentine Republic",
+    region: "Latam",
+    flag: "🇦🇷",
+
+    legalSystemOverview: {
+      type: "連邦制共和国（シビルロー体系）",
+      description:
+        "アルゼンチンの医療機器規制は ANMAT（Administración Nacional de Medicamentos, Alimentos y Tecnología Médica）が管轄する。Disposición ANMAT 2318/2002 が医療機器登録の技術的・手続的要件を規定し、Disposición 727/2013 とともに主要な規制枠組みを形成。GHTF 分類原則に基づく4クラス制を採用。2025年には行政手続きの大幅な簡素化・デジタル化が進行中。",
+      keyCharacteristics: [
+        "ANMAT による一元的な規制体制",
+        "GHTF 準拠の4クラス分類（Class I / II / III / IV）",
+        "HELENA ポータルによるオンライン申請",
+        "2025年の大規模な行政手続き簡素化改革",
+        "認定国（米・EU・日・加・豪）の自由販売証明書を要求",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "ANMAT",
+        fullName: "Administración Nacional de Medicamentos, Alimentos y Tecnología Médica",
+        localName: "ANMAT",
+        role: "医療機器の登録・市販後監視（Tecnovigilancia）・施設認可・GMP査察",
+        url: "https://www.argentina.gob.ar/anmat",
+        isPrimary: true,
+      },
+      {
+        name: "Ministry of Health",
+        fullName: "Ministerio de Salud de la Nación",
+        localName: "Ministerio de Salud",
+        role: "医療機器規制の政策立案",
+        url: "https://www.argentina.gob.ar/salud",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（ANMAT が直接審査）",
+      description:
+        "アルゼンチンではNotified Body制度は存在しない。ANMAT が直接、医療機器の登録審査を実施する。Class I は届出（notification number）、Class II/III/IV は技術審査を経て登録証明書（clearance certificate）を発行。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Disposición ANMAT 2318/2002 に基づく定義。疾病の診断・予防・モニタリング・治療等を目的とする器具・装置・ソフトウェア・材料等で、薬理学的・免疫学的・代謝的手段によらずその主たる目的を達成するもの。",
+      scope:
+        "IVD を含む（IVD は別途 Class A/B 分類）。Disposición 64/2025 により SaMD が医療機器定義に含まれることを明確化。",
+      notes:
+        "コンビネーション製品は主たる作用機序に基づき医療機器または医薬品として分類。",
+    },
+
+    primaryLaw: {
+      title: "Ley 16.463 — Ley de Medicamentos",
+      originalTitle: "Ley de Medicamentos (Ley 16.463)",
+      enacted: "1964",
+      lastAmended: null,
+      url: "https://www.argentina.gob.ar/anmat",
+      description:
+        "医療製品規制の基本法。ANMAT の権限根拠。医療機器の詳細な規制は主に ANMAT の Disposiciones（処分命令）で規定。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Disposición ANMAT 2318/2002",
+        date: "2002",
+        url: "https://www.argentina.gob.ar/anmat",
+        description:
+          "医療機器登録の技術的・手続的・文書的要件を規定する主要規則。Annex III.B でラベリング要件、技術文書（Technical File）の構成を規定。",
+        category: "登録",
+      },
+      {
+        title: "Disposición ANMAT 727/2013",
+        date: "2013",
+        url: "https://www.argentina.gob.ar/anmat",
+        description:
+          "医療機器のリスク分類規則。GHTF 分類原則に基づく4クラス制の詳細を規定。",
+        category: "分類",
+      },
+      {
+        title: "Disposición ANMAT 8194/2023",
+        date: "2023",
+        url: "https://www.argentina.gob.ar/anmat",
+        description:
+          "Tecnovigilancia（市販後安全性監視）プログラムの更新。旧 Provision 8054/2010 を置換。有害事象報告体制を近代化。",
+        category: "市販後",
+      },
+      {
+        title: "Disposición ANMAT 64/2025",
+        date: "2025",
+        url: "https://www.argentina.gob.ar/anmat",
+        description:
+          "SaMD を含む医療機器定義の更新。デジタルヘルス製品の規制枠組みを整備。",
+        category: "定義",
+      },
+      {
+        title: "Disposición ANMAT 8799/2025",
+        date: "2025",
+        url: "https://www.argentina.gob.ar/anmat",
+        description:
+          "Class I/II 医療機器および IVD Class A/B の製造・輸入施設認可手続きの簡素化。低リスク製品の市場参入を迅速化。",
+        category: "施設認可",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Ley 25.326 — Protección de Datos Personales",
+        category: "個人情報保護",
+        enacted: "2000",
+        url: null,
+        relevance:
+          "コネクテッドデバイス・SaMD が取り扱う個人健康情報の保護。",
+      },
+      {
+        title: "Decreto 1490/92",
+        category: "設立",
+        enacted: "1992",
+        url: null,
+        relevance:
+          "ANMAT の設立根拠。保健省傘下の分権機関としての位置づけ。",
+      },
+    ],
+
+    classification: {
+      system: "4クラス制（Class I / II / III / IV）— GHTF 準拠",
+      basis: "リスクベース（GHTF 分類原則）",
+      classes: [
+        {
+          name: "Class I",
+          nameJa: "クラスI",
+          riskLevel: "低リスク",
+          description: "最低リスクの機器。ANMAT は届出番号（notification number）を付与。",
+          examples: ["包帯", "車椅子", "手動外科器具"],
+          approvalPath: "届出（Notification）— HELENA ポータル",
+        },
+        {
+          name: "Class II",
+          nameJa: "クラスII",
+          riskLevel: "低〜中リスク",
+          description: "低〜中リスクの機器。技術審査後に登録証明書を発行。",
+          examples: ["血圧計", "シリンジ", "超音波診断装置"],
+          approvalPath: "登録（Registration）— HELENA ポータル",
+        },
+        {
+          name: "Class III",
+          nameJa: "クラスIII",
+          riskLevel: "中〜高リスク",
+          description: "中〜高リスクの機器。詳細な技術審査。",
+          examples: ["人工呼吸器", "血液透析装置", "整形外科インプラント"],
+          approvalPath: "登録（Registration）— HELENA ポータル",
+        },
+        {
+          name: "Class IV",
+          nameJa: "クラスIV",
+          riskLevel: "高リスク",
+          description: "最高リスクの機器。最も厳格な審査。GMP査察を含む場合あり。",
+          examples: ["心臓弁", "冠動脈ステント", "埋込み型除細動器"],
+          approvalPath: "登録（Registration）— HELENA ポータル",
+        },
+      ],
+      rules: [
+        {
+          id: "GHTF 分類ルール",
+          description:
+            "Disposición 727/2013 に基づく分類ルール。GHTF の分類原則に準拠し、侵襲性・持続時間・能動/非能動等の基準で分類。",
+          url: "https://www.argentina.gob.ar/anmat",
+        },
+      ],
+      totalProductCodes: "GHTF 準拠分類ルール（Disposición 727/2013）",
+    },
+
+    conformityAssessment: {
+      overview:
+        "ANMAT が直接審査。Class I は届出制、Class II/III/IV は技術文書の審査を経て登録。認定国（米・EU・日・加・豪）の自由販売証明書が必要。",
+      routes: [
+        {
+          name: "Notification (Class I)",
+          nameJa: "届出（クラスI）",
+          applicableClasses: ["Class I"],
+          description:
+            "低リスク機器の届出制度。HELENA ポータル経由で申請。ANMAT は届出番号を付与。",
+          subtypes: [],
+          avgReviewTime: "約15〜30営業日",
+          fee: "有料（ANMAT 手数料）",
+          url: "https://www.argentina.gob.ar/anmat",
+        },
+        {
+          name: "Registration (Class II / III / IV)",
+          nameJa: "登録（クラスII/III/IV）",
+          applicableClasses: ["Class II", "Class III", "Class IV"],
+          description:
+            "技術文書の詳細審査。自由販売証明書、技術資料、GMP証明書等の提出が必要。Class III/IV はより詳細な臨床データ・安全性データが要求される。",
+          subtypes: [],
+          avgReviewTime: "Class II: 15〜30営業日、Class III/IV: 60〜120営業日（法的上限180暦日、実績12〜18ヶ月の場合あり）",
+          fee: "有料（ANMAT 手数料、クラスにより異なる）",
+          url: "https://www.argentina.gob.ar/anmat",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "HELENA ポータル + TAD（Trámites a Distancia）",
+      url: "https://www.argentina.gob.ar/anmat",
+      description:
+        "HELENA はオンライン申請・登録管理プラットフォーム。全クラスの医療機器の登録・再認証・変更が可能。低リスク機器の輸入届出は TAD（Remote Procedures Platform）経由。文書は PDF 形式で法定代理人・技術責任者のデジタル署名が必要。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（検討中）",
+      description:
+        "アルゼンチンでは現時点で UDI は義務化されていない。IMDRF の UDI ガイダンスへの対応は今後の課題。",
+      url: null,
+      timeline: "未定",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "Tecnovigilancia — Disposición 8194/2023",
+        mandatory: true,
+        url: "https://www.argentina.gob.ar/anmat",
+        description:
+          "医療機器の有害事象・品質不良の報告制度。登録保有者は市販後監視システムの構築・運用が義務。Argos プラットフォームを通じた報告。医療専門家・患者も ANMAT ウェブサイトから報告可能。",
+      },
+      recalls: {
+        authority: "ANMAT",
+        description:
+          "製造業者/輸入業者主導のリコール（Field Safety Corrective Action）。ANMAT は安全性アラートを発行し、回収を監督。ANMAT ウェブサイトでリコール情報を公開。",
+        url: "https://www.argentina.gob.ar/anmat",
+      },
+      surveillance:
+        "Tecnovigilancia プログラム（Disposición 8194/2023）による市販後安全性監視。HELENA/Argos プラットフォームで有害事象を管理。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "ANMAT",
+      name: "Certificado de Libre Venta / Certificate of Free Sale",
+      description:
+        "ANMAT が登録済み医療機器について発行する自由販売証明書。なお、登録申請時には認定国（米国・EU・日本・カナダ・オーストラリア）からの自由販売証明書の提出が必要。",
+      processingTime: "約2〜4週間",
+      url: "https://www.argentina.gob.ar/anmat",
+    },
+
+    reimbursement: {
+      system: "PMO（Programa Médico Obligatorio）+ 公的・民間保険",
+      authority: "Superintendencia de Servicios de Salud",
+      description:
+        "PMO（義務的医療プログラム）がすべての保険制度（Obras Sociales、民間保険）がカバーすべき最低限の給付を規定。高額医療機器は個別審査。公的病院は保健省予算で調達。",
+      codingSystems: [
+        "PMO（義務的医療プログラム）",
+        "Nomenclador Nacional de Prácticas Médicas",
+      ],
+      url: "https://www.argentina.gob.ar/sssalud",
+    },
+
+    marketingRules: {
+      authority: "ANMAT",
+      description:
+        "医療機器の広告は ANMAT の規制に基づく。Disposición 2318/2002 Annex III.B のラベリング要件に準拠。虚偽・誤解を招く広告は禁止。",
+      keyRules: [
+        "ANMAT 登録されていない機器の広告禁止",
+        "承認された適応のみ広告可",
+        "ラベリングは Disposición 2318/2002 Annex III.B に準拠",
+        "スペイン語での表示義務",
+      ],
+    },
+
+    mdsap: {
+      status: "アフィリエイトメンバー（Affiliate Member）",
+      description:
+        "アルゼンチン（ANMAT）は MDSAP のアフィリエイトメンバー。MDSAP 監査報告書を参照・考慮するが、MDSAP をGMP査察の完全な代替としては受入れていない。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes:
+          "GMP 要件の一部として ISO 13485 認証が考慮される。ANMAT のGMP査察基準に整合。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメントの参照規格として認知。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "SaMD の規制（Disposición 64/2025）で参照。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求として参照。IRAM 規格として採用。",
+      },
+      others: [
+        { standard: "ISO 10993 シリーズ", notes: "生体適合性評価の参照規格" },
+        { standard: "IRAM 規格群", notes: "アルゼンチン国家規格（一部は ISO/IEC の翻訳採用）" },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2025",
+        title: "行政手続き大幅簡素化",
+        description:
+          "ANMAT が300以上の行政手続きを廃止・統合。Class I/II 機器の輸入手続き簡素化（ANMAT の事前介入不要化、TAD経由の48時間以内届出に変更）。輸入品の有効期限要件を12ヶ月から6ヶ月に緩和。",
+      },
+      {
+        date: "2025",
+        title: "Disposición 8799/2025: 低リスク機器の施設認可簡素化",
+        description:
+          "Class I/II 医療機器および IVD Class A/B の製造・輸入施設の認可手続きを簡素化する新規則を公布。",
+      },
+      {
+        date: "2025",
+        title: "Disposición 64/2025: SaMD 規制の整備",
+        description:
+          "SaMD を医療機器定義に明確に含める規則を発行。デジタルヘルス製品の規制枠組みを整備。",
+      },
+      {
+        date: "2023",
+        title: "Tecnovigilancia プログラム更新（Disposición 8194/2023）",
+        description:
+          "市販後安全性監視プログラムを更新。旧 Provision 8054/2010 を置換。有害事象報告体制を近代化。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- TUR (トルコ) ---
+  // =========================================================================
+  {
+    code: "TUR",
+    country: "トルコ",
+    countryEn: "Republic of Türkiye",
+    region: "Europe",
+    flag: "🇹🇷",
+
+    legalSystemOverview: {
+      type: "単一国家（シビルロー体系）— EU MDR 整合",
+      description:
+        "トルコの医療機器規制は TITCK（Türkiye İlaç ve Tıbbi Cihaz Kurumu / Turkish Medicines and Medical Devices Agency）が管轄する。2021年に EU Regulation 2017/745（MDR）および EU Regulation 2017/746（IVDR）をほぼ逐語的にトルコ法に移植（transposition）。CE マーキング・Notified Body 制度・UDI・市販後監視等、EU の規制枠組みと高度に整合。「動的整合（Dynamic Alignment）」政策により、EU の規制変更に迅速に追随。",
+      keyCharacteristics: [
+        "EU MDR 2017/745 のほぼ逐語的移植（2021年発効）",
+        "CE マーキング必須（EU NB証明書を受入れ）",
+        "ÜTS（Product Tracking System）への登録義務",
+        "TITCK による Notified Body の指定権限",
+        "「動的整合」政策による EU 規制変更への迅速追随",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "TİTCK",
+        fullName: "Türkiye İlaç ve Tıbbi Cihaz Kurumu",
+        localName: "Türkiye İlaç ve Tıbbi Cihaz Kurumu",
+        role: "医療機器の規制・市場監視・Notified Body 指定・ÜTS 管理",
+        url: "https://www.titck.gov.tr/",
+        isPrimary: true,
+      },
+      {
+        name: "SGK",
+        fullName: "Sosyal Güvenlik Kurumu (Social Security Institution)",
+        localName: "Sosyal Güvenlik Kurumu",
+        role: "医療機器の保険償還・価格管理",
+        url: "https://www.sgk.gov.tr/",
+        isPrimary: false,
+      },
+      {
+        name: "Ministry of Health",
+        fullName: "T.C. Sağlık Bakanlığı (Ministry of Health)",
+        localName: "T.C. Sağlık Bakanlığı",
+        role: "医療機器規制の政策立案・TITCK の上位機関",
+        url: "https://www.saglik.gov.tr/",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "Notified Body 制度（EU MDR 整合）",
+      description:
+        "トルコは EU MDR/IVDR に整合した Notified Body 制度を運用。TITCK が国内の Notified Body を指定する権限を有する。現在7つの Notified Body が認定済み。さらに、EU の Notified Body が MDR/IVDR に基づき発行した CE 証明書もトルコで受入れられる。",
+      bodies: [
+        { name: "トルコ国内認定 NB（7機関）", id: "TITCK指定", scope: "EU MDR/IVDR 整合" },
+      ],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "トルコ医療機器規制（EU MDR 2017/745 の移植）Article 2 に基づく定義。EU MDR と同一。疾病の診断・予防・モニタリング・予測・治療等を目的とする器具・装置・ソフトウェア・材料等。",
+      scope:
+        "IVD（IVDR 2017/746 の移植で別途規制）、付属品、SaMD を含む。EU MDR Article 1(2) の範囲に整合。",
+      notes:
+        "EU MDR と同様、特定の美容製品、清浄・消毒製品、遺伝子治療製品等の取扱いに関する規定あり。",
+    },
+
+    primaryLaw: {
+      title: "Tıbbi Cihaz Yönetmeliği (Medical Device Regulation)",
+      originalTitle: "Tıbbi Cihaz Yönetmeliği",
+      enacted: "2021-06-02",
+      lastAmended: "2024-08-17（Official Gazette No. 32635）",
+      url: "https://www.titck.gov.tr/",
+      description:
+        "EU Regulation 2017/745（MDR）のほぼ逐語的トルコ法移植。2021年6月2日発効。2024年8月にEU Regulation 2024/1860 の改正に追随して更新。医療機器のライフサイクル全体（設計・製造・適合性評価・市場投入・市販後監視）を規制。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "In Vitro Tanı Amaçlı Tıbbi Cihaz Yönetmeliği (IVDR)",
+        date: "2022-05-26",
+        url: "https://www.titck.gov.tr/",
+        description:
+          "EU Regulation 2017/746（IVDR）のトルコ法移植。IVD医療機器の規制。",
+        category: "IVD",
+      },
+      {
+        title: "ÜTS（Ürün Takip Sistemi）関連規則",
+        date: null,
+        url: "https://uts.saglik.gov.tr/",
+        description:
+          "Product Tracking System への医療機器登録義務。EU の EUDAMED に相当するトルコの電子登録システム。",
+        category: "登録",
+      },
+      {
+        title: "2024年8月改正（Official Gazette No. 32635）",
+        date: "2024-08-17",
+        url: "https://www.titck.gov.tr/",
+        description:
+          "EU Regulation 2024/1860 に追随した改正。EUDAMED モジュールの段階的義務化（2025年Q4〜）、供給途絶通知制度の導入、経過措置の延長等。",
+        category: "改正",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Kişisel Verilerin Korunması Kanunu (KVKK) — Law No. 6698",
+        category: "個人情報保護",
+        enacted: "2016",
+        url: null,
+        relevance:
+          "トルコの個人データ保護法。コネクテッドデバイス・SaMD が取り扱う個人健康情報の保護。EU GDPR に類似。",
+      },
+      {
+        title: "Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu — Law No. 5510",
+        category: "社会保険",
+        enacted: "2006",
+        url: null,
+        relevance:
+          "社会保険・一般健康保険法。SGK による医療機器の償還制度の法的根拠。",
+      },
+    ],
+
+    classification: {
+      system: "4クラス制（Class I / IIa / IIb / III）— EU MDR 整合",
+      basis: "リスクベース（EU MDR Annex VIII 分類ルール）",
+      classes: [
+        {
+          name: "Class I",
+          nameJa: "クラスI",
+          riskLevel: "低リスク",
+          description: "最低リスク。自己適合性宣言（NB不要、ただし滅菌/計測/再使用外科器具はNB必要）。",
+          examples: ["非滅菌包帯", "車椅子", "聴診器"],
+          approvalPath: "自己適合性宣言 + CE マーキング + ÜTS登録",
+        },
+        {
+          name: "Class IIa",
+          nameJa: "クラスIIa",
+          riskLevel: "低〜中リスク",
+          description: "低〜中リスク。Notified Body の適合性評価が必要。",
+          examples: ["血圧計", "補聴器", "超音波プローブ"],
+          approvalPath: "NB適合性評価 + CE マーキング + ÜTS登録",
+        },
+        {
+          name: "Class IIb",
+          nameJa: "クラスIIb",
+          riskLevel: "中〜高リスク",
+          description: "中〜高リスク。Notified Body の詳細な適合性評価が必要。",
+          examples: ["人工呼吸器", "血液透析装置", "骨接合プレート"],
+          approvalPath: "NB適合性評価 + CE マーキング + ÜTS登録",
+        },
+        {
+          name: "Class III",
+          nameJa: "クラスIII",
+          riskLevel: "高リスク",
+          description: "最高リスク。Notified Body の最も厳格な適合性評価。臨床評価が必須。",
+          examples: ["心臓弁", "冠動脈ステント", "埋込み型除細動器", "乳房インプラント"],
+          approvalPath: "NB適合性評価（技術文書 + 設計審査）+ CE マーキング + ÜTS登録",
+        },
+      ],
+      rules: [
+        {
+          id: "EU MDR Annex VIII 分類ルール（22ルール）",
+          description:
+            "EU MDR Annex VIII に準拠した22の分類ルール。侵襲性・持続時間・能動/非能動・SaMD等の基準で分類。EU MDR と同一。",
+          url: "https://www.titck.gov.tr/",
+        },
+      ],
+      totalProductCodes: "EU MDR Annex VIII 準拠の22分類ルール（EU GMDN/EMDN に整合）",
+    },
+
+    conformityAssessment: {
+      overview:
+        "EU MDR に整合した適合性評価制度。Notified Body による適合性評価後、CE マーキングを取得し、ÜTS に登録。EU NB 証明書もトルコで受入れ可能。",
+      routes: [
+        {
+          name: "Self-Declaration (Class I)",
+          nameJa: "自己適合性宣言（クラスI）",
+          applicableClasses: ["Class I（非滅菌・非計測・非再使用外科器具）"],
+          description:
+            "低リスク機器は製造業者の自己適合性宣言で CE マーキング取得。NB は不要（ただし滅菌/計測/再使用外科器具は NB 必要）。",
+          subtypes: [],
+          avgReviewTime: "自己宣言のため審査不要。ÜTS登録は約1週間。",
+          fee: "ÜTS登録手数料",
+          url: "https://www.titck.gov.tr/",
+        },
+        {
+          name: "Notified Body Conformity Assessment (Class IIa / IIb / III)",
+          nameJa: "Notified Body 適合性評価（クラスIIa/IIb/III）",
+          applicableClasses: ["Class IIa", "Class IIb", "Class III"],
+          description:
+            "EU MDR に基づく適合性評価手続き。Notified Body が技術文書審査・QMS監査・必要に応じて設計審査を実施。EU NB 証明書もトルコ市場で有効。",
+          subtypes: [
+            {
+              name: "EU NB Certificate",
+              description:
+                "EU の Notified Body が MDR/IVDR に基づき発行した CE 証明書はトルコでも受入れ可能。追加のトルコ固有審査は不要。",
+            },
+            {
+              name: "Turkish NB Certificate",
+              description:
+                "TITCK が指定したトルコ国内の Notified Body による適合性評価。",
+            },
+          ],
+          avgReviewTime: "NB審査: 6〜18ヶ月（機器クラスによる）。ÜTS登録: 約1週間。",
+          fee: "NB手数料（NB毎に異なる）+ ÜTS登録手数料",
+          url: "https://www.titck.gov.tr/",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "ÜTS (Ürün Takip Sistemi / Product Tracking System)",
+      url: "https://uts.saglik.gov.tr/",
+      description:
+        "ÜTS はトルコの医療機器電子登録・追跡システム。EU の EUDAMED に相当。全ての医療機器は市場投入前に ÜTS への登録が義務。製造業者情報・機器情報・CE証明書・適合性宣言等を電子的に登録。MERSIS（Central Registration System）への事前登録も必要。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: true,
+      system: "UDI System（EU MDR 整合）— ÜTS 連携",
+      description:
+        "EU MDR に整合した UDI 制度。製造業者は市場投入前に UDI コードを機器・包装に付与。ÜTS データベースに UDI 情報を登録。EUDAMED モジュールの段階的導入（2025年Q4〜）に連動。",
+      url: "https://uts.saglik.gov.tr/",
+      timeline: "2021年発効。EUDAMED 連携モジュールは2025年Q4〜段階的義務化。",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "Materiovigilance — EU MDR 整合",
+        mandatory: true,
+        url: "https://www.titck.gov.tr/",
+        description:
+          "EU MDR の Vigilance 制度に整合。製造業者は重篤なインシデントを ÜTS 経由で TITCK に報告義務。報告期限: 重大な公衆衛生リスク（即時）、死亡・重篤な健康悪化（10日以内）、その他の重篤インシデント（15日以内）。年次安全性報告書の提出義務。",
+      },
+      recalls: {
+        authority: "TİTCK",
+        description:
+          "EU MDR の FSCA（Field Safety Corrective Action）制度に整合。製造業者は安全性是正措置を TITCK に通知し、Field Safety Notice を発行。TITCK は市場監視・取締りを実施。",
+        url: "https://www.titck.gov.tr/",
+      },
+      surveillance:
+        "EU MDR に整合した Post-Market Surveillance（PMS）制度。製造業者は PMS 計画の策定・実施が義務。Class IIa/IIb/III は PSUR（Periodic Safety Update Report）の作成・提出が必要。TITCK による市場監視査察。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "TİTCK",
+      name: "Certificate of Free Sale (CFS)",
+      description:
+        "TITCK が ÜTS 登録済み医療機器について発行する自由販売証明書。輸出先国の当局が要求する場合に使用。",
+      processingTime: "約1〜2週間",
+      url: "https://www.titck.gov.tr/",
+    },
+
+    reimbursement: {
+      system: "SGK（社会保障機構）— 一般健康保険",
+      authority: "SGK (Sosyal Güvenlik Kurumu / Social Security Institution)",
+      description:
+        "SGK がトルコの一般健康保険制度の下で医療機器の償還を管理。SUT（Sağlık Uygulama Tebliği / Health Implementation Communiqué）に基づく償還リスト・参照価格制度。テンダー（入札）制度も重要。",
+      codingSystems: [
+        "SUT (Sağlık Uygulama Tebliği)",
+        "GMDN / EMDN（機器命名）",
+        "ÜTS Product Code",
+      ],
+      url: "https://www.sgk.gov.tr/",
+    },
+
+    marketingRules: {
+      authority: "TİTCK",
+      description:
+        "医療機器の広告は TITCK の規制に基づく。EU MDR に整合したラベリング要件。一般消費者向け広告は制限的。医療専門家向けの情報提供は別途規制。",
+      keyRules: [
+        "CE マーキング・ÜTS 登録されていない機器の販売・広告禁止",
+        "EU MDR に整合したラベリング・IFU 要件",
+        "一般消費者向け医療機器広告の制限",
+        "トルコ語でのラベリング・IFU 義務",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加",
+      description:
+        "トルコは MDSAP の参加国ではない。EU MDR に整合した独自の QMS/GMP 査察制度を運用。ISO 13485 認証が CE マーキングの前提。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes:
+          "CE マーキングの前提として ISO 13485:2016 認証が必須。EU MDR の QMS 要件に整合。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "EU MDR の一般安全性能要件（GSPR）に整合。リスクマネジメントの必須規格。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "SaMD を含むソフトウェア搭載機器に必須。EU MDR 整合規格。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。EU MDR 整合規格。",
+      },
+      others: [
+        { standard: "ISO 10993 シリーズ", notes: "生体適合性評価。EU MDR 整合規格。" },
+        { standard: "EU MDR Harmonised Standards", notes: "EU 官報公示の整合規格がトルコでも参照される" },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2024-08",
+        title: "EU Regulation 2024/1860 への追随改正",
+        description:
+          "EU が2024年3月に採択した MDR/IVDR 改正（Regulation 2024/1860）に5ヶ月で追随。Official Gazette No. 32635（2024年8月17日）で公布。EUDAMED モジュールの段階的義務化、供給途絶通知制度の導入。",
+      },
+      {
+        date: "2025-Q4",
+        title: "EUDAMED モジュール段階的導入開始予定",
+        description:
+          "EU に連動してトルコでも EUDAMED モジュールの段階的義務化が2025年Q4から開始予定。ÜTS との連携方法の詳細は TITCK ガイドラインで公表予定。",
+      },
+      {
+        date: "2025-12",
+        title: "供給途絶通知制度の経過措置期限",
+        description:
+          "医療機器の供給途絶・中止の事前通知制度について、2025年12月31日までの経過措置期間を設定。企業のサプライチェーン監視システム構築を促進。",
+      },
+      {
+        date: "2025-H2",
+        title: "供給途絶ガイドライン公表予定",
+        description:
+          "TITCK が2025年下半期に包括的ガイドラインを公表予定。「重大な被害」の定量的閾値、不可抗力の立証基準、Excel添付の電子データ形式等を明確化。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
 ];
 
 // ===========================================================================
