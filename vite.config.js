@@ -9,11 +9,22 @@ export default defineConfig({
     assetsInlineLimit: 0,
     rollupOptions: {
       output: {
-        manualChunks: {
-          "data-articles": ["./src/data/articlesData.js"],
-          "data-guide": ["./src/data/regulatoryGuide.js"],
-          "data-profiles-meta": ["./src/data/countryProfilesMeta.js"],
-          "data-profiles-full": ["./src/data/countryProfiles.js"],
+        manualChunks(id) {
+          if (id.includes("/data/profiles/")) {
+            return "data-profiles-full";
+          }
+          if (id.includes("/data/countryProfiles.js")) {
+            return "data-profiles-full";
+          }
+          if (id.includes("/data/articlesData.js")) {
+            return "data-articles";
+          }
+          if (id.includes("/data/regulatoryGuide.js")) {
+            return "data-guide";
+          }
+          if (id.includes("/data/countryProfilesMeta.js")) {
+            return "data-profiles-meta";
+          }
         },
       },
     },
