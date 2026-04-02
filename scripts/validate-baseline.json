@@ -167,5 +167,13 @@
   "VNM|source-fee|routes[1].fee に具体値がありますが feeSource（出典）がありません",
   "VNM|url-unofficial|implementingRegulations[2].url に非公式ソース \"asiaactual.com\" が使用されています。公式法令データベースのURLを優先してください",
   "VNM|url-unofficial|implementingRegulations[3].url に非公式ソース \"andamanmed.com\" が使用されています。公式法令データベースのURLを優先してください",
-  "VNM|url-unofficial|relatedLaws[2].url に非公式ソース \"asiaactual.com\" が使用されています。公式法令データベースのURLを優先してください"
+  "VNM|url-unofficial|relatedLaws[2].url に非公式ソース \"asiaactual.com\" が使用されています。公式法令データベースのURLを優先してください",
+  "ZAF|source-avgReviewTime|routes[0].avgReviewTime に具体値がありますが avgReviewTimeSource（出典）がありません",
+  "ZAF|source-avgReviewTime|routes[1].avgReviewTime に具体値がありますが avgReviewTimeSource（出典）がありません",
+  "ZAF|source-avgReviewTime|routes[2].avgReviewTime に具体値がありますが avgReviewTimeSource（出典）がありません",
+  "ZAF|source-fee|routes[0].fee に具体値がありますが feeSource（出典）がありません",
+  "ZAF|source-fee|routes[1].fee に具体値がありますが feeSource（出典）がありません",
+  "ZAF|source-fee|routes[2].fee に具体値がありますが feeSource（出典）がありません",
+  "ZAF|url-domain-root|relatedLaws[2].url がドメインルート \"https://popia.co.za/\" のみです",
+  "ZAF|url-reuse|URL \"https://www.sahpra.org.za/medical-devices/\" が 4 箇所で使い回されています"
 ]
