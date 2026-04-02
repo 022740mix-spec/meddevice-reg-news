@@ -9494,6 +9494,1336 @@ export const COUNTRY_PROFILES = [
     lastUpdated: "2026-04-02",
     verified: null,
   },
+
+  // =========================================================================
+  // --- Israel ---
+  // =========================================================================
+  {
+    code: "ISR",
+    country: "イスラエル",
+    countryEn: "Israel",
+    region: "Middle East & Africa",
+    flag: "🇮🇱",
+
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description:
+        "イスラエルの医療機器規制は保健省（MOH）医療機器部門（AMAR）が一元的に管轄する。2012年制定の Medical Equipment Law（חוק ציוד רפואי, 5772-2012）が現行の基本法であり、医療機器の製造・輸入・販売・使用に関する登録義務を規定。イスラエルは独自のリスク分類制度を持たず、参照市場（米国FDA、EU、カナダ、オーストラリア、英国、ニュージーランド等）の分類を採用する。2024年に低・中リスク機器向けの Declaration Route と Fast-Track Route を新設し、2025年1月から運用開始。",
+      keyCharacteristics: [
+        "AMAR（MOH Medical Device Division）による一元的規制",
+        "独自分類制度を持たず、参照市場（FDA/EU/TGA等）の分類を採用",
+        "Declaration Route（Class I）・Fast-Track Route（Class II）・Standard Route（Class III）の3経路",
+        "Israel Registration Holder（IRH）の任命が海外製造業者に義務",
+        "参照市場の承認を活用した迅速登録が可能",
+        "2025年1月より新手続ガイダンス（REG-2024/03）が発効",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "AMAR",
+        fullName: "Medical Device Division, Ministry of Health",
+        localName: "אגף ציוד רפואי, משרד הבריאות",
+        role: "医療機器の市販前登録・市販後監視・ビジランス・施設査察・輸入管理。主管当局。",
+        url: "https://www.gov.il/en/departments/amar",
+        isPrimary: true,
+      },
+      {
+        name: "MOH",
+        fullName: "Ministry of Health",
+        localName: "משרד הבריאות",
+        role: "保健政策の策定・医療制度の監督・臨床試験の承認",
+        url: "https://www.gov.il/en/departments/ministry_of_health",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（AMAR が直接審査、または参照市場の認可を活用）",
+      description:
+        "イスラエルでは欧州型のNotified Body制度は存在しない。AMARが直接、登録申請を審査する。ただし参照市場（FDA、EU Notified Body等）の承認を活用した迅速登録が主流であり、実質的に海外の認証機関の評価を受容するシステムとなっている。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Medical Equipment Law 5772-2012 に定義。医療処置に使用される器具（化学的・生物学的・バイオテクノロジー的・ソフトウェア等）であり、医薬品を除くもの。包帯・手術器具・注射器から超音波装置・MRI装置まで広範に対象。",
+      scope:
+        "IVD（体外診断用医療機器）も適用範囲に含まれる。SaMD（Software as a Medical Device）も規制対象。",
+      notes:
+        "定義は非常に広範で、EU MDRやFDAの定義と概ね整合。コンビネーション製品の扱いはケースバイケースでAMARが判断。",
+    },
+
+    primaryLaw: {
+      title: "Medical Equipment Law, 5772-2012",
+      originalTitle: "חוק ציוד רפואי, התשע״ב-2012",
+      enacted: "2012",
+      lastAmended: "2024（Registration and Renewal of Medical Devices Regulations改正）",
+      url: "https://www.gov.il/en/departments/amar",
+      description:
+        "2012年制定の基本法。医療機器の製造・輸入・販売・使用に関する登録義務を規定。AMARへの登録なしに医療機器を市場に投入することを刑事罰付きで禁止。参照市場の承認活用を法的に認める枠組みを含む。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Registration and Renewal of Medical Devices Regulations, 2013",
+        date: "2013",
+        url: "https://www.gov.il/en/departments/amar",
+        description:
+          "Medical Equipment Law の施行規則。登録手続・必要書類・更新要件・参照市場リストを規定。",
+        category: "登録手続",
+      },
+      {
+        title: "REG-2024/03 — Updated Procedural Guidance for Submission Content and Format",
+        date: "2025-01",
+        url: "https://www.gov.il/en/departments/amar",
+        description:
+          "2025年1月発効。Declaration Route・Fast-Track Route・Standard Route の申請内容・書式に関する更新ガイダンス。",
+        category: "申請手続",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Public Health Ordinance, 1940",
+        category: "公衆衛生",
+        enacted: "1940",
+        url: "https://www.gov.il/en/departments/ministry_of_health",
+        relevance:
+          "臨床試験・感染症・公衆衛生に関する基本法。医療機器の臨床試験の法的根拠の一つ。",
+      },
+      {
+        title: "Protection of Privacy Law, 5741-1981",
+        category: "データ保護",
+        enacted: "1981",
+        url: "https://www.gov.il/en/departments/ministry_of_justice",
+        relevance:
+          "コネクテッドデバイス・SaMDが取り扱う個人医療情報のプライバシー要件に適用。",
+      },
+    ],
+
+    classification: {
+      system: "参照市場依存（独自分類制度なし）",
+      basis: "イスラエルは独自のリスク分類制度を持たない。参照市場（米国FDA、EU MDR/IVDR、カナダ、オーストラリアTGA、英国MHRA、ニュージーランド等）が付与した分類をそのまま採用。登録経路は参照市場の分類に基づき決定される。",
+      classes: [
+        {
+          name: "Class I（参照市場準拠）",
+          nameJa: "クラスI（低リスク）",
+          riskLevel: "低",
+          description: "低リスク機器。Declaration Route で登録可能（2024年1月〜）。Class I / Is / Im / Ir / Class A を含む。",
+          examples: ["弾性包帯", "舌圧子", "歩行補助具", "聴診器", "手術用手袋"],
+          approvalPath: "Declaration Route（宣言登録）",
+        },
+        {
+          name: "Class II（参照市場準拠）",
+          nameJa: "クラスII（中リスク）",
+          riskLevel: "中",
+          description: "中リスク機器。Fast-Track Route で登録可能。Fast 1（FDA Class II / EU IIa相当、45営業日）とFast 2（EU IIb相当、60営業日）に細分化。",
+          examples: ["超音波診断装置", "輸液ポンプ", "血圧計", "補聴器", "コンタクトレンズ"],
+          approvalPath: "Fast-Track Route（Fast 1: 45営業日 / Fast 2: 60営業日）",
+        },
+        {
+          name: "Class III（参照市場準拠）",
+          nameJa: "クラスIII（高リスク）",
+          riskLevel: "高",
+          description: "高リスク機器・参照市場認可のない機器。Standard Route（Normal Route）で登録。120暦日。",
+          examples: ["人工心臓弁", "埋込み型除細動器", "薬剤溶出ステント", "人工関節", "人工内耳"],
+          approvalPath: "Standard Route（120暦日）",
+        },
+      ],
+      rules: [
+        "独自分類制度なし — 参照市場の分類をそのまま採用",
+        "参照市場: 米国FDA、EU（MDR/IVDR）、カナダ、オーストラリアTGA、英国MHRA、ニュージーランド",
+        "登録経路はリスクレベルに応じて自動決定（Declaration / Fast-Track / Standard）",
+        "IVDも同様に参照市場の分類を採用",
+      ],
+      totalProductCodes: "参照市場の製品コード体系を使用（GMDN等）",
+    },
+
+    conformityAssessment: {
+      overview:
+        "全ての医療機器はAMARへの登録が必要。2024-2025年の改革により3つの登録経路が整備された。Declaration Route（Class I）は最も簡略で宣言ベース。Fast-Track Route（Class II）は参照市場の承認を前提とした迅速審査。Standard Route（Class III等）は詳細審査。参照市場の認可（FDA 510(k)/PMA、CE証明書等）が事実上の前提条件。IRH（Israel Registration Holder）の任命が必須。",
+      routes: [
+        {
+          name: "Declaration Route",
+          nameJa: "宣言登録（Declaration Route）",
+          applicableClasses: ["Class I", "Class Is", "Class Im", "Class Ir"],
+          description:
+            "2024年1月から運用開始。低リスク機器（Class I / Is / Im / Ir）が対象。IRHが適合宣言を提出。AMARへの費用は無料。",
+          subtypes: [
+            { name: "新規宣言", description: "Class I機器の初回登録。適合宣言書を提出。" },
+            { name: "更新", description: "登録の更新。" },
+          ],
+          avgReviewTime: "短期間（宣言ベースのため迅速）",
+          avgReviewTimeSource: "https://www.emergobyul.com/news/details-declaration-route-class-i-medical-devices-israel",
+          fee: "無料（Class I は手数料なし）",
+          feeSource: "https://medenvoyglobal.com/blog/medical-device-and-ivd-registration-in-israel/",
+          url: "https://www.gov.il/en/departments/amar",
+        },
+        {
+          name: "Fast-Track Route",
+          nameJa: "迅速登録（Fast-Track Route）",
+          applicableClasses: ["Class IIa", "Class IIb", "Class II"],
+          description:
+            "中リスク機器向け。参照市場（FDA/EU等）の承認を前提。Fast 1（FDA Class II / EU IIa: 45営業日）と Fast 2（EU IIb: 60営業日）に細分化。",
+          subtypes: [
+            { name: "Fast 1", description: "FDA Class II または EU Class IIa 相当。45営業日。" },
+            { name: "Fast 2", description: "EU Class IIb 相当。60営業日。" },
+          ],
+          avgReviewTime: "Fast 1: 45営業日 / Fast 2: 60営業日",
+          avgReviewTimeSource: "https://www.emergobyul.com/news/updates-israels-declaration-and-fast-track-routes-medical-devices",
+          fee: "要確認（公式手数料スケジュール未公開）",
+          feeSource: "https://www.gov.il/en/departments/amar",
+          url: "https://www.gov.il/en/departments/amar",
+        },
+        {
+          name: "Standard Route (Normal Route)",
+          nameJa: "標準登録（Standard Route）",
+          applicableClasses: ["Class III", "IVDR Class D", "参照市場認可なし"],
+          description:
+            "高リスク機器および参照市場認可のない機器向け。詳細な技術文書審査。臨床データが求められる場合あり。",
+          subtypes: [
+            { name: "新規登録", description: "初回の登録申請。全必要書類の提出が必要。" },
+            { name: "更新", description: "登録の更新申請。" },
+            { name: "変更申請", description: "製品仕様・製造所等の変更時。" },
+          ],
+          avgReviewTime: "公式: 120暦日",
+          avgReviewTimeSource: "https://bioregservices.com/regulatory-consulting-israel-amar/",
+          fee: "要確認（公式手数料スケジュール未公開）",
+          feeSource: "https://www.gov.il/en/departments/amar",
+          url: "https://www.gov.il/en/departments/amar",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "AMAR 電子申請システム",
+      url: "https://www.gov.il/en/departments/amar",
+      description:
+        "登録申請はAMARの電子システム経由で提出。IRH（Israel Registration Holder）が申請手続きを代行する。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（イスラエル独自のUDI制度は未確立）",
+      description:
+        "2026年4月時点で、イスラエル独自の包括的UDI制度は正式に導入されていない。ただし参照市場（FDA/EU）のUDI要件に準拠した機器は増加しており、ラベリングにUDI情報を含めることが推奨されている。",
+      url: "https://www.gov.il/en/departments/amar",
+      timeline: "未定（独自制度の導入計画は公表されていない）",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "AMAR ビジランス報告",
+        mandatory: true,
+        url: "https://www.gov.il/en/departments/amar",
+        description:
+          "IRH（Israel Registration Holder）が市販後ビジランスの責任を負う。報告対象は、患者の健康に害を及ぼした機器関連事象、およびユーザーにリスクをもたらしうる重大な欠陥。IRHは「state of control」を維持し、リアルタイムの市販後ビジランス管理が求められる。",
+      },
+      recalls: {
+        authority: "AMAR / MOH",
+        description:
+          "AMARがFSCA（Field Safety Corrective Action）およびリコールを監督。グローバルリコール・FSN（Field Safety Notice）はIRHを通じてAMARに報告義務。",
+        url: "https://www.gov.il/en/departments/amar",
+      },
+      surveillance:
+        "IRHは包括的な「state of control」を維持し、市販後監視を実施する義務を負う。Declaration Route・Fast-Track Route で登録された機器はIRHの市販後監視義務が強化されている。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "輸出国の規制当局（AMAR登録申請時に提出が必要）",
+      name: "Certificate of Free Sale (CFS) / Certificate to Foreign Government (CFG)",
+      description:
+        "AMAR登録申請時に、参照市場の規制当局が発行するCFS/CFGまたは市場承認証明（FDA 510(k) Clearance Letter、CE Certificate等）の提出が求められる。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.gov.il/en/departments/amar",
+    },
+
+    reimbursement: {
+      system: "国民健康保険制度（National Health Insurance Law, 1995）",
+      authority: "MOH / Health Funds（Kupot Holim）",
+      description:
+        "1995年の国民健康保険法に基づき、全市民が4つの Health Fund（Clalit / Maccabi / Meuhedet / Leumit）のいずれかに加入。基本給付パッケージ（Health Basket）に収載された医療技術が保険償還対象。医療機器の個別償還は Health Basket の年次更新プロセスで決定されるが、医薬品ほど体系化されていない。",
+      codingSystems: [
+        "要確認（イスラエル固有の医療機器償還コード体系は未確認）",
+      ],
+      url: "https://www.gov.il/en/departments/ministry_of_health",
+    },
+
+    marketingRules: {
+      authority: "AMAR / MOH",
+      description:
+        "Medical Equipment Law 5772-2012 に基づき、AMAR未登録機器の広告・販売は禁止。ラベリングは家庭用機器の場合ヘブライ語・アラビア語・英語の3言語が必須。医療専門家向け機器は英語のみ可。",
+      keyRules: [
+        "AMAR登録なしの医療機器の広告・販売は刑事罰付きで禁止",
+        "家庭用機器のラベリング: ヘブライ語・アラビア語・英語の3言語必須",
+        "医療専門家向け機器: 英語のみ可",
+        "AMAR Marking Guidelines（2014年12月）に基づくラベリング要件",
+      ],
+    },
+
+    mdsap: {
+      status: "アフィリエイトメンバー（Affiliate Member）",
+      description:
+        "イスラエルは2025年時点でMDSAPのアフィリエイトメンバー。MDSAP監査報告書を活用してQMS適合性を評価するが、AMAR登録は別途必要。正式参加国（Regulatory Authority）ではない。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "参照市場の認可に伴い事実上必須。ISO 13485認証がQMS適合の証拠として受容。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に適用。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [
+        {
+          name: "ISO 10993シリーズ（生物学的安全性評価）",
+          notes: "生体接触医療機器の生物学的安全性評価に適用。",
+        },
+        {
+          name: "IEC 62366（ユーザビリティエンジニアリング）",
+          notes: "医療機器のユーザビリティ評価に参照。",
+        },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2025-01",
+        title: "新手続ガイダンス REG-2024/03 発効",
+        description:
+          "Declaration Route・Fast-Track Route・Standard Route の申請内容・書式に関する更新ガイダンスが2025年1月に発効。低・中リスク機器の市場アクセスが大幅に改善。",
+      },
+      {
+        date: "2024-01",
+        title: "Declaration Route 運用開始",
+        description:
+          "Class I（Is/Im/Ir含む）の低リスク機器向けに Declaration Route（宣言登録）が導入。IRHによる適合宣言で登録可能に。",
+      },
+      {
+        date: "2024",
+        title: "Fast-Track Route の拡充",
+        description:
+          "Class II機器向けの Fast-Track Route を Fast 1（45営業日）と Fast 2（60営業日）に細分化。EU MDR CE証明書の受入れを明確化。",
+      },
+      {
+        date: "2012",
+        title: "Medical Equipment Law 制定",
+        description:
+          "イスラエル初の包括的医療機器規制法が制定。AMARへの登録義務を法定化。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Egypt ---
+  // =========================================================================
+  {
+    code: "EGY",
+    country: "エジプト",
+    countryEn: "Egypt",
+    region: "Middle East & Africa",
+    flag: "🇪🇬",
+
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description:
+        "エジプトの医療機器規制はEDA（Egyptian Drug Authority）の医療機器中央管理局（Central Administration of Medical Devices）が管轄する。2019年制定の Law No. 151 of 2019 が EDA の設立根拠法であり、その施行規則である Decree 777/2020 が登録手続・分類・市販後監視等の詳細を規定。EU MDR に整合した4クラス分類（Class I / IIa / IIb / III）を採用。2025年以降、CE マークまたは FDA クリアランスを持つ機器向けの Fast-Track 経路を導入。",
+      keyCharacteristics: [
+        "EDA（Egyptian Drug Authority）医療機器中央管理局による一元的規制",
+        "EU MDR に整合したリスクベースの4クラス分類（Class I / IIa / IIb / III）",
+        "Egyptian Registration Holder（ERH）の任命が海外製造業者に義務",
+        "MeDevice オンラインポータルによる電子申請",
+        "登録有効期間: 医療機器10年 / IVD 5年",
+        "Fast-Track 経路の導入（CE/FDA承認機器向け）",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "EDA",
+        fullName: "Egyptian Drug Authority — Central Administration of Medical Devices",
+        localName: "هيئة الدواء المصرية — الإدارة المركزية للأجهزة والمستلزمات الطبية",
+        role: "医療機器の登録・分類・市販後監視・ビジランス・施設査察・広告規制。主管当局。",
+        url: "https://www.edaegypt.gov.eg/en/",
+        isPrimary: true,
+      },
+      {
+        name: "UHIA",
+        fullName: "Universal Health Insurance Authority",
+        localName: "الهيئة العامة للتأمين الصحي الشامل",
+        role: "国民皆保険制度の管理・医療サービスの償還管理",
+        url: "https://www.uhia.gov.eg/",
+        isPrimary: false,
+      },
+      {
+        name: "UPA",
+        fullName: "Egyptian Authority for Unified Procurement, Medical Supply and the Management of Medical Technology",
+        localName: null,
+        role: "医療技術の統一調達・HTA（医療技術評価）の実施",
+        url: "https://www.upa.gov.eg/",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（EDA が直接審査）",
+      description:
+        "エジプトでは欧州型のNotified Body制度は存在しない。EDA医療機器中央管理局が直接、技術文書を審査し登録を交付する。ただし参照市場（EU/FDA/TGA等）の認可を簡略審査の条件として活用可能。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Law No. 151 of 2019 および Decree 777/2020 に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope:
+        "IVD（体外診断用医療機器）も適用範囲に含まれる。SaMDも対象。",
+      notes:
+        "定義はEU MDRの定義に概ね整合。EDAはAI分類ツールを導入し、機器分類の効率化を推進。",
+    },
+
+    primaryLaw: {
+      title: "Law No. 151 of 2019 — Establishing the Egyptian Drug Authority",
+      originalTitle: "قانون رقم 151 لسنة 2019 بإصدار قانون إنشاء هيئة الدواء المصرية",
+      enacted: "2019",
+      lastAmended: "要確認",
+      url: "https://www.edaegypt.gov.eg/en/",
+      description:
+        "EDA（Egyptian Drug Authority）の設立根拠法。医薬品・医療機器・化粧品の規制・監督・品質管理に関するEDAの権限を規定。登録・ライセンス・査察・監督の権限をEDAに一元化。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Decree 777/2020 — Executive Regulations of Law No. 151/2019",
+        date: "2020",
+        url: "https://www.edaegypt.gov.eg/en/",
+        description:
+          "Law 151/2019の施行規則。医療機器の分類・登録手続・必要書類・市販後監視・査察等の詳細を規定。",
+        category: "施行規則",
+      },
+      {
+        title: "Regulatory Guideline for Procedures of Registering Imported and Local Medical Devices Holding International Quality Certificates",
+        date: "2023",
+        url: "https://www.edaegypt.gov.eg/media/i3wb2tdn/5_regulatory-guideline-for-procedures-of-registraing-imported-and-local-medical-devices-holding-international-quality-certificates.pdf",
+        description:
+          "国際品質認証（CE/FDA等）を保有する輸入・国産医療機器の登録手続ガイドライン。",
+        category: "登録手続",
+      },
+      {
+        title: "Guidelines on the Vigilance System for Medical Devices",
+        date: "要確認",
+        url: "https://www.edaegypt.gov.eg/en/",
+        description:
+          "医療機器のビジランスシステムに関するガイドライン。有害事象報告・リコール・FSCA等の手続きを規定。",
+        category: "ビジランス",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Universal Health Insurance Law No. 2 of 2018",
+        category: "医療保険",
+        enacted: "2018",
+        url: "https://sis.gov.eg/en/egypt/society/health-care/universal-health-insurance-law-no-2-of-2018/",
+        relevance:
+          "国民皆保険制度の法的基盤。UHIA・UPA・GAHCの設立根拠。医療技術の償還決定に影響。",
+      },
+      {
+        title: "Personal Data Protection Law No. 151 of 2020",
+        category: "データ保護",
+        enacted: "2020",
+        url: "https://www.edaegypt.gov.eg/en/",
+        relevance:
+          "個人情報保護法。コネクテッドデバイス・SaMDが取り扱う個人医療情報に適用。",
+      },
+    ],
+
+    classification: {
+      system: "4クラス制（Class I / IIa / IIb / III）— EU MDR整合",
+      basis: "EU MDRの分類ルールに概ね整合したリスクベース分類。参照市場の分類も考慮し、いずれかの参照市場で上位クラスに分類されている場合はその分類を採用する傾向。",
+      classes: [
+        {
+          name: "Class I",
+          nameJa: "クラスI",
+          riskLevel: "低",
+          description: "低リスクの非侵襲的機器。",
+          examples: ["弾性包帯", "聴診器", "車椅子", "手術用手袋", "舌圧子"],
+          approvalPath: "登録申請",
+        },
+        {
+          name: "Class IIa",
+          nameJa: "クラスIIa",
+          riskLevel: "中低",
+          description: "中低リスク機器。",
+          examples: ["超音波診断装置", "補聴器", "歯科用材料", "血圧計", "注射針"],
+          approvalPath: "登録申請",
+        },
+        {
+          name: "Class IIb",
+          nameJa: "クラスIIb",
+          riskLevel: "中高",
+          description: "中高リスク機器。ビジランス部門の審査が関与する場合あり。",
+          examples: ["人工呼吸器", "輸液ポンプ", "透析装置", "X線装置", "コンタクトレンズ"],
+          approvalPath: "登録申請（ビジランス審査あり）",
+        },
+        {
+          name: "Class III",
+          nameJa: "クラスIII",
+          riskLevel: "高",
+          description: "最高リスク機器。詳細審査＋臨床データが必要な場合あり。",
+          examples: ["人工心臓弁", "埋込み型除細動器", "薬剤溶出ステント", "人工関節", "人工内耳"],
+          approvalPath: "登録申請（詳細審査＋臨床評価）",
+        },
+      ],
+      rules: [
+        "EU MDRの分類ルールに概ね整合",
+        "参照市場の分類を考慮し、最も高いクラスを適用する傾向",
+        "EDAのAI分類ツールが分類補助に利用可能",
+        "IVDも適用（別途分類ルール）",
+      ],
+      totalProductCodes: "GMDN（Global Medical Device Nomenclature）を参照",
+    },
+
+    conformityAssessment: {
+      overview:
+        "全クラスの医療機器はEDAへの登録が必要。登録有効期間は医療機器10年、IVD 5年。海外製造業者はERH（Egyptian Registration Holder）の任命が必須。ERHがMeDeviceポータル経由で申請を提出。国際品質認証（CE/FDA/TGA等）を持つ機器は簡略手続が可能。2025年以降、Fast-Track経路を導入。",
+      routes: [
+        {
+          name: "Standard Registration",
+          nameJa: "標準登録（Regular Track）",
+          applicableClasses: ["Class I", "Class IIa", "Class IIb", "Class III"],
+          description:
+            "全クラスの医療機器に適用。技術文書・品質認証（ISO 13485等）・CFS・アラビア語/英語ラベリングを提出。国際品質認証保有機器は簡略審査。",
+          subtypes: [
+            { name: "新規登録", description: "初回の登録申請。全必要書類の提出が必要。" },
+            { name: "登録更新（医療機器10年/IVD 5年）", description: "有効期限前に更新申請。" },
+            { name: "変更申請", description: "製品仕様・製造所・ラベリング等の変更時。" },
+          ],
+          avgReviewTime: "公式: 4〜9ヶ月（クラス・書類の完全性による） / 実績: 6〜8ヶ月",
+          avgReviewTimeSource: "https://omcmedical.com/egypt-medical-device-registration",
+          fee: "Regular Track: USD 450/機器 / Fast Track: USD 1,280/機器",
+          feeSource: "https://omcmedical.com/egypt-medical-device-registration",
+          url: "http://medevice.edaegypt.gov.eg",
+        },
+        {
+          name: "Fast-Track Registration",
+          nameJa: "迅速登録（Fast Track）",
+          applicableClasses: ["Class I", "Class IIa", "Class IIb", "Class III"],
+          description:
+            "CE マークまたは FDA クリアランスを持つ機器向けの迅速審査経路。2025年以降に導入。クリティカルユース機器が優先。",
+          subtypes: [],
+          avgReviewTime: "3〜4ヶ月",
+          avgReviewTimeSource: "https://medenvoyglobal.com/blog/navigating-egypts-medical-device-market-a-guide-to-registration/",
+          fee: "USD 1,280/機器",
+          feeSource: "https://omcmedical.com/egypt-medical-device-registration",
+          url: "http://medevice.edaegypt.gov.eg",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "MeDevice ポータル",
+      url: "http://medevice.edaegypt.gov.eg",
+      description:
+        "全ての登録申請はEDAのオンラインポータル「MeDevice」経由でERHが提出。技術文書・品質認証・CFS等のアップロードが必要。紙ベースの申請は不可。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: false,
+      system: "部分的導入（UDI ラベリング推奨）",
+      description:
+        "2026年4月時点で、エジプト独自の包括的UDI制度は正式に導入されていないが、ラベリングにUDI情報を含めることが推奨されている。アラビア語・英語の二言語ラベリングが必須。",
+      url: "https://www.edaegypt.gov.eg/en/",
+      timeline: "未定（包括的UDI制度の正式導入スケジュールは未公表）",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "EDA 医療機器安全ユニット / エジプトファーマコビジランスセンター",
+        mandatory: true,
+        url: "https://www.edaegypt.gov.eg/en/",
+        description:
+          "製造業者・ERH・医療従事者が有害事象をEDAに報告する義務を負う。グローバルリコール・FSN・FSCAもEDAへの報告が必須。Law 151/2019のビジランスガイドラインに基づき、所定の期間内に報告を提出。",
+      },
+      recalls: {
+        authority: "EDA",
+        description:
+          "EDAがリコール・FSCA（Field Safety Corrective Action）を監督。必要に応じてERHを通じた市場からの製品回収を命令。",
+        url: "https://www.edaegypt.gov.eg/en/",
+      },
+      surveillance:
+        "ERHは市販後ビジランス義務を負い、登録時にビジランス規制遵守の宣言書を提出。Class IIb/III機器はビジランス部門の特別審査対象。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "輸出国の規制当局（EDA登録申請時に提出が必要）",
+      name: "Certificate of Free Sale (CFS)",
+      description:
+        "EDA登録申請時に、原産国または参照市場の規制当局が発行するCFSの提出が求められる。CE証明書やFDA承認書がCFSの代替として受容される場合あり。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.edaegypt.gov.eg/en/",
+    },
+
+    reimbursement: {
+      system: "国民皆保険制度（Universal Health Insurance, UHI）— 段階的導入中",
+      authority: "UHIA（Universal Health Insurance Authority）/ UPA",
+      description:
+        "2018年の Universal Health Insurance Law No. 2 に基づき、国民皆保険制度を段階的に導入中（2032年完全実施予定）。UPA（統一調達・医療技術管理庁）がHTA（医療技術評価）を実施し、UHIA が償還決定。UHI の給付パッケージは3,000以上の医療サービスを網羅し、補綴具・手術・画像診断等を含む。医療機器の個別償還は発展途上。",
+      codingSystems: [
+        "要確認（エジプト固有の医療機器償還コード体系は発展途上）",
+      ],
+      url: "https://www.uhia.gov.eg/",
+    },
+
+    marketingRules: {
+      authority: "EDA",
+      description:
+        "Law 151/2019 および関連規制に基づき、EDA未登録機器の広告・販売は禁止。ラベリングはアラビア語・英語の二言語が必須。",
+      keyRules: [
+        "EDA登録なしの医療機器の広告・販売は禁止",
+        "ラベリング: アラビア語・英語の二言語必須",
+        "使用説明書（IFU）はアラビア語訳が必要",
+        "誇大・虚偽・誤解を招く広告の禁止",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加（Not participating）",
+      description:
+        "エジプトはMDSAPの正式参加国・オブザーバー・アフィリエイトメンバーのいずれにも該当しない（2026年4月時点）。MDSAP監査報告書はEDAの規制要件を代替せず、独立した登録申請が必要。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "登録申請の前提条件。ISO 13485認証または同等の国際品質認証が必須。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に適用。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [
+        {
+          name: "ISO 10993シリーズ（生物学的安全性評価）",
+          notes: "生体接触医療機器の生物学的安全性評価に適用。",
+        },
+        {
+          name: "IEC 62366（ユーザビリティエンジニアリング）",
+          notes: "医療機器のユーザビリティ評価に参照。",
+        },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2025",
+        title: "Fast-Track 登録経路の導入",
+        description:
+          "CE マークまたは FDA クリアランスを持つ機器向けの迅速登録経路を導入。クリティカルユース機器が優先。",
+      },
+      {
+        date: "2025",
+        title: "AI分類ツールの導入",
+        description:
+          "EDAがMeDeviceポータル上にAI搭載の分類ツールを導入。医療機器の分類判定を自動化・効率化。",
+      },
+      {
+        date: "2020",
+        title: "Decree 777/2020（施行規則）発出",
+        description:
+          "Law 151/2019の施行規則が発出。分類・登録手続・市販後監視の詳細を規定。",
+      },
+      {
+        date: "2019",
+        title: "Law No. 151 of 2019 制定 — EDA設立",
+        description:
+          "Egyptian Drug Authority（EDA）の設立根拠法。旧規制体制からEDAへの移行。医療機器・医薬品・化粧品の規制を一元化。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Colombia ---
+  // =========================================================================
+  {
+    code: "COL",
+    country: "コロンビア",
+    countryEn: "Colombia",
+    region: "Latam",
+    flag: "🇨🇴",
+
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）",
+      description:
+        "コロンビアの医療機器規制はINVIMA（Instituto Nacional de Vigilancia de Medicamentos y Alimentos）が一元的に管轄する。Decreto 4725 de 2005 が医療機器の登録・分類・市販後監視の基本枠組みを規定し、IVD は Decreto 3770 de 2004 で別途規律。EU MDR に整合した4クラス分類（Class I / IIa / IIb / III）を採用。Class I/IIa は「非管理品目（No Controlados）」として自動承認、Class IIb/III は「管理品目（Controlados）」として技術審査が必要。登録有効期間は10年。2022年以降、UDI-DI（Resolution 1405/2022）およびセマンティックレポートの義務化が段階的に進行。",
+      keyCharacteristics: [
+        "INVIMA による一元的な中央規制体制",
+        "EU MDR に整合したリスクベースの4クラス分類（Class I / IIa / IIb / III）",
+        "非管理品目（Class I/IIa: 自動承認）と管理品目（Class IIb/III: 技術審査）の二経路",
+        "コロンビア国内の法定代理人（Representante Legal）の任命が必須",
+        "登録有効期間10年（更新は3ヶ月前から申請可）",
+        "UDI-DI 義務化の段階的実施（Resolution 1405/2022）",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "INVIMA",
+        fullName: "Instituto Nacional de Vigilancia de Medicamentos y Alimentos",
+        localName: "Instituto Nacional de Vigilancia de Medicamentos y Alimentos",
+        role: "医療機器の登録（Registro Sanitario）・市販後監視・ビジランス・施設査察。主管当局。",
+        url: "https://www.invima.gov.co/",
+        isPrimary: true,
+      },
+      {
+        name: "MinSalud",
+        fullName: "Ministerio de Salud y Protección Social",
+        localName: "Ministerio de Salud y Protección Social",
+        role: "保健政策の策定・法令制定・医療制度の監督",
+        url: "https://www.minsalud.gov.co/",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（INVIMA が直接審査）",
+      description:
+        "コロンビアでは欧州型のNotified Body制度は存在しない。INVIMAが直接、登録申請の技術文書を審査しRegistro Sanitario（衛生登録）を交付する。Class I/IIa は書類完備で自動承認（Automático）。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Decreto 4725 de 2005, Artículo 2 に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+      scope:
+        "IVD（体外診断用医療機器）は Decreto 3770 de 2004 で別途規定。",
+      notes:
+        "定義はEU MDRの定義に概ね整合。SaMDも対象に含まれる。",
+    },
+
+    primaryLaw: {
+      title: "Decreto 4725 de 2005 — Régimen de Registros Sanitarios, Permiso de Comercialización y Vigilancia Sanitaria de los Dispositivos Médicos para Uso Humano",
+      originalTitle: "Decreto 4725 de 2005",
+      enacted: "2005",
+      lastAmended: "要確認（UDI関連規制等で補完的改正あり）",
+      url: "https://www.invima.gov.co/biblioteca/decreto-4725-2005-registros-sanitarios-dispositivos-medicos",
+      description:
+        "コロンビアの医療機器規制の基本法令。登録制度（Registro Sanitario）・分類・市販後監視・査察の枠組みを規定。保健社会保護省（MinSalud）が発出。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Decreto 3770 de 2004 — Régimen de Registros Sanitarios y Vigilancia Sanitaria de los Reactivos de Diagnóstico In Vitro",
+        date: "2004",
+        url: "https://www.invima.gov.co/",
+        description:
+          "IVD（体外診断用試薬）の登録・分類・市販後監視を規定する基本法令。",
+        category: "IVD規制",
+      },
+      {
+        title: "Resolution 1405 de 2022 — UDI-DI Requirements",
+        date: "2022",
+        url: "https://www.invima.gov.co/",
+        description:
+          "UDI-DI（固有機器識別子 - 機器識別子）の義務化。セマンティックレポートの提出要件を規定。段階的実施。",
+        category: "UDI",
+      },
+      {
+        title: "Resolution 4816 de 2008 — Programa Nacional de Tecnovigilancia",
+        date: "2008",
+        url: "https://www.invima.gov.co/",
+        description:
+          "テクノビジランス（医療機器安全性監視）の国家プログラムを規定。有害事象報告・四半期報告の義務化。",
+        category: "ビジランス",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Ley 1581 de 2012 — Ley de Protección de Datos Personales",
+        category: "データ保護",
+        enacted: "2012",
+        url: "https://www.sic.gov.co/",
+        relevance:
+          "個人情報保護法。コネクテッドデバイス・SaMDが取り扱う個人医療情報に適用。",
+      },
+    ],
+
+    classification: {
+      system: "4クラス制（Class I / IIa / IIb / III）— EU MDR整合",
+      basis: "EU MDRの分類ルールに概ね整合したリスクベース分類。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。Decreto 4725/2005 Capítulo IV に規定。",
+      classes: [
+        {
+          name: "Class I",
+          nameJa: "クラスI",
+          riskLevel: "低",
+          description: "低リスクの非侵襲的機器。非管理品目（No Controlado）— 自動承認。",
+          examples: ["弾性包帯", "聴診器", "車椅子", "舌圧子", "ガーゼ"],
+          approvalPath: "自動承認（Automático）",
+        },
+        {
+          name: "Class IIa",
+          nameJa: "クラスIIa",
+          riskLevel: "中低",
+          description: "中低リスク機器。非管理品目（No Controlado）— 自動承認。",
+          examples: ["超音波診断装置", "補聴器", "歯科用材料", "注射針", "血圧計"],
+          approvalPath: "自動承認（Automático）",
+        },
+        {
+          name: "Class IIb",
+          nameJa: "クラスIIb",
+          riskLevel: "中高",
+          description: "中高リスク機器。管理品目（Controlado）— INVIMA技術審査が必要。",
+          examples: ["人工呼吸器", "輸液ポンプ", "透析装置", "X線装置", "コンタクトレンズ"],
+          approvalPath: "技術審査（Controlado）",
+        },
+        {
+          name: "Class III",
+          nameJa: "クラスIII",
+          riskLevel: "高",
+          description: "最高リスク機器。管理品目（Controlado）— INVIMA技術審査＋臨床評価が必要。",
+          examples: ["人工心臓弁", "埋込み型除細動器", "薬剤溶出ステント", "人工関節", "人工内耳"],
+          approvalPath: "技術審査＋臨床評価（Controlado）",
+        },
+      ],
+      rules: [
+        "EU MDRの分類ルールに概ね整合",
+        "Class I / IIa = 非管理品目（No Controlados）: 自動承認",
+        "Class IIb / III = 管理品目（Controlados）: 技術審査",
+        "IVDは Decreto 3770/2004 に基づき別途分類（Category I / II / III）",
+      ],
+      totalProductCodes: "GMDN（Global Medical Device Nomenclature）を参照",
+    },
+
+    conformityAssessment: {
+      overview:
+        "全クラスの医療機器にINVIMAへのRegistro Sanitario（衛生登録）が必要。Class I/IIa は「非管理品目」として書類完備で自動承認（日数以内）。Class IIb/III は「管理品目」として技術審査が必要。登録有効期間は10年。更新は有効期限の3ヶ月前から申請可。海外製造業者はコロンビア国内の法定代理人（Representante Legal）の任命が必須。申請書類はスペイン語。CFS/CFG が必要（米国・EU・カナダ・日本・オーストラリアのいずれかから）。",
+      routes: [
+        {
+          name: "Registro Sanitario — No Controlados (Automatic)",
+          nameJa: "衛生登録 — 非管理品目（自動承認）",
+          applicableClasses: ["Class I", "Class IIa"],
+          description:
+            "書類完備で自動承認。INVIMAによる技術審査なし。",
+          subtypes: [
+            { name: "新規登録", description: "初回のRegistro Sanitario申請。" },
+            { name: "更新（10年ごと）", description: "有効期限3ヶ月前から申請可。" },
+            { name: "変更申請（Modificación）", description: "製品仕様・製造所等の変更時。" },
+          ],
+          avgReviewTime: "数日〜2週間（書類完備の場合、即日〜自動承認）",
+          avgReviewTimeSource: "https://www.emergobyul.com/services/invima-medical-device-registration-and-approval-colombia",
+          fee: "COP 3,898,330（約 USD 936）/製品",
+          feeSource: "https://www.pureglobal.com/markets/colombia/invima-medical-device-regulations",
+          url: "https://www.invima.gov.co/productos-vigilados/dispositivos-medicos/dispositivos-medicos-equipos-biomedicos",
+        },
+        {
+          name: "Registro Sanitario — Controlados (Reviewed)",
+          nameJa: "衛生登録 — 管理品目（技術審査）",
+          applicableClasses: ["Class IIb", "Class III"],
+          description:
+            "INVIMAが技術文書・臨床エビデンス・ラベリングを審査。CFS/CFGおよびISO 13485認証が必要。",
+          subtypes: [
+            { name: "新規登録", description: "初回のRegistro Sanitario申請。技術審査あり。" },
+            { name: "更新（10年ごと）", description: "有効期限3ヶ月前から申請可。" },
+            { name: "変更申請（Modificación）", description: "製品仕様・製造所等の変更時。" },
+          ],
+          avgReviewTime: "3〜6ヶ月",
+          avgReviewTimeSource: "https://www.emergobyul.com/services/invima-medical-device-registration-and-approval-colombia",
+          fee: "COP 4,412,400（約 USD 1,059）/製品",
+          feeSource: "https://www.pureglobal.com/markets/colombia/invima-medical-device-regulations",
+          url: "https://www.invima.gov.co/productos-vigilados/dispositivos-medicos/dispositivos-medicos-equipos-biomedicos",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "INVIMA オンライン申請プラットフォーム",
+      url: "https://www.invima.gov.co/",
+      description:
+        "登録申請はINVIMAのオンラインプラットフォーム経由で提出。UDI-DIセマンティックレポートもINVIMAプラットフォーム経由で提出。申請書類はスペイン語。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: true,
+      system: "INVIMA UDI-DI システム（Resolution 1405/2022）",
+      description:
+        "Resolution 1405 de 2022 に基づくUDI-DI義務化。登録保有者はINVIMA承認後にUDI-DIコードを認定機関（GS1等）から取得し、セマンティックレポートをINVIMAプラットフォーム経由で提出。基本属性・規制属性・商業属性を含む。",
+      url: "https://www.invima.gov.co/",
+      timeline: "Class IIb/III: 2024年2月施行済み。Class IIa: 2026年2月9日期限。Class I / IVD Category I: 2026年2月9日期限。",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "Programa Nacional de Tecnovigilancia",
+        mandatory: true,
+        url: "https://www.invima.gov.co/",
+        description:
+          "Resolution 4816/2008 に基づく国家テクノビジランスプログラム。製造業者・輸入業者は有害事象の四半期報告を義務付けられる（有害事象が発生しなかった場合も報告が必要）。",
+      },
+      recalls: {
+        authority: "INVIMA",
+        description:
+          "INVIMAがリコール・FSCA（Field Safety Corrective Action）を監督。Decreto 4725/2005 Capítulo IX に規定。",
+        url: "https://www.invima.gov.co/",
+      },
+      surveillance:
+        "製造業者・輸入業者は四半期ごとにテクノビジランス要約報告書（Informe Periódico Resumido）をINVIMAに提出。有害事象の有無にかかわらず報告義務あり。重大有害事象は72時間以内に報告。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "参照市場の規制当局（INVIMA登録申請時に提出が必要）",
+      name: "Certificate of Free Sale (CFS) / Certificate to Foreign Government (CFG)",
+      description:
+        "INVIMA登録申請時に、参照市場（米国FDA、EU、カナダ、日本、オーストラリア）の規制当局が発行するCFS/CFGの提出が求められる。母国の承認に代えて参照市場の認可証を提出可能。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.invima.gov.co/",
+    },
+
+    reimbursement: {
+      system: "社会保険制度（SGSSS: Sistema General de Seguridad Social en Salud）",
+      authority: "MinSalud / ADRES（Administradora de los Recursos del SGSSS）",
+      description:
+        "コロンビアのSGSSS（社会保障健康制度）は、拠出制（Contributivo）と補助制（Subsidiado）の二本立て。Plan de Beneficios en Salud（PBS: 健康給付計画）に収載された医療技術が保険償還対象。医療機器の個別償還は医薬品ほど体系化されておらず、施設調達・保険契約に依存する部分が大きい。",
+      codingSystems: [
+        "CUPS（Clasificación Única de Procedimientos en Salud）— 医療行為分類",
+        "要確認（医療機器個別の償還コード体系は未確認）",
+      ],
+      url: "https://www.minsalud.gov.co/",
+    },
+
+    marketingRules: {
+      authority: "INVIMA",
+      description:
+        "INVIMA未登録機器の広告・販売は禁止。ラベリング・使用説明書はスペイン語が必須。",
+      keyRules: [
+        "Registro Sanitario 未取得の医療機器の広告・販売は禁止",
+        "ラベリング・使用説明書はスペイン語必須",
+        "誇大・虚偽・誤解を招く広告の禁止",
+        "医療機器の広告はINVIMAの監視対象",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加（Not participating）— ただしISO 13485 / MDSAP認証を品質証拠として受容",
+      description:
+        "コロンビアはMDSAPの正式参加国・オブザーバー・アフィリエイトメンバーのいずれにも該当しない（2026年4月時点）。ただしINVIMA登録時にISO 13485認証またはMDSAP認証をQMS適合の証拠として受容。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "登録申請時にISO 13485:2016認証の提出が求められる。MDSAP認証も代替として受容。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に適用。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [
+        {
+          name: "ISO 10993シリーズ（生物学的安全性評価）",
+          notes: "生体接触医療機器の生物学的安全性評価に適用。",
+        },
+        {
+          name: "IEC 62366（ユーザビリティエンジニアリング）",
+          notes: "医療機器のユーザビリティ評価に参照。",
+        },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2026-02",
+        title: "UDI-DI 義務化期限（Class IIa / Class I / IVD Category I）",
+        description:
+          "Resolution 1405/2022に基づくUDI-DI義務化の最終期限。2026年2月9日までにClass IIa・Class I・IVD Category Iの既存登録にUDI-DIコードを組み込む必要あり。",
+      },
+      {
+        date: "2025-12",
+        title: "新医療機器規制法令（Régimen Sanitario de Dispositivos Médicos）策定中",
+        description:
+          "MinSaludがDecrete 4725/2005を置換する新規制法令の策定を進行中。EU MDR/IVDRとの更なる整合が予想される。",
+      },
+      {
+        date: "2022",
+        title: "Resolution 1405/2022 — UDI-DI義務化",
+        description:
+          "UDI-DI（固有機器識別子）の義務化およびセマンティックレポートの提出要件を規定。段階的実施を開始。",
+      },
+      {
+        date: "2005",
+        title: "Decreto 4725 de 2005 制定",
+        description:
+          "コロンビアの医療機器規制の基本法令。登録制度・分類体系・市販後監視の枠組みを確立。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
+
+  // =========================================================================
+  // --- Chile ---
+  // =========================================================================
+  {
+    code: "CHL",
+    country: "チリ",
+    countryEn: "Chile",
+    region: "Latam",
+    flag: "🇨🇱",
+
+    legalSystemOverview: {
+      type: "中央集権制（Centralized system）— 段階的規制導入型",
+      description:
+        "チリの医療機器規制はISP（Instituto de Salud Pública de Chile）のANDID（Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo）が管轄する。Código Sanitario（衛生法典）および Decreto 825/98 が法的基盤だが、規制は段階的に導入されており、全医療機器が強制登録の対象ではない点が特徴。保健省（Ministerio de Salud）が個別のDecreto Supremo（最高政令）で対象製品カテゴリを順次指定し、ISPが適合性検証・認証を実施。4クラス分類（Class I / II / III / IV）を採用。IVDはリスクClass A〜Dに分類。",
+      keyCharacteristics: [
+        "ISP / ANDID による一元的規制",
+        "段階的規制導入: 保健省のDecreto Supremoで対象カテゴリを順次指定",
+        "リスクベースの4クラス分類（Class I / II / III / IV）",
+        "IVDは別途4クラス（Class A / B / C / D）",
+        "現時点で全医療機器の強制登録義務はなく、指定カテゴリのみ適合性検証が必要",
+        "Código Sanitario（衛生法典）改正（Ley de Fármacos II）が議会審議中で、全面的規制強化が予想される",
+      ],
+    },
+
+    authorities: [
+      {
+        name: "ISP / ANDID",
+        fullName: "Instituto de Salud Pública de Chile — Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo",
+        localName: "Instituto de Salud Pública de Chile — Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo",
+        role: "医療機器の適合性検証・認証・登録・市販後監視・ビジランス。主管当局。",
+        url: "https://www.ispch.gob.cl/andid/",
+        isPrimary: true,
+      },
+      {
+        name: "MinSalud",
+        fullName: "Ministerio de Salud de Chile",
+        localName: "Ministerio de Salud",
+        role: "保健政策の策定・Decreto Supremo（規制対象カテゴリ指定）の発出",
+        url: "https://www.minsal.cl/",
+        isPrimary: false,
+      },
+      {
+        name: "FONASA",
+        fullName: "Fondo Nacional de Salud",
+        localName: "Fondo Nacional de Salud",
+        role: "公的健康保険制度の管理・償還管理",
+        url: "https://www.fonasa.cl/",
+        isPrimary: false,
+      },
+    ],
+
+    notifiedBodies: {
+      system: "なし（ISP/ANDID が直接適合性検証・認証を実施）",
+      description:
+        "チリでは欧州型のNotified Body制度は存在しない。ISP/ANDIDが直接、適合性検証（Verificación de Conformidad）および認証を実施する。国際品質認証（CE/FDA等）は参考資料として評価されるが、自動的な承認にはならない。",
+      bodies: [],
+    },
+
+    deviceDefinition: {
+      legalDefinition:
+        "Código Sanitario（Libro VII）および Decreto 825/98 に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等。",
+      scope:
+        "IVD（体外診断用医療機器）も適用範囲に含まれる。",
+      notes:
+        "段階的規制のため、全製品カテゴリが同時に規制対象とはならない。保健省のDecreto Supremoで対象指定されたカテゴリのみ強制適合性検証の対象。",
+    },
+
+    primaryLaw: {
+      title: "Código Sanitario — Libro VII: De los productos farmacéuticos y dispositivos médicos",
+      originalTitle: "Código Sanitario (DFL N° 725/1967)",
+      enacted: "1967",
+      lastAmended: "2014（Ley 20.724 による改正）",
+      url: "https://www.bcn.cl/leychile/navegar?idNorma=1058373",
+      description:
+        "チリの衛生法典。医薬品・医療機器の規制の法的基盤。Libro VII が医療機器を規定。Ley 20.724（2014年）による改正で医療機器規制の強化が図られた。Ley de Fármacos II（衛生法典の更なる改正）が議会で審議中。",
+    },
+
+    implementingRegulations: [
+      {
+        title: "Decreto Supremo 825/98 — Reglamento del control de productos y elementos de uso médico",
+        date: "1998",
+        url: "https://www.ispch.gob.cl/regulaciones/",
+        description:
+          "医療用製品・機器の管理に関する施行規則。分類体系・適合性検証手続・製造施設要件を規定。",
+        category: "施行規則",
+      },
+      {
+        title: "Decreto Exento 5/2025 — 免疫血液学的試薬の衛生管理体制への編入",
+        date: "2025-02-21",
+        url: "https://www.ispch.gob.cl/andid/",
+        description:
+          "免疫血液学的試薬をCódigo Sanitario Art. 111の衛生管理体制に編入。NCh-ISO 16142/2:2021準拠の適合性検証・認証を義務化。2026年2月22日施行。",
+        category: "IVD規制",
+      },
+      {
+        title: "Decreto Exento 25/2026 — 高リスク医療機器・IVDの衛生管理体制への追加編入",
+        date: "2026-03-19",
+        url: "https://www.ispch.gob.cl/andid/",
+        description:
+          "追加の高リスク医療機器・IVDカテゴリを衛生管理体制に編入。規制対象の段階的拡大。",
+        category: "規制対象拡大",
+      },
+    ],
+
+    relatedLaws: [
+      {
+        title: "Ley 20.724 de 2014 — Modificación del Código Sanitario",
+        category: "法改正",
+        enacted: "2014",
+        url: "https://www.bcn.cl/leychile/navegar?idNorma=1058373",
+        relevance:
+          "衛生法典の改正法。医療機器規制の強化・ISPの権限明確化。",
+      },
+      {
+        title: "Ley 19.628 — Ley sobre Protección de la Vida Privada",
+        category: "データ保護",
+        enacted: "1999",
+        url: "https://www.bcn.cl/leychile/navegar?idNorma=141599",
+        relevance:
+          "個人情報保護法。コネクテッドデバイス・SaMDが取り扱う個人医療情報に適用。",
+      },
+    ],
+
+    classification: {
+      system: "4クラス制（Class I / II / III / IV）",
+      basis: "リスクベース分類。意図する用途・侵襲性・使用期間・エネルギー源等に基づく。IVDは別途リスクClass A〜Dに分類。Decreto 825/98 に規定。",
+      classes: [
+        {
+          name: "Class I",
+          nameJa: "クラスI",
+          riskLevel: "極低",
+          description: "極低リスクの非侵襲的機器。",
+          examples: ["弾性包帯", "聴診器", "車椅子", "舌圧子", "松葉杖"],
+          approvalPath: "適合性検証（指定カテゴリのみ）",
+        },
+        {
+          name: "Class II",
+          nameJa: "クラスII",
+          riskLevel: "中",
+          description: "中リスク機器。",
+          examples: ["超音波診断装置", "補聴器", "歯科用材料", "血圧計", "注射針"],
+          approvalPath: "適合性検証（指定カテゴリのみ）",
+        },
+        {
+          name: "Class III",
+          nameJa: "クラスIII",
+          riskLevel: "高",
+          description: "高リスク機器。",
+          examples: ["人工呼吸器", "輸液ポンプ", "透析装置", "冠動脈ステント", "コンタクトレンズ"],
+          approvalPath: "適合性検証・認証（指定カテゴリ）",
+        },
+        {
+          name: "Class IV",
+          nameJa: "クラスIV",
+          riskLevel: "最高",
+          description: "最高リスク機器。最も厳格な適合性検証・認証。",
+          examples: ["人工心臓弁", "埋込み型除細動器", "薬剤溶出ステント", "脳深部刺激装置", "人工内耳"],
+          approvalPath: "適合性検証・認証（指定カテゴリ）",
+        },
+      ],
+      rules: [
+        "リスクベース分類（Class I〜IV）",
+        "IVDは別途リスクClass A〜Dに分類",
+        "保健省のDecreto Supremoで対象カテゴリが順次指定される段階的規制",
+        "現時点で強制認証対象は限定的（避妊具・手袋・注射針・注射器等）",
+      ],
+      totalProductCodes: "GMDN（Global Medical Device Nomenclature）を参照",
+    },
+
+    conformityAssessment: {
+      overview:
+        "チリの医療機器規制は段階的導入型であり、保健省のDecreto Supremoで指定されたカテゴリの製品のみISP/ANDIDへの適合性検証（Verificación de Conformidad）・認証が強制される。指定カテゴリ外の医療機器は規制上のフリーマーケットとなっている。登録フォームはANDID-001。審査期間は約75営業日。NCh-ISO 16142に準拠した安全性・性能の Essential Principles 評価が中心。",
+      routes: [
+        {
+          name: "Verificación de Conformidad y Certificación",
+          nameJa: "適合性検証・認証",
+          applicableClasses: ["指定カテゴリのClass I〜IV"],
+          description:
+            "保健省が指定した製品カテゴリに対し、ISP/ANDIDが適合性検証を実施。ANDID-001フォームおよび技術文書・法的文書を提出。NCh-ISO 16142準拠の安全性・性能評価。初回ロット性能評価を含む場合あり。",
+          subtypes: [
+            { name: "新規認証", description: "初回の適合性検証・認証申請。" },
+            { name: "変更報告", description: "設計・製造工程・原材料・ラベリング等の変更時にISPに報告。" },
+          ],
+          avgReviewTime: "約75営業日",
+          avgReviewTimeSource: "https://omcmedical.com/chile-medical-device-registration/",
+          fee: "約 USD 350（公式申請手数料）",
+          feeSource: "https://omcmedical.com/chile-medical-device-registration/",
+          url: "https://www.ispch.gob.cl/andid/registro-y-autorizacion/registro/",
+        },
+      ],
+    },
+
+    electronicSubmission: {
+      system: "ISP/ANDID オンライン申請",
+      url: "https://www.ispch.gob.cl/andid/registro-y-autorizacion/registro/",
+      description:
+        "適合性検証申請はISP/ANDIDの窓口および電子システム経由で提出。ANDID-001フォームに技術文書・法的文書を添付。",
+      mandatory: true,
+    },
+
+    udi: {
+      required: false,
+      system: "未導入（チリ独自のUDI制度は未確立）",
+      description:
+        "2026年4月時点で、チリ独自の包括的UDI制度は正式に導入されていない。ただしISPはIMDRF（国際医療機器規制当局フォーラム）のUDI作業グループに参加しており、将来的な導入が見込まれる。",
+      url: "https://www.ispch.gob.cl/andid/",
+      timeline: "未定（IMDRF参加を通じた検討段階）",
+    },
+
+    postMarket: {
+      adverseEventReporting: {
+        system: "ISP/ANDID ビジランス報告",
+        mandatory: true,
+        url: "https://www.ispch.gob.cl/andid/",
+        description:
+          "製造業者・輸入業者・医療従事者が有害事象をISP/ANDIDに報告する義務を負う。設計・製造工程・意図する用途・原材料・ラベリング・性能の変更もISPへの報告が必要。",
+      },
+      recalls: {
+        authority: "ISP / ANDID",
+        description:
+          "ISP/ANDIDがリコール・FSCA（Field Safety Corrective Action）を監督。市場からの製品回収を命令する権限を有する。",
+        url: "https://www.ispch.gob.cl/andid/",
+      },
+      surveillance:
+        "ISP/ANDIDが市販後監視を実施。有害事象報告の監視・安全性情報の評価・是正措置の監督を担う。企業は製品発売後の性能モニタリングと有害事象報告が義務。",
+    },
+
+    certificateOfFreeSale: {
+      available: true,
+      issuingAuthority: "輸出国の規制当局（ISP/ANDID申請時に提出が推奨）",
+      name: "Certificate of Free Sale (CFS)",
+      description:
+        "ISP/ANDID への適合性検証申請時に、原産国の規制当局が発行するCFSの提出が推奨される。必須要件かは製品カテゴリにより異なる。",
+      processingTime: "輸出国側の手続きによる",
+      url: "https://www.ispch.gob.cl/andid/",
+    },
+
+    reimbursement: {
+      system: "公的保険（FONASA）と民間保険（ISAPRE）の混合制度",
+      authority: "FONASA / ISAPRE / MinSalud",
+      description:
+        "チリの医療保険は公的FONASA（Fondo Nacional de Salud）と民間ISAPRE（Instituciones de Salud Previsional）の二本立て。FONASA加入者は公的・民間医療施設の両方にアクセス可能（FONASA提携施設の場合は3段階の料金体系）。ISAPREは各社が独自の償還率・自己負担率を設定。医療機器の個別償還制度は医薬品ほど体系化されておらず、施設調達・保険契約に依存する部分が大きい。",
+      codingSystems: [
+        "要確認（チリ固有の医療機器償還コード体系は未確認）",
+      ],
+      url: "https://www.fonasa.cl/",
+    },
+
+    marketingRules: {
+      authority: "ISP / ANDID",
+      description:
+        "指定カテゴリの医療機器はISP/ANDIDの認証なしに販売・流通することは禁止。ラベリングはスペイン語が必須。",
+      keyRules: [
+        "指定カテゴリの医療機器はISP/ANDID認証なしの販売・流通禁止",
+        "ラベリング・使用説明書はスペイン語必須",
+        "ISPへの適合性検証なしの市場投入は衛生法典違反",
+        "製品変更時はISPへの報告・再評価が必要",
+      ],
+    },
+
+    mdsap: {
+      status: "非参加（Not participating）",
+      description:
+        "チリはMDSAPの正式参加国・オブザーバー・アフィリエイトメンバーのいずれにも該当しない（2026年4月時点）。ただしISPはIMDRF（国際医療機器規制当局フォーラム）のメンバーであり、国際規制調和に積極的に参加。",
+    },
+
+    internationalStandards: {
+      iso13485: {
+        accepted: true,
+        notes: "ISO 13485認証はQMS適合の証拠として受容。適合性検証申請時の提出が推奨。",
+      },
+      iso14971: {
+        accepted: true,
+        notes: "リスクマネジメント。技術文書のリスク評価に適用。",
+      },
+      iec62304: {
+        accepted: true,
+        notes: "ソフトウェアライフサイクル。SaMD申請に適用。",
+      },
+      iec60601: {
+        accepted: true,
+        notes: "医用電気機器の安全・性能要求。",
+      },
+      others: [
+        {
+          name: "NCh-ISO 16142/2:2021（Essential Principles of Safety and Performance — IVD）",
+          notes: "IVD医療機器の安全性・性能に関する Essential Principles。チリ国家規格として採用。",
+        },
+        {
+          name: "ISO 10993シリーズ（生物学的安全性評価）",
+          notes: "生体接触医療機器の生物学的安全性評価に適用。",
+        },
+      ],
+    },
+
+    recentDevelopments: [
+      {
+        date: "2026-03",
+        title: "Decreto Exento 25/2026 — 高リスク医療機器・IVDの追加編入",
+        description:
+          "2026年3月19日に官報公布。追加の高リスク医療機器・IVDカテゴリを衛生管理体制に編入。規制対象の段階的拡大が加速。",
+      },
+      {
+        date: "2025-02",
+        title: "Decreto Exento 5/2025 — 免疫血液学的試薬の規制対象化",
+        description:
+          "2025年2月21日に官報公布。免疫血液学的試薬を衛生管理体制に編入。2026年2月22日施行。NCh-ISO 16142/2:2021準拠の適合性検証・認証を義務化。",
+      },
+      {
+        date: "2025",
+        title: "Ley de Fármacos II（衛生法典改正案）審議中",
+        description:
+          "衛生法典（Código Sanitario）の大規模改正案が議会で審議中。全医療機器の登録義務化・規制強化が予想される。成立すればチリの医療機器規制が根本的に変革される見込み。",
+      },
+      {
+        date: "2023",
+        title: "ANDID設立",
+        description:
+          "ISP内にANDID（Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo）を設立。医療機器規制の専門機関として体制強化。",
+      },
+    ],
+
+    lastUpdated: "2026-04-02",
+    verified: null,
+  },
 ];
 
 // ===========================================================================
