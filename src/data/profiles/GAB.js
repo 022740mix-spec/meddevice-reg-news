@@ -54,8 +54,8 @@ export default {
     "originalTitle": "Ordonnance portant organisation du secteur pharmaceutique",
     "enacted": "2011",
     "lastAmended": "要確認",
-    "url": "https://journal-officiel.ga/7218-010-pr-2011-/",
-    "description": "医薬品セクター組織法。医薬品・医療機器の製造・輸入・流通・販売の規制枠組みを規定。Loi 18/2011（2012年2月14日）で批准。医療機器（dispositif médical）の定義を含む。"
+    "url": "https://leap.unep.org/en/countries/ga/national-legislation/ordonnance-n-001pr2011-du-27-janvier-2011-portant-organisation-du",
+    "description": "医薬品セクター組織法。医薬品・医療機器の製造・輸入・流通・販売の規制枠組みを規定。Loi 18/2011（2012年2月14日）で批准。Ordonnance 010/PR/2011（2011年8月10日）で一部修正。医療機器（dispositif médical）の定義を含む。"
   },
   "implementingRegulations": [
     {
@@ -236,5 +236,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

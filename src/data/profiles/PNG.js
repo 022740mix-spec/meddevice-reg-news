@@ -118,7 +118,7 @@ export default {
         "name": "Product Licence / Marketing Authorisation",
         "nameJa": "製品ライセンス（マーケティング・オーソリゼーション）",
         "applicableClasses": [
-          "全医療機器"
+          "Medical Device（一般）"
         ],
         "description": "PSSBに申請書類を提出。安全性・有効性の非臨床/臨床データ、GMP適合証明、参照国認可証明等を審査。製品ライセンスは最長5年間有効で更新可能。輸入者・卸売業者・販売業者もライセンス取得が必要。",
         "subtypes": [],
@@ -224,5 +224,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

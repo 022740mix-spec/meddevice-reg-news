@@ -98,7 +98,7 @@ export default {
       "title": "Agreement between the European Community and the Principality of Monaco on the application of certain Community acts (Council Decision 2003/885/EC)",
       "category": "EU-Monaco協定",
       "enacted": "2003",
-      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000230180",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32003D0885",
       "relevance": "EU医療機器指令（MDD/AIMDD/IVDD）をモナコ領域内に適用する根拠。2003年12月4日署名、2004年5月1日発効。"
     },
     {
@@ -299,14 +299,14 @@ export default {
   },
   "recentDevelopments": [
     {
+      "date": "2023-09",
+      "title": "EU-Monaco連合協定交渉の中断",
+      "description": "2015年3月に開始されたEU-Monaco連合協定交渉が、2023年9月14日に中断。欧州委員会の交渉指令とモナコ側の国民生活条件維持の方針を両立できないと双方が確認。アンドラ・サンマリノとは2023年12月に交渉妥結したが、モナコは別途対応。EU MDR/IVDRへの移行は未定のまま。"
+    },
+    {
       "date": "2021-01",
       "title": "Arrêté ministériel n° 2021-24 — 分類規則Annex I改正",
       "description": "Arrêté ministériel n° 2003-581のAnnex I（分類ルール）を改正。医療機器分類ルールの更新。"
-    },
-    {
-      "date": "2015-03",
-      "title": "EU-Monaco連合協定交渉開始",
-      "description": "2015年3月18日よりモナコがEU内部市場への参加を目指す連合協定交渉を開始。合意に至った場合、EU MDR/IVDRの直接適用の可能性がある。"
     },
     {
       "date": "2003-12",
@@ -315,5 +315,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

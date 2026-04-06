@@ -62,7 +62,7 @@ export default {
     "originalTitle": "Loi sur l'exercice de la Pharmacie",
     "enacted": "1955",
     "lastAmended": "要確認",
-    "url": "https://mspp.gouv.ht/site/downloads/Loi%201955.pdf",
+    "url": "https://www.mspp.gouv.ht/dpmmt/views/front/normes_legislations.php",
     "description": "1955年制定の薬事法。薬局業務の実施条件・医薬品の製造・販売を規制。医療機器に関する規定はないが、ハイチにおける医薬品規制の基本法として機能。現代の規制ニーズに対して不十分とされている。"
   },
   "implementingRegulations": [
@@ -228,5 +228,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

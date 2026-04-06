@@ -41,6 +41,7 @@ export const COUNTRY_FLAG = {
   AZE: "🇦🇿",
   LIE: "🇱🇮",
   BRB: "🇧🇧",
+  BLZ: "🇧🇿",
   ARM: "🇦🇲",
   TKM: "🇹🇲",
   MLI: "🇲🇱",
@@ -57,6 +58,7 @@ export const COUNTRY_FLAG = {
   TLS: "🇹🇱",
   BEN: "🇧🇯",
   GAB: "🇬🇦",
+  MDV: "🇲🇻",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -3665,6 +3667,26 @@ export const COUNTRY_PROFILES_META = [
     "lastUpdated": "2026-04-06"
   },
   {
+    "code": "BLZ",
+    "country": "ベリーズ",
+    "countryEn": "Belize",
+    "region": "Latam",
+    "flag": "🇧🇿",
+    "primaryLawTitle": "Food and Drugs Act, Chapter 291",
+    "primaryLawEnacted": "1973",
+    "classificationSystem": "分類制度なし（輸入許可ベース）",
+    "classCount": 1,
+    "classes": [
+      { "name": "All Devices", "riskLevel": "未分類" }
+    ],
+    "mainAuthority": "Drug Inspectorate Unit",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "医療機器専用法なし。Food and Drugs Act (Cap. 291, 1973) および2017年施行規則に基づく医薬品規制の枠組みで運用。製造国での合法販売を前提とした輸入許可制。CARICOM加盟・CARPHA/CRS参加。2017年にCARICOM初の登録医薬品リスト公表。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
     "code": "ARM",
     "country": "アルメニア",
     "countryEn": "Armenia",
@@ -4036,6 +4058,26 @@ export const COUNTRY_PROFILES_META = [
     "udiRequired": false,
     "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
     "deviceNotes": "CEMAC加盟国。独立した医療機器法なし、Ordonnance 001/PR/2011（医薬品セクター組織法）に基づく医薬品規制の一部として運用。ANMAPS（2023年10月設立、Ordonnance 0004/2023）が旧DMPの機能を継承しNCAとして発足。医療機器販売会社の認可制（50,000 FCFA）。CEMAC圏でカメルーンに次ぎ2番目に医療機器規制を実施。必須医療機器リスト2024年版に945品目収載。OCEAC主導の規制調和に参加。フランス語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "MDV",
+    "country": "モルディブ",
+    "countryEn": "Republic of Maldives",
+    "region": "ASPAC",
+    "flag": "🇲🇻",
+    "primaryLawTitle": "Health Services Act (Law No. 29/2015)",
+    "primaryLawEnacted": "2015",
+    "classificationSystem": "クラス分類あり（詳細は要確認）",
+    "classCount": 1,
+    "classes": [
+      { "name": "医療機器（クラス情報要記載）", "riskLevel": "要確認" }
+    ],
+    "mainAuthority": "MFDA",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "Dhirithi ポータル（MFDA オンラインシステム）",
+    "deviceNotes": "小島嶼開発途上国。医療機器専用法は未制定、Health Services Act (29/2015) 第65条に基づきMFDAが医療製品登録を管轄。輸入者のMFDA事前登録が必須。参照国認可（CEマーク等）の提出を要求。2024年6月にリライアンスパスウェイ導入（WHO Good Reliance Practices準拠）。WHO SEARO/SEARNの支援で規制能力強化を推進中。ディベヒ語。",
     "lastUpdated": "2026-04-06"
   }
 ];

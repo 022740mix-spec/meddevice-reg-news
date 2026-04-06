@@ -140,6 +140,7 @@ import HTI from "./profiles/HTI.js";
 import AZE from "./profiles/AZE.js";
 import LIE from "./profiles/LIE.js";
 import BRB from "./profiles/BRB.js";
+import BLZ from "./profiles/BLZ.js";
 import ARM from "./profiles/ARM.js";
 import TKM from "./profiles/TKM.js";
 import MLI from "./profiles/MLI.js";
@@ -157,6 +158,7 @@ import SMR from "./profiles/SMR.js";
 import TLS from "./profiles/TLS.js";
 import BEN from "./profiles/BEN.js";
 import GAB from "./profiles/GAB.js";
+import MDV from "./profiles/MDV.js";
 
 export const COUNTRY_FLAG = {
   USA: "🇺🇸", CAN: "🇨🇦", EU: "🇪🇺", JPN: "🇯🇵", CHN: "🇨🇳",
@@ -191,6 +193,7 @@ export const COUNTRY_FLAG = {
   AZE: "🇦🇿",
   LIE: "🇱🇮",
   BRB: "🇧🇧",
+  BLZ: "🇧🇿",
   ARM: "🇦🇲",
   TKM: "🇹🇲",
   MLI: "🇲🇱",
@@ -208,6 +211,7 @@ export const COUNTRY_FLAG = {
   TLS: "🇹🇱",
   BEN: "🇧🇯",
   GAB: "🇬🇦",
+  MDV: "🇲🇻",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -345,6 +349,7 @@ export const COUNTRY_PROFILES = [
   AZE,
   LIE,
   BRB,
+  BLZ,
   ARM,
   TKM,
   MLI,
@@ -362,6 +367,7 @@ export const COUNTRY_PROFILES = [
   TLS,
   BEN,
   GAB,
+  MDV,
 ];
 
 // ===========================================================================

@@ -97,7 +97,7 @@ export default {
         "nameJa": "全機器",
         "riskLevel": "未分類",
         "description": "分類制度未整備のため、全医療機器が輸入許可の対象。製造国での承認状況に基づき個別審査。",
-        "examples": [],
+        "examples": ["注射器", "車椅子", "血圧計", "X線装置", "人工関節"],
         "approvalPath": "輸入許可"
       }
     ],
@@ -220,5 +220,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

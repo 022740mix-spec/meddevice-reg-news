@@ -81,8 +81,8 @@ export default {
     {
       "title": "Law on Medicines, Medical Devices and Health Products (2018)",
       "date": "2018",
-      "url": "https://everyone.org/guides/country?code=TL",
-      "description": "医薬品・医療機器・健康製品に関する包括法。輸入規制の法的根拠を提供。",
+      "url": "https://cdn.who.int/media/docs/default-source/searo/hsd/edm/timor-leste-medical-products-profile-2025.pdf?sfvrsn=cd81d8ad_3",
+      "description": "医薬品・医療機器・健康製品に関する包括法。輸入規制の法的根拠を提供。正式名称・公布番号は要確認（Jornal da Repúblicaで公開テキスト未確認）。WHOプロファイルに参照あり。",
       "category": "議会法"
     }
   ],
@@ -238,5 +238,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

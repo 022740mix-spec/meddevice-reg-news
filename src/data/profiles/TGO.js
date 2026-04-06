@@ -25,7 +25,7 @@ export default {
       "fullName": "Directorate of Pharmacy, Medicines and Laboratories",
       "localName": "Direction de la Pharmacie, du Médicament et des Laboratoires",
       "role": "NCA: 医薬品・医療機器の登録（AMM）・品質管理・輸入監視・薬事監視。保健省傘下。",
-      "url": "https://dpmltogo.org/ScriptsDPML1/homologations.php",
+      "url": "https://sante.gouv.tg/la-direction-des-pharmacies-du-medicament-et-des-laboratoires-du-ministere-de-la-sante-se-renforce/",
       "isPrimary": true
     },
     {
@@ -59,7 +59,7 @@ export default {
     {
       "title": "Arrêté N° 0021/2013/MS/CAB/SG — Organisation des services du Ministère de la Santé",
       "date": "2013-02",
-      "url": "https://dpml.tg/Scripts/mission.php",
+      "url": "https://amrh.nepad.org/amrh-countries/togo",
       "description": "保健省組織令。DPMLの役割・権限を規定。医薬品・医療機器のAMM（市販承認）審査体制を確立。",
       "category": "組織令"
     },
@@ -75,9 +75,9 @@ export default {
     {
       "title": "WHO協力的登録手続き（CRP）— トーゴ参加",
       "category": "国際協力",
-      "enacted": "2024",
+      "enacted": "2020",
       "url": "https://extranet.who.int/prequal/news/togo-joins-collaborative-registration-procedure",
-      "relevance": "トーゴがWHO CRP（SRA CRP及びPQ CRP IVDs）に参加。SRA承認済み製品やWHO事前認定品について、90営業日以内の迅速審査が可能。"
+      "relevance": "トーゴがWHO CRP（SRA CRP及びPQ CRP IVDs）に参加（2020年11月）。SRA承認済み製品やWHO事前認定品について、90営業日以内の迅速審査が可能。"
     }
   ],
   "classification": {
@@ -136,8 +136,8 @@ export default {
         "avgReviewTime": "要確認（公式情報で裏付け未取得。WHO CRP経由は90営業日以内が目標）",
         "avgReviewTimeSource": "https://extranet.who.int/prequal/news/togo-joins-collaborative-registration-procedure",
         "fee": "要確認（公式情報で裏付け未取得）",
-        "feeSource": "https://dpmltogo.org/ScriptsDPML1/homologations.php",
-        "url": "https://dpmltogo.org/ScriptsDPML1/homologations.php"
+        "feeSource": "https://service-public.gouv.tg/service/62197bd433c0179346497a51/sante-protection-sociale/enregistrement-des-medicaments",
+        "url": "https://service-public.gouv.tg/service/62197bd433c0179346497a51/sante-protection-sociale/enregistrement-des-medicaments"
       },
       {
         "name": "Autorisation spéciale d'importation",
@@ -155,7 +155,7 @@ export default {
   },
   "electronicSubmission": {
     "system": "紙ベース申請（service-public.gouv.tgで申請書ダウンロード可）",
-    "url": "https://service-public.gouv.tg/service/62197bd433c0179346497a51/sante-protection-sociale/enregistrement-des-medicaments",
+    "url": "https://service-public.gouv.tg/single-administration/61bb073566dc3337885b8da8",
     "description": "登録申請はservice-public.gouv.tgでPDF申請書をダウンロードし、印刷の上、DPML事務局に紙ベースで提出。専用の医療機器電子申請ポータルは未確認。",
     "mandatory": false
   },
@@ -170,7 +170,7 @@ export default {
     "adverseEventReporting": {
       "system": "Pharmacovigilance — DPML",
       "mandatory": true,
-      "url": "https://dpml.tg/ScriptsDPML1/pharmacovigilances.php",
+      "url": "https://amrh.nepad.org/amrh-countries/togo",
       "description": "DPML内のCentre National de Pharmacovigilance du Togo（CNPV TG）が薬事監視を管轄。WHO国際医薬品モニタリングプログラム（PIDM）に正式参加。標準報告フォームを整備、研修ワークショップを定期開催。医療機器特有のmatériovigilance制度は未確認。"
     },
     "recalls": {
@@ -235,14 +235,14 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2024",
-      "title": "WHO協力的登録手続き（CRP）への参加",
-      "description": "トーゴがWHO CRP（SRA CRP及びPQ CRP IVDs）に参加。SRA承認済み製品やWHO事前認定品について、90営業日以内の迅速審査が可能となる。"
+      "date": "2021-09",
+      "title": "AMA条約署名",
+      "description": "トーゴが2021年9月20日にアフリカ医薬品庁（AMA）設立条約に署名。AMA条約は2021年11月5日に発効済み。トーゴは批准は未了（2026年4月時点）。"
     },
     {
-      "date": "2024",
-      "title": "AMA条約の動向",
-      "description": "アフリカ医薬品庁（AMA）条約は2021年に発効。トーゴは署名済みだが批准は未了。批准に向けた動きが継続。"
+      "date": "2020-11",
+      "title": "WHO協力的登録手続き（CRP）への参加",
+      "description": "トーゴがWHO CRP（SRA CRP及びPQ CRP IVDs）に参加（2020年11月3日発表）。SRA承認済み製品やWHO事前認定品について、90営業日以内の迅速審査が可能となる。"
     },
     {
       "date": "2019",
@@ -251,5 +251,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

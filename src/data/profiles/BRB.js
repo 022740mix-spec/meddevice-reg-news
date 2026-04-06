@@ -61,7 +61,7 @@ export default {
     "title": "Health Services Act, Cap. 44",
     "originalTitle": "An Act to make provision for the health services of Barbados",
     "enacted": "1969",
-    "lastAmended": null,
+    "lastAmended": "2025（Health Services (Amendment) Act, 2025）",
     "url": "https://www.health.gov.bb/attachments/Health%20Services%20Act%20Cap.%2044%20(1)%20(1)%20(1).pdf",
     "description": "1969年制定（Act No. 38 of 1969）。保健省の管轄範囲を規定し、疾病の予防・治療、食品・医薬品の管理、薬局・製造施設の検査・許可、医療施設の監視を含む公衆衛生規制の基本法。Medical Council、Nursing Council、Pharmacy Council等の専門職規制評議会を設置。"
   },
@@ -205,6 +205,11 @@ export default {
   },
   "recentDevelopments": [
     {
+      "date": "2025-01-28",
+      "title": "Health Services (Amendment) Act, 2025 可決",
+      "description": "Health Services Act (Cap. 44) の改正法がHouse of Assemblyで2025年1月28日に可決、Senateで2025年4月23日に可決。行政罰（administrative penalties）の導入、公衆衛生違反の定義更新等を含む。医療機器規制に直接的な変更はないが、基本法の改正として記録。"
+    },
+    {
       "date": "2024-10",
       "title": "PAHO支援 WHO GBTセルフベンチマーキング実施",
       "description": "2024年10月8〜10日、ブリッジタウンでPAHO支援によるWHO Global Benchmarking Tool（GBT）セルフベンチマーキングを実施。National Regulatory System（NRS）とRegistration and Marketing Authorization（RMA）のMaturity Level 1-2を対象。規制近代化のロードマップ策定。"
@@ -221,5 +226,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

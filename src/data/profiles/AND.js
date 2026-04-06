@@ -7,7 +7,7 @@ export default {
   "flag": "🇦🇩",
   "legalSystemOverview": {
     "type": "EU非加盟・非EEA — EU関税同盟（工業製品）+ 国内法による医療機器規制",
-    "description": "アンドラはEU・EEAいずれにも加盟していないが、1990年のEU-アンドラ関税同盟協定によりHS第25〜97類の工業製品（医療機器を含む）は関税・数量制限なしで流通可能。CE マーキング付き機器はアンドラ市場で受け入れられる。国内法としてはLlei general de sanitat（1989年、改正あり）が保健制度の基本法であり、医薬品・医療機器はMinisteri de Salut（保健省）が所管。2024年に署名されたEU-アンドラ連合協定（Association Agreement）が批准されれば、将来的にEU acquis のさらなる国内法化が予定されている。国内にNotified Bodyは存在せず、EU/EEA域内NBを利用。",
+    "description": "アンドラはEU・EEAいずれにも加盟していないが、1990年のEU-アンドラ関税同盟協定によりHS第25〜97類の工業製品（医療機器を含む）は関税・数量制限なしで流通可能。CE マーキング付き機器はアンドラ市場で受け入れられる。国内法としてはLlei general de sanitat（1989年、改正あり）が保健制度の基本法であり、医薬品・医療機器はMinisteri de Salut（保健省）が所管。2023年12月に交渉妥結、2024年5月に法的テキストが最終化されたEU-アンドラ連合協定（Association Agreement）は、正式署名・批准を経てEU acquis のさらなる国内法化が予定されている。国内にNotified Bodyは存在せず、EU/EEA域内NBを利用。",
     "keyCharacteristics": [
       "EU非加盟・非EEA（関税同盟のみ）",
       "1990年EU-アンドラ関税同盟で工業製品が自由流通",
@@ -15,7 +15,7 @@ export default {
       "Ministeri de Salut（保健省）が医療機器・医薬品を所管",
       "Llei general de sanitat（1989年）が基本保健法",
       "国内NBなし — EU/EEA域内NBのCE証明書を承認",
-      "EU-アンドラ連合協定（2024年署名）批准後にEU acquis 国内法化を予定",
+      "EU-アンドラ連合協定（2023年交渉妥結・2024年法的テキスト最終化）正式署名・批准後にEU acquis 国内法化を予定",
       "カタルーニャ語ラベリング推奨（フランス語・スペイン語も通用）"
     ]
   },
@@ -91,7 +91,7 @@ export default {
       "title": "Llei 29/2021, del 28 d'octubre, qualificada de protecció de dades personals (LQPD)",
       "category": "データ保護",
       "enacted": "2021",
-      "url": "https://securiti.ai/andorra-personal-data-protection-law/",
+      "url": "https://www.portaljuridicandorra.ad/L2021029",
       "relevance": "EU GDPR相当のアンドラ個人データ保護法。医療機器の健康データ処理に適用。Agència Andorrana de Protecció de Dades（APDA）が監督。2022年5月17日施行。"
     },
     {
@@ -272,7 +272,7 @@ export default {
     {
       "date": "2024-05",
       "title": "EU-アンドラ連合協定の法的テキスト最終化",
-      "description": "2024年5月7日、ブリュッセルでEU-アンドラ連合協定（Association Agreement）の法的テキスト案が最終化されたことが共同記者会見で発表。批准後はEU acquis（医療機器規制を含む）のアンドラ国内法化が進む見込み。"
+      "description": "2024年5月7日、ブリュッセルでEU-アンドラ連合協定（Association Agreement）の法的テキスト案が最終化されたことが共同記者会見で発表。2023年12月に交渉妥結済みだが、正式署名は未了（2025年12月時点）。署名・批准後はEU acquis（医療機器規制を含む）のアンドラ国内法化が進む見込み。"
     },
     {
       "date": "2022-03",
@@ -286,5 +286,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

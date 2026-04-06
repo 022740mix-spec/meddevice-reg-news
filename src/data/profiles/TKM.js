@@ -59,9 +59,9 @@ export default {
     "title": "Law of Turkmenistan \"On Drug Provision\" (No. 319-V)",
     "originalTitle": "Türkmenistanyň Kanuny «Derman üpjünçiligi hakynda»",
     "enacted": "2016-01-12",
-    "lastAmended": "要確認",
-    "url": "https://minjust.gov.tm/ru/hukuk/merkezi/hukuk/295",
-    "description": "2016年1月12日制定。医薬品・医療機器の国家登録・製造・輸入・販売・品質管理を規定する基本法。医療機器は国家登録後にのみ使用・販売が可能。"
+    "lastAmended": "2022-08-04",
+    "url": "https://cis-legislation.com/document.fwx?rgn=84123",
+    "description": "2016年1月12日制定、2022年8月4日最終改正。医薬品・医療機器の国家登録・製造・輸入・販売・品質管理を規定する基本法。医療機器は国家登録後にのみ使用・販売が可能。"
   },
   "implementingRegulations": [
     {
@@ -219,5 +219,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

@@ -35,7 +35,7 @@ export default {
       "fullName": "Directorate of Pharmacy and Traditional Medicine",
       "localName": "Direction de la Pharmacie et de la Médecine Traditionnelle",
       "role": "医薬政策立案・規制枠組み策定。保健省傘下。ANRPへの規制機能移管が進行中。Arrêté n°024（2021年）を含む規制テキストの策定・公表を担当。",
-      "url": "https://www.sante.gouvne.org/direction-de-la-pharmacie-et-de-la-medecine-traditionnelle-dph-mt/",
+      "url": "https://www.dphmt-msp.ne/",
       "isPrimary": false
     },
     {
@@ -182,7 +182,7 @@ export default {
   },
   "electronicSubmission": {
     "system": "紙ベース申請（専用電子ポータルなし）",
-    "url": "https://www.sante.gouvne.org/direction-de-la-pharmacie-et-de-la-medecine-traditionnelle-dph-mt/",
+    "url": "https://www.dphmt-msp.ne/textes-legislatifs-et-reglementaires",
     "description": "登録申請は基本的に紙ベース・直接提出。専用の医療機器電子申請ポータルは未確認。SIPHN（医薬品施設情報システム）が薬局・卸売業者の管理に使用されているが、医療機器登録への適用は未確認。",
     "mandatory": false
   },
@@ -288,5 +288,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

@@ -7,11 +7,11 @@ export default {
   "flag": "🇲🇱",
   "legalSystemOverview": {
     "type": "政府審査型（医薬品規制の一部として運用）",
-    "description": "マリではDPM（Direction de la Pharmacie et du Médicament）が医薬品・医療機器を一元管轄。独立した医療機器法はなく、Décret 91-106/P-RM（1991年、医薬品販売規制）およびOrdonnance 00-039/P-RM（2000年、DPM設立）が法的根拠。UEMOA加盟国として域内医薬品規制調和（Règlement 06/2010/CM/UEMOA）に参加。AMM（市販承認）は5年有効、国立AMM委員会が年4回審査。LNS（国立衛生研究所）がISO/IEC 17025認定の品質管理を実施。AMA条約批准済み。",
+    "description": "マリではDPM（Direction de la Pharmacie et du Médicament）が医薬品・医療機器を一元管轄。独立した医療機器法はなく、Décret 04-557/P-RM（2004年、AMM制度確立）およびOrdonnance 00-039/P-RM（2000年、DPM設立）が法的根拠。UEMOA加盟国として域内医薬品規制調和（Règlement 06/2010/CM/UEMOA）に参加。AMM（市販承認）は5年有効、国立AMM委員会が年4回審査。LNS（国立衛生研究所）がISO/IEC 17025認定の品質管理を実施。AMA条約批准済み。",
     "keyCharacteristics": [
       "DPM（2000年設立）がNCA",
       "独立した医療機器法なし（医薬品規制の一部として運用）",
-      "Décret 91-106/P-RM（1991年）が薬事規制の基盤",
+      "Décret 04-557/P-RM（2004年）がAMM制度の基盤",
       "UEMOA域内規制調和に参加（Règlement 06/2010）",
       "AMM（市販承認）は5年有効",
       "国立AMM委員会が年4回（四半期ごと）審査",
@@ -65,12 +65,12 @@ export default {
     "notes": "UEMOA域内の医療機器ガイドライン（分類・市販承認・安全性能要件）の導入が進められている。"
   },
   "primaryLaw": {
-    "title": "Décret n° 91-106/P-RM du 15 mars 1991 portant organisation de l'exercice privé des professions sanitaires",
-    "originalTitle": "Décret portant organisation de l'exercice privé des professions sanitaires",
-    "enacted": "1991",
-    "lastAmended": "1992",
+    "title": "Décret n° 04-557/P-RM du 1er décembre 2004 instituant l'Autorisation de Mise sur le Marché des médicaments à usage humain et vétérinaire",
+    "originalTitle": "Décret instituant l'Autorisation de Mise sur le Marché des médicaments à usage humain et vétérinaire",
+    "enacted": "2004-12-01",
+    "lastAmended": "要確認",
     "url": "https://ordrepharmacien.ml/autorisation-de-mise-en-marche-de-medicaments/",
-    "description": "医療専門職の私的活動の組織に関する政令。医薬品の定義・販売規制・市販承認（AMM）制度の法的根拠。1992年Décret 92-050/P-RMで一部改正。"
+    "description": "2004年制定。マリ共和国におけるAMM（市販承認）制度を確立した政令。医薬品・滅菌医療機器・診断試薬・薬用植物を対象。有効期間5年・更新可能。保健大臣が国立AMM委員会の意見を踏まえ承認・拒否・停止・撤回を決定。1995年Décret 95-009/PG-RM（医薬品ビザ制度）を廃止。"
   },
   "implementingRegulations": [
     {
@@ -103,6 +103,13 @@ export default {
     }
   ],
   "relatedLaws": [
+    {
+      "title": "Décret n° 91-106/P-RM du 15 mars 1991 portant organisation de l'exercice privé des professions sanitaires",
+      "category": "医療専門職規制",
+      "enacted": "1991",
+      "url": "http://cnom.sante.gov.ml/docs/decret-details-exercice-prive-professions-sanitaires.pdf",
+      "relevance": "医療専門職の私的活動の組織に関する政令。医薬品の定義・販売規制の基盤。1992年Décret 92-050/P-RMで一部改正。AMM制度の上位法的根拠。"
+    },
     {
       "title": "Loi n° 09-015 du 26 juin 2009 portant institution de l'Assurance Maladie Obligatoire (AMO)",
       "category": "強制医療保険",
@@ -284,5 +291,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

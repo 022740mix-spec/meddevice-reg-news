@@ -61,7 +61,7 @@ export default {
     "title": "Agreement on Cooperation and Customs Union between the EEC and the Republic of San Marino",
     "originalTitle": "Accordo di cooperazione e di unione doganale tra la Comunità economica europea e la Repubblica di San Marino",
     "enacted": "1991",
-    "lastAmended": "2002",
+    "lastAmended": null,
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:22002A0328(01)",
     "description": "1991年12月16日ブリュッセルで署名、2002年4月1日発効。共通関税表第1〜97類の全品目について関税同盟を設立。サンマリノはEUの関税法規・農産物貿易規則・動植物衛生規則を適用する義務を負う。CEマーキング付き医療機器のサンマリノ市場流通の法的根拠。"
   },
@@ -81,11 +81,11 @@ export default {
       "category": "行政改革"
     },
     {
-      "title": "Legge 2004 n.165 — Disciplina dei medicinali",
+      "title": "Legge 2004 n.165 — Riforma del sistema sanitario (integrazione)",
       "date": "2004",
-      "url": "https://everyone.org/guides/country?code=SM",
-      "description": "医薬品法。サンマリノにおける医薬品の輸入・流通・使用を規制。医療製品全般の規制枠組みの一部を構成。",
-      "category": "医薬品法"
+      "url": "https://www.consigliograndeegenerale.sm/on-line/home/in-evidenza-in-home-page/scheda17172350.html",
+      "description": "保健社会衛生制度改革の補完法。Legge 69/2004と併せてAuthority Sanitariaの設立・保健計画策定（Art.4）等を規定。医薬品・医療製品の規制枠組みの一部を構成。",
+      "category": "保健制度改革"
     },
     {
       "title": "Piano Sanitario e Socio-Sanitario 2024-2026",
@@ -97,10 +97,10 @@ export default {
   ],
   "relatedLaws": [
     {
-      "title": "Legge 21 dicembre 2018 n.171 — Protezione dei dati personali",
+      "title": "Legge 21 dicembre 2018 n.171 — Protezione delle persone fisiche con riguardo al trattamento di dati personali",
       "category": "データ保護",
       "enacted": "2018",
-      "url": "https://www.garanteprivacy.sm/pub1/garante/en/meta/privacy-policy.html",
+      "url": "https://www.consigliograndeegenerale.sm/on-line/home/scheda17161069.html",
       "relevance": "GDPR準拠のサンマリノ個人データ保護法。医療機器の健康データ処理に適用。Garante per la protezione dei dati personali（データ保護当局）が監督。"
     },
     {
@@ -114,7 +114,7 @@ export default {
       "title": "Protocollo di cooperazione sanitaria Italia-San Marino (Piano d'Azione 2018-2020)",
       "category": "二国間協力",
       "enacted": "2018",
-      "url": "https://www.salute.gov.it/portale/rapportiInternazionali/dettaglioContenutiRapportiInternazionali.jsp?lingua=italiano&id=3024&area=rapporti&menu=vuoto",
+      "url": "https://www.esteri.sm/pub1/EsteriSM/en/dettaglio_accordi.html?idaccordo=04eb3ec1-c822-4a15-961e-6438da91e021",
       "relevance": "イタリア保健省とサンマリノ保健社会保障省の保健・医学分野協力アクションプラン。医療機器・医薬品・化粧品・殺生物剤の規制協力を含む。"
     }
   ],
@@ -301,5 +301,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };

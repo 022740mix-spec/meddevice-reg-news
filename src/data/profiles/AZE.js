@@ -117,8 +117,8 @@ export default {
     }
   ],
   "classification": {
-    "system": "リスクグループ制（I / 中リスク / 高リスク / 最高リスク）",
-    "basis": "保健省Decision No. 8（2024-05-21）に基づくリスクベース分類。使用目的・侵襲性・リスク度に応じて分類。EU/US分類とは異なる独自体系だが、参照元としてClass I/IIa/IIb/IIIの概念を使用。",
+    "system": "リスク度に応じた分類制（リスクグループI / 中リスク / 高リスク / 最高リスク）",
+    "basis": "保健省Decision No. 8（2024-05-21）に基づくリスクベース分類。使用目的・侵襲性・リスク度に応じて分類。公式には「中リスク (medium degree of risk)」「高リスク (high degree of risk)」「最高リスク (higher degree of risk)」の3段階＋リスクグループI。",
     "classes": [
       {
         "name": "Risk Group I",
@@ -301,5 +301,5 @@ export default {
     }
   ],
   "lastUpdated": "2026-04-06",
-  "verified": null
+  "verified": "2026-04-06"
 };
