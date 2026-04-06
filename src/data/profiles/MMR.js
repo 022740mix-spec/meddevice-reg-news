@@ -23,7 +23,7 @@ export default {
       "fullName": "Food and Drug Administration — Myanmar",
       "localName": "အစားအသောက်နှင့် ဆေးဝါးကွပ်ကဲရေးဦးစီးဌာန",
       "role": "医療機器の登録・輸入許可・市販後監視を統括",
-      "url": "https://www.fdamyanmar.gov.mm/",
+      "url": "https://www.fda.gov.mm/",
       "isPrimary": true
     },
     {
@@ -46,23 +46,37 @@ export default {
     "notes": "政治的不安定により、最新の法的定義の確認が困難な状況。"
   },
   "primaryLaw": {
-    "title": "National Drug Law 1992（国家医薬品法）",
+    "title": "National Drug Law (Law No. 7/1992)",
     "originalTitle": null,
-    "enacted": "1992",
-    "lastAmended": "要確認",
-    "url": "https://www.fdamyanmar.gov.mm/",
-    "description": "医薬品・医療機器規制の法的根拠。医療機器に特化した法令の整備状況は要確認。"
+    "enacted": "1992-10-30",
+    "lastAmended": "2014-04-01",
+    "url": "https://www.wipo.int/wipolex/en/legislation/details/6452",
+    "description": "国家医薬品法。FDA Myanmarの設立根拠。医薬品・医療機器の登録、輸入、製造、流通を規制。2014年に Law No. 22/2014 により改正。2023年にも登録手続きに関する Notification No. 161/2023 が発出。"
   },
   "implementingRegulations": [
     {
-      "title": "FDA Myanmar 医療機器登録手続き",
-      "date": "要確認",
-      "url": "https://www.fdamyanmar.gov.mm/",
-      "description": "医療機器の登録に必要な書類・手続きを規定。最新の運用状況は要確認。",
+      "title": "Law Amending the National Drug Law (Law No. 22/2014)",
+      "date": "2014-04-01",
+      "url": "https://www.wipo.int/wipolex/en/legislation/details/20412",
+      "description": "National Drug Law 1992 の改正法。登録手続き・規制要件の更新。",
+      "category": "法改正"
+    },
+    {
+      "title": "Notification No. 161/2023 — Amendment to Drug Registration Order",
+      "date": "2023-06-14",
+      "url": "https://www.myanmartradeportal.gov.mm/legal/421",
+      "description": "医薬品登録手続きに関する通知の改正（Notification No. 3/1993 の改正）。",
       "category": "登録手続き"
     }
   ],
   "relatedLaws": [
+    {
+      "title": "Export and Import Law 2012",
+      "category": "輸出入規制",
+      "enacted": "2012",
+      "url": "https://lic-public.wto.org/en/legislations/1165",
+      "relevance": "医療機器の輸入許可（Import Recommendation）の法的根拠の一部。Sub-section 4(c) および 13(b) が関連。"
+    },
     {
       "title": "Consumer Protection Law 2014",
       "category": "消費者保護",
@@ -128,32 +142,34 @@ export default {
     "totalProductCodes": null
   },
   "conformityAssessment": {
-    "overview": "医療機器はFDA Myanmarへの登録が必要とされるが、政治的不安定により運用状況は流動的。参照国認可（CE、FDA等）の保有が審査で考慮される。外国メーカーはローカル代理人の指定が必要。",
+    "overview": "医療機器はFDA Myanmarへの登録が必要とされるが、政治的不安定により運用状況は流動的。医療機器は Import Recommendation（IR）で管理される。参照国認可（CE、FDA等）の保有が審査で考慮される。外国メーカーはローカル代理人の指定が必要。",
     "routes": [
       {
-        "name": "FDA Myanmar Device Registration",
-        "nameJa": "FDA Myanmar 医療機器登録",
+        "name": "FDA Myanmar Import Recommendation (IR)",
+        "nameJa": "FDA Myanmar 輸入推奨書（IR）",
         "applicableClasses": [
           "Class A",
           "Class B",
           "Class C",
           "Class D"
         ],
-        "description": "FDA Myanmarに申請書類一式を提出。参照国認可証明、品質管理証明書等が必要。現在の審査状況は要確認。",
+        "description": "FDA Myanmarに申請。医療機器は医薬品と異なり Drug Registration Certificate（DRC）ではなく Import Recommendation（IR）が発行される。参照国認可証明、品質管理証明書等が必要。政治的不安定により現在の審査状況は流動的。",
         "subtypes": [
-          "新規登録",
-          "変更登録"
+          "新規申請",
+          "変更申請"
         ],
-        "avgReviewTime": "要確認",
-        "fee": "要確認",
-        "url": "https://www.fdamyanmar.gov.mm/"
+        "avgReviewTime": "要確認（政治的不安定により変動）",
+        "avgReviewTimeSource": null,
+        "fee": "要確認（公式情報で裏付け未取得）",
+        "feeSource": null,
+        "url": "https://www.fda.gov.mm/"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "要確認",
-    "url": null,
-    "description": "電子申請システムの導入状況は要確認。",
+    "system": "FDA e-Submission System",
+    "url": "https://esubmission.fda.gov.mm/eSubmissionGuide/drugUserGuide",
+    "description": "FDA Myanmarは e-Submission システムを運用しており、医薬品登録のオンライン申請が可能。医療機器への対応状況は要確認。",
     "mandatory": false
   },
   "udi": {
@@ -167,13 +183,13 @@ export default {
     "adverseEventReporting": {
       "system": "有害事象報告制度（FDA Myanmar）",
       "mandatory": true,
-      "url": "https://www.fdamyanmar.gov.mm/",
-      "description": "FDA Myanmarへの有害事象報告義務がある。現在の運用状況は要確認。"
+      "url": null,
+      "description": "FDA Myanmarへの有害事象報告義務がある。現在の運用状況は要確認。専用の報告ページは未確認。"
     },
     "recalls": {
       "authority": "FDA Myanmar",
       "description": "FDA Myanmarの命令または自主リコール。運用状況は要確認。",
-      "url": "https://www.fdamyanmar.gov.mm/"
+      "url": null
     },
     "surveillance": "FDA Myanmarによる市販後監視。政治的不安定により体制の実効性は要確認。"
   },
@@ -225,16 +241,21 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2021",
+      "date": "2014-04",
+      "title": "National Drug Law 改正（Law No. 22/2014）",
+      "description": "1992年制定の National Drug Law を改正。登録手続き・規制要件を更新。"
+    },
+    {
+      "date": "2021-02",
       "title": "軍事クーデターによる規制制度への影響",
       "description": "2021年2月の軍事クーデター以降、規制制度の発展が停滞。ASEAN AMDDとの整合作業も遅延。"
     },
     {
-      "date": "2024-2025",
-      "title": "規制運用の現状",
-      "description": "FDA Myanmarは基本的な登録・輸入許可業務を継続しているが、制度の拡充・国際整合は停滞中。最新の運用状況は要確認。"
+      "date": "2023-06",
+      "title": "Notification No. 161/2023 発出",
+      "description": "医薬品登録手続きに関する通知の改正（Notification No. 3/1993 の改正）。FDA Myanmar が登録手続きの運用を一部更新。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

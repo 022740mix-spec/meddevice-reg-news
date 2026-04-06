@@ -7,11 +7,11 @@ export default {
   "flag": "🇬🇷",
   "legalSystemOverview": {
     "type": "EU加盟国（MDR/IVDR 直接適用）",
-    "description": "ギリシャはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Law 4600/2019（改正版）が適用されている。EOF（国立医薬品機構 / National Organisation for Medicines）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
+    "description": "ギリシャはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法令として Joint Ministerial Decision DY8d/130648/2009（改正版）が適用されている。EOF（国立医薬品機構 / National Organisation for Medicines）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
     "keyCharacteristics": [
       "EU MDR/IVDR が直接適用",
       "EOF がNCAとして市場監視・ビジランスを担当",
-      "Law 4600/2019（改正版）による国内補完",
+      "Joint Ministerial Decision DY8d/130648/2009（改正版）による国内補完",
       "ラベリング・使用説明書はギリシャ語必須",
       "EOPYY（国立医療サービス提供機構）が保険償還を管理",
       "Ministerial Decisions による詳細規定"
@@ -59,21 +59,21 @@ export default {
     "enacted": "2017（EU採択）/ 2021年5月26日適用",
     "lastAmended": "2025（Regulation (EU) 2025/2457）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
-    "description": "EU MDR がギリシャに直接適用。Law 4600/2019（改正版）が国内補完法。"
+    "description": "EU MDR がギリシャに直接適用。Joint Ministerial Decision DY8d/130648/2009（改正版）が国内補完法令。"
   },
   "implementingRegulations": [
     {
-      "title": "Law 4600/2019（改正版）",
-      "date": "2019（原版）/ 2021改正",
-      "url": "https://www.eof.gr/",
-      "description": "MDR/IVDR 国内補完法。NCA権限・言語要件・登録義務・罰則を規定。",
-      "category": "国内補完法"
+      "title": "Joint Ministerial Decision DY8d/130648/2009（改正版）",
+      "date": "2009（原版）/ 2017改正（YA A4g/88159/2017）",
+      "url": "https://www.eof.gr/νομικό-πλαίσιο/",
+      "description": "MDR/IVDR 国内補完法令。Directive 93/42/EEC を国内法化し、MDR/IVDR適用に合わせて改正。NCA権限・言語要件・登録義務・臨床試験規定（第15条）を規定。",
+      "category": "共同省令"
     },
     {
-      "title": "Ministerial Decision DY8d/Γ.Π.οικ.130648/2009（改正版）",
-      "date": "2009（原版）/ 随時改正",
-      "url": "https://www.eof.gr/",
-      "description": "医療機器の市場監視・ビジランス手続の詳細規定。",
+      "title": "Ministerial Decision YA A4g/88159/2017",
+      "date": "2017",
+      "url": "https://www.eof.gr/category/iatrotexnologika/nomothesia-iatrotexnologikon/",
+      "description": "DY8d/130648/2009 の改正省令。MDR/IVDR の国内適用を明確化。",
       "category": "省令"
     }
   ],
@@ -164,13 +164,15 @@ export default {
         "subtypes": [],
         "avgReviewTime": "EUプロファイル参照",
         "fee": "Notified Body により異なる",
-        "url": "https://www.eof.gr/"
+        "url": "https://www.eof.gr/category/iatrotexnologika/diadikasies-dikaiologitika-iatrotexnologika/",
+        "avgReviewTimeSource": null,
+        "feeSource": null
       }
     ]
   },
   "electronicSubmission": {
     "system": "EUDAMED + EOF 国内登録",
-    "url": "https://www.eof.gr/",
+    "url": "https://www.eof.gr/category/iatrotexnologika/adeia-dynatotitas-parago/",
     "description": "EUDAMED + EOF 国内登録システム。EUDAMED 4モジュール義務化: 2026年5月28日。",
     "mandatory": true
   },
@@ -183,15 +185,15 @@ export default {
   },
   "postMarket": {
     "adverseEventReporting": {
-      "system": "EU Vigilance System — EOF",
+      "system": "EU Vigilance System — EOF（Λευκή Κάρτα / White Card）",
       "mandatory": true,
-      "url": "https://www.eof.gr/",
-      "description": "重篤有害事象をEOFに報告義務。MDR Article 87-92。"
+      "url": "https://www.eof.gr/λευκή-κάρτα/",
+      "description": "重篤有害事象をEOFに報告義務。MDR Article 87-92。White Card（Λευκή Κάρτα）制度による報告。報告先: vigilancematerial@eof.gr。"
     },
     "recalls": {
       "authority": "EOF",
-      "description": "FSCA/FSNはEOFに通知。",
-      "url": "https://www.eof.gr/"
+      "description": "FSCA/FSNはEOFに通知。リコール情報は公開アーカイブで閲覧可能。",
+      "url": "https://www.eof.gr/category/iatrotexnologika/anakliseis-iatrotexnologikon-iatrotexnologika/"
     },
     "surveillance": "EU MDR PMS/PSUR/PMCF要件がそのまま適用。"
   },
@@ -201,7 +203,7 @@ export default {
     "name": "Certificate of Free Sale (CFS)",
     "description": "EOF がCFSを発行。",
     "processingTime": "要確認",
-    "url": "https://www.eof.gr/"
+    "url": "https://www.eof.gr/category/iatrotexnologika/diadikasies-dikaiologitika-iatrotexnologika/"
   },
   "reimbursement": {
     "system": "EOPYY（国民健康保険）— 社会保険制度",
@@ -257,6 +259,6 @@ export default {
       "description": "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

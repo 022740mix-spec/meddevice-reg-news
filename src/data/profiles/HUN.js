@@ -7,10 +7,10 @@ export default {
   "flag": "🇭🇺",
   "legalSystemOverview": {
     "type": "EU加盟国（MDR/IVDR 直接適用）",
-    "description": "ハンガリーはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Government Decree 4/2009 (III.17.) EüM（医療機器に関する保健大臣令）が改正適用されている。OGYÉI（国立薬学・食品衛生研究所 / National Institute of Pharmacy and Nutrition）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
+    "description": "ハンガリーはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Government Decree 4/2009 (III.17.) EüM（医療機器に関する保健大臣令）が改正適用されている。2023年8月1日にOGYÉIがNNK（国立公衆衛生センター）と統合し、NNGYK（国立公衆衛生・薬学センター / National Public Health and Pharmacy Centre）がNCA（National Competent Authority）として市場監視・ビジランス・臨床試験監督を担う。",
     "keyCharacteristics": [
       "EU MDR/IVDR が直接適用",
-      "OGYÉI がNCAとして市場監視・ビジランスを担当",
+      "NNGYK（旧OGYÉI、2023年8月統合）がNCAとして市場監視・ビジランスを担当",
       "Government Decree 4/2009 (III.17.) EüM 改正による国内補完",
       "ラベリング・使用説明書はハンガリー語必須",
       "NEAK（国民健康保険基金管理局）が保険償還を管理",
@@ -19,11 +19,11 @@ export default {
   },
   "authorities": [
     {
-      "name": "OGYÉI",
-      "fullName": "National Institute of Pharmacy and Nutrition",
-      "localName": "Országos Gyógyszerészeti és Élelmezés-egészségügyi Intézet",
-      "role": "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理",
-      "url": "https://www.ogyei.gov.hu/",
+      "name": "NNGYK",
+      "fullName": "National Public Health and Pharmacy Centre",
+      "localName": "Nemzeti Népegészségügyi és Gyógyszerészeti Központ",
+      "role": "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理（2023年8月にOGYÉIを統合）",
+      "url": "https://ogyei.gov.hu/medical_devices",
       "isPrimary": true
     },
     {
@@ -35,17 +35,17 @@ export default {
       "isPrimary": false
     },
     {
-      "name": "EMMI / BM",
+      "name": "BM",
       "fullName": "Ministry of Interior (Health policy)",
-      "localName": "Belügyminisztérium（Egészségügyért felelős）",
-      "role": "医療政策・法制度策定",
-      "url": "https://www.kormany.hu/",
+      "localName": "Belügyminisztérium",
+      "role": "医療政策・法制度策定（NNGYKの監督省庁）",
+      "url": "https://www.kormany.hu/belugyminiszterium",
       "isPrimary": false
     }
   ],
   "notifiedBodies": {
     "system": "EU MDR Notified Body 制度（ハンガリー国内に指定NB無し — 他EU加盟国のNBを利用）",
-    "description": "2026年4月時点でハンガリー国内にMDR/IVDR指定のNotified Bodyは無い。製造業者は他EU加盟国のNBを利用。",
+    "description": "2026年4月時点でハンガリー国内にMDR/IVDR指定のNotified Bodyは無い。製造業者はドイツ・オランダ等他EU加盟国のNBを利用。",
     "bodies": []
   },
   "deviceDefinition": {
@@ -59,20 +59,20 @@ export default {
     "enacted": "2017（EU採択）/ 2021年5月26日適用",
     "lastAmended": "2025（Regulation (EU) 2025/2457）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
-    "description": "EU MDR がハンガリーに直接適用。Government Decree 4/2009 (III.17.) EüM 改正が国内補完法。"
+    "description": "EU MDR がハンガリーに直接適用。Government Decree 4/2009 (III.17.) EüM 改正が国内補完法。2023年8月よりNNGYKがNCA。"
   },
   "implementingRegulations": [
     {
       "title": "Government Decree 4/2009 (III.17.) EüM on Medical Devices（改正版）",
       "date": "2009（原版）/ 2021改正",
-      "url": "https://www.ogyei.gov.hu/",
+      "url": "https://ogyei.gov.hu/mdrivdr_rendelet_szerinti_szabalyozas",
       "description": "MDR/IVDR 国内補完法令。NCA権限・言語要件・登録義務・罰則を規定。",
       "category": "国内補完法令"
     },
     {
       "title": "Act CLIV of 1997 on Health（改正版）",
       "date": "1997（原版）/ 随時改正",
-      "url": "https://www.kormany.hu/",
+      "url": "https://njt.hu/jogszabaly/1997-154-00-00",
       "description": "保健法。医療機器の使用に関する一般的枠組み。",
       "category": "保健法"
     }
@@ -152,7 +152,7 @@ export default {
     "totalProductCodes": "EU CND コード"
   },
   "conformityAssessment": {
-    "overview": "EU MDR に基づく適合性評価がそのまま適用。国内追加の市販前審査なし。OGYÉI への事業者・機器登録が必要。",
+    "overview": "EU MDR に基づく適合性評価がそのまま適用。国内追加の市販前審査なし。NNGYK（旧OGYÉI）への事業者・機器登録が必要。",
     "routes": [
       {
         "name": "EU MDR Conformity Assessment",
@@ -160,18 +160,20 @@ export default {
         "applicableClasses": [
           "全クラス"
         ],
-        "description": "EU MDR Annex IX〜XI。詳細はEUプロファイル参照。",
+        "description": "EU MDR Annex IX〜XI。詳細はEUプロファイル参照。流通業者はNNGYK（旧OGYÉI）への登録が必要。",
         "subtypes": [],
         "avgReviewTime": "EUプロファイル参照",
         "fee": "Notified Body により異なる",
-        "url": "https://www.ogyei.gov.hu/"
+        "url": "https://ogyei.gov.hu/forgalmazoi_regisztracio",
+        "avgReviewTimeSource": null,
+        "feeSource": null
       }
     ]
   },
   "electronicSubmission": {
-    "system": "EUDAMED + OGYÉI 国内登録",
-    "url": "https://www.ogyei.gov.hu/",
-    "description": "EUDAMED + OGYÉI 国内登録。EUDAMED 4モジュール義務化: 2026年5月28日。",
+    "system": "EUDAMED + NNGYK 国内登録",
+    "url": "https://ogyei.gov.hu/forgalmazoi_regisztracio",
+    "description": "EUDAMED + NNGYK（旧OGYÉI）国内登録。流通業者はNOR（国内登録データベース）に登録必須。EUDAMED 4モジュール義務化: 2026年5月28日。",
     "mandatory": true
   },
   "udi": {
@@ -183,29 +185,29 @@ export default {
   },
   "postMarket": {
     "adverseEventReporting": {
-      "system": "EU Vigilance System — OGYÉI",
+      "system": "EU Vigilance System — NNGYK",
       "mandatory": true,
-      "url": "https://www.ogyei.gov.hu/",
-      "description": "重篤有害事象をOGYÉIに報告義務。MDR Article 87-92。"
+      "url": "https://ogyei.gov.hu/varatlan_esemeny_jelentes",
+      "description": "重篤有害事象をNNGYK（旧OGYÉI）に報告義務。MDR Article 87-92。製造業者・輸入業者・流通業者・医療従事者・一般市民向け報告フォームあり。"
     },
     "recalls": {
-      "authority": "OGYÉI",
-      "description": "FSCA/FSNはOGYÉIに通知。",
-      "url": "https://www.ogyei.gov.hu/"
+      "authority": "NNGYK",
+      "description": "FSCA/FSNはNNGYKに通知。制限製品リスト公開。",
+      "url": "https://ogyei.gov.hu/Forgalmazasban_korlatozott_termekek"
     },
     "surveillance": "EU MDR PMS/PSUR/PMCF要件がそのまま適用。"
   },
   "certificateOfFreeSale": {
     "available": true,
-    "issuingAuthority": "OGYÉI",
+    "issuingAuthority": "NNGYK",
     "name": "Certificate of Free Sale (CFS)",
-    "description": "OGYÉI がCFSを発行。",
+    "description": "NNGYK（旧OGYÉI）がCFSを発行。",
     "processingTime": "要確認",
-    "url": "https://www.ogyei.gov.hu/"
+    "url": "https://ogyei.gov.hu/formanyomtatvanyok_orvostechnika"
   },
   "reimbursement": {
     "system": "国民健康保険基金（単一支払者制度）",
-    "authority": "NEAK / OGYÉI",
+    "authority": "NEAK / NNGYK",
     "description": "ハンガリーは単一支払者型の国民健康保険制度（NEAK）。医療機器は「gyógyászati segédeszköz」（治療補助器具）カテゴリーで償還管理。NEAK が償還カテゴリー・患者自己負担率を決定。高額病院用機器は別途調達。",
     "codingSystems": [
       "NEAK 償還コード",
@@ -214,7 +216,7 @@ export default {
     "url": "https://www.neak.gov.hu/"
   },
   "marketingRules": {
-    "authority": "OGYÉI",
+    "authority": "NNGYK",
     "description": "MDR Article 7 虚偽広告禁止。国内広告規制法が併存。",
     "keyRules": [
       "ハンガリー語ラベリング・IFU必須",
@@ -249,7 +251,12 @@ export default {
     {
       "date": "2021",
       "title": "MDR 適用開始",
-      "description": "2021年5月26日よりEU MDRが適用開始。OGYÉI が準備を完了。"
+      "description": "2021年5月26日よりEU MDRが適用開始。"
+    },
+    {
+      "date": "2023-08",
+      "title": "OGYÉI がNNGYKに統合",
+      "description": "2023年8月1日、Government Decree No. 333/2023 (VII.20.) に基づきOGYÉI（国立薬学・食品衛生研究所）がNNK（国立公衆衛生センター）と統合し、NNGYK（国立公衆衛生・薬学センター）が発足。医療機器規制権限はNNGYKに承継。"
     },
     {
       "date": "2024",
@@ -257,6 +264,6 @@ export default {
       "description": "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

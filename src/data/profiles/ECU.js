@@ -7,13 +7,13 @@ export default {
   "flag": "🇪🇨",
   "legalSystemOverview": {
     "type": "中央集権制（Centralized system）",
-    "description": "エクアドルの医療機器規制は ARCSA（Agencia Nacional de Regulación, Control y Vigilancia Sanitaria）が管轄する。Resolution ARCSA-DE-026-2016-YMIH が医療機器の衛生登録と管理に関する主要な技術衛生規範。GHTF/IMDRF の分類原則に準拠した Class I / IIa / IIb / III の4クラス分類を採用。認知国（米国・カナダ・豪州・日本・韓国・EU）で登録済みの Class I/II 機器には簡易経路あり。",
+    "description": "エクアドルの医療機器規制は ARCSA（Agencia Nacional de Regulación, Control y Vigilancia Sanitaria）が管轄する。Resolution ARCSA-DE-026-2016-YMIH が医療機器の衛生登録と管理に関する主要な技術衛生規範。リスクベースの4クラス分類（Class I / II / III / IV）を採用。認知国（米国・カナダ・豪州・日本・韓国・EU）で登録済みの Class I/II 機器には簡易経路あり。登録有効期間は5年。",
     "keyCharacteristics": [
       "ARCSA による一元的な規制体制",
-      "GHTF ベースの4クラス分類（Class I / IIa / IIb / III）",
-      "Resolution ARCSA-DE-026-2016-YMIH が主要な規制根拠",
+      "リスクベースの4クラス分類（Class I / II / III / IV）",
+      "Resolution ARCSA-DE-026-2016-YMIH が主要な規制根拠（2018年・2023年に改正）",
       "認知国登録済み機器に対する簡易登録経路",
-      "Registro Sanitario の有効期限10年",
+      "Registro Sanitario の有効期限5年",
       "UDI（IMDRF 準拠）のトレーサビリティ要件を導入"
     ]
   },
@@ -42,15 +42,15 @@ export default {
   },
   "deviceDefinition": {
     "legalDefinition": "ARCSA の技術衛生規範に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。GHTF/IMDRF 定義に準拠。",
-    "scope": "体外診断用医薬品（IVD）も規制対象。",
-    "notes": "Resolution ARCSA-DE-026-2016-YMIH（2018年に ARCSA-DE-030-2018-JCGO で改正）が詳細な定義・適用範囲を規定。"
+    "scope": "体外診断用医薬品（IVD）も規制対象。IVD は別途の分類規則が適用される。",
+    "notes": "Resolution ARCSA-DE-026-2016-YMIH（2018年に ARCSA-DE-030-2018-JCGO で改正、2023年に ARCSA-DE-2023-033-AKRG で改正）が詳細な定義・適用範囲を規定。"
   },
   "primaryLaw": {
-    "title": "Ley Orgánica de Salud（組織的保健法）",
-    "originalTitle": "Ley Orgánica de Salud",
+    "title": "Ley Orgánica de Salud（Ley 67）",
+    "originalTitle": "Ley Orgánica de Salud, Ley 67, Registro Oficial Suplemento 423 de 22-dic.-2006",
     "enacted": "2006",
-    "lastAmended": "随時改正",
-    "url": "https://www.salud.gob.ec/",
+    "lastAmended": "2022（最終改正）",
+    "url": "https://www.salud.gob.ec/wp-content/uploads/2017/03/LEY-ORG%C3%81NICA-DE-SALUD4.pdf",
     "description": "エクアドルにおける保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。"
   },
   "implementingRegulations": [
@@ -58,7 +58,7 @@ export default {
       "title": "Resolution ARCSA-DE-026-2016-YMIH（医療機器の衛生登録に関する技術衛生規範）",
       "date": "2016",
       "url": "https://www.controlsanitario.gob.ec/documentos-vigentes/",
-      "description": "医療機器の衛生登録・管理に関する主要な技術衛生規範。分類規則・登録手続き・必要書類・施設要件を包括的に規定。",
+      "description": "医療機器の衛生登録・管理に関する主要な技術衛生規範。分類規則・登録手続き・必要書類・施設要件を包括的に規定。Registro Oficial Suplemento 921（2017年1月12日）に掲載。",
       "category": "包括規制"
     },
     {
@@ -72,20 +72,20 @@ export default {
       "title": "Resolution ARCSA-DE-2023-033-AKRG（2023年改正）",
       "date": "2023",
       "url": "https://www.controlsanitario.gob.ec/wp-content/uploads/downloads/2023/11/Resolucion_ARCSA-DE-2023-033-AKRG_reforma-a-la-Normativa-Tecnica-Sanitaria-para-el-registro-sanitario-de-Dispositivos-medicos-de-uso-humano-y-de-los-establecimientos-en-donde-se-fabrican.pdf",
-      "description": "ヒト用医療機器の衛生登録および製造施設に関する技術衛生規範の改正。",
+      "description": "ヒト用医療機器の衛生登録および製造施設に関する技術衛生規範の改正を公布。",
       "category": "改正"
     }
   ],
   "relatedLaws": [],
   "classification": {
-    "system": "GHTF ベースの4クラス分類（Class I / IIa / IIb / III）",
-    "basis": "リスクベース（GHTF/IMDRF 分類規則を参照）",
+    "system": "リスクベースの4クラス分類（Class I / II / III / IV）",
+    "basis": "リスクベース（Reglamento y Control Sanitario de Dispositivos Médicos の分類規則に基づく）",
     "classes": [
       {
         "name": "Class I",
         "nameJa": "クラスI",
         "riskLevel": "低リスク",
-        "description": "低リスク医療機器。一般的制御で安全性を確保。",
+        "description": "低リスク医療機器。一般的制御で安全性を確保。認知国登録済みの場合は簡易経路あり。",
         "examples": [
           "弾性包帯",
           "手動外科器具",
@@ -94,10 +94,10 @@ export default {
         "approvalPath": "衛生登録（簡易経路あり: 認知国登録済み）"
       },
       {
-        "name": "Class IIa",
-        "nameJa": "クラスIIa",
-        "riskLevel": "低〜中リスク",
-        "description": "低中リスク医療機器。",
+        "name": "Class II",
+        "nameJa": "クラスII",
+        "riskLevel": "中リスク",
+        "description": "中リスク医療機器。認知国登録済みの場合は簡易経路あり。",
         "examples": [
           "超音波診断装置",
           "歯科用充填材",
@@ -106,9 +106,9 @@ export default {
         "approvalPath": "衛生登録（簡易経路あり: 認知国登録済み）"
       },
       {
-        "name": "Class IIb",
-        "nameJa": "クラスIIb",
-        "riskLevel": "中〜高リスク",
+        "name": "Class III",
+        "nameJa": "クラスIII",
+        "riskLevel": "中高リスク",
         "description": "中高リスク医療機器。詳細な技術文書が必要。",
         "examples": [
           "人工呼吸器",
@@ -118,10 +118,10 @@ export default {
         "approvalPath": "衛生登録（標準経路）"
       },
       {
-        "name": "Class III",
-        "nameJa": "クラスIII",
+        "name": "Class IV",
+        "nameJa": "クラスIV",
         "riskLevel": "高リスク",
-        "description": "最高リスク医療機器。最も厳格な審査。",
+        "description": "最高リスク医療機器。最も厳格な審査。臨床データの提出が求められる場合あり。",
         "examples": [
           "人工心臓弁",
           "冠動脈ステント",
@@ -132,15 +132,15 @@ export default {
     ],
     "rules": [
       {
-        "id": "GHTF/IMDRF 分類規則",
-        "description": "GHTF の分類原則に基づき、意図する用途・侵襲性・使用期間・エネルギー源等でクラスを決定。ARCSA の指示に従い分類。",
-        "url": "https://www.controlsanitario.gob.ec/"
+        "id": "ARCSA 分類規則（Article 16）",
+        "description": "Reglamento y Control Sanitario de Dispositivos Médicos y Dentales（2009年）の Article 16 に基づく分類規則。意図する用途・侵襲性・使用期間・エネルギー源等でクラスを決定。IVD は Article 23 に別途の分類規則あり。",
+        "url": "https://www.controlsanitario.gob.ec/documentos-vigentes/"
       }
     ],
     "totalProductCodes": "要確認（ARCSA 独自のコード体系は未公開）"
   },
   "conformityAssessment": {
-    "overview": "ARCSA が申請書類を直接審査。CFS、CE 証明書/FDA 認可、技術文書、QMS 文書等を評価。認知国登録済みの Class I/II には簡易経路あり。",
+    "overview": "ARCSA が申請書類を直接審査。CFS、CE 証明書/FDA 認可、技術文書、QMS 文書等を評価。認知国登録済みの Class I/II には簡易経路あり。登録有効期間5年。",
     "routes": [
       {
         "name": "Inscripción de Registro Sanitario de Dispositivos Médicos",
@@ -148,15 +148,17 @@ export default {
         "applicableClasses": [
           "全クラス"
         ],
-        "description": "CFS、CE/FDA 認証文書、技術文書、製品ラベリング、QMS 文書を提出。品質・安全性・有効性の要件を満たすことで登録発行。有効期限10年。",
+        "description": "CFS、CE/FDA 認証文書、技術文書、製品ラベリング（スペイン語）、GMP/ISO 認証、製品仕様書、安定性報告書、生体適合性試験（該当時）等を提出。品質・安全性・有効性の要件を満たすことで登録発行。有効期限5年。",
         "subtypes": [
           {
             "name": "簡易登録（認知国登録済み Class I/II）",
             "description": "米国・カナダ・豪州・日本・韓国・EU で登録済みの Class I / II 機器は簡易登録経路を利用可能。必要書類の一部が省略される。"
           }
         ],
-        "avgReviewTime": "要確認（クラスにより異なる。数ヶ月〜）",
-        "fee": "要確認（ARCSA 料金表を参照）",
+        "avgReviewTime": "約2〜6ヶ月（クラスにより異なる）",
+        "avgReviewTimeSource": "https://arazygroup.com/medical-device-registration-ecuador/",
+        "fee": "USD 905（新規登録）、USD 185（更新）、USD 95（変更）",
+        "feeSource": "https://arazygroup.com/medical-device-registration-ecuador/",
         "url": "https://www.gob.ec/arcsa/tramites/inscripcion-registro-sanitario-dispositivos-medicos-fabricacion-nacional-extranjera"
       }
     ]
@@ -192,7 +194,7 @@ export default {
     "available": true,
     "issuingAuthority": "ARCSA",
     "name": "Certificado de Libre Venta / Free Sale Certificate",
-    "description": "登録申請時に原産国の規制当局からの CFS/CFG/Export Certificate の提出が必要。米国 FDA の Certificate of Free Sale も受容。",
+    "description": "登録申請時に原産国の規制当局からの CFS/CFG/Export Certificate の提出が必要（公証・領事認証済み）。米国 FDA の Certificate of Free Sale も受容。",
     "processingTime": "要確認",
     "url": "https://www.controlsanitario.gob.ec/"
   },
@@ -221,7 +223,7 @@ export default {
   "internationalStandards": {
     "iso13485": {
       "accepted": true,
-      "notes": "ISO 13485 認証は QMS 証明として参照される。BPM（Buenas Prácticas de Manufactura）の要件にも関連。"
+      "notes": "ISO 13485 認証は QMS 証明として参照される。GMP/ISO 認証書（公証済み）が登録申請の必須書類。"
     },
     "iso14971": {
       "accepted": true,
@@ -233,20 +235,25 @@ export default {
     },
     "iec60601": {
       "accepted": true,
-      "notes": "医用電気機器の安全規格として参照。"
+      "notes": "医用電気機器の安全規格として参照。IEC 60601 認証が技術文書の一部として要求される場合あり。"
     },
-    "others": []
+    "others": [
+      {
+        "name": "ISO 10993",
+        "description": "生体適合性試験。該当する機器に対して提出が求められる。"
+      }
+    ]
   },
   "recentDevelopments": [
+    {
+      "date": "2025-09",
+      "title": "Resolution ARCSA-DE-026-2016-YMIH の代替改正案（borrador）の公開",
+      "description": "ARCSA は医療機器の衛生登録・管理に関する技術衛生規範（2016年規範）の代替改正案を公開。条文の全面的な見直し・更新が予定されている。"
+    },
     {
       "date": "2026-01",
       "title": "Resolution ARCSA-DE-2025-053-DASP — 医療用ガスの GMP",
       "description": "2026年1月に官報公布。医療用ガスの製造適正基準（GMP）を規定。"
-    },
-    {
-      "date": "2025",
-      "title": "Resolution ARCSA-DE-026-2016-YMIH の代替改正案策定中",
-      "description": "ARCSA は医療機器の衛生登録・管理に関する技術衛生規範（2016年規範）の代替改正案（borrador）を策定中。条文の全面的な見直し・更新が予定されている。"
     },
     {
       "date": "2023",
@@ -254,6 +261,6 @@ export default {
       "description": "ヒト用医療機器の衛生登録および製造施設に関する技術衛生規範の改正を公布。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

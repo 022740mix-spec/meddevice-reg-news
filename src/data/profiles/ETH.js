@@ -11,9 +11,10 @@ export default {
     "keyCharacteristics": [
       "EFDAによる一元的な規制体制",
       "Proclamation No. 1112/2019が根拠法",
-      "医療機器の登録制度を整備中",
-      "WHO事前認定（PQ）製品の優先的受入れ",
-      "規制能力の強化を国際支援のもと推進"
+      "非IVD医療機器: Class I/II/III/IV、IVD: Class A/B/C/Dの4クラス分類",
+      "WHO事前認定（PQ）製品・SRA承認品は審査簡略化の対象",
+      "登録有効期間5年",
+      "ISO 13485適合証明が必要"
     ]
   },
   "authorities": [
@@ -32,105 +33,127 @@ export default {
     "bodies": []
   },
   "deviceDefinition": {
-    "legalDefinition": "Proclamation No. 1112/2019および関連規則に定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置等。詳細な定義は要確認。",
-    "scope": "IVD（体外診断用医療機器）も適用対象。",
-    "notes": "定義と適用範囲の国際基準への整合を推進中。"
+    "legalDefinition": "Proclamation No. 1112/2019および関連ガイドラインに定義。疾病の診断・治療・予防・監視・軽減等を目的とする機器・装置・器具・材料・ソフトウェア等で、主たる意図する作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+    "scope": "IVD（体外診断用医療機器）も適用対象。非IVD医療機器とIVDで別の分類体系を採用。",
+    "notes": "GHTF/IMDRF定義との整合を推進中。"
   },
   "primaryLaw": {
     "title": "Food and Medicine Administration Proclamation No. 1112/2019",
     "originalTitle": null,
     "enacted": "2019",
     "lastAmended": null,
-    "url": "https://www.efda.gov.et/",
-    "description": "EFDAの設立根拠法。食品・医薬品・医療機器・化粧品の規制権限をEFDAに付与。"
+    "url": "https://www.efda.gov.et/wp-content/uploads/2020/06/Food-and-Medicine-Administration-Proclamation-1112.pdf",
+    "description": "EFDAの設立根拠法。食品・医薬品・医療機器・化粧品の規制権限をEFDAに付与。医療機器は登録・市販認可を取得してからでなければ供給・販売できないことを規定。"
   },
   "implementingRegulations": [
     {
-      "title": "EFDA Medical Device Registration Directive",
+      "title": "Guideline for Registration of Medical Devices (2014)",
+      "date": "2014",
+      "url": "http://www.efda.gov.et/publication/guideline-for-registration-of-medical-devices-2014/",
+      "description": "医療機器の登録手続・分類・技術文書要件等の詳細を規定するEFDAガイドライン。非IVD医療機器のClass I～IV分類を規定。",
+      "category": "医療機器"
+    },
+    {
+      "title": "General Guidelines for Medical Devices Marketing Authorization",
       "date": "要確認",
-      "url": "https://www.efda.gov.et/",
-      "description": "医療機器の登録手続・分類等の詳細を規定する指令。整備中。",
+      "url": "https://www.efda.gov.et/wp-content/uploads/2022/01/General-Guidelines-for-Medical-devices-Marketing-Authorization.pdf",
+      "description": "医療機器の市販認可に関する一般ガイドライン。QMS要件・適合性評価・ラベリング等を規定。",
+      "category": "医療機器"
+    },
+    {
+      "title": "Guideline for Classification of Medical Devices other than IVD Medical Devices",
+      "date": "要確認",
+      "url": "http://www.efda.gov.et/wp-content/uploads/2021/07/Guideline-for-Classification-of-Medical-devices-other-than-IVD-Medical-devices_EFDA.pdf",
+      "description": "非IVD医療機器のClass I/II/III/IV分類ルールを規定する分類ガイドライン。",
       "category": "医療機器"
     }
   ],
   "relatedLaws": [],
   "classification": {
-    "system": "要確認（4クラス制を検討中）",
-    "basis": "リスクベース。GHTF/IMDRF分類ルールへの整合を推進中。詳細は要確認。",
+    "system": "非IVD: 4クラス制（Class I/II/III/IV）、IVD: 4クラス制（Class A/B/C/D）",
+    "basis": "リスクベース。意図する用途・侵襲性・使用期間・局所/全身影響等に基づく。非IVD医療機器はローマ数字（I～IV）、IVDはアルファベット（A～D）で分類。",
     "classes": [
       {
-        "name": "Class A",
-        "nameJa": "クラスA（想定）",
+        "name": "Class I",
+        "nameJa": "クラスI",
         "riskLevel": "低",
-        "description": "低リスク機器。",
+        "description": "低リスク機器。EFDA登録が必要。",
         "examples": [
           "弾性包帯",
-          "聴診器"
+          "聴診器",
+          "舌圧子"
         ],
         "approvalPath": "EFDA登録"
       },
       {
-        "name": "Class B",
-        "nameJa": "クラスB（想定）",
+        "name": "Class II",
+        "nameJa": "クラスII",
         "riskLevel": "中低",
-        "description": "中程度の低リスク機器。",
+        "description": "中程度の低リスク機器。EFDA登録が必要。",
         "examples": [
           "血圧計",
-          "補聴器"
+          "補聴器",
+          "超音波診断装置"
         ],
         "approvalPath": "EFDA登録"
       },
       {
-        "name": "Class C",
-        "nameJa": "クラスC（想定）",
+        "name": "Class III",
+        "nameJa": "クラスIII",
         "riskLevel": "中高",
-        "description": "中高リスク機器。",
+        "description": "中高リスク機器。EFDA登録＋臨床評価が必要。",
         "examples": [
           "人工呼吸器",
-          "透析装置"
+          "透析装置",
+          "骨固定プレート"
         ],
         "approvalPath": "EFDA登録＋臨床評価"
       },
       {
-        "name": "Class D",
-        "nameJa": "クラスD（想定）",
+        "name": "Class IV",
+        "nameJa": "クラスIV",
         "riskLevel": "高",
-        "description": "最高リスク機器。",
+        "description": "最高リスク機器。最も厳格な審査。施設査察が必要となる場合がある。",
         "examples": [
-          "人工心臓弁"
+          "人工心臓弁",
+          "埋込み型除細動器"
         ],
-        "approvalPath": "EFDA登録＋臨床データ"
+        "approvalPath": "EFDA登録＋臨床データ＋施設査察"
       }
     ],
     "rules": [
-      "分類制度の詳細は整備中",
-      "GHTF/IMDRF分類ルールへの整合を目指す"
+      "非IVD: Class I/II/III/IVのローマ数字分類",
+      "IVD: Class A/B/C/Dのアルファベット分類",
+      "GHTF/IMDRF分類ルールに準拠"
     ],
     "totalProductCodes": "要確認"
   },
   "conformityAssessment": {
-    "overview": "医療機器のEFDA登録が必要。先行認可国（CE/FDA/WHO PQ等）の承認を参考にした審査。規制枠組みは整備中。",
+    "overview": "全クラスの医療機器にEFDA登録・市販認可が必要。WHO PQ品・SRA承認品はデスクトップ審査による簡略化あり。登録有効期間5年。外国製造業者はLocal Authorized Representativeの指名が必要。",
     "routes": [
       {
         "name": "EFDA Registration",
         "nameJa": "EFDA登録",
         "applicableClasses": [
-          "全クラス"
+          "Class I",
+          "Class II",
+          "Class III",
+          "Class IV"
         ],
-        "description": "EFDAに登録申請書類を提出。CFS・技術文書・QMS証明等を審査。WHO PQ製品は優先処理される場合がある。",
+        "description": "EFDAに登録申請書類を提出。技術文書・CFS・QMS証明（ISO 13485）・ラベリング・適合宣言書等を審査。WHO PQ品・SRA承認品はデスクトップ審査が適用される場合がある。高リスク機器には施設査察（オンサイト）が必要となる場合がある。",
         "subtypes": [],
-        "avgReviewTime": "要確認",
-        "avgReviewTimeSource": null,
-        "fee": "要確認",
-        "feeSource": null,
-        "url": "https://www.efda.gov.et/"
+        "avgReviewTime": "低リスク: 約1カ月、中～高リスク: 最大6カ月",
+        "avgReviewTimeSource": "https://arazygroup.com/ivd-medical-device-registration-ethiopia/",
+        "fee": "新規登録: USD 65 / Minor Variation: USD 15 / Major Variation: USD 20 / 年次更新: USD 20。施設査察: デスクトップ USD 3,500 / オンサイト USD 7,500",
+        "feeSource": "https://arazygroup.com/ivd-medical-device-registration-ethiopia/",
+        "url": "http://www.efda.gov.et/publication/guideline-for-registration-of-medical-devices-2014/"
       }
     ]
   },
   "electronicSubmission": {
     "system": "要確認",
     "url": "https://www.efda.gov.et/",
-    "description": "電子申請システムの整備状況は要確認。",
+    "description": "電子申請システムの整備状況は要確認。現時点では紙ベースの申請が主流とみられる。",
     "mandatory": false
   },
   "udi": {
@@ -205,8 +228,13 @@ export default {
       "date": "2019",
       "title": "Proclamation No. 1112/2019の制定",
       "description": "EFDAの設立根拠法であるProclamation No. 1112/2019が制定。医療機器を含む包括的な規制枠組みを整備。"
+    },
+    {
+      "date": "2022",
+      "title": "医療機器市販認可ガイドラインの公表",
+      "description": "EFDAが「General Guidelines for Medical Devices Marketing Authorization」を公表し、非IVD医療機器のClass I～IV分類に基づく登録制度を体系化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

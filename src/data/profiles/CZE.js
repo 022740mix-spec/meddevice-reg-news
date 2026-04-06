@@ -23,7 +23,7 @@ export default {
       "fullName": "State Institute for Drug Control",
       "localName": "Státní ústav pro kontrolu léčiv",
       "role": "NCA: 医療機器の市場監視・ビジランス・臨床試験監督・登録管理",
-      "url": "https://www.sukl.cz/",
+      "url": "https://sukl.gov.cz/",
       "isPrimary": true
     },
     {
@@ -45,14 +45,14 @@ export default {
   ],
   "notifiedBodies": {
     "system": "EU MDR Notified Body 制度（チェコ国内に指定NB）",
-    "description": "EZÚ（Elektrotechnický zkušební ústav, NB 1014）がMDR/IVDR指定Notified Bodyとして活動。",
+    "description": "EZÚ（Elektrotechnický zkušební ústav, NB 1014）がMDR指定Notified Bodyとして活動（2021年5月26日付指定）。IVDR指定は未確認。",
     "bodies": [
       {
         "nb": "1014",
         "name": "EZÚ (Elektrotechnický zkušební ústav)",
         "url": "https://www.ezu.cz/",
         "mdr": true,
-        "ivdr": true
+        "ivdr": false
       }
     ]
   },
@@ -73,14 +73,14 @@ export default {
     {
       "title": "Act No. 375/2022 Sb. on Medical Devices (Zákon o zdravotnických prostředcích)",
       "date": "2022-12-01",
-      "url": "https://www.sukl.cz/",
-      "description": "MDR/IVDR 国内補完法。NCA権限・罰則・言語要件・登録義務・臨床試験手続。",
+      "url": "https://www.zakonyprolidi.cz/cs/2022-375",
+      "description": "MDR/IVDR 国内補完法。NCA権限・罰則・言語要件・登録義務・臨床試験手続。2022年12月22日施行。従来の Act No. 268/2014 Sb. を置換。",
       "category": "国内補完法"
     },
     {
       "title": "Decree No. 377/2022 Sb.",
       "date": "2022-12-01",
-      "url": "https://www.sukl.cz/",
+      "url": "https://www.zakonyprolidi.cz/cs/2022-377",
       "description": "Act No. 375/2022 Sb. の施行細則。登録手続の具体的規定。",
       "category": "施行細則"
     }
@@ -172,13 +172,15 @@ export default {
         "subtypes": [],
         "avgReviewTime": "EUプロファイル参照",
         "fee": "Notified Body により異なる",
-        "url": "https://www.sukl.cz/"
+        "url": "https://sukl.gov.cz/prumysl/zdravotnicke-prostredky/",
+        "avgReviewTimeSource": null,
+        "feeSource": null
       }
     ]
   },
   "electronicSubmission": {
     "system": "EUDAMED + SÚKL RZPRO",
-    "url": "https://www.sukl.cz/",
+    "url": "https://sukl.gov.cz/prumysl/zdravotnicke-prostredky/informacni-systemy/registr-zdravotnickych-prostredku/",
     "description": "EUDAMED + SÚKL 国内登録データベース（RZPRO）。EUDAMED 4モジュール義務化: 2026年5月28日。",
     "mandatory": true
   },
@@ -193,13 +195,13 @@ export default {
     "adverseEventReporting": {
       "system": "EU Vigilance System — SÚKL",
       "mandatory": true,
-      "url": "https://www.sukl.cz/",
-      "description": "重篤有害事象をSÚKLに報告義務。MDR Article 87-92。"
+      "url": "https://sukl.gov.cz/prumysl/zdravotnicke-prostredky/vigilance/",
+      "description": "重篤有害事象をSÚKLに報告義務。MDR Article 87-92。Act No. 375/2022 Sb. 第48-50条。"
     },
     "recalls": {
       "authority": "SÚKL",
       "description": "FSCA/FSNはSÚKLに通知。",
-      "url": "https://www.sukl.cz/"
+      "url": "https://sukl.gov.cz/prumysl/zdravotnicke-prostredky/vigilance/hlaseni-bezpecnostniho-napravneho-opatreni-v-terenu-zdravotnicke-prostredky/"
     },
     "surveillance": "EU MDR PMS/PSUR/PMCF要件がそのまま適用。"
   },
@@ -209,7 +211,7 @@ export default {
     "name": "Certificate of Free Sale (CFS)",
     "description": "SÚKL がCFSを発行。",
     "processingTime": "要確認",
-    "url": "https://www.sukl.cz/"
+    "url": "https://sukl.gov.cz/prumysl/zdravotnicke-prostredky/"
   },
   "reimbursement": {
     "system": "公的健康保険制度（法定保険）",
@@ -219,7 +221,7 @@ export default {
       "SÚKL 償還カテゴリーコード",
       "CZ-DRG"
     ],
-    "url": "https://www.sukl.cz/"
+    "url": "https://sukl.gov.cz/prumysl/zdravotnicke-prostredky/kategorizace-a-uhradova-regulace/"
   },
   "marketingRules": {
     "authority": "SÚKL",
@@ -265,6 +267,6 @@ export default {
       "description": "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

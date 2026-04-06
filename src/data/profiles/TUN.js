@@ -7,14 +7,14 @@ export default {
   "flag": "🇹🇳",
   "legalSystemOverview": {
     "type": "中央集権制（Centralized system）",
-    "description": "チュニジアの医療機器規制は薬事・医療機器局（DPM: Direction de la Pharmacie et du Médicament）が管轄する。DPM は保健省傘下の機関であり、医薬品および医療機器の市場参入を規制する。2014年制定の Loi n° 2014-19（医療機器に関する法律）が医療機器規制の根幹法で、リスクベースの4クラス分類を採用。EU MDDの影響を強く受けた制度設計となっている。",
+    "description": "チュニジアの医療機器規制はDPM（Direction de la Pharmacie et du Médicament）が管轄する。DPMは保健省傘下の機関であり、医薬品および医療機器の市場参入を規制する。Loi n° 2014-19（医療機器に関する法律）が医療機器規制の根幹法。公式な医療機器分類制度は存在せず、輸入品は商務省の技術検査によりカテゴリA/B/Cに分類される。CE マーク取得機器は登録が簡素化される。",
     "keyCharacteristics": [
-      "DPM（薬事・医療機器局）による一元的な規制体制",
+      "DPM（Direction de la Pharmacie et du Médicament）による一元的な規制体制",
       "Loi n° 2014-19 に基づく医療機器固有の法規制",
-      "EU MDD に準拠した4クラス分類（Class I / IIa / IIb / III）",
+      "公式な分類制度なし（商務省がA/B/Cカテゴリに分類）",
       "CE マーク取得機器は登録が簡素化される",
       "ローカル代理人（mandataire local）の指定が必須",
-      "CFS（自由販売証明書）の提出が要求される"
+      "登録有効期間5年、輸入許可1年"
     ]
   },
   "authorities": [
@@ -49,7 +49,7 @@ export default {
     "title": "Loi n° 2014-19 du 20 mars 2014 relative aux dispositifs médicaux",
     "originalTitle": "القانون عدد 19 لسنة 2014 المتعلق بالأجهزة الطبية",
     "enacted": "2014",
-    "lastAmended": "随時改正",
+    "lastAmended": null,
     "url": "http://www.santetunisie.rns.tn/",
     "description": "チュニジアにおける医療機器規制の根幹法。医療機器の定義、分類、市場参入要件、市販後監視、違反時の罰則等を規定。"
   },
@@ -79,80 +79,72 @@ export default {
     }
   ],
   "classification": {
-    "system": "EU MDD 準拠4クラス分類（Class I / IIa / IIb / III）",
-    "basis": "リスクベース（EU MDD 分類規則を参照）",
+    "system": "公式分類制度なし（商務省による技術検査カテゴリ A/B/C）",
+    "basis": "商務省の技術検査基準による輸入カテゴリ分類。リスクベースの医療機器固有の分類制度は未整備。",
     "classes": [
       {
-        "name": "Class I",
-        "nameJa": "クラスI",
+        "name": "Category A",
+        "nameJa": "カテゴリA",
         "riskLevel": "低リスク",
-        "description": "低リスク医療機器。一般的制御で安全性を確保。",
+        "description": "低リスクの輸入医療機器。商務省の技術検査で分類。",
         "examples": [
           "弾性包帯",
           "手動外科器具",
           "聴診器"
         ],
-        "approvalPath": "自己宣言 + 登録届出"
+        "approvalPath": "DPM 登録"
       },
       {
-        "name": "Class IIa",
-        "nameJa": "クラスIIa",
-        "riskLevel": "中低リスク",
-        "description": "中低リスク医療機器。CE マークまたは同等の適合性証明が必要。",
+        "name": "Category B",
+        "nameJa": "カテゴリB",
+        "riskLevel": "中リスク",
+        "description": "中リスクの輸入医療機器。",
         "examples": [
           "超音波診断装置",
           "手術用手袋",
           "歯科用充填材"
         ],
-        "approvalPath": "DPM 登録（CE 証明書ベース）"
+        "approvalPath": "DPM 登録"
       },
       {
-        "name": "Class IIb",
-        "nameJa": "クラスIIb",
-        "riskLevel": "中高リスク",
-        "description": "中高リスク医療機器。より詳細な技術文書の提出が必要。",
-        "examples": [
-          "人工呼吸器",
-          "血液透析装置",
-          "放射線治療装置"
-        ],
-        "approvalPath": "DPM 登録（詳細審査）"
-      },
-      {
-        "name": "Class III",
-        "nameJa": "クラスIII",
+        "name": "Category C",
+        "nameJa": "カテゴリC",
         "riskLevel": "高リスク",
-        "description": "高リスク医療機器。CE マーク（EC Full QA + Design Examination）等のフル適合性評価が必要。",
+        "description": "高リスクの輸入医療機器。より厳格な検査。",
         "examples": [
           "人工心臓弁",
           "冠動脈ステント",
           "埋込み型除細動器"
         ],
-        "approvalPath": "DPM 詳細審査"
+        "approvalPath": "DPM 登録（詳細審査）"
       }
     ],
     "rules": [
       {
-        "id": "EU MDD 分類規則参照",
-        "description": "DPM は EU MDD（93/42/EEC）の分類規則を参照して機器のクラスを決定する。",
+        "id": "商務省技術検査基準",
+        "description": "輸入医療機器は商務省の技術検査によりカテゴリA/B/Cに分類される。医療機器固有のリスクベース分類制度（EU MDD型等）は現時点で未整備。",
         "url": "http://www.santetunisie.rns.tn/"
       }
     ],
-    "totalProductCodes": "要確認（DPM 独自のコード体系の公開情報なし）"
+    "totalProductCodes": "要確認"
   },
   "conformityAssessment": {
-    "overview": "DPM は CE マークを持つ機器に対し、書類審査ベースの登録を実施。CE マークのない機器については、同等の適合性証明を求める。",
+    "overview": "DPM は全医療機器に対し登録（AMC: Autorisation de Mise sur le marché / Commercialisation）を要求。CE マークを持つ機器は審査が簡素化される。登録有効期間は5年、輸入許可は1年。",
     "routes": [
       {
-        "name": "DPM Medical Device Registration",
-        "nameJa": "DPM 医療機器登録",
+        "name": "DPM Marketing Authorization (AMC)",
+        "nameJa": "DPM 販売許可（AMC）",
         "applicableClasses": [
-          "全クラス"
+          "Category A",
+          "Category B",
+          "Category C"
         ],
-        "description": "CE 証明書、Free Sale Certificate、技術文書、ラベリング情報等を提出して登録。Class III はより詳細な審査。",
+        "description": "DPM のウェブサイト（dpm.tn）で予約後、登録申請書類一式を提出。専門医療委員会および国立医薬品管理研究所による評価を経て、技術委員会が審査。承認後、手数料を支払い許可証を取得。CE マーク取得機器は審査が円滑化。登録有効期間5年（更新可）。輸入許可は1年（更新可）。",
         "subtypes": [],
-        "avgReviewTime": "3〜12ヶ月（クラスにより異なる）",
-        "fee": "要確認（DPM 料金表は随時改定）",
+        "avgReviewTime": "約30日（書類完備の場合）",
+        "avgReviewTimeSource": "https://www.wikiprocedure.com/index.php/Tunisia_-_Registration_of_Medical_Device_or_In_Vitro_Devices_(IVDs)",
+        "fee": "要確認",
+        "feeSource": null,
         "url": "http://www.santetunisie.rns.tn/"
       }
     ]
@@ -236,10 +228,15 @@ export default {
   "recentDevelopments": [
     {
       "date": "2025",
-      "title": "Loi n° 2014-19 の施行細則の整備推進",
-      "description": "DPM は2014年法の施行細則の整備を継続。分類規則の明確化と電子申請システムの導入に注力中。"
+      "title": "DPM による医療機器登録制度の運用強化",
+      "description": "DPM は医療機器登録制度の運用を継続。dpm.tn ポータル経由の予約制申請システムを運用中。リスクベース分類制度（EU MDD型）の正式導入は引き続き検討段階。"
+    },
+    {
+      "date": "2014",
+      "title": "Loi n° 2014-19 の制定",
+      "description": "医療機器に関する包括的法律を制定。医療機器の定義・市場参入要件・市販後監視・違反時の罰則等を規定。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

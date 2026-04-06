@@ -7,9 +7,9 @@ export default {
   "flag": "🇲🇦",
   "legalSystemOverview": {
     "type": "中央集権制（Centralized system）",
-    "description": "モロッコの医療機器規制はDMP（Direction du Médicament et de la Pharmacie）が管轄してきたが、現在AMMPS（Agence Marocaine des Médicaments et des Produits de Santé）への移行が進行中。Loi 84-12（医療機器に関する法律）が根拠法。EU MDD/MDRに準拠した4クラス分類（Class I/IIa/IIb/III）を採用し、CE認証やFDA認証を広く認知・参照する規制アプローチ。",
+    "description": "モロッコの医療機器規制はDMP（Direction du Médicament et de la Pharmacie）が管轄してきたが、2024年にAMMPS（Agence Marocaine des Médicaments et des Produits de Santé）が設立・稼働を開始し、規制機能の移管が進行中。2025年6月にはSGG（政府事務総局）から産業施設許可権限もAMMPSに移管された。Loi 84-12（医療機器に関する法律、2013年公布）が根拠法。EU MDD/MDRに準拠した4クラス分類（Class I/IIa/IIb/III）を採用し、CE認証やFDA認証を広く認知・参照する規制アプローチ。",
     "keyCharacteristics": [
-      "DMP → AMMPS への規制当局移行が進行中",
+      "DMP → AMMPS への規制当局移行が進行中（AMMPSは2024年稼働開始）",
       "EU MDD準拠のリスクベース4クラス分類（Class I/IIa/IIb/III）",
       "Loi 84-12が医療機器の基本法",
       "CE認証・FDA認証を広く認知・参照",
@@ -19,18 +19,18 @@ export default {
   },
   "authorities": [
     {
-      "name": "DMP",
-      "fullName": "Direction du Médicament et de la Pharmacie",
-      "localName": "مديرية الأدوية والصيدلة",
-      "role": "医療機器の登録・市販後監視・査察。現行の主管当局（AMMPS移行まで）。",
-      "url": "https://www.sante.gov.ma/",
-      "isPrimary": true
-    },
-    {
       "name": "AMMPS",
       "fullName": "Agence Marocaine des Médicaments et des Produits de Santé",
       "localName": "الوكالة المغربية للأدوية والمنتجات الصحية",
-      "role": "DMPの機能を継承する新規制当局。設立・移行作業中。",
+      "role": "医療機器・医薬品の登録・市販後監視・査察。DMPの機能を継承した独立規制機関（Loi 10-22に基づき設立）。2024年稼働開始。",
+      "url": "https://ammps.sante.gov.ma",
+      "isPrimary": true
+    },
+    {
+      "name": "DMP（旧）",
+      "fullName": "Direction du Médicament et de la Pharmacie",
+      "localName": "مديرية الأدوية والصيدلة",
+      "role": "AMMPSの前身。機能はAMMPSに移管中。",
       "url": "https://www.sante.gov.ma/",
       "isPrimary": false
     }
@@ -48,10 +48,10 @@ export default {
   "primaryLaw": {
     "title": "Loi 84-12 relative aux dispositifs médicaux",
     "originalTitle": "القانون رقم 84-12 المتعلق بالأجهزة الطبية",
-    "enacted": "2016",
+    "enacted": "2013",
     "lastAmended": null,
     "url": "https://www.sante.gov.ma/",
-    "description": "医療機器に関する基本法。医療機器の定義・分類・登録・市販後監視・広告規制等を規定。施行令・施行規則により詳細が補完される。"
+    "description": "医療機器に関する基本法。Bulletin Officiel No. 6188（2013年9月19日発行）に掲載。医療機器の定義・分類・登録・市販後監視・広告規制等を規定。施行令（Décret n° 2-14-607、2014年9月公布、BO 6292 bis掲載）により詳細が補完される。"
   },
   "implementingRegulations": [
     {
@@ -238,16 +238,21 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2024",
-      "title": "AMMPS（Agence Marocaine des Médicaments et des Produits de Santé）の設立・移行",
-      "description": "DMPからAMMPSへの規制当局移行が進行中。AMMPSはより独立した規制機関として、医薬品・医療機器の規制を一元的に担う予定。"
+      "date": "2025-06",
+      "title": "AMMPS が産業施設許可権限をSGGから移管",
+      "description": "2025年6月16日より、AMMPSが産業製薬施設・卸売流通業者の許可権限をSGG（政府事務総局）から引き継ぎ。規制機能の一元化が進展。"
     },
     {
-      "date": "2016",
-      "title": "Loi 84-12の制定",
-      "description": "医療機器に関する包括的な法律であるLoi 84-12が制定。4クラス分類・登録制度・市販後監視等の法的枠組みを確立。"
+      "date": "2024",
+      "title": "AMMPS（Agence Marocaine des Médicaments et des Produits de Santé）稼働開始",
+      "description": "Loi 10-22に基づき設立されたAMMPSが稼働開始。DMPから機能を移管し、医薬品・医療機器の規制を独立した公的機関として一元的に担う。"
+    },
+    {
+      "date": "2013",
+      "title": "Loi 84-12の公布",
+      "description": "医療機器に関する包括的な法律であるLoi 84-12が公布（BO 6188、2013年9月19日）。4クラス分類・登録制度・市販後監視等の法的枠組みを確立。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

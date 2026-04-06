@@ -7,10 +7,10 @@ export default {
   "flag": "🇺🇦",
   "legalSystemOverview": {
     "type": "独自制度（EU MDR への段階的整合化を推進中）",
-    "description": "ウクライナは独自の医療機器規制制度を有するが、EU加盟を目指し、EU MDR/IVDR への整合化（approximation）を段階的に進めている。2024年の Technical Regulation on Medical Devices（Cabinet of Ministers Resolution No. 927）により、EU MDR に大幅に整合した新規制が導入された。保健省（MOH）が政策策定、Derzhliktehnoservis（国立医療技術サービス）等が技術評価を担う。",
+    "description": "ウクライナは独自の医療機器規制制度を有するが、EU加盟を目指し、EU MDR/IVDR への整合化（approximation）を段階的に進めている。現行は2013年の技術規則（閣議決定第753/754/755号、EU指令93/42/EEC等に基づく）が適用されるが、EU MDR に整合した新技術規則が策定中。保健省（MOH）が政策策定、Держлікслужба（国家医薬品管理局/SMDC）が市場監視を担う。",
     "keyCharacteristics": [
-      "EU MDR への段階的整合化（approximation）を推進",
-      "Technical Regulation on Medical Devices (2024) で新枠組み導入",
+      "EU MDR/IVDR への段階的整合化（approximation）を推進",
+      "現行は技術規則（2013年、EU指令ベース）。MDR整合の新規則を策定中",
       "保健省（MOH）が規制政策を管轄",
       "市販前の国家登録（State Registration）が必要",
       "ラベリング・使用説明書はウクライナ語必須",
@@ -27,9 +27,9 @@ export default {
       "isPrimary": true
     },
     {
-      "name": "Derzhliktehnoservis",
-      "fullName": "State Service on Medicines and Drug Control",
-      "localName": "Державна служба з лікарських засобів та контролю за наркотиками",
+      "name": "SMDC",
+      "fullName": "State Service of Ukraine on Medicines and Drugs Control",
+      "localName": "Державна служба України з лікарських засобів та контролю за наркотиками (Держлікслужба)",
       "role": "市場監視・品質管理・査察",
       "url": "https://www.dls.gov.ua/",
       "isPrimary": true
@@ -53,36 +53,36 @@ export default {
   ],
   "notifiedBodies": {
     "system": "国家登録制度（Notified Body制度はまだ導入途上）",
-    "description": "ウクライナでは現在、EU型のNotified Body制度は完全には導入されていない。Technical Regulation (2024) に基づき、適合性評価機関（CAB）の認定・指定の枠組みが整備中。現在は国家登録（State Registration）が主要な市場参入手続。",
+    "description": "ウクライナでは現在、EU型のNotified Body制度は完全には導入されていない。技術規則（CMU No. 753）に基づき適合性評価機関（CAB）の認定・指定の枠組みが整備されている。国家登録（State Registration）が主要な市場参入手続。",
     "bodies": []
   },
   "deviceDefinition": {
-    "legalDefinition": "Technical Regulation on Medical Devices (2024) に基づく定義。EU MDR Article 2(1) に大幅に整合。人体への診断・治療・予防等を目的とする器具・装置・ソフトウェア等。",
-    "scope": "IVD は別途のTechnical Regulationで規定。SaMD も対象。",
-    "notes": "2024年の新Technical Regulationにより、EU MDR の定義に大幅に近づいた。"
+    "legalDefinition": "技術規則（CMU No. 753, 2013年）に基づく定義。EU指令93/42/EECに整合。人体への診断・治療・予防等を目的とする器具・装置・ソフトウェア等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
+    "scope": "IVD は別途の技術規則（CMU No. 754）で規定。SaMD も対象。",
+    "notes": "EU MDR 整合の新技術規則が策定中であり、定義も更新される予定。"
   },
   "primaryLaw": {
-    "title": "Law of Ukraine 'On Medical Devices' (No. 2042-VIII)",
-    "originalTitle": "Закон України «Про медичні вироби»",
-    "enacted": "2017",
+    "title": "Technical Regulation on Medical Devices (CMU Resolution No. 753)",
+    "originalTitle": "Технічний регламент щодо медичних виробів",
+    "enacted": "2013",
     "lastAmended": "2024",
-    "url": "https://zakon.rada.gov.ua/",
-    "description": "ウクライナの医療機器規制の基本法。Technical Regulations がこの法律に基づき制定される。"
+    "url": "https://zakon.rada.gov.ua/laws/show/753-2013-%D0%BF",
+    "description": "2013年閣議決定第753号で承認された医療機器の技術規則。EU指令93/42/EECに基づく分類・適合性評価・ラベリング等を規定。EU MDR 整合の新技術規則が策定中だが、現行は本規則が適用。関連規則として IVD（第754号）、能動埋込み型機器（第755号）がある。"
   },
   "implementingRegulations": [
     {
-      "title": "Technical Regulation on Medical Devices (CMU Resolution No. 927)",
-      "date": "2024",
-      "url": "https://www.kmu.gov.ua/",
-      "description": "EU MDR に整合した新しい技術規則。分類・適合性評価・ラベリング等を規定。",
+      "title": "Technical Regulation on IVD Medical Devices (CMU Resolution No. 754)",
+      "date": "2013",
+      "url": "https://zakon.rada.gov.ua/laws/show/754-2013-%D0%BF",
+      "description": "体外診断用医療機器の技術規則。EU指令98/79/ECに基づく。",
       "category": "技術規則"
     },
     {
-      "title": "Procedure for State Registration of Medical Devices (CMU Resolution No. 1370)",
-      "date": "2019（改正2024）",
-      "url": "https://www.kmu.gov.ua/",
-      "description": "医療機器の国家登録手続。",
-      "category": "登録手続"
+      "title": "Technical Regulation on Active Implantable Medical Devices (CMU Resolution No. 755)",
+      "date": "2013",
+      "url": "https://zakon.rada.gov.ua/laws/show/755-2013-%D0%BF",
+      "description": "能動埋込み型医療機器の技術規則。EU指令90/385/EECに基づく。",
+      "category": "技術規則"
     },
     {
       "title": "Wartime Simplification Measures",
@@ -110,7 +110,7 @@ export default {
   ],
   "classification": {
     "system": "4クラス制（Class I / IIa / IIb / III）— EU MDR 整合",
-    "basis": "Technical Regulation (2024) に基づき、EU MDR Annex VIII に整合した分類規則を適用。",
+    "basis": "技術規則（CMU No. 753, 2013年）に基づき、EU指令93/42/EEC Annex IX の分類規則を適用。MDR Annex VIII 整合の新規則を策定中。",
     "classes": [
       {
         "name": "Class I",
@@ -162,12 +162,12 @@ export default {
       }
     ],
     "rules": [
-      "EU MDR Annex VIII に整合した分類規則（Technical Regulation 2024）"
+      "技術規則（CMU No. 753）による分類規則（EU指令93/42/EEC Annex IX ベース）"
     ],
     "totalProductCodes": "要確認"
   },
   "conformityAssessment": {
-    "overview": "国家登録（State Registration）が市場参入の主要手続。Technical Regulation (2024) に基づき EU MDR 整合の適合性評価経路を段階的に導入中。CE マーキング製品に対する簡素化経路も存在。",
+    "overview": "国家登録（State Registration）が市場参入の主要手続。技術規則（CMU No. 753/754/755, 2013年）に基づく適合性評価を実施。CE マーキング製品に対する簡素化経路も存在。EU MDR 整合の新制度を策定中。",
     "routes": [
       {
         "name": "State Registration",
@@ -175,14 +175,14 @@ export default {
         "applicableClasses": [
           "全クラス"
         ],
-        "description": "MOH/SEC による技術文書審査・国家登録。CE マーキング取得済み製品は書類審査の簡素化あり。",
+        "description": "MOH/SEC による技術文書審査・国家登録。技術規則（CMU No. 753）に基づく適合性評価。CE マーキング取得済み製品は書類審査の簡素化あり。",
         "subtypes": [
           {
             "name": "簡素化登録（CE マーキング製品）",
             "description": "EU で CE マーキングを取得した製品は、追加臨床データ無しの書類審査で登録可能。"
           }
         ],
-        "avgReviewTime": "90〜180日（通常）/ 30〜60日（簡素化）",
+        "avgReviewTime": "要確認（公式情報で裏付け未取得）",
         "fee": "要確認",
         "url": "https://moz.gov.ua/"
       }
@@ -197,20 +197,20 @@ export default {
   "udi": {
     "required": false,
     "system": "導入準備中（EU UDI に整合予定）",
-    "description": "Technical Regulation (2024) にUDI要件が含まれるが、完全義務化は段階的。",
+    "description": "現行の技術規則にはUDI要件は含まれていない。EU MDR 整合の新規則でUDI導入予定。",
     "url": null,
     "timeline": "EU MDR 整合化の進捗に連動"
   },
   "postMarket": {
     "adverseEventReporting": {
-      "system": "Derzhliktehnoservis ビジランスシステム",
+      "system": "SMDC（Держлікслужба） ビジランスシステム",
       "mandatory": true,
       "url": "https://www.dls.gov.ua/",
-      "description": "医療機器関連の有害事象をDerzhliktehnoservisに報告義務。EU Vigilance に整合化を推進。"
+      "description": "医療機器関連の有害事象をSMDC（Держлікслужба）に報告義務。EU Vigilance に整合化を推進。"
     },
     "recalls": {
-      "authority": "Derzhliktehnoservis / MOH",
-      "description": "市場からの回収・是正措置はDerzhliktehnoservis/MOHが監督。",
+      "authority": "SMDC（Держлікслужба） / MOH",
+      "description": "市場からの回収・是正措置はSMDC（Держлікслужба）/MOHが監督。",
       "url": "https://www.dls.gov.ua/"
     },
     "surveillance": "市販後監視制度はEU PMS要件に整合化を推進中。戦時下で実施に制約あり。"
@@ -233,7 +233,7 @@ export default {
     "url": "https://nszu.gov.ua/"
   },
   "marketingRules": {
-    "authority": "MOH / Derzhliktehnoservis",
+    "authority": "MOH / SMDC（Держлікслужба）",
     "description": "登録済み機器のみ販売可。広告規制は Law on Advertising に基づく。",
     "keyRules": [
       "ウクライナ語ラベリング・IFU必須",
@@ -272,8 +272,8 @@ export default {
   "recentDevelopments": [
     {
       "date": "2024",
-      "title": "Technical Regulation on Medical Devices 施行",
-      "description": "CMU Resolution No. 927 により EU MDR に大幅に整合した新技術規則を導入。分類・適合性評価・ラベリング等を刷新。"
+      "title": "EU MDR 整合の新技術規則を策定中",
+      "description": "現行の技術規則（CMU No. 753/754/755, 2013年）を EU MDR/IVDR に整合させる新規則を策定中。長い経過措置期間を含む見込み。"
     },
     {
       "date": "2022-",
@@ -286,6 +286,6 @@ export default {
       "description": "2022年6月にEU加盟候補国の地位を獲得。医療機器規制を含む技術規則のEU整合化を加速。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -1580,9 +1580,9 @@ export const COUNTRY_PROFILES_META = [
     "mainAuthority": "JFDA",
     "mdsapStatus": "非参加",
     "udiRequired": false,
-    "electronicSystem": "要確認（JFDA オンラインポータルの有無は未確認）",
+    "electronicSystem": "JFDA オンラインポータル（Cosmo）",
     "deviceNotes": "定義は GHTF/IMDRF の定義に概ね準拠しているが、ヨルダン固有の法的定義文書の公開は限定的。",
-    "lastUpdated": "2026-04-02"
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "BHR",
@@ -1620,8 +1620,8 @@ export const COUNTRY_PROFILES_META = [
     "mdsapStatus": "非参加",
     "udiRequired": false,
     "electronicSystem": "NHRA オンラインポータル",
-    "deviceNotes": "NHRA Medical Devices Registration Guideline Ver 7.0 が現行の主要ガイドライン文書。",
-    "lastUpdated": "2026-04-02"
+    "deviceNotes": "NHRA Medical Devices Registration Guideline Ver 7.0 が現行の主要ガイドライン文書。2026年2月より登録義務化。",
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "OMN",
@@ -3059,7 +3059,7 @@ export const COUNTRY_PROFILES_META = [
     "udiRequired": true,
     "electronicSystem": "EUDAMED + SÚKL RZPRO",
     "deviceNotes": "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。",
-    "lastUpdated": "2026-04-02"
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "HUN",
@@ -3089,12 +3089,12 @@ export const COUNTRY_PROFILES_META = [
         "riskLevel": "高"
       }
     ],
-    "mainAuthority": "OGYÉI",
+    "mainAuthority": "NNGYK",
     "mdsapStatus": "非参加",
     "udiRequired": true,
-    "electronicSystem": "EUDAMED + OGYÉI 国内登録",
+    "electronicSystem": "EUDAMED + NNGYK 国内登録",
     "deviceNotes": "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。",
-    "lastUpdated": "2026-04-02"
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "PRT",
@@ -3129,7 +3129,7 @@ export const COUNTRY_PROFILES_META = [
     "udiRequired": true,
     "electronicSystem": "EUDAMED + Infarmed 国内登録",
     "deviceNotes": "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。",
-    "lastUpdated": "2026-04-02"
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "GRC",
@@ -3164,7 +3164,7 @@ export const COUNTRY_PROFILES_META = [
     "udiRequired": true,
     "electronicSystem": "EUDAMED + EOF 国内登録",
     "deviceNotes": "MDR の定義がそのまま国内法に適用。追加的な定義変更なし。",
-    "lastUpdated": "2026-04-02"
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "UKR",
@@ -3172,8 +3172,8 @@ export const COUNTRY_PROFILES_META = [
     "countryEn": "Ukraine",
     "region": "Europe",
     "flag": "🇺🇦",
-    "primaryLawTitle": "Law of Ukraine 'On Medical Devices' (No. 2042-VIII)",
-    "primaryLawEnacted": "2017",
+    "primaryLawTitle": "Technical Regulation on Medical Devices (CMU Resolution No. 753)",
+    "primaryLawEnacted": "2013",
     "classificationSystem": "4クラス制（Class I / IIa / IIb / III）— EU MDR 整合",
     "classCount": 4,
     "classes": [
@@ -3198,8 +3198,8 @@ export const COUNTRY_PROFILES_META = [
     "mdsapStatus": "非参加",
     "udiRequired": false,
     "electronicSystem": "MOH/SEC オンライン提出",
-    "deviceNotes": "2024年の新Technical Regulationにより、EU MDR の定義に大幅に近づいた。",
-    "lastUpdated": "2026-04-02"
+    "deviceNotes": "EU MDR 整合の新技術規則が策定中であり、定義も更新される予定。",
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "HKG",
@@ -3229,12 +3229,12 @@ export const COUNTRY_PROFILES_META = [
         "riskLevel": "高"
       }
     ],
-    "mainAuthority": "MDCO/DOH",
+    "mainAuthority": "MDD/DOH",
     "mdsapStatus": "非参加",
     "udiRequired": false,
-    "electronicSystem": "MDCO Online Listing System",
-    "deviceNotes": "Medical Devices Bill (2025) で法的定義が正式に法定化される予定。GHTF/IMDRF の定義に整合。",
-    "lastUpdated": "2026-04-02"
+    "electronicSystem": "Medical Device Information System (MDIS)",
+    "deviceNotes": "CMPR設立と法案成立により法的定義が正式に法定化される予定。GHTF/IMDRF の定義に整合。",
+    "lastUpdated": "2026-04-06"
   },
   {
     "code": "VEN",

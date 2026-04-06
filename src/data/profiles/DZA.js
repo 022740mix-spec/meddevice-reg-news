@@ -7,37 +7,45 @@ export default {
   "flag": "🇩🇿",
   "legalSystemOverview": {
     "type": "中央集権制（Centralized system）",
-    "description": "アルジェリアの医療機器規制は保健省（MOH）および国立医薬品管理研究所（LNCPP: Laboratoire National de Contrôle des Produits Pharmaceutiques）が管轄する。Loi n° 18-11 du 2 juillet 2018（衛生法）および関連規則が法的根拠。医療機器は homologation（型式認証）手続きが必要で、LNCPP が技術評価を担当する。EU CE マークの影響を受けた制度だが、独自の登録プロセスを有する。",
+    "description": "アルジェリアの医療機器規制はANPP（Agence Nationale des Produits Pharmaceutiques / 国立医薬品局）が主管する。ANPPは産業・製薬生産省傘下の機関で、医療機器のhomologation（型式認証）・登録・品質管理を担当。Loi n° 18-11 du 2 juillet 2018（衛生法）およびExecutive Decree 23-101（2023年3月）が法的根拠。EU類似のClass I/IIa/IIb/III分類を採用。CE マークは審査で考慮されるが自動承認ではない。",
     "keyCharacteristics": [
-      "LNCPP と MOH による二元的な規制体制",
+      "ANPP（国立医薬品局）が主管当局（産業・製薬生産省傘下）",
       "Homologation（型式認証）制度",
-      "EU の分類モデルを参照した4クラス分類",
+      "EU 類似の4クラス分類（Class I / IIa / IIb / III）",
       "CE マーク取得機器は審査で考慮されるが、自動承認ではない",
       "ローカル代理人の指定が必須",
-      "CFS および品質認証書（ISO 13485）の提出が要求される"
+      "登録有効期間3年"
     ]
   },
   "authorities": [
     {
-      "name": "LNCPP",
-      "fullName": "Laboratoire National de Contrôle des Produits Pharmaceutiques",
-      "localName": "المخبر الوطني لمراقبة المنتجات الصيدلانية",
-      "role": "医療機器の技術評価・試験・品質管理",
-      "url": "https://www.lncpp.dz/",
+      "name": "ANPP",
+      "fullName": "Agence Nationale des Produits Pharmaceutiques",
+      "localName": "الوكالة الوطنية للمواد الصيدلانية",
+      "role": "医療機器のhomologation（型式認証）・登録・品質管理・市販後監視。産業・製薬生産省傘下。",
+      "url": "https://anpp.dz/",
       "isPrimary": true
     },
     {
-      "name": "MOH Algeria",
-      "fullName": "Ministère de la Santé",
-      "localName": "وزارة الصحة",
-      "role": "医療機器の登録許可・保健政策・市販後監視",
+      "name": "LNCPP",
+      "fullName": "Laboratoire National de Contrôle des Produits Pharmaceutiques",
+      "localName": "المخبر الوطني لمراقبة المنتجات الصيدلانية",
+      "role": "医療機器の技術評価・試験・品質管理（ANPPと連携）",
+      "url": "https://www.lncpp.dz/",
+      "isPrimary": false
+    },
+    {
+      "name": "Ministère de l'Industrie Pharmaceutique",
+      "fullName": "Ministère de l'Industrie et de la Production Pharmaceutique",
+      "localName": "وزارة الصناعة والإنتاج الصيدلاني",
+      "role": "医薬品・医療機器の産業政策。ANPPの上位監督省庁。",
       "url": "https://www.sante.gov.dz/",
-      "isPrimary": true
+      "isPrimary": false
     }
   ],
   "notifiedBodies": {
-    "system": "なし（LNCPP/MOH が直接審査）",
-    "description": "アルジェリアには Notified Body 制度は存在しない。LNCPP が技術評価を行い、MOH が最終的な登録許可を付与する。",
+    "system": "なし（ANPP/LNCPP が直接審査）",
+    "description": "アルジェリアには Notified Body 制度は存在しない。ANPP がhomologation審査を行い、LNCPP が技術評価を担当する。",
     "bodies": []
   },
   "deviceDefinition": {
@@ -49,23 +57,30 @@ export default {
     "title": "Loi n° 18-11 du 2 juillet 2018 relative à la santé",
     "originalTitle": "القانون رقم 18-11 المتعلق بالصحة",
     "enacted": "2018",
-    "lastAmended": "随時改正",
+    "lastAmended": null,
     "url": "https://www.sante.gov.dz/",
-    "description": "アルジェリアの衛生法。医薬品・医療機器を含む衛生製品の規制の法的根拠を提供。医療機器の homologation 要件を規定。"
+    "description": "アルジェリアの衛生法。JORADP No.46（2018年7月29日発行）に掲載。Article 212で医療機器を定義、Article 230でhomologation義務を規定。医薬品・医療機器を含む衛生製品の規制の法的根拠を提供。"
   },
   "implementingRegulations": [
     {
-      "title": "Décret exécutif relatif à l'homologation des dispositifs médicaux（医療機器型式認証に関する施行令）",
-      "date": "各種",
-      "url": "https://www.sante.gov.dz/",
-      "description": "医療機器の homologation 手続き、必要書類、技術要件等を規定。",
+      "title": "Décret exécutif n° 23-101（Executive Decree 23-101 — 医療機器市場移行措置）",
+      "date": "2023-03",
+      "url": "https://www.trade.gov/market-intelligence/algeria-healthcare-new-medical-device-regulation",
+      "description": "2023年3月公布。市場に流通中の医療機器について、ANPP登録なしでの販売を暫定的に許容。2024年11月までにANPPへの正式登録を義務化。",
+      "category": "登録"
+    },
+    {
+      "title": "Arrêté du 10 mai 2021 relatif au dossier d'homologation des dispositifs médicaux（2021年5月10日付homologation申請書類に関する省令）",
+      "date": "2021-05-10",
+      "url": "https://anpp.dz/en/regulatory-texts-relating-to-medical-devices/",
+      "description": "医療機器のhomologation申請ファイルの構成を規定。行政データ、技術性能、化学・生物学的情報、製造手順、非臨床情報の5部構成。",
       "category": "登録"
     },
     {
       "title": "Arrêté relatif à l'importation des dispositifs médicaux（医療機器輸入に関する省令）",
-      "date": "各種",
-      "url": "https://www.sante.gov.dz/",
-      "description": "医療機器の輸入許可・要件を規定。",
+      "date": null,
+      "url": "https://anpp.dz/en/regulatory-texts-relating-to-medical-devices/",
+      "description": "医療機器の輸入許可・要件を規定。輸入許可の発行は約30日。",
       "category": "輸入管理"
     }
   ],
@@ -134,26 +149,28 @@ export default {
     "rules": [
       {
         "id": "EU 参照分類規則",
-        "description": "LNCPP/MOH は EU の分類規則を参照して機器のクラスを決定する。",
-        "url": "https://www.sante.gov.dz/"
+        "description": "ANPP は EU の分類規則を参照して機器のクラスを決定する。",
+        "url": "https://anpp.dz/en/regulatory-texts-relating-to-medical-devices/"
       }
     ],
     "totalProductCodes": "要確認"
   },
   "conformityAssessment": {
-    "overview": "LNCPP が技術評価を行い、MOH が homologation（型式認証）を付与する。CE マーク取得機器は審査で考慮されるが、別途アルジェリア固有の手続きが必要。",
+    "overview": "ANPPがhomologation（型式認証）審査を実施し、LNCPPが技術評価を担当。CE マーク取得機器は審査で考慮されるが、別途アルジェリア固有のhomologation手続きが必要。輸入許可は約30日で発行、有効期間3年。",
     "routes": [
       {
         "name": "Homologation des dispositifs médicaux",
-        "nameJa": "医療機器型式認証",
+        "nameJa": "医療機器型式認証（ANPP）",
         "applicableClasses": [
           "全クラス"
         ],
-        "description": "CE 証明書、ISO 13485 認証、CFS、技術文書、臨床データ等を提出。LNCPP が技術評価を実施し、MOH が最終認可。",
+        "description": "CE 証明書、ISO 13485 認証、CFS、技術文書、臨床データ等を提出。2021年5月10日付省令に基づき、行政データ・技術性能・化学生物学的情報・製造手順・非臨床情報の5部構成の申請ファイルを提出。ANPPが審査、LNCPPが技術評価。登録有効期間3年。予約はrdvdm.anpp.dzで受付。",
         "subtypes": [],
-        "avgReviewTime": "6〜18ヶ月（クラス・製品による）",
-        "fee": "要確認",
-        "url": "https://www.sante.gov.dz/"
+        "avgReviewTime": "要確認（輸入許可は約30日）",
+        "avgReviewTimeSource": null,
+        "fee": "要確認（クラスにより異なる。高リスクほど高額）",
+        "feeSource": null,
+        "url": "https://anpp.dz/en/medical-information/"
       }
     ]
   },
@@ -172,29 +189,29 @@ export default {
   },
   "postMarket": {
     "adverseEventReporting": {
-      "system": "MOH / LNCPP マテリオビジランス制度",
+      "system": "ANPP / LNCPP マテリオビジランス制度",
       "mandatory": true,
-      "url": "https://www.sante.gov.dz/",
-      "description": "医療機器に関連する有害事象は MOH/LNCPP に報告義務がある。"
+      "url": "https://anpp.dz/",
+      "description": "医療機器に関連する有害事象は ANPP に報告義務がある。LNCPP が技術評価を支援。"
     },
     "recalls": {
-      "authority": "MOH / LNCPP",
-      "description": "MOH/LNCPP がリコールを管理。製造業者・輸入業者はリコール実施時に通知義務。",
-      "url": "https://www.sante.gov.dz/"
+      "authority": "ANPP",
+      "description": "ANPP がリコールを管理。製造業者・輸入業者はリコール実施時に通知義務。",
+      "url": "https://anpp.dz/"
     },
-    "surveillance": "MOH/LNCPP による市販後監視。"
+    "surveillance": "ANPP/LNCPP による市販後監視。"
   },
   "certificateOfFreeSale": {
     "available": true,
-    "issuingAuthority": "MOH Algeria",
+    "issuingAuthority": "ANPP",
     "name": "Certificat de Libre Vente",
-    "description": "登録済み医療機器について MOH が発行する自由販売証明書。申請時には原産国の CFS 提出が要求される。",
+    "description": "登録済み医療機器について ANPP が発行する自由販売証明書。申請時には原産国の CFS 提出が要求される。",
     "processingTime": "要確認",
     "url": "https://www.sante.gov.dz/"
   },
   "reimbursement": {
     "system": "公的医療保険（CNAS / CASNOS）+ 公立病院",
-    "authority": "MOH Algeria / CNAS",
+    "authority": "CNAS / MOH Algeria",
     "description": "アルジェリアの医療保険は CNAS（社会保険基金）が管轄。医療機器の償還は主に公立病院の調達予算を通じて行われる。",
     "codingSystems": [
       "要確認"
@@ -202,8 +219,8 @@ export default {
     "url": "https://www.sante.gov.dz/"
   },
   "marketingRules": {
-    "authority": "MOH Algeria",
-    "description": "医療機器の広告・販促は MOH の規制下にある。",
+    "authority": "ANPP",
+    "description": "医療機器の広告・販促は ANPP の規制下にある。",
     "keyRules": [
       "登録済み機器のみ広告可",
       "ラベリングはフランス語またはアラビア語で記載",
@@ -217,7 +234,7 @@ export default {
   "internationalStandards": {
     "iso13485": {
       "accepted": true,
-      "notes": "ISO 13485 認証は homologation 申請時に要求される。"
+      "notes": "ISO 13485 認証は ANPP への homologation 申請時に要求される。"
     },
     "iso14971": {
       "accepted": true,
@@ -235,11 +252,21 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025",
-      "title": "医療機器規制の近代化推進",
-      "description": "MOH/LNCPP は Loi n° 18-11 に基づく医療機器規制の施行細則の整備を継続。現地製造の促進と輸入依存の軽減が政策課題。"
+      "date": "2025-10",
+      "title": "Arrêté N°25 — 医薬品・医療機器のシリアライゼーション義務化",
+      "description": "2025年10月12日付の産業・製薬生産省令。輸入医薬品・医療機器のシリアライゼーション（トレーサビリティ）を義務化。国際基準との整合を図る。"
+    },
+    {
+      "date": "2024-11",
+      "title": "Executive Decree 23-101 に基づく登録期限到来",
+      "description": "2023年3月公布のDecree 23-101で設定された移行期間が終了。市場流通中の全医療機器についてANPPへの正式登録が義務化。"
+    },
+    {
+      "date": "2023-03",
+      "title": "Executive Decree 23-101 公布",
+      "description": "医療機器の市場移行措置を規定。既に市場に流通している医療機器について、ANPP登録なしでの暫定的な販売継続を許容（2024年11月まで）。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

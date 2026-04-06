@@ -45,12 +45,12 @@ export default {
     "notes": "MOH はガイダンス文書（GD シリーズ）で詳細な定義・適用範囲を規定。GD-22（製造業者登録）、GD-3（Class C/D 登録）、GD-9（低リスク機器登録）等。"
   },
   "primaryLaw": {
-    "title": "Ministerial Decree 113/2020（薬局業務・医薬品企業規制執行令）",
+    "title": "Ministerial Decree 113/2020 Issuing the Executive Regulation of the Law on the Practice of the Pharmacy Profession and Governing Pharmaceutical Enterprises",
     "originalTitle": "القرار الوزاري رقم 113/2020",
     "enacted": "2020",
     "lastAmended": null,
     "url": "https://decree.om/2020/moh20200113/",
-    "description": "薬局業務の実務および医薬品企業を規制する執行令。医療機器の規制根拠を含む。DGPADC の権限を規定。"
+    "description": "薬局業務・医薬品企業規制の執行令。医療機器の規制根拠を含む。DGPADC の権限を規定。Official Gazette 1353（2020年8月19日発行）に掲載。"
   },
   "implementingRegulations": [
     {
@@ -163,8 +163,10 @@ export default {
         ],
         "description": "技術ファイル、CE 証明書/FDA 認可文書、ISO 13485 証明書、適合宣言書、Free Sale Certificate、取扱説明書、ラベリング等を提出。クラスに応じて GD-3 または GD-9 の要件に従う。",
         "subtypes": [],
-        "avgReviewTime": "3〜4ヶ月（書類の完全性に依存）",
-        "fee": "要確認（MOH 料金表を参照）",
+        "avgReviewTime": "60 working days",
+        "avgReviewTimeSource": "https://moh.gov.om/en/services/businesses/drug-safety-center/request-for-registration-of-medical-device/",
+        "fee": "Class A/B: 100 OMR、Class C/D: 200 OMR",
+        "feeSource": "https://moh.gov.om/en/services/businesses/drug-safety-center/request-for-registration-of-medical-device/",
         "url": "https://moh.gov.om/en/services/businesses/drug-safety-center/request-for-registration-of-medical-device/"
       }
     ]
@@ -246,9 +248,9 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025",
-      "title": "MOH 通達 161/2025",
-      "description": "2025年に発出された MOH 通達。医療機器規制に関する追加的な要件・手続きの更新。"
+      "date": "2025-07-06",
+      "title": "MOH Circular No. 161/2025: 高リスク医療機器の登録開始",
+      "description": "高リスク医療機器・医療用品の製造業者およびその製品の登録開始に関する通達（2025年7月6日公布）。全医療機器事業所に対し、高リスク製品の技術ファイルを出荷到着2ヶ月前までにMOHオンラインポータル経由で提出するよう要請。"
     },
     {
       "date": "2020",
@@ -256,6 +258,6 @@ export default {
       "description": "薬局業務・医薬品企業規制の執行令。医療機器の規制枠組みの法的根拠を確立。DGPADC の権限を明確化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

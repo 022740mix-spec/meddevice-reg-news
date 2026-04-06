@@ -13,7 +13,7 @@ export default {
       "EU/FDA 分類モデルの受容",
       "CE マークまたは FDA 認可の機器は登録が簡素化",
       "ローカルライセンス保有者（輸入業者）の指定が必須",
-      "登録有効期限なし（ラボ試験不要の場合）または5年"
+      "登録有効期限5年（登録証書に記載）"
     ]
   },
   "authorities": [
@@ -79,7 +79,7 @@ export default {
   ],
   "classification": {
     "system": "EU/FDA 分類モデルの受容（Class I / II / III）",
-    "basis": "リスクベース（EU MDDまたはFDA分類を参照）",
+    "basis": "リスクベース。CE マーク機器はEU分類、FDA認可機器はFDA分類をそのまま受容。",
     "classes": [
       {
         "name": "Class I",
@@ -139,15 +139,16 @@ export default {
         "description": "CE 証明書または FDA 認可文書と、Free Sale Certificate、技術文書、ラベリング情報等を提出して登録。Class III はより詳細な文書が要求される。ラボ試験が必要な場合は追加期間。",
         "subtypes": [],
         "avgReviewTime": "4〜8ヶ月（ラボ試験不要の場合は短縮の可能性あり）",
+        "avgReviewTimeSource": "業界情報（OMC Medical, RegDesk 等複数ソースで一致）",
         "fee": "要確認（JFDA 料金表は随時改定）",
         "url": "https://www.jfda.jo/"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "要確認（JFDA オンラインポータルの有無は未確認）",
-    "url": "https://www.jfda.jo/",
-    "description": "JFDA への申請手続きの電子化状況は限定的な情報しか公開されていない。最新の申請方法は JFDA に直接確認が必要。",
+    "system": "JFDA オンラインポータル（Cosmo）",
+    "url": "http://application.jfda.jo/Cosmo",
+    "description": "JFDA の電子アポイントメントシステム（Cosmo）を通じて申請予約・書類提出を実施。医薬品はeCTD（JO M1形式）での電子提出にも対応。",
     "mandatory": false
   },
   "udi": {
@@ -227,6 +228,6 @@ export default {
       "description": "JFDA は2026年を期限として医薬品の DataMatrix シリアライゼーションを義務化。医療機器への拡大可能性は要確認。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

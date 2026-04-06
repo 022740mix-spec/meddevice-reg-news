@@ -7,14 +7,15 @@ export default {
   "flag": "🇨🇷",
   "legalSystemOverview": {
     "type": "中央集権制（Centralized system）",
-    "description": "コスタリカの医療機器規制は保健省（Ministerio de Salud）が管轄する。Decreto N° 34482-S（医療機器の登録・分類・輸入・管理に関する規則）が主たる規制根拠。4クラス分類（Class 1〜4）を採用。Class 1 は登録免除、Class 2 は簡易登録、Class 3/4 は詳細な審査が必要だが、US FDA 認可済み機器は簡易経路を利用可能。CONIS（Consejo Nacional de Investigación en Salud）は臨床研究の倫理審査を担当する組織。",
+    "description": "コスタリカの医療機器規制は保健省（Ministerio de Salud）が管轄する。Decreto N° 34482-S（医療機器の登録・分類・輸入・管理に関する規則）が主たる規制根拠。4クラス分類（Class 1〜4）を採用。Class 1 は登録免除、Class 2 は簡易登録、Class 3/4 は詳細な審査が必要だが、US FDA 認可済み機器は簡易経路を利用可能。登録有効期間は5年。",
     "keyCharacteristics": [
       "保健省（Ministerio de Salud）による規制体制",
       "Decreto 34482-S に基づく4クラス分類（Class 1 / 2 / 3 / 4）",
       "Class 1 は登録免除",
       "FDA 認可済み Class 3/4 機器には簡易経路あり",
       "ローカル登録保有者（Registration Holder）の指定が必須",
-      "二段階審査（法的評価 + 技術評価）"
+      "二段階審査（法的評価 + 技術評価）",
+      "登録有効期間 5年"
     ]
   },
   "authorities": [
@@ -31,7 +32,7 @@ export default {
       "fullName": "Consejo Nacional de Investigación en Salud",
       "localName": "Consejo Nacional de Investigación en Salud",
       "role": "臨床研究の倫理審査・承認",
-      "url": "https://www.ministeriodesalud.go.cr/",
+      "url": "https://conis.ministeriodesalud.go.cr/",
       "isPrimary": false
     }
   ],
@@ -46,34 +47,34 @@ export default {
     "notes": "定義は国際的な GHTF/IMDRF の定義に概ね準拠。"
   },
   "primaryLaw": {
-    "title": "Ley General de Salud N° 5395（一般保健法）",
+    "title": "Ley General de Salud N° 5395",
     "originalTitle": "Ley General de Salud N° 5395",
     "enacted": "1973",
     "lastAmended": "随時改正",
-    "url": "https://www.ministeriodesalud.go.cr/",
-    "description": "コスタリカにおける保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。"
+    "url": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=6581",
+    "description": "コスタリカにおける保健制度全般を規定する基本法（1973年10月30日制定）。医療機器を含む保健製品の規制の上位法的根拠。"
   },
   "implementingRegulations": [
     {
       "title": "Decreto N° 34482-S（医療機器の登録・分類・輸入・管理に関する規則）",
       "date": "2008",
-      "url": "https://www.ministeriodesalud.go.cr/",
-      "description": "医療機器の分類・登録手続き・必要書類・輸入管理を包括的に規定する主要な規則。Reglamento de Inscripción, Clasificación, Importación y Control de Equipo y Material Biomédico。",
+      "url": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=62959",
+      "description": "医療機器の分類・登録手続き・必要書類・輸入管理を包括的に規定する主要な規則。Reglamento para el Registro, Clasificación, Importación y Control de Equipo y Material Biomédico（2008年3月3日）。",
       "category": "包括規制"
     }
   ],
   "relatedLaws": [
     {
-      "title": "Ley de Protección al Consumidor N° 7472",
-      "category": "消費者保護",
-      "enacted": "1994",
-      "url": "https://www.ministeriodesalud.go.cr/",
-      "relevance": "消費者保護の観点から医療機器の安全性・表示要件に関連。"
+      "title": "Decreto N° 32780-S（医療機器の登録・検査・監視・管理手数料規則）",
+      "category": "手数料",
+      "enacted": "2005",
+      "url": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?param1=NRTC&nValor1=1&nValor2=56293&nValor3=62055&strTipM=TC",
+      "relevance": "医療機器の登録・検査・監視・管理に関する手数料を規定。"
     }
   ],
   "classification": {
     "system": "4クラス分類（Class 1 / 2 / 3 / 4）",
-    "basis": "リスクベース",
+    "basis": "リスクベース（Health Canada の分類に類似）",
     "classes": [
       {
         "name": "Class 1",
@@ -115,7 +116,7 @@ export default {
         "name": "Class 4",
         "nameJa": "クラス4",
         "riskLevel": "最高リスク",
-        "description": "最高リスク医療機器。最も厳格な審査。FDA 認可済みなら簡易経路可。",
+        "description": "最高リスク医療機器。最も厳格な審査。FDA 認可済みなら簡易経路可。Class 4 では生物学的安全性証明が要求される場合あり。",
         "examples": [
           "人工心臓弁",
           "冠動脈ステント",
@@ -126,15 +127,15 @@ export default {
     ],
     "rules": [
       {
-        "id": "Decreto 34482-S 分類規則",
-        "description": "リスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。",
-        "url": "https://www.ministeriodesalud.go.cr/"
+        "id": "Decreto 34482-S 分類規則（Article 4）",
+        "description": "リスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。Health Canada の分類原則に類似。",
+        "url": "https://pgrweb.go.cr/scij/Busqueda/Normativa/Normas/nrm_texto_completo.aspx?nValor1=1&nValor2=62959"
       }
     ],
     "totalProductCodes": "要確認"
   },
   "conformityAssessment": {
-    "overview": "保健省が二段階審査（法的評価 + 技術評価）を実施。CFS、CE/FDA 認証文書、技術文書等を評価。FDA 認可済み Class 3/4 機器には簡易経路あり。",
+    "overview": "保健省が二段階審査（Phase A: 法的評価 + Phase B: 技術評価）を実施。CFS、CE/FDA 認証文書、技術文書等を評価。FDA 認可済み Class 3/4 機器には簡易経路あり。登録有効期間5年。",
     "routes": [
       {
         "name": "Registro Sanitario de Equipo y Material Biomédico",
@@ -142,15 +143,16 @@ export default {
         "applicableClasses": [
           "Class 2 / 3 / 4（Class 1 は免除）"
         ],
-        "description": "Phase A: 法的評価（提出書類の適合性確認） → Phase B: 技術評価（技術文書の審査）の二段階。CFS、技術文書、ラベリング、QMS 文書等を提出。",
+        "description": "Phase A: 法的評価（提出書類の適合性確認） → Phase B: 技術評価（技術文書の審査）の二段階。CFS（公証・領事認証済み）、技術文書、ラベリング、QMS 文書等を提出。Class 3/4 は臨床データ・市販後監視計画の提出が必要。有効期間5年。",
         "subtypes": [
           {
             "name": "簡易登録（FDA 認可済み Class 3/4）",
             "description": "US FDA で認可済みの Class 3 / 4 機器は Class 2 と同様の簡易登録手続きを利用可能。"
           }
         ],
-        "avgReviewTime": "Phase A: 15日（Class 1/2）〜30日（Class 3/4）、Phase B: 30日",
-        "fee": "要確認（保健省料金表を参照）",
+        "avgReviewTime": "Phase A: 15日（Class 2）〜30日（Class 3/4）、Phase B: 要確認",
+        "avgReviewTimeSource": "https://mdrc-consulting.com/costa-rica-medical-device-registration-guide-en/",
+        "fee": "要確認（Decreto 32780-S に基づく手数料表を参照）",
         "url": "https://registrelo.go.cr/"
       }
     ]
@@ -158,7 +160,7 @@ export default {
   "electronicSubmission": {
     "system": "Regístrelo（保健省オンライン登録ポータル）",
     "url": "https://registrelo.go.cr/",
-    "description": "保健省は Regístrelo プラットフォームを通じてオンラインでの衛生登録申請を受付。",
+    "description": "保健省は Regístrelo プラットフォームを通じてオンラインでの衛生登録申請を受付。デジタル署名が必要。RACSA が技術提供。",
     "mandatory": true
   },
   "udi": {
@@ -172,13 +174,13 @@ export default {
     "adverseEventReporting": {
       "system": "保健省テクノビジランス制度",
       "mandatory": true,
-      "url": "https://www.ministeriodesalud.go.cr/",
+      "url": "https://www.ministeriodesalud.go.cr/index.php/tramites/empresas",
       "description": "登録保有者は医療機器に関連する有害事象を保健省に報告する義務がある。テクノビジランス（Tecnovigilancia）制度により市販後安全性を監視。"
     },
     "recalls": {
       "authority": "Ministerio de Salud",
       "description": "保健省がリコール・FSCA を管理。登録保有者はリコール実施時に保健省に通知義務。",
-      "url": "https://www.ministeriodesalud.go.cr/"
+      "url": "https://www.ministeriodesalud.go.cr/index.php/tramites/empresas"
     },
     "surveillance": "保健省によるテクノビジランス（市販後監視）。詳細な PMS 制度の公開情報は限定的。"
   },
@@ -186,9 +188,9 @@ export default {
     "available": true,
     "issuingAuthority": "Ministerio de Salud",
     "name": "Certificado de Libre Venta / Free Sale Certificate",
-    "description": "登録申請時に原産国の規制当局からの CFS 提出が必要。コスタリカの保健省も登録済み機器について CFS を発行可能。",
+    "description": "登録申請時に原産国の規制当局からの CFS 提出が必要（公証・領事認証済み）。コスタリカの保健省も登録済み機器について CFS を発行可能。Regístrelo を通じて申請。",
     "processingTime": "要確認",
-    "url": "https://www.ministeriodesalud.go.cr/"
+    "url": "https://www.ministeriodesalud.go.cr/index.php/prensa/62-noticias-2025/2060-certificaciones-de-productos-registrados-sistema-registrelo"
   },
   "reimbursement": {
     "system": "CCSS（Caja Costarricense de Seguro Social）+ 民間保険",
@@ -215,7 +217,7 @@ export default {
   "internationalStandards": {
     "iso13485": {
       "accepted": true,
-      "notes": "ISO 13485 認証は QMS 証明として参照される。法的義務として明示されているかは要確認。"
+      "notes": "ISO 13485 認証は QMS 証明として参照される。"
     },
     "iso14971": {
       "accepted": true,
@@ -233,11 +235,16 @@ export default {
   },
   "recentDevelopments": [
     {
+      "date": "2025-03",
+      "title": "Regístrelo プラットフォームの復旧・デジタル署名更新",
+      "description": "保健省は Regístrelo プラットフォームのデジタル署名機能を更新し、2025年3月に完全復旧。医療機器を含む衛生登録の電子申請が再開。"
+    },
+    {
       "date": "2025",
       "title": "Regístrelo ポータルの運用拡大",
       "description": "保健省はオンライン登録ポータル Regístrelo の機能を拡大し、医療機器の衛生登録プロセスのデジタル化を推進中。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

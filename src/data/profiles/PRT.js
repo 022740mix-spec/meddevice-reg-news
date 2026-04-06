@@ -65,14 +65,14 @@ export default {
     {
       "title": "Decree-Law No. 145/2009（改正版）",
       "date": "2009（原版）/ 2021改正",
-      "url": "https://www.infarmed.pt/",
+      "url": "https://www.infarmed.pt/web/infarmed/entidades/dispositivos-medicos",
       "description": "MDR/IVDR 国内補完法令。NCA権限・言語要件・登録義務・罰則を規定。",
       "category": "国内補完法令"
     },
     {
       "title": "Portaria No. 342/2021",
       "date": "2021",
-      "url": "https://www.infarmed.pt/",
+      "url": "https://www.infarmed.pt/web/infarmed/entidades/dispositivos-medicos/registo-de-dm-e-div",
       "description": "医療機器登録手数料規則。",
       "category": "手数料規則"
     }
@@ -164,13 +164,15 @@ export default {
         "subtypes": [],
         "avgReviewTime": "EUプロファイル参照",
         "fee": "Notified Body により異なる",
-        "url": "https://www.infarmed.pt/"
+        "url": "https://www.infarmed.pt/web/infarmed/entidades/dispositivos-medicos",
+        "avgReviewTimeSource": null,
+        "feeSource": null
       }
     ]
   },
   "electronicSubmission": {
     "system": "EUDAMED + Infarmed 国内登録",
-    "url": "https://www.infarmed.pt/",
+    "url": "https://www.infarmed.pt/web/infarmed/entidades/dispositivos-medicos/registo-de-dm-e-div",
     "description": "EUDAMED + Infarmed 国内登録システム。EUDAMED 4モジュール義務化: 2026年5月28日。",
     "mandatory": true
   },
@@ -185,13 +187,13 @@ export default {
     "adverseEventReporting": {
       "system": "EU Vigilance System — Infarmed",
       "mandatory": true,
-      "url": "https://www.infarmed.pt/",
+      "url": "https://www.infarmed.pt/web/infarmed/entidades/dispositivos-medicos/vigilancia-de-dispositivos-medicos",
       "description": "重篤有害事象をInfarmedに報告義務。MDR Article 87-92。"
     },
     "recalls": {
       "authority": "Infarmed",
-      "description": "FSCA/FSNはInfarmedに通知。",
-      "url": "https://www.infarmed.pt/"
+      "description": "FSCA/FSNはInfarmedに通知。安全警告はInfarmedサイトで公開。",
+      "url": "https://www.infarmed.pt/web/infarmed/avisos-de-seguranca-dispositivos-medicos"
     },
     "surveillance": "EU MDR PMS/PSUR/PMCF要件がそのまま適用。"
   },
@@ -199,9 +201,9 @@ export default {
     "available": true,
     "issuingAuthority": "Infarmed",
     "name": "Certificate of Free Sale (CFS)",
-    "description": "Infarmed がCFSを発行。",
+    "description": "Infarmed がCFSを発行。証明書申請はRegisto de DM e DIVセクションから。",
     "processingTime": "要確認",
-    "url": "https://www.infarmed.pt/"
+    "url": "https://www.infarmed.pt/web/infarmed/entidades/dispositivos-medicos/registo-de-dm-e-div/distribuidores_pedido_certidao"
   },
   "reimbursement": {
     "system": "SNS（国民保健サービス）— 税財源",
@@ -210,7 +212,7 @@ export default {
     "codingSystems": [
       "GDH (Grupos de Diagnóstico Homogéneos / PT-DRG)"
     ],
-    "url": "https://www.infarmed.pt/"
+    "url": "https://www.infarmed.pt/web/infarmed/entidades/dispositivos-medicos"
   },
   "marketingRules": {
     "authority": "Infarmed",
@@ -256,6 +258,6 @@ export default {
       "description": "EUDAMED 4モジュール2026年5月28日義務化に向けた準備。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

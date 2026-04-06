@@ -7,23 +7,24 @@ export default {
   "flag": "🇵🇦",
   "legalSystemOverview": {
     "type": "中央集権制（Centralized system）",
-    "description": "パナマの医療機器規制は保健省（MINSA: Ministerio de Salud）傘下の国家薬事局（DNFD: Dirección Nacional de Farmacia y Drogas）が管轄する。Ley 1 de 2001（医薬品法）および Decreto Ejecutivo N° 178 de 2001（施行規則）が主要な法的根拠。医療機器は衛生登録（Registro Sanitario）が必要。リスクベースの4クラス分類を採用。FDA 承認済み・CE マーキング取得済み機器に対しては一部簡易経路あり。",
+    "description": "パナマの医療機器規制は保健省（MINSA: Ministerio de Salud）傘下の国家医療機器局（DNDM: Dirección Nacional de Dispositivos Médicos）が管轄する。Ley N° 90 de 2017（医療機器法）およびその改正法 Ley N° 92 de 2019、施行規則 Decreto Ejecutivo N° 490 de 2019 が主要な法的根拠。医療機器は衛生登録（Registro Sanitario）が必要。リスクベースの4クラス分類（Class A / B / C / D）を採用。登録有効期間は10年。",
     "keyCharacteristics": [
-      "MINSA/DNFD による中央規制体制",
-      "Ley 1 de 2001 に基づく衛生登録制度",
-      "4クラス分類（Class I / II / III / IV）",
-      "ローカル登録保有者の指定が必須",
+      "MINSA/DNDM による中央規制体制",
+      "Ley 90 de 2017（Ley 92 de 2019 で改正）に基づく規制枠組み",
+      "4クラス分類（Class A / B / C / D）",
+      "ローカル登録保有者（Authorized Representative）の指定が必須",
       "CFS の提出が必要",
-      "FDA/CE 承認済み機器には簡易経路の可能性あり"
+      "ISO 13485 認証または同等の QMS 証明が必要",
+      "登録有効期間 10年"
     ]
   },
   "authorities": [
     {
-      "name": "DNFD",
-      "fullName": "Dirección Nacional de Farmacia y Drogas",
-      "localName": "Dirección Nacional de Farmacia y Drogas",
-      "role": "医療機器の登録・市販後監視・施設許可・輸入管理",
-      "url": "http://www.minsa.gob.pa/",
+      "name": "DNDM",
+      "fullName": "Dirección Nacional de Dispositivos Médicos",
+      "localName": "Dirección Nacional de Dispositivos Médicos",
+      "role": "医療機器の登録・市販後監視・施設許可・輸入管理・分類判定",
+      "url": "https://minsa.gob.pa/contenido/direccion-nacional-de-dispositivos-medicos",
       "isPrimary": true
     },
     {
@@ -31,171 +32,168 @@ export default {
       "fullName": "Ministerio de Salud",
       "localName": "Ministerio de Salud",
       "role": "保健政策の策定・監督",
-      "url": "http://www.minsa.gob.pa/",
+      "url": "https://www.minsa.gob.pa/",
       "isPrimary": false
     }
   ],
   "notifiedBodies": {
-    "system": "なし（DNFD が直接審査）",
-    "description": "パナマには Notified Body 制度は存在しない。DNFD が直接、登録申請書類を審査する。",
+    "system": "なし（DNDM が直接審査）",
+    "description": "パナマには Notified Body 制度は存在しない。DNDM が直接、登録申請書類を審査する。",
     "bodies": []
   },
   "deviceDefinition": {
-    "legalDefinition": "Ley 1 de 2001 および関連規則に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。",
-    "scope": "体外診断用医薬品（IVD）も規制対象。",
-    "notes": "定義は GHTF/IMDRF の国際的定義に概ね準拠。"
+    "legalDefinition": "Ley 90 de 2017 に基づき、疾病の診断・治療・予防・監視・軽減等を目的とする器具・装置・機器・ソフトウェア・材料等で、主たる作用が薬理学的・免疫学的・代謝的手段によらないもの。体外診断用医療機器（DMDIV）も含む。",
+    "scope": "体外診断用医療機器（DMDIV）も規制対象。SaMD（Software as a Medical Device）も対象。",
+    "notes": "2025年の施行規則案で IMDRF/GHTF 整合の100以上の定義が導入予定。"
   },
   "primaryLaw": {
-    "title": "Ley N° 1 de 2001（医薬品・その他保健製品に関する法律）",
-    "originalTitle": "Ley 1 de 10 de enero de 2001 - Sobre Medicamentos y otros Productos para la Salud Humana",
-    "enacted": "2001",
-    "lastAmended": "随時改正",
-    "url": "http://www.minsa.gob.pa/",
-    "description": "パナマにおける医薬品・医療機器等の保健製品を規制する基本法。DNFD の権限と規制枠組みを規定。"
+    "title": "Ley N° 90 de 26 de diciembre de 2017",
+    "originalTitle": "Ley 90 de 26 de diciembre de 2017, Sobre Dispositivos Médicos y Productos Afines",
+    "enacted": "2017",
+    "lastAmended": "2019（Ley 92 de 2019 による改正）",
+    "url": "https://www.minsa.gob.pa/normatividad/proyecto-de-decreto-que-reglamenta-la-ley-90-de-26-de-diciembre-de-2017-sobre",
+    "description": "パナマにおける医療機器・関連製品の製造・輸出入・保管・販売・表示・最終処分を規制する基本法。DNDM の設置根拠。Ley 92 de 2019 により改正。"
   },
   "implementingRegulations": [
     {
-      "title": "Decreto Ejecutivo N° 178 de 2001（施行規則）",
-      "date": "2001",
-      "url": "http://www.minsa.gob.pa/",
-      "description": "Ley 1 de 2001 の施行規則。医療機器の登録手続き・分類・必要書類を規定。",
+      "title": "Decreto Ejecutivo N° 490 de 4 de octubre de 2019（施行規則）",
+      "date": "2019",
+      "url": "https://www.minsa.gob.pa/normatividad/decretos",
+      "description": "Ley 90 de 2017（Ley 92 de 2019 改正後）の施行規則。医療機器の登録手続き・分類・必要書類・施設要件を規定。",
       "category": "包括規制"
     },
     {
-      "title": "Resolución N° 442（医療機器の登録に関する技術規則）",
-      "date": "各種",
-      "url": "http://www.minsa.gob.pa/",
-      "description": "医療機器の登録に関する追加的な技術規則・ガイダンス。",
-      "category": "技術要件"
+      "title": "Decreto Ejecutivo（2025年施行規則案）",
+      "date": "2025",
+      "url": "https://www.panacamara.com/boletininformativocciap/wp-content/uploads/sites/10/2025/10/decreto_final_3.pdf",
+      "description": "Ley 90/92 の新たな施行規則案。IMDRF/GHTF 整合の定義導入、Class A〜D 分類の詳細化、段階的移行スケジュール（Class D: 3ヶ月、C: 6ヶ月、B: 9ヶ月）を規定。2025年10月に公開諮問開始。",
+      "category": "施行規則案"
     }
   ],
   "relatedLaws": [
     {
-      "title": "Código Sanitario (Ley 66 de 1947)",
-      "category": "衛生法",
-      "enacted": "1947",
-      "url": "http://www.minsa.gob.pa/",
-      "relevance": "保健衛生制度の基本法。"
+      "title": "Ley N° 92 de 12 de septiembre de 2019（Ley 90 改正法）",
+      "category": "改正法",
+      "enacted": "2019",
+      "url": "https://vlex.com.pa/vid/ley-n-92-reforma-811411641",
+      "relevance": "Ley 90 de 2017 を改正し、医療機器規制の枠組みを強化。"
     }
   ],
   "classification": {
-    "system": "4クラス分類（Class I / II / III / IV）",
+    "system": "4クラス分類（Class A / B / C / D）",
     "basis": "リスクベース",
     "classes": [
       {
-        "name": "Class I",
-        "nameJa": "クラスI",
+        "name": "Class A",
+        "nameJa": "クラスA",
         "riskLevel": "低リスク",
-        "description": "低リスク医療機器。",
+        "description": "低リスク医療機器。簡易な登録手続き（Inscripción）。",
         "examples": [
           "聴診器",
           "弾性包帯",
           "手動外科器具"
         ],
-        "approvalPath": "登録（簡易手続き）"
+        "approvalPath": "Inscripción（簡易登録）"
       },
       {
-        "name": "Class II",
-        "nameJa": "クラスII",
+        "name": "Class B",
+        "nameJa": "クラスB",
         "riskLevel": "中低リスク",
-        "description": "中低リスク医療機器。",
+        "description": "中低リスク医療機器。標準的な登録手続き。",
         "examples": [
           "血圧計",
           "注射器",
           "超音波診断装置"
         ],
-        "approvalPath": "登録（標準手続き）"
+        "approvalPath": "Registro Sanitario（標準登録）"
       },
       {
-        "name": "Class III",
-        "nameJa": "クラスIII",
+        "name": "Class C",
+        "nameJa": "クラスC",
         "riskLevel": "中高リスク",
-        "description": "中高リスク医療機器。",
+        "description": "中高リスク医療機器。詳細な技術文書・臨床データが必要。",
         "examples": [
           "人工呼吸器",
           "透析器",
           "整形外科用インプラント"
         ],
-        "approvalPath": "登録（詳細審査）"
+        "approvalPath": "Registro Sanitario（詳細審査）"
       },
       {
-        "name": "Class IV",
-        "nameJa": "クラスIV",
+        "name": "Class D",
+        "nameJa": "クラスD",
         "riskLevel": "高リスク",
-        "description": "最高リスク医療機器。",
+        "description": "最高リスク医療機器（埋込み型機器を含む）。最も厳格な審査。臨床試験データ・ISO 14971 リスクマネジメント報告が必要。",
         "examples": [
           "人工心臓弁",
           "冠動脈ステント",
           "埋込み型デバイス"
         ],
-        "approvalPath": "登録（最も詳細な審査）"
+        "approvalPath": "Registro Sanitario（最詳細審査）"
       }
     ],
     "rules": [
       {
-        "id": "DNFD 分類規則",
-        "description": "リスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。",
-        "url": "http://www.minsa.gob.pa/"
+        "id": "DNDM 分類規則",
+        "description": "リスクベースの分類規則。意図する用途・侵襲性・使用期間等に基づきクラスを決定。IMDRF/GHTF 分類原則に整合。",
+        "url": "https://minsa.gob.pa/contenido/direccion-nacional-de-dispositivos-medicos"
       }
     ],
     "totalProductCodes": "要確認"
   },
   "conformityAssessment": {
-    "overview": "DNFD が登録申請書類を審査。CFS、技術文書、GMP 証明、ラベリング等を評価。FDA 承認済みや CE マーキング取得済み機器は審査の参考とされる。",
+    "overview": "DNDM が登録申請書類を審査。CFS、技術文書、ISO 13485 等 QMS 証明、ラベリング等を評価。クラスに応じて臨床データ・リスクマネジメント報告が必要。審査期間は約60営業日。",
     "routes": [
       {
         "name": "Registro Sanitario de Dispositivos Médicos",
         "nameJa": "医療機器衛生登録",
         "applicableClasses": [
-          "Class I / II / III / IV"
+          "Class A / B / C / D"
         ],
-        "description": "DNFD に登録申請書類を提出。技術文書、CFS、GMP 適合証明、ラベリング等を審査。",
-        "subtypes": [
-          {
-            "name": "簡易登録（FDA/CE 承認済み機器）",
-            "description": "US FDA 承認済みまたは CE マーキング取得済み機器は審査が簡略化される場合がある。"
-          }
-        ],
-        "avgReviewTime": "60〜180日（クラス・書類の完全性による）",
-        "fee": "要確認",
-        "url": "http://www.minsa.gob.pa/"
+        "description": "DNDM に登録申請書類を提出。技術文書、CFS、ISO 13485 認証、ラベリング（スペイン語）、製造プロセス情報等を審査。Class A は Inscripción（簡易登録）、Class B〜D は詳細度の異なる審査。有効期間10年。",
+        "subtypes": [],
+        "avgReviewTime": "約60営業日（約2ヶ月）。追加情報要求時はさらに60日延長の可能性あり",
+        "avgReviewTimeSource": "https://omcmedical.com/panama-medical-device-registration",
+        "fee": "要確認（2025年施行規則案では Class A: B/.150〜250、Class B: B/.400〜850、Class C: B/.550〜950、Class D: B/.550〜1,000）",
+        "feeSource": "https://www.aarsa.com/proyecto-de-decreto-ejecutivo-de-dispositivos-medicos-de-panama-2025/",
+        "url": "https://minsa.gob.pa/contenido/direccion-nacional-de-dispositivos-medicos"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "要確認",
-    "url": "http://www.minsa.gob.pa/",
-    "description": "DNFD は手続きのデジタル化を進めているが、完全な電子申請システムの運用状況は要確認。",
+    "system": "要確認（DNDM を通じた申請）",
+    "url": "https://minsa.gob.pa/contenido/direccion-nacional-de-dispositivos-medicos",
+    "description": "DNDM は手続きのデジタル化を進めているが、完全な電子申請システムの運用状況は要確認。",
     "mandatory": false
   },
   "udi": {
     "required": false,
-    "system": "要確認",
-    "description": "パナマでは現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。",
+    "system": "要確認（2025年施行規則案でトレーサビリティ要件を強化予定）",
+    "description": "パナマでは現時点で独自の UDI 制度が法的に義務化されているとの確認情報はない。2025年施行規則案で National Surveillance Program を通じたトレーサビリティ強化が予定されている。",
     "url": null,
     "timeline": "要確認"
   },
   "postMarket": {
     "adverseEventReporting": {
-      "system": "DNFD テクノビジランス制度",
+      "system": "DNDM テクノビジランス制度",
       "mandatory": true,
-      "url": "http://www.minsa.gob.pa/",
-      "description": "登録保有者は医療機器に関連する有害事象を DNFD に報告する義務がある。テクノビジランス制度により市販後安全性を監視。"
+      "url": "https://minsa.gob.pa/contenido/direccion-nacional-de-dispositivos-medicos",
+      "description": "登録保有者は医療機器に関連する有害事象を DNDM に報告する義務がある。テクノビジランス制度により市販後安全性を監視。2025年施行規則案では公立・民間病院にテクノビジランスユニット設置を義務化予定。"
     },
     "recalls": {
-      "authority": "DNFD",
-      "description": "DNFD がリコール・FSCA を管理。",
-      "url": "http://www.minsa.gob.pa/"
+      "authority": "DNDM",
+      "description": "DNDM がリコール・FSCA を管理。",
+      "url": "https://minsa.gob.pa/contenido/direccion-nacional-de-dispositivos-medicos"
     },
-    "surveillance": "DNFD によるテクノビジランス（市販後監視）。"
+    "surveillance": "DNDM によるテクノビジランス（市販後監視）。2025年施行規則案で National Surveillance Program の創設を規定。"
   },
   "certificateOfFreeSale": {
     "available": true,
-    "issuingAuthority": "DNFD",
+    "issuingAuthority": "DNDM",
     "name": "Certificado de Libre Venta",
-    "description": "登録申請時に原産国の規制当局からの CFS 提出が必要。DNFD も登録済み機器について CFS を発行可能。",
+    "description": "登録申請時に原産国の規制当局からの CFS 提出が必要。DNDM も登録済み機器について CFS を発行可能。",
     "processingTime": "要確認",
-    "url": "http://www.minsa.gob.pa/"
+    "url": "https://minsa.gob.pa/contenido/direccion-nacional-de-dispositivos-medicos"
   },
   "reimbursement": {
     "system": "CSS（Caja de Seguro Social）+ 公的医療機関 + 民間保険",
@@ -207,8 +205,8 @@ export default {
     "url": "http://www.css.gob.pa/"
   },
   "marketingRules": {
-    "authority": "DNFD",
-    "description": "医療機器の広告・販促は DNFD の規制下にある。登録済み機器のみの販売・広告が原則。",
+    "authority": "DNDM",
+    "description": "医療機器の広告・販促は DNDM の規制下にある。登録済み機器のみの販売・広告が原則。",
     "keyRules": [
       "登録済み機器のみ販売・広告可",
       "虚偽・誇大広告の禁止",
@@ -222,15 +220,15 @@ export default {
   "internationalStandards": {
     "iso13485": {
       "accepted": true,
-      "notes": "ISO 13485 認証は GMP/QMS 証明として参照される。"
+      "notes": "ISO 13485 認証または同等の QMS 証明が登録申請の必須書類。"
     },
     "iso14971": {
       "accepted": true,
-      "notes": "リスクマネジメントの国際規格として参照。"
+      "notes": "リスクマネジメントの国際規格として参照。Class C/D では ISO 14971 準拠のリスクマネジメント報告が必要。"
     },
     "iec62304": {
       "accepted": true,
-      "notes": "ソフトウェア医療機器に対して参照。"
+      "notes": "ソフトウェア医療機器に対して参照。2025年施行規則案で SaMD の定義を導入。"
     },
     "iec60601": {
       "accepted": true,
@@ -240,11 +238,16 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025",
-      "title": "医療機器規制の近代化",
-      "description": "DNFD は医療機器の衛生登録プロセスの効率化と国際的整合化を推進中。電子申請システムの整備も進行。"
+      "date": "2025-10",
+      "title": "新施行規則案（Ley 90/92 の包括的施行規則）の公開諮問開始",
+      "description": "MINSA は Ley 90 de 2017 / Ley 92 de 2019 の包括的な施行規則案を公表。IMDRF/GHTF 整合の100以上の定義導入、Class A〜D 分類の詳細化、段階的移行スケジュール、National Surveillance Program の創設等を規定。公開諮問期間は2025年10月15日〜12月19日。"
+    },
+    {
+      "date": "2019",
+      "title": "Decreto Ejecutivo N° 490 — Ley 90/92 施行規則の制定",
+      "description": "Ley 90 de 2017（Ley 92 de 2019 改正後）の施行規則を制定。医療機器の登録手続き・分類・施設要件等を規定。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -13,7 +13,8 @@ export default {
       "EU MDR ベースの5クラス分類（Class I / IIa / IIb / III / IVD A-D）",
       "FDA・MHRA・TGA・SFDA 等の承認を参照",
       "ローカル代理人（Authorized Representative）の指定が必須",
-      "登録有効期限は QAC（品質保証証明書）の有効期限に連動（1〜5年）"
+      "登録有効期限は QAC（品質保証証明書）の有効期限に連動（1〜5年）",
+      "2026年2月1日より医療機器登録が義務化"
     ]
   },
   "authorities": [
@@ -153,6 +154,7 @@ export default {
         "description": "登録フォーム、技術文書（取扱説明書・サービスマニュアル・カタログ）、ラベリング、QAC（ISO 13485 証明書、CE 証明書等）を提出。NHRA が6〜8週間で審査。",
         "subtypes": [],
         "avgReviewTime": "6〜8週間",
+        "avgReviewTimeSource": "NHRA Medical Devices Registration Guideline Ver 7.0",
         "fee": "要確認（NHRA 料金表を参照）",
         "url": "https://www.nhra.bh/departments/mdr/"
       }
@@ -236,9 +238,14 @@ export default {
   },
   "recentDevelopments": [
     {
+      "date": "2026-02",
+      "title": "医療機器登録の義務化（2026年2月1日施行）",
+      "description": "2026年2月1日より医療機器の登録が法的に義務化。これまでの自主的・段階的な登録から、全ての医療機器に登録を必須とする制度へ移行。"
+    },
+    {
       "date": "2025",
-      "title": "登録済み医療機器データの NHRA ウェブサイト公開予定",
-      "description": "2025年末までに、全ての承認・許可済み医療機器の登録詳細が NHRA ウェブサイトで公開される予定。"
+      "title": "登録済み医療機器データの NHRA ウェブサイト公開",
+      "description": "2025年末までに、全ての承認・許可済み医療機器の登録詳細が NHRA ウェブサイトで公開。"
     },
     {
       "date": "2018",
@@ -246,6 +253,6 @@ export default {
       "description": "2018年に医療機器規制フレームワークを正式に確立。国際的な規制機関（FDA、MHRA、TGA）のガイドラインをバーレーン市場に適合させた。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };
