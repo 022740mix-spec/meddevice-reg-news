@@ -144,6 +144,7 @@ import ARM from "./profiles/ARM.js";
 import TKM from "./profiles/TKM.js";
 import MLI from "./profiles/MLI.js";
 import BFA from "./profiles/BFA.js";
+import NER from "./profiles/NER.js";
 import SUR from "./profiles/SUR.js";
 import TGO from "./profiles/TGO.js";
 import SWZ from "./profiles/SWZ.js";
@@ -152,6 +153,10 @@ import MDG from "./profiles/MDG.js";
 import LSO from "./profiles/LSO.js";
 import AND from "./profiles/AND.js";
 import MCO from "./profiles/MCO.js";
+import SMR from "./profiles/SMR.js";
+import TLS from "./profiles/TLS.js";
+import BEN from "./profiles/BEN.js";
+import GAB from "./profiles/GAB.js";
 
 export const COUNTRY_FLAG = {
   USA: "🇺🇸", CAN: "🇨🇦", EU: "🇪🇺", JPN: "🇯🇵", CHN: "🇨🇳",
@@ -190,6 +195,7 @@ export const COUNTRY_FLAG = {
   TKM: "🇹🇲",
   MLI: "🇲🇱",
   BFA: "🇧🇫",
+  NER: "🇳🇪",
   SUR: "🇸🇷",
   TGO: "🇹🇬",
   SWZ: "🇸🇿",
@@ -198,6 +204,10 @@ export const COUNTRY_FLAG = {
   LSO: "🇱🇸",
   AND: "🇦🇩",
   MCO: "🇲🇨",
+  SMR: "🇸🇲",
+  TLS: "🇹🇱",
+  BEN: "🇧🇯",
+  GAB: "🇬🇦",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -339,6 +349,7 @@ export const COUNTRY_PROFILES = [
   TKM,
   MLI,
   BFA,
+  NER,
   SUR,
   TGO,
   SWZ,
@@ -347,6 +358,10 @@ export const COUNTRY_PROFILES = [
   LSO,
   AND,
   MCO,
+  SMR,
+  TLS,
+  BEN,
+  GAB,
 ];
 
 // ===========================================================================

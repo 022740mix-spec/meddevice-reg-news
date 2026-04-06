@@ -53,6 +53,10 @@ export const COUNTRY_FLAG = {
   LSO: "🇱🇸",
   AND: "🇦🇩",
   MCO: "🇲🇨",
+  SMR: "🇸🇲",
+  TLS: "🇹🇱",
+  BEN: "🇧🇯",
+  GAB: "🇬🇦",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -3750,6 +3754,29 @@ export const COUNTRY_PROFILES_META = [
     "lastUpdated": "2026-04-06"
   },
   {
+    "code": "NER",
+    "country": "ニジェール",
+    "countryEn": "Niger",
+    "region": "Middle East & Africa",
+    "flag": "🇳🇪",
+    "primaryLawTitle": "Ordonnance n° 97-002 du 10 janvier 1997 portant législation pharmaceutique",
+    "primaryLawEnacted": "1997",
+    "classificationSystem": "Arrêté n°024に基づく分類（UEMOA/国際認証に依存）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class II", "riskLevel": "中" },
+      { "name": "Class III", "riskLevel": "中高" },
+      { "name": "Class IV", "riskLevel": "高" }
+    ],
+    "mainAuthority": "ANRP",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "UEMOA加盟国。独立した医療機器法なし、Ordonnance 97-002（医薬品法）に基づく規制。Arrêté n°024（2021年）が医療機器の分類・安全性要件・Homologation手続きを規定。ANRP（2022年設立）がNRA。LANSPEXが品質検査。ONPPCが公的調達一元管理。AMA条約批准済み（2021年）。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
     "code": "SUR",
     "country": "スリナム",
     "countryEn": "Suriname",
@@ -3922,6 +3949,93 @@ export const COUNTRY_PROFILES_META = [
     "udiRequired": false,
     "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
     "deviceNotes": "EU非加盟・非EEA。2003年EU-Monaco協定（2004年発効）により旧EU医療機器指令（MDD等）をモナコ領域内に適用。CEマーキング付き機器を受入。国内NBなし。DASAがNCA。フランスANSMとの行政協力取極めにより検査・ビジランスで連携。EU連合協定交渉中。フランス語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "SMR",
+    "country": "サンマリノ",
+    "countryEn": "San Marino",
+    "region": "Europe",
+    "flag": "🇸🇲",
+    "primaryLawTitle": "Agreement on Cooperation and Customs Union between the EEC and the Republic of San Marino",
+    "primaryLawEnacted": "1991",
+    "classificationSystem": "EU MDR準拠4クラス制（関税同盟によるCEマーキング機器流通）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class IIa", "riskLevel": "中低" },
+      { "name": "Class IIb", "riskLevel": "中高" },
+      { "name": "Class III", "riskLevel": "高" }
+    ],
+    "mainAuthority": "Segreteria di Stato per la Sanità",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "確認されていない",
+    "deviceNotes": "EU非加盟・非EEA。1991年署名・2002年発効のEU-サンマリノ関税同盟で全品目が自由流通。CEマーキング付き機器を受入。国内NBなし。Segreteria di Stato per la Sanitàが保健政策所管。Authority Sanitariaが施設認可・監督。ISS（Istituto per la Sicurezza Sociale）が医療サービス提供。イタリア保健省との二国間協力取極め。EU連合協定（2024年法的テキスト最終化、2026年発効見込み）でEU単一市場参加へ。イタリア語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "TLS",
+    "country": "東ティモール",
+    "countryEn": "Timor-Leste",
+    "region": "ASPAC",
+    "flag": "🇹🇱",
+    "primaryLawTitle": "Decreto-Lei N.º 2/2025 — Regime de Importação, Armazenamento, Distribuição, Venda e Exportação de Produtos Farmacêuticos e Equipamentos Médicos",
+    "primaryLawEnacted": "2025",
+    "classificationSystem": "包括的分類制度は未整備（DNFMがリスクベースで審査）",
+    "classCount": 2,
+    "classes": [
+      { "name": "Medical Equipment（一般）", "riskLevel": "低〜中" },
+      { "name": "Medical Equipment（高リスク）", "riskLevel": "高" }
+    ],
+    "mainAuthority": "DNFM",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "TileSW（Timor-Leste Electronic Single Window）",
+    "deviceNotes": "ASEAN非加盟（オブザーバー）のためAMDD非適用。保健省傘下のDNFMが医薬品・医療製品の規制を管轄。INFPM（旧SAMES、Decreto-Lei 57/2023で設立）が公的調達・輸入・流通を担当。医療機器専門の包括的規制枠組みは発展途上。WHO/SEARO支援による規制能力構築を推進中。ポルトガル語・テトゥン語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "BEN",
+    "country": "ベナン",
+    "countryEn": "Benin",
+    "region": "Middle East & Africa",
+    "flag": "🇧🇯",
+    "primaryLawTitle": "Loi n° 2021-03 du 01 février 2021 portant organisation des activités pharmaceutiques en République du Bénin",
+    "primaryLawEnacted": "2021",
+    "classificationSystem": "未整備（国際認証に依存、Décret 2024-1298で制度化進行中）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class II", "riskLevel": "中低" },
+      { "name": "Class III", "riskLevel": "中高" },
+      { "name": "Class IV", "riskLevel": "高" }
+    ],
+    "mainAuthority": "ABMed",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "GUFE（輸入事前許可デジタル化）+ 紙ベース申請",
+    "deviceNotes": "UEMOA加盟国。独立した医療機器法なし、Loi 2021-03（医薬活動組織法）に基づく医薬品規制の一部として運用。ABMed（旧DPMED→ABRP、2023年改組）がHomologation/AMMを管理。Décret 2024-1298が医療機器固有の承認手続を規定。非滅菌機器は非薬局商業者にも流通開放（Décret 2025-785）。AMA条約批准済み（2021年）、AMA初代理事会議長国（2024年）。WHO GBTレベル1（2023年時点）。フランス語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "GAB",
+    "country": "ガボン",
+    "countryEn": "Gabon",
+    "region": "Middle East & Africa",
+    "flag": "🇬🇦",
+    "primaryLawTitle": "Ordonnance n° 001/PR/2011 du 27 janvier 2011 portant organisation du secteur pharmaceutique en République Gabonaise",
+    "primaryLawEnacted": "2011",
+    "classificationSystem": "体系的分類制度なし（医薬品規制の枠組みで運用）",
+    "classCount": 1,
+    "classes": [
+      { "name": "医療機器（一律）", "riskLevel": "一律" }
+    ],
+    "mainAuthority": "ANMAPS",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "CEMAC加盟国。独立した医療機器法なし、Ordonnance 001/PR/2011（医薬品セクター組織法）に基づく医薬品規制の一部として運用。ANMAPS（2023年10月設立、Ordonnance 0004/2023）が旧DMPの機能を継承しNCAとして発足。医療機器販売会社の認可制（50,000 FCFA）。CEMAC圏でカメルーンに次ぎ2番目に医療機器規制を実施。必須医療機器リスト2024年版に945品目収載。OCEAC主導の規制調和に参加。フランス語。",
     "lastUpdated": "2026-04-06"
   }
 ];
