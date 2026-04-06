@@ -256,7 +256,7 @@ export default {
     ]
   },
   "mdsap": {
-    "status": "該当なし（EU加盟国）",
+    "status": "非参加",
     "description": "ポーランドはEU加盟国としてMDSAPに参加していない。"
   },
   "internationalStandards": {
@@ -300,10 +300,10 @@ export default {
     },
     {
       "date": "2025-12",
-      "title": "EU MDR移行期限延長に関するEC提案",
-      "description": "MDD/AIMDD認証医療機器の移行期限に関する追加措置を提案。ポーランドを含むEU全域に影響。"
+      "title": "EU MDR/IVDR簡素化改正案（EC提案）",
+      "description": "欧州委員会がMDR/IVDRの簡素化改正案を公表。規制手続きの合理化・NB能力拡充等を提案。ポーランドを含むEU全域に影響。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -7,14 +7,14 @@ export default {
   "flag": "🇧🇩",
   "legalSystemOverview": {
     "type": "議会制共和制（Parliamentary Republic）",
-    "description": "バングラデシュの医療機器規制は医薬品管理局（DGDA: Directorate General of Drug Administration）が所管する。従来は Drugs Act 1940 および Drugs (Control) Ordinance 1982 の下で医薬品と同様に規制されてきたが、医療機器固有の規制枠組みは発展途上段階にある。2023年の Medical Devices Act 2023 により、医療機器の定義・分類・登録・市販後監視を包括的にカバーする法的基盤が整備されつつある。WHOおよびIMDRF枠組みとの整合を目指している。",
+    "description": "バングラデシュの医療機器規制は医薬品管理局（DGDA: Directorate General of Drug Administration）が所管する。従来は Drugs Act 1940 および Drugs (Control) Ordinance 1982 の下で医薬品と同様に規制されてきたが、2023年9月18日に Drug and Cosmetics Act 2023（Act No. 29 of 2023）が制定され、医療機器（ソフトウェアを含む）の定義・分類・登録が法的に明確化された。ASEAN MDD準拠の4クラス分類（Class A/B/C/D）を採用。Medical Device Registration Guideline 2015が登録手続きの実務ガイダンスとして機能。",
     "keyCharacteristics": [
       "DGDA が医療機器規制を統括",
-      "Medical Devices Act 2023 により包括的枠組みを整備中",
-      "リスクベース4クラス分類（A / B / C / D）を導入予定",
-      "輸入品は DGDA への登録・輸入許可が必要",
-      "規制制度は発展途上、実施規則の整備が進行中",
-      "WHO / IMDRF 枠組みとの整合を推進"
+      "Drug and Cosmetics Act 2023 により医療機器（ソフトウェア含む）の定義を明確化",
+      "ASEAN MDD準拠のリスクベース4クラス分類（A / B / C / D）",
+      "Class B/C/D は DGDA への登録が必須（Class A は届出不要）",
+      "ISO 13485認証がClass B/C/D全てに必要",
+      "参照国（EU/USA/CAN/JPN/AUS）認可の保有が審査で有利"
     ]
   },
   "authorities": [
@@ -41,31 +41,31 @@ export default {
     "bodies": []
   },
   "deviceDefinition": {
-    "legalDefinition": "Medical Devices Act 2023 に基づく定義（IMDRF定義に準拠）。疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらないもの。",
-    "scope": "IVDを含む。SaMDに関する詳細規定は要確認。",
-    "notes": "従来は Drugs Act 1940 の「drug」定義に一部の機器が含まれていた。Medical Devices Act 2023 で独立した定義を導入。"
+    "legalDefinition": "Drug and Cosmetics Act 2023 に基づく定義。疾病の診断・治療・予防・監視等を目的とする器具・装置・機器・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらないもの。ソフトウェアが医療機器の定義に明示的に含まれた。",
+    "scope": "IVD試薬を含む。SaMDも「Drug」カテゴリの一部として規制対象。",
+    "notes": "従来は Drugs Act 1940 の「drug」定義に一部の機器が含まれていた。Drug and Cosmetics Act 2023 でソフトウェアを含む独立した定義を導入。"
   },
   "primaryLaw": {
-    "title": "Medical Devices Act 2023（医療機器法）",
-    "originalTitle": "মেডিকেল ডিভাইস আইন ২০২৩",
-    "enacted": "2023",
-    "lastAmended": "2023",
-    "url": "https://www.dgda.gov.bd/",
-    "description": "バングラデシュ初の医療機器専用法。医療機器の定義、分類、登録制度、市販後監視、罰則等を規定。実施規則の策定が進行中。"
+    "title": "Drug and Cosmetics Act 2023 (Act No. 29 of 2023)",
+    "originalTitle": "ওষুধ ও প্রসাধনী আইন, ২০২৩",
+    "enacted": "2023-09-18",
+    "lastAmended": null,
+    "url": "https://asiaactual.com/wp-content/uploads/2023/10/Bangladesh-Drug-and-Cosmetics-Act-2023-English.pdf",
+    "description": "医薬品・化粧品・医療機器を包括的に規制する法律。医療機器（ソフトウェアを含む）の定義、分類、登録制度、製造・輸入規制、市販後監視、罰則等を規定。Drugs Act 1940を置き換える新法。"
   },
   "implementingRegulations": [
     {
-      "title": "Medical Devices Rules（策定中）",
-      "date": "要確認",
-      "url": "https://www.dgda.gov.bd/",
-      "description": "Medical Devices Act 2023 の実施規則。分類基準、登録手続きの詳細、技術文書要件等を規定予定。策定中。",
+      "title": "Medical Device Registration Guideline 2015",
+      "date": "2015",
+      "url": "https://dgda.gov.bd/index.php/2013-03-31-05-16-29/guidance-documents/127-medical-device-registration-guideline-2015/file",
+      "description": "医療機器登録手続きの実務ガイダンス。ASEAN MDD準拠の4クラス分類、申請書類要件、審査プロセスを規定。現行の登録実務の基盤。",
       "category": "登録手続き"
     },
     {
       "title": "Drugs (Control) Ordinance 1982",
       "date": "1982",
-      "url": "https://www.dgda.gov.bd/",
-      "description": "従来の医薬品・医療機器規制の法的根拠。医療機器専用法の完全施行まで部分的に適用。",
+      "url": "https://dgda.gov.bd/",
+      "description": "従来の医薬品・医療機器規制の法的根拠。Drug and Cosmetics Act 2023の完全施行まで部分的に適用。",
       "category": "従来規制"
     }
   ],
@@ -74,99 +74,99 @@ export default {
       "title": "Drugs Act 1940",
       "category": "医薬品規制",
       "enacted": "1940",
-      "url": "https://www.dgda.gov.bd/",
-      "relevance": "医薬品規制の基本法。医療機器の一部が「drug」として規制されてきた歴史的経緯。"
+      "url": "https://dgda.gov.bd/",
+      "relevance": "旧基本法。Drug and Cosmetics Act 2023により置き換え。医療機器の一部が「drug」として規制されてきた歴史的経緯。"
     }
   ],
   "classification": {
-    "system": "リスクベース4クラス分類（IMDRF整合・導入中）",
-    "basis": "Medical Devices Act 2023 に基づくIMDRF準拠の分類。実施規則で詳細を規定予定。",
+    "system": "ASEAN MDD準拠4クラス分類（Class A/B/C/D）",
+    "basis": "Medical Device Registration Guideline 2015 に基づくASEAN MDD準拠の分類。リスクレベルにより4段階に分類。",
     "classes": [
       {
         "name": "Class A",
         "nameJa": "クラスA（低リスク）",
         "riskLevel": "低",
-        "description": "低リスク医療機器。",
+        "description": "低リスク医療機器。登録不要（届出のみ）。",
         "examples": [
-          "ガーゼ",
-          "聴診器",
-          "手術用手袋",
-          "松葉杖"
+          "手術用リトラクター",
+          "舌圧子",
+          "ガーゼ"
         ],
-        "approvalPath": "登録（簡易審査）— DGDA"
+        "approvalPath": "届出のみ（登録不要）"
       },
       {
         "name": "Class B",
         "nameJa": "クラスB（中低リスク）",
         "riskLevel": "中低",
-        "description": "中低リスク医療機器。",
+        "description": "中低リスク医療機器。DGDA登録必須。ISO 13485認証・原産国CFS必要。",
         "examples": [
-          "超音波診断装置",
-          "注射針",
-          "歯科用材料"
+          "皮下注射針",
+          "吸引器",
+          "超音波診断装置"
         ],
-        "approvalPath": "登録 — DGDA"
+        "approvalPath": "DGDA登録（2段階審査: Primary Review + Final Registration）"
       },
       {
         "name": "Class C",
         "nameJa": "クラスC（中高リスク）",
         "riskLevel": "中高",
-        "description": "中高リスク医療機器。",
+        "description": "中高リスク医療機器。DGDA登録必須。ISO 13485認証・参照国CFS/EC証明書必要。",
         "examples": [
           "人工呼吸器",
-          "透析器",
-          "骨接合プレート"
+          "骨接合プレート",
+          "透析器"
         ],
-        "approvalPath": "登録（技術審査）— DGDA"
+        "approvalPath": "DGDA登録（2段階審査: Primary Review + Final Registration）"
       },
       {
         "name": "Class D",
         "nameJa": "クラスD（高リスク）",
         "riskLevel": "高",
-        "description": "高リスク医療機器。",
+        "description": "高リスク医療機器。DGDA登録必須。ISO 13485認証・参照国CFS/EC証明書必要。最も厳格な審査。",
         "examples": [
           "心臓ペースメーカー",
           "人工心臓弁",
-          "冠動脈ステント"
+          "埋込み型除細動器"
         ],
-        "approvalPath": "登録（詳細審査）— DGDA"
+        "approvalPath": "DGDA登録（2段階審査: Primary Review + Final Registration）"
       }
     ],
     "rules": [
-      "IMDRF分類ルールに基づく（実施規則で詳細規定予定）",
-      "IVDの分類基準は要確認",
-      "従来はDGDAの個別判断で分類"
+      "ASEAN MDD分類ガイドラインに準拠",
+      "Class A は登録不要、Class B/C/D は登録必須",
+      "Class C/D は参照国（EU/USA/CAN/JPN/AUS）のCFS/EC証明書が必要"
     ],
     "totalProductCodes": null
   },
   "conformityAssessment": {
-    "overview": "全医療機器はDGDAへの登録が必要。Medical Devices Act 2023 の実施規則が完全に整備されるまでは、既存のDGDA登録手続きに基づく。参照国認可（CE、FDA等）の保有が審査で考慮される。外国メーカーはローカル代理人の指定が必要。",
+    "overview": "Class B/C/D の医療機器はDGDAへの登録が必要（Class Aは届出不要）。2段階審査制（Primary Review → Final Registration）。外国メーカーはローカル代理人（Authorized Representative）の指定が必須（1製品につき1社のみ）。参照国（EU/USA/CAN/JPN/AUS）認可の保有が審査で有利に働く。",
     "routes": [
       {
-        "name": "DGDA Device Registration",
-        "nameJa": "DGDA 医療機器登録",
+        "name": "DGDA Device Registration (Two-Step Approval)",
+        "nameJa": "DGDA 医療機器登録（2段階承認）",
         "applicableClasses": [
-          "Class A",
           "Class B",
           "Class C",
           "Class D"
         ],
-        "description": "DGDAに申請書類一式を提出。技術文書、参照国認可証明、品質管理証明書等が必要。",
+        "description": "Step 1: Primary Review（一次審査）で技術・行政書類の完全性を確認（3〜4ヶ月）。Step 2: Final Registration（最終登録）で原本FSC（バングラデシュ大使館認証済み）・製品ラベルを提出（30〜40日）。ISO 13485認証が全クラスで必要。Class C/Dは参照国のEC証明書が追加要件。",
         "subtypes": [
           "新規登録",
           "変更登録",
           "更新"
         ],
-        "avgReviewTime": "要確認（数ヶ月〜）",
-        "fee": "DGDA規定による",
-        "url": "https://www.dgda.gov.bd/"
+        "avgReviewTime": "4〜6ヶ月（Primary Review 3〜4ヶ月 + Final Registration 30〜40日）",
+        "avgReviewTimeSource": "https://www.elendilabs.com/en/articles/bgd-md-registration",
+        "fee": "要確認（DGDA規定による）",
+        "feeSource": null,
+        "url": "https://dgda.gov.bd/index.php/2013-03-31-05-16-29/guidance-documents/127-medical-device-registration-guideline-2015/file"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "DGDA オンラインポータル（段階的導入中）",
-    "url": "https://www.dgda.gov.bd/",
-    "description": "DGDAはオンライン申請システムを段階的に導入中。一部の手続きは書面提出が必要。",
+    "system": "DGDA Digital Product Registration",
+    "url": "https://info.dgda.gov.bd/",
+    "description": "DGDAはDigital Product Registrationシステムを段階的に導入中。一部の手続きは書面提出が必要。Registration Dashboardで登録状況の確認が可能。",
     "mandatory": false
   },
   "udi": {
@@ -180,13 +180,13 @@ export default {
     "adverseEventReporting": {
       "system": "有害事象報告制度（DGDA）",
       "mandatory": true,
-      "url": "https://www.dgda.gov.bd/",
-      "description": "Medical Devices Act 2023 に基づき有害事象報告が義務化。報告期限・様式等の詳細は実施規則で規定予定。"
+      "url": "https://dgda.gov.bd/sites/default/files/files/dgda.portal.gov.bd/page/f9fa97e3_3748_4fef_b101_7f1d98ac115b/2023-09-12-18-25-652150ca95898e652a62928ade2901d4.pdf",
+      "description": "Drug and Cosmetics Act 2023 に基づき有害事象報告が義務化。GVP Guideline（2023年8月）に報告手順を規定。"
     },
     "recalls": {
       "authority": "DGDA",
       "description": "DGDAの命令または自主リコール。リコール手続きの詳細は実施規則で規定予定。",
-      "url": "https://www.dgda.gov.bd/"
+      "url": "https://dgda.gov.bd/"
     },
     "surveillance": "DGDAによる市販後監視。制度は発展途上。WHO支援の下で市販後監視体制の強化を推進中。"
   },
@@ -220,7 +220,7 @@ export default {
   "internationalStandards": {
     "iso13485": {
       "accepted": true,
-      "notes": "ISO 13485認証は登録時にQMS証明として参照される。法的義務化の状況は要確認。"
+      "notes": "Class B/C/D全てでISO 13485認証が必須。登録申請の前提条件。"
     },
     "iso14971": {
       "accepted": true,
@@ -238,16 +238,16 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2023",
-      "title": "Medical Devices Act 2023 制定",
-      "description": "バングラデシュ初の医療機器専用法が制定。リスクベース分類、登録制度、市販後監視の法的基盤を整備。"
+      "date": "2023-09",
+      "title": "Drug and Cosmetics Act 2023 制定",
+      "description": "2023年9月18日にAct No. 29として制定。医療機器（ソフトウェアを含む）の定義を明確化し、製造・輸入・流通・販売を包括的に規制する法的基盤を整備。"
     },
     {
       "date": "2024-2025",
       "title": "実施規則の策定作業",
-      "description": "Medical Devices Act 2023 の実施規則をWHO支援の下で策定中。"
+      "description": "Drug and Cosmetics Act 2023 の実施規則をWHO支援の下で策定中。現行はMedical Device Registration Guideline 2015が実務ガイダンスとして機能。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

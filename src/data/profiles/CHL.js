@@ -7,9 +7,9 @@ export default {
   "flag": "🇨🇱",
   "legalSystemOverview": {
     "type": "中央集権制（Centralized system）— 段階的規制導入型",
-    "description": "チリの医療機器規制はISP（Instituto de Salud Pública de Chile）のANDID（Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo）が管轄する。Código Sanitario（衛生法典）および Decreto 825/98 が法的基盤だが、規制は段階的に導入されており、全医療機器が強制登録の対象ではない点が特徴。保健省（Ministerio de Salud）が個別のDecreto Supremo（最高政令）で対象製品カテゴリを順次指定し、ISPが適合性検証・認証を実施。4クラス分類（Class I / II / III / IV）を採用。IVDはリスクClass A〜Dに分類。",
+    "description": "チリの医療機器規制はISP（Instituto de Salud Pública de Chile）のANDIM（Agencia Nacional de Dispositivos Médicos）が管轄する。Código Sanitario（衛生法典）および Decreto 825/98 が法的基盤だが、規制は段階的に導入されており、全医療機器が強制登録の対象ではない点が特徴。保健省（Ministerio de Salud）が個別のDecreto Supremo（最高政令）で対象製品カテゴリを順次指定し、ISPが適合性検証・認証を実施。4クラス分類（Class I / II / III / IV）を採用。IVDはリスクClass A〜Dに分類。",
     "keyCharacteristics": [
-      "ISP / ANDID による一元的規制",
+      "ISP / ANDIM による一元的規制",
       "段階的規制導入: 保健省のDecreto Supremoで対象カテゴリを順次指定",
       "リスクベースの4クラス分類（Class I / II / III / IV）",
       "IVDは別途4クラス（Class A / B / C / D）",
@@ -19,11 +19,11 @@ export default {
   },
   "authorities": [
     {
-      "name": "ISP / ANDID",
-      "fullName": "Instituto de Salud Pública de Chile — Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo",
-      "localName": "Instituto de Salud Pública de Chile — Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo",
+      "name": "ISP / ANDIM",
+      "fullName": "Instituto de Salud Pública de Chile — Agencia Nacional de Dispositivos Médicos",
+      "localName": "Instituto de Salud Pública de Chile — Agencia Nacional de Dispositivos Médicos",
       "role": "医療機器の適合性検証・認証・登録・市販後監視・ビジランス。主管当局。",
-      "url": "https://www.ispch.gob.cl/andid/",
+      "url": "https://www.ispch.gob.cl/andim/",
       "isPrimary": true
     },
     {
@@ -44,8 +44,8 @@ export default {
     }
   ],
   "notifiedBodies": {
-    "system": "なし（ISP/ANDID が直接適合性検証・認証を実施）",
-    "description": "チリでは欧州型のNotified Body制度は存在しない。ISP/ANDIDが直接、適合性検証（Verificación de Conformidad）および認証を実施する。国際品質認証（CE/FDA等）は参考資料として評価されるが、自動的な承認にはならない。",
+    "system": "なし（ISP/ANDIM が直接適合性検証・認証を実施）",
+    "description": "チリでは欧州型のNotified Body制度は存在しない。ISP/ANDIMが直接、適合性検証（Verificación de Conformidad）および認証を実施する。国際品質認証（CE/FDA等）は参考資料として評価されるが、自動的な承認にはならない。",
     "bodies": []
   },
   "deviceDefinition": {
@@ -72,14 +72,14 @@ export default {
     {
       "title": "Decreto Exento 5/2025 — 免疫血液学的試薬の衛生管理体制への編入",
       "date": "2025-02-21",
-      "url": "https://www.ispch.gob.cl/andid/",
+      "url": "https://www.ispch.gob.cl/andim/registro-y-autorizacion/registro/",
       "description": "免疫血液学的試薬をCódigo Sanitario Art. 111の衛生管理体制に編入。NCh-ISO 16142/2:2021準拠の適合性検証・認証を義務化。2026年2月22日施行。",
       "category": "IVD規制"
     },
     {
       "title": "Decreto Exento 25/2026 — 高リスク医療機器・IVDの衛生管理体制への追加編入",
       "date": "2026-03-19",
-      "url": "https://www.ispch.gob.cl/andid/",
+      "url": "https://www.ispch.gob.cl/andim/vigilancia-sanitaria-y-post-mercado/",
       "description": "追加の高リスク医療機器・IVDカテゴリを衛生管理体制に編入。規制対象の段階的拡大。",
       "category": "規制対象拡大"
     }
@@ -170,7 +170,7 @@ export default {
     "totalProductCodes": "GMDN（Global Medical Device Nomenclature）を参照"
   },
   "conformityAssessment": {
-    "overview": "チリの医療機器規制は段階的導入型であり、保健省のDecreto Supremoで指定されたカテゴリの製品のみISP/ANDIDへの適合性検証（Verificación de Conformidad）・認証が強制される。指定カテゴリ外の医療機器は規制上のフリーマーケットとなっている。登録フォームはANDID-001。審査期間は約75営業日。NCh-ISO 16142に準拠した安全性・性能の Essential Principles 評価が中心。",
+    "overview": "チリの医療機器規制は段階的導入型であり、保健省のDecreto Supremoで指定されたカテゴリの製品のみISP/ANDIMへの適合性検証（Verificación de Conformidad）・認証が強制される。指定カテゴリ外の医療機器は規制上のフリーマーケットとなっている。現在10種類の医療機器が強制衛生登録の対象。NCh-ISO 16142に準拠した安全性・性能の Essential Principles 評価が中心。審査期間はクラスにより2ヶ月〜12ヶ月以上。",
     "routes": [
       {
         "name": "Verificación de Conformidad y Certificación",
@@ -178,7 +178,7 @@ export default {
         "applicableClasses": [
           "指定カテゴリのClass I〜IV"
         ],
-        "description": "保健省が指定した製品カテゴリに対し、ISP/ANDIDが適合性検証を実施。ANDID-001フォームおよび技術文書・法的文書を提出。NCh-ISO 16142準拠の安全性・性能評価。初回ロット性能評価を含む場合あり。",
+        "description": "保健省が指定した製品カテゴリに対し、ISP/ANDIMが適合性検証を実施。ANDID-001フォームおよび技術文書・法的文書を提出。NCh-ISO 16142準拠の安全性・性能評価。初回ロット性能評価を含む場合あり。",
         "subtypes": [
           {
             "name": "新規認証",
@@ -189,48 +189,48 @@ export default {
             "description": "設計・製造工程・原材料・ラベリング等の変更時にISPに報告。"
           }
         ],
-        "avgReviewTime": "約75営業日",
+        "avgReviewTime": "Class I: 2〜3ヶ月 / Class II: 3〜6ヶ月 / Class III: 6〜12ヶ月 / Class IV: 12ヶ月以上",
         "avgReviewTimeSource": "https://omcmedical.com/chile-medical-device-registration/",
-        "fee": "約 USD 350（公式申請手数料）",
-        "feeSource": "https://omcmedical.com/chile-medical-device-registration/",
-        "url": "https://www.ispch.gob.cl/andid/registro-y-autorizacion/registro/"
+        "fee": "基本登録: CLP 160,027 + IVA / IVD登録: CLP 471,382 + IVA",
+        "feeSource": "https://www.regdesk.co/resource-library/chile/",
+        "url": "https://www.ispch.gob.cl/andim/registro-y-autorizacion/registro/"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "ISP/ANDID オンライン申請",
-    "url": "https://www.ispch.gob.cl/andid/registro-y-autorizacion/registro/",
-    "description": "適合性検証申請はISP/ANDIDの窓口および電子システム経由で提出。ANDID-001フォームに技術文書・法的文書を添付。",
+    "system": "ISP/ANDIM オンライン申請",
+    "url": "https://www.ispch.gob.cl/andim/registro-y-autorizacion/registro/",
+    "description": "適合性検証申請はISP/ANDIMの窓口および電子システム経由で提出。ANDID-001フォームに技術文書・法的文書を添付。",
     "mandatory": true
   },
   "udi": {
     "required": false,
     "system": "未導入（チリ独自のUDI制度は未確立）",
     "description": "2026年4月時点で、チリ独自の包括的UDI制度は正式に導入されていない。ただしISPはIMDRF（国際医療機器規制当局フォーラム）のUDI作業グループに参加しており、将来的な導入が見込まれる。",
-    "url": "https://www.ispch.gob.cl/andid/",
+    "url": "https://www.imdrf.org/working-groups/unique-device-identification",
     "timeline": "未定（IMDRF参加を通じた検討段階）"
   },
   "postMarket": {
     "adverseEventReporting": {
-      "system": "ISP/ANDID ビジランス報告",
+      "system": "ISP/ANDIM テクノビジランス",
       "mandatory": true,
-      "url": "https://www.ispch.gob.cl/andid/",
-      "description": "製造業者・輸入業者・医療従事者が有害事象をISP/ANDIDに報告する義務を負う。設計・製造工程・意図する用途・原材料・ラベリング・性能の変更もISPへの報告が必要。"
+      "url": "https://www.ispch.gob.cl/andim/tecnovigilancia/",
+      "description": "製造業者・輸入業者・医療従事者が有害事象をISP/ANDIMに報告する義務を負う。設計・製造工程・意図する用途・原材料・ラベリング・性能の変更もISPへの報告が必要。"
     },
     "recalls": {
-      "authority": "ISP / ANDID",
-      "description": "ISP/ANDIDがリコール・FSCA（Field Safety Corrective Action）を監督。市場からの製品回収を命令する権限を有する。",
-      "url": "https://www.ispch.gob.cl/andid/"
+      "authority": "ISP / ANDIM",
+      "description": "ISP/ANDIMがリコール・FSCA（Field Safety Corrective Action）を監督。市場からの製品回収を命令する権限を有する。",
+      "url": "https://www.ispch.gob.cl/andim/vigilancia-y-fiscalizacion/"
     },
-    "surveillance": "ISP/ANDIDが市販後監視を実施。有害事象報告の監視・安全性情報の評価・是正措置の監督を担う。企業は製品発売後の性能モニタリングと有害事象報告が義務。"
+    "surveillance": "ISP/ANDIMが市販後監視を実施。有害事象報告の監視・安全性情報の評価・是正措置の監督を担う。企業は製品発売後の性能モニタリングと有害事象報告が義務。"
   },
   "certificateOfFreeSale": {
     "available": true,
-    "issuingAuthority": "輸出国の規制当局（ISP/ANDID申請時に提出が推奨）",
+    "issuingAuthority": "輸出国の規制当局（ISP/ANDIM申請時に提出が推奨）",
     "name": "Certificate of Free Sale (CFS)",
-    "description": "ISP/ANDID への適合性検証申請時に、原産国の規制当局が発行するCFSの提出が推奨される。必須要件かは製品カテゴリにより異なる。",
+    "description": "ISP/ANDIM への適合性検証申請時に、原産国の規制当局が発行するCFSの提出が推奨される。必須要件かは製品カテゴリにより異なる。",
     "processingTime": "輸出国側の手続きによる",
-    "url": "https://www.ispch.gob.cl/andid/"
+    "url": "https://www.ispch.gob.cl/andim/listado-de-dispositivos-medicos-establecimientos-y-empresas/"
   },
   "reimbursement": {
     "system": "公的保険（FONASA）と民間保険（ISAPRE）の混合制度",
@@ -242,10 +242,10 @@ export default {
     "url": "https://www.fonasa.cl/"
   },
   "marketingRules": {
-    "authority": "ISP / ANDID",
-    "description": "指定カテゴリの医療機器はISP/ANDIDの認証なしに販売・流通することは禁止。ラベリングはスペイン語が必須。",
+    "authority": "ISP / ANDIM",
+    "description": "指定カテゴリの医療機器はISP/ANDIMの認証なしに販売・流通することは禁止。ラベリングはスペイン語が必須。",
     "keyRules": [
-      "指定カテゴリの医療機器はISP/ANDID認証なしの販売・流通禁止",
+      "指定カテゴリの医療機器はISP/ANDIM認証なしの販売・流通禁止",
       "ラベリング・使用説明書はスペイン語必須",
       "ISPへの適合性検証なしの市場投入は衛生法典違反",
       "製品変更時はISPへの報告・再評価が必要"
@@ -300,11 +300,11 @@ export default {
       "description": "衛生法典（Código Sanitario）の大規模改正案が議会で審議中。全医療機器の登録義務化・規制強化が予想される。成立すればチリの医療機器規制が根本的に変革される見込み。"
     },
     {
-      "date": "2023",
-      "title": "ANDID設立",
-      "description": "ISP内にANDID（Agencia Nacional de Dispositivos Médicos, Innovación y Desarrollo）を設立。医療機器規制の専門機関として体制強化。"
+      "date": "2020",
+      "title": "ANDIM設立（ISP内に医療機器専門部門を設置）",
+      "description": "2020年11月17日、ISP内にANDIM（Agencia Nacional de Dispositivos Médicos）を設立。医療機器規制の専門機関として体制強化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -72,7 +72,7 @@ export default {
     "title": "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)",
     "originalTitle": null,
     "enacted": "2017（EU採択）/ 2021年5月26日適用",
-    "lastAmended": "2025（Regulation (EU) 2025/2457）",
+    "lastAmended": "2024（Regulation (EU) 2024/1860 経過措置延長）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
     "description": "EU MDR がスウェーデンに直接適用。Act (2021:600) が国内補完法。"
   },
@@ -269,16 +269,26 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2024",
-      "title": "JNHB（旧FINOSE）拡大",
-      "description": "FINOSEが2023年デンマーク、2024年アイスランド追加でJNHBに改称。"
+      "date": "2024-06",
+      "title": "JNHB（旧FINOSE）正式発足",
+      "description": "FINOSE がデンマーク（2023年）・アイスランド（2024年）追加で Joint Nordic HTA-Bodies (JNHB) に改称。2024年6月正式発足。"
     },
     {
-      "date": "2024",
-      "title": "EUDAMED義務化準備",
-      "description": "EUDAMED 4モジュール2026年5月28日義務化。"
+      "date": "2024-03",
+      "title": "RISE MNB（NB 3033）MDR指定",
+      "description": "RISE Medical Notified Body AB が2024年3月7日MDR指定。スウェーデン2番目のMDR NB。"
+    },
+    {
+      "date": "2025-11",
+      "title": "EUDAMED 4モジュール義務化日程確定",
+      "description": "2026年5月28日にEUDAMED 4モジュール（事業者登録・機器・証明書・市場監視）義務化。"
+    },
+    {
+      "date": "2025-12",
+      "title": "EU MDR/IVDR簡素化提案公表",
+      "description": "欧州委員会がMDR/IVDR簡素化規則案（COM(2025) 1023）を公表。Rule 11改正・証明書有効期限撤廃等を提案。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

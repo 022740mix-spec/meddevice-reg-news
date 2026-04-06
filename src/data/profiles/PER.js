@@ -49,22 +49,29 @@ export default {
     "title": "Ley N° 29459 — Ley de los Productos Farmacéuticos, Dispositivos Médicos y Productos Sanitarios",
     "originalTitle": "Ley N° 29459",
     "enacted": "2009",
-    "lastAmended": "随時改正",
-    "url": "https://www.digemid.minsa.gob.pe/",
-    "description": "ペルーにおける医薬品・医療機器・衛生製品規制の根幹法。DIGEMID の権限、衛生登録制度、分類、市販後監視等を規定。"
+    "lastAmended": "2024（DS N° 020-2024-SA による施行規則改正）",
+    "url": "https://www.digemid.minsa.gob.pe/normas-legales/2009/11/ID=3640/ley-n-29459",
+    "description": "ペルーにおける医薬品・医療機器・衛生製品規制の根幹法。DIGEMID の権限、衛生登録制度、分類、市販後監視等を規定。衛生登録の有効期間は5年間。"
   },
   "implementingRegulations": [
     {
       "title": "Decreto Supremo N° 016-2011-SA（衛生登録・管理・監視規則）",
       "date": "2011",
-      "url": "https://www.digemid.minsa.gob.pe/",
-      "description": "医薬品・医療機器・衛生製品の登録・管理・衛生監視に関する規則。分類規則・登録手続き・必要書類を詳細に規定。",
+      "url": "https://www.digemid.minsa.gob.pe/webDigemid/normas-legales/2011/decreto-supremo-no-016-2011-sa/",
+      "description": "医薬品・医療機器・衛生製品の登録・管理・衛生監視に関する規則。分類規則・登録手続き・必要書類を詳細に規定。DS N° 016-2013-SA で一部改正。",
       "category": "包括規制"
+    },
+    {
+      "title": "Decreto Supremo N° 020-2024-SA（Ley 29459施行規則の適合化・更新）",
+      "date": "2024",
+      "url": "https://www.digemid.minsa.gob.pe/webDigemid/normas-legales/2024/decreto-supremo-n-020-2024-sa/",
+      "description": "Ley N° 29459の施行規則を適合化・更新。登録要件・手続きの現代化。",
+      "category": "施行規則改正"
     },
     {
       "title": "Decreto Supremo N° 014-2011-SA（医薬品施設規則）",
       "date": "2011",
-      "url": "https://www.digemid.minsa.gob.pe/",
+      "url": "https://www.gob.pe/institucion/minsa/normas-legales/243289-014-2011-sa",
       "description": "医薬品施設に関する規則。医療機器の流通・保管に関する施設要件を含む。",
       "category": "施設規制"
     }
@@ -74,7 +81,7 @@ export default {
       "title": "Ley N° 26842 — Ley General de Salud",
       "category": "一般保健法",
       "enacted": "1997",
-      "url": "https://www.minsa.gob.pe/",
+      "url": "https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/2813393-26842",
       "relevance": "ペルーの保健制度全般を規定する基本法。医療機器を含む保健製品の規制の上位法的根拠。"
     }
   ],
@@ -141,7 +148,7 @@ export default {
     "totalProductCodes": "GMDN/UMDN コードを使用（スペイン語表記で登録）"
   },
   "conformityAssessment": {
-    "overview": "DIGEMID が申請書類を直接審査。参照国（18カ国）の CFS/CFG、技術文書、臨床データ、製造情報等を評価。クラスに応じて審査期間・要求事項が異なる。",
+    "overview": "DIGEMID が申請書類を直接審査。高度衛生監視国（20カ国: 独・豪・墺・白・加・韓・丹・西・米・仏・洪・愛・伊・日・諾・葡・英・瑞典・瑞西・蘭）の CFS/CFG、技術文書、臨床データ、製造情報等を評価。クラスに応じて審査期間・要求事項が異なる。衛生登録の有効期間は5年間。",
     "routes": [
       {
         "name": "Inscripción de Registro Sanitario",
@@ -151,8 +158,10 @@ export default {
         ],
         "description": "技術文書、製品説明書、製造情報、臨床・安全性データ、QMS 文書、参照国の CFS/CFG を提出。DIGEMID が書類審査を実施。",
         "subtypes": [],
-        "avgReviewTime": "Class I: 60日 / Class II: 90日 / Class III-IV: 120日（目標値。実績は6〜12ヶ月の場合あり）",
-        "fee": "要確認（DIGEMID 料金表を参照）",
+        "avgReviewTime": "Class I: 60暦日 / Class II: 90暦日 / Class III-IV: 120暦日（法定目標値。実績は6〜12ヶ月の場合あり）",
+        "avgReviewTimeSource": "https://omcmedical.com/peru-medical-device-registration/",
+        "fee": "要確認（DIGEMID 料金表による。TUPA に記載）",
+        "feeSource": "https://www.digemid.minsa.gob.pe/",
         "url": "https://www.digemid.minsa.gob.pe/webDigemid/registro-sanitario/dispositivos-medicos/"
       },
       {
@@ -164,16 +173,18 @@ export default {
         "description": "登録有効期限満了前に更新申請。更新時の要件は新規登録に準じるが、市販後データの提出も求められる。",
         "subtypes": [],
         "avgReviewTime": "要確認",
+        "avgReviewTimeSource": "https://www.digemid.minsa.gob.pe/",
         "fee": "要確認",
+        "feeSource": "https://www.digemid.minsa.gob.pe/",
         "url": "https://www.digemid.minsa.gob.pe/"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "DIGEMID オンラインポータル / VUCE（Ventanilla Única de Comercio Exterior）",
-    "url": "https://www.digemid.minsa.gob.pe/",
-    "description": "DIGEMID はオンラインでの申請受付を実施。VUCE（外国貿易窓口）との連携もあり。",
-    "mandatory": false
+    "system": "VUCE（Ventanilla Única de Comercio Exterior）",
+    "url": "https://www.vuce.gob.pe/vuce-2-0",
+    "description": "DIGEMID の衛生登録申請は VUCE（外国貿易単一窓口）電子システムを通じて提出。DIGEMID と申請者間の通信を効率化。",
+    "mandatory": true
   },
   "udi": {
     "required": false,
@@ -200,7 +211,7 @@ export default {
     "available": true,
     "issuingAuthority": "DIGEMID",
     "name": "Certificado de Libre Venta / Free Sale Certificate",
-    "description": "登録申請時に参照国（18カ国: フランス、オランダ、英国、米国、カナダ、日本、スイス、ドイツ、スペイン、豪州、デンマーク、イタリア、ノルウェー、ベルギー、スウェーデン、韓国、ポルトガル、アイルランド）からの CFS/CFG 提出が必要。",
+    "description": "登録申請時に高度衛生監視国（20カ国: ドイツ、オーストラリア、オーストリア、ベルギー、カナダ、韓国、デンマーク、スペイン、米国、フランス、ハンガリー、アイルランド、イタリア、日本、ノルウェー、ポルトガル、英国、スウェーデン、スイス、オランダ）からの CFS/CFG 提出が必要。",
     "processingTime": "要確認",
     "url": "https://www.digemid.minsa.gob.pe/"
   },
@@ -247,11 +258,16 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025",
-      "title": "DIGEMID — 医療機器登録の観察事項に関する通達",
-      "description": "DIGEMID が医療機器の新規登録・更新登録の申請書類に関する観察事項への対応について通達を発出。書類の品質向上を促進。"
+      "date": "2025-01",
+      "title": "RM N° 049-2025/MINSA — 医薬品安全性監視マニュアル改訂",
+      "description": "Resolución Ministerial N° 049-2025/MINSA により「Manual de Buenas Prácticas de Farmacovigilancia」を改訂。有害事象モニタリング体制を強化。"
+    },
+    {
+      "date": "2024",
+      "title": "DS N° 020-2024-SA — Ley 29459施行規則の適合化・更新",
+      "description": "Decreto Supremo N° 020-2024-SA により Ley N° 29459 の施行規則を適合化・更新。登録要件・手続きの現代化を図る。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

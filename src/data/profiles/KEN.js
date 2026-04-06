@@ -22,8 +22,8 @@ export default {
       "name": "PPB",
       "fullName": "Pharmacy and Poisons Board",
       "localName": null,
-      "role": "医療機器の登録・市販後監視・査察・リコール管理。主管当局。",
-      "url": "https://www.pharmacyboardkenya.org/",
+      "role": "医療機器の登録・市販後監視・査察・リコール管理。主管当局。製品評価登録部門（DPER）が実務を担当。",
+      "url": "https://web.pharmacyboardkenya.org/",
       "isPrimary": true
     }
   ],
@@ -42,16 +42,23 @@ export default {
     "originalTitle": null,
     "enacted": "1957（複数回改正）",
     "lastAmended": null,
-    "url": "https://www.pharmacyboardkenya.org/",
+    "url": "https://web.pharmacyboardkenya.org/legal-provisions-guidelines-procedures/",
     "description": "薬局・医薬品・毒物の規制に関する基本法。医療機器の規制根拠もこの法律に含まれる。PPBの設立・権限の根拠法。"
   },
   "implementingRegulations": [
     {
-      "title": "PPB Medical Devices Registration Guidelines",
-      "date": null,
-      "url": "https://www.pharmacyboardkenya.org/",
-      "description": "医療機器の登録手続・分類・ラベリング・品質管理等の詳細を規定するPPBガイドライン。",
+      "title": "Guidelines for Registration of Medical Devices Including In-Vitro Diagnostics",
+      "date": "2022",
+      "url": "https://web.pharmacyboardkenya.org/download/guidelines-for-registration-of-medical-devices-including-in-vitro-diagnostics/",
+      "description": "医療機器・IVDの登録手続・分類・評価経路・必要書類を規定するPPBガイドライン。2022年4月公開。WHO Resolution 67.29/60.27に準拠。",
       "category": "医療機器"
+    },
+    {
+      "title": "Registration of Medical Devices Establishments",
+      "date": null,
+      "url": "https://web.pharmacyboardkenya.org/download/registration-of-medical-devices-establishments/",
+      "description": "医療機器施設（製造・輸入・流通施設）の登録要件を規定するガイドライン。",
+      "category": "施設登録"
     }
   ],
   "relatedLaws": [],
@@ -119,7 +126,7 @@ export default {
     "totalProductCodes": "GMDN（Global Medical Device Nomenclature）を参照"
   },
   "conformityAssessment": {
-    "overview": "全クラスの医療機器にPPB登録が必要。審査経路はFIFO（先着順通常審査）、Fast Track（優先審査）、Expedited（緊急審査）の3つ。先行認可国（CE/FDA等）の承認書類を参考にした審査を実施。",
+    "overview": "全クラスの医療機器にPPB登録が必要。GMP査察承認が申請の前提条件。審査経路はFIFO（先着順通常審査）、Fast Track（全面審査またはReliance方式）、Expedited（緊急使用承認）の3つ。PRIMSオンラインポータル経由で申請。登録有効期間は5年、毎年の保持費用（Retention Fee）が必要。",
     "routes": [
       {
         "name": "FIFO (First In, First Out)",
@@ -132,32 +139,35 @@ export default {
         ],
         "description": "標準的な審査経路。申請順に審査が行われる。技術文書・臨床評価・品質管理文書を提出。",
         "subtypes": [],
-        "avgReviewTime": "要確認",
-        "avgReviewTimeSource": null,
-        "fee": "要確認",
-        "feeSource": null,
-        "url": "https://www.pharmacyboardkenya.org/"
+        "avgReviewTime": "最大12ヶ月",
+        "avgReviewTimeSource": "https://web.pharmacyboardkenya.org/medical-devices-evaluation-and-registration-procedure/",
+        "fee": "Class D: USD 1,000（新規登録）",
+        "feeSource": "https://web.pharmacyboardkenya.org/medical-devices-evaluation-and-registration-procedure/",
+        "url": "https://web.pharmacyboardkenya.org/medical-devices-evaluation-and-registration-procedure/"
       },
       {
-        "name": "Fast Track",
-        "nameJa": "Fast Track（優先審査）",
+        "name": "Fast Track (Full Assessment / Reliance)",
+        "nameJa": "Fast Track（全面審査 / Reliance方式）",
         "applicableClasses": [
           "Class A",
           "Class B",
           "Class C",
           "Class D"
         ],
-        "description": "特定の条件を満たす医療機器に対する優先審査経路。公衆衛生上の必要性が高い機器等が対象。",
-        "subtypes": [],
-        "avgReviewTime": "FIFO より短縮",
+        "description": "全面審査（Full Assessment）またはReliance方式（他国当局の審査結果を参照）による優先審査経路。公衆衛生上の必要性が高い機器等が対象。",
+        "subtypes": [
+          "Full Assessment",
+          "Reliance（他国審査結果参照）"
+        ],
+        "avgReviewTime": "要確認（FIFOより短縮）",
         "avgReviewTimeSource": null,
         "fee": "要確認",
         "feeSource": null,
-        "url": "https://www.pharmacyboardkenya.org/"
+        "url": "https://web.pharmacyboardkenya.org/download/guidelines-for-registration-of-medical-devices-including-in-vitro-diagnostics/"
       },
       {
-        "name": "Expedited",
-        "nameJa": "Expedited（緊急審査）",
+        "name": "Expedited (Emergency Use Authorization)",
+        "nameJa": "Expedited（緊急使用承認）",
         "applicableClasses": [
           "Class A",
           "Class B",
@@ -166,19 +176,19 @@ export default {
         ],
         "description": "緊急性の高い医療機器に対する迅速審査経路。パンデミック対応機器や代替品がない機器等が対象。",
         "subtypes": [],
-        "avgReviewTime": "最短の審査期間",
+        "avgReviewTime": "要確認（最短）",
         "avgReviewTimeSource": null,
         "fee": "要確認",
         "feeSource": null,
-        "url": "https://www.pharmacyboardkenya.org/"
+        "url": "https://web.pharmacyboardkenya.org/download/guideline-for-emergency-compassionate-use-application/"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "PPB オンラインポータル",
-    "url": "https://www.pharmacyboardkenya.org/",
-    "description": "PPBのオンラインポータル経由で申請可能。電子申請の整備を推進中。",
-    "mandatory": false
+    "system": "PRIMS（PPB Regulatory Information Management System）",
+    "url": "https://prims.pharmacyboardkenya.org/",
+    "description": "PRIMSオンラインポータル経由で医療機器登録申請を提出。申請フォーム入力後にインボイスが生成され、支払い完了で申請確定。GMP査察承認が申請の前提条件。",
+    "mandatory": true
   },
   "udi": {
     "required": false,
@@ -191,13 +201,13 @@ export default {
     "adverseEventReporting": {
       "system": "PPB有害事象報告制度",
       "mandatory": true,
-      "url": "https://www.pharmacyboardkenya.org/",
+      "url": "https://web.pharmacyboardkenya.org/",
       "description": "製造業者・輸入業者・医療従事者は有害事象をPPBに報告する義務がある。"
     },
     "recalls": {
       "authority": "PPB",
       "description": "PPBがリコールを監督。安全性に関する問題が発見された場合、市場からの回収を命令可能。",
-      "url": "https://www.pharmacyboardkenya.org/"
+      "url": "https://web.pharmacyboardkenya.org/"
     },
     "surveillance": "市販後監視の要件はPPBガイドラインに規定。MDSAPアフィリエイト参加により体制強化を推進中。"
   },
@@ -207,14 +217,14 @@ export default {
     "name": "Certificate of Free Sale (CFS)",
     "description": "PPB登録申請時に、原産国の規制当局が発行するCFSの提出が求められる場合がある。",
     "processingTime": "輸出国側の手続きによる",
-    "url": "https://www.pharmacyboardkenya.org/"
+    "url": "https://web.pharmacyboardkenya.org/registrationretentionvariations/"
   },
   "reimbursement": {
-    "system": "国民健康保険基金（NHIF）+ 民間保険",
-    "authority": "NHIF / Ministry of Health",
-    "description": "NHIFが公的医療保険を提供。医療機器に特化した体系的な償還制度は限定的。公立病院での調達は政府予算・ドナー資金に基づく。",
+    "system": "社会健康保険基金（SHIF / SHA）+ 民間保険",
+    "authority": "SHA（Social Health Authority）/ Ministry of Health",
+    "description": "2024年10月にNHIFがSHA（Social Health Authority）に移行。SHIF（Social Health Insurance Fund）が公的医療保険を提供。医療機器に特化した体系的な償還制度は限定的。公立病院での調達は政府予算・ドナー資金に基づく。",
     "codingSystems": [],
-    "url": null
+    "url": "https://www.health.go.ke/"
   },
   "marketingRules": {
     "authority": "PPB",
@@ -226,7 +236,7 @@ export default {
   },
   "mdsap": {
     "status": "アフィリエイトメンバー（Affiliate Member, 2024年3月加入）",
-    "description": "ケニアは2024年3月にMDSAPアフィリエイトメンバーとして加入。MDSAP監査報告書の活用を検討中。正式な参加国への移行を目指している。"
+    "description": "ケニアは2024年3月のIMDRF第25回会合（ワシントンD.C.）でMDSAPアフィリエイトメンバーとして正式承認。同月、米国FDAとConfidentiality Commitmentを締結（アフリカ初）。MDSAP監査報告書の活用を検討中。"
   },
   "internationalStandards": {
     "iso13485": {
@@ -249,11 +259,21 @@ export default {
   },
   "recentDevelopments": [
     {
+      "date": "2022-04",
+      "title": "医療機器登録ガイドライン改訂",
+      "description": "PPBが「Guidelines for Registration of Medical Devices Including In-Vitro Diagnostics」を公開。4クラス分類、評価経路（FIFO/Fast Track/Expedited）、必要書類を包括的に規定。"
+    },
+    {
       "date": "2024-03",
-      "title": "MDSAPアフィリエイトメンバーとして加入",
-      "description": "ケニアが2024年3月にMDSAP（Medical Device Single Audit Program）のアフィリエイトメンバーとして正式に加入。国際的な規制整合の推進。"
+      "title": "MDSAPアフィリエイトメンバーとして加入・US FDA連携",
+      "description": "IMDRF第25回会合（ワシントンD.C.）でMDSAPアフィリエイトメンバーとして正式承認。同月15日、米国FDAとConfidentiality Commitmentを締結（アフリカの規制当局として初）。"
+    },
+    {
+      "date": "2024-10",
+      "title": "NHIFからSHA（Social Health Authority）への移行",
+      "description": "2024年10月1日、NHIFがSHAに移行。SHIF（Social Health Insurance Fund）が公的医療保険の中核に。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

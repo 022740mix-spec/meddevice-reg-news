@@ -7,13 +7,13 @@ export default {
   "flag": "🇷🇺",
   "legalSystemOverview": {
     "type": "連邦制・大統領制（Presidential federal republic）",
-    "description": "ロシアの医療機器規制は連邦保健省（Ministry of Health）とRoszdravnadzor（連邦保健監督局）が中心となり運営される。2016年以降、ユーラシア経済連合（EAEU）の統一規制枠組みへの移行が進行中であり、2025年12月31日までにEAEU登録への完全移行が予定されている。GOST ISO 13485に基づくQMS適合が高リスク機器で義務化されており、2025年からはData Matrixコード（Honest Sign）による単品レベルのトレーサビリティが全医療機器に拡大された。",
+    "description": "ロシアの医療機器規制は連邦保健省（Ministry of Health）とRoszdravnadzor（連邦保健監督局）が中心となり運営される。2016年以降、ユーラシア経済連合（EAEU）の統一規制枠組みへの移行が進行中であり、2027年末までに国家登録からEAEU登録への完全移行が予定されている。GOST ISO 13485に基づくQMS適合が高リスク機器で義務化されており、Honest Sign（Data Matrixコード）による単品トレーサビリティが特定カテゴリの医療機器に義務化されている。",
     "keyCharacteristics": [
       "Roszdravnadzor が市販前登録・市販後監視を統括",
-      "EAEU統一登録制度への段階的移行（2025年末期限）",
+      "EAEU統一登録制度への段階的移行（国家登録は2027年末まで）",
       "4クラスリスク分類（Class I / IIa / IIb / III）",
       "GOST ISO 13485 に基づくQMS要求",
-      "Honest Sign（Data Matrixコード）による単品トレーサビリティ",
+      "Honest Sign（Data Matrixコード）による特定カテゴリの単品トレーサビリティ",
       "ロシア国内臨床試験が原則必要（Class IIa以上）"
     ]
   },
@@ -63,10 +63,10 @@ export default {
   },
   "implementingRegulations": [
     {
-      "title": "政府決定 No.1416「医療機器の国家登録手続きに関する規則」",
-      "date": "2012-12-27",
+      "title": "政府決定 No.1684「医療機器の国家登録手続きに関する規則」",
+      "date": "2024-11-30",
       "url": "http://government.ru/docs/all/81568/",
-      "description": "医療機器の国家登録手続き、必要書類、審査期間等を規定する主要な実施規則。2025年3月1日から新規則（保健省令 No.181n）に段階的に移行。",
+      "description": "2025年3月1日施行。旧政府決定No.1416（2012年）を置換。EAEU基準に整合した書類要件の改訂、製造所査察手続きの更新、制裁影響機器の迅速登録規定を導入。",
       "category": "登録手続き"
     },
     {
@@ -191,7 +191,7 @@ export default {
           "Class IIb",
           "Class III"
         ],
-        "description": "Roszdravnadzorに申請し、技術審査、臨床試験評価（該当する場合）、QMS査察（該当する場合）を経て登録証（RZN）を取得。登録証の有効期限なし。2025年末まで申請可能。",
+        "description": "Roszdravnadzorに申請し、技術審査、臨床試験評価（該当する場合）、QMS査察（該当する場合）を経て登録証（RZN）を取得。登録証の有効期限なし。国家登録の新規申請は2027年末まで可能。",
         "subtypes": [
           "新規登録",
           "変更登録",
@@ -210,7 +210,7 @@ export default {
           "Class IIb",
           "Class III"
         ],
-        "description": "EAEU加盟国共通の登録制度。EAEU登録証は加盟5カ国で有効。2026年1月1日以降は原則としてEAEU登録のみが有効。",
+        "description": "EAEU加盟国共通の登録制度。EAEU登録証は加盟5カ国で有効。2028年1月1日以降は原則としてEAEU登録のみが有効（国家登録の新規申請は2027年末まで、既存証書の変更は2028年末まで可能）。",
         "subtypes": [
           "新規登録",
           "変更登録"
@@ -230,9 +230,9 @@ export default {
   "udi": {
     "required": true,
     "system": "Honest Sign（Честный знак）/ Data Matrixコード",
-    "description": "2025年9月1日から、全医療機器に対しData Matrixコードによる単品レベルのトレーサビリティが義務化。ロシア国営のHonest Signシステムを通じて製造・流通・販売の全過程を追跡。",
+    "description": "Honest Sign（Честный знак）システムによるData Matrixコードでの単品トレーサビリティが特定カテゴリの医療機器（リハビリ用品、補聴器、冠動脈ステント、医療用手袋、整形外科用品等）に義務化。対象カテゴリは段階的に拡大中。",
     "url": "https://chestnyznak.ru/",
-    "timeline": "2025年9月1日〜: 全医療機器で単品トレーサビリティ（Data Matrix）義務化"
+    "timeline": "特定カテゴリから段階的に義務化。対象品目は政府決定により順次追加。"
   },
   "postMarket": {
     "adverseEventReporting": {
@@ -316,9 +316,9 @@ export default {
       "description": "機器種別ごとの区分別要件、カラーモックアップ義務、サイバーセキュリティ要件を導入。"
     },
     {
-      "date": "2025-09",
-      "title": "Honest Sign全医療機器義務化",
-      "description": "全医療機器に対し単品レベルのData Matrixコードによるトレーサビリティが義務化。"
+      "date": "2025-03",
+      "title": "政府決定No.1684施行（登録手続き刷新）",
+      "description": "旧政府決定No.1416を置換。EAEU整合の書類要件、製造所査察手続き更新、迅速登録規定を導入。"
     },
     {
       "date": "2025-11",
@@ -331,6 +331,6 @@ export default {
       "description": "Class IIa（滅菌）/ IIb / III機器の登録前QMS査察が義務化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

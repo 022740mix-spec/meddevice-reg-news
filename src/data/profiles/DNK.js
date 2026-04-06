@@ -12,7 +12,7 @@ export default {
       "EU MDR/IVDR 直接適用",
       "DKMA がNCA",
       "デンマーク語ラベリング・IFU原則必須（言語免除あり）",
-      "Behandlingsrådet がHTA評価",
+      "SundK（旧Behandlingsrådet）がHTA評価",
       "Amgros が5地域の共同調達",
       "JNHB 2023年参加"
     ]
@@ -27,11 +27,11 @@ export default {
       "isPrimary": true
     },
     {
-      "name": "Behandlingsrådet",
-      "fullName": "Health Technology Council",
-      "localName": "Behandlingsrådet",
-      "role": "医療機器・技術のHTA評価・推奨",
-      "url": "https://behandlingsraadet.dk/",
+      "name": "SundK",
+      "fullName": "Danish Healthcare Quality Institute",
+      "localName": "Sundhedsvæsenets Kvalitetsinstitut",
+      "role": "医療技術HTA評価・推奨（旧Behandlingsrådet + RKKP、2025年1月統合）",
+      "url": "https://www.sundk.dk/",
       "isPrimary": false
     },
     {
@@ -65,7 +65,7 @@ export default {
     "title": "Regulation (EU) 2017/745 — MDR",
     "originalTitle": null,
     "enacted": "2017 / 2021年5月26日適用",
-    "lastAmended": "2025",
+    "lastAmended": "2024（Regulation (EU) 2024/1860 経過措置延長）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
     "description": "EU MDR 直接適用。Executive Order on Medical Devicesが国内補完法。"
   },
@@ -195,13 +195,13 @@ export default {
   },
   "reimbursement": {
     "system": "5地域 + Amgros共同調達 + 市町村（Kommune）補助",
-    "authority": "Behandlingsrådet（HTA）/ Amgros（調達）/ 5地域 / 市町村",
-    "description": "病院用機器は5地域がAmgros経由で共同調達。BehandlingsrådetがHTA評価。エンドユーザー向けは市町村が償還。企業申請による一般償還制度はない。JNHB参加。",
+    "authority": "SundK（旧Behandlingsrådet、HTA）/ Amgros（調達）/ 5地域 / 市町村",
+    "description": "病院用機器は5地域がAmgros経由で共同調達。SundK（旧Behandlingsrådet、2025年1月統合）がHTA評価。エンドユーザー向けは市町村が償還。企業申請による一般償還制度はない。JNHB参加。",
     "codingSystems": [
       "DRG",
       "ISO補助機器分類"
     ],
-    "url": "https://behandlingsraadet.dk/"
+    "url": "https://www.sundk.dk/vurderinger-og-analyser/"
   },
   "marketingRules": {
     "authority": "DKMA",
@@ -239,14 +239,24 @@ export default {
     {
       "date": "2023",
       "title": "JNHB参加",
-      "description": "北欧HTA協力JNHBに参加。"
+      "description": "北欧HTA協力FINOSE（現JNHB）にデンマーク参加。"
     },
     {
-      "date": "2024",
-      "title": "Behandlingsrådet運用開始",
-      "description": "医療機器HTA評価開始。"
+      "date": "2024-04",
+      "title": "TÜV SÜD Danmark（NB 2443）MDR指定",
+      "description": "2024年4月6日、TÜV SÜD Danmark ApS がデンマーク初のMDR Notified Body として指定。"
+    },
+    {
+      "date": "2025-01",
+      "title": "Sundhedsvæsenets Kvalitetsinstitut (SundK) 発足",
+      "description": "Behandlingsrådet と RKKP が統合し、Sundhedsvæsenets Kvalitetsinstitut（デンマーク医療品質研究所）が2025年1月1日発足。"
+    },
+    {
+      "date": "2025-12",
+      "title": "EU MDR/IVDR簡素化提案公表",
+      "description": "欧州委員会がMDR/IVDR簡素化規則案（COM(2025) 1023）を公表。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

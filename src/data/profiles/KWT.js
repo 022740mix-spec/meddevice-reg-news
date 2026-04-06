@@ -30,7 +30,7 @@ export default {
       "name": "KDFA",
       "fullName": "Kuwait Drug and Food Control Administration",
       "localName": "إدارة مراقبة الأغذية والأدوية",
-      "role": "食品・医薬品・医療機器の品質管理。MMPRRAと連携した市場監視",
+      "role": "食品・医薬品の品質管理。MD 387/2025 により医療機器の登録・規制はMMPRRAに移管。",
       "url": "https://www.moh.gov.kw/",
       "isPrimary": false
     }
@@ -46,7 +46,7 @@ export default {
     "notes": "SaMDに関する独自規定は2026年時点で策定中。"
   },
   "primaryLaw": {
-    "title": "省令 MD 387/2025（医療機器登録・規制に関する省令）",
+    "title": "Ministerial Decree MD 387/2025",
     "originalTitle": "Ministerial Decree MD 387/2025",
     "enacted": "2025",
     "lastAmended": "2025",
@@ -143,25 +143,61 @@ export default {
     "totalProductCodes": null
   },
   "conformityAssessment": {
-    "overview": "全医療機器はMOH/MMPRRAへの登録が必要。Class B〜DはSTEDに基づく審査。参照国認可（FDA、CE、SFDA等）が事実上の前提条件。外国メーカーはLARの設置が必須。",
+    "overview": "全医療機器はMOH/MMPRRAへの登録が必要（MD 387/2025）。IMDRF準拠のSTEDに基づく審査。3つの審査経路（Standard / Fast-Track / Abridged）を提供。外国メーカーはLARの設置が必須。登録証の有効期間は5年間。",
     "routes": [
       {
-        "name": "Device Registration",
-        "nameJa": "クウェート医療機器登録",
+        "name": "Standard Review Pathway",
+        "nameJa": "標準審査経路",
         "applicableClasses": [
           "Class A",
           "Class B",
           "Class C",
           "Class D"
         ],
-        "description": "MOH/MMPRRAにSTED、参照国認可証明、QMS証明書等を提出。参照国認可の保有が審査を大幅に迅速化。",
+        "description": "全デバイスクラスに対する完全な技術審査。IMDRF準拠のSTED一式、参照国認可証明、ISO 13485証明書等を提出。",
         "subtypes": [
           "新規登録",
           "変更登録",
           "更新"
         ],
-        "avgReviewTime": "6〜8週間（参照国認可保有の場合）",
-        "fee": "申請区分により異なる",
+        "avgReviewTime": "6〜9ヶ月",
+        "avgReviewTimeSource": "https://omcmedical.com/blog/kuwait-medical-device-ivd-registration-faq",
+        "fee": "要確認（MOH規定による）",
+        "feeSource": "https://www.moh.gov.kw/",
+        "url": "https://www.moh.gov.kw/"
+      },
+      {
+        "name": "Abridged Review Pathway",
+        "nameJa": "簡略審査経路（リライアンス経路）",
+        "applicableClasses": [
+          "Class A",
+          "Class B",
+          "Class C",
+          "Class D"
+        ],
+        "description": "参照当局（FDA、EU Notified Body等）の既存承認を活用した簡略審査。冗長な試験を省略し審査を迅速化。",
+        "subtypes": [],
+        "avgReviewTime": "3〜6ヶ月",
+        "avgReviewTimeSource": "https://omcmedical.com/blog/kuwait-medical-device-ivd-registration-faq",
+        "fee": "要確認（MOH規定による）",
+        "feeSource": "https://www.moh.gov.kw/",
+        "url": "https://www.moh.gov.kw/"
+      },
+      {
+        "name": "Fast-Track Review Pathway",
+        "nameJa": "迅速審査経路",
+        "applicableClasses": [
+          "Class A",
+          "Class B",
+          "Class C",
+          "Class D"
+        ],
+        "description": "重篤・ICU・救命目的の製品、またはCMS（Central Medical Stores）の要請に基づく加速審査。供給契約書またはCMS要請書が必要。",
+        "subtypes": [],
+        "avgReviewTime": "要確認（案件により異なる）",
+        "avgReviewTimeSource": "https://omcmedical.com/blog/kuwait-medical-device-ivd-registration-faq",
+        "fee": "要確認（MOH規定による）",
+        "feeSource": "https://www.moh.gov.kw/",
         "url": "https://www.moh.gov.kw/"
       }
     ]
@@ -262,6 +298,6 @@ export default {
       "description": "15日以内の報告義務が明確化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

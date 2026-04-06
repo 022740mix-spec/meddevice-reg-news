@@ -50,22 +50,29 @@ export default {
     "originalTitle": "חוק ציוד רפואי, התשע״ב-2012",
     "enacted": "2012",
     "lastAmended": "2024（Registration and Renewal of Medical Devices Regulations改正）",
-    "url": "https://www.gov.il/en/departments/amar",
+    "url": "https://www.kahn.co.il/Articles-and-Media/the-medical-equipment-law-5772-2012.html",
     "description": "2012年制定の基本法。医療機器の製造・輸入・販売・使用に関する登録義務を規定。AMARへの登録なしに医療機器を市場に投入することを刑事罰付きで禁止。参照市場の承認活用を法的に認める枠組みを含む。"
   },
   "implementingRegulations": [
     {
       "title": "Registration and Renewal of Medical Devices Regulations, 2013",
       "date": "2013",
-      "url": "https://www.gov.il/en/departments/amar",
-      "description": "Medical Equipment Law の施行規則。登録手続・必要書類・更新要件・参照市場リストを規定。",
+      "url": "https://bioregservices.com/blog/israel-devices-registration-summary/",
+      "description": "Medical Equipment Law の施行規則。登録手続、必要書類、更新要件、参照市場リストを規定。",
       "category": "登録手続"
     },
     {
-      "title": "REG-2024/03 — Updated Procedural Guidance for Submission Content and Format",
+      "title": "REG-2024/03 — Registration Procedure: Details of Documents Required",
       "date": "2025-01",
-      "url": "https://www.gov.il/en/departments/amar",
-      "description": "2025年1月発効。Declaration Route・Fast-Track Route・Standard Route の申請内容・書式に関する更新ガイダンス。",
+      "url": "https://www.complianceandrisks.com/blog/registration-of-medical-devices-in-israel-recent-updates/",
+      "description": "2025年1月発効。Standard Route（Normal Route）の申請に必要な書類内容・書式に関する更新ガイダンス。",
+      "category": "申請手続"
+    },
+    {
+      "title": "REG-2024/06 — Instructions for Registration on a Fast-Track",
+      "date": "2024-06",
+      "url": "https://www.gov.il/en/pages/medical_equipment_unit_about",
+      "description": "2024年6月2日発効。Fast-Track Route の Fast 1・Fast 2 経路の要件・書式・参照市場マーケティング期間条件を規定。",
       "category": "申請手続"
     }
   ],
@@ -167,7 +174,7 @@ export default {
         "avgReviewTimeSource": "https://www.emergobyul.com/news/details-declaration-route-class-i-medical-devices-israel",
         "fee": "無料（Class I は手数料なし）",
         "feeSource": "https://medenvoyglobal.com/blog/medical-device-and-ivd-registration-in-israel/",
-        "url": "https://www.gov.il/en/departments/amar"
+        "url": "https://www.emergobyul.com/news/details-declaration-route-class-i-medical-devices-israel"
       },
       {
         "name": "Fast-Track Route",
@@ -177,22 +184,22 @@ export default {
           "Class IIb",
           "Class II"
         ],
-        "description": "中リスク機器向け。参照市場（FDA/EU等）の承認を前提。Fast 1（FDA Class II / EU IIa: 45営業日）と Fast 2（EU IIb: 60営業日）に細分化。",
+        "description": "2024年6月2日運用開始（REG-2024/06）。中リスク機器向け。参照市場の承認を前提。Fast 1（FDA Class II / EU IIa / IVDR Class B: 45営業日、参照市場で4ヶ月以上の販売実績要）と Fast 2（EU IIb / IVDR Class C: 60営業日、参照市場2カ国のうち1カ国で6ヶ月以上の販売実績要）に細分化。",
         "subtypes": [
           {
             "name": "Fast 1",
-            "description": "FDA Class II または EU Class IIa 相当。45営業日。"
+            "description": "FDA Class II / EU Class IIa / IVDR Class B / Self-Test IVD。45営業日。参照市場で4ヶ月以上の販売実績が必要。"
           },
           {
             "name": "Fast 2",
-            "description": "EU Class IIb 相当。60営業日。"
+            "description": "EU Class IIb / IVDR Class C / IVDD List B。60営業日。参照市場2カ国のうち1カ国で6ヶ月以上の販売実績が必要。"
           }
         ],
         "avgReviewTime": "Fast 1: 45営業日 / Fast 2: 60営業日",
         "avgReviewTimeSource": "https://www.emergobyul.com/news/updates-israels-declaration-and-fast-track-routes-medical-devices",
         "fee": "要確認（公式手数料スケジュール未公開）",
-        "feeSource": "https://www.gov.il/en/departments/amar",
-        "url": "https://www.gov.il/en/departments/amar"
+        "feeSource": "https://medenvoyglobal.com/blog/medical-device-and-ivd-registration-in-israel/",
+        "url": "https://www.emergobyul.com/news/updates-israels-declaration-and-fast-track-routes-medical-devices"
       },
       {
         "name": "Standard Route (Normal Route)",
@@ -220,14 +227,14 @@ export default {
         "avgReviewTime": "公式: 120暦日",
         "avgReviewTimeSource": "https://bioregservices.com/regulatory-consulting-israel-amar/",
         "fee": "要確認（公式手数料スケジュール未公開）",
-        "feeSource": "https://www.gov.il/en/departments/amar",
-        "url": "https://www.gov.il/en/departments/amar"
+        "feeSource": "https://medenvoyglobal.com/blog/medical-device-and-ivd-registration-in-israel/",
+        "url": "https://www.complianceandrisks.com/blog/registration-of-medical-devices-in-israel-recent-updates/"
       }
     ]
   },
   "electronicSubmission": {
     "system": "AMAR 電子申請システム",
-    "url": "https://www.gov.il/en/departments/amar",
+    "url": "https://www.pureglobal.com/markets/israel",
     "description": "登録申請はAMARの電子システム経由で提出。IRH（Israel Registration Holder）が申請手続きを代行する。",
     "mandatory": true
   },
@@ -235,20 +242,20 @@ export default {
     "required": false,
     "system": "未導入（イスラエル独自のUDI制度は未確立）",
     "description": "2026年4月時点で、イスラエル独自の包括的UDI制度は正式に導入されていない。ただし参照市場（FDA/EU）のUDI要件に準拠した機器は増加しており、ラベリングにUDI情報を含めることが推奨されている。",
-    "url": "https://www.gov.il/en/departments/amar",
+    "url": "https://medenvoyglobal.com/blog/medical-device-and-ivd-registration-in-israel/",
     "timeline": "未定（独自制度の導入計画は公表されていない）"
   },
   "postMarket": {
     "adverseEventReporting": {
       "system": "AMAR ビジランス報告",
       "mandatory": true,
-      "url": "https://www.gov.il/en/departments/amar",
+      "url": "https://bioregservices.com/regulatory-consulting-israel-amar/",
       "description": "IRH（Israel Registration Holder）が市販後ビジランスの責任を負う。報告対象は、患者の健康に害を及ぼした機器関連事象、およびユーザーにリスクをもたらしうる重大な欠陥。IRHは「state of control」を維持し、リアルタイムの市販後ビジランス管理が求められる。"
     },
     "recalls": {
       "authority": "AMAR / MOH",
       "description": "AMARがFSCA（Field Safety Corrective Action）およびリコールを監督。グローバルリコール・FSN（Field Safety Notice）はIRHを通じてAMARに報告義務。",
-      "url": "https://www.gov.il/en/departments/amar"
+      "url": "https://eranyona.com/medical-device-registration-and-submissions-in-israel/"
     },
     "surveillance": "IRHは包括的な「state of control」を維持し、市販後監視を実施する義務を負う。Declaration Route・Fast-Track Route で登録された機器はIRHの市販後監視義務が強化されている。"
   },
@@ -258,7 +265,7 @@ export default {
     "name": "Certificate of Free Sale (CFS) / Certificate to Foreign Government (CFG)",
     "description": "AMAR登録申請時に、参照市場の規制当局が発行するCFS/CFGまたは市場承認証明（FDA 510(k) Clearance Letter、CE Certificate等）の提出が求められる。",
     "processingTime": "輸出国側の手続きによる",
-    "url": "https://www.gov.il/en/departments/amar"
+    "url": "https://medenvoyglobal.com/blog/medical-device-and-ivd-registration-in-israel/"
   },
   "reimbursement": {
     "system": "国民健康保険制度（National Health Insurance Law, 1995）",
@@ -323,9 +330,9 @@ export default {
       "description": "Class I（Is/Im/Ir含む）の低リスク機器向けに Declaration Route（宣言登録）が導入。IRHによる適合宣言で登録可能に。"
     },
     {
-      "date": "2024",
-      "title": "Fast-Track Route の拡充",
-      "description": "Class II機器向けの Fast-Track Route を Fast 1（45営業日）と Fast 2（60営業日）に細分化。EU MDR CE証明書の受入れを明確化。"
+      "date": "2024-06",
+      "title": "Fast-Track Route 運用開始（REG-2024/06）",
+      "description": "2024年6月2日、中リスク機器向けFast-Track Route が運用開始。REG-2024/06ガイダンスにより Fast 1（45営業日）と Fast 2（60営業日）の2経路を定義。"
     },
     {
       "date": "2012",
@@ -333,6 +340,6 @@ export default {
       "description": "イスラエル初の包括的医療機器規制法が制定。AMARへの登録義務を法定化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

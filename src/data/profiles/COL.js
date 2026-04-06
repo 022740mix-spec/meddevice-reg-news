@@ -57,21 +57,21 @@ export default {
     {
       "title": "Decreto 3770 de 2004 — Régimen de Registros Sanitarios y Vigilancia Sanitaria de los Reactivos de Diagnóstico In Vitro",
       "date": "2004",
-      "url": "https://www.invima.gov.co/",
+      "url": "https://qservegroup.com/en/colombia-medical-device-regulations",
       "description": "IVD（体外診断用試薬）の登録・分類・市販後監視を規定する基本法令。",
       "category": "IVD規制"
     },
     {
       "title": "Resolution 1405 de 2022 — UDI-DI Requirements",
       "date": "2022",
-      "url": "https://www.invima.gov.co/",
+      "url": "https://veraqueconsulting.com/co/semantic-standard-and-coding-of-medical-devices-for-colombia/",
       "description": "UDI-DI（固有機器識別子 - 機器識別子）の義務化。セマンティックレポートの提出要件を規定。段階的実施。",
       "category": "UDI"
     },
     {
       "title": "Resolution 4816 de 2008 — Programa Nacional de Tecnovigilancia",
       "date": "2008",
-      "url": "https://www.invima.gov.co/",
+      "url": "https://www.invima.gov.co/simplificacion-de-tramites-para-dispositivos-medicos-y-reactivos-de-diagnosticos-in-vitro-en-colombia",
       "description": "テクノビジランス（医療機器安全性監視）の国家プログラムを規定。有害事象報告・四半期報告の義務化。",
       "category": "ビジランス"
     }
@@ -225,20 +225,20 @@ export default {
     "required": true,
     "system": "INVIMA UDI-DI システム（Resolution 1405/2022）",
     "description": "Resolution 1405 de 2022 に基づくUDI-DI義務化。登録保有者はINVIMA承認後にUDI-DIコードを認定機関（GS1等）から取得し、セマンティックレポートをINVIMAプラットフォーム経由で提出。基本属性・規制属性・商業属性を含む。",
-    "url": "https://www.invima.gov.co/",
-    "timeline": "Class IIb/III: 2024年2月施行済み。Class IIa: 2026年2月9日期限。Class I / IVD Category I: 2026年2月9日期限。"
+    "url": "https://qservegroup.com/blog/en/new-udi-di-registration-requirements-in-colombia-what-medical-device-and-ivd-manufacturers-need-to-know",
+    "timeline": "Class III / IVD Category III: 2025年2月8日期限。Class IIb / IVD Category II: 2025年8月8日期限。Class IIa / Class I / IVD Category I: 2026年2月8日期限。"
   },
   "postMarket": {
     "adverseEventReporting": {
       "system": "Programa Nacional de Tecnovigilancia",
       "mandatory": true,
-      "url": "https://www.invima.gov.co/",
+      "url": "https://www.artixio.com/post/medical-device-regulations-in-colombia-a-comprehensive-guide",
       "description": "Resolution 4816/2008 に基づく国家テクノビジランスプログラム。製造業者・輸入業者は有害事象の四半期報告を義務付けられる（有害事象が発生しなかった場合も報告が必要）。"
     },
     "recalls": {
       "authority": "INVIMA",
       "description": "INVIMAがリコール・FSCA（Field Safety Corrective Action）を監督。Decreto 4725/2005 Capítulo IX に規定。",
-      "url": "https://www.invima.gov.co/"
+      "url": "https://www.emergobyul.com/services/invima-medical-device-registration-and-approval-colombia"
     },
     "surveillance": "製造業者・輸入業者は四半期ごとにテクノビジランス要約報告書（Informe Periódico Resumido）をINVIMAに提出。有害事象の有無にかかわらず報告義務あり。重大有害事象は72時間以内に報告。"
   },
@@ -248,7 +248,7 @@ export default {
     "name": "Certificate of Free Sale (CFS) / Certificate to Foreign Government (CFG)",
     "description": "INVIMA登録申請時に、参照市場（米国FDA、EU、カナダ、日本、オーストラリア）の規制当局が発行するCFS/CFGの提出が求められる。母国の承認に代えて参照市場の認可証を提出可能。",
     "processingTime": "輸出国側の手続きによる",
-    "url": "https://www.invima.gov.co/"
+    "url": "https://medenvoyglobal.com/in-country-representation/colombia-invima/"
   },
   "reimbursement": {
     "system": "社会保険制度（SGSSS: Sistema General de Seguridad Social en Salud）",
@@ -309,9 +309,9 @@ export default {
       "description": "Resolution 1405/2022に基づくUDI-DI義務化の最終期限。2026年2月9日までにClass IIa・Class I・IVD Category Iの既存登録にUDI-DIコードを組み込む必要あり。"
     },
     {
-      "date": "2025-12",
-      "title": "新医療機器規制法令（Régimen Sanitario de Dispositivos Médicos）策定中",
-      "description": "MinSaludがDecrete 4725/2005を置換する新規制法令の策定を進行中。EU MDR/IVDRとの更なる整合が予想される。"
+      "date": "2026-01",
+      "title": "新医療機器規制法令（Régimen Sanitario de Dispositivos Médicos）公布",
+      "description": "MinSaludがDecrete 4725/2005およびDecrete 3770/2004を置換する新規制法令を公布。設計・製造・輸入から商品化・使用・市販後監視・最終廃棄までを包括的に規律。リスク分類に応じた衛生届出（低〜中リスク）と衛生登録（高〜最高リスク）に区分。"
     },
     {
       "date": "2022",
@@ -324,6 +324,6 @@ export default {
       "description": "コロンビアの医療機器規制の基本法令。登録制度・分類体系・市販後監視の枠組みを確立。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

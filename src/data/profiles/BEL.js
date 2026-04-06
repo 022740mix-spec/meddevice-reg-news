@@ -7,11 +7,11 @@ export default {
   "flag": "🇧🇪",
   "legalSystemOverview": {
     "type": "EU加盟国（MDR/IVDR 直接適用）",
-    "description": "ベルギーはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Loi relative aux dispositifs médicaux（医療機器法、2022年施行）が制定されている。FAMHP（Federal Agency for Medicines and Health Products / Agence fédérale des médicaments et des produits de santé, AFMPS）がNCAとして市場監視・ビジランス・臨床試験を管轄する。",
+    "description": "ベルギーはEU加盟国であり、Regulation (EU) 2017/745（MDR）および Regulation (EU) 2017/746（IVDR）が直接適用される。国内補完法として Loi du 22 décembre 2020 relative aux dispositifs médicaux（医療機器法）が制定されている。FAMHP（Federal Agency for Medicines and Health Products / Agence fédérale des médicaments et des produits de santé, AFMPS）がNCAとして市場監視・ビジランス・臨床試験を管轄する。",
     "keyCharacteristics": [
       "EU MDR/IVDR が直接適用",
       "FAMHP がNCAとして市場監視・ビジランスを担当",
-      "2022年医療機器法による国内補完",
+      "2020年医療機器法（Loi du 22 décembre 2020）による国内補完",
       "ラベリング・IFU はフランス語・オランダ語・ドイツ語の三言語必須（流通地域に応じる）",
       "臨床試験はFAMHP + 倫理委員会の承認が必要",
       "EU MDR Article 97 derogation を積極的に活用（供給不足対応）"
@@ -65,24 +65,24 @@ export default {
     "title": "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)",
     "originalTitle": null,
     "enacted": "2017（EU採択）/ 2021年5月26日適用",
-    "lastAmended": "2025（Regulation (EU) 2025/2457）",
+    "lastAmended": "2024（Regulation (EU) 2024/1860 IVDR移行延長）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
-    "description": "EU MDR がベルギーに直接適用。2022年医療機器法が国内補完法。"
+    "description": "EU MDR がベルギーに直接適用。Loi du 22 décembre 2020 が国内補完法。"
   },
   "implementingRegulations": [
     {
-      "title": "Loi relative aux dispositifs médicaux（医療機器法）",
-      "date": "2022-05-22",
-      "url": "https://www.famhp.be/en/human_use/health_products/medical_devices_accessories",
-      "description": "MDR/IVDR 国内補完法。NCA権限・罰則・登録義務・言語要件。",
+      "title": "Loi du 22 décembre 2020 relative aux dispositifs médicaux（医療機器法）",
+      "date": "2020-12-22",
+      "url": "https://etaamb.openjustice.be/fr/loi-du-22-decembre-2020_n2021030071.html",
+      "description": "MDR 国内補完法。NCA権限・罰則・登録義務・言語要件。2021年1月18日官報公布。",
       "category": "国内補完法"
     },
     {
-      "title": "Arrêté royal du 12 janvier 2024（王令）",
-      "date": "2024-01-12",
-      "url": "https://www.famhp.be/",
-      "description": "医療機器法の施行細則。手数料・登録手続。",
-      "category": "国内補完法令"
+      "title": "Loi du 15 juin 2022 relative aux dispositifs médicaux de diagnostic in vitro（IVD法）",
+      "date": "2022-06-15",
+      "url": "https://etaamb.openjustice.be/fr/loi-du-15-juin-2022_n2022032523.html",
+      "description": "IVDR 国内補完法。IVDに関するNCA権限・登録義務。",
+      "category": "国内補完法（IVD）"
     }
   ],
   "relatedLaws": [
@@ -178,8 +178,8 @@ export default {
   },
   "electronicSubmission": {
     "system": "EUDAMED + FAMHP 国内登録",
-    "url": "https://www.famhp.be/",
-    "description": "EUDAMED + FAMHP 事業者登録。EUDAMED 4モジュール義務化: 2026年5月28日。",
+    "url": "https://www.vas.ehealth.fgov.be/webmedseip/en/",
+    "description": "EUDAMED + FAMHPウェブポータルによる事業者登録。EUDAMED 4モジュール義務化: 2026年5月28日。",
     "mandatory": true
   },
   "udi": {
@@ -199,7 +199,7 @@ export default {
     "recalls": {
       "authority": "FAMHP",
       "description": "FSCA/FSNはFAMHPに通知。FAMHPが市場からの回収命令権限を有する。",
-      "url": "https://www.famhp.be/"
+      "url": "https://www.famhp.be/en/human_use/health_products/medical_devices_accessories/vigilance"
     },
     "surveillance": "EU MDR PMS/PSUR/PMCF要件がそのまま適用。"
   },
@@ -208,8 +208,8 @@ export default {
     "issuingAuthority": "FAMHP",
     "name": "Certificate of Free Sale (CFS)",
     "description": "FAMHP がCFSを発行。",
-    "processingTime": "約2〜4週間",
-    "url": "https://www.famhp.be/"
+    "processingTime": "約5週間",
+    "url": "https://www.famhp.be/en/human_use/health_products/medical_devices_accessories/certificates/certificates_application_procedure"
   },
   "reimbursement": {
     "system": "社会健康保険制度（INAMI/RIZIV）",
@@ -223,7 +223,7 @@ export default {
   },
   "marketingRules": {
     "authority": "FAMHP",
-    "description": "MDR Article 7 虚偽広告禁止。2022年医療機器法に基づく広告規制。",
+    "description": "MDR Article 7 虚偽広告禁止。2020年医療機器法に基づく広告規制。",
     "keyRules": [
       "フランス語・オランダ語・ドイツ語ラベリング・IFU必須（流通地域に応じる）",
       "MDR Article 7 虚偽広告禁止",
@@ -255,16 +255,26 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025",
-      "title": "MDR延長規則適用",
-      "description": "Regulation (EU) 2025/2457 による移行期間延長。"
+      "date": "2023-03",
+      "title": "MDR移行期間延長（Regulation 2023/607）",
+      "description": "Article 120移行規定延長。クラスIII/IIb埋め込み: 2027年末、その他: 2028年末。sell-off期限撤廃。"
     },
     {
       "date": "2024",
       "title": "Article 97 derogation 活用",
       "description": "供給不足対応としてMDR Article 97に基づくderogation（特例措置）を積極活用。"
+    },
+    {
+      "date": "2025-04",
+      "title": "SGS Belgium IVDR NB指定",
+      "description": "SGS Belgium NV（NB 1639）がIVDR指定。MDR+IVDR両方を扱えるNBとして活動。"
+    },
+    {
+      "date": "2026-05",
+      "title": "EUDAMED 4モジュール義務化",
+      "description": "2026年5月28日より義務化。Decision (EU) 2025/2371に基づく。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -58,14 +58,14 @@ export default {
     "originalTitle": "قانون رقم 151 لسنة 2019 بإصدار قانون إنشاء هيئة الدواء المصرية",
     "enacted": "2019",
     "lastAmended": "要確認",
-    "url": "https://www.edaegypt.gov.eg/en/",
+    "url": "https://www.trade.gov/market-intelligence/egypt-registration-medical-devices",
     "description": "EDA（Egyptian Drug Authority）の設立根拠法。医薬品・医療機器・化粧品の規制・監督・品質管理に関するEDAの権限を規定。登録・ライセンス・査察・監督の権限をEDAに一元化。"
   },
   "implementingRegulations": [
     {
       "title": "Decree 777/2020 — Executive Regulations of Law No. 151/2019",
       "date": "2020",
-      "url": "https://www.edaegypt.gov.eg/en/",
+      "url": "https://resource.ddregpharma.com/blogs/how-to-register-a-medical-device-in-egypt-regulatory-pathways-with-the-eda/",
       "description": "Law 151/2019の施行規則。医療機器の分類・登録手続・必要書類・市販後監視・査察等の詳細を規定。",
       "category": "施行規則"
     },
@@ -79,7 +79,7 @@ export default {
     {
       "title": "Guidelines on the Vigilance System for Medical Devices",
       "date": "要確認",
-      "url": "https://www.edaegypt.gov.eg/en/",
+      "url": "https://medenvoyglobal.com/blog/navigating-egypts-medical-device-market-a-guide-to-registration/",
       "description": "医療機器のビジランスシステムに関するガイドライン。有害事象報告・リコール・FSCA等の手続きを規定。",
       "category": "ビジランス"
     }
@@ -96,7 +96,7 @@ export default {
       "title": "Personal Data Protection Law No. 151 of 2020",
       "category": "データ保護",
       "enacted": "2020",
-      "url": "https://www.edaegypt.gov.eg/en/",
+      "url": "https://www.dlapiperdataprotection.com/index.html?t=law&c=EG",
       "relevance": "個人情報保護法。コネクテッドデバイス・SaMDが取り扱う個人医療情報に適用。"
     }
   ],
@@ -196,7 +196,7 @@ export default {
             "description": "製品仕様・製造所・ラベリング等の変更時。"
           }
         ],
-        "avgReviewTime": "公式: 4〜9ヶ月（クラス・書類の完全性による） / 実績: 6〜8ヶ月",
+        "avgReviewTime": "公式: 4〜9ヶ月（クラス・書類の完全性による） / 実績: 6〜12ヶ月",
         "avgReviewTimeSource": "https://omcmedical.com/egypt-medical-device-registration",
         "fee": "Regular Track: USD 450/機器 / Fast Track: USD 1,280/機器",
         "feeSource": "https://omcmedical.com/egypt-medical-device-registration",
@@ -231,20 +231,20 @@ export default {
     "required": false,
     "system": "部分的導入（UDI ラベリング推奨）",
     "description": "2026年4月時点で、エジプト独自の包括的UDI制度は正式に導入されていないが、ラベリングにUDI情報を含めることが推奨されている。アラビア語・英語の二言語ラベリングが必須。",
-    "url": "https://www.edaegypt.gov.eg/en/",
+    "url": "https://arazygroup.com/ivd-medical-device-registration-egypt/",
     "timeline": "未定（包括的UDI制度の正式導入スケジュールは未公表）"
   },
   "postMarket": {
     "adverseEventReporting": {
       "system": "EDA 医療機器安全ユニット / エジプトファーマコビジランスセンター",
       "mandatory": true,
-      "url": "https://www.edaegypt.gov.eg/en/",
+      "url": "https://medenvoyglobal.com/blog/navigating-egypts-medical-device-market-a-guide-to-registration/",
       "description": "製造業者・ERH・医療従事者が有害事象をEDAに報告する義務を負う。グローバルリコール・FSN・FSCAもEDAへの報告が必須。Law 151/2019のビジランスガイドラインに基づき、所定の期間内に報告を提出。"
     },
     "recalls": {
       "authority": "EDA",
       "description": "EDAがリコール・FSCA（Field Safety Corrective Action）を監督。必要に応じてERHを通じた市場からの製品回収を命令。",
-      "url": "https://www.edaegypt.gov.eg/en/"
+      "url": "https://resource.ddregpharma.com/blogs/how-to-register-a-medical-device-in-egypt-regulatory-pathways-with-the-eda/"
     },
     "surveillance": "ERHは市販後ビジランス義務を負い、登録時にビジランス規制遵守の宣言書を提出。Class IIb/III機器はビジランス部門の特別審査対象。"
   },
@@ -254,7 +254,7 @@ export default {
     "name": "Certificate of Free Sale (CFS)",
     "description": "EDA登録申請時に、原産国または参照市場の規制当局が発行するCFSの提出が求められる。CE証明書やFDA承認書がCFSの代替として受容される場合あり。",
     "processingTime": "輸出国側の手続きによる",
-    "url": "https://www.edaegypt.gov.eg/en/"
+    "url": "https://operonstrategist.com/en-eg/services/regulatory-approvals/eda-registration/"
   },
   "reimbursement": {
     "system": "国民皆保険制度（Universal Health Insurance, UHI）— 段階的導入中",
@@ -329,6 +329,6 @@ export default {
       "description": "Egyptian Drug Authority（EDA）の設立根拠法。旧規制体制からEDAへの移行。医療機器・医薬品・化粧品の規制を一元化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

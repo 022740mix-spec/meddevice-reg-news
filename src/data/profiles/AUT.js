@@ -74,7 +74,7 @@ export default {
     "title": "Regulation (EU) 2017/745 — MDR",
     "originalTitle": null,
     "enacted": "2017 / 2021年5月26日適用",
-    "lastAmended": "2025",
+    "lastAmended": "2023（Regulation (EU) 2023/607 移行期間延長）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
     "description": "EU MDR 直接適用。MPG 2021が国内補完法。"
   },
@@ -266,11 +266,21 @@ export default {
       "description": "MDR/IVDR国内補完法。BASG権限強化・登録・手数料。"
     },
     {
-      "date": "2024",
-      "title": "EUDAMED義務化準備",
-      "description": "2026年5月義務化に向け事業者準備推進。"
+      "date": "2022-12",
+      "title": "QMD Services IVDR NB指定",
+      "description": "QMD Services GmbH（NB 2962）がIVDR指定。オーストリア初のIVDR NB。"
+    },
+    {
+      "date": "2024-05",
+      "title": "QMD Services MDR NB指定",
+      "description": "QMD Services GmbH（NB 2962）がMDR指定。MDR+IVDR両方を扱えるNBとして活動開始。"
+    },
+    {
+      "date": "2026-05",
+      "title": "EUDAMED 4モジュール義務化",
+      "description": "2026年5月28日より義務化。事業者登録・UDI/機器登録・NB/証書・市場監視。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

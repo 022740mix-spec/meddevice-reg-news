@@ -79,7 +79,7 @@ export default {
     "title": "Regulation (EU) 2017/745 — MDR",
     "originalTitle": null,
     "enacted": "2017 / 2021年5月26日適用",
-    "lastAmended": "2025",
+    "lastAmended": "2024（Regulation (EU) 2024/1860 経過措置延長）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
     "description": "EU MDR 直接適用。Act 719/2021が国内補完法。"
   },
@@ -271,9 +271,24 @@ export default {
     {
       "date": "2023",
       "title": "Hyvinvointialue制度開始",
-      "description": "自治体医療が新制度に移行。"
+      "description": "自治体医療が21のHyvinvointialue（福祉地域）に移行。"
+    },
+    {
+      "date": "2025-02",
+      "title": "SGS Fimko OY MDRスコープ拡大",
+      "description": "SGS Fimko OY（NB 0598）のMDR指定スコープが2025年2月に拡大。"
+    },
+    {
+      "date": "2025-04",
+      "title": "NIS2サイバーセキュリティ法施行",
+      "description": "EU NIS2指令を国内実施するサイバーセキュリティ法が2025年4月8日施行。医療機器製造者はFimeaの監督対象。"
+    },
+    {
+      "date": "2026-01",
+      "title": "AI法（1377/2025）第1段階施行",
+      "description": "フィンランド国内AI法の第1段階が2026年1月1日施行。AI搭載医療機器はMDCG 2025-6ガイダンスに基づきMDR/IVDRとAI Actの要件を統合。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

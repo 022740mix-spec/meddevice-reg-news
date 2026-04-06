@@ -65,7 +65,7 @@ export default {
     "title": "Regulation (EU) 2017/745 — Medical Devices Regulation (MDR)",
     "originalTitle": null,
     "enacted": "2017（EU採択）/ 2021年5月26日適用",
-    "lastAmended": "2025（Regulation (EU) 2025/2457）",
+    "lastAmended": "2023（Regulation (EU) 2023/607）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
     "description": "EU MDR がスペインに直接適用。Real Decreto 192/2023 が国内補完法。"
   },
@@ -80,7 +80,7 @@ export default {
     {
       "title": "Real Decreto 1591/2009（旧規制、一部有効）",
       "date": "2009",
-      "url": "https://www.boe.es/",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2009-17606",
       "description": "旧MDD国内実施令。MDR移行完了まで一部経過措置として残存。",
       "category": "旧規制（経過措置）"
     }
@@ -255,9 +255,9 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025",
-      "title": "MDR延長規則適用",
-      "description": "Regulation (EU) 2025/2457 による移行期間延長。"
+      "date": "2023-03",
+      "title": "MDR移行期間延長（Regulation (EU) 2023/607）",
+      "description": "Regulation (EU) 2023/607 により MDD/AIMDD 認証機器の MDR 移行期間を段階的に延長（Class III・IIb植込み型: 2027年末、その他: 2028年末）。"
     },
     {
       "date": "2023",
@@ -265,6 +265,6 @@ export default {
       "description": "MDR/IVDR国内補完法令が施行。AEMPSの権限・手続を明確化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

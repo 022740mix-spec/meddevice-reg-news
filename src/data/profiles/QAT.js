@@ -46,7 +46,7 @@ export default {
     "notes": "SaMDに関する独自規定は2026年時点で未整備。"
   },
   "primaryLaw": {
-    "title": "公衆衛生省令（医療機器登録・輸入に関する規則）",
+    "title": "MOPH Regulations on Medical Device Registration and Import",
     "originalTitle": null,
     "enacted": "要確認（包括的法典なし）",
     "lastAmended": "要確認",
@@ -145,29 +145,33 @@ export default {
           "新規登録",
           "変更登録"
         ],
-        "avgReviewTime": "数週間〜数ヶ月",
-        "fee": "MOPH規定による",
+        "avgReviewTime": "数週間〜数ヶ月（公式情報で裏付け未取得）",
+        "avgReviewTimeSource": "https://omcmedical.com/blog/qatar-medical-device-registration-process",
+        "fee": "要確認（MOPH規定による）",
+        "feeSource": "https://www.moph.gov.qa/",
         "url": "https://www.moph.gov.qa/"
       },
       {
         "name": "Import Permit",
-        "nameJa": "非植込み型機器 輸入許可",
+        "nameJa": "非植込み型機器 輸入許可（出荷単位）",
         "applicableClasses": [
           "Class I",
           "Class IIa / II"
         ],
-        "description": "非植込み型の輸入にはMOPH/PDCDの輸入許可が必要。",
+        "description": "非植込み型の輸入にはMOPH/PDCDの輸入許可が出荷ごとに必要。参照国（FDA/EU/PMDA/Health Canada/TGA）の事前認可が前提条件。",
         "subtypes": [],
-        "avgReviewTime": "数日〜数週間",
-        "fee": "MOPH規定による",
+        "avgReviewTime": "数日〜数週間（公式情報で裏付け未取得）",
+        "avgReviewTimeSource": "https://omcmedical.com/blog/qatar-medical-device-registration-process",
+        "fee": "要確認（MOPH規定による）",
+        "feeSource": "https://www.moph.gov.qa/",
         "url": "https://www.moph.gov.qa/"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "MOPH DHP ポータル",
-    "url": "https://dhp.moph.gov.qa/",
-    "description": "一部のオンライン手続きが可能。完全電子化は段階的に推進中。",
+    "system": "MOPH 電子システム",
+    "url": "https://www.moph.gov.qa/english/OurServices/advancedsearch/Pages/servicesdetails.aspx?serviceId=214",
+    "description": "MOPH の電子システムを通じて申請書類を提出。DHP ポータル（dhp.moph.gov.qa）は医療従事者のライセンス管理用であり、医療機器登録とは別系統。完全電子化は段階的に推進中。",
     "mandatory": false
   },
   "udi": {
@@ -246,15 +250,15 @@ export default {
   "recentDevelopments": [
     {
       "date": "2025",
-      "title": "SEHA健康保険制度の段階的導入",
-      "description": "国民皆保険に向けたSEHA制度を段階的に導入。医療機器の公的償還環境に影響する可能性。"
-    },
-    {
-      "date": "2025",
       "title": "GCC統一医療機器規制への段階的整合",
       "description": "GCC統一技術規制の国内実施を推進中。UDI制度導入、市販後監視強化等がロードマップに含まれる。"
+    },
+    {
+      "date": "2022",
+      "title": "強制健康保険制度の導入（旧SEHA制度の後継）",
+      "description": "2022年5月施行。旧SEHA制度（2015年廃止）に代わる新制度。雇用主が非カタール国籍の被雇用者に健康保険を提供する義務を規定。MOPH登録保険会社との契約が必要。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

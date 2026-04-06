@@ -254,7 +254,9 @@ export default {
           }
         ],
         "avgReviewTime": "通常数ヶ月（SAHPRAの処理能力に依存）",
+        "avgReviewTimeSource": "https://omcmedical.com/south-africa-medical-device-registration",
         "fee": "Manufacturer: R25,200 / Distributor: R15,000 / Wholesaler: R15,000 + 年次維持費",
+        "feeSource": "https://www.sahpra.org.za/wp-content/uploads/2023/02/SAHPGL-MD-07_v4-Guideline-on-Questions-and-Answers-Licensing-of-Medical-Device-Establishments.pdf",
         "url": "https://www.sahpra.org.za/medical-devices/"
       },
       {
@@ -263,7 +265,7 @@ export default {
         "applicableClasses": [
           "全クラス（Call-Up順）"
         ],
-        "description": "機器個別の登録制度。SAHPRAが Call-Up Notice を発行し、リスクの高いクラスから順次登録を求める方式。2025年11月時点で Call-Up Notice は未発行。参照国の認可を活用する Reliance Pathway を導入予定。登録証の有効期間は5年。",
+        "description": "機器個別の登録制度。SAHPRAが Call-Up Notice を発行し、リスクの高いクラスから順次登録を求める方式。2026年4月時点で Call-Up Notice は未発行。Medical Device Registration Feasibility Study が15社の参加で進行中（Class C/D IVD・非IVD製品対象）。SAHPRAは2025/26年度中に予備報告書を公表予定。参照国の認可を活用する Reliance Pathway を導入予定。登録証の有効期間は5年。",
         "subtypes": [
           {
             "name": "Full Assessment（完全審査）",
@@ -275,7 +277,9 @@ export default {
           }
         ],
         "avgReviewTime": "未確定（Call-Up未開始のため実績なし）",
+        "avgReviewTimeSource": "https://www.sahpra.org.za/medical-devices/",
         "fee": "未確定（登録開始時にGovernment Gazetteで公示予定）",
+        "feeSource": "https://www.sahpra.org.za/medical-devices/",
         "url": "https://www.sahpra.org.za/medical-devices/"
       },
       {
@@ -287,7 +291,9 @@ export default {
         "description": "南アフリカ国内で医療機器の臨床試験を実施するにはSAHPRAの事前承認が必要。SAHPRA RIMS（Regulatory Information Management System）経由で申請。倫理委員会（REC）の承認も別途必要。ISO 14155:2020に整合。",
         "subtypes": [],
         "avgReviewTime": "SAHPRAに確認が必要（明確な目標期間は未公表）",
+        "avgReviewTimeSource": "https://www.sahpra.org.za/clinical-trials/",
         "fee": "Government Gazetteの手数料規則に準拠",
+        "feeSource": "https://www.sahpra.org.za/clinical-trials/",
         "url": "https://www.sahpra.org.za/clinical-trials/"
       }
     ]
@@ -350,7 +356,7 @@ export default {
     ]
   },
   "mdsap": {
-    "status": "アフィリエイトメンバー（2025年4月加盟）",
+    "status": "Affiliate Member",
     "description": "SAHPRAは2025年4月4日にMDSAP（Medical Device Single Audit Program）にアフィリエイトメンバーとして加盟。MDSAP Forumの一部セッションへの参加権、MDSAP参加施設リスト・監査情報へのアクセス権を取得。製造業者のグローバルな品質管理体制の監視能力が強化された。ただし、現時点ではMDSAP監査報告書の正式な受入れ（施設ライセンスの代替）は未確定。"
   },
   "internationalStandards": {
@@ -372,15 +378,15 @@ export default {
     },
     "others": [
       {
-        "standard": "ISO 10993 シリーズ",
+        "name": "ISO 10993 シリーズ",
         "notes": "生体適合性評価の参照規格"
       },
       {
-        "standard": "ISO 14155:2020",
+        "name": "ISO 14155:2020",
         "notes": "医療機器の臨床試験に関するGCP要求。SAHPGL-MD-17で参照。"
       },
       {
-        "standard": "SANS規格",
+        "name": "SANS規格",
         "notes": "SABSが発行する南アフリカ国家規格。IEC/ISO規格を多数採用。"
       }
     ]
@@ -417,6 +423,6 @@ export default {
       "description": "2024年5月15日にNHI法が大統領署名。国民皆保険制度の段階的導入が開始。医療機器の償還制度に将来的な大きな影響。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

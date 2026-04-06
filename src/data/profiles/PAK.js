@@ -7,13 +7,14 @@ export default {
   "flag": "🇵🇰",
   "legalSystemOverview": {
     "type": "連邦制（Federal system）",
-    "description": "パキスタンの医療機器規制はDRAP（Drug Regulatory Authority of Pakistan）が管轄する。2012年のDRAP Act（Act X of 2012）により設立されたDRAPが、医薬品・医療機器の両方を統括。2017年にMedical Devices Rules 2017が制定され、医療機器の登録・輸入・製造に関する規制枠組みが整備された。GHTF/IMDRFの4クラス分類（Class A/B/C/D）を採用し、リスクベースの規制を実施。",
+    "description": "パキスタンの医療機器規制はDRAP（Drug Regulatory Authority of Pakistan）が管轄する。2012年のDRAP Act（Act X of 2012）により設立されたDRAPが、医薬品・医療機器の両方を統括。2017年にMedical Devices Rules 2017が制定され、医療機器の登録・輸入・製造に関する規制枠組みが整備された。2025年7月にはオンライン電子申請ポータルが稼働し、デジタル化が進展。GHTF/IMDRFの4クラス分類（Class A/B/C/D）を採用し、リスクベースの規制を実施。",
     "keyCharacteristics": [
       "DRAPによる一元的な連邦規制体制",
       "リスクベースの4クラス分類（Class A/B/C/D）",
       "Medical Devices Rules 2017に基づく登録制度",
       "3つの適合性評価オプション（Option A/B/C）",
-      "先行認可国（CE/FDA/TGA等）の認証を参考にした審査"
+      "先行認可国（CE/FDA/TGA等）の認証を参考にした審査",
+      "2025年7月にオンライン電子申請ポータル稼働"
     ]
   },
   "authorities": [
@@ -22,7 +23,7 @@ export default {
       "fullName": "Drug Regulatory Authority of Pakistan",
       "localName": null,
       "role": "医療機器の登録・輸入許可・製造許可・市販後監視。主管当局。",
-      "url": "https://www.dfrh.org.pk/",
+      "url": "https://www.dra.gov.pk/",
       "isPrimary": true
     }
   ],
@@ -40,16 +41,16 @@ export default {
     "title": "DRAP Act 2012 (Act X of 2012)",
     "originalTitle": null,
     "enacted": "2012",
-    "lastAmended": null,
-    "url": "https://www.dfrh.org.pk/",
-    "description": "DRAPの設立根拠法。医薬品・医療機器の規制権限をDRAPに付与。医療機器の詳細規制はMedical Devices Rules 2017で規定。"
+    "lastAmended": "2022",
+    "url": "https://www.dra.gov.pk/wp-content/uploads/2022/10/DRAP-2012-_As-Amended-till-Feb-2022.pdf",
+    "description": "DRAPの設立根拠法。医薬品・医療機器の規制権限をDRAPに付与。2022年2月までの改正を反映した最新版が公開。医療機器の詳細規制はMedical Devices Rules 2017で規定。"
   },
   "implementingRegulations": [
     {
       "title": "Medical Devices Rules 2017",
       "date": "2017",
-      "url": "https://www.dfrh.org.pk/",
-      "description": "医療機器の登録・分類・輸入・製造・ラベリング等の詳細を規定する主要な施行規則。",
+      "url": "https://www.dra.gov.pk/wp-content/uploads/2022/02/FFMedicalDevicesRules2017Notifiedon16-01-2018-1.pdf",
+      "description": "医療機器の登録・分類・輸入・製造・ラベリング等の詳細を規定する主要な施行規則。2018年1月16日官報掲載。",
       "category": "医療機器"
     }
   ],
@@ -118,65 +119,65 @@ export default {
     "totalProductCodes": "GMDN（Global Medical Device Nomenclature）を参照"
   },
   "conformityAssessment": {
-    "overview": "全クラスの医療機器にDRAP登録が必要。3つの適合性評価オプション（Option A/B/C）から選択可能。Option Aは先行認可国の承認に基づく簡略審査、Option BはISO 13485認証に基づく審査、Option CはDRAPの独立審査。",
+    "overview": "全クラスの医療機器にDRAP登録が必要。3つの適合性評価オプション（Option A/B/C）から選択可能。Option AはCEマーキング・適合宣言書・FSC（Free Sale Certificate）に基づく審査、Option Bは参照国のFSCに基づく審査、Option CはWHO事前資格認定に基づく審査。2025年7月のオンラインポータル稼働後、平均処理日数は約21.8営業日に短縮。",
     "routes": [
       {
-        "name": "Option A — Prior Approval Based",
-        "nameJa": "オプションA — 先行認可ベース",
+        "name": "Option A — CE Marking Based",
+        "nameJa": "オプションA — CEマーキングベース",
         "applicableClasses": [
           "Class A",
           "Class B",
           "Class C",
           "Class D"
         ],
-        "description": "参照国（CE/FDA/TGA/Health Canada等）の既存承認に基づく簡略審査。先行認可国の承認書類一式を提出。",
+        "description": "CEマーキング証明書、適合宣言書（Declaration of Conformity）、Free Sale Certificateに基づく審査。完全品質保証（Full Quality Assurance）に基づくCE証明が必要。",
         "subtypes": [],
-        "avgReviewTime": "要確認",
+        "avgReviewTime": "要確認（オンラインポータル経由で平均約21.8営業日の実績あり）",
         "avgReviewTimeSource": null,
-        "fee": "要確認",
-        "feeSource": null,
-        "url": "https://www.dfrh.org.pk/"
+        "fee": "Class A: PKR 5,000、Class B/C/D（輸入）: PKR 25,000〜50,000",
+        "feeSource": "https://www.dra.gov.pk/wp-content/uploads/2024/09/DRAP-Regulatory-Fee-30.08.2024.pdf",
+        "url": "https://www.dra.gov.pk/therapeutic-goods/medical-devices/application-process/"
       },
       {
-        "name": "Option B — ISO 13485 Based",
-        "nameJa": "オプションB — ISO 13485ベース",
+        "name": "Option B — Reference Country FSC Based",
+        "nameJa": "オプションB — 参照国FSCベース",
         "applicableClasses": [
           "Class A",
           "Class B",
           "Class C",
           "Class D"
         ],
-        "description": "ISO 13485認証を基盤とした適合性評価。ISO 13485認証書に加え、技術文書・臨床評価等を提出。",
+        "description": "参照国（FDA/TGA/Health Canada等のリスト記載国）が発行するFree Sale Certificateに基づく審査。参照国での販売実績が必要。",
         "subtypes": [],
-        "avgReviewTime": "要確認",
+        "avgReviewTime": "要確認（オンラインポータル経由で平均約21.8営業日の実績あり）",
         "avgReviewTimeSource": null,
-        "fee": "要確認",
-        "feeSource": null,
-        "url": "https://www.dfrh.org.pk/"
+        "fee": "Class A: PKR 5,000、Class B（輸入）: PKR 25,000、Class C/D（輸入）: PKR 50,000",
+        "feeSource": "https://www.dra.gov.pk/wp-content/uploads/2024/09/DRAP-Regulatory-Fee-30.08.2024.pdf",
+        "url": "https://www.dra.gov.pk/therapeutic-goods/medical-devices/application-process/"
       },
       {
-        "name": "Option C — DRAP Independent Review",
-        "nameJa": "オプションC — DRAP独立審査",
+        "name": "Option C — WHO Prequalification Based",
+        "nameJa": "オプションC — WHO事前資格認定ベース",
         "applicableClasses": [
           "Class A",
           "Class B",
           "Class C",
           "Class D"
         ],
-        "description": "DRAPによる独立した技術文書評価。先行認可やISO 13485認証がない場合に適用。",
+        "description": "WHO事前資格認定（Prequalification）を取得した機器に適用。FSCとWHO PQ証明書を提出。",
         "subtypes": [],
         "avgReviewTime": "要確認",
         "avgReviewTimeSource": null,
-        "fee": "要確認",
-        "feeSource": null,
-        "url": "https://www.dfrh.org.pk/"
+        "fee": "Class A: PKR 5,000、Class B/C/D（輸入）: PKR 25,000〜50,000",
+        "feeSource": "https://www.dra.gov.pk/wp-content/uploads/2024/09/DRAP-Regulatory-Fee-30.08.2024.pdf",
+        "url": "https://www.dra.gov.pk/therapeutic-goods/medical-devices/application-process/"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "DRAP オンラインポータル",
-    "url": "https://www.dfrh.org.pk/",
-    "description": "DRAPのオンラインポータル経由で申請可能。電子申請の整備は進行中。",
+    "system": "DRAP e-Services Portal",
+    "url": "https://e.dra.gov.pk/",
+    "description": "2025年7月にDRAP e-Servicesポータルが稼働開始。MDMC（Medical Devices & Medicated Cosmetics）のライセンス・登録モジュールが導入され、全ての医療機器登録申請はオンライン提出が可能。",
     "mandatory": false
   },
   "udi": {
@@ -190,13 +191,13 @@ export default {
     "adverseEventReporting": {
       "system": "DRAP有害事象報告制度",
       "mandatory": true,
-      "url": "https://www.dfrh.org.pk/",
-      "description": "製造業者・輸入業者は重大な有害事象をDRAPに報告する義務がある。報告制度は整備途上。"
+      "url": "https://www.dra.gov.pk/therapeutic-goods/medical-devices/",
+      "description": "製造業者・輸入業者は重大な有害事象をDRAPに報告する義務がある。Medical Devices Rules 2017に基づく報告制度。"
     },
     "recalls": {
       "authority": "DRAP",
       "description": "DRAPがリコールを監督。安全性に関する問題が発見された場合、市場からの回収を命令可能。",
-      "url": "https://www.dfrh.org.pk/"
+      "url": "https://www.dra.gov.pk/therapeutic-goods/medical-devices/"
     },
     "surveillance": "市販後監視の要件はMedical Devices Rules 2017に規定。実施体制は発展途上。"
   },
@@ -204,9 +205,9 @@ export default {
     "available": true,
     "issuingAuthority": "輸出国の規制当局",
     "name": "Certificate of Free Sale (CFS)",
-    "description": "DRAP登録申請時に、原産国の規制当局が発行するCFSの提出が求められる場合がある。",
+    "description": "DRAP登録申請時に、原産国の規制当局が発行するCFSの提出が必須。Option A/B/CいずれのルートでもFSCが要件。",
     "processingTime": "輸出国側の手続きによる",
-    "url": "https://www.dfrh.org.pk/"
+    "url": "https://www.dra.gov.pk/therapeutic-goods/medical-devices/application-process/"
   },
   "reimbursement": {
     "system": "公的医療制度（限定的）",
@@ -250,9 +251,19 @@ export default {
     {
       "date": "2017",
       "title": "Medical Devices Rules 2017の制定",
-      "description": "DRAP Act 2012に基づく医療機器の包括的な規制規則が制定。4クラス分類と3つの適合性評価オプションを導入。"
+      "description": "DRAP Act 2012に基づく医療機器の包括的な規制規則が制定。4クラス分類と3つの適合性評価オプションを導入。2018年1月16日に官報掲載。"
+    },
+    {
+      "date": "2024-08",
+      "title": "DRAP規制手数料の改定",
+      "description": "2024年8月30日付でDRAP規制手数料（Regulatory Fee）スケジュールが改定。医療機器の登録・更新手数料を含む。"
+    },
+    {
+      "date": "2025-07",
+      "title": "医療機器オンライン登録ポータル稼働開始",
+      "description": "首相主導でDRAP e-Servicesポータル（e.dra.gov.pk）が稼働開始。MDMCライセンス・登録のデジタル化により、平均処理日数が約21.8営業日に大幅短縮。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

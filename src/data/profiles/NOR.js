@@ -7,21 +7,21 @@ export default {
   "flag": "🇳🇴",
   "legalSystemOverview": {
     "type": "EEA加盟国（MDR/IVDR がEEA経由で適用）",
-    "description": "ノルウェーはEU非加盟だが、EEA協定を通じてMDR/IVDRが国内法に組み込まれている。Lov om medisinsk utstyr（LOV-2020-06-07-37）で国内実施。DMP（旧NoMA/SLV）がNCA。",
+    "description": "ノルウェーはEU非加盟だが、EEA協定を通じてMDR/IVDRが国内法に組み込まれている。Lov om medisinsk utstyr（LOV-2020-06-07-37）で国内実施。DMP/NOMA（旧SLV、2024年1月改組）がNCA。",
     "keyCharacteristics": [
       "EEA経由でMDR/IVDR適用",
-      "DMP（旧NoMA/SLV）がNCA",
+      "DMP/NOMA（旧SLV、2024年1月改組）がNCA",
       "ノルウェー語ラベリング・IFU必須",
       "Nye MetoderがHTA評価",
       "HELFO Blue Prescription制度",
-      "EUDAMEDアクセス制限（EEA調整中）"
+      "EUDAMED 2026年5月28日義務化（EEA国として参加）"
     ]
   },
   "authorities": [
     {
-      "name": "DMP",
-      "fullName": "Norwegian Medical Products Agency",
-      "localName": "Direktoratet for medisinske produkter（旧SLV）",
+      "name": "DMP (NOMA)",
+      "fullName": "Norwegian Medical Products Agency (NOMA)",
+      "localName": "Direktoratet for medisinske produkter（旧Statens legemiddelverk/SLV、2024年1月改組）",
       "role": "NCA: 市場監視・ビジランス・臨床試験・HTA",
       "url": "https://www.dmp.no/en/medical-devices",
       "isPrimary": true
@@ -44,15 +44,15 @@ export default {
     }
   ],
   "notifiedBodies": {
-    "system": "EU MDR Notified Body（ノルウェー国内1機関）",
-    "description": "DNV Product Assurance AS（NB 2460）がMDR指定。IVDR未指定。EEA経由NANDO登録。",
+    "system": "EU MDR/IVDR Notified Body（ノルウェー国内1機関）",
+    "description": "DNV Product Assurance AS（NB 2460）がMDR・IVDR双方指定。EEA経由NANDO登録。IVDR指定は2025年5月。",
     "bodies": [
       {
         "nb": "2460",
         "name": "DNV Product Assurance AS",
         "url": "https://www.dnv.com/",
         "mdr": true,
-        "ivdr": false
+        "ivdr": true
       }
     ]
   },
@@ -65,7 +65,7 @@ export default {
     "title": "Lov om medisinsk utstyr (Medical Devices Act)",
     "originalTitle": "LOV-2020-06-07-37",
     "enacted": "2020-06-07",
-    "lastAmended": "2024",
+    "lastAmended": "2024（EEA経由 Regulation (EU) 2024/1860 経過措置延長）",
     "url": "https://www.dmp.no/en/medical-devices/guidance-and-regulations/the-legislation-for-medical-devices",
     "description": "MDR/IVDRをノルウェー法に組み込む国内法。"
   },
@@ -154,34 +154,34 @@ export default {
         "subtypes": [],
         "avgReviewTime": "EUプロファイル参照",
         "fee": "NBにより異なる",
-        "url": "https://www.dmp.no/en/medical-devices"
+        "url": "https://www.dmp.no/en/medical-devices/development-and-manufacturing/conformity-assessment"
       }
     ]
   },
   "electronicSubmission": {
-    "system": "EUDAMED（アクセス調整中）+ DMP国内登録",
-    "url": "https://www.dmp.no/en/medical-devices",
-    "description": "EU非加盟のためEUDAMEDアクセスに制限。DMP国内登録必要。",
+    "system": "EUDAMED + DMP国内登録",
+    "url": "https://www.dmp.no/en/medical-devices/norwegian-register-for-devices-and-eudamed/eudamed",
+    "description": "EEA国としてEUDAMEDに参加。任意登録開始済み、2026年5月28日義務化。DMP国内登録も必要。",
     "mandatory": true
   },
   "udi": {
     "required": true,
-    "system": "EU UDI（EEA経由）",
+    "system": "EU UDI（EEA経由）— EUDAMED",
     "description": "MDR UDI要件がEEA経由で適用。",
-    "url": "https://www.dmp.no/en/medical-devices",
-    "timeline": "EEA調整次第"
+    "url": "https://www.dmp.no/en/medical-devices/norwegian-register-for-devices-and-eudamed/eudamed",
+    "timeline": "EUDAMED義務化: 2026年5月28日"
   },
   "postMarket": {
     "adverseEventReporting": {
       "system": "EU Vigilance — DMP",
       "mandatory": true,
-      "url": "https://www.dmp.no/en/medical-devices",
+      "url": "https://www.dmp.no/en/medical-devices/reporting-of-serious-incidents-involving-medical-devices/how-to-report-a-serious-incident",
       "description": "重篤有害事象をDMPに報告。MDR Article 87-92。"
     },
     "recalls": {
       "authority": "DMP",
       "description": "FSCA/FSNはDMPに通知。",
-      "url": "https://www.dmp.no/en/medical-devices"
+      "url": "https://www.dmp.no/en/medical-devices/reporting-of-serious-incidents-involving-medical-devices/how-to-report-a-field-safety-corrective-action"
     },
     "surveillance": "EU MDR PMS/PSUR/PMCF EEA経由適用。"
   },
@@ -191,7 +191,7 @@ export default {
     "name": "CFS",
     "description": "DMPがCFSを発行。",
     "processingTime": "要確認",
-    "url": "https://www.dmp.no/en/medical-devices"
+    "url": "https://www.dmp.no/en/medical-devices/development-and-manufacturing/conformity-assessment/free-sales-certificate"
   },
   "reimbursement": {
     "system": "Nye Metoder（専門医療）+ HELFO Blue Prescription（外来）+ 4地域保健局",
@@ -237,16 +237,26 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025-01",
-      "title": "EU HTAR参加",
-      "description": "EU HTAR枠組みに参加。JCA貢献開始。"
+      "date": "2024-01",
+      "title": "SLV → DMP改組",
+      "description": "Statens legemiddelverk (SLV) が Direktoratet for medisinske produkter (DMP) に改組。医療機器メソッド評価・ワクチン調達等の新機能を追加。"
     },
     {
-      "date": "2025",
-      "title": "EUDAMEDアクセス問題",
-      "description": "EU非加盟のためEUDAMED完全アクセス遅延。EEA調整中。"
+      "date": "2025-01",
+      "title": "EU HTAR参加",
+      "description": "EU HTA Regulation枠組みにEEA国として参加。JCA貢献開始。"
+    },
+    {
+      "date": "2025-05",
+      "title": "DNV NB 2460 IVDR指定",
+      "description": "DNV Product Assurance AS が IVDR Notified Body として追加指定。NANDO 17番目のIVDR NB。"
+    },
+    {
+      "date": "2025-11",
+      "title": "EUDAMED義務化日程確定",
+      "description": "EEA国としてEUDAMED 4モジュール2026年5月28日義務化。任意登録中。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

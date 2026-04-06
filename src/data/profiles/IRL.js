@@ -73,7 +73,7 @@ export default {
     "title": "Regulation (EU) 2017/745 — MDR",
     "originalTitle": null,
     "enacted": "2017 / 2021年5月26日適用",
-    "lastAmended": "2025",
+    "lastAmended": "2023（Regulation (EU) 2023/607 移行期間延長）",
     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32017R0745",
     "description": "EU MDR 直接適用。S.I. 261/2021が国内補完法。"
   },
@@ -81,14 +81,14 @@ export default {
     {
       "title": "S.I. No. 261/2021 — Medical Devices Regulations 2021",
       "date": "2021-05-26",
-      "url": "https://www.hpra.ie/regulation/medical-devices",
+      "url": "https://www.irishstatutebook.ie/eli/2021/si/261/made/en/print",
       "description": "HPRA権限（分類・市場監視・臨床試験・執行）。",
       "category": "国内補完法"
     },
     {
       "title": "S.I. No. 691/2021 — Medical Devices (Registration) Regulations 2021",
       "date": "2021",
-      "url": "https://www.hpra.ie/regulation/medical-devices/registration",
+      "url": "https://www.irishstatutebook.ie/eli/2021/si/691/made/en/print",
       "description": "アイルランド拠点事業者のHPRA国内登録。",
       "category": "登録規則"
     }
@@ -190,13 +190,13 @@ export default {
     "adverseEventReporting": {
       "system": "EU Vigilance — HPRA",
       "mandatory": true,
-      "url": "https://www.hpra.ie/regulation/medical-devices",
-      "description": "重篤有害事象をHPRAに報告。"
+      "url": "https://www.hpra.ie/safety-information/how-we-monitor-safety/medical-devices",
+      "description": "重篤有害事象をHPRAに報告。MDR Chapter VII, Section 2。2024年に3,672件のビジランス報告を評価。"
     },
     "recalls": {
       "authority": "HPRA",
       "description": "FSCA/FSNはHPRAに通知。",
-      "url": "https://www.hpra.ie/regulation/medical-devices"
+      "url": "https://www.hpra.ie/safety-information/how-we-monitor-safety/medical-devices/reporting-safety-issues-for-devices/reporting-device-safety-issues-for-manufacturers--authorised-reps--importers--and-distributors"
     },
     "surveillance": "EU MDR PMS/PSUR/PMCF適用。"
   },
@@ -206,7 +206,7 @@ export default {
     "name": "CFS",
     "description": "HPRAがCFSを発行。",
     "processingTime": "要確認",
-    "url": "https://www.hpra.ie/regulation/medical-devices"
+    "url": "https://www.hpra.ie/regulation/medical-devices/common-aspects-of-the-regulations/certificates-of-free-sale"
   },
   "reimbursement": {
     "system": "HSE公的医療 + HIQA HTA",
@@ -253,14 +253,24 @@ export default {
     {
       "date": "2020-02",
       "title": "NSAI MDR NB指定",
-      "description": "EU全体11番目、アイルランド初のMDR NB。"
+      "description": "EU全体11番目、アイルランド初のMDR NB（NB 0050）。"
     },
     {
       "date": "2025-03",
       "title": "HIQA HTAガイドライン改訂",
-      "description": "経済評価・BIAガイドライン改訂。"
+      "description": "経済評価ガイドライン・BIAガイドラインを改訂（2018年版以来の大幅更新）。"
+    },
+    {
+      "date": "2025-10",
+      "title": "HPRA 2026年手数料パブリックコンサルテーション",
+      "description": "医療機器分類手数料を医薬品分類手数料と整合させる提案。2025年10月〜11月。"
+    },
+    {
+      "date": "2026",
+      "title": "アイルランドEU理事会議長国",
+      "description": "2026年7月〜12月。HPRAが22の会議をホスト。医療機器規制関連の立法作業を主導。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };
