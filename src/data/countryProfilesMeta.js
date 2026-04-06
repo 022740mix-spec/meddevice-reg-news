@@ -2,9 +2,54 @@
  * 国別プロファイル メタデータ（軽量版）
  * 国グリッド・横比較テーブル用。詳細データは countryProfiles.js を動的importで取得。
  * 自動生成: node scripts/generate-profiles-meta.mjs
+ *
+ * 注意: countryProfiles.js を re-export しないこと。
+ * Vite dev モードでは re-export が 127 個の個別モジュールリクエストを引き起こし、
+ * ブラウザがタイムアウトして真っ白になる。
  */
 
-export { COUNTRY_FLAG, REGION_ORDER } from './countryProfiles.js';
+export const COUNTRY_FLAG = {
+  USA: "🇺🇸", CAN: "🇨🇦", EU: "🇪🇺", JPN: "🇯🇵", CHN: "🇨🇳",
+  KOR: "🇰🇷", AUS: "🇦🇺", GBR: "🇬🇧", BRA: "🇧🇷", IND: "🇮🇳",
+  TWN: "🇹🇼", SGP: "🇸🇬", THA: "🇹🇭", IDN: "🇮🇩", VNM: "🇻🇳",
+  MYS: "🇲🇾", SAU: "🇸🇦", ZAF: "🇿🇦", CHE: "🇨🇭", MEX: "🇲🇽",
+  NZL: "🇳🇿", PHL: "🇵🇭", ARG: "🇦🇷", TUR: "🇹🇷",
+  ARE: "🇦🇪",
+  SWE: "🇸🇪", DNK: "🇩🇰", NOR: "🇳🇴", FIN: "🇫🇮", IRL: "🇮🇪", AUT: "🇦🇹",
+  RUS: "🇷🇺", POL: "🇵🇱", KWT: "🇰🇼", QAT: "🇶🇦",
+  ISR: "🇮🇱", EGY: "🇪🇬", COL: "🇨🇴", CHL: "🇨🇱",
+  PAK: "🇵🇰", KEN: "🇰🇪", NGA: "🇳🇬", MAR: "🇲🇦",
+  JOR: "🇯🇴", BHR: "🇧🇭", OMN: "🇴🇲",
+  PER: "🇵🇪", ECU: "🇪🇨", CRI: "🇨🇷",
+  BGD: "🇧🇩", LKA: "🇱🇰", KHM: "🇰🇭", MMR: "🇲🇲", LAO: "🇱🇦", MNG: "🇲🇳",
+  URY: "🇺🇾", PRY: "🇵🇾", DOM: "🇩🇴", PAN: "🇵🇦", GTM: "🇬🇹", HND: "🇭🇳",
+  TZA: "🇹🇿", ETH: "🇪🇹", UGA: "🇺🇬", RWA: "🇷🇼", SEN: "🇸🇳", GHA: "🇬🇭",
+  CZE: "🇨🇿", HUN: "🇭🇺", PRT: "🇵🇹", GRC: "🇬🇷", UKR: "🇺🇦", HKG: "🇭🇰",
+  TUN: "🇹🇳", DZA: "🇩🇿", IRQ: "🇮🇶", LBN: "🇱🇧", NPL: "🇳🇵", IRN: "🇮🇷",
+  VEN: "🇻🇪", BOL: "🇧🇴", SLV: "🇸🇻", CUB: "🇨🇺",
+  BRN: "🇧🇳", FJI: "🇫🇯", KAZ: "🇰🇿", UZB: "🇺🇿",
+  NLD: "🇳🇱", BEL: "🇧🇪", ESP: "🇪🇸", ITA: "🇮🇹", ROU: "🇷🇴", BGR: "🇧🇬", HRV: "🇭🇷",
+  SVK: "🇸🇰", LTU: "🇱🇹", LVA: "🇱🇻", EST: "🇪🇪", MLT: "🇲🇹", MAC: "🇲🇴",
+  DEU: "🇩🇪", FRA: "🇫🇷", LUX: "🇱🇺", SVN: "🇸🇮", SRB: "🇷🇸",
+  CYP: "🇨🇾", GEO: "🇬🇪", NIC: "🇳🇮", JAM: "🇯🇲",
+  CIV: "🇨🇮", CMR: "🇨🇲", ZMB: "🇿🇲", ZWE: "🇿🇼",
+  MKD: "🇲🇰", BIH: "🇧🇦", AGO: "🇦🇴", GUY: "🇬🇾", TTO: "🇹🇹",
+  ALB: "🇦🇱", MNE: "🇲🇪", MDA: "🇲🇩",
+  BWA: "🇧🇼", NAM: "🇳🇦", MOZ: "🇲🇿", KGZ: "🇰🇬",
+  ISL: "🇮🇸", TJK: "🇹🇯", PNG: "🇵🇬",
+  HTI: "🇭🇹",
+  AZE: "🇦🇿",
+  LIE: "🇱🇮",
+  BRB: "🇧🇧",
+  ARM: "🇦🇲",
+  TKM: "🇹🇲",
+  MLI: "🇲🇱",
+  BFA: "🇧🇫",
+  SUR: "🇸🇷",
+  TGO: "🇹🇬",
+};
+
+export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
 
 export const COUNTRY_PROFILES_META = [
   {
@@ -3442,6 +3487,304 @@ export const COUNTRY_PROFILES_META = [
     "electronicSystem": "開発中",
     "deviceNotes": "国際定義（GHTF/IMDRF）との整合化を推進中。",
     "lastUpdated": "2026-04-02"
+  },
+  {
+    "code": "GUY",
+    "country": "ガイアナ",
+    "countryEn": "Guyana",
+    "region": "Latam",
+    "flag": "🇬🇾",
+    "primaryLawTitle": "Food and Drugs Act, Chapter 34:03",
+    "primaryLawEnacted": "1971",
+    "classificationSystem": "分類制度なし（リライアンスモデル）",
+    "classCount": 2,
+    "classes": [
+      {
+        "name": "Permit Required",
+        "riskLevel": "全リスク"
+      },
+      {
+        "name": "Exempt",
+        "riskLevel": "—"
+      }
+    ],
+    "mainAuthority": "GA-FDD",
+    "mdsapStatus": "非参加（ただしMDSAP証明書を要求）",
+    "udiRequired": false,
+    "electronicSystem": "なし",
+    "deviceNotes": "独自分類制度なし。ISO 13485・MDSAP証明書・原産国CFSによるリライアンスモデル。",
+    "lastUpdated": "2026-04-03"
+  },
+  {
+    "code": "PNG",
+    "country": "パプアニューギニア",
+    "countryEn": "Papua New Guinea",
+    "region": "ASPAC",
+    "flag": "\u{1F1F5}\u{1F1EC}",
+    "primaryLawTitle": "Medicines and Cosmetics Act 1999",
+    "primaryLawEnacted": "1999",
+    "classificationSystem": "独自分類制度なし（参照国分類に依存）",
+    "classCount": 1,
+    "classes": [
+      {
+        "name": "Medical Device",
+        "riskLevel": "全リスクレベル"
+      }
+    ],
+    "mainAuthority": "PSSB",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "なし",
+    "deviceNotes": "独自の医療機器分類制度は未整備。Medicines and Cosmetics Act 1999に基づくライセンス制度で規制。参照国認可（TGA、FDA等）への依存度が高い。WHO支援の下で規制改革を推進中。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "HTI",
+    "country": "ハイチ",
+    "countryEn": "Haiti",
+    "region": "Latam",
+    "flag": "\u{1F1ED}\u{1F1F9}",
+    "primaryLawTitle": "Loi sur l'exercice de la Pharmacie (1955)",
+    "primaryLawEnacted": "1955",
+    "classificationSystem": "分類制度なし",
+    "classCount": 1,
+    "classes": [
+      {
+        "name": "未分類",
+        "riskLevel": "未定義"
+      }
+    ],
+    "mainAuthority": "DPM/MT",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "なし",
+    "deviceNotes": "医療機器専用の規制枠組みは存在しない。1955年薬事法が基本法だが医薬品中心。医療機器輸入にはMSPP承認が必要だが体系的な登録・分類・審査制度は未整備。CARICOM加盟国（2002年〜）。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "AZE",
+    "country": "アゼルバイジャン",
+    "countryEn": "Azerbaijan",
+    "region": "ASPAC",
+    "flag": "🇦🇿",
+    "primaryLawTitle": "Law of the Republic of Azerbaijan \"On Medicinal Products\"",
+    "primaryLawEnacted": "2006",
+    "classificationSystem": "リスクグループ制（I / 中 / 高 / 最高）",
+    "classCount": 4,
+    "classes": [
+      {
+        "name": "Risk Group I",
+        "riskLevel": "低リスク"
+      },
+      {
+        "name": "Medium Risk",
+        "riskLevel": "中リスク"
+      },
+      {
+        "name": "High Risk",
+        "riskLevel": "高リスク"
+      },
+      {
+        "name": "Highest Risk",
+        "riskLevel": "最高リスク"
+      }
+    ],
+    "mainAuthority": "AEM（Analytical Expertise Center）",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "AEM申請窓口（統合電子ポータルなし）",
+    "deviceNotes": "2024年7月より医療機器の国家登録が義務化（リスクグループI以外）。Cabinet Decision No. 345（2024-07-18）が登録規則。登録証有効期間5年。QMS現地査察は2026年導入予定。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "LIE",
+    "country": "リヒテンシュタイン",
+    "countryEn": "Liechtenstein",
+    "region": "Europe",
+    "flag": "🇱🇮",
+    "primaryLawTitle": "Gesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz; HMG)",
+    "primaryLawEnacted": "2015",
+    "classificationSystem": "EU MDR 4クラス制（Class I / IIa / IIb / III）",
+    "classCount": 4,
+    "classes": [
+      {
+        "name": "Class I",
+        "riskLevel": "低リスク"
+      },
+      {
+        "name": "Class IIa",
+        "riskLevel": "中低リスク"
+      },
+      {
+        "name": "Class IIb",
+        "riskLevel": "中高リスク"
+      },
+      {
+        "name": "Class III",
+        "riskLevel": "高リスク"
+      }
+    ],
+    "mainAuthority": "Amt für Gesundheit",
+    "mdsapStatus": "非参加",
+    "udiRequired": true,
+    "electronicSystem": "EUDAMED + swissdamed（二重制度）",
+    "deviceNotes": "EEA加盟国かつスイス関税同盟国。EU MDR/IVDRがEEA経由で直接適用されると同時に、スイスMedDO/IvDOに基づく上市も可能な二重制度。国内NBなし。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "BRB",
+    "country": "バルバドス",
+    "countryEn": "Barbados",
+    "region": "Latam",
+    "flag": "🇧🇧",
+    "primaryLawTitle": "Health Services Act, Cap. 44",
+    "primaryLawEnacted": "1969",
+    "classificationSystem": "分類制度なし（輸入許可ベース）",
+    "classCount": 1,
+    "classes": [
+      {
+        "name": "All Devices",
+        "riskLevel": "未分類"
+      }
+    ],
+    "mainAuthority": "Barbados Drug Service",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "医療機器専用法なし。Health Services (Control of Drugs) Regulations, 1970が「device」を定義。製造国での合法販売を前提とした輸入許可制。CARICOM加盟・CARPHA/VigiCarib参加。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "ARM",
+    "country": "アルメニア",
+    "countryEn": "Armenia",
+    "region": "ASPAC",
+    "flag": "🇦🇲",
+    "primaryLawTitle": "Law No. ZR-42 \"On Medical Assistance and Healthcare Services to the Population\"",
+    "primaryLawEnacted": "1996",
+    "classificationSystem": "EAEU整合 4クラス制（1/2a/2b/3）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class 1", "riskLevel": "低" },
+      { "name": "Class 2a", "riskLevel": "中低" },
+      { "name": "Class 2b", "riskLevel": "中高" },
+      { "name": "Class 3", "riskLevel": "高" }
+    ],
+    "mainAuthority": "SCDMTE",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "Single Window + EAEU統一情報システム",
+    "deviceNotes": "EAEU加盟国。独自の国内登録制度なし、輸入許可制（GD 429-N/2023）で運用中。2025年末まで国内規則による申請可、2026年以降EAEU統一登録に完全移行予定。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "TKM",
+    "country": "トルクメニスタン",
+    "countryEn": "Turkmenistan",
+    "region": "ASPAC",
+    "flag": "🇹🇲",
+    "primaryLawTitle": "Law of Turkmenistan \"On Drug Provision\" (No. 319-V)",
+    "primaryLawEnacted": "2016",
+    "classificationSystem": "国家登録制（リスクベース分類の詳細は要確認）",
+    "classCount": 1,
+    "classes": [
+      { "name": "登録対象医療機器", "riskLevel": "全リスクレベル" }
+    ],
+    "mainAuthority": "保健・医療産業省",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙媒体提出（電子申請システムは未確認）",
+    "deviceNotes": "EAEU非加盟・CIS加盟国。医薬品供給法（2016年）に基づく国家登録制度。登録証有効期間5年。Türkmenstandartlaryが適合性証明書を発行（12カ月有効）。外国メーカーはローカル代理人が必須。医療機器市場の90%以上が輸入。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "MLI",
+    "country": "マリ",
+    "countryEn": "Mali",
+    "region": "Middle East & Africa",
+    "flag": "🇲🇱",
+    "primaryLawTitle": "Décret n° 91-106/P-RM du 15 mars 1991 portant organisation de l'exercice privé des professions sanitaires",
+    "primaryLawEnacted": "1991",
+    "classificationSystem": "未整備（国際認証・UEMOA域内調和を参照）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class II", "riskLevel": "中低" },
+      { "name": "Class III", "riskLevel": "中高" },
+      { "name": "Class IV", "riskLevel": "高" }
+    ],
+    "mainAuthority": "DPM",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（Trade Portal で手続案内）",
+    "deviceNotes": "UEMOA加盟国。独立した医療機器法なし、Décret 91-106/P-RM（1991年）に基づく医薬品規制の一部として運用。DPMがAMM（市販承認、5年有効）を管理。国立AMM委員会が四半期ごとに審査。LNSがISO/IEC 17025認定取得（2022年）。AMA条約批准済み。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "BFA",
+    "country": "ブルキナファソ",
+    "countryEn": "Burkina Faso",
+    "region": "Middle East & Africa",
+    "flag": "🇧🇫",
+    "primaryLawTitle": "Loi n° 23/94/ADP portant Code de la Santé publique",
+    "primaryLawEnacted": "1994",
+    "classificationSystem": "未整備（UEMOA/国際認証に依存）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class II", "riskLevel": "中低" },
+      { "name": "Class III", "riskLevel": "中高" },
+      { "name": "Class IV", "riskLevel": "高" }
+    ],
+    "mainAuthority": "ANRP",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "UEMOA加盟国。独立した医療機器法なし、Loi 23/94/ADP（公衆衛生法典）に基づく医薬品規制の一部として運用。ANRP（2018年設立）がHomologation/AMMを管理。LNSPが品質検査。CAMEGが公的調達一元管理。AMA条約批准済み（2020年）。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "SUR",
+    "country": "スリナム",
+    "countryEn": "Suriname",
+    "region": "Latam",
+    "flag": "🇸🇷",
+    "primaryLawTitle": "Wet op de Uitoefening der Artsenijbereidkunde (G.B. 1896 no. 26)",
+    "primaryLawEnacted": "1896",
+    "classificationSystem": "分類制度なし（輸入許可ベース）",
+    "classCount": 1,
+    "classes": [
+      { "name": "All Devices", "riskLevel": "未分類" }
+    ],
+    "mainAuthority": "Ministerie van Volksgezondheid",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "医療機器専用法なし。薬事法（1896年）+ 包装医薬品令（1973年）が法的基盤。保健省の輸入許可制で運用。医薬品登録委員会（2021年設置）は医薬品のみ対象。CARICOM加盟・CARPHA/CRS参加。オランダ語が公用語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "TGO",
+    "country": "トーゴ",
+    "countryEn": "Togo",
+    "region": "Middle East & Africa",
+    "flag": "🇹🇬",
+    "primaryLawTitle": "Loi n° 2009-007 du 15 mai 2009 portant Code de la santé publique de la République togolaise",
+    "primaryLawEnacted": "2009",
+    "classificationSystem": "未整備（国際認証に依存・UEMOA調和中）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class II", "riskLevel": "中低" },
+      { "name": "Class III", "riskLevel": "中高" },
+      { "name": "Class IV", "riskLevel": "高" }
+    ],
+    "mainAuthority": "DPML",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（service-public.gouv.tgで申請書ダウンロード可）",
+    "deviceNotes": "医療機器専用法なし。公衆衛生法典（2009年）第IV編が法的根拠。UEMOA加盟国。DPML（保健省傘下）がNCA。CAMEG-TogoがEU指令93/42/CEEを参照基準として公的調達サプライヤーの事前選定を実施。WHO CRP（SRA CRP・PQ CRP IVDs）参加。フランス語。",
+    "lastUpdated": "2026-04-06"
   }
 ];
 

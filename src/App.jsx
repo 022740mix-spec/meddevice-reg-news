@@ -1997,7 +1997,8 @@ function CountryGrid({ query, onSelect }) {
         p.country.toLowerCase().includes(q) ||
         p.countryEn.toLowerCase().includes(q) ||
         p.code.toLowerCase().includes(q) ||
-        p.authorities.some((a) => a.name.toLowerCase().includes(q) || (a.fullName || "").toLowerCase().includes(q))
+        (p.mainAuthority || "").toLowerCase().includes(q) ||
+        (p.authorities || []).some((a) => a.name.toLowerCase().includes(q) || (a.fullName || "").toLowerCase().includes(q))
       );
     }
     const map = {};
@@ -2032,7 +2033,7 @@ function CountryGrid({ query, onSelect }) {
                 <div className="country-card__info">
                   <span className="country-card__name">{p.country}</span>
                   <span className="country-card__authority">
-                    {p.authorities.find((a) => a.isPrimary)?.name || p.authorities[0]?.name}
+                    {p.mainAuthority || p.authorities?.find((a) => a.isPrimary)?.name || p.authorities?.[0]?.name || "—"}
                   </span>
                 </div>
                 {(() => {

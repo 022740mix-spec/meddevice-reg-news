@@ -108,6 +108,44 @@ import BRN from "./profiles/BRN.js";
 import FJI from "./profiles/FJI.js";
 import KAZ from "./profiles/KAZ.js";
 import UZB from "./profiles/UZB.js";
+import DEU from "./profiles/DEU.js";
+import FRA from "./profiles/FRA.js";
+import LUX from "./profiles/LUX.js";
+import SVN from "./profiles/SVN.js";
+import SRB from "./profiles/SRB.js";
+import CYP from "./profiles/CYP.js";
+import GEO from "./profiles/GEO.js";
+import NIC from "./profiles/NIC.js";
+import JAM from "./profiles/JAM.js";
+import CIV from "./profiles/CIV.js";
+import CMR from "./profiles/CMR.js";
+import ZMB from "./profiles/ZMB.js";
+import ZWE from "./profiles/ZWE.js";
+import MKD from "./profiles/MKD.js";
+import BIH from "./profiles/BIH.js";
+import AGO from "./profiles/AGO.js";
+import GUY from "./profiles/GUY.js";
+import TTO from "./profiles/TTO.js";
+import ALB from "./profiles/ALB.js";
+import MNE from "./profiles/MNE.js";
+import MDA from "./profiles/MDA.js";
+import BWA from "./profiles/BWA.js";
+import NAM from "./profiles/NAM.js";
+import MOZ from "./profiles/MOZ.js";
+import KGZ from "./profiles/KGZ.js";
+import ISL from "./profiles/ISL.js";
+import TJK from "./profiles/TJK.js";
+import PNG from "./profiles/PNG.js";
+import HTI from "./profiles/HTI.js";
+import AZE from "./profiles/AZE.js";
+import LIE from "./profiles/LIE.js";
+import BRB from "./profiles/BRB.js";
+import ARM from "./profiles/ARM.js";
+import TKM from "./profiles/TKM.js";
+import MLI from "./profiles/MLI.js";
+import BFA from "./profiles/BFA.js";
+import SUR from "./profiles/SUR.js";
+import TGO from "./profiles/TGO.js";
 
 export const COUNTRY_FLAG = {
   USA: "🇺🇸", CAN: "🇨🇦", EU: "🇪🇺", JPN: "🇯🇵", CHN: "🇨🇳",
@@ -131,6 +169,23 @@ export const COUNTRY_FLAG = {
   BRN: "🇧🇳", FJI: "🇫🇯", KAZ: "🇰🇿", UZB: "🇺🇿",
   NLD: "🇳🇱", BEL: "🇧🇪", ESP: "🇪🇸", ITA: "🇮🇹", ROU: "🇷🇴", BGR: "🇧🇬", HRV: "🇭🇷",
   SVK: "🇸🇰", LTU: "🇱🇹", LVA: "🇱🇻", EST: "🇪🇪", MLT: "🇲🇹", MAC: "🇲🇴",
+  DEU: "🇩🇪", FRA: "🇫🇷", LUX: "🇱🇺", SVN: "🇸🇮", SRB: "🇷🇸",
+  CYP: "🇨🇾", GEO: "🇬🇪", NIC: "🇳🇮", JAM: "🇯🇲",
+  CIV: "🇨🇮", CMR: "🇨🇲", ZMB: "🇿🇲", ZWE: "🇿🇼",
+  MKD: "🇲🇰", BIH: "🇧🇦", AGO: "🇦🇴", GUY: "🇬🇾", TTO: "🇹🇹",
+  ALB: "🇦🇱", MNE: "🇲🇪", MDA: "🇲🇩",
+  BWA: "🇧🇼", NAM: "🇳🇦", MOZ: "🇲🇿", KGZ: "🇰🇬",
+  ISL: "🇮🇸", TJK: "🇹🇯", PNG: "🇵🇬",
+  HTI: "🇭🇹",
+  AZE: "🇦🇿",
+  LIE: "🇱🇮",
+  BRB: "🇧🇧",
+  ARM: "🇦🇲",
+  TKM: "🇹🇲",
+  MLI: "🇲🇱",
+  BFA: "🇧🇫",
+  SUR: "🇸🇷",
+  TGO: "🇹🇬",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -236,6 +291,44 @@ export const COUNTRY_PROFILES = [
   FJI,
   KAZ,
   UZB,
+  DEU,
+  FRA,
+  LUX,
+  SVN,
+  SRB,
+  CYP,
+  GEO,
+  NIC,
+  JAM,
+  CIV,
+  CMR,
+  ZMB,
+  ZWE,
+  MKD,
+  BIH,
+  AGO,
+  GUY,
+  TTO,
+  ALB,
+  MNE,
+  MDA,
+  BWA,
+  NAM,
+  MOZ,
+  KGZ,
+  ISL,
+  TJK,
+  PNG,
+  HTI,
+  AZE,
+  LIE,
+  BRB,
+  ARM,
+  TKM,
+  MLI,
+  BFA,
+  SUR,
+  TGO,
 ];
 
 // ===========================================================================
