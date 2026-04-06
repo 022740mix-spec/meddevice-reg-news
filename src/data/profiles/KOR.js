@@ -58,8 +58,8 @@ export default {
     "originalTitle": "의료기기법",
     "enacted": "2003-05-29",
     "lastAmended": "2025-01-31",
-    "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=259122",
-    "description": "韓国の医療機器規制の根拠法。製造・輸入・販売業の許可制度、4クラス分類に応じた届出・認証・許可制度、KGMP、市販後安全管理、広告規制等を包括的に規定。デジタル医療製品への対応を含む複数回の改正を経て現在に至る。"
+    "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=268885",
+    "description": "韓国の医療機器規制の根拠法（法律第20753号）。製造・輸入・販売業の許可制度、4クラス分類に応じた届出・認証・許可制度、KGMP、市販後安全管理、広告規制等を包括的に規定。デジタル医療製品への対応を含む複数回の改正を経て現在に至る。2025年1月31日の一部改正は2025年8月1日施行。"
   },
   "implementingRegulations": [
     {
@@ -93,8 +93,8 @@ export default {
     {
       "title": "デジタル医療製品法（디지털의료제품법）",
       "date": "2025-01-24",
-      "url": "https://www.law.go.kr/",
-      "description": "2025年1月24日施行。AI/ML SaMD、デジタル治療機器（DTx）等のデジタル医療製品に特化した規制枠組み。迅速審査制度、変更管理計画、リアルワールドデータ活用を規定。",
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=259299",
+      "description": "2025年1月24日施行（法律第20139号、2024年1月23日制定）。AI/ML SaMD、デジタル治療機器（DTx）等のデジタル医療製品に特化した規制枠組み。迅速審査制度、変更管理計画、リアルワールドデータ活用を規定。",
       "category": "デジタルヘルス"
     }
   ],
@@ -117,8 +117,8 @@ export default {
       "title": "デジタル医療製品法（디지털의료제품법）",
       "category": "デジタルヘルス",
       "enacted": "2025-01-24",
-      "url": "https://www.law.go.kr/",
-      "relevance": "2025年1月24日施行。AI/ML SaMD、デジタル治療機器（DTx）の迅速審査・変更管理・リアルワールドエビデンス活用を規定する新法。"
+      "url": "https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=259299",
+      "relevance": "2025年1月24日施行（法律第20139号、2024年1月23日制定）。AI/ML SaMD、デジタル治療機器（DTx）の迅速審査・変更管理・リアルワールドエビデンス活用を規定する新法。"
     },
     {
       "title": "生命倫理及び安全に関する法律（생명윤리및안전에관한법률）",
@@ -337,6 +337,11 @@ export default {
   },
   "recentDevelopments": [
     {
+      "date": "2025-04",
+      "title": "KGMP改正告示（MFDS告示第2025-22号）",
+      "description": "MFDSが医療機器製造及び品質管理基準（KGMP）を改正。クラスIII機器の第三者検査機関による監査簡素化、MDSAP監査との併合監査の法的根拠整備、デジタル医療製品法施行に伴うSaMD関連条項の分離・削除を実施。"
+    },
+    {
       "date": "2025-01",
       "title": "デジタル医療製品法（디지털의료제품법）施行",
       "description": "2025年1月24日施行。AI/ML SaMD、デジタル治療機器（DTx）を含むデジタル医療製品の規制枠組みを定める新法。迅速審査制度とリアルワールドデータ活用を法制化。"
@@ -357,6 +362,6 @@ export default {
       "description": "医療機器産業の競争力強化と規制環境の整備を目的とする医療機器産業育成法が施行。革新的医療機器の開発支援と規制合理化を推進。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

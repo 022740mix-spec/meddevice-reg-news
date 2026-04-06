@@ -13,7 +13,7 @@ export default {
       "EU MDR Annex VIIIに準用したリスクベース4クラス分類（Class I/IIa/IIb/III）",
       "EU認定Notified BodyのCE証明書を一方的承認",
       "CH-REP（スイス国内代理人）制度の義務化",
-      "swissdamedデータベースによる機器登録・UDI管理",
+      "swissdamedデータベースによる機器登録（2026年7月義務化）・UDI管理",
       "Bilaterals III交渉によるMRA医療機器章の復活が進行中"
     ]
   },
@@ -200,15 +200,15 @@ export default {
   "electronicSubmission": {
     "system": "swissdamed（Swiss Database for Medical Devices）",
     "url": "https://www.swissmedic.ch/swissmedic/en/home/medical-devices/swissdamed.html",
-    "description": "swissdamedはスイスの医療機器登録データベース。2026年7月より機器登録が義務化。UDI/Devicesモジュールは2025年8月稼働予定。Economic operators（製造業者・CH-REP・輸入業者）の登録およびビジランス報告にも使用。",
+    "description": "swissdamedはスイスの医療機器登録データベース。2026年7月1日より機器登録が義務化（経過措置: 2026年12月31日まで）。UDI/Devicesモジュールは2025年8月より任意利用開始済み。Economic operators（製造業者・CH-REP・輸入業者）の登録およびビジランス報告にも使用。",
     "mandatory": true
   },
   "udi": {
     "required": true,
     "system": "EU UDI準拠 — swissdamed UDI/Devicesモジュール",
-    "description": "MedDO Art. 31–36に基づくUDI要件。EU MDRのUDI制度に準拠。UDI-DI（機器識別子）とUDI-PI（製造識別子）で構成。発行機関はGS1/HIBCC/ICCBBA。swissdamed UDI/Devicesモジュール（2025年8月稼働予定）にUDI-DIデータを登録。",
+    "description": "MedDO Art. 31–36に基づくUDI要件。EU MDRのUDI制度に準拠。UDI-DI（機器識別子）とUDI-PI（製造識別子）で構成。発行機関はGS1/HIBCC/ICCBBA。swissdamed UDI/Devicesモジュール（2025年8月より任意利用開始済み）にUDI-DIデータを登録。",
     "url": "https://www.swissmedic.ch/swissmedic/en/home/medical-devices/swissdamed.html",
-    "timeline": "swissdamed UDI/Devicesモジュール: 2025年8月稼働予定。2026年7月機器登録義務化。Class III: 移行期限2025年5月。Class IIb: 2025年5月。Class IIa: 2027年5月。Class I: 2027年5月。"
+    "timeline": "swissdamed UDI/Devicesモジュール: 2025年8月稼働済み（任意）。2026年7月1日機器登録義務化（経過措置: 2026年12月31日まで）。Class III: 移行期限2025年5月。Class IIb: 2025年5月。Class IIa: 2027年5月。Class I: 2027年5月。"
   },
   "postMarket": {
     "adverseEventReporting": {
@@ -229,8 +229,8 @@ export default {
     "issuingAuthority": "Swissmedic",
     "name": "Certificate of Free Sale (CFS)",
     "description": "Swissmedicがスイスで合法的に流通している医療機器のCFSを発行。輸出目的で利用。",
-    "processingTime": "要確認",
-    "url": "https://www.swissmedic.ch/swissmedic/en/home/medical-devices.html"
+    "processingTime": "30日（必要書類が全て揃った日から起算）。手数料: CHF 200/証明書",
+    "url": "https://www.swissmedic.ch/swissmedic/en/home/medical-devices/md-export-certificates-fsc/exportzertifikate_fsc.html"
   },
   "reimbursement": {
     "system": "MiGeL（Mittel- und Gegenständeliste）— 医療機器・補助機器リスト",
@@ -292,12 +292,12 @@ export default {
     {
       "date": "2026-07",
       "title": "swissdamed 機器登録義務化",
-      "description": "2026年7月よりswissdamedでの医療機器登録が義務化。全クラスの機器がswissdamedに登録される。"
+      "description": "2026年7月1日よりswissdamedでの医療機器登録が義務化。経過措置として2026年12月31日までに既存機器の登録が必要。重篤事象・FSCAの報告対象機器は経過措置なく即時登録が必要。"
     },
     {
       "date": "2025-08",
-      "title": "swissdamed UDI/Devicesモジュール稼働",
-      "description": "swissdamedのUDI/Devicesモジュールが2025年8月に稼働開始。UDI-DIデータの登録が可能に。"
+      "title": "swissdamed UDI/Devicesモジュール稼働開始",
+      "description": "swissdamedのUDI/Devicesモジュールが2025年8月に任意利用として稼働開始。機器・システム・処置パックの登録が可能に。"
     },
     {
       "date": "2025-01",
@@ -305,6 +305,6 @@ export default {
       "description": "2025年1月にMedDO（SR 812.213）およびIvDO（SR 812.219）の改正が施行。移行期限の調整、CH-REP要件の明確化等。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -62,10 +62,10 @@ export default {
   },
   "implementingRegulations": [
     {
-      "title": "Administrative Order No. 2018-0002 — Rules and Regulations on the Regulation of Medical Devices",
+      "title": "Administrative Order No. 2018-0002 — Guidelines Governing the Issuance of an Authorization for a Medical Device based on the ASEAN Harmonized Technical Requirements",
       "date": "2018",
-      "url": "https://www.fda.gov.ph/",
-      "description": "医療機器規制の包括的な実施規則。ASEAN AMDD に整合したクラス分類・登録手続き・市販後監視を規定。",
+      "url": "https://www.fda.gov.ph/wp-content/uploads/2021/05/Administrative-Order-No.-2018-002.pdf",
+      "description": "ASEAN AMDD に整合した医療機器認可ガイドライン。クラス分類・CMDN/CMDR手続き・技術文書要件を規定。IVD・再生医療機器は適用除外（別途AO予定）。",
       "category": "登録"
     },
     {
@@ -310,6 +310,6 @@ export default {
       "description": "2025年の大幅な手数料引き上げに対し、一時的に旧料金への差し戻し措置を実施（60営業日間）。さらに延長措置あり。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

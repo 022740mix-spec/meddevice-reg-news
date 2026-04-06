@@ -45,7 +45,7 @@ export default {
   ],
   "notifiedBodies": {
     "system": "UK Approved Bodies",
-    "description": "Brexit後、EU Notified Bodies に代わりMHRAが指定するUK Approved Bodies が英国市場向け医療機器の適合性評価を実施。クラスIIa以上の機器はApproved Body による第三者評価が必要。移行期間中はEU Notified Bodies の認証も一定期間有効。2026年現在、BSI UK を含む複数のApproved Bodies が指定済み。",
+    "description": "Brexit後、EU Notified Bodies に代わりMHRAが指定するUK Approved Bodies が英国市場向け医療機器の適合性評価を実施。クラスIIa以上の機器はApproved Body による第三者評価が必要。移行期間中はEU Notified Bodies の認証も一定期間有効。2026年現在、BSI UK・SGS・TÜV SÜD・Intertek・TÜV Rheinland UK・LNE-GMED UK・Scarlet NB UK 等、計9機関のApproved Bodies が指定済み。",
     "bodies": [
       {
         "name": "BSI (British Standards Institution)",
@@ -337,8 +337,8 @@ export default {
     },
     {
       "date": "2025-06",
-      "title": "The Medical Devices (Post-market Surveillance Requirements) (Amendment) (Great Britain) Regulations 2024 施行",
-      "description": "2024年制定の医療機器PMS改正規則が2025年6月16日に施行。市販後監視に関する詳細要件（PMS計画、PSUR、安全性報告等）を追加。"
+      "title": "医療機器PMS改正規則施行（SI 2024/1368）",
+      "description": "The Medical Devices (Post-market Surveillance Requirements) (Amendment) (Great Britain) Regulations 2024（SI 2024 No. 1368）が2025年6月16日に施行。UK MDR 2002に新Part 4Aを挿入し、PMS計画・PMS報告書（低リスク）/ PSUR（高リスク）の作成・提出を義務化。"
     },
     {
       "date": "2025-02",
@@ -346,11 +346,11 @@ export default {
       "description": "MHRAがソフトウェア医療機器（SaMD）の分類に関するガイダンスを2025年2月3日に更新。AI/ML搭載機器の分類基準を明確化。"
     },
     {
-      "date": "2023-08",
-      "title": "UK Approved Body 3機関追加指定",
-      "description": "MHRAがTÜV SÜD、Intertek、TÜV Rheinland UK の3機関をUK Approved Bodiesとして追加指定。指定AB数は計7機関に拡充。"
+      "date": "2024-01",
+      "title": "UK Approved Body さらに2機関追加指定（計9機関）",
+      "description": "MHRAがLNE-GMED UK Limited および Scarlet NB UK Ltd（ソフトウェア限定）をUK Approved Bodiesとして新たに指定。2023年8月のTÜV SÜD・Intertek・TÜV Rheinland UK 追加と合わせ、指定AB数は計9機関に拡充。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -12,9 +12,9 @@ export default {
       "ANVISA による連邦レベルの一元的規制体制",
       "RDC 751/2022 による新規制フレームワーク（IMDRF整合）",
       "4クラス分類（I/II/III/IV）— IMDRF分類ルールに整合",
-      "Cadastro（クラスI/II届出）vs Registro（クラスIII/IV登録）の二元構造",
+      "Notificação（クラスI/II届出）vs Registro（クラスIII/IV登録）の二元構造",
       "BRH（Brazilian Registration Holder）の設置義務",
-      "CBPF認証（GMP適合証明）の取得義務"
+      "CBPF（GMP適合証明）の取得義務"
     ]
   },
   "authorities": [
@@ -63,7 +63,7 @@ export default {
       "title": "RDC 751/2022（医療機器登録・届出に関する決議）",
       "date": "2022-09-15",
       "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2022/publicada-a-rdc-751-2022",
-      "description": "医療機器の分類、登録（Registro）・届出（Cadastro）手続、技術文書要件を包括的に規定する主要規則。IMDRF分類ルールに整合した4クラス分類を導入。旧RDC 185/2001等を統合・刷新。",
+      "description": "医療機器の分類、登録（Registro）・届出（Notificação）手続、技術文書要件を包括的に規定する主要規則。IMDRF分類ルールに整合した4クラス分類を導入。旧RDC 185/2001等を統合・刷新。",
       "category": "基本規則"
     },
     {
@@ -119,7 +119,7 @@ export default {
         "name": "Class I",
         "nameJa": "クラスI",
         "riskLevel": "低",
-        "description": "低リスクの医療機器。Cadastro（届出）で市場投入が可能。ANVISAによる事前審査は不要。",
+        "description": "低リスクの医療機器。Notificação（届出）で市場投入が可能。ANVISAによる事前審査は不要。",
         "examples": [
           "聴診器",
           "圧迫包帯",
@@ -127,13 +127,13 @@ export default {
           "歩行補助器",
           "舌圧子"
         ],
-        "approvalPath": "Cadastro（届出）"
+        "approvalPath": "Notificação（届出）"
       },
       {
         "name": "Class II",
         "nameJa": "クラスII",
         "riskLevel": "中低",
-        "description": "中低リスクの医療機器。Cadastro（届出）で市場投入が可能だが、クラスIより詳細な技術文書が必要。",
+        "description": "中低リスクの医療機器。Notificação（届出）で市場投入が可能だが、クラスIより詳細な技術文書が必要。",
         "examples": [
           "補聴器",
           "超音波画像診断装置",
@@ -141,7 +141,7 @@ export default {
           "電子体温計",
           "注射針"
         ],
-        "approvalPath": "Cadastro（届出）"
+        "approvalPath": "Notificação（届出）"
       },
       {
         "name": "Class III",
@@ -181,20 +181,19 @@ export default {
     "totalProductCodes": "ANVISA独自の製品分類コード体系"
   },
   "conformityAssessment": {
-    "overview": "ブラジルで医療機器を販売するにはANVISAへの登録または届出が必要。BRH（Brazilian Registration Holder）が申請主体となる。クラスI/IIはCadastro（届出）、クラスIII/IVはRegistro（登録）が必要。全クラスでCBPF（GMP適合証明書）の取得が前提条件。MDSAP監査報告書はCBPF取得の代替として活用可能。",
+    "overview": "ブラジルで医療機器を販売するにはANVISAへの登録または届出が必要。BRH（Brazilian Registration Holder）が申請主体となる。クラスI/IIはNotificação（届出）、クラスIII/IVはRegistro（登録）が必要。全クラスでCBPF（GMP適合証明書）の取得が前提条件。MDSAP監査報告書はCBPF取得の代替として活用可能。",
     "routes": [
       {
-        "name": "Cadastro",
-        "nameJa": "届出（Cadastro）",
+        "name": "Notificação",
+        "nameJa": "届出（Notificação）",
         "applicableClasses": [
           "Class I",
           "Class II"
         ],
-        "description": "低・中低リスクの医療機器についてBRHがANVISAに届出。基本的な技術文書の提出が必要だが、ANVISAによる事前の実質的審査は行われない。CBPF取得済みが前提。有効期間10年（更新可能）。",
+        "description": "低・中低リスクの医療機器についてBRHがANVISAに届出。基本的な技術文書の提出が必要だが、ANVISAによる事前の実質的審査は行われない。CBPF取得済みが前提。有効期限なし（取消事由に該当しない限り有効）。",
         "subtypes": [
           "新規届出",
-          "変更届出（Alteração）",
-          "更新届出（Revalidação）"
+          "変更届出（Alteração）"
         ],
         "avgReviewTime": "約30〜60日",
         "fee": "BRL 500〜2,000程度（製品分類により異なる）",
@@ -331,6 +330,6 @@ export default {
       "description": "ANVISAがMDSAP Version 2.0の要件に対応するガイダンスを公表。CBPF認証プロセスとMDSAP報告書の連携を強化。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

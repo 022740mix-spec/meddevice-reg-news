@@ -300,8 +300,8 @@ export default {
     },
     {
       "date": "2025-12",
-      "title": "CFS発行サービスのEDE移管",
-      "description": "Certificate of Free Sale発行サービスがMOHAPからEDEに移管（2025年12月29日予定）。"
+      "title": "EDE 44サービス移管（CFS含む）",
+      "description": "2025年12月29日にMOHAPからEDEへ44の規制サービスが移管。マーケティング認可、輸出入許可、GMP認証、薬局施設ライセンス、ファーマコビジランス、CFS発行サービス等を含む。"
     },
     {
       "date": "2023-09",
@@ -314,6 +314,6 @@ export default {
       "description": "Federal Law No. 8 of 2019の一部条項を改正。EDEの設立に伴う経過的措置。その後FDL 38/2024で全面置換。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

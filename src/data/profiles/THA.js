@@ -204,7 +204,7 @@ export default {
         ],
         "description": "最低リスクのClass 1機器はThai FDAへのListing（届出）により市場投入が可能。e-Submissionシステムでオンライン届出。基本的な製品情報・ラベル情報の提出。",
         "subtypes": [],
-        "avgReviewTime": "約15営業日",
+        "avgReviewTime": "Positive List該当品: 数日（自動承認、2025年1月〜）/ その他: 約15営業日",
         "fee": "要確認（Thai FDA公式サイト参照）",
         "url": "https://en.fda.moph.go.th/entrepreneurs-medical-devices/manufacture-import-commercialpurposes/"
       },
@@ -222,7 +222,7 @@ export default {
         ],
         "avgReviewTime": "Class 2: 約30〜45営業日 / Class 3: 約250営業日（約8ヶ月）",
         "fee": "要確認（Thai FDA公式サイト参照）",
-        "url": "https://en.fda.moph.go.th/health-products-vigilance-center/reporting-of-safety-information-1/"
+        "url": "https://en.fda.moph.go.th/entrepreneurs-medical-devices/manufacture-import-commercialpurposes/"
       },
       {
         "name": "Licensing",
@@ -242,17 +242,17 @@ export default {
     ]
   },
   "electronicSubmission": {
-    "system": "PRIVUS",
-    "url": "https://privus.fda.moph.go.th/Application",
-    "description": "Thai FDAのオンライン申請システム「PRIVUS」を通じて、医療機器の届出・登録申請、施設ライセンス申請、変更届等の規制手続を電子的に実施。段階的にペーパーレス化を推進中。",
+    "system": "SKYNET e-Submission",
+    "url": "https://medical.fda.moph.go.th/open-system-license/",
+    "description": "Thai FDAのオンライン申請システム「SKYNET」を通じて、医療機器の届出・登録申請、施設ライセンス申請、変更届・更新等の規制手続を電子的に実施。Open IDによるアカウント作成が必要。段階的にペーパーレス化を推進中。",
     "mandatory": true
   },
   "udi": {
     "required": false,
-    "system": "検討段階",
-    "description": "タイではUDI制度の導入を検討中。ASEAN域内でのUDI整合に向けた議論に参加しており、IMDRF UDIガイダンスを参照しつつ段階的導入のロードマップを策定中。現時点では法的義務化には至っていない。",
-    "url": "https://en.fda.moph.go.th/entrepreneurs-medical-devices",
-    "timeline": "導入時期未定（ASEAN域内整合を踏まえて検討中）"
+    "system": "ドラフト規制段階（2025年3月公表）",
+    "description": "Thai FDAは2025年3月にUDI要件を含む新ラベリング規制のドラフトを公表。Class 2〜4の医療機器にUDI表示を義務化する方針。EU MDR・US FDA・TGAの制度に整合。正式公布後、Royal Gazette掲載の翌日から施行予定。2020年ラベリング規則に準拠済みの機器には2年間の移行期間が設けられる見込み。",
+    "url": "https://asiaactual.com/blog/thai-fda-drafts-new-labeling-requirements-for-medical-devices/",
+    "timeline": "ドラフト規制公表済み（2025年3月）。正式施行日は未確定"
   },
   "postMarket": {
     "adverseEventReporting": {
@@ -337,21 +337,21 @@ export default {
       "description": "Thai FDAがeコマースプラットフォームにおける医療機器販売の規制を強化。未届出・未登録機器のオンライン販売に対する取り締まり強化と、プラットフォーム事業者の責任を明確化。"
     },
     {
-      "date": "2025-09",
-      "title": "ASEAN AMDD 相互認証パイロットの進展",
-      "description": "ASEAN医療機器指令に基づく域内相互認証パイロットプログラムが進展。タイがASEAN加盟国間のCSDT整合と審査結果の相互活用に向けた取り組みを推進。"
-    },
-    {
       "date": "2025-06",
-      "title": "IVD規制の体系整備",
-      "description": "Thai FDAがIVD（体外診断用医療機器）の規制体系を整備。IVD専用の分類ガイダンスと登録要件を明確化し、COVID-19以降の迅速診断キットの品質確保を強化。"
+      "title": "新ラベリング規則 B.E. 2568の施行予定",
+      "description": "保健省告示「Principles, Methods, and Conditions for Displaying Labels and Medical Device Package Inserts, B.E. 2568（2025年）」が公布。2020年告示を置換し、Class 2〜4へのUDI表示義務、ラベリング完了期限の180日→30日への短縮、電子IFU規定の明確化等を規定。2026年6月20日施行予定、2028年6月20日までの移行期間あり。"
     },
     {
       "date": "2025-03",
-      "title": "電子申請システムPRIVUSの機能拡張",
-      "description": "PRIVUSシステムの機能を拡張し、施設ライセンスの更新・変更届のオンライン処理を追加。ペーパーレス化と審査効率の向上を推進。"
+      "title": "UDIドラフト規制の公表",
+      "description": "Thai FDAがClass 2〜4医療機器に対するUDI（固有機器識別）要件を含む新ラベリング規制のドラフトを公表。EU MDR・US FDA・豪州TGAのUDI制度に整合する方針。"
+    },
+    {
+      "date": "2025-01",
+      "title": "Class 1医療機器の自動承認プロセス導入",
+      "description": "2025年1月15日より、Thai FDAがClass 1医療機器の自動承認（Auto-Approval）プロセスを開始。Positive List（531品目、定期更新）に該当する低リスク機器は、必要書類・手数料の受領後に自動的に登録番号が発行され、数日で承認完了。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

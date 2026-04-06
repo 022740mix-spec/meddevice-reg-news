@@ -337,6 +337,6 @@ export default {
       "description": "2026年3月9日より革新的医療機器（AI/ML搭載機器等）向けの特別審査経路を開始。MDAが開発段階から規制助言を提供し、承認プロセスを効率化するイノベーション支援策。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

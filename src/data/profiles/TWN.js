@@ -316,6 +316,6 @@ export default {
       "description": "TFDAがMDSAP参加国との相互協力を強化。GMP査察結果の相互活用に向けた協議を推進。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -61,10 +61,10 @@ export default {
   "primaryLaw": {
     "title": "Tıbbi Cihaz Yönetmeliği (Medical Device Regulation)",
     "originalTitle": "Tıbbi Cihaz Yönetmeliği",
-    "enacted": "2021-06-02",
+    "enacted": "2021-06-02（Official Gazette No. 31499）",
     "lastAmended": "2024-08-17（Official Gazette No. 32635）",
-    "url": "https://www.titck.gov.tr/",
-    "description": "EU Regulation 2017/745（MDR）のほぼ逐語的トルコ法移植。2021年6月2日発効。2024年8月にEU Regulation 2024/1860 の改正に追随して更新。医療機器のライフサイクル全体（設計・製造・適合性評価・市場投入・市販後監視）を規制。"
+    "url": "https://www.titck.gov.tr/faaliyetalanlari/tibbicihaz/tibbi-cihaz-mevzuati",
+    "description": "EU Regulation 2017/745（MDR）のほぼ逐語的トルコ法移植。2021年6月2日 Official Gazette No. 31499 で公布・発効。2024年8月にEU Regulation 2024/1860 の改正に追随して更新（Official Gazette No. 32635）。医療機器のライフサイクル全体（設計・製造・適合性評価・市場投入・市販後監視）を規制。"
   },
   "implementingRegulations": [
     {
@@ -211,7 +211,7 @@ export default {
   "electronicSubmission": {
     "system": "ÜTS (Ürün Takip Sistemi / Product Tracking System)",
     "url": "https://uts.saglik.gov.tr/",
-    "description": "ÜTS はトルコの医療機器電子登録・追跡システム。EU の EUDAMED に相当。全ての医療機器は市場投入前に ÜTS への登録が義務。製造業者情報・機器情報・CE証明書・適合性宣言等を電子的に登録。MERSIS（Central Registration System）への事前登録も必要。",
+    "description": "ÜTS はトルコの医療機器電子登録・追跡システム。EU の EUDAMED に相当。全ての医療機器は市場投入前に ÜTS への登録が義務。製造業者情報・機器情報・CE証明書・適合性宣言等を電子的に登録。MERSIS（Central Registration System）への事前登録も必要。2025年1月1日以降、ÜTS での医療機器登録は有資格者のみが実施可能。",
     "mandatory": true
   },
   "udi": {
@@ -318,6 +318,6 @@ export default {
       "description": "TITCK が2025年下半期に包括的ガイドラインを公表予定。「重大な被害」の定量的閾値、不可抗力の立証基準、Excel添付の電子データ形式等を明確化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

@@ -237,7 +237,7 @@ export default {
   },
   "electronicSubmission": {
     "system": "REGALKES",
-    "url": "https://regalkes.kemkes.go.id/informasi_alkes/Indonesia%20Guideline%20for%20Evaluation%20of%20Medical%20Device%20and%20IVD%202020.pdf",
+    "url": "https://regalkes.kemkes.go.id/",
     "description": "保健省の医療機器・PKRT オンライン登録ポータル「REGALKES」を通じて、流通許可の申請・更新・変更を電子的に実施。SIKLARA（分類支援ツール）を内蔵。OSS（Online Single Submission）システムとも連携し、NIB（事業者番号）の取得・CDAKB認証管理にも対応。E-Watch（有害事象報告）・E-Report（流通記録報告）機能も提供。",
     "mandatory": true
   },
@@ -350,6 +350,6 @@ export default {
       "description": "SaMD（Software as a Medical Device）、AI診断、ウェアラブル機器の分類・承認要件に関するフレームワーク策定を開始。サイバーセキュリティ基準も検討中。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

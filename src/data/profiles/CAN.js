@@ -236,7 +236,7 @@ export default {
         "description": "Declaration of Conformity（適合宣言）に基づく認可。安全性・有効性データの詳細審査は通常不要だが、ラベリング・MDSAP 認証・適合宣言書等の提出が必要。",
         "subtypes": [],
         "avgReviewTime": "目標: 15営業日（書類不備がない場合）。実績: 約30〜60日。",
-        "fee": "CAD $468（年間ライセンス維持費: CAD $390）",
+        "fee": "CAD $632（FY2025-26）。年間ライセンス維持費: CAD $452",
         "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/application-information/guidance-documents/guidance-medical-device-licence-application.html"
       },
       {
@@ -248,7 +248,7 @@ export default {
         "description": "技術文書（安全性・有効性データ、リスクマネジメント、ベンチテスト結果等）の審査を伴う認可。臨床データが求められる場合もある。",
         "subtypes": [],
         "avgReviewTime": "目標: 60営業日。実績: 約4〜8ヶ月。",
-        "fee": "CAD $7,309（年間ライセンス維持費: CAD $390）",
+        "fee": "CAD $13,926（FY2025-26）。年間ライセンス維持費: CAD $452",
         "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/application-information/guidance-documents/guidance-medical-device-licence-application.html"
       },
       {
@@ -260,7 +260,7 @@ export default {
         "description": "最も詳細な技術審査。臨床試験データが通常必要。安全性・有効性の包括的な科学的証拠の提出。Health Canada 審査官による詳細レビュー。",
         "subtypes": [],
         "avgReviewTime": "目標: 75営業日。実績: 約6〜12ヶ月。",
-        "fee": "CAD $21,202（年間ライセンス維持費: CAD $390）",
+        "fee": "CAD $30,199（FY2025-26）。年間ライセンス維持費: CAD $452",
         "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices/application-information/guidance-documents/guidance-medical-device-licence-application.html"
       },
       {
@@ -358,7 +358,7 @@ export default {
     ]
   },
   "mdsap": {
-    "status": "義務化（クラスII〜IV）",
+    "status": "参加国",
     "description": "カナダは MDSAP の主要推進国。2019年1月よりクラスII〜IVの全製造業者に MDSAP 認証を義務化。MDSAP 監査報告書が QMS 適合の唯一の証拠として使用される。ISO 13485 認証だけでは不十分。"
   },
   "internationalStandards": {
@@ -391,9 +391,14 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2024",
-      "title": "UDI 要件の段階的導入開始",
-      "description": "Medical Devices Regulations 改正により、Class IV から UDI ラベリング・データベース登録が義務化開始。"
+      "date": "2024-11",
+      "title": "Agile Licensing 規則改正の公布",
+      "description": "2024年11月29日、Regulations Amending Certain Regulations Made under the Food and Drugs Act (Agile Licensing) が Canada Gazette Part 2 に公布。MDR改正により Terms and Conditions（T&Cs）の適用拡大、リスクベースの規制近代化、COVID-19パンデミック時の規制柔軟策の恒久化等を導入。一部は即日発効、残りは2025〜2027年にかけて段階施行。"
+    },
+    {
+      "date": "2024-01",
+      "title": "Urgent Public Health Need 経路の恒久化",
+      "description": "Regulations Amending the Medical Devices Regulations (Medical Devices for an Urgent Public Health Need) が2024年1月発効。COVID-19に限定されていた暫定命令経路を恒久化し、公衆衛生上の緊急事態全般に対応する迅速認可経路を整備。"
     },
     {
       "date": "2024",
@@ -402,15 +407,10 @@ export default {
     },
     {
       "date": "2023",
-      "title": "Agile Licensing 枠組み",
-      "description": "市販後データに基づく機器認可条件の動的更新を可能にする Agile Licensing アプローチの導入検討。"
-    },
-    {
-      "date": "2023",
       "title": "サイバーセキュリティガイダンス改訂",
       "description": "医療機器のサイバーセキュリティに関する市販前ガイダンスを改訂。SBOM（ソフトウェア部品表）要件を強化。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

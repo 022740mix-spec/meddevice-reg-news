@@ -48,9 +48,9 @@ export default {
   "implementingRegulations": [
     {
       "title": "NOM-241-SSA1-2025 — Good Manufacturing Practices for Medical Devices",
-      "date": "2025-04",
+      "date": "2025-04-04",
       "url": "https://dof.gob.mx/nota_detalle.php?codigo=NOM-241-SSA1-2025",
-      "description": "医療機器のGMP要件を規定するメキシコ公式規格。2025年4月改訂版。MDSAP監査報告書をGMP代替として受入可能とする規定を含む。旧NOM-241-SSA1-2012を置換。UDI条項は削除（一時停止）。",
+      "description": "医療機器のGMP要件を規定するメキシコ公式規格。2025年4月4日DOF公布、2025年11月30日施行。MDSAP監査報告書をGMP代替として受入可能。旧NOM-241-SSA1-2021を置換。分類規定を削除し薬局方（FEUM）に一本化。UDI条項は削除（一時停止）。",
       "category": "GMP"
     },
     {
@@ -125,7 +125,7 @@ export default {
     "totalProductCodes": "GMDN準拠（メキシコ薬局方の分類コードも併用）"
   },
   "conformityAssessment": {
-    "overview": "全クラスの医療機器にRegistro Sanitario（衛生登録）が必要。2025年9月に簡略化経路（Abbreviated pathway）が導入され、参照国（FDA/EU/Health Canada等）の認可を活用した迅速登録が可能に。登録有効期間は5年。MDMA手数料はClass I MXN 12,374〜Class III MXN 23,098。GMP適合（NOM-241-SSA1-2025またはMDSAP監査報告書）が前提条件。",
+    "overview": "全クラスの医療機器にRegistro Sanitario（衛生登録）が必要。2025年9月に簡略化経路（Abbreviated pathway）が導入され、参照国（FDA/EU/Health Canada等）の認可を活用した迅速登録が可能に。初回登録有効期間は5年、更新は最大10年（2026年1月改正）。手数料はClass I MXN 12,374〜Class III MXN 23,098。GMP適合（NOM-241-SSA1-2025またはMDSAP監査報告書）が前提条件。2025年8月の簡素化協定により審査期間が大幅短縮（Class I: 20営業日、Class II: 25営業日、Class III: 35営業日）。",
     "routes": [
       {
         "name": "Standard Pathway (Registro Sanitario)",
@@ -142,17 +142,17 @@ export default {
             "description": "初回のRegistro Sanitario取得。"
           },
           {
-            "name": "更新（5年ごと）",
-            "description": "有効期限前に更新申請。"
+            "name": "更新（初回5年、以降最大10年）",
+            "description": "有効期限前に更新申請。2026年1月改正により、2回目以降の更新は最大10年に延長。"
           },
           {
             "name": "変更届",
             "description": "製品仕様・製造所・ラベリング等の変更時。"
           }
         ],
-        "avgReviewTime": "Class I: 約60営業日 / Class II: 約90営業日 / Class III: 約120営業日（目安）",
+        "avgReviewTime": "Class I: 20営業日 / Class II: 25営業日 / Class III: 35営業日（2025年8月簡素化協定後）",
         "avgReviewTimeSource": "https://www.gob.mx/tramites/ficha/registro-sanitario-de-dispositivos-medicos/COFEPRIS",
-        "fee": "Class I: MXN 12,374 / Class II: MXN 18,560 / Class III: MXN 23,098",
+        "fee": "Class I: MXN 12,374 / Class II: MXN 18,149 / Class III: MXN 23,098",
         "feeSource": "https://www.gob.mx/tramites/ficha/registro-sanitario-de-dispositivos-medicos/COFEPRIS",
         "url": "https://www.gob.mx/tramites/ficha/registro-sanitario-de-dispositivos-medicos/COFEPRIS"
       },
@@ -263,7 +263,7 @@ export default {
     {
       "date": "2026-01",
       "title": "Ley General de Salud 大規模改正",
-      "description": "2026年1月15日にLey General de Salud（一般保健法）の大規模改正が施行。医療機器規制の近代化・規制枠組みの刷新が図られた。"
+      "description": "2026年1月15日にLey General de Salud（一般保健法）の大規模改正が公布。医療機器規制の近代化、Registro Sanitario更新の有効期間を最大10年に延長（Art. 376改正）、ポストマーケット監視（テクノビジランス）の強化等。"
     },
     {
       "date": "2025-11",
@@ -273,14 +273,19 @@ export default {
     {
       "date": "2025-09",
       "title": "簡略化経路（Abbreviated pathway）導入",
-      "description": "参照国（FDA/EU/Health Canada等）の認可を活用した簡略化登録経路が導入。市場アクセスの迅速化を図る。"
+      "description": "参照国（FDA/EU/Health Canada/Swissmedic/ANVISA/TGA/MFDS/NMPA等）の認可を活用した簡略化登録経路が導入。市場アクセスの迅速化を図る。"
+    },
+    {
+      "date": "2025-08",
+      "title": "COFEPRIS手続簡素化協定",
+      "description": "2025年8月22日にDOF公布の簡素化協定により、審査期間が大幅短縮: Class I 30→20営業日、Class II 35→25営業日、Class III 60→35営業日。複数の申請区分を統一手続に統合。更新の審査期間も120暦日→45暦日に短縮。"
     },
     {
       "date": "2025-04",
-      "title": "NOM-241-SSA1-2025 改訂",
-      "description": "医療機器GMP規格の改訂版が発効。MDSAP監査報告書のGMP代替受入規定を含む。UDI条項は削除（一時停止）。"
+      "title": "NOM-241-SSA1-2025 公布",
+      "description": "2025年4月4日にDOF公布、2025年11月30日施行。医療機器GMP規格の改訂版。MDSAP監査報告書のGMP代替受入規定を含む。分類規定を薬局方に一本化。UDI条項は削除（一時停止）。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

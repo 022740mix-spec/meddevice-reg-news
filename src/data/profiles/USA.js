@@ -367,8 +367,8 @@ export default {
     ]
   },
   "mdsap": {
-    "status": "参加（受入れ）",
-    "description": "MDSAP 監査報告書を受入れ。FDA は MDSAP 創設メンバー。ただし MDSAP は FDA の通常査察を完全に代替するものではなく、For Cause 査察は別途実施される。"
+    "status": "参加国",
+    "description": "FDA はMDSAP創設5カ国（米・加・豪・伯・日）の一つとして参加（Regulatory Authority）。MDSAP 監査報告書を受入れるが、FDA の通常査察を完全に代替するものではなく、For Cause 査察は別途実施される。"
   },
   "internationalStandards": {
     "iso13485": {
@@ -420,6 +420,6 @@ export default {
       "description": "Consolidated Appropriations Act 2023（2022年12月29日成立）によりFD&C Act Section 524Bを追加。2023年3月29日発効。市販前申請にサイバーセキュリティ計画・SBOM提出を義務化。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

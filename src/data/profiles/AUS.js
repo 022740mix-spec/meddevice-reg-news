@@ -62,7 +62,7 @@ export default {
     "title": "Therapeutic Goods Act 1989",
     "originalTitle": "Therapeutic Goods Act 1989",
     "enacted": "1989-11-07",
-    "lastAmended": "2025-09-01",
+    "lastAmended": "2025-09-04",
     "url": "https://www.legislation.gov.au/Details/C2023C00242",
     "description": "オーストラリアにおける治療用品（医薬品・医療機器・生物製剤）規制の根拠法。ARTG登録制度、適合性評価、市販後監視、リコール権限、広告規制を包括的に規定。2002年改正で医療機器に関する章を大幅整備。"
   },
@@ -262,7 +262,7 @@ export default {
     "system": "TGA UDI制度（段階的導入中）",
     "description": "TGAはIMDRF UDIガイダンスに基づく独自のUDI制度を導入中。GS1/HIBCC/ICCBBA の発行機関コードを使用。医療機器へのUDI表示とTGAデータベースへの情報登録を段階的に義務化。",
     "url": "https://www.tga.gov.au/how-we-regulate/supply-therapeutic-good/supply-medical-device/unique-device-identification",
-    "timeline": "クラスIII・AIMD: 2025年から段階的導入 / クラスIIb: 2026年 / クラスIIa: 2027年 / クラスI: 2028年（予定）"
+    "timeline": "UDI規制枠組み: 2025年3月24日発効。クラスIII・IIb: ラベル表示・データ提出は2026年7月1日まで、ダイレクトマーキングはクラスIII 2028年1月1日・クラスIIb 2029年1月1日 / クラスIIa: ラベル表示・データ提出は2027年7月1日まで / クラスI: 2028年7月1日まで / 既存品の全面ラベル対応: 2030年1月1日"
   },
   "postMarket": {
     "adverseEventReporting": {
@@ -362,6 +362,6 @@ export default {
       "description": "ネットワーク接続型医療機器のサイバーセキュリティに関するTGAガイダンスを改訂。IEC 62443を参照し、SBOM（Software Bill of Materials）の提出を推奨。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

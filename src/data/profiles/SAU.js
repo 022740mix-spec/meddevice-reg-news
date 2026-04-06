@@ -28,10 +28,10 @@ export default {
     },
     {
       "name": "NCMDR",
-      "fullName": "National Center for Medical Device Reporting",
+      "fullName": "National Center for Medical Devices Reporting",
       "localName": null,
       "role": "有害事象報告データベースの管理・リコール分類・安全性情報の共有",
-      "url": "https://www.bio-standards.com/blog/sfda-ncmdr-everything-you-should-know-about-medical-device-reporting",
+      "url": "https://www.sfda.gov.sa/en/eservices/65942",
       "isPrimary": false
     },
     {
@@ -221,8 +221,8 @@ export default {
     "adverseEventReporting": {
       "system": "NCMDR (National Center for Medical Device Reporting)",
       "mandatory": true,
-      "url": "https://www.bio-standards.com/blog/sfda-ncmdr-everything-you-should-know-about-medical-device-reporting",
-      "description": "製造業者・認定代理人・流通業者・医療従事者・一般市民が有害事象を報告可能。NCMDRデータベースで管理。リコールはClass I（高リスク）/Class II（中リスク）/Class III（低リスク）の3段階。"
+      "url": "https://ade.sfda.gov.sa/Home/NcmdrReport",
+      "description": "製造業者・認定代理人・流通業者・医療従事者・一般市民が有害事象を報告可能。NCMDRデータベースで管理。リコールはClass I（高リスク）/Class II（中リスク）/Class III（低リスク）の3段階。報告はade.sfda.gov.saから提出。"
     },
     "recalls": {
       "authority": "SFDA / NCMDR",
@@ -312,6 +312,6 @@ export default {
       "description": "GHTF参照国の認可を前提としたMDMA-1を廃止し、SFDA独立審査によるMDMA-2（技術文書評価）に一本化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

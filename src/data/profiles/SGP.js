@@ -46,7 +46,7 @@ export default {
     "title": "Health Products Act 2007",
     "originalTitle": "Health Products Act 2007 (Act 15 of 2007)",
     "enacted": "2007-09-17",
-    "lastAmended": "2025-03-01",
+    "lastAmended": "2025-12-05",
     "url": "https://sso.agc.gov.sg/Act/HPA2007",
     "description": "シンガポールにおける健康製品（医薬品・医療機器・化粧品等）の規制根拠法。医療機器の登録義務、製造・輸入・販売の許可要件、広告規制、市販後監視、罰則等を規定。2010年に医療機器への適用が開始。"
   },
@@ -66,11 +66,11 @@ export default {
       "category": "登録ガイダンス"
     },
     {
-      "title": "GN-15: Guidance on Essential Principles for Safety and Performance",
-      "date": "2021-06-01",
+      "title": "GN-15: Guidance on Medical Device Product Registration",
+      "date": "2026-03-01",
       "url": "https://www.hsa.gov.sg/medical-devices/registration/guidance-documents",
-      "description": "医療機器の安全性・性能に関する基本原則（Essential Principles）への適合に関するガイダンス。IMDRF Essential Principlesに整合。",
-      "category": "基本要件"
+      "description": "医療機器の製品登録申請書類の作成に関する包括的ガイダンス（Revision 13）。Essential Principles適合チェックリスト、技術文書構成、登録経路別要件を詳述。SHAREプラットフォームによる電子申請に対応。",
+      "category": "登録ガイダンス"
     }
   ],
   "relatedLaws": [
@@ -147,7 +147,7 @@ export default {
           "輸液ポンプ",
           "コンタクトレンズ"
         ],
-        "approvalPath": "HSA製品登録（Full / Abridged Route）"
+        "approvalPath": "HSA製品登録（Full / Abridged / Expedited / Immediate Route）"
       },
       {
         "name": "Class D",
@@ -174,7 +174,7 @@ export default {
     "totalProductCodes": "GMDN（Global Medical Device Nomenclature）を使用"
   },
   "conformityAssessment": {
-    "overview": "シンガポールで医療機器を販売するには、クラスに応じた規制要件の遵守が必要。クラスAはDealer's License取得のみ、クラスB/C/DはHSAへの製品登録が必要。登録経路はFull Route（独自審査）、Abridged Route（参照規制機関の承認活用）、Immediate Route（参照規制機関の承認+条件充足で即時登録）の3種。SHAREポータルで電子申請を実施。",
+    "overview": "シンガポールで医療機器を販売するには、クラスに応じた規制要件の遵守が必要。クラスAはDealer's License取得のみ、クラスB/C/DはHSAへの製品登録が必要。登録経路はFull Route（独自審査）、Abridged Route（参照規制機関の承認活用）、Expedited Route（迅速審査）、Immediate Route（即時登録）の4種。SHAREポータルで電子申請を実施。",
     "routes": [
       {
         "name": "Dealer's License",
@@ -188,8 +188,9 @@ export default {
           "Wholesaler's License",
           "Manufacturer's License"
         ],
-        "avgReviewTime": "約30営業日",
-        "fee": "SGD 250（年間ライセンス料）",
+        "avgReviewTime": "約10営業日",
+        "fee": "SGD 1,110（新規・年次更新）",
+        "feeSource": "https://www.hsa.gov.sg/medical-devices/fees",
         "url": "https://www.hsa.gov.sg/medical-devices/dealers-licence"
       },
       {
@@ -205,9 +206,11 @@ export default {
           "新規登録申請",
           "変更申請（Major/Minor Change Notification）"
         ],
-        "avgReviewTime": "クラスB: 6〜9ヶ月 / クラスC: 9〜12ヶ月 / クラスD: 12〜16ヶ月",
-        "fee": "SGD 7,800〜14,400（クラスにより異なる）",
-        "url": "https://www.hsa.gov.sg/medical-devices/registration"
+        "avgReviewTime": "クラスB: 160営業日 / クラスC: 220営業日 / クラスD: 310営業日",
+        "avgReviewTimeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "fee": "申請料SGD 560 + 評価料: クラスB SGD 3,900 / クラスC SGD 6,250 / クラスD SGD 12,000",
+        "feeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "url": "https://www.hsa.gov.sg/medical-devices/registration/overview"
       },
       {
         "name": "Abridged Evaluation Route",
@@ -222,27 +225,50 @@ export default {
           "Abridged with single reference",
           "Abridged with multiple references"
         ],
-        "avgReviewTime": "クラスB: 3〜6ヶ月 / クラスC: 4〜8ヶ月 / クラスD: 6〜10ヶ月",
-        "fee": "SGD 5,300〜9,400（クラスにより異なる）",
-        "url": "https://www.hsa.gov.sg/medical-devices/registration"
+        "avgReviewTime": "クラスB: 100営業日 / クラスC: 160営業日 / クラスD: 220営業日",
+        "avgReviewTimeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "fee": "申請料SGD 560 + 評価料: クラスB SGD 2,010 / クラスC SGD 3,900 / クラスD SGD 6,250",
+        "feeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "url": "https://www.hsa.gov.sg/medical-devices/fees"
       },
       {
         "name": "Immediate Route",
         "nameJa": "即時登録経路（Immediate Route）",
         "applicableClasses": [
-          "Class B"
+          "Class B",
+          "Class C"
         ],
-        "description": "クラスB機器で、参照規制機関からの承認があり、かつ特定の条件（市販後安全性実績等）を満たす場合に利用可能。HSAの実質的審査なしに迅速に登録が完了。",
+        "description": "参照規制機関からの承認があり、かつ特定の条件（市販後安全性実績・安全性問題なし等）を満たす場合に利用可能。提出時に即時登録が完了。クラスCは独立型医療モバイルアプリケーションに限定。",
         "subtypes": [],
-        "avgReviewTime": "約10〜15営業日",
-        "fee": "SGD 1,080",
-        "url": "https://www.hsa.gov.sg/medical-devices/registration"
+        "avgReviewTime": "即時（提出時に登録完了）",
+        "avgReviewTimeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "fee": "申請料SGD 560 + 評価料: クラスB SGD 1,000 / クラスC SGD 3,340",
+        "feeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "url": "https://www.hsa.gov.sg/medical-devices/registration/guides/class-c-immediate-registration"
+      },
+      {
+        "name": "Expedited Route",
+        "nameJa": "迅速審査経路（Expedited Route）",
+        "applicableClasses": [
+          "Class C",
+          "Class D"
+        ],
+        "description": "参照規制機関1機関以上の承認かつ3年以上の市販実績がある場合（ECR-1）、または参照規制機関2機関以上の承認がある場合（ECR-2）に利用可能。Abridged Routeより短い審査期間。",
+        "subtypes": [
+          "ECR-1（1機関承認+3年市販実績）",
+          "ECR-2（2機関以上承認）"
+        ],
+        "avgReviewTime": "クラスC: 120営業日 / クラスD: 180営業日",
+        "avgReviewTimeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "fee": "申請料SGD 560 + 評価料: クラスC SGD 3,340 / クラスD SGD 5,930",
+        "feeSource": "https://www.hsa.gov.sg/medical-devices/fees",
+        "url": "https://www.hsa.gov.sg/medical-devices/registration/guides/class-c-expedited-registration"
       }
     ]
   },
   "electronicSubmission": {
     "system": "SHARE (Singapore Health Product Access and Regulatory E-System)",
-    "url": "https://www.hsa.gov.sg/e-services/prism",
+    "url": "https://www.hsa.gov.sg/e-services/share",
     "description": "HSAのオンライン統合規制情報システム「SHARE」を通じて、医療機器の製品登録申請、Dealer's License申請、有害事象報告、変更通知等の全ての規制手続を電子的に実施。効率的なオンライン審査プロセスを提供。",
     "mandatory": true
   },
@@ -273,7 +299,7 @@ export default {
     "name": "Certificate of Free Sale (CFS)",
     "description": "シンガポールで登録済みの医療機器について、HSAが自由販売証明書を発行。輸出先国の規制申請に使用。SHAREを通じてオンライン申請が可能。",
     "processingTime": "約10〜15営業日",
-    "url": "https://www.hsa.gov.sg/medical-devices/registration"
+    "url": "https://www.hsa.gov.sg/medical-devices"
   },
   "reimbursement": {
     "system": "MediShield Life / MediFund / Private Insurance",
@@ -298,8 +324,8 @@ export default {
     ]
   },
   "mdsap": {
-    "status": "オブザーバー（Observer）",
-    "description": "シンガポール（HSA）はMDSAPのオブザーバーとして参加。正式な参加国（Regulatory Authority）ではないが、MDSAP監査報告書をQMS適合性の参考情報として活用。参照規制機関制度との相乗効果により、国際的な規制負担の軽減を実現。"
+    "status": "Affiliate Member",
+    "description": "シンガポール（HSA）はMDSAPのAffiliate Memberとして参加。MDSAP監査報告書およびMDSAP証明書をQMS適合性の評価に活用。参照規制機関制度との相乗効果により、国際的な規制負担の軽減を実現。"
   },
   "internationalStandards": {
     "iso13485": {
@@ -336,8 +362,8 @@ export default {
   "recentDevelopments": [
     {
       "date": "2026-03",
-      "title": "SaMD規制フレームワーク更新",
-      "description": "HSAがAI/ML搭載SaMDの登録・審査に関する規制フレームワークを更新。Predetermined Change Control Planの導入とSaMD分類ガイダンスの改訂。"
+      "title": "GN-15 Revision 13 公表・マレーシアとの相互依拠制度恒久化",
+      "description": "HSAがGN-15（製品登録ガイダンス）のRevision 13を公表し登録要件を明確化。同月、シンガポール-マレーシア医療機器規制相互依拠プログラム（2025年9月パイロット開始）が恒久制度として正式確認。"
     },
     {
       "date": "2025-11",
@@ -355,6 +381,6 @@ export default {
       "description": "HSAが参照規制機関（Reference Regulators）のリスト更新を検討。新たな規制機関の追加候補について業界コンサルテーションを実施。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

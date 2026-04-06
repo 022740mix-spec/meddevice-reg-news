@@ -62,7 +62,7 @@ export default {
     "title": "Drugs and Cosmetics Act 1940",
     "originalTitle": "The Drugs and Cosmetics Act, 1940 (Act No. 23 of 1940)",
     "enacted": "1940-04-10",
-    "lastAmended": "2024-01-01",
+    "lastAmended": "2024-12-31",
     "url": "https://cdsco.gov.in/opencms/opencms/en/Acts-Rules/",
     "description": "インドにおける医薬品・化粧品・医療機器の規制根拠法。医療機器は2017年までは「医薬品」の一部として規制されていたが、Medical Devices Rules 2017の制定により独立した規制枠組みが整備された。製造・販売・輸入の許可制度、品質基準、罰則等を規定。"
   },
@@ -338,6 +338,6 @@ export default {
       "description": "政府がMake in India政策の一環として医療機器の国内製造を推進。PLI（Production Linked Incentive）スキームの対象品目拡大と規制手続の簡素化。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

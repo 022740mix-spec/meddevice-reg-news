@@ -7,12 +7,12 @@ export default {
   "flag": "🇳🇿",
   "legalSystemOverview": {
     "type": "コモンロー（Common law）— 単一国家体制",
-    "description": "ニュージーランドの医療機器規制は現行 Medicines Act 1981 および Medicines (Database of Medical Devices) Regulations 2003 を根拠とする。現行法制は医療機器の市販前承認制度を持たず、WAND（Web Assisted Notification of Devices）データベースへの届出制を採用している。Therapeutic Products Act 2023 が成立したが、政府は Medical Products Bill による置換を決定し、2026年後半に新規制体制への移行を計画中。TGA（オーストラリア）との Trans-Tasman 相互認証や早期警告システムが重要な特徴。",
+    "description": "ニュージーランドの医療機器規制は現行 Medicines Act 1981 および Medicines (Database of Medical Devices) Regulations 2003 を根拠とする。現行法制は医療機器の市販前承認制度を持たず、WAND（Web Assisted Notification of Devices）データベースへの届出制を採用している。Therapeutic Products Act 2023 は成立したが2024年12月に廃止され、政府は Medical Products Bill を2026年に国会提出予定（施行は2028〜2030年見込み）。TGA（オーストラリア）との Trans-Tasman 相互認証や早期警告システムが重要な特徴。",
     "keyCharacteristics": [
       "WAND データベースへの届出制（市販前承認ではない）",
       "リスクベースの5クラス分類（GHTF 準拠）",
       "TGA（オーストラリア）との Trans-Tasman 相互認証・早期警告システム",
-      "Therapeutic Products Act 2023 から Medical Products Bill への移行中",
+      "Therapeutic Products Act 2023 廃止済み、Medical Products Bill を2026年国会提出予定",
       "PHARMAC による公的部門の機器調達・償還管理"
     ]
   },
@@ -50,7 +50,7 @@ export default {
   "deviceDefinition": {
     "legalDefinition": "Medicines Act 1981 に基づく定義。疾病の診断・予防・モニタリング・治療等を目的とする器具・装置・ソフトウェア等で、薬理学的・免疫学的・代謝的手段によらずその主たる目的を達成するもの。",
     "scope": "IVD を含む。Medicines (Database of Medical Devices) Regulations 2003 の Schedule 1 で対象範囲を規定。一部の機器（カスタムメイド、治験用等）は WAND 届出免除。",
-    "notes": "SaMD は現行法では明確な規定がなく、新法で対応予定。Therapeutic Products Act 2023 / Medical Products Bill で SaMD の規制枠組みが整備される見込み。"
+    "notes": "SaMD は現行法では明確な規定がなく、新法で対応予定。Medical Products Bill で SaMD の規制枠組みが整備される見込み。"
   },
   "primaryLaw": {
     "title": "Medicines Act 1981",
@@ -58,7 +58,7 @@ export default {
     "enacted": "1981",
     "lastAmended": "2025（2025年11月改正）",
     "url": "https://www.legislation.govt.nz/act/public/1981/0118/latest/DLM53790.html",
-    "description": "医療機器規制の現行根拠法。ただし本法は主に医薬品を対象としており、医療機器に関する規定は限定的。Medicines (Database of Medical Devices) Regulations 2003 により WAND データベースを設置。政府は Medical Products Bill による全面的な置換を計画中（2026年後半発効予定）。"
+    "description": "医療機器規制の現行根拠法。ただし本法は主に医薬品を対象としており、医療機器に関する規定は限定的。Medicines (Database of Medical Devices) Regulations 2003 により WAND データベースを設置。2025年11月の Medicines Amendment Act 2025 で改正。政府は Medical Products Bill を2026年に国会提出予定（施行は2028〜2030年見込み）。"
   },
   "implementingRegulations": [
     {
@@ -78,11 +78,11 @@ export default {
   ],
   "relatedLaws": [
     {
-      "title": "Therapeutic Products Act 2023",
-      "category": "規制改革",
+      "title": "Therapeutic Products Act 2023（2024年12月廃止）",
+      "category": "規制改革（廃止済み）",
       "enacted": "2023",
-      "url": "https://www.legislation.govt.nz/act/public/2023/0058/latest/whole.html",
-      "relevance": "Medicines Act 1981 を置換する新法として成立。しかし政府は Medical Products Bill による再置換を決定。最終発効期限は2026年9月1日。"
+      "url": "https://www.legislation.govt.nz/act/public/2023/0037/latest/DLM6914502.html",
+      "relevance": "Medicines Act 1981 を置換する新法として2023年7月26日成立。しかし新政権が方針転換し、Therapeutic Products Act Repeal Act 2024（2024 No 55）により2024年12月18日に廃止。Medical Products Bill が代替として策定中。"
     },
     {
       "title": "Health and Disability Commissioner Act 1994",
@@ -291,14 +291,19 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2026-Q2",
-      "title": "Medical Products Bill 策定中",
-      "description": "政府は Therapeutic Products Act 2023 を Medical Products Bill で置換する方針を2024年9月に決定。2026年後半に新規制体制への移行を計画。独立規制機関の設立を含む。"
+      "date": "2026",
+      "title": "Medical Products Bill 国会提出予定",
+      "description": "政府は Medical Products Bill を2026年に国会提出予定。Medicines Act 1981 を置換し、医療機器・医薬品の現代的なリスク比例規制を導入。施行は2028〜2030年の見込み。2025年7〜8月にかけてCabinet が規制設定を承認。"
     },
     {
-      "date": "2023",
-      "title": "Therapeutic Products Act 2023 成立",
-      "description": "Medicines Act 1981 を置換する新法が成立。しかし新政権が方針転換し、Medical Products Bill による再置換を決定。最終発効期限は2026年9月1日。"
+      "date": "2025-11",
+      "title": "Medicines Amendment Act 2025 成立",
+      "description": "Medicines Act 1981 を改正。海外2カ国以上で承認済みの医薬品について簡素化された検証経路（Rule of Two）を導入。ナースプラクティショナー等の処方権限拡大。2025年11月18日Royal Assent。"
+    },
+    {
+      "date": "2024-12",
+      "title": "Therapeutic Products Act 2023 廃止",
+      "description": "Therapeutic Products Act Repeal Act 2024（2024 No 55）により2024年12月18日に TPA 2023 を廃止。過剰規制・コスト増を理由に新政権が方針転換。Medicines Act 1981 が引き続き現行法として適用。"
     },
     {
       "date": "2024",
@@ -306,6 +311,6 @@ export default {
       "description": "TGA との医療機器安全性に関する早期警告システムの運用を継続・強化。安全性シグナルの共有体制を改善。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

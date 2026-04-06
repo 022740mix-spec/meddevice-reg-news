@@ -61,10 +61,10 @@ export default {
   "primaryLaw": {
     "title": "Decree 98/2021/ND-CP (Management of Medical Devices)",
     "originalTitle": "Nghị định 98/2021/NĐ-CP về quản lý trang thiết bị y tế",
-    "enacted": "2022-01-01",
+    "enacted": "2021-11-08",
     "lastAmended": "2025-01-01",
     "url": "https://english.luatvietnam.vn/decree-no-98-2021-nd-cp-dated-november-08-2021-of-the-government-on-the-management-of-medical-devices-212320-doc1.html",
-    "description": "医療機器管理に関する基本政令。2021年11月8日公布、2022年1月1日施行。旧Decree 36/2016、Decree 169/2018、Decree 03/2020を置換。分類、登録手続、流通許可、市販後監視等を包括的に規定。Decree 07/2023（第1次改正）、Decree 04/2025（第2次改正）で順次改正。"
+    "description": "医療機器管理に関する基本政令。2021年11月8日公布（enacted）、2022年1月1日施行。旧Decree 36/2016、Decree 169/2018、Decree 03/2020を置換。分類、登録手続、流通許可、市販後監視等を包括的に規定。Decree 07/2023（第1次改正）、Decree 04/2025（第2次改正）で順次改正。"
   },
   "implementingRegulations": [
     {
@@ -337,6 +337,6 @@ export default {
       "description": "医療機器規制機関がDMEC（Department of Medical Equipment and Construction）からIMDA（Infrastructure and Medical Device Administration）へ改名・再編。医療インフラ管理も統合。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

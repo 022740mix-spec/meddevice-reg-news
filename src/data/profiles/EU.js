@@ -490,7 +490,7 @@ export default {
       "title": "Commission Implementing Decision on EUDAMED",
       "date": "段階的運用開始",
       "url": "https://ec.europa.eu/tools/eudamed/",
-      "description": "EUDAMED（European Database on Medical Devices）の運用に関する実施決定。6モジュールで構成。2025年11月の決定（Regulation 2025/2371）により、最初の4モジュール（Actor Registration、UDI/Device Registration、NB & Certificates、Market Surveillance）が2026年5月28日から義務化。残り2モジュール（Vigilance、Clinical Investigation）は段階的に追加予定。",
+      "description": "EUDAMED（European Database on Medical Devices）の運用に関する実施決定。6モジュールで構成。2025年11月のCommission Implementing Decision (EU) 2025/2371（2025年11月27日付）により、最初の4モジュール（Actor Registration、UDI/Device Registration、NB & Certificates、Market Surveillance）が2026年5月28日から義務化。残り2モジュール（Vigilance、Clinical Investigation）は段階的に追加予定。",
       "category": "データベース"
     }
   ],
@@ -700,7 +700,7 @@ export default {
   "electronicSubmission": {
     "system": "EUDAMED (European Database on Medical Devices)",
     "url": "https://ec.europa.eu/tools/eudamed/",
-    "description": "EUDAMED は6モジュールで構成。2026年5月28日から4モジュール（Actor Registration、UDI/Device Registration、NB & Certificates、Market Surveillance）が義務化（Regulation 2025/2371）。残りのVigilance・Clinical Investigationモジュールは段階的に追加予定。適合性評価申請自体は各 Notified Body の独自システムで実施。",
+    "description": "EUDAMED は6モジュールで構成。2026年5月28日から4モジュール（Actor Registration、UDI/Device Registration、NB & Certificates、Market Surveillance）が義務化（Commission Implementing Decision (EU) 2025/2371）。残りのVigilance・Clinical Investigationモジュールは段階的に追加予定。適合性評価申請自体は各 Notified Body の独自システムで実施。",
     "mandatory": true
   },
   "udi": {
@@ -810,7 +810,12 @@ export default {
     {
       "date": "2025-11",
       "title": "EUDAMED 4モジュール義務化決定",
-      "description": "Regulation 2025/2371 により、EUDAMEDの最初の4モジュール（Actor Registration、UDI/Device Registration、NB & Certificates、Market Surveillance）が2026年5月28日から義務化。これまでの自主利用から法的義務へ移行。"
+      "description": "Commission Implementing Decision (EU) 2025/2371（2025年11月26日採択、11月27日官報掲載）により、EUDAMEDの最初の4モジュール（Actor Registration、UDI/Device Registration、NB & Certificates、Market Surveillance）が2026年5月28日から義務化。これまでの自主利用から法的義務へ移行。"
+    },
+    {
+      "date": "2025-12",
+      "title": "MDR/IVDR 簡素化提案の公表",
+      "description": "欧州委員会が2025年12月16日にMDR/IVDR簡素化の立法提案を公表。NB証明書の有効期間上限撤廃、PRRC要件の緩和、Breakthrough Device・Orphan Device制度の導入、臨床評価要件の合理化等を提案。欧州議会・理事会での審議を経て採択予定。"
     },
     {
       "date": "2024-10",
@@ -818,6 +823,6 @@ export default {
       "description": "NIS2 指令（Directive (EU) 2022/2555）の加盟国国内法化期限（2024年10月）。医療機器製造業者のサイバーセキュリティ義務に影響。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

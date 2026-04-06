@@ -711,6 +711,6 @@ export default {
       "description": "緊急承認制度の創設、電子添文の法定化、GMP/QMS関連整備等を含む薬機法改正が成立。段階的に施行。"
     }
   ],
-  "lastUpdated": "2026-04-01",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };

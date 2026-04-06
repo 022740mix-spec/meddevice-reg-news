@@ -7,7 +7,7 @@ export default {
   "flag": "🇦🇷",
   "legalSystemOverview": {
     "type": "連邦制共和国（シビルロー体系）",
-    "description": "アルゼンチンの医療機器規制は ANMAT（Administración Nacional de Medicamentos, Alimentos y Tecnología Médica）が管轄する。Disposición ANMAT 2318/2002 が医療機器登録の技術的・手続的要件を規定し、Disposición 727/2013 とともに主要な規制枠組みを形成。GHTF 分類原則に基づく4クラス制を採用。2025年には行政手続きの大幅な簡素化・デジタル化が進行中。",
+    "description": "アルゼンチンの医療機器規制は ANMAT（Administración Nacional de Medicamentos, Alimentos y Tecnología Médica）が管轄する。2025年にDisposición 64/2025がMERCOSUR GMC Resolution 25/21を国内法に取り込み、旧Disposición 2318/2002を廃止して医療機器登録の新たな技術的・手続的要件を規定。Disposición 727/2013とともにGHTF分類原則に基づく4クラス制を採用。2025年には行政手続きの大幅な簡素化・デジタル化が進行中。",
     "keyCharacteristics": [
       "ANMAT による一元的な規制体制",
       "GHTF 準拠の4クラス分類（Class I / II / III / IV）",
@@ -40,8 +40,8 @@ export default {
     "bodies": []
   },
   "deviceDefinition": {
-    "legalDefinition": "Disposición ANMAT 2318/2002 に基づく定義。疾病の診断・予防・モニタリング・治療等を目的とする器具・装置・ソフトウェア・材料等で、薬理学的・免疫学的・代謝的手段によらずその主たる目的を達成するもの。",
-    "scope": "IVD を含む（IVD は別途 Class A/B 分類）。Disposición 64/2025 により SaMD が医療機器定義に含まれることを明確化。",
+    "legalDefinition": "Disposición ANMAT 64/2025（MERCOSUR GMC Resolution 25/21 の国内取り込み）に基づく定義。疾病の診断・予防・モニタリング・治療等を目的とする器具・装置・ソフトウェア・材料等で、薬理学的・免疫学的・代謝的手段によらずその主たる目的を達成するもの。",
+    "scope": "IVD を含む（IVD は別途 Class A/B 分類）。Disposición 64/2025 により SaMD（ソフトウェア医療機器）の独立した分類を明確化。",
     "notes": "コンビネーション製品は主たる作用機序に基づき医療機器または医薬品として分類。"
   },
   "primaryLaw": {
@@ -49,15 +49,15 @@ export default {
     "originalTitle": "Ley de Medicamentos (Ley 16.463)",
     "enacted": "1964",
     "lastAmended": null,
-    "url": "https://www.argentina.gob.ar/anmat",
-    "description": "医療製品規制の基本法。ANMAT の権限根拠。医療機器の詳細な規制は主に ANMAT の Disposiciones（処分命令）で規定。"
+    "url": "https://www.argentina.gob.ar/normativa/nacional/ley-16463-20414",
+    "description": "医療製品規制の基本法。ANMAT の権限根拠。医薬品・医療機器・化学品・試薬等の商業化・保管活動を規制。医療機器の詳細な規制は主に ANMAT の Disposiciones（処分命令）で規定。"
   },
   "implementingRegulations": [
     {
-      "title": "Disposición ANMAT 2318/2002",
-      "date": "2002",
-      "url": "https://www.argentina.gob.ar/anmat",
-      "description": "医療機器登録の技術的・手続的・文書的要件を規定する主要規則。Annex III.B でラベリング要件、技術文書（Technical File）の構成を規定。",
+      "title": "Disposición ANMAT 64/2025（旧 Disposición 2318/2002 を廃止・置換）",
+      "date": "2025",
+      "url": "https://www.argentina.gob.ar/normativa/nacional/disposici%C3%B3n-64-2025-408309/texto",
+      "description": "MERCOSUR GMC Resolution 25/21 を国内法に取り込み、医療機器登録の技術的・手続的要件を全面更新。旧 Disposición 2318/2002 および 1285/2004 を廃止。SaMD の独立分類を含む。",
       "category": "登録"
     },
     {
@@ -75,18 +75,25 @@ export default {
       "category": "市販後"
     },
     {
-      "title": "Disposición ANMAT 64/2025",
-      "date": "2025",
+      "title": "Disposición ANMAT 4446/2025",
+      "date": "2025-06",
       "url": "https://www.argentina.gob.ar/anmat",
-      "description": "SaMD を含む医療機器定義の更新。デジタルヘルス製品の規制枠組みを整備。",
-      "category": "定義"
+      "description": "Class I/II 医療機器の輸入手続き簡素化。ANMAT の事前介入を不要化し、TAD 経由の48時間以内届出（宣誓供述書）に変更。2025年8月6日発効。",
+      "category": "輸入"
     },
     {
       "title": "Disposición ANMAT 8799/2025",
       "date": "2025",
       "url": "https://www.argentina.gob.ar/anmat",
-      "description": "Class I/II 医療機器および IVD Class A/B の製造・輸入施設認可手続きの簡素化。低リスク製品の市場参入を迅速化。",
+      "description": "Class I/II 医療機器および IVD Class A/B の製造・輸入施設認可手続きの簡素化。宣誓供述書による迅速認可。低リスク製品の市場参入を迅速化。",
       "category": "施設認可"
+    },
+    {
+      "title": "Disposición ANMAT 2565/2025",
+      "date": "2025-04",
+      "url": "https://www.argentina.gob.ar/anmat",
+      "description": "輸入医療機器の最低残存有効期間を12ヶ月から6ヶ月に緩和。旧 Disposición 1655/1999 を置換。2025年4月15日発効。",
+      "category": "輸入"
     }
   ],
   "relatedLaws": [
@@ -245,11 +252,11 @@ export default {
   },
   "marketingRules": {
     "authority": "ANMAT",
-    "description": "医療機器の広告は ANMAT の規制に基づく。Disposición 2318/2002 Annex III.B のラベリング要件に準拠。虚偽・誤解を招く広告は禁止。",
+    "description": "医療機器の広告は ANMAT の規制に基づく。Disposición 64/2025 のラベリング要件に準拠（旧 Disposición 2318/2002 廃止済み）。虚偽・誤解を招く広告は禁止。",
     "keyRules": [
       "ANMAT 登録されていない機器の広告禁止",
       "承認された適応のみ広告可",
-      "ラベリングは Disposición 2318/2002 Annex III.B に準拠",
+      "ラベリングは Disposición 64/2025 に準拠",
       "スペイン語での表示義務"
     ]
   },
@@ -287,19 +294,24 @@ export default {
   },
   "recentDevelopments": [
     {
-      "date": "2025",
-      "title": "行政手続き大幅簡素化",
-      "description": "ANMAT が300以上の行政手続きを廃止・統合。Class I/II 機器の輸入手続き簡素化（ANMAT の事前介入不要化、TAD経由の48時間以内届出に変更）。輸入品の有効期限要件を12ヶ月から6ヶ月に緩和。"
+      "date": "2025-06",
+      "title": "Disposición 4446/2025: Class I/II 輸入手続き簡素化",
+      "description": "Class I/II 医療機器の輸入におけるANMAT事前介入を廃止。TAD経由の48時間以内届出（宣誓供述書）に変更。2025年8月6日発効。"
+    },
+    {
+      "date": "2025-04",
+      "title": "Disposición 2565/2025: 輸入品有効期限要件緩和",
+      "description": "輸入医療機器の最低残存有効期間を12ヶ月から6ヶ月に緩和。旧 Disposición 1655/1999 を置換。"
     },
     {
       "date": "2025",
       "title": "Disposición 8799/2025: 低リスク機器の施設認可簡素化",
-      "description": "Class I/II 医療機器および IVD Class A/B の製造・輸入施設の認可手続きを簡素化する新規則を公布。"
+      "description": "Class I/II 医療機器および IVD Class A/B の製造・輸入施設の認可手続きを宣誓供述書方式で簡素化。"
     },
     {
       "date": "2025",
-      "title": "Disposición 64/2025: SaMD 規制の整備",
-      "description": "SaMD を医療機器定義に明確に含める規則を発行。デジタルヘルス製品の規制枠組みを整備。"
+      "title": "Disposición 64/2025: 医療機器登録要件の全面更新",
+      "description": "MERCOSUR GMC Resolution 25/21 を国内法に取り込み、旧 Disposición 2318/2002 を廃止。SaMD の独立分類を含む医療機器登録の技術的・手続的要件を全面更新。"
     },
     {
       "date": "2023",
@@ -307,6 +319,6 @@ export default {
       "description": "市販後安全性監視プログラムを更新。旧 Provision 8054/2010 を置換。有害事象報告体制を近代化。"
     }
   ],
-  "lastUpdated": "2026-04-02",
-  "verified": null
+  "lastUpdated": "2026-04-06",
+  "verified": "2026-04-06"
 };
