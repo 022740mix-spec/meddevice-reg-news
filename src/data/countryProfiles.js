@@ -146,6 +146,12 @@ import MLI from "./profiles/MLI.js";
 import BFA from "./profiles/BFA.js";
 import SUR from "./profiles/SUR.js";
 import TGO from "./profiles/TGO.js";
+import SWZ from "./profiles/SWZ.js";
+import MWI from "./profiles/MWI.js";
+import MDG from "./profiles/MDG.js";
+import LSO from "./profiles/LSO.js";
+import AND from "./profiles/AND.js";
+import MCO from "./profiles/MCO.js";
 
 export const COUNTRY_FLAG = {
   USA: "🇺🇸", CAN: "🇨🇦", EU: "🇪🇺", JPN: "🇯🇵", CHN: "🇨🇳",
@@ -186,6 +192,12 @@ export const COUNTRY_FLAG = {
   BFA: "🇧🇫",
   SUR: "🇸🇷",
   TGO: "🇹🇬",
+  SWZ: "🇸🇿",
+  MWI: "🇲🇼",
+  MDG: "🇲🇬",
+  LSO: "🇱🇸",
+  AND: "🇦🇩",
+  MCO: "🇲🇨",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -329,6 +341,12 @@ export const COUNTRY_PROFILES = [
   BFA,
   SUR,
   TGO,
+  SWZ,
+  MWI,
+  MDG,
+  LSO,
+  AND,
+  MCO,
 ];
 
 // ===========================================================================

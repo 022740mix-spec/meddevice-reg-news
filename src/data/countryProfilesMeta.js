@@ -47,6 +47,12 @@ export const COUNTRY_FLAG = {
   BFA: "🇧🇫",
   SUR: "🇸🇷",
   TGO: "🇹🇬",
+  SWZ: "🇸🇿",
+  MWI: "🇲🇼",
+  MDG: "🇲🇬",
+  LSO: "🇱🇸",
+  AND: "🇦🇩",
+  MCO: "🇲🇨",
 };
 
 export const REGION_ORDER = ["North America", "Europe", "ASPAC", "Latam", "Middle East & Africa"];
@@ -3784,6 +3790,138 @@ export const COUNTRY_PROFILES_META = [
     "udiRequired": false,
     "electronicSystem": "紙ベース申請（service-public.gouv.tgで申請書ダウンロード可）",
     "deviceNotes": "医療機器専用法なし。公衆衛生法典（2009年）第IV編が法的根拠。UEMOA加盟国。DPML（保健省傘下）がNCA。CAMEG-TogoがEU指令93/42/CEEを参照基準として公的調達サプライヤーの事前選定を実施。WHO CRP（SRA CRP・PQ CRP IVDs）参加。フランス語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "SWZ",
+    "country": "エスワティニ",
+    "countryEn": "Eswatini",
+    "region": "Middle East & Africa",
+    "flag": "🇸🇿",
+    "primaryLawTitle": "Medicines and Related Substances Control Act, 2016 (Act No. 9 of 2016)",
+    "primaryLawEnacted": "2016",
+    "classificationSystem": "未整備（医療機器専用の分類制度なし）",
+    "classCount": 1,
+    "classes": [
+      { "name": "All Devices", "riskLevel": "未分類" }
+    ],
+    "mainAuthority": "MRU（保健省医薬品規制ユニット）",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "医療機器専用法なし。Medicines and Related Substances Control Act (Act No. 9 of 2016) に基づき医薬品と同一枠組みで規制。保健省MRUがNCA機能を担当。輸入許可制で運用（許可有効期間最大6カ月）。SADC加盟国・ZaZiBoNa非活動メンバー。独立NMRA設立が法定されているが未完了。国家ファーマコビジランス政策（2021年12月策定）。英語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "MWI",
+    "country": "マラウイ",
+    "countryEn": "Malawi",
+    "region": "Middle East & Africa",
+    "flag": "🇲🇼",
+    "primaryLawTitle": "Pharmacy and Medicines Regulatory Authority Act, 2019 (Act No. 9 of 2019)",
+    "primaryLawEnacted": "2019",
+    "classificationSystem": "発展途上（Marketing Authorisation枠組みで運用）",
+    "classCount": 1,
+    "classes": [
+      { "name": "All Devices", "riskLevel": "未分類（整備途上）" }
+    ],
+    "mainAuthority": "PMRA",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータル未整備）",
+    "deviceNotes": "PMRA Act 2019で医療機器を「allied substances」として規制。旧PMPB後継。SADC加盟国・ZaZiBoNa共同登録参加。医療機器専用の分類ガイドラインは未公表。WHO PIDM加盟（135番目）。英語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "MDG",
+    "country": "マダガスカル",
+    "countryEn": "Madagascar",
+    "region": "Middle East & Africa",
+    "flag": "🇲🇬",
+    "primaryLawTitle": "Loi n°2011-002 du 15 juillet 2011 portant Code de la Santé",
+    "primaryLawEnacted": "2011",
+    "classificationSystem": "未整備（国際認証に依存）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class II", "riskLevel": "中低" },
+      { "name": "Class III", "riskLevel": "中高" },
+      { "name": "Class IV", "riskLevel": "高" }
+    ],
+    "mainAuthority": "AMM（Agence du Médicament de Madagascar）",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "医療機器専用法なし。Code de la Santé（2011年）が法的根拠。AMM（Décret 2010-960で設立、EPA）がNCA。DPLMT（保健省傘下）が政策立案。SALAMAが公的調達（ISO 9001:2015認証）。登録有効期間5年。SADC加盟国・AMRH参加・WHO SRA CRP参加（2024年〜）。フランス語。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "LSO",
+    "country": "レソト",
+    "countryEn": "Lesotho",
+    "region": "Middle East & Africa",
+    "flag": "🇱🇸",
+    "primaryLawTitle": "Lesotho Medicines and Medical Devices Control Authority Act, 2023 (Act No. 6 of 2023)",
+    "primaryLawEnacted": "2023",
+    "classificationSystem": "Schedule分類制（Schedule 0〜8・施行規則策定中）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Schedule 0", "riskLevel": "最低" },
+      { "name": "Schedule 1–2", "riskLevel": "低〜中" },
+      { "name": "Schedule 3–5", "riskLevel": "中〜高" },
+      { "name": "Schedule 6–8", "riskLevel": "高〜最高" }
+    ],
+    "mainAuthority": "LeMERA",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "未整備（紙ベース申請・LeMERA設立直後）",
+    "deviceNotes": "2023年制定・2026年3月施行のAct No. 6 of 2023が基本法。AU Model Law参考。LeMERA（Lesotho Medicines and Medical Devices Control Authority）がNCA。Schedule 0〜8分類（大臣決定）。SADC加盟国だがZaZiBoNa未参加。セソト語または英語ラベリング。規制体制の本格始動段階。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "AND",
+    "country": "アンドラ",
+    "countryEn": "Andorra",
+    "region": "Europe",
+    "flag": "🇦🇩",
+    "primaryLawTitle": "Llei general de sanitat, del 20 de març de 1989",
+    "primaryLawEnacted": "1989",
+    "classificationSystem": "EU MDR準拠4クラス制（関税同盟によるCEマーキング機器流通）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class IIa", "riskLevel": "中低" },
+      { "name": "Class IIb", "riskLevel": "中高" },
+      { "name": "Class III", "riskLevel": "高" }
+    ],
+    "mainAuthority": "Ministeri de Salut",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "確認されていない",
+    "deviceNotes": "EU非加盟・非EEA。1990年EU-アンドラ関税同盟で工業製品（医療機器含む）が自由流通。CEマーキング付き機器を受入。国内NBなし。Ministeri de Salutが所管。EU-アンドラ連合協定（2024年法的テキスト最終化）批准後にEU acquis国内法化の見込み。",
+    "lastUpdated": "2026-04-06"
+  },
+  {
+    "code": "MCO",
+    "country": "モナコ",
+    "countryEn": "Monaco",
+    "region": "Europe",
+    "flag": "🇲🇨",
+    "primaryLawTitle": "Loi n° 1.267 du 23 décembre 2002 relative aux dispositifs médicaux",
+    "primaryLawEnacted": "2002",
+    "classificationSystem": "EU MDD準拠 4クラス制（Class I / IIa / IIb / III）",
+    "classCount": 4,
+    "classes": [
+      { "name": "Class I", "riskLevel": "低" },
+      { "name": "Class IIa", "riskLevel": "中低" },
+      { "name": "Class IIb", "riskLevel": "中高" },
+      { "name": "Class III", "riskLevel": "高" }
+    ],
+    "mainAuthority": "DASA",
+    "mdsapStatus": "非参加",
+    "udiRequired": false,
+    "electronicSystem": "紙ベース申請（専用電子ポータルなし）",
+    "deviceNotes": "EU非加盟・非EEA。2003年EU-Monaco協定（2004年発効）により旧EU医療機器指令（MDD等）をモナコ領域内に適用。CEマーキング付き機器を受入。国内NBなし。DASAがNCA。フランスANSMとの行政協力取極めにより検査・ビジランスで連携。EU連合協定交渉中。フランス語。",
     "lastUpdated": "2026-04-06"
   }
 ];
